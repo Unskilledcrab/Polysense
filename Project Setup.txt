@@ -16,6 +16,7 @@ Type the names below into the search bar on the top right
 
 1) Codemaid
 2) EF Core Power Tools
+3) Github Extension for Visual Studio
 
 
 ------------   ADDING CODE SNIPPETS   ------------
