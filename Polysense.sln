@@ -24,7 +24,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{D32AD331
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Code Snippets", "Code Snippets", "{3ADC018C-92DD-48F1-9719-B2F983D56BEE}"
 	ProjectSection(SolutionItems) = preProject
-		How-To-Code-Snippet.txt = How-To-Code-Snippet.txt
 		PS.snippet = PS.snippet
 	EndProjectSection
 EndProject

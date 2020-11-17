@@ -1,4 +1,4 @@
-PROJECT SETUP
+------------   PROJECT SETUP   ------------
 Right Click Solution (Polysense) -> Click "Set Startup Projects..."
 
 Select "Multiple startup projects:" and use the settings below (In the correct order)
@@ -9,10 +9,16 @@ PS.Web.API - Start
 PS.UI.WPF - Start
 
 
-VISUAL STUDIO EXTENSIONS
+------------   VISUAL STUDIO EXTENSIONS   ------------
 To add these go to "Extensions" -> "Manage Extensions" 
 Click "Online" on the left tab
 Type the names below into the search bar on the top right
 
 1) Codemaid
 2) EF Core Power Tools
+
+
+------------   ADDING CODE SNIPPETS   ------------
+Import the snippets in the "Code Snippets" folder into your project following the steps outlined in this site
+
+https://docs.microsoft.com/en-us/visualstudio/ide/walkthrough-creating-a-code-snippet?view=vs-2019#import-a-code-snippet
