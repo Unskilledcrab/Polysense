@@ -2,13 +2,8 @@
 using Microsoft.Extensions.DependencyInjection;
 using PS.UI.Shared;
 using PS.UI.Shared.ViewModels;
+using PS.UI.WPF.Views;
 using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows;
 
 namespace PS.UI.WPF
@@ -19,7 +14,6 @@ namespace PS.UI.WPF
     public partial class App : Application
     {
         public IServiceProvider ServiceProvider { get; private set; }
-
         public IConfiguration Configuration { get; private set; }
 
         protected override void OnStartup(StartupEventArgs e)
@@ -29,7 +23,7 @@ namespace PS.UI.WPF
 
             ServiceProvider = serviceCollection.BuildServiceProvider();
 
-            var mainWindow = ServiceProvider.GetRequiredService<MainWindow>();
+            var mainWindow = ServiceProvider.GetRequiredService<TestWindow>();
             mainWindow.Show();
         }
 
@@ -37,7 +31,7 @@ namespace PS.UI.WPF
         {
             services.AddSingleton<PolysenseClient>();
             services.AddSingleton<TestViewModel>();
-            services.AddSingleton<MainWindow>();
+            services.AddSingleton<TestWindow>();
         }
     }
 }

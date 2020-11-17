@@ -1,9 +1,8 @@
-﻿<Window x:Class="PS.UI.WPF.MainWindow"
+﻿<Window x:Class="PS.UI.WPF.Views.TestWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:PS.UI.WPF"
         xmlns:Notification="clr-namespace:Syncfusion.Windows.Controls.Notification;assembly=Syncfusion.SfBusyIndicator.WPF"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
