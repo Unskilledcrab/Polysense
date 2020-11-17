@@ -16,7 +16,6 @@ A multi-platform application that is making the political world easy to understa
 	PS.Web.API   -   Start
 	PS.UI.WPF    -   Start
 
-
 ## Visual Studio Extensions
 Add the extensions below either by clicking on the link and downloading them or following the instructions below
 
