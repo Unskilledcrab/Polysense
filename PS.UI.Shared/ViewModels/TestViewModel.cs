@@ -1,4 +1,5 @@
 ﻿using PS.Shared.Models;
+using PS.UI.Shared.Clients;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
@@ -7,14 +8,14 @@ namespace PS.UI.Shared.ViewModels
 {
     public class TestViewModel : BaseViewModel
     {
-        private readonly PolysenseClient httpClient;
+        private readonly PoliticianClient httpClient;
 
-        public TestViewModel(PolysenseClient httpClient)
+        public TestViewModel(PoliticianClient httpClient)
         {
             this.httpClient = httpClient;
         }
 
-        public IList<Politician> Politicians { get; set; }
+        public IEnumerable<Politician> Politicians { get; set; }
 
         public override async Task OnUpdate(CancellationToken token)
         {
@@ -23,7 +24,7 @@ namespace PS.UI.Shared.ViewModels
 
         private async Task GetPoliticians(CancellationToken token)
         {
-            Politicians = await httpClient.GetAsync<IList<Politician>>("politicians", token);
+            Politicians = await httpClient.GetPoliticians(token);
         }
     }
 }

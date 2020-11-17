@@ -10,7 +10,7 @@
         <Notification:SfBusyIndicator IsBusy="{Binding IsBusy}">
             <StackPanel>
                 <Button Command="{Binding UpdateCommand}" Content="Test Me" Height="40" />
-                <DataGrid ItemsSource="{Binding Politicians}"/>
+                <DataGrid ItemsSource="{Binding Politicians}" />
             </StackPanel>
         </Notification:SfBusyIndicator>
     </StackPanel>

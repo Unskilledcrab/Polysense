@@ -1,7 +1,5 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using PS.UI.Shared;
-using PS.UI.Shared.ViewModels;
 using PS.UI.WPF.Views;
 using System;
 using System.Windows;
@@ -29,9 +27,9 @@ namespace PS.UI.WPF
 
         private void ConfigureServices(IServiceCollection services)
         {
-            services.AddSingleton<PolysenseClient>();
-            services.AddSingleton<TestViewModel>();
-            services.AddSingleton<TestWindow>();
+            Configure.Clients(services);
+            Configure.ViewModels(services);
+            Configure.Views(services);
         }
     }
 }
