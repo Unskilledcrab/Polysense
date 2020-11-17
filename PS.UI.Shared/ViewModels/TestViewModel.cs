@@ -1,10 +1,7 @@
-﻿using Microsoft.Toolkit.Mvvm.Input;
-using PS.Shared.Models;
-using System;
+﻿using PS.Shared.Models;
 using System.Collections.Generic;
-using System.Net.Http;
+using System.Threading;
 using System.Threading.Tasks;
-using System.Windows.Input;
 
 namespace PS.UI.Shared.ViewModels
 {
@@ -14,21 +11,19 @@ namespace PS.UI.Shared.ViewModels
 
         public TestViewModel(PolysenseClient httpClient)
         {
-            UpdateCommand = new AsyncRelayCommand(Update);
             this.httpClient = httpClient;
         }
 
         public IList<Politician> Politicians { get; set; }
-        public ICommand UpdateCommand { get; set; }
 
-        public override async Task OnUpdate()
+        public override async Task OnUpdate(CancellationToken token)
         {
-            await GetPoliticians();
+            await GetPoliticians(token);
         }
 
-        private async Task GetPoliticians()
+        private async Task GetPoliticians(CancellationToken token)
         {
-            Politicians = await httpClient.GetAsync<IList<Politician>>("politicians");
+            Politicians = await httpClient.GetAsync<IList<Politician>>("politicians", token);
         }
     }
 }
