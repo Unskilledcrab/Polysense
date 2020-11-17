@@ -18,6 +18,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{2C971347-C4E4-48C6-855E-3E5601451218}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{D32AD331-4B20-46CD-9C63-EB7655A8C2A5}"
+	ProjectSection(SolutionItems) = preProject
+		Project Setup.txt = Project Setup.txt
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Code Snippets", "Code Snippets", "{3ADC018C-92DD-48F1-9719-B2F983D56BEE}"
 	ProjectSection(SolutionItems) = preProject

@@ -1,0 +1,18 @@
+PROJECT SETUP
+Right Click Solution (Polysense) -> Click "Set Startup Projects..."
+
+Select "Multiple startup projects:" and use the settings below (In the correct order)
+
+PS.Shared - None
+PS.UI.Shared - None
+PS.Web.API - Start
+PS.UI.WPF - Start
+
+
+VISUAL STUDIO EXTENSIONS
+To add these go to "Extensions" -> "Manage Extensions" 
+Click "Online" on the left tab
+Type the names below into the search bar on the top right
+
+1) Codemaid
+2) EF Core Power Tools
