@@ -18,6 +18,10 @@ format the projects as follows:
 	PS.Web.API   - Start
 	PS.UI.WPF    - Start
 
+Next update the database context locally. Go to the Package Manager Console and type in the following command
+
+	update-database
+
 ## Visual Studio Extensions
 Add the extensions below either by clicking on the link and downloading them or following the instructions below
 
