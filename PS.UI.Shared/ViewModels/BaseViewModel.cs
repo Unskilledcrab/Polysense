@@ -8,6 +8,7 @@ namespace PS.UI.Shared.ViewModels
         public bool IsBusy { get; set; } = false;
 
         public abstract Task OnUpdate();
+
         protected async Task Update()
         {
             IsBusy = true;

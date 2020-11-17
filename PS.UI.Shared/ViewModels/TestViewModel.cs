@@ -12,23 +12,23 @@ namespace PS.UI.Shared.ViewModels
     {
         private readonly PolysenseClient httpClient;
 
-        public IList<Politician> Politicians { get; set; }
-        public ICommand UpdateCommand { get; set; }
-
         public TestViewModel(PolysenseClient httpClient)
         {
             UpdateCommand = new AsyncRelayCommand(Update);
             this.httpClient = httpClient;
         }
 
-        private async Task GetPoliticians()
-        {
-            Politicians = await httpClient.GetAsync<IList<Politician>>("politicians");
-        }
+        public IList<Politician> Politicians { get; set; }
+        public ICommand UpdateCommand { get; set; }
 
         public override async Task OnUpdate()
         {
             await GetPoliticians();
+        }
+
+        private async Task GetPoliticians()
+        {
+            Politicians = await httpClient.GetAsync<IList<Politician>>("politicians");
         }
     }
 }
