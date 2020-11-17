@@ -6,10 +6,11 @@ A multi-platform application that is making the political world easy to understa
 * [Visual Studio Extensions](#visual-studio-extensions)
 * [Adding Code Snippets](#adding-code-snippets) 
 
-
 ## Project Setup
-* Right Click Solution (Polysense) -> Click "Set Startup Projects..."
+* Right Click Solution (Polysense)
+* Click "Set Startup Projects..."
 * Select "Multiple startup projects:" and use the settings below (In the correct order)
+format the projects as follows:
 
 	PS.Shared    -   None
 	PS.UI.Shared -   None
@@ -26,7 +27,6 @@ Add the extensions below either by clicking on the link and downloading them or 
 1) [Codemaid](https://marketplace.visualstudio.com/items?itemName=SteveCadwallader.CodeMaid)
 2) [EF Core Power Tools](https://marketplace.visualstudio.com/items?itemName=ErikEJ.EFCorePowerTools)
 3) [Github Extension for Visual Studio](https://marketplace.visualstudio.com/items?itemName=GitHub.GitHubExtensionforVisualStudio)
-
 
 ## Adding Code Snippets
 Import the snippets in the "Tools/Code Snippets" folder into your project following the steps outlined or using the link to this site
