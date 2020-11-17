@@ -10,12 +10,13 @@ A multi-platform application that is making the political world easy to understa
 * Right Click Solution (Polysense)
 * Click "Set Startup Projects..."
 * Select "Multiple startup projects:" and use the settings below (In the correct order)
+
 format the projects as follows:
 
-	PS.Shared    -   None
-	PS.UI.Shared -   None
-	PS.Web.API   -   Start
-	PS.UI.WPF    -   Start
+	PS.Shared    - None
+	PS.UI.Shared - None
+	PS.Web.API   - Start
+	PS.UI.WPF    - Start
 
 ## Visual Studio Extensions
 Add the extensions below either by clicking on the link and downloading them or following the instructions below
