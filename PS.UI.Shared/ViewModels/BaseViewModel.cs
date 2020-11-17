@@ -1,4 +1,5 @@
 ﻿using Microsoft.Toolkit.Mvvm.ComponentModel;
+using System.Threading.Tasks;
 
 namespace PS.UI.Shared.ViewModels
 {
@@ -6,12 +7,12 @@ namespace PS.UI.Shared.ViewModels
     {
         public bool IsBusy { get; set; } = false;
 
-        public abstract void OnUpdate();
-        private void Update()
+        public abstract Task OnUpdate();
+        protected async Task Update()
         {
-            IsBusy = false;
-            OnUpdate();
             IsBusy = true;
+            await OnUpdate();
+            IsBusy = false;
         }
     }
 }

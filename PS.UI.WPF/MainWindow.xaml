@@ -4,10 +4,15 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PS.UI.WPF"
+        xmlns:Notification="clr-namespace:Syncfusion.Windows.Controls.Notification;assembly=Syncfusion.SfBusyIndicator.WPF"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <StackPanel>
-        <Button Command="{Binding GetPoliticiansCommand}" Content="Test Me" Height="40" />
-        <DataGrid ItemsSource="{Binding Politicians}"/>
+        <Notification:SfBusyIndicator IsBusy="{Binding IsBusy}">
+            <StackPanel>
+                <Button Command="{Binding UpdateCommand}" Content="Test Me" Height="40" />
+                <DataGrid ItemsSource="{Binding Politicians}"/>
+            </StackPanel>
+        </Notification:SfBusyIndicator>
     </StackPanel>
 </Window>
