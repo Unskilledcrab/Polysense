@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PS.Shared.Models;
+using System.Reflection;
 
 namespace PS.Web.API.Data
 {
@@ -11,6 +12,12 @@ namespace PS.Web.API.Data
         }
 
         public DbSet<Bill> Bill { get; set; }
+
         public DbSet<Politician> Politician { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+        }
     }
 }

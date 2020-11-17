@@ -1,0 +1,3 @@
+Import the code snippets in the folder into your project following the steps outlined in this site
+
+https://docs.microsoft.com/en-us/visualstudio/ide/walkthrough-creating-a-code-snippet?view=vs-2019#import-a-code-snippet

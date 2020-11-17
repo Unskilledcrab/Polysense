@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Config</Title>
+      <Author>Unskilled</Author>
+      <Description>Creates a base context configuration</Description>
+      <Shortcut>PSConfig</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>model</ID>
+          <ToolTip>the model class name</ToolTip>
+          <Default>ModelClassName</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[
+        public class $model$Configuration : IEntityTypeConfiguration<$model$>
+        {
+            public void Configure(EntityTypeBuilder<$model$> builder)
+            {
+                builder.HasKey(b => b.Id);
+            }
+        }
+        ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>  
+</CodeSnippets>

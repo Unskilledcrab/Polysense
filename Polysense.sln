@@ -17,6 +17,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{7BBAA2EB-A0A9-
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{2C971347-C4E4-48C6-855E-3E5601451218}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{D32AD331-4B20-46CD-9C63-EB7655A8C2A5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Code Snippets", "Code Snippets", "{3ADC018C-92DD-48F1-9719-B2F983D56BEE}"
+	ProjectSection(SolutionItems) = preProject
+		How-To-Code-Snippet.txt = How-To-Code-Snippet.txt
+		PS.snippet = PS.snippet
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,6 +56,7 @@ Global
 		{14E4B7F0-6295-444F-85CC-A106CFBBCC5D} = {B37281F1-BFD5-4ADD-8944-F57CE70ACF1D}
 		{37ABD78C-2906-45C2-9309-0047C0E493BA} = {2C971347-C4E4-48C6-855E-3E5601451218}
 		{7BC0DA74-9DCE-4A71-8CDB-512B6928F115} = {7BBAA2EB-A0A9-4E54-9DB1-C5FE62BB96E1}
+		{3ADC018C-92DD-48F1-9719-B2F983D56BEE} = {D32AD331-4B20-46CD-9C63-EB7655A8C2A5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {136192D9-1050-499D-84AF-23D26D764015}
