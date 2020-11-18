@@ -13,8 +13,6 @@ namespace PS.UI.Shared.Clients
             BaseAddress = new Uri($"{BaseAddress}politicians");
         }
 
-        public int id { get; set; }
-
         public async Task<IEnumerable<Politician>> GetPoliticians(CancellationToken token)
         {
             return await GetAsync<IEnumerable<Politician>>(String.Empty, token);

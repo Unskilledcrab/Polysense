@@ -15,6 +15,8 @@ namespace PS.Web.API.Data
 
         public DbSet<Politician> Politician { get; set; }
 
+        public DbSet<Congress> Congress { get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
