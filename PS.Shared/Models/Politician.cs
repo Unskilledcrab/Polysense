@@ -24,6 +24,7 @@ namespace PS.Shared.Models
     public class Politician : Person
     {
         public string Name { get; set; }
+
         public PoliticalOfficeType CurrentOffice { get; set; }
     }
 }
