@@ -9,7 +9,7 @@ namespace PS.UI.Shared.ViewModels
 {
     public abstract class BaseViewModel : ObservableObject, IDisposable
     {
-        private CancellationTokenSource tokenSource = new CancellationTokenSource();
+        private CancellationTokenSource updateTokenSource = new CancellationTokenSource();
 
         public BaseViewModel()
         {
@@ -25,29 +25,30 @@ namespace PS.UI.Shared.ViewModels
         public ICommand UpdateCommand { get; set; }
         public bool IsBusy { get; set; } = false;
 
-        public abstract Task OnUpdate(CancellationToken token = default);
+        public abstract Task OnUpdate(CancellationToken token);
 
         public virtual async Task OnUpdateCancelled()
         {
 #if DEBUG
+            await Task.Delay(1);
             Console.WriteLine("An update task has been cancelled");
 #endif
         }
 
         public void Dispose()
         {
-            if (tokenSource != null)
+            if (updateTokenSource != null)
             {
-                tokenSource.Dispose();
-                tokenSource = null;
+                updateTokenSource.Dispose();
+                updateTokenSource = null;
             }
         }
 
         protected async Task Update()
         {
             IsBusy = true;
-            ResetCancellationToken();
-            var token = tokenSource.Token;
+            ResetCancellationToken(updateTokenSource);
+            var token = updateTokenSource.Token;
             try
             {
                 BeforeUpdate?.Invoke(this, EventArgs.Empty);
@@ -72,14 +73,14 @@ namespace PS.UI.Shared.ViewModels
 
         protected void CancelUpdate()
         {
-            tokenSource.Cancel();
+            updateTokenSource.Cancel();
         }
 
-        private void ResetCancellationToken()
+        private void ResetCancellationToken(CancellationTokenSource tokenSource)
         {
-            tokenSource.Cancel();
-            tokenSource.Dispose();
-            tokenSource = new CancellationTokenSource();
+            updateTokenSource.Cancel();
+            updateTokenSource.Dispose();
+            updateTokenSource = new CancellationTokenSource();
         }
     }
 }

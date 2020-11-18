@@ -1,11 +1,11 @@
-﻿using PS.Shared.Models;
+﻿using PS.Shared.Models.Abstractions;
 using System;
 using System.Net.Http;
 using System.Net.Http.Formatting;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace PS.UI.Shared
+namespace PS.Shared.Clients
 {
     public class PolysenseClient : HttpClient
     {

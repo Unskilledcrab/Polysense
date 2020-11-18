@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace PS.UI.Shared.Clients
+namespace PS.Shared.Clients
 {
     public class PoliticianClient : PolysenseClient
     {

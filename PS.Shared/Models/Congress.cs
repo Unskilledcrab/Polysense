@@ -1,13 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using PS.Shared.Models.Abstractions;
 
 namespace PS.Shared.Models
 {
     public class Congress : BaseEntity
     {
-        public string Name { get; set; }
-        public DateTime StartDate { get; set; }
-        public ICollection<Politician> Members { get; set; }
-        public int NumberOfPeople { get; set; }
+        /// <summary>
+        /// Currently the 116th congress at the time of making this
+        /// </summary>
+        public int CurrentCongress { get; set; }
+
+        public Senate Senate { get; set; }
+        public HouseOfRepresentatives House { get; set; }
     }
 }

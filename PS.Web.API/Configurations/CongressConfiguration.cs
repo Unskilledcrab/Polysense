@@ -9,9 +9,6 @@ namespace PS.Web.API.Configurations
         public void Configure(EntityTypeBuilder<Congress> builder)
         {
             builder.HasKey(b => b.Id);
-
-            builder.Property(b => b.Name)
-                .HasMaxLength(150);
         }
     }
 }

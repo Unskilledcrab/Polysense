@@ -7,11 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <StackPanel>
+        <Button Command="{Binding UpdateCommand}" Content="Test Me" Height="40" />
         <Notification:SfBusyIndicator IsBusy="{Binding IsBusy}">
-            <StackPanel>
-                <Button Command="{Binding UpdateCommand}" Content="Test Me" Height="40" />
-                <DataGrid ItemsSource="{Binding Politicians}" />
-            </StackPanel>
+            <DataGrid ItemsSource="{Binding Politicians}" />
         </Notification:SfBusyIndicator>
     </StackPanel>
 </Window>

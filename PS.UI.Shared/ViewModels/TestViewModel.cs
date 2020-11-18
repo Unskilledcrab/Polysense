@@ -1,5 +1,5 @@
-﻿using PS.Shared.Models;
-using PS.UI.Shared.Clients;
+﻿using PS.Shared.Clients;
+using PS.Shared.Models;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
