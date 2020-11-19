@@ -38,4 +38,37 @@ namespace PS.Shared.Clients
             return await DeleteAsync<Politician>($"/{id}", token);
         }
     }
+
+    public class CongressClient : PolysenseClient
+    {
+        public CongressClient()
+        {
+            BaseAddress = new Uri($"{BaseAddress}Congresss");
+        }
+
+        public async Task<IEnumerable<Congress>> GetCongresses(CancellationToken token = default)
+        {
+            return await GetAsync<IEnumerable<Congress>>(String.Empty, token);
+        }
+
+        public async Task<Congress> GetCongress(int id, CancellationToken token = default)
+        {
+            return await GetAsync<Congress>($"/{id}", token);
+        }
+
+        public async Task<Congress> SetCongress(Congress Congress, CancellationToken token = default)
+        {
+            return await PostAsync<Congress>(String.Empty, Congress, token);
+        }
+
+        public async Task<Congress> UpdateCongress(Congress Congress, CancellationToken token = default)
+        {
+            return await PutAsync<Congress>(String.Empty, Congress, token);
+        }
+
+        public async Task<Congress> DeleteCongress(int id, CancellationToken token = default)
+        {
+            return await DeleteAsync<Congress>($"/{id}", token);
+        }
+    }
 }

@@ -27,8 +27,7 @@ namespace PS.UI.WPF
 
         private void ConfigureServices(IServiceCollection services)
         {
-            Configure.Clients(services);
-            Configure.ViewModels(services);
+            DIConfigure.Shared(services);
             Configure.Views(services);
         }
     }
