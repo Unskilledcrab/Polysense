@@ -1,7 +1,7 @@
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
+using PS.Web.Scraper.Extensions;
 
-namespace PS.Web.API
+namespace PS.Web.Scraper
 {
     public class Program
     {
@@ -12,9 +12,9 @@ namespace PS.Web.API
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
+                .ConfigureServices((hostContext, services) =>
                 {
-                    webBuilder.UseStartup<Startup>();
+                    services.AddWebScrapers();
                 });
     }
 }

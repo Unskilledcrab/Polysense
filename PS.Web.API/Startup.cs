@@ -7,6 +7,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using PS.Web.API.Data;
 using PS.Web.API.Hubs;
+using PS.Web.Scraper.Extensions;
 
 namespace PS.Web.API
 {
@@ -32,6 +33,7 @@ namespace PS.Web.API
                     options.UseSqlServer(Configuration.GetConnectionString("PolysenseContext")));
 
             services.AddSignalR();
+            services.AddWebScrapers();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

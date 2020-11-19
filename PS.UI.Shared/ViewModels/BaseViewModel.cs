@@ -29,10 +29,7 @@ namespace PS.UI.Shared.ViewModels
 
         public virtual async Task OnUpdateCancelled()
         {
-#if DEBUG
-            await Task.Delay(1);
-            Console.WriteLine("An update task has been cancelled");
-#endif
+            await Task.CompletedTask;
         }
 
         public void Dispose()
