@@ -47,7 +47,7 @@ namespace PS.UI.Shared.ViewModels
         protected async Task Update()
         {
             IsBusy = true;
-            ResetCancellationToken(updateTokenSource);
+            ResetCancellationToken();
             var token = updateTokenSource.Token;
             try
             {
@@ -76,7 +76,7 @@ namespace PS.UI.Shared.ViewModels
             updateTokenSource.Cancel();
         }
 
-        private void ResetCancellationToken(CancellationTokenSource tokenSource)
+        private void ResetCancellationToken()
         {
             updateTokenSource.Cancel();
             updateTokenSource.Dispose();

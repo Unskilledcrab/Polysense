@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>f013e699-9c8a-4861-9122-dcc7730fa2f1</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -20,6 +21,13 @@
 
   <ItemGroup>
     <ProjectReference Include="..\PS.Shared\PS.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Templates\ControllerGenerator\ApiControllerWithContext.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>
