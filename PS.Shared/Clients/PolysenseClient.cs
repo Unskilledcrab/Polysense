@@ -25,6 +25,13 @@ namespace PS.Shared.Clients
             return await DeserializeResponse<T>(response);
         }
 
+        public async Task<T> DeleteAsync<T>(string endpoint, CancellationToken token = default) where T : BaseEntity
+        {
+            token.ThrowIfCancellationRequested();
+            var response = await this.DeleteAsync(endpoint).ConfigureAwait(false);
+            return await DeserializeResponse<T>(response);
+        }
+
         public async Task<T> GetAsync<T>(string endpoint, CancellationToken token = default) where T : class
         {
             token.ThrowIfCancellationRequested();

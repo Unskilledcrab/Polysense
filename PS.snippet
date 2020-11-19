@@ -2,7 +2,7 @@
 <CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <CodeSnippet Format="1.0.0">
     <Header>
-      <Title>Config</Title>
+      <Title>Model Configuration Template</Title>
       <Author>Unskilled</Author>
       <Description>Creates a base context configuration</Description>
       <Shortcut>PSConfig</Shortcut>
@@ -27,5 +27,59 @@
         ]]>
       </Code>
     </Snippet>
-  </CodeSnippet>  
+  </CodeSnippet>
+
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Client Template</Title>
+      <Author>Unskilled</Author>
+      <Description>Creates a client for the PS API for a given model</Description>
+      <Shortcut>PSClient</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>model</ID>
+          <ToolTip>the model class name</ToolTip>
+          <Default>ModelClassName</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[
+        public class $model$Client : PolysenseClient
+        {
+            public $model$Client()
+            {
+                BaseAddress = new Uri($$"{BaseAddress}$model$s");
+            }
+
+            public async Task<IEnumerable<$model$>> Get$model$s(CancellationToken token = default)
+            {
+                return await GetAsync<IEnumerable<$model$>>(string.Empty, token);
+            }
+
+            public async Task<$model$> Get$model$(int id, CancellationToken token = default)
+            {
+                return await GetAsync<$model$>($$"/{id}", token);
+            }
+
+            public async Task<$model$> Set$model$($model$ $model$, CancellationToken token = default)
+            {
+                return await PostAsync(string.Empty, $model$, token);
+            }
+
+            public async Task<$model$> Update$model$($model$ $model$, CancellationToken token = default)
+            {
+                return await PutAsync(string.Empty, $model$, token);
+            }
+
+            public async Task<$model$> Delete$model$(int id, CancellationToken token = default)
+            {
+                return await DeleteAsync<$model$>($$"/{id}", token);
+            }
+        }
+        ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
 </CodeSnippets>
