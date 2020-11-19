@@ -20,6 +20,6 @@ namespace PS.Web.Scraper.Abstractions
             }
         }
 
-        public abstract Task Scrap(HtmlWeb website);
+        protected abstract Task Scrap(HtmlWeb website);
     }
 }

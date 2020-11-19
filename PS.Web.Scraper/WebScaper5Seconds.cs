@@ -24,7 +24,8 @@ namespace PS.Web.Scraper
         {
             foreach (var scraper in webScrapers)
             {
-                await scraper.Scrap();
+                if (!cancellationToken.IsCancellationRequested)
+                    await scraper.Scrap();
             }
         }
     }

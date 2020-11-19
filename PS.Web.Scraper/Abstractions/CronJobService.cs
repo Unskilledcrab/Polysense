@@ -1,6 +1,7 @@
 ﻿using Cronos;
 using Microsoft.Extensions.Hosting;
 using System;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -14,7 +15,11 @@ namespace PS.Web.Scraper.Abstractions
 
         protected CronJobService(string cronExpression, TimeZoneInfo timeZoneInfo)
         {
-            _expression = CronExpression.Parse(cronExpression, CronFormat.IncludeSeconds);
+            var spaces = cronExpression.Trim().Count(char.IsWhiteSpace);
+            if (spaces == 5)
+                _expression = CronExpression.Parse(cronExpression, CronFormat.IncludeSeconds);
+            else
+                _expression = CronExpression.Parse(cronExpression);
             _timeZoneInfo = timeZoneInfo;
         }
 
