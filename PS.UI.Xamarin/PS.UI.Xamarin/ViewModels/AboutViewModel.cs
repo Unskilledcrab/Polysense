@@ -1,11 +1,13 @@
 ﻿using System;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace PS.UI.Xamarin.ViewModels
 {
-    public class AboutViewModel : BaseViewModel
+    public class AboutViewModel : PS.UI.Shared.ViewModels.BaseViewModel
     {
         public AboutViewModel()
         {
@@ -14,5 +16,10 @@ namespace PS.UI.Xamarin.ViewModels
         }
 
         public ICommand OpenWebCommand { get; }
+
+        public override Task OnUpdate(CancellationToken token)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
