@@ -1,9 +1,4 @@
-﻿using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using PS.UI.Shared;
-using PS.UI.Xamarin.Views;
-using System;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace PS.UI.Xamarin
 {
@@ -12,18 +7,8 @@ namespace PS.UI.Xamarin
         public App()
         {
             InitializeComponent();
-
-            var serviceCollection = new ServiceCollection();
-            ConfigureServices(serviceCollection);
-
-            ServiceProvider = serviceCollection.BuildServiceProvider();
-
-            MainPage = new AppShell();
+            MainPage = Startup.Start();
         }
-
-        public IConfiguration Configuration { get; private set; }
-
-        public IServiceProvider ServiceProvider { get; private set; }
 
         protected override void OnStart()
         {
@@ -35,12 +20,6 @@ namespace PS.UI.Xamarin
 
         protected override void OnResume()
         {
-        }
-
-        private void ConfigureServices(IServiceCollection services)
-        {
-            DIConfigure.Shared(services);
-            services.AddSingleton<AboutPage>();
         }
     }
 }
