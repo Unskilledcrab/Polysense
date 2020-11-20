@@ -1,15 +1,14 @@
-﻿using System;
-using System.ComponentModel;
+﻿using PS.UI.Shared.ViewModels;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace PS.UI.Xamarin.Views
 {
     public partial class AboutPage : ContentPage
     {
-        public AboutPage()
+        public AboutPage(TestViewModel vm)
         {
             InitializeComponent();
+            BindingContext = vm;
         }
     }
 }

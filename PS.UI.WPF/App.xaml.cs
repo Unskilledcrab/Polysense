@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using PS.UI.Shared;
 using PS.UI.WPF.Views;
 using System;
 using System.Windows;

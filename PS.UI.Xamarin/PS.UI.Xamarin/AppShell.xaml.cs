@@ -1,5 +1,4 @@
-﻿using PS.UI.Xamarin.Views;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace PS.UI.Xamarin
 {
@@ -8,8 +7,8 @@ namespace PS.UI.Xamarin
         public AppShell()
         {
             InitializeComponent();
-            Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
-            Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
+            //Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
+            //Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
         }
     }
 }
