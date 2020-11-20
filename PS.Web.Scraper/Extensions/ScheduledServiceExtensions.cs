@@ -20,6 +20,13 @@ namespace PS.Web.Scraper.Extensions
                 c.CronExpression = @"*/30 * * * * *";
                 c.WebScrapers = ScraperInjector.GetScrapers(typeof(I30SecondWebScraper));
             });
+            services.AddCronJob<WebScaper1Minute>(c =>
+            {
+                c.CronExpression = @"* * * * *";
+                c.WebScrapers = ScraperInjector.GetScrapers(typeof(I1MinuteWebScraper));
+            });
+
+            // Add more webscrapers above
             return services;
         }
 

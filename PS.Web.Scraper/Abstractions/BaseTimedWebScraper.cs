@@ -1,27 +1,12 @@
-using Microsoft.Extensions.Logging;
-using PS.Web.Scraper.Abstractions;
+﻿using Microsoft.Extensions.Logging;
 using PS.Web.Scraper.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace PS.Web.Scraper
+namespace PS.Web.Scraper.Abstractions
 {
-    public class WebScaper5Seconds : BaseTimedWebScaper<WebScaper5Seconds>
-    {
-        public WebScaper5Seconds(IScheduleConfig<WebScaper5Seconds> config, ILogger<BaseTimedWebScaper<WebScaper5Seconds>> logger) : base(config, logger)
-        {
-        }
-    }
-
-    public class WebScaper30Seconds : BaseTimedWebScaper<WebScaper30Seconds>
-    {
-        public WebScaper30Seconds(IScheduleConfig<WebScaper30Seconds> config, ILogger<BaseTimedWebScaper<WebScaper30Seconds>> logger) : base(config, logger)
-        {
-        }
-    }
-
     public abstract class BaseTimedWebScaper<T> : CronJobService
     {
         private readonly ILogger<BaseTimedWebScaper<T>> _logger;
