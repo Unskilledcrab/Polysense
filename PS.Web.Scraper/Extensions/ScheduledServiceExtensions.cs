@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using PS.Web.Scraper.Abstractions;
+using PS.Web.Scraper.Helpers;
 using PS.Web.Scraper.Interfaces;
 using System;
 
@@ -12,6 +13,12 @@ namespace PS.Web.Scraper.Extensions
             services.AddCronJob<WebScaper5Seconds>(c =>
             {
                 c.CronExpression = @"*/5 * * * * *";
+                c.WebScrapers = ScraperInjector.GetScrapers(typeof(I5SecondWebScraper));
+            });
+            services.AddCronJob<WebScaper30Seconds>(c =>
+            {
+                c.CronExpression = @"*/30 * * * * *";
+                c.WebScrapers = ScraperInjector.GetScrapers(typeof(I30SecondWebScraper));
             });
             return services;
         }

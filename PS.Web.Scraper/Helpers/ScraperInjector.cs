@@ -5,15 +5,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
-namespace PS.Web.Scraper.Extensions
+namespace PS.Web.Scraper.Helpers
 {
-    public static class ScraperExtensions
+    public static class ScraperInjector
     {
-        public static IList<IWebScraper> Get5SecondScapers()
+        public static IList<IWebScraper> GetScrapers(Type type)
         {
             var webScrapers = new List<IWebScraper>();
-            var allWebScrapersTypes = Assembly.GetAssembly(typeof(I5SecondWebScraper)).GetTypes()
-                .Where(t => typeof(I5SecondWebScraper).IsAssignableFrom(t) && t.IsAbstract == false);
+            var allWebScrapersTypes = Assembly.GetAssembly(type).GetTypes()
+                .Where(t => type.IsAssignableFrom(t) && t.IsAbstract == false);
 
             foreach (var scaperType in allWebScrapersTypes)
             {

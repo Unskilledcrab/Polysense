@@ -1,10 +1,12 @@
-﻿using System.Threading.Tasks;
+﻿using Microsoft.Extensions.Logging;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace PS.Web.Scraper.Interfaces
 {
     public interface IWebScraper
     {
-        public Task Scrap();
+        public Task Scrape(ILogger logger, CancellationToken token);
     }
 
     /// <summary>
@@ -13,4 +15,6 @@ namespace PS.Web.Scraper.Interfaces
     /// the time
     /// </summary>
     public interface I5SecondWebScraper : IWebScraper { }
+
+    public interface I30SecondWebScraper : IWebScraper { }
 }
