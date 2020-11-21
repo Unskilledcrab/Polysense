@@ -28,7 +28,7 @@
       </Code>
     </Snippet>
   </CodeSnippet>
-
+ 
   <CodeSnippet Format="1.0.0">
     <Header>
       <Title>Client Template</Title>
@@ -76,6 +76,53 @@
             public async Task<$model$> Delete$model$(int id, CancellationToken token = default)
             {
                 return await DeleteAsync<$model$>($$"/{id}", token);
+            }
+        }
+        ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <!--WEB SCAPER SNIPPETS-->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>WebScraper Template</Title>
+      <Author>Unskilled</Author>
+      <Description>Creates a base scraper configuration</Description>
+      <Shortcut>PSScraper</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>Name</ID>
+          <ToolTip>The name of your scraper</ToolTip>
+          <Default>ScraperName</Default>
+        </Literal>
+        <Literal>
+          <ID>Time</ID>
+          <ToolTip>The amount of time your scraper takes</ToolTip>
+          <Default>5</Default>
+        </Literal>
+        <Literal>
+          <ID>UnitofTime</ID>
+          <ToolTip>The unit of time of your scraper</ToolTip>
+          <Default>Second</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[
+        public class $Name$$Time$$UnitofTime$Scraper : BaseScraper, I$Time$$UnitofTime$WebScraper
+        {
+            protected async override Task Scrape(HtmlWeb website, ILogger logger, CancellationToken token)
+            {
+                var watch = Stopwatch.StartNew();
+                logger.LogInformation(Default $Time$ $UnitofTime$ scraper on UB Unlimited");
+
+                var doc = await website.LoadFromWebAsync("https://www.ubunlimited.com");
+
+                watch.Stop();
+                var elapsedTime = watch.ElapsedMilliseconds;
+                logger.LogInformation($"Scrapped UB Unlimited in {elapsedTime} ms");
             }
         }
         ]]>

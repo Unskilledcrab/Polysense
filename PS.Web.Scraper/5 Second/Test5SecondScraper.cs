@@ -20,7 +20,6 @@ namespace PS.Web.Scraper._5_Second
             watch.Stop();
             var elapsedTime = watch.ElapsedMilliseconds;
             logger.LogInformation($"Scrapped UB Unlimited in {elapsedTime} ms");
-            throw new System.Exception("Test Exception");
         }
     }
 }
