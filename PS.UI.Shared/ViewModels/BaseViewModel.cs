@@ -59,8 +59,9 @@ namespace PS.UI.Shared.ViewModels
                 // viewmodel differently but the main log should go here
                 await OnUpdateCancelled();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                var test = 1;
                 throw;
             }
             finally

@@ -38,7 +38,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PS.UI.Xamarin.Android", "PS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PS.UI.Xamarin.iOS", "PS.UI.Xamarin\PS.UI.Xamarin.iOS\PS.UI.Xamarin.iOS.csproj", "{EEE173BB-BE8A-4C75-A561-783F187BDBF8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PS.UI.Xamarin", "PS.UI.Xamarin\PS.UI.Xamarin\PS.UI.Xamarin.csproj", "{81E38A91-AE52-43DC-BAE8-B69297B41FC7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PS.UI.Xamarin", "PS.UI.Xamarin\PS.UI.Xamarin\PS.UI.Xamarin.csproj", "{81E38A91-AE52-43DC-BAE8-B69297B41FC7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

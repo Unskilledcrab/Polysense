@@ -34,9 +34,6 @@ namespace PS.Web.API
 
             services.AddSignalR();
             services.AddWebScrapers();
-#if !DEBUG
-            services.AddLettuceEncrypt();
-#endif
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -49,7 +46,7 @@ namespace PS.Web.API
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "PS.Web.API v1"));
             }
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
 
             app.UseRouting();
 

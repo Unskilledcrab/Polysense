@@ -11,12 +11,17 @@ namespace PS.Web.Scraper.Extensions
         public static IServiceCollection AddWebScrapers(this IServiceCollection services)
         {
 #if DEBUG
+            services.AddCronJob<TestWebScraper>(c =>
+            {
+                c.CronExpression = @"*/5 * * * * *";
+                c.WebScrapers = ScraperInjector.GetScrapers(typeof(ITestWebScraper));
+            });
+# else
             services.AddCronJob<WebScaper5Seconds>(c =>
             {
                 c.CronExpression = @"*/5 * * * * *";
                 c.WebScrapers = ScraperInjector.GetScrapers(typeof(I5SecondWebScraper));
             });
-#else
             services.AddCronJob<WebScaper30Seconds>(c =>
             {
                 c.CronExpression = @"*/30 * * * * *";
@@ -28,7 +33,6 @@ namespace PS.Web.Scraper.Extensions
                 c.WebScrapers = ScraperInjector.GetScrapers(typeof(I1MinuteWebScraper));
             });
 #endif
-            // Add more webscrapers above
             return services;
         }
 
