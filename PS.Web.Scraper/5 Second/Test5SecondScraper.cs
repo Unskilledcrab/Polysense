@@ -4,6 +4,7 @@ using PS.Web.Scraper.Abstractions;
 using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
+using PS.Web.Scraper.Interfaces;
 
 namespace PS.Web.Scraper._5_Second
 {
