@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace PS.Web.Scraper._5_Second
 {
-    public class Test5SecondScraper : BaseScraper, I5SecondWebScraper
+    public class Test5SecondScraper : BaseScraper, ITestWebScraper
     {
         protected override async Task Scrape(HtmlWeb website, ILogger logger, CancellationToken token)
         {
