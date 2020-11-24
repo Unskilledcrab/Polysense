@@ -20,7 +20,7 @@ jobs:
     - name: Change Directory
       run: cd ./PS.Web.API      
     - name: print directory
-      run: cd ./PS.Web.API
+      run: dir
     - name: Install dependencies
       run: dotnet restore PS.Web.API.csproj
     - name: Build
