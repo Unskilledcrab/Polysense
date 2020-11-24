@@ -1,14 +1,13 @@
 ﻿using HtmlAgilityPack;
 using Microsoft.Extensions.Logging;
 using PS.Web.Scraper.Abstractions;
-using PS.Web.Scraper.Interfaces;
 using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace PS.Web.Scraper._5_Second
 {
-    public class Test5SecondScraper : BaseScraper, I5SecondWebScraper
+    public class Test5SecondScraper : BaseScraper//, I5SecondWebScraper
     {
         protected override async Task Scrape(HtmlWeb website, ILogger logger, CancellationToken token)
         {
