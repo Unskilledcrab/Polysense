@@ -18,7 +18,7 @@ jobs:
       with:
         dotnet-version: 3.1.301
     - name: Install dependencies
-      run: dotnet restore
+      run: dotnet restore .\PS.Web.API\PS.Web.API.csproj
     - name: Build
       run: dotnet build .\PS.Web.API\PS.Web.API.csproj --configuration Release --no-restore
     - name: Test
