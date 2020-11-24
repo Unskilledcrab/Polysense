@@ -1,5 +1,6 @@
 ﻿using PS.Shared.Models.Abstractions;
 using System.Collections.Generic;
+using System.Text;
 
 namespace PS.Shared.Models
 {
@@ -8,30 +9,25 @@ namespace PS.Shared.Models
         public string Website { get; set; }
         public string ScrapedText { get; set; }
 
-        public int ClassificationEncoding
+        public string Classification
         {
             get
             {
-                int encoding = 0;
-                foreach (var item in Classification)
+                var sb = new StringBuilder();
+                foreach (var classification in Classifications)
                 {
-                    encoding += item.ClassificationEncoding;
+                    sb.Append($"{classification},");
                 }
-                return encoding;
+                sb.Remove(sb.Length - 1, 1);
+                return sb.ToString();
             }
         }
 
-        public ICollection<ScraperClassification> Classification { get; set; }
+        public ICollection<ScraperClassification> Classifications { get; set; }
     }
 
     public class ScraperClassification : BaseEntity
     {
         public string Classification { get; set; }
-
-        /// <summary>
-        /// This is last highest classification encoding plus the last highest classification
-        /// encoding (binary encoding)
-        /// </summary>
-        public int ClassificationEncoding { get; set; }
     }
 }
