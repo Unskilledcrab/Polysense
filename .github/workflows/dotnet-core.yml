@@ -16,11 +16,7 @@ jobs:
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 3.1.301        
-    - name: Change Directory
-      run: cd .\PS.Web.API      
-    - name: print directory
-      run: dir
+        dotnet-version: 3.1.301
     - name: Install dependencies
       run: dotnet restore PS.Web.API.csproj
     - name: Build
