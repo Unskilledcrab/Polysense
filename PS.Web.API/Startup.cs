@@ -7,7 +7,6 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using PS.Web.API.Data;
 using PS.Web.API.Hubs;
-using PS.Web.Scraper.Extensions;
 
 namespace PS.Web.API
 {

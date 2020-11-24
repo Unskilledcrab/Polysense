@@ -2,7 +2,7 @@
 using PS.Shared.Clients;
 using PS.UI.Shared.ViewModels;
 
-namespace PS.UI.WPF
+namespace PS.UI.Shared
 {
     public static class DIConfigure
     {
