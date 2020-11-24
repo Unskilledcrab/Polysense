@@ -23,7 +23,6 @@ jobs:
     - name: Test
       run: dotnet test PS.Web.API --no-restore --verbosity normal
     - name: Publish
-      run: dotnet publish PS.Web.API /p:Configuration=Release /p:PublishProfile=Polysense-Production /p:Username:%ASP_USERNAME% /p:Password=%ASP_PASSWORD% /p:AllowUntrustedCertificate=True
+      run: dotnet publish PS.Web.API /p:Configuration=Release /p:PublishProfile=Polysense-Production /p:Password=%ASP_PASSWORD% /p:AllowUntrustedCertificate=True
       env:
         ASP_PASSWORD: ${{ secrets.ASP_PASSWORD }}
-        ASP_USERNAME: ${{ secrets.ASP_USERNAME }}
