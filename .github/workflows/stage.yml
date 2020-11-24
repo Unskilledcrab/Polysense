@@ -1,0 +1,28 @@
+name: Build and Publish Stage API
+
+on:
+  push:
+    branches: 
+      - 'stage/**'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.100
+    - name: Install dependencies
+      run: dotnet restore PS.Web.API
+    - name: Build
+      run: dotnet build PS.Web.API --configuration Release --no-restore
+    - name: Test
+      run: dotnet test PS.Web.API --no-restore --verbosity normal
+    - name: Publish
+      run: dotnet publish PS.Web.API /p:Configuration=Release /p:PublishProfile=Polysense-Development /p:Password=%ASP_PASSWORD% /p:AllowUntrustedCertificate=True
+      env:
+        ASP_PASSWORD: ${{ secrets.ASP_PASSWORD }}

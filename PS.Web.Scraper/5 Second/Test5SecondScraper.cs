@@ -1,7 +1,6 @@
 ﻿using HtmlAgilityPack;
 using Microsoft.Extensions.Logging;
 using PS.Web.Scraper.Abstractions;
-using PS.Web.Scraper.Interfaces;
 using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;

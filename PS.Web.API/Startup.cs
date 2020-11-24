@@ -45,6 +45,7 @@ namespace PS.Web.API
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "PS.Web.API v1"));
             }
+            UpdateDatabase(app);
 
             //app.UseHttpsRedirection();
 
@@ -57,6 +58,19 @@ namespace PS.Web.API
                 endpoints.MapControllers();
                 endpoints.MapHub<ChatHub>("/chathub");
             });
+        }
+
+        private static void UpdateDatabase(IApplicationBuilder app)
+        {
+            using (var serviceScope = app.ApplicationServices
+                .GetRequiredService<IServiceScopeFactory>()
+                .CreateScope())
+            {
+                using (var context = serviceScope.ServiceProvider.GetService<PolysenseContext>())
+                {
+                    context.Database.Migrate();
+                }
+            }
         }
     }
 }

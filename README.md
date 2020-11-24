@@ -1,4 +1,6 @@
 # Polysense
+![.NET Core](https://github.com/Unskilledcrab/Polysense/workflows/.NET%20Core/badge.svg?branch=Development)
+
 A multi-platform application that is making the political world easy to understand
 
 ## Table of contents
