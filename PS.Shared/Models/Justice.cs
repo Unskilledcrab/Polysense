@@ -1,4 +1,6 @@
-﻿namespace PS.Shared.Models
+﻿using System;
+
+namespace PS.Shared.Models
 {
     public class Justice : Judge
     {
