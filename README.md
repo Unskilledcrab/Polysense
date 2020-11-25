@@ -1,5 +1,8 @@
 # Polysense
-A multi-platform application that is making the political world easy to understand
+![.NET Core](https://github.com/Unskilledcrab/Polysense/workflows/.NET%20Core/badge.svg?branch=Development)
+
+A multi-platform application that is making the political world easy to understand. Join us on [Discord](https://discord.gg/5HFjaeEysx)
+
 
 ## Table of contents
 * [Project Setup](#project-setup)

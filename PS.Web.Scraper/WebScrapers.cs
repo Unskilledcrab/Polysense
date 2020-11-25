@@ -4,6 +4,13 @@ using PS.Web.Scraper.Interfaces;
 
 namespace PS.Web.Scraper
 {
+    public class TestWebScraper : BaseTimedWebScaper<TestWebScraper>
+    {
+        public TestWebScraper(IScheduleConfig<TestWebScraper> config, ILogger<BaseTimedWebScaper<TestWebScraper>> logger) : base(config, logger)
+        {
+        }
+    }
+
     public class WebScaper5Seconds : BaseTimedWebScaper<WebScaper5Seconds>
     {
         public WebScaper5Seconds(IScheduleConfig<WebScaper5Seconds> config, ILogger<BaseTimedWebScaper<WebScaper5Seconds>> logger) : base(config, logger)

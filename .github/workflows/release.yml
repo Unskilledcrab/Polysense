@@ -1,10 +1,9 @@
-name: .NET Core
+name: Build & Publish Release API
 
 on:
   push:
-    branches: [ Development ]
-  pull_request:
-    branches: [ Development ]
+    branches: 
+      - 'releases/**'
 
 jobs:
   build:
@@ -23,3 +22,7 @@ jobs:
       run: dotnet build PS.Web.API --configuration Release --no-restore
     - name: Test
       run: dotnet test PS.Web.API --no-restore --verbosity normal
+    - name: Publish
+      run: dotnet publish PS.Web.API /p:Configuration=Release /p:PublishProfile=Polysense-Production /p:Password=%ASP_PASSWORD% /p:AllowUntrustedCertificate=True
+      env:
+        ASP_PASSWORD: ${{ secrets.ASP_PASSWORD }}
