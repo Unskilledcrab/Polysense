@@ -9,6 +9,8 @@ namespace PS.Web.Scraper.Interfaces
         public Task Scrape(ILogger logger, CancellationToken token);
     }
 
+    public interface ITestWebScraper : IWebScraper { }
+
     public interface I5SecondWebScraper : IWebScraper { }
 
     public interface I30SecondWebScraper : IWebScraper { }

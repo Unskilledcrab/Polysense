@@ -4,10 +4,11 @@ using PS.Web.Scraper.Abstractions;
 using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
+using PS.Web.Scraper.Interfaces;
 
 namespace PS.Web.Scraper._5_Second
 {
-    public class Test5SecondScraper : BaseScraper//, I5SecondWebScraper
+    public class Test5SecondScraper : BaseScraper, ITestWebScraper
     {
         protected override async Task Scrape(HtmlWeb website, ILogger logger, CancellationToken token)
         {

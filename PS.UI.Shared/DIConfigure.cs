@@ -20,10 +20,10 @@ namespace PS.UI.Shared
         /// <param name="services"></param>
         public static void Clients(IServiceCollection services)
         {
-            services.AddScoped<PolysenseClient>();
+            services.AddSingleton<PolysenseClient>();
 
             // NOTE: Add all clients below. Every client must inherit from the above client
-            services.AddScoped<PoliticianClient>();
+            services.AddSingleton<PoliticianClient>();
         }
 
         /// <summary>
