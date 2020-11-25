@@ -1,6 +1,8 @@
-﻿namespace PS.Shared.Models
+﻿using PS.Shared.Models.Abstractions;
+
+namespace PS.Shared.Models
 {
-    internal class TestModel
+    public class TestModel : BaseEntity
     {
         public int SomeNumber { get; set; }
         public string SomeText { get; set; }
