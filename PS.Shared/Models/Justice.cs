@@ -2,6 +2,8 @@
 {
     public class Justice : Judge
     {
-        public int ChangingShit { get; set; }
+        public DateTime StartDateTime { get; set; }
+        public DateTime? EndDateTime { get; set; }
+        public Politician AppointedBy { get; set; }
     }
 }
