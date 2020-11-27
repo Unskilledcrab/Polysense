@@ -48,9 +48,9 @@
         <![CDATA[
         public class $model$Client : PolysenseClient
         {
-            public $model$Client()
+            public $model$Client(HttpClient httpClient) : base(httpClient)
             {
-                BaseAddress = new Uri($$"{BaseAddress}$model$s");
+                client.BaseAddress = new Uri($$"{client.BaseAddress}$model$s");
             }
 
             public async Task<IEnumerable<$model$>> Get$model$s(CancellationToken token = default)
