@@ -15,9 +15,13 @@ namespace PS.Web.Scraper.Helpers
             var allWebScrapersTypes = Assembly.GetAssembly(type).GetTypes()
                 .Where(t => type.IsAssignableFrom(t) && t.IsAbstract == false);
 
-            foreach (var scaperType in allWebScrapersTypes)
+            foreach (var scraperType in allWebScrapersTypes)
             {
-                BaseScraper scaper = Activator.CreateInstance(scaperType) as BaseScraper;
+                var constructors = scraperType.GetConstructors();
+                if (constructors.FirstOrDefault() != null)
+                {
+                }
+                BaseScraper scaper = Activator.CreateInstance(scraperType) as BaseScraper;
                 webScrapers.Add(scaper);
             }
             return webScrapers;
