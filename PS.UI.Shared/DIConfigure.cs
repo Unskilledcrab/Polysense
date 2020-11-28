@@ -1,5 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using PS.Shared.Clients;
+using PS.Shared.HttpClients;
 using PS.UI.Shared.ViewModels;
 
 namespace PS.UI.Shared

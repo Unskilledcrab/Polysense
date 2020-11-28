@@ -5,7 +5,7 @@ using System.Net.Http.Formatting;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace PS.Shared.Clients
+namespace PS.Shared.HttpClients
 {
     public abstract class PolysenseClient
     {
@@ -19,35 +19,35 @@ namespace PS.Shared.Clients
 
         protected HttpClient client { get; }
 
-        public async Task<T> DeleteAsync<T>(string endpoint, T deleteObject, CancellationToken token = default) where T : BaseEntity
+        public async Task<T> DeleteAsync<T>(T deleteObject, string endpoint = "", CancellationToken token = default) where T : BaseEntity
         {
             token.ThrowIfCancellationRequested();
-            var response = await client.DeleteAsync($"{endpoint}/{deleteObject.Id}").ConfigureAwait(false);
+            var response = await client.DeleteAsync($"{endpoint}/{deleteObject.Id}", token).ConfigureAwait(false);
             return await DeserializeResponse<T>(response);
         }
 
         public async Task<T> DeleteAsync<T>(string endpoint, CancellationToken token = default) where T : BaseEntity
         {
             token.ThrowIfCancellationRequested();
-            var response = await client.DeleteAsync(endpoint).ConfigureAwait(false);
+            var response = await client.DeleteAsync(endpoint, token).ConfigureAwait(false);
             return await DeserializeResponse<T>(response);
         }
 
-        public async Task<T> GetAsync<T>(string endpoint, CancellationToken token = default) where T : class
+        public async Task<T> GetAsync<T>(string endpoint = "", CancellationToken token = default) where T : class
         {
             token.ThrowIfCancellationRequested();
-            var response = await client.GetAsync(endpoint, token);
+            var response = await client.GetAsync(endpoint, token).ConfigureAwait(false);
             return await DeserializeResponse<T>(response);
         }
 
-        public async Task<T> PostAsync<T>(string endpoint, T postObject, CancellationToken token = default) where T : class
+        public async Task<T> PostAsync<T>(T postObject, string endpoint = "", CancellationToken token = default) where T : class
         {
             token.ThrowIfCancellationRequested();
             var response = await client.PostAsync(endpoint, postObject, new JsonMediaTypeFormatter(), token).ConfigureAwait(false);
             return await DeserializeResponse<T>(response);
         }
 
-        public async Task<T> PutAsync<T>(string endpoint, T postObject, CancellationToken token = default) where T : class
+        public async Task<T> PutAsync<T>(T postObject, string endpoint = "", CancellationToken token = default) where T : class
         {
             token.ThrowIfCancellationRequested();
             var response = await client.PutAsync(endpoint, postObject, new JsonMediaTypeFormatter(), token).ConfigureAwait(false);
@@ -58,7 +58,7 @@ namespace PS.Shared.Clients
         {
             token.ThrowIfCancellationRequested();
             response.EnsureSuccessStatusCode();
-            return await response.Content.ReadAsAsync<T>(token);
+            return await response.Content.ReadAsAsync<T>(token).ConfigureAwait(false);
         }
     }
 }
