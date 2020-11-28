@@ -5,7 +5,7 @@ using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace PS.Shared.Clients
+namespace PS.Shared.HttpClients
 {
     public class PoliticianClient : PolysenseClient
     {
