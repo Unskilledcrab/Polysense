@@ -40,8 +40,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PS.UI.Xamarin.iOS", "PS.UI.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PS.UI.Xamarin", "PS.UI.Xamarin\PS.UI.Xamarin\PS.UI.Xamarin.csproj", "{81E38A91-AE52-43DC-BAE8-B69297B41FC7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PS.Web.ML", "PS.Web.ML\PS.Web.ML.csproj", "{941B7EC9-BB39-49EF-AB52-08339918D53B}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

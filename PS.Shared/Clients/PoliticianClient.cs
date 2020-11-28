@@ -1,6 +1,7 @@
 ﻿using PS.Shared.Models;
 using System;
 using System.Collections.Generic;
+using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -8,7 +9,7 @@ namespace PS.Shared.Clients
 {
     public class PoliticianClient : PolysenseClient
     {
-        public PoliticianClient()
+        public PoliticianClient(HttpClient httpClient) : base(httpClient)
         {
             BaseAddress = new Uri($"{BaseAddress}politicians");
         }
