@@ -11,7 +11,7 @@ namespace PS.Shared.Clients
     {
         public PoliticianClient(HttpClient httpClient) : base(httpClient)
         {
-            BaseAddress = new Uri($"{BaseAddress}politicians");
+            client.BaseAddress = new Uri($"{client.BaseAddress}politicians");
         }
 
         public async Task<IEnumerable<Politician>> GetPoliticians(CancellationToken token = default)

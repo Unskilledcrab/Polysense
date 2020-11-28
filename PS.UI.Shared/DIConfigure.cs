@@ -13,17 +13,12 @@ namespace PS.UI.Shared
         }
 
         /// <summary>
-        /// Configures all of the http clients for the API for dependency injection. Make sure that
-        /// clients that depend on other clients in thier constructors are placed BEFORE those
-        /// clients in this list
+        /// Configures all of the http clients for the API for dependency injection.
         /// </summary>
         /// <param name="services"></param>
         public static void Clients(IServiceCollection services)
         {
-            services.AddSingleton<PolysenseClient>();
-
-            // NOTE: Add all clients below. Every client must inherit from the above client
-            services.AddSingleton<PoliticianClient>();
+            services.AddHttpClient<PoliticianClient>();
         }
 
         /// <summary>
