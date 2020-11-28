@@ -24,6 +24,9 @@ namespace PS.UI.WPF
 
             var mainWindow = ServiceProvider.GetRequiredService<TestWindow>();
             mainWindow.Show();
+
+            var catWindow = new CategorizeScrapedDataWindow();
+            catWindow.Show();
         }
 
         private void ConfigureServices(IServiceCollection services)

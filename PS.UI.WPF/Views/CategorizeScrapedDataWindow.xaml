@@ -1,0 +1,57 @@
+﻿<Window x:Class="PS.UI.WPF.Views.CategorizeScrapedDataWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:PS.UI.Shared.ViewModels;assembly=PS.UI.Shared"
+        xmlns:local="clr-namespace:PS.UI.WPF.Views"
+        mc:Ignorable="d"
+        Title="Data Categorizer" Height="800" Width="1200">
+    <Window.Background>
+        <LinearGradientBrush EndPoint=".6,1" StartPoint=".4,0">
+            <GradientStop Color="White" />
+            <GradientStop Color="#FF9AE4FF" Offset="1" />
+        </LinearGradientBrush>
+    </Window.Background>
+    <Window.DataContext>
+        <vm:CategorizeScrapedDataViewModel x:Name="CategorizeScrapedDataViewModel" />
+    </Window.DataContext>
+
+    <Grid Margin="50">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <TextBlock Text="Uncategorized Text" Style="{StaticResource HeaderText}" />
+        <TextBlock Grid.Row="1" Style="{StaticResource SubheaderText}" Text="Source: " />
+        <TextBlock Grid.Row="2">
+            <Hyperlink NavigateUri="{Binding UncategorizedText.Website}" RequestNavigate="Hyperlink_RequestNavigate">
+                <Hyperlink.Inlines>
+                    <Run Text="{Binding UncategorizedText.Website}" />
+                </Hyperlink.Inlines>
+            </Hyperlink>
+        </TextBlock>
+        <TextBlock Grid.Row="3" Style="{StaticResource SubheaderText}" Text="Text: " />
+        <TextBlock Background="White" Grid.Row="4" Text="{Binding UncategorizedText.Text}" />
+        <Grid Grid.Row="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" Text="Categories: " Style="{StaticResource FormHeaderText}" VerticalAlignment="Center" />
+            <ComboBox ItemsSource="{Binding Categories}" Grid.Column="1">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Label}" />
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+            <Button Grid.Column="2" HorizontalAlignment="Right" Click="Button_Click">Save Categorization</Button>
+        </Grid>
+    </Grid>
+</Window>
