@@ -19,6 +19,7 @@ namespace PS.UI.Shared
         public static void Clients(IServiceCollection services)
         {
             services.AddHttpClient<PoliticianClient>();
+            services.AddHttpClient<ScraperTextClient>();
         }
 
         /// <summary>
