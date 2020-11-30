@@ -1,0 +1,23 @@
+﻿@page "/counter"
+@inject TestViewModel viewModel
+
+<h1>Counter</h1>
+
+<p>Is Busy: @viewModel.IsBusy</p>
+
+<button class="btn btn-primary" @onclick="@(e => viewModel.UpdateCommand.Execute(null))">Click me</button>
+
+@code {
+    protected override Task OnInitializedAsync()
+    {
+        viewModel.PropertyChanged += async (sender, e) =>
+        {
+            await InvokeAsync(() =>
+            {
+                StateHasChanged();
+            });
+        };
+        return base.OnInitializedAsync();
+    }
+
+}
