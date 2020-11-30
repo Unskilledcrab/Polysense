@@ -83,11 +83,8 @@ namespace PS.Web.API.Controllers
             {
                 return BadRequest(ModelState);
             }
-            // Retrieves all of the Scraper texts from the database to put into a list
-            var allScraperText = GetScraperText();
-            bool isMatchingText = false;
 
-            isMatchingText = _context.ScraperText.Any(s => s.Text == scraperText.Text);
+            var isMatchingText = _context.ScraperText.Any(s => s.Text == scraperText.Text);
 
             if (isMatchingText == false)
             {
