@@ -1,5 +1,4 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using PS.Shared.HttpClients;
 using PS.UI.Shared.ViewModels;
 
 namespace PS.UI.Shared
@@ -8,17 +7,8 @@ namespace PS.UI.Shared
     {
         public static void Shared(IServiceCollection services)
         {
-            Clients(services);
+            PS.Shared.DIConfigure.Clients(services);
             ViewModels(services);
-        }
-
-        /// <summary>
-        /// Configures all of the http clients for the API for dependency injection.
-        /// </summary>
-        /// <param name="services"></param>
-        public static void Clients(IServiceCollection services)
-        {
-            services.AddHttpClient<PoliticianClient>();
         }
 
         /// <summary>

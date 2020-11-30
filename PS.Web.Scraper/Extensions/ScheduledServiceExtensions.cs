@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using PS.Shared;
 using PS.Web.Scraper.Abstractions;
 using PS.Web.Scraper.Helpers;
 using PS.Web.Scraper.Interfaces;
@@ -10,27 +11,28 @@ namespace PS.Web.Scraper.Extensions
     {
         public static IServiceCollection AddWebScrapers(this IServiceCollection services)
         {
+            DIConfigure.Clients(services);
 #if DEBUG
             services.AddCronJob<TestWebScraper>(c =>
             {
                 c.CronExpression = @"*/5 * * * * *";
-                c.WebScrapers = ScraperInjector.GetScrapers(typeof(ITestWebScraper));
+                c.WebScrapers = ScraperInjector.GetScrapers(typeof(ITestWebScraper), services);
             });
 # else
             services.AddCronJob<WebScaper5Seconds>(c =>
             {
                 c.CronExpression = @"*/5 * * * * *";
-                c.WebScrapers = ScraperInjector.GetScrapers(typeof(I5SecondWebScraper));
+                c.WebScrapers = ScraperInjector.GetScrapers(typeof(I5SecondWebScraper), services);
             });
             services.AddCronJob<WebScaper30Seconds>(c =>
             {
                 c.CronExpression = @"*/30 * * * * *";
-                c.WebScrapers = ScraperInjector.GetScrapers(typeof(I30SecondWebScraper));
+                c.WebScrapers = ScraperInjector.GetScrapers(typeof(I30SecondWebScraper), services);
             });
             services.AddCronJob<WebScaper1Minute>(c =>
             {
                 c.CronExpression = @"* * * * *";
-                c.WebScrapers = ScraperInjector.GetScrapers(typeof(I1MinuteWebScraper));
+                c.WebScrapers = ScraperInjector.GetScrapers(typeof(I1MinuteWebScraper), services);
             });
 #endif
             return services;
