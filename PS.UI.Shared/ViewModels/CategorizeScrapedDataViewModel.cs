@@ -1,5 +1,6 @@
 ﻿using PS.Shared.Models;
 using PS.Shared.Models.Abstractions;
+using PS.UI.Shared.Commands.CategorizeScrapedDataCommands;
 using System.Collections.ObjectModel;
 using System.Threading;
 using System.Threading.Tasks;
@@ -36,14 +37,17 @@ namespace PS.UI.Shared.ViewModels
             Categories.Add(new Category() { Id = 2, Label = "Deflection" });
             Categories.Add(new Category() { Id = 3, Label = "Gibberish" });
 
-            UncategorizedText = Excerpts.Count > 0 ? Excerpts[0] : new ScraperText();
+            SelectedExcerpt = Excerpts.Count > 0 ? Excerpts[0] : new ScraperText();
         }
 
+        public CategorizeScrapedDataViewModel This => this;
+        public CategorizeScrapedTextCommand CategorizeScrapedTextCommand { get; private set; } = new CategorizeScrapedTextCommand();
         public string MyTitle { get; set; } = "Title";
         public ObservableCollection<ScraperText> Excerpts { get; set; } = new ObservableCollection<ScraperText>();
         public ObservableCollection<Category> Categories { get; set; } = new ObservableCollection<Category>();
 
-        public ScraperText UncategorizedText { get; set; }
+        public ScraperText SelectedExcerpt { get; set; }
+        public Category SelectedCategory { get; set; }
 
         public async override Task OnUpdate(CancellationToken token)
         {

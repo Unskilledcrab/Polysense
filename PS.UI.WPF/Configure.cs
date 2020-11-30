@@ -13,6 +13,7 @@ namespace PS.UI.WPF
         public static void Views(IServiceCollection services)
         {
             services.AddSingleton<TestWindow>();
+            services.AddSingleton<CategorizeScrapedDataWindow>();
         }
     }
 }

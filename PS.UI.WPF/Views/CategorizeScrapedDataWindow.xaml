@@ -9,10 +9,13 @@
         Title="Data Categorizer" Height="800" Width="1200">
     <Window.Background>
         <LinearGradientBrush EndPoint=".6,1" StartPoint=".4,0">
-            <GradientStop Color="White" />
-            <GradientStop Color="#FF9AE4FF" Offset="1" />
+            <GradientStop Color="{StaticResource ResourceKey=BGSecondary}" />
+            <GradientStop Color="{StaticResource ResourceKey=BGPrimary}" Offset="1" />
         </LinearGradientBrush>
     </Window.Background>
+    <Window.Foreground>
+        <SolidColorBrush Color="{StaticResource ResourceKey=Font}" />
+    </Window.Foreground>
     <Window.DataContext>
         <vm:CategorizeScrapedDataViewModel x:Name="CategorizeScrapedDataViewModel" />
     </Window.DataContext>
@@ -29,14 +32,14 @@
         <TextBlock Text="Uncategorized Text" Style="{StaticResource HeaderText}" />
         <TextBlock Grid.Row="1" Style="{StaticResource SubheaderText}" Text="Source: " />
         <TextBlock Grid.Row="2">
-            <Hyperlink NavigateUri="{Binding UncategorizedText.Website}" RequestNavigate="Hyperlink_RequestNavigate">
+            <Hyperlink NavigateUri="{Binding SelectedExcerpt.Website}" RequestNavigate="Hyperlink_RequestNavigate">
                 <Hyperlink.Inlines>
-                    <Run Text="{Binding UncategorizedText.Website}" />
+                    <Run Text="{Binding SelectedExcerpt.Website}" />
                 </Hyperlink.Inlines>
             </Hyperlink>
         </TextBlock>
         <TextBlock Grid.Row="3" Style="{StaticResource SubheaderText}" Text="Text: " />
-        <TextBlock Background="White" Grid.Row="4" Text="{Binding UncategorizedText.Text}" />
+        <TextBlock Background="White" Grid.Row="4" Text="{Binding SelectedExcerpt.Text}" />
         <Grid Grid.Row="5">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="auto" />
@@ -44,14 +47,19 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             <TextBlock Grid.Column="0" Text="Categories: " Style="{StaticResource FormHeaderText}" VerticalAlignment="Center" />
-            <ComboBox ItemsSource="{Binding Categories}" Grid.Column="1">
+            <ComboBox ItemsSource="{Binding Categories}" Grid.Column="1"
+                      SelectedItem="{Binding SelectedCategory}"
+                      IsEnabled="{Binding CategorizeScrapedTextCommand.IsAvailable}">
                 <ComboBox.ItemTemplate>
                     <DataTemplate>
                         <TextBlock Text="{Binding Label}" />
                     </DataTemplate>
                 </ComboBox.ItemTemplate>
             </ComboBox>
-            <Button Grid.Column="2" HorizontalAlignment="Right" Click="Button_Click">Save Categorization</Button>
+            <Button Grid.Column="2" HorizontalAlignment="Right"
+                    Command="{Binding CategorizeScrapedTextCommand.Command}"
+                    CommandParameter="{Binding This}"
+                    IsEnabled="{Binding CategorizeScrapedTextCommand.IsAvailable}">Save Categorization</Button>
         </Grid>
     </Grid>
 </Window>

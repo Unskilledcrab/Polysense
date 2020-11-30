@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using PS.UI.Shared.ViewModels;
+using System.Diagnostics;
 using System.Windows;
 
 namespace PS.UI.WPF.Views
@@ -8,9 +9,10 @@ namespace PS.UI.WPF.Views
     /// </summary>
     public partial class CategorizeScrapedDataWindow : Window
     {
-        public CategorizeScrapedDataWindow()
+        public CategorizeScrapedDataWindow(CategorizeScrapedDataViewModel viewModel)
         {
             InitializeComponent();
+            DataContext = viewModel;
         }
 
         public void Hyperlink_RequestNavigate(object sender, System.Windows.Navigation.RequestNavigateEventArgs e)

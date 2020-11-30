@@ -4,9 +4,10 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Styles\TextBlockStyle.xaml" />
-                <ResourceDictionary Source="Styles\ButtonStyle.xaml" />
-                <ResourceDictionary Source="Styles\ComboboxStyle.xaml" />
+                <ResourceDictionary Source="Styles\Theme.xaml" />
+                <ResourceDictionary Source="Styles\TextBlocks.xaml" />
+                <ResourceDictionary Source="Styles\Buttons.xaml" />
+                <ResourceDictionary Source="Styles\Comboboxes.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
