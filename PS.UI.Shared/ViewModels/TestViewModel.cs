@@ -1,4 +1,4 @@
-﻿using PS.Shared.Clients;
+﻿using PS.Shared.HttpClients;
 using PS.Shared.Models;
 using System.Collections.Generic;
 using System.Threading;

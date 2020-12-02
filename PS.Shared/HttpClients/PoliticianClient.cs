@@ -1,21 +1,22 @@
 ﻿using PS.Shared.Models;
 using System;
 using System.Collections.Generic;
+using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace PS.Shared.Clients
+namespace PS.Shared.HttpClients
 {
     public class PoliticianClient : PolysenseClient
     {
-        public PoliticianClient()
+        public PoliticianClient(HttpClient httpClient) : base(httpClient)
         {
-            BaseAddress = new Uri($"{BaseAddress}politicians");
+            client.BaseAddress = new Uri($"{client.BaseAddress}politicians");
         }
 
         public async Task<IEnumerable<Politician>> GetPoliticians(CancellationToken token = default)
         {
-            return await GetAsync<IEnumerable<Politician>>(string.Empty, token);
+            return await GetAsync<IEnumerable<Politician>>(token: token);
         }
 
         public async Task<Politician> GetPolitician(int id, CancellationToken token = default)
@@ -25,17 +26,22 @@ namespace PS.Shared.Clients
 
         public async Task<Politician> SetPolitician(Politician politician, CancellationToken token = default)
         {
-            return await PostAsync(string.Empty, politician, token);
+            return await PostAsync(politician, token: token);
         }
 
         public async Task<Politician> UpdatePolitician(Politician politician, CancellationToken token = default)
         {
-            return await PutAsync(string.Empty, politician, token);
+            return await PutAsync(politician, token: token);
         }
 
         public async Task<Politician> DeletePolitician(int id, CancellationToken token = default)
         {
             return await DeleteAsync<Politician>($"/{id}", token);
+        }
+
+        public async Task<Politician> DeletePolitician(Politician politician, CancellationToken token = default)
+        {
+            return await DeleteAsync(politician, token: token);
         }
     }
 }

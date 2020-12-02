@@ -1,5 +1,6 @@
 ﻿using HtmlAgilityPack;
 using Microsoft.Extensions.Logging;
+using PS.Shared.HttpClients;
 using PS.Web.Scraper.Abstractions;
 using PS.Web.Scraper.Interfaces;
 using System.Threading;
@@ -9,10 +10,19 @@ namespace PS.Web.Scraper._30_Second
 {
     public class Test30SecondScraper : BaseScraper, ITestWebScraper
     {
-        protected override Task Scrape(HtmlWeb website, ILogger logger, CancellationToken token)
+        private readonly PoliticianClient client;
+
+        protected override async Task Scrape(HtmlWeb website, ILogger logger, CancellationToken token)
         {
             logger.LogInformation("<<<<<<<<<<<<<<<------------------- TEST 30 SECOND SCRAPE ---------------------->>>>>>>>>>>>>>>");
-            return Task.CompletedTask;
+
+            //await client.SetPolitician(new Shared.Models.Politician
+            //{
+            //    FirstName = "Mr. Poopie",
+            //    LastName = "Pants",
+            //    CurrentOffice = Shared.Models.PoliticalOfficeType.AttorneyGeneral,
+            //    BirthDateTime = DateTime.Now,
+            //});
         }
     }
 }
