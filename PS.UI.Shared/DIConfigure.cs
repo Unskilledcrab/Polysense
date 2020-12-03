@@ -6,19 +6,21 @@ namespace PS.UI.Shared
 {
     public static class DIConfigure
     {
-        public static void AddSharedServices(this IServiceCollection services)
+        public static IServiceCollection AddSharedServices(this IServiceCollection services)
         {
             services.AddHttpClients();
             services.AddViewModels();
+            return services;
         }
 
         /// <summary>
         /// Configures all of the view models for dependency injection in this list
         /// </summary>
         /// <param name="services"></param>
-        public static void AddViewModels(this IServiceCollection services)
+        public static IServiceCollection AddViewModels(this IServiceCollection services)
         {
             services.AddTransient<TestViewModel>();
+            return services;
         }
     }
 }

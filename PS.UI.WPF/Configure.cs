@@ -10,9 +10,10 @@ namespace PS.UI.WPF
         /// on other views in their constructors are placed BEFORE those views in this list
         /// </summary>
         /// <param name="services"></param>
-        public static void AddViews(this IServiceCollection services)
+        public static IServiceCollection AddViews(this IServiceCollection services)
         {
             services.AddSingleton<TestWindow>();
+            return services;
         }
     }
 }
