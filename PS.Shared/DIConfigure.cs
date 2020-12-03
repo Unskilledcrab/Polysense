@@ -12,6 +12,7 @@ namespace PS.Shared
         public static IServiceCollection AddHttpClients(this IServiceCollection services)
         {
             services.AddHttpClient<PoliticianClient>();
+            services.AddHttpClient<ScraperTextClient>();
             return services;
         }
     }

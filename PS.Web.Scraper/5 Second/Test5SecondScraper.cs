@@ -5,8 +5,8 @@ using PS.Shared.HttpClients;
 using PS.Shared.Models;
 using PS.Web.Scraper.Abstractions;
 using PS.Web.Scraper.Interfaces;
-using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -14,13 +14,12 @@ namespace PS.Web.Scraper._5_Second
 {
     public class Test5SecondScraper : BaseScraper, ITestWebScraper
     {
-        public IList<ScraperText> ScrapeResults { get; set; }
-
+        // Scraper Test
+        // Tester: Jeremy Buentello Time:
         protected override async Task Scrape(ScraperTextClient client, HtmlWeb website, ILogger logger, CancellationToken token)
         {
             var watch = Stopwatch.StartNew();
             logger.LogInformation("About to fox politics Unlimited");
-            ScrapeResults = new List<ScraperText>();
             string sourceURL = "https://www.foxnews.com/politics";
             var doc = await website.LoadFromWebAsync(sourceURL);
             var docNode = doc.DocumentNode;
@@ -33,17 +32,22 @@ namespace PS.Web.Scraper._5_Second
                 logger.LogInformation(headlinerText);
                 logger.LogInformation(nodeURL);
 
-                //await client.SetScraperText(new ScraperText { Text = headlinerText, Website = nodeURL });
-
-                ScrapeResults.Add(new ScraperText()
+                try
                 {
-                    Website = nodeURL,
-                    Text = headlinerText
-                });
+                    // Try to upload the new scraped text data
+                    await client.SetScraperText(new ScraperText { Text = headlinerText, Website = nodeURL });
+                }
+                catch (HttpRequestException ex)
+                {
+                    // If it is a conflict (already in the database) continue, otherwise throw the
+                    // error. we blew up.
+                    if (ex.StatusCode != System.Net.HttpStatusCode.Conflict)
+                        throw;
+                }
             }
             watch.Stop();
             var elapsedTime = watch.ElapsedMilliseconds;
-            logger.LogInformation($"Scrapped UB Unlimited in {elapsedTime} ms");
+            logger.LogInformation($"Scrapped Fox News in {elapsedTime} ms");
         }
     }
 }

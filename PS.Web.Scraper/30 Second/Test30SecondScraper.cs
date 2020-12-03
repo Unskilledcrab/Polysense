@@ -1,4 +1,5 @@
 ﻿using HtmlAgilityPack;
+using PS.Shared.HttpClients;
 using Microsoft.Extensions.Logging;
 using PS.Web.Scraper.Abstractions;
 using PS.Web.Scraper.Interfaces;
@@ -11,7 +12,7 @@ namespace PS.Web.Scraper._30_Second
     {
         protected override async Task Scrape(ScraperTextClient client, HtmlWeb website, ILogger logger, CancellationToken token)
         {
-            return Task.CompletedTask;
+            await Task.CompletedTask;
         }
     }
 }
