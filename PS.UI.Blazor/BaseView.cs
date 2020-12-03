@@ -8,16 +8,16 @@ namespace PS.UI.Blazor
     public class BaseView<T> : ComponentBase, IDisposable where T : BaseViewModel
     {
         [Inject]
-        public T viewModel { get; set; }
+        public T ViewModel { get; set; }
 
         public void Dispose()
         {
-            viewModel.PropertyChanged -= async (sender, e) => await OnPropertyChangedHandler(sender, e);
+            ViewModel.PropertyChanged -= async (sender, e) => await OnPropertyChangedHandler(sender, e);
         }
 
         protected override Task OnInitializedAsync()
         {
-            viewModel.PropertyChanged += async (sender, e) => await OnPropertyChangedHandler(sender, e);
+            ViewModel.PropertyChanged += async (sender, e) => await OnPropertyChangedHandler(sender, e);
             return base.OnInitializedAsync();
         }
 

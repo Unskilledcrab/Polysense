@@ -26,5 +26,7 @@ namespace PS.Web.API.Data
         {
             builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         }
+
+        public DbSet<PS.Shared.Models.ScraperText> ScraperText { get; set; }
     }
 }

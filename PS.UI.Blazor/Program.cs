@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
-using PS.UI.Shared;
 using System.Threading.Tasks;
 
 namespace PS.UI.Blazor
@@ -10,10 +9,7 @@ namespace PS.UI.Blazor
         {
             var builder = WebAssemblyHostBuilder.CreateDefault(args);
             builder.RootComponents.Add<App>("#app");
-
-            //builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
-            DIConfigure.Shared(builder.Services);
-
+            Container.Create(builder.Services);
             await builder.Build().RunAsync();
         }
     }
