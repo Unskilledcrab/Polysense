@@ -19,8 +19,8 @@ namespace PS.UI.Xamarin
 
         private static void ConfigureServices(IServiceCollection services)
         {
-            DIConfigure.Shared(services);
-            Configure.Views(services);
+            services.AddSharedServices();
+            services.AddViews();
             services.AddTransient<AppShell>();
         }
     }

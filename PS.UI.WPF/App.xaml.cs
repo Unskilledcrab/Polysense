@@ -28,8 +28,8 @@ namespace PS.UI.WPF
 
         private void ConfigureServices(IServiceCollection services)
         {
-            DIConfigure.Shared(services);
-            Configure.Views(services);
+            services.AddSharedServices();
+            services.AddViews();
         }
     }
 }

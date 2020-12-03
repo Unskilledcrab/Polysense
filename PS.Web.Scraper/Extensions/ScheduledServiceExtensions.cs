@@ -11,7 +11,7 @@ namespace PS.Web.Scraper.Extensions
     {
         public static IServiceCollection AddWebScrapers(this IServiceCollection services)
         {
-            DIConfigure.Clients(services);
+            DIConfigure.AddHttpClients(services);
 #if DEBUG
             services.AddCronJob<TestWebScraper>(c =>
             {
