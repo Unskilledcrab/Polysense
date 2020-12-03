@@ -36,8 +36,7 @@ namespace PS.Web.Scraper._5_Second
                 }
                 catch (HttpRequestException ex)
                 {
-                    // If it is a conflict (already in the database) continue, otherwise throw the
-                    // error. we blew up.
+                    // If it is a conflict (already in the database) continue, otherwise throw the error.
                     if (ex.StatusCode != System.Net.HttpStatusCode.Conflict)
                         throw;
                 }
