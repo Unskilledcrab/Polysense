@@ -65,12 +65,12 @@
 
             public async Task<$model$> Set$model$($model$ $model$, CancellationToken token = default)
             {
-                return await PostAsync(string.Empty, $model$, token);
+                return await PostAsync($model$, string.Empty, token);
             }
 
             public async Task<$model$> Update$model$($model$ $model$, CancellationToken token = default)
             {
-                return await PutAsync(string.Empty, $model$, token);
+                return await PutAsync($model$, string.Empty, token);
             }
 
             public async Task<$model$> Delete$model$(int id, CancellationToken token = default)
