@@ -1,26 +1,24 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using PS.UI.Shared;
 using System;
-using Xamarin.Forms;
 
 namespace PS.UI.Xamarin
 {
-    public static class Startup
+    public static class Container
     {
-        public static IServiceProvider ServiceProvider { get; set; }
+        public static IServiceProvider ServiceProvider { get; private set; }
 
-        public static Shell Start()
+        public static void Create()
         {
             var serviceCollection = new ServiceCollection();
             ConfigureServices(serviceCollection);
             ServiceProvider = serviceCollection.BuildServiceProvider();
-            return ServiceProvider.GetService<AppShell>();
         }
 
         private static void ConfigureServices(IServiceCollection services)
         {
-            DIConfigure.Shared(services);
-            Configure.Views(services);
+            services.AddSharedServices();
+            services.AddViews();
             services.AddTransient<AppShell>();
         }
     }

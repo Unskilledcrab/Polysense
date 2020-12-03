@@ -1,6 +1,7 @@
 ﻿using Fizzler.Systems.HtmlAgilityPack;
 using HtmlAgilityPack;
 using Microsoft.Extensions.Logging;
+using PS.Shared.HttpClients;
 using PS.Shared.Models;
 using PS.Web.Scraper.Abstractions;
 using PS.Web.Scraper.Interfaces;
@@ -15,7 +16,7 @@ namespace PS.Web.Scraper._5_Second
     {
         public IList<ScraperText> ScrapeResults { get; set; }
 
-        protected override async Task Scrape(HtmlWeb website, ILogger logger, CancellationToken token)
+        protected override async Task Scrape(ScraperTextClient client, HtmlWeb website, ILogger logger, CancellationToken token)
         {
             var watch = Stopwatch.StartNew();
             logger.LogInformation("About to fox politics Unlimited");
