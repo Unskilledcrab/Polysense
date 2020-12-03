@@ -10,15 +10,15 @@ namespace PS.Web.Scraper.Abstractions
 {
     public abstract class BaseTimedWebScaper<T> : CronJobService
     {
-        protected PoliticianClient politicianClient;
+        protected ScraperTextClient scraperClient;
         private readonly ILogger<BaseTimedWebScaper<T>> _logger;
         private IList<IWebScraper> _webScrapers;
 
-        public BaseTimedWebScaper(PoliticianClient client, IScheduleConfig<T> config, ILogger<BaseTimedWebScaper<T>> logger) : base(config.CronExpression, TimeZoneInfo.Local)
+        public BaseTimedWebScaper(ScraperTextClient client, IScheduleConfig<T> config, ILogger<BaseTimedWebScaper<T>> logger) : base(config.CronExpression, TimeZoneInfo.Local)
         {
             _webScrapers = config.WebScrapers;
             _logger = logger;
-            politicianClient = client;
+            scraperClient = client;
         }
 
         public override async Task DoWork(CancellationToken cancellationToken)
@@ -26,7 +26,7 @@ namespace PS.Web.Scraper.Abstractions
             foreach (var scraper in _webScrapers)
             {
                 if (!cancellationToken.IsCancellationRequested)
-                    await scraper.Scrape(politicianClient, _logger, cancellationToken);
+                    await scraper.Scrape(scraperClient, _logger, cancellationToken);
             }
         }
     }

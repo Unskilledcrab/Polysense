@@ -11,7 +11,7 @@ namespace PS.Web.Scraper._5_Second
 {
     public class Test5SecondScraper : BaseScraper, ITestWebScraper
     {
-        protected override async Task Scrape(PoliticianClient client, HtmlWeb website, ILogger logger, CancellationToken token)
+        protected override async Task Scrape(ScraperTextClient client, HtmlWeb website, ILogger logger, CancellationToken token)
         {
             var watch = Stopwatch.StartNew();
             logger.LogInformation("About to scrape UB Unlimited");

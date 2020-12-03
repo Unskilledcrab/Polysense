@@ -10,7 +10,7 @@ namespace PS.Web.Scraper.Abstractions
 {
     abstract public class BaseScraper : IWebScraper
     {
-        public async Task Scrape(PoliticianClient client, ILogger logger, CancellationToken token)
+        public async Task Scrape(ScraperTextClient client, ILogger logger, CancellationToken token)
         {
             HtmlWeb website = new HtmlWeb();
             try
@@ -23,6 +23,6 @@ namespace PS.Web.Scraper.Abstractions
             }
         }
 
-        protected abstract Task Scrape(PoliticianClient client, HtmlWeb website, ILogger logger, CancellationToken token);
+        protected abstract Task Scrape(ScraperTextClient client, HtmlWeb website, ILogger logger, CancellationToken token);
     }
 }

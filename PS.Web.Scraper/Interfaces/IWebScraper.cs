@@ -7,7 +7,7 @@ namespace PS.Web.Scraper.Interfaces
 {
     public interface IWebScraper
     {
-        public Task Scrape(PoliticianClient client, ILogger logger, CancellationToken token);
+        public Task Scrape(ScraperTextClient client, ILogger logger, CancellationToken token);
     }
 
     public interface ITestWebScraper : IWebScraper { }
