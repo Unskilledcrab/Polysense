@@ -19,7 +19,7 @@ namespace PS.Web.Scraper._5_Second
         protected override async Task Scrape(ScraperTextClient client, HtmlWeb website, ILogger logger, CancellationToken token)
         {
             var watch = Stopwatch.StartNew();
-            logger.LogInformation("About to fox politics Unlimited");
+            logger.LogInformation("About to Fox Politics");
             string sourceURL = "https://www.foxnews.com/politics";
             var doc = await website.LoadFromWebAsync(sourceURL);
             var docNode = doc.DocumentNode;
@@ -29,9 +29,6 @@ namespace PS.Web.Scraper._5_Second
                 var relativeURL = node.QuerySelector("a").Attributes["href"].Value;
                 var nodeURL = sourceURL + relativeURL;
                 var headlinerText = node.InnerText;
-                logger.LogInformation(headlinerText);
-                logger.LogInformation(nodeURL);
-
                 try
                 {
                     // Try to upload the new scraped text data
@@ -47,7 +44,7 @@ namespace PS.Web.Scraper._5_Second
             }
             watch.Stop();
             var elapsedTime = watch.ElapsedMilliseconds;
-            logger.LogInformation($"Scrapped Fox News in {elapsedTime} ms");
+            logger.LogInformation($"Scrapped Fox Politics in {elapsedTime} ms");
         }
     }
 }
