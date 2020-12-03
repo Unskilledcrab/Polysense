@@ -32,6 +32,9 @@ namespace PS.Web.Scraper._5_Second
                 var headlinerText = node.InnerText;
                 logger.LogInformation(headlinerText);
                 logger.LogInformation(nodeURL);
+
+                //await client.SetScraperText(new ScraperText { Text = headlinerText, Website = nodeURL });
+
                 ScrapeResults.Add(new ScraperText()
                 {
                     Website = nodeURL,
