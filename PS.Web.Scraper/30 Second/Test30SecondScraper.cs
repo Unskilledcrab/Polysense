@@ -10,9 +10,7 @@ namespace PS.Web.Scraper._30_Second
 {
     public class Test30SecondScraper : BaseScraper, ITestWebScraper
     {
-        private readonly PoliticianClient client;
-
-        protected override async Task Scrape(HtmlWeb website, ILogger logger, CancellationToken token)
+        protected override async Task Scrape(ScraperTextClient client, HtmlWeb website, ILogger logger, CancellationToken token)
         {
             logger.LogInformation("<<<<<<<<<<<<<<<------------------- TEST 30 SECOND SCRAPE ---------------------->>>>>>>>>>>>>>>");
 

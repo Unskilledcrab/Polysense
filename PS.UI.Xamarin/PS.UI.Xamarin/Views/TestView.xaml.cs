@@ -11,7 +11,7 @@ namespace PS.UI.Xamarin.Views
         public TestView()
         {
             InitializeComponent();
-            BindingContext = Startup.ServiceProvider.GetService<TestViewModel>();
+            BindingContext = Container.ServiceProvider.GetService<TestViewModel>();
         }
     }
 }
