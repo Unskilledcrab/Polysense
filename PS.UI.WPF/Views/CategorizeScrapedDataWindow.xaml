@@ -16,9 +16,6 @@
     <Window.Foreground>
         <SolidColorBrush Color="{StaticResource ResourceKey=Font}" />
     </Window.Foreground>
-    <Window.DataContext>
-        <vm:CategorizeScrapedDataViewModel x:Name="CategorizeScrapedDataViewModel" />
-    </Window.DataContext>
 
     <Grid Margin="50">
         <Grid.RowDefinitions>
@@ -38,7 +35,17 @@
                 </Hyperlink.Inlines>
             </Hyperlink>
         </TextBlock>
-        <TextBlock Grid.Row="3" Style="{StaticResource SubheaderText}" Text="Text: " />
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <TextBlock Style="{StaticResource SubheaderText}" Text="Text: " />
+            <Button Grid.Column="1" HorizontalAlignment="Right" Width="220"
+                    Command="{Binding GetNextScraperText.Command}"
+                    CommandParameter="{Binding This}"
+                    IsEnabled="{Binding GetNextScraperText.IsAvailable}">Next</Button>
+        </Grid>
         <TextBlock Background="White" Grid.Row="4" Text="{Binding SelectedExcerpt.Text}" />
         <Grid Grid.Row="5">
             <Grid.ColumnDefinitions>
@@ -49,17 +56,17 @@
             <TextBlock Grid.Column="0" Text="Categories: " Style="{StaticResource FormHeaderText}" VerticalAlignment="Center" />
             <ComboBox ItemsSource="{Binding Categories}" Grid.Column="1"
                       SelectedItem="{Binding SelectedCategory}"
-                      IsEnabled="{Binding CategorizeScrapedTextCommand.IsAvailable}">
+                      IsEnabled="{Binding CategorizeScrapedText.IsAvailable}">
                 <ComboBox.ItemTemplate>
                     <DataTemplate>
                         <TextBlock Text="{Binding Label}" />
                     </DataTemplate>
                 </ComboBox.ItemTemplate>
             </ComboBox>
-            <Button Grid.Column="2" HorizontalAlignment="Right"
-                    Command="{Binding CategorizeScrapedTextCommand.Command}"
+            <Button Grid.Column="2" HorizontalAlignment="Right" Width="220"
+                    Command="{Binding CategorizeScrapedText.Command}"
                     CommandParameter="{Binding This}"
-                    IsEnabled="{Binding CategorizeScrapedTextCommand.IsAvailable}">Save Categorization</Button>
+                    IsEnabled="{Binding CategorizeScrapedText.IsAvailable}">Save Categorization</Button>
         </Grid>
     </Grid>
 </Window>

@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace PS.UI.Shared.Commands.CategorizeScrapedDataCommands
 {
-    public class CategorizeScrapedTextCommand : BaseCommand<CategorizeScrapedDataViewModel>
+    public class CategorizeScrapedText : BaseCommand<CategorizeScrapedDataViewModel>
     {
         protected override async void Execute(CategorizeScrapedDataViewModel vm)
         {
@@ -19,9 +19,8 @@ namespace PS.UI.Shared.Commands.CategorizeScrapedDataCommands
                     Console.WriteLine($"Categorized excerpt as {vm.SelectedCategory}");
 
                     vm.SelectedCategory = null;
-                    int currentIndex = vm.Excerpts.IndexOf(vm.SelectedExcerpt);
-                    int nextIndex = vm.Excerpts.Count > currentIndex + 1 ? currentIndex + 1 : 0;
-                    vm.SelectedExcerpt = vm.Excerpts[nextIndex];
+                    vm.Excerpts.GetEnumerator().MoveNext();
+                    vm.SelectedExcerpt = vm.Excerpts.GetEnumerator().Current;
                 });
 
                 Console.WriteLine("Success!");
