@@ -10,8 +10,9 @@
 
         public PaginationFilter(int pageNumber, int pageSize)
         {
+            var maxPageSize = 1000; // This is the maximum amount of records an API can return. Subject to change
             this.PageNumber = pageNumber < 1 ? 1 : pageNumber;
-            this.PageSize = pageSize < 1 || pageSize > 150 ? 1 : pageSize;
+            this.PageSize = pageSize < 1 || pageSize > maxPageSize ? 1 : pageSize;
         }
 
         public int PageNumber { get; set; }
