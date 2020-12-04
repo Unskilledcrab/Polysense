@@ -24,7 +24,8 @@ namespace PS.UI.Shared.ViewModels
 
         private async Task GetPoliticians(CancellationToken token)
         {
-            Politicians = await httpClient.GetPoliticians(token);
+            var response = await httpClient.GetPoliticians(token: token);
+            Politicians = response.Data;
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using PS.Shared.Models;
+﻿using PS.Shared.Http;
+using PS.Shared.Models;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -14,9 +15,10 @@ namespace PS.Shared.HttpClients
             client.BaseAddress = new Uri($"{client.BaseAddress}politicians");
         }
 
-        public async Task<IEnumerable<Politician>> GetPoliticians(CancellationToken token = default)
+        public async Task<PagedResponse<IEnumerable<Politician>>> GetPoliticians(int pageNumber = 1, int pageSize = 10, CancellationToken token = default)
         {
-            return await GetAsync<IEnumerable<Politician>>(token: token);
+            var endpoint = $"?pageNumber={pageNumber}&pageSize={pageSize}";
+            return (await GetAsync<PagedResponse<IEnumerable<Politician>>>(endpoint, token)).Build(client);
         }
 
         public async Task<Politician> GetPolitician(int id, CancellationToken token = default)
