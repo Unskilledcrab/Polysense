@@ -12,11 +12,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PS.Shared\PS.Shared.csproj" />
+    <Folder Include="Commands\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Commands\" />
+    <ProjectReference Include="..\PS.Shared.HttpClients\PS.Shared.HttpClients.csproj" />
   </ItemGroup>
 
 </Project>

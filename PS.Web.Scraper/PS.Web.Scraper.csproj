@@ -12,6 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PS.Shared\PS.Shared.csproj" />
+    <ProjectReference Include="..\PS.Shared.HttpClients\PS.Shared.HttpClients.csproj" />
   </ItemGroup>
 </Project>

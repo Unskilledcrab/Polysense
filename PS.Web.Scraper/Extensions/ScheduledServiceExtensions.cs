@@ -1,5 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using PS.Shared;
+using PS.Shared.HttpClients;
 using PS.Web.Scraper.Abstractions;
 using PS.Web.Scraper.Helpers;
 using PS.Web.Scraper.Interfaces;
@@ -50,7 +50,6 @@ namespace PS.Web.Scraper.Extensions
             {
                 throw new ArgumentNullException(nameof(ScheduleConfig<T>.CronExpression), @"Empty Cron Expression is not allowed.");
             }
-
             services.AddSingleton<IScheduleConfig<T>>(config);
             services.AddHostedService<T>();
             return services;
