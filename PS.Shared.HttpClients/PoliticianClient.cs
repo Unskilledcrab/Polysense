@@ -15,7 +15,7 @@ namespace PS.Shared.HttpClients
             client.BaseAddress = new Uri($"{client.BaseAddress}politicians");
         }
 
-        public async Task<PagedResponse<IEnumerable<Politician>>> GetPoliticians(int pageNumber = 1, int pageSize = 10, CancellationToken token = default)
+        public async Task<PagedResponse<IEnumerable<Politician>>> GetPoliticians(int pageNumber = 1, int pageSize = PaginationFilter.DefaultPageSize, CancellationToken token = default)
         {
             var endpoint = $"?pageNumber={pageNumber}&pageSize={pageSize}";
             return (await GetAsync<PagedResponse<IEnumerable<Politician>>>(endpoint, token)).Build(client);

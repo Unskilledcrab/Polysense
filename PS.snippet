@@ -53,7 +53,7 @@
                 client.BaseAddress = new Uri($$"{client.BaseAddress}$model$s");
             }
 
-            public async Task<PagedResponse<IEnumerable<$model$>>> Get$model$s(int pageNumber = 1, int pageSize = 10, CancellationToken token = default)
+            public async Task<PagedResponse<IEnumerable<$model$>>> Get$model$s(int pageNumber = 1, int pageSize = PaginationFilter.DefaultPageSize, CancellationToken token = default)
             {
                 var endpoint = $$"?pageNumber={pageNumber}&pageSize={pageSize}";
                 return (await GetAsync<PagedResponse<IEnumerable<$model$>>>(endpoint, token)).Build(client);
