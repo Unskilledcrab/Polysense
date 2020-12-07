@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using PS.Shared.Http;
 using PS.Shared.Models;
 using PS.Web.API.Data;
+using PS.Web.API.Extensions;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -35,13 +36,8 @@ namespace PS.Web.API.Controllers
         [HttpGet]
         public async Task<ActionResult<PagedResponse<IEnumerable<Bill>>>> GetBill([FromQuery] PaginationFilter filter)
         {
-            var validFilter = new PaginationFilter(filter.PageNumber, filter.PageSize);
-            var pagedData = await _context.Bill
-               .Skip((validFilter.PageNumber - 1) * validFilter.PageSize)
-               .Take(validFilter.PageSize)
-               .ToListAsync();
-            var totalRecords = await _context.Bill.CountAsync();
-            return Ok(new PagedResponse<IEnumerable<Bill>>(pagedData, validFilter.PageNumber, validFilter.PageSize, totalRecords));
+            var pagedData = await _context.Bill.GetPageResponse(filter.PageNumber, filter.PageSize);
+            return Ok(pagedData);
         }
 
         // GET: api/Bills/5

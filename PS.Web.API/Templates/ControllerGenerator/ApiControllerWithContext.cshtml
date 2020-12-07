@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using PS.Web.API.Extensions;
 using PS.Shared.Http;
 @{
     foreach (var namespaceName in Model.RequiredNamespaces)
     {
-@:using @namespaceName;
+        @:using @namespaceName;
     }
 }
 
@@ -27,21 +28,16 @@ namespace @Model.ControllerNamespace
     public class @Model.ControllerName : BaseAPI
     {
 
-        public @(Model.ControllerName)(@Model.ContextTypeName context) : base(context)
-        {
-        }
+    public @(Model.ControllerName)(@Model.ContextTypeName context) : base(context)
+    {
+    }
 
-        // GET: @routePrefix
-        [HttpGet]
-        public async Task<ActionResult<PagedResponse<IEnumerable<@Model.ModelTypeName>>>> Get@(entitySetName)([FromQuery] PaginationFilter filter)
+    // GET: @routePrefix
+    [HttpGet]
+    public async Task<ActionResult<PagedResponse<IEnumerable<@Model.ModelTypeName>>>> Get@(entitySetName)([FromQuery] PaginationFilter filter)
         {
-            var validFilter = new PaginationFilter(filter.PageNumber, filter.PageSize);
-            var pagedData = await _context.@(entitySetName)
-               .Skip((validFilter.PageNumber - 1) * validFilter.PageSize)
-               .Take(validFilter.PageSize)
-               .ToListAsync();
-            var totalRecords = await _context.@(entitySetName).CountAsync();
-            return Ok(new PagedResponse<IEnumerable<@Model.ModelTypeName>>(pagedData, validFilter.PageNumber, validFilter.PageSize, totalRecords));
+            var pagedData = await _context.@(entitySetName).GetPageResponse(filter.PageNumber, filter.PageSize);
+            return Ok(pagedData);
         }
 
         // GET: @routePrefix/5
