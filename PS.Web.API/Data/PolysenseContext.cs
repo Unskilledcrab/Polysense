@@ -26,5 +26,9 @@ namespace PS.Web.API.Data
         {
             builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         }
+
+        public DbSet<PS.Shared.Models.TextCategory> TextCategory { get; set; }
+
+        public DbSet<PS.Shared.Models.TextCategoryFinalized> TextCategoryFinalized { get; set; }
     }
 }
