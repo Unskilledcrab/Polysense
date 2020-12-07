@@ -1,7 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using PS.Shared.HttpClients;
 
-namespace PS.Shared
+namespace PS.Shared.HttpClients
 {
     public static class DIConfigure
     {
