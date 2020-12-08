@@ -1,0 +1,30 @@
+﻿@using System.Windows.Input
+
+<button class="@ButtonClass" disabled="@isDisabled" @onclick="ExecuteCommand">Click me</button>
+
+@code {
+    [Parameter]
+    public ICommand Command { get; set; }
+
+    [Parameter]
+    public string ButtonClass { get; set; } = "btn btn-primary";
+
+    private bool isDisabled { get; set; } = false;
+
+    public void ExecuteCommand()
+    {
+        if (Command.CanExecute(null))
+            Command.Execute(null);
+    }
+
+    protected override Task OnInitializedAsync()
+    {
+        Command.CanExecuteChanged += OnCanExecuteChanged;
+        return base.OnInitializedAsync();
+    }
+
+    private void OnCanExecuteChanged(object sender, System.EventArgs e)
+    {
+        isDisabled = !Command.CanExecute(null);
+    }
+}

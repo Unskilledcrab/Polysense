@@ -1,0 +1,8 @@
+﻿@page "/"
+@inherits BaseView<TestViewModel>
+
+<h1>Test View</h1>
+
+<p>Is Busy: @ViewModel.IsBusy</p>
+
+<Button Command="ViewModel.UpdateCommand" />
