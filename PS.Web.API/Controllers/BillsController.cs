@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using PS.Shared.Http;
 using PS.Shared.Models;
 using PS.Web.API.Data;
+using PS.Web.API.Extensions;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -32,9 +34,10 @@ namespace PS.Web.API.Controllers
 
         // GET: api/Bills
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Bill>>> GetBill()
+        public async Task<ActionResult<PagedResponse<IEnumerable<Bill>>>> GetBill([FromQuery] PaginationFilter filter)
         {
-            return await _context.Bill.ToListAsync();
+            var pagedData = await _context.Bill.GetPageResponse(filter.PageNumber, filter.PageSize);
+            return Ok(pagedData);
         }
 
         // GET: api/Bills/5
@@ -51,8 +54,7 @@ namespace PS.Web.API.Controllers
             return bill;
         }
 
-        // POST: api/Bills
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        // POST: api/Bills To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<Bill>> PostBill(Bill bill)
         {
@@ -62,8 +64,7 @@ namespace PS.Web.API.Controllers
             return CreatedAtAction("GetBill", new { id = bill.Id }, bill);
         }
 
-        // PUT: api/Bills/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        // PUT: api/Bills/5 To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutBill(int id, Bill bill)
         {

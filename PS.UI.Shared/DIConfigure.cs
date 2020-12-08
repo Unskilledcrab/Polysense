@@ -6,30 +6,21 @@ namespace PS.UI.Shared
 {
     public static class DIConfigure
     {
-        public static void Shared(IServiceCollection services)
+        public static IServiceCollection AddSharedServices(this IServiceCollection services)
         {
-            Clients(services);
-            ViewModels(services);
+            services.AddHttpClients();
+            services.AddViewModels();
+            return services;
         }
 
         /// <summary>
-        /// Configures all of the http clients for the API for dependency injection.
+        /// Configures all of the view models for dependency injection in this list
         /// </summary>
         /// <param name="services"></param>
-        public static void Clients(IServiceCollection services)
-        {
-            services.AddHttpClient<PoliticianClient>();
-        }
-
-        /// <summary>
-        /// Configures all of the view models for dependency injection. Make sure that viewmodels
-        /// that depend on other viewmodels in their constructors are placed BEFORE those viewmodels
-        /// in this list
-        /// </summary>
-        /// <param name="services"></param>
-        public static void ViewModels(IServiceCollection services)
+        public static IServiceCollection AddViewModels(this IServiceCollection services)
         {
             services.AddTransient<TestViewModel>();
+            return services;
         }
     }
 }

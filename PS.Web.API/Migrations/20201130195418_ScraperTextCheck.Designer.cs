@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PS.Web.API.Data;
 
 namespace PS.Web.API.Migrations
 {
     [DbContext(typeof(PolysenseContext))]
-    partial class PolysenseContextModelSnapshot : ModelSnapshot
+    [Migration("20201130195418_ScraperTextCheck")]
+    partial class ScraperTextCheck
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -276,38 +278,6 @@ namespace PS.Web.API.Migrations
                     b.ToTable("SupremeCourt");
                 });
 
-            modelBuilder.Entity("PS.Shared.Models.TextCategory", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("TextCategory");
-                });
-
-            modelBuilder.Entity("PS.Shared.Models.TextCategoryFinalized", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
-
-                    b.Property<int?>("CategoryId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CategoryId");
-
-                    b.ToTable("TextCategoryFinalized");
-                });
-
             modelBuilder.Entity("PS.Shared.Models.Justice", b =>
                 {
                     b.HasBaseType("PS.Shared.Models.Judge");
@@ -429,15 +399,6 @@ namespace PS.Web.API.Migrations
                         .HasForeignKey("ChiefJusticeId");
 
                     b.Navigation("ChiefJustice");
-                });
-
-            modelBuilder.Entity("PS.Shared.Models.TextCategoryFinalized", b =>
-                {
-                    b.HasOne("PS.Shared.Models.TextCategory", "Category")
-                        .WithMany()
-                        .HasForeignKey("CategoryId");
-
-                    b.Navigation("Category");
                 });
 
             modelBuilder.Entity("PS.Shared.Models.Justice", b =>
