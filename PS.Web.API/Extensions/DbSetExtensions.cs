@@ -25,5 +25,19 @@ namespace PS.Web.API.Extensions
                 .Skip((validFilter.PageNumber - 1) * validFilter.PageSize)
                 .Take(validFilter.PageSize);
         }
+
+        public static async Task<Response<T>> GetResponseAsync<T>(this DbSet<T> dbSet, int id) where T : class
+        {
+            var record = await dbSet.FindAsync(id);
+            if (record == null) return null;
+            return new Response<T>(record);
+        }
+
+        public static async Task<Response<IEnumerable<T>>> GetResponseAsync<T>(this DbSet<T> dbSet) where T : class
+        {
+            var record = await dbSet.ToListAsync();
+            if (record == null) return null;
+            return new Response<IEnumerable<T>>(record);
+        }
     }
 }
