@@ -14,9 +14,10 @@ namespace PS.Shared.HttpClients
             client.BaseAddress = new Uri($"{client.BaseAddress}TextCategorys");
         }
 
-        public async Task<IEnumerable<TextCategory>> GetTextCategorys(CancellationToken token = default)
+        public async Task<PagedResponse<IEnumerable<TextCategory>>> GetTextCategorys(int pageNumber = 1, int pageSize = PaginationFilter.DefaultPageSize, CancellationToken token = default)
         {
-            return await GetAsync<IEnumerable<TextCategory>>(string.Empty, token);
+            var endpoint = $"?pageNumber={pageNumber}&pageSize={pageSize}";
+            return (await GetAsync<PagedResponse<IEnumerable<TextCategory>>>(endpoint, token)).Build(client);
         }
 
         public async Task<TextCategory> GetTextCategory(int id, CancellationToken token = default)
@@ -38,6 +39,10 @@ namespace PS.Shared.HttpClients
         {
             return await DeleteAsync<TextCategory>($"/{id}", token);
         }
-    }
 
+        public async Task<TextCategory> DeleteTextCategory(TextCategory TextCategory, CancellationToken token = default)
+        {
+            return await DeleteAsync(TextCategory, token: token);
+        }
+    }
 }
