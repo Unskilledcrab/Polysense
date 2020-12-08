@@ -1,5 +1,6 @@
 ﻿using HtmlAgilityPack;
 using Microsoft.Extensions.Logging;
+using PS.Shared.HttpClients;
 using PS.Web.Scraper.Interfaces;
 using System;
 using System.Threading;
@@ -9,12 +10,12 @@ namespace PS.Web.Scraper.Abstractions
 {
     abstract public class BaseScraper : IWebScraper
     {
-        public async Task Scrape(ILogger logger, CancellationToken token)
+        public async Task Scrape(ScraperTextClient client, ILogger logger, CancellationToken token)
         {
             HtmlWeb website = new HtmlWeb();
             try
             {
-                await Scrape(website, logger, token);
+                await Scrape(client, website, logger, token);
             }
             catch (Exception ex)
             {
@@ -22,6 +23,6 @@ namespace PS.Web.Scraper.Abstractions
             }
         }
 
-        protected abstract Task Scrape(HtmlWeb website, ILogger logger, CancellationToken token);
+        protected abstract Task Scrape(ScraperTextClient client, HtmlWeb website, ILogger logger, CancellationToken token);
     }
 }

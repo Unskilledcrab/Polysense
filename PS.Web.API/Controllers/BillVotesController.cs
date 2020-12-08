@@ -11,60 +11,60 @@ using PS.Web.API.Data;
 
 namespace PS.Web.API.Controllers
 {
-    public class PoliticiansController : BaseAPI
+    public class BillVotesController : BaseAPI
     {
 
-        public PoliticiansController(PolysenseContext context) : base(context)
+        public BillVotesController(PolysenseContext context) : base(context)
         {
         }
 
-        // GET: api/Politicians
+        // GET: api/BillVotes
         [HttpGet]
-        public async Task<ActionResult<PagedResponse<IEnumerable<Politician>>>> GetPolitician([FromQuery] PaginationFilter filter)
+        public async Task<ActionResult<PagedResponse<IEnumerable<BillVotes>>>> GetBillVotes([FromQuery] PaginationFilter filter)
         {
             var validFilter = new PaginationFilter(filter.PageNumber, filter.PageSize);
-            var pagedData = await _context.Politician
+            var pagedData = await _context.BillVotes
                .Skip((validFilter.PageNumber - 1) * validFilter.PageSize)
                .Take(validFilter.PageSize)
                .ToListAsync();
-            var totalRecords = await _context.Politician.CountAsync();
-            return Ok(new PagedResponse<IEnumerable<Politician>>(pagedData, validFilter.PageNumber, validFilter.PageSize, totalRecords));
+            var totalRecords = await _context.BillVotes.CountAsync();
+            return Ok(new PagedResponse<IEnumerable<BillVotes>>(pagedData, validFilter.PageNumber, validFilter.PageSize, totalRecords));
         }
 
-        // GET: api/Politicians/5
+        // GET: api/BillVotes/5
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetPolitician([FromRoute] int id)
+        public async Task<IActionResult> GetBillVotes([FromRoute] int id)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            var politician = await _context.Politician.FindAsync(id);
+            var billVotes = await _context.BillVotes.FindAsync(id);
 
-            if (politician == null)
+            if (billVotes == null)
             {
                 return NotFound();
             }
 
-            return Ok(politician);
+            return Ok(billVotes);
         }
 
-        // PUT: api/Politicians/5
+        // PUT: api/BillVotes/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutPolitician([FromRoute] int id, [FromBody] Politician politician)
+        public async Task<IActionResult> PutBillVotes([FromRoute] int id, [FromBody] BillVotes billVotes)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != politician.Id)
+            if (id != billVotes.Id)
             {
                 return BadRequest();
             }
 
-            _context.Entry(politician).State = EntityState.Modified;
+            _context.Entry(billVotes).State = EntityState.Modified;
 
             try
             {
@@ -72,7 +72,7 @@ namespace PS.Web.API.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!PoliticianExists(id))
+                if (!BillVotesExists(id))
                 {
                     return NotFound();
                 }
@@ -85,45 +85,45 @@ namespace PS.Web.API.Controllers
             return NoContent();
         }
 
-        // POST: api/Politicians
+        // POST: api/BillVotes
         [HttpPost]
-        public async Task<IActionResult> PostPolitician([FromBody] Politician politician)
+        public async Task<IActionResult> PostBillVotes([FromBody] BillVotes billVotes)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            _context.Politician.Add(politician);
+            _context.BillVotes.Add(billVotes);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetPolitician", new { id = politician.Id }, politician);
+            return CreatedAtAction("GetBillVotes", new { id = billVotes.Id }, billVotes);
         }
 
-        // DELETE: api/Politicians/5
+        // DELETE: api/BillVotes/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeletePolitician([FromRoute] int id)
+        public async Task<IActionResult> DeleteBillVotes([FromRoute] int id)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            var politician = await _context.Politician.FindAsync(id);
-            if (politician == null)
+            var billVotes = await _context.BillVotes.FindAsync(id);
+            if (billVotes == null)
             {
                 return NotFound();
             }
 
-            _context.Politician.Remove(politician);
+            _context.BillVotes.Remove(billVotes);
             await _context.SaveChangesAsync();
 
-            return Ok(politician);
+            return Ok(billVotes);
         }
 
-        private bool PoliticianExists(int id)
+        private bool BillVotesExists(int id)
         {
-            return _context.Politician.Any(e => e.Id == id);
+            return _context.BillVotes.Any(e => e.Id == id);
         }
     }
 }

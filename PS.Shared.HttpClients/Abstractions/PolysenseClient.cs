@@ -11,8 +11,8 @@ namespace PS.Shared.HttpClients
     {
         public PolysenseClient(HttpClient httpClient)
         {
-            //httpClient.BaseAddress = new Uri("http://localhost:63763/api/");
-            httpClient.BaseAddress = new Uri("http://polysense.us/api/");
+            httpClient.BaseAddress = new Uri("http://localhost:63763/api/");
+            //httpClient.BaseAddress = new Uri("http://polysense.us/api/");
             httpClient.DefaultRequestHeaders.Add("Accept", "application/json");
             client = httpClient;
         }

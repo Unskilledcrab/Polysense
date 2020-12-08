@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using PS.Shared.HttpClients;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -6,7 +7,7 @@ namespace PS.Web.Scraper.Interfaces
 {
     public interface IWebScraper
     {
-        public Task Scrape(ILogger logger, CancellationToken token);
+        public Task Scrape(ScraperTextClient client, ILogger logger, CancellationToken token);
     }
 
     public interface ITestWebScraper : IWebScraper { }
