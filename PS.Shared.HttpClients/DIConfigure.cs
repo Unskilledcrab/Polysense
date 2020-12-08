@@ -1,7 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using PS.Shared.HttpClients;
 
-namespace PS.Shared
+namespace PS.Shared.HttpClients
 {
     public static class DIConfigure
     {
@@ -12,6 +11,7 @@ namespace PS.Shared
         public static IServiceCollection AddHttpClients(this IServiceCollection services)
         {
             services.AddHttpClient<PoliticianClient>();
+            services.AddHttpClient<ScraperTextClient>();
             return services;
         }
     }
