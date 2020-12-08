@@ -113,7 +113,7 @@
         <![CDATA[
         public class $Name$$Time$$UnitofTime$Scraper : BaseScraper, I$Time$$UnitofTime$WebScraper
         {
-            protected async override Task Scrape(HtmlWeb website, ILogger logger, CancellationToken token)
+            protected async override Task Scrape(ScraperTextClient client, HtmlWeb website, ILogger logger, CancellationToken token)
             {
                 var watch = Stopwatch.StartNew();
                 logger.LogInformation("Default $Time$ $UnitofTime$ scraper on UB Unlimited");
