@@ -1,4 +1,5 @@
-﻿using PS.Shared.Models;
+﻿using PS.Shared.Http;
+using PS.Shared.Models;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
