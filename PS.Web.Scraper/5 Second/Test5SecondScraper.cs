@@ -6,8 +6,6 @@ using OpenQA.Selenium.Chrome;
 using PS.Shared.HttpClients;
 using PS.Shared.Models;
 using PS.Web.Scraper.Abstractions;
-using PS.Web.Scraper.Interfaces;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
 using System.Threading;
@@ -15,17 +13,11 @@ using System.Threading.Tasks;
 
 namespace PS.Web.Scraper._5_Second
 {
-    public class Test5SecondScraper : BaseScraper, ITestWebScraper
+    public class Test5SecondScraper : BaseScraper//, ITestWebScraper
     {
         // Scraper Test
         // Tester: Jeremy Buentello Time:
         protected override async Task Scrape(ScraperTextClient client, HtmlWeb website, ILogger logger, CancellationToken token)
-        {
-            await ScrapeCNN(client, website, logger, token);
-            await ScrapeFox(client, website, logger, token);
-        }
-
-        async private Task ScrapeFox(ScraperTextClient client, HtmlWeb website, ILogger logger, CancellationToken token)
         {
             var watch = Stopwatch.StartNew();
             logger.LogInformation("About to scrape CNN Politics");
@@ -57,8 +49,6 @@ namespace PS.Web.Scraper._5_Second
 
         async private Task ScrapeCNN(ScraperTextClient client, HtmlWeb website, ILogger logger, CancellationToken token)
         {
-            List<ScraperText> resultsList = new List<ScraperText>();
-
             var watch = Stopwatch.StartNew();
             logger.LogInformation("About to scrape CNN Politics");
             string sourceURL = "https://www.cnn.com/politics";
@@ -89,7 +79,7 @@ namespace PS.Web.Scraper._5_Second
             }
             watch.Stop();
             var elapsedTime = watch.ElapsedMilliseconds;
-            logger.LogInformation($"Scrapped Fox Politics in {elapsedTime} ms");
+            logger.LogInformation($"Scrapped CNN Politics in {elapsedTime} ms");
         }
     }
 }
