@@ -1,12 +1,14 @@
 ﻿using Fizzler.Systems.HtmlAgilityPack;
 using HtmlAgilityPack;
 using Microsoft.Extensions.Logging;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 using PS.Shared.HttpClients;
 using PS.Shared.Models;
 using PS.Web.Scraper.Abstractions;
 using PS.Web.Scraper.Interfaces;
+using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
@@ -55,32 +57,39 @@ namespace PS.Web.Scraper._5_Second
 
         async private Task ScrapeCNN(ScraperTextClient client, HtmlWeb website, ILogger logger, CancellationToken token)
         {
+            List<ScraperText> resultsList = new List<ScraperText>();
+
             var watch = Stopwatch.StartNew();
             logger.LogInformation("About to scrape CNN Politics");
             string sourceURL = "https://www.cnn.com/politics";
-
-            try
+            IWebDriver driver = new ChromeDriver();
+            driver.Url = sourceURL;
+            var results = driver.FindElements(By.ClassName("cd__headline"));
+            foreach (var element in results)
             {
-                var httpClient = new HttpClient();
-                var html = await httpClient.GetStringAsync(sourceURL);
-                var htmlDocument = new HtmlDocument();
-                htmlDocument.LoadHtml(html);
-                var someList = htmlDocument.DocumentNode.Descendants("h3")
-                    .Where(node => node.GetAttributeValue("h3", "").Contains("cd"))
-                    .ToList();
-            }
-            // Try to upload the new scraped text data
-            //await client.SetScraperText(new ScraperText { Text = headlinerText, Website = nodeURL });
-            catch (HttpRequestException ex)
-            {
-                // If it is a conflict (already in the database) continue, otherwise throw the error.
-                if (ex.StatusCode != System.Net.HttpStatusCode.Conflict)
-                    throw;
-            }
+                var headlinerText = element.Text;
+                var url = element.FindElement(By.TagName("a")).GetAttribute("href");
+                //resultsList.Add(new ScraperText()
+                //{
+                //  Website = url,
+                //  Text = headlineText
+                //});
 
+                try
+                {
+                    // Try to upload the new scraped text data
+                    await client.SetScraperText(new ScraperText { Text = headlinerText, Website = url });
+                }
+                catch (HttpRequestException ex)
+                {
+                    // If it is a conflict (already in the database) continue, otherwise throw the error.
+                    if (ex.StatusCode != System.Net.HttpStatusCode.Conflict)
+                        throw;
+                }
+            }
             watch.Stop();
             var elapsedTime = watch.ElapsedMilliseconds;
-            logger.LogInformation($"Scrapped CNN Politics in {elapsedTime} ms");
+            logger.LogInformation($"Scrapped Fox Politics in {elapsedTime} ms");
         }
     }
 }
