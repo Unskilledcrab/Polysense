@@ -46,7 +46,7 @@ namespace PS.Web.API
             UpdateDatabase(app);
 
             //app.UseHttpsRedirection();
-
+            app.UseCors(options => options.AllowAnyOrigin());
             app.UseRouting();
 
             app.UseAuthorization();
