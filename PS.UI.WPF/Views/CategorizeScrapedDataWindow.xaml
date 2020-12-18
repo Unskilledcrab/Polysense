@@ -6,6 +6,7 @@
         xmlns:vm="clr-namespace:PS.UI.Shared.ViewModels;assembly=PS.UI.Shared"
         xmlns:local="clr-namespace:PS.UI.WPF.Views"
         mc:Ignorable="d"
+        d:DataContext="vm:CategorizeScrapedDataViewModel"
         Title="Data Categorizer" Height="800" Width="1200">
     <Window.Background>
         <LinearGradientBrush EndPoint=".6,1" StartPoint=".4,0">

@@ -3,25 +3,40 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+        xmlns:kanban="clr-namespace:Syncfusion.UI.Xaml.Kanban;assembly=Syncfusion.SfKanban.WPF"
         xmlns:Notification="clr-namespace:Syncfusion.Windows.Controls.Notification;assembly=Syncfusion.SfBusyIndicator.WPF"
+		xmlns:syncfusionskin ="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        WindowStartupLocation="CenterScreen"
+        Title="{Binding Title}"
+        syncfusionskin:SfSkinManager.Theme="{syncfusionskin:SkinManagerExtension ThemeName=MaterialDark}">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="auto" />
-        </Grid.RowDefinitions>
         <StackPanel>
-            <Button Command="{Binding UpdateCommand}" Content="Test Me" />
+            <Button Command="{Binding UpdateCommand}" Content="Get New Content" />
             <Notification:SfBusyIndicator IsBusy="{Binding IsBusy}">
-                <DataGrid ItemsSource="{Binding Politicians}" />
+                <kanban:SfKanban ItemsSource="{Binding ScraperTasks}">
+
+                    <kanban:SfKanban.IndicatorColorPalette>
+                        <kanban:ColorMapping Color="#FFECB93C"
+                                     Key="High"></kanban:ColorMapping>
+                        <kanban:ColorMapping Color="#FF57B94C"
+                                     Key="Normal"></kanban:ColorMapping>
+                        <kanban:ColorMapping Color="#FF5187C6"
+                                     Key="Low"></kanban:ColorMapping>
+                    </kanban:SfKanban.IndicatorColorPalette>
+
+                    <kanban:KanbanColumn Categories="Uncategorized"
+                                         Title="Uncategorized" />
+
+                    <kanban:KanbanColumn Categories="UnderReview"
+                                         Title="UnderReview" />
+                    <kanban:KanbanColumn Categories="Bias"
+                                         Title="Bias" />
+                    <kanban:KanbanColumn Categories="UnBias"
+                                         Title="UnBias" />
+                </kanban:SfKanban>
             </Notification:SfBusyIndicator>
         </StackPanel>
-        <Grid Grid.Row="1">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="auto" />
-            </Grid.ColumnDefinitions>
-            <Button Margin="5,10">Categorizer</Button>
-        </Grid>
     </Grid>
 </Window>
