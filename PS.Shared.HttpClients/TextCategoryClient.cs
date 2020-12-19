@@ -12,7 +12,7 @@ namespace PS.Shared.HttpClients
     {
         public TextCategoryClient(HttpClient httpClient) : base(httpClient)
         {
-            client.BaseAddress = new Uri($"{client.BaseAddress}TextCategorys");
+            client.BaseAddress = new Uri($"{client.BaseAddress}TextCategories");
         }
 
         public async Task<PagedResponse<IEnumerable<TextCategory>>> GetTextCategorys(int pageNumber = 1, int pageSize = PaginationFilter.DefaultPageSize, CancellationToken token = default)
