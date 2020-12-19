@@ -24,6 +24,16 @@ namespace PS.Shared.HttpClients
             return await GetAsync<ScraperText>($"/{id}", token);
         }
 
+        public async Task<IEnumerable<ScraperText>> GetScraperTextByCategoryId(int categoryId, CancellationToken token = default)
+        {
+            return await GetAsync<IEnumerable<ScraperText>>($"category/{categoryId}", token);
+        }
+
+        public async Task<IEnumerable<ScraperText>> GetScraperTextByCategoryNull(CancellationToken token = default)
+        {
+            return await GetAsync<IEnumerable<ScraperText>>("category/null", token);
+        }
+
         public async Task<ScraperText> SetScraperText(ScraperText ScraperText, CancellationToken token = default)
         {
             return await PostAsync(ScraperText, string.Empty, token);
