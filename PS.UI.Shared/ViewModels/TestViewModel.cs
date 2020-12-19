@@ -9,20 +9,30 @@ namespace PS.UI.Shared.ViewModels
     public class TestViewModel : BaseViewModel
     {
         private readonly ScraperTextClient scraperClient;
+        private readonly TextCategoryClient categoryClient;
 
-        public TestViewModel(ScraperTextClient scraperClient)
+        public TestViewModel(ScraperTextClient scraperClient, TextCategoryClient categoryClient)
         {
             this.scraperClient = scraperClient;
+            this.categoryClient = categoryClient;
         }
 
         public IEnumerable<ScraperText> ScrapedTexts { get; set; } = new List<ScraperText>();
+        public IEnumerable<TextCategory> Categories { get; set; } = new List<TextCategory>();
 
         public override async Task OnUpdate(CancellationToken token)
         {
             await GetScrapedText(token);
+            await GetCategories(token);
         }
 
-        private async Task GetScrapedText(CancellationToken token)
+        protected async Task GetCategories(CancellationToken token)
+        {
+            var response = await categoryClient.GetTextCategorys(token: token);
+            Categories = response.Data;
+        }
+
+        protected async Task GetScrapedText(CancellationToken token)
         {
             var response = await scraperClient.GetScraperTexts(token: token);
             ScrapedTexts = response;

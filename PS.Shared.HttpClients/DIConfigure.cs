@@ -12,6 +12,7 @@ namespace PS.Shared.HttpClients
         {
             services.AddHttpClient<PoliticianClient>();
             services.AddHttpClient<ScraperTextClient>();
+            services.AddHttpClient<TextCategoryClient>();
             return services;
         }
     }
