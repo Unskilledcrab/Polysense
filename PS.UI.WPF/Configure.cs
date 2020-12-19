@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using PS.UI.WPF.ViewModels;
 using PS.UI.WPF.Views;
 
 namespace PS.UI.WPF
@@ -14,6 +15,12 @@ namespace PS.UI.WPF
         {
             services.AddSingleton<TestWindow>();
             services.AddSingleton<CategorizeScrapedDataWindow>();
+            return services;
+        }
+
+        public static IServiceCollection AddViewModels(this IServiceCollection services)
+        {
+            services.AddScoped<TestViewModel>();
             return services;
         }
     }

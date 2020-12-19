@@ -11,11 +11,11 @@
         WindowStartupLocation="CenterScreen"
         Title="{Binding Title}"
         syncfusionskin:SfSkinManager.Theme="{syncfusionskin:SkinManagerExtension ThemeName=MaterialDark}">
-    <Grid>
-        <StackPanel>
-            <Button Command="{Binding UpdateCommand}" Content="Get New Content" />
-            <Notification:SfBusyIndicator IsBusy="{Binding IsBusy}">
-                <kanban:SfKanban ItemsSource="{Binding ScraperTasks}">
+    <StackPanel>
+        <Button Command="{Binding UpdateCommand}" Content="Get New Content" />
+        <Notification:SfBusyIndicator IsBusy="{Binding IsBusy}">
+            <ScrollViewer>
+                <kanban:SfKanban Columns="{Binding ScraperColumns}" ItemsSource="{Binding ScraperTasks}">
 
                     <kanban:SfKanban.IndicatorColorPalette>
                         <kanban:ColorMapping Color="#FFECB93C"
@@ -25,18 +25,8 @@
                         <kanban:ColorMapping Color="#FF5187C6"
                                      Key="Low"></kanban:ColorMapping>
                     </kanban:SfKanban.IndicatorColorPalette>
-
-                    <kanban:KanbanColumn Categories="Uncategorized"
-                                         Title="Uncategorized" />
-
-                    <kanban:KanbanColumn Categories="UnderReview"
-                                         Title="UnderReview" />
-                    <kanban:KanbanColumn Categories="Bias"
-                                         Title="Bias" />
-                    <kanban:KanbanColumn Categories="UnBias"
-                                         Title="UnBias" />
                 </kanban:SfKanban>
-            </Notification:SfBusyIndicator>
-        </StackPanel>
-    </Grid>
+            </ScrollViewer>
+        </Notification:SfBusyIndicator>
+    </StackPanel>
 </Window>

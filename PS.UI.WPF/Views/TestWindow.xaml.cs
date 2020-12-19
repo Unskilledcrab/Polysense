@@ -1,4 +1,4 @@
-﻿using PS.UI.Shared.ViewModels;
+﻿using PS.UI.WPF.ViewModels;
 using System.Windows;
 
 namespace PS.UI.WPF.Views

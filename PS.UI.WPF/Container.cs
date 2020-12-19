@@ -18,6 +18,7 @@ namespace PS.UI.WPF
         private static void ConfigureServices(IServiceCollection services)
         {
             services.AddSharedServices();
+            services.AddViewModels();
             services.AddViews();
         }
     }
