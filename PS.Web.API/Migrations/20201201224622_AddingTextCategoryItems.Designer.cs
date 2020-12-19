@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PS.Web.API.Data;
 
 namespace PS.Web.API.Migrations
 {
     [DbContext(typeof(PolysenseContext))]
-    partial class PolysenseContextModelSnapshot : ModelSnapshot
+    [Migration("20201201224622_AddingTextCategoryItems")]
+    partial class AddingTextCategoryItems
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -79,23 +81,6 @@ namespace PS.Web.API.Migrations
                     b.HasIndex("BillId");
 
                     b.ToTable("BillStatus");
-                });
-
-            modelBuilder.Entity("PS.Shared.Models.BillVotes", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
-
-                    b.Property<int?>("CongressId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CongressId");
-
-                    b.ToTable("BillVotes");
                 });
 
             modelBuilder.Entity("PS.Shared.Models.Congress", b =>
@@ -235,29 +220,6 @@ namespace PS.Web.API.Migrations
                     b.ToTable("Politician");
                 });
 
-            modelBuilder.Entity("PS.Shared.Models.ScraperText", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
-
-                    b.Property<int?>("CategoryId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Text")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Website")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CategoryId");
-
-                    b.ToTable("ScraperText");
-                });
-
             modelBuilder.Entity("PS.Shared.Models.Senate", b =>
                 {
                     b.Property<int>("Id")
@@ -313,6 +275,23 @@ namespace PS.Web.API.Migrations
                     b.ToTable("TextCategory");
                 });
 
+            modelBuilder.Entity("PS.Shared.Models.TextCategoryFinalized", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<int?>("CategoryId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CategoryId");
+
+                    b.ToTable("TextCategoryFinalized");
+                });
+
             modelBuilder.Entity("PS.Shared.Models.Justice", b =>
                 {
                     b.HasBaseType("PS.Shared.Models.Judge");
@@ -364,15 +343,6 @@ namespace PS.Web.API.Migrations
                         .HasForeignKey("BillId");
 
                     b.Navigation("Bill");
-                });
-
-            modelBuilder.Entity("PS.Shared.Models.BillVotes", b =>
-                {
-                    b.HasOne("PS.Shared.Models.Congress", "Congress")
-                        .WithMany()
-                        .HasForeignKey("CongressId");
-
-                    b.Navigation("Congress");
                 });
 
             modelBuilder.Entity("PS.Shared.Models.Congress", b =>
@@ -427,15 +397,6 @@ namespace PS.Web.API.Migrations
                         .HasForeignKey("SenateId");
                 });
 
-            modelBuilder.Entity("PS.Shared.Models.ScraperText", b =>
-                {
-                    b.HasOne("PS.Shared.Models.TextCategory", "Category")
-                        .WithMany()
-                        .HasForeignKey("CategoryId");
-
-                    b.Navigation("Category");
-                });
-
             modelBuilder.Entity("PS.Shared.Models.Senate", b =>
                 {
                     b.HasOne("PS.Shared.Models.Politician", "PresidentOfTheSenate")
@@ -452,6 +413,15 @@ namespace PS.Web.API.Migrations
                         .HasForeignKey("ChiefJusticeId");
 
                     b.Navigation("ChiefJustice");
+                });
+
+            modelBuilder.Entity("PS.Shared.Models.TextCategoryFinalized", b =>
+                {
+                    b.HasOne("PS.Shared.Models.TextCategory", "Category")
+                        .WithMany()
+                        .HasForeignKey("CategoryId");
+
+                    b.Navigation("Category");
                 });
 
             modelBuilder.Entity("PS.Shared.Models.Justice", b =>

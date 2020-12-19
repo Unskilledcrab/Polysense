@@ -16,9 +16,11 @@ namespace PS.Web.API.Controllers
 
         // GET: api/ScraperTexts
         [HttpGet]
-        public IEnumerable<ScraperText> GetScraperText()
+        public async Task<ActionResult<IEnumerable<ScraperText>>> GetScraperText()
         {
-            return _context.ScraperText;
+            var scraperText = await _context.ScraperText.Include(s => s.Category).ToListAsync();
+
+            return scraperText;
         }
 
         // GET: api/ScraperTexts/5
@@ -30,7 +32,7 @@ namespace PS.Web.API.Controllers
                 return BadRequest(ModelState);
             }
 
-            var scraperText = await _context.ScraperText.FindAsync(id);
+            var scraperText = await _context.ScraperText.Include(s => s.Category).FirstOrDefaultAsync(i => i.Id == id);
 
             if (scraperText == null)
             {
@@ -38,6 +40,34 @@ namespace PS.Web.API.Controllers
             }
 
             return Ok(scraperText);
+        }
+
+        // GET: api/ScraperTexts/category/5
+        [HttpGet("category/{categoryId}")]
+        public async Task<ActionResult<IEnumerable<ScraperText>>> GetScraperTextByCategoryId([FromRoute] int categoryId)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var scraperText = await _context.ScraperText.Include(s => s.Category).Where(i => i.Category.Id == categoryId).ToListAsync();
+
+            if (scraperText == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(scraperText);
+        }
+
+        // GET: api/ScraperTexts/category/null
+        [HttpGet("category/null")]
+        public async Task<ActionResult<IEnumerable<ScraperText>>> GetScraperTextByCategoryNull()
+        {
+            var scraperText = await _context.ScraperText.Include(s => s.Category).Where(i => i.Category == null).ToListAsync();
+
+            return scraperText;
         }
 
         // PUT: api/ScraperTexts/5
@@ -88,6 +118,12 @@ namespace PS.Web.API.Controllers
 
             if (isMatchingText == false)
             {
+                if (scraperText.Category != null)
+                {
+                    var category = await _context.TextCategory.FirstOrDefaultAsync(p => p.Id == scraperText.Category.Id);
+                    scraperText.Category = category;
+                }
+
                 _context.ScraperText.Add(scraperText);
                 await _context.SaveChangesAsync();
 
