@@ -32,17 +32,7 @@ Add the extensions below either by clicking on the link and downloading them or 
 	Click "Online" on the left tab
 	Type the names below into the search bar on the top right
 
-1) [Codemaid](https://marketplace.visualstudio.com/items?itemName=SteveCadwallader.CodeMaid)
-2) [EF Core Power Tools](https://marketplace.visualstudio.com/items?itemName=ErikEJ.EFCorePowerTools)
-3) [Github Extension for Visual Studio](https://marketplace.visualstudio.com/items?itemName=GitHub.GitHubExtensionforVisualStudio)
-
-## Adding Code Snippets
-Import the snippets in the "Tools/Code Snippets" folder into your project following the steps outlined or using the link to this site
-
-[Microsoft Instructions](https://docs.microsoft.com/en-us/visualstudio/ide/walkthrough-creating-a-code-snippet?view=vs-2019#import-a-code-snippet)
-* Go to "Tools" in the toolbar
-* Click "Code Snippets Manager..."
-* Click "Import" in the lower left corner
-* Navigate to "PS.Snippets" file in the solution
-* Select "My Code Snippets" folder
-* Click "Finish"
+1) [Polysense Extensions](https://marketplace.visualstudio.com/items?itemName=Polysense.PolysenseExtensions)
+2) [Codemaid](https://marketplace.visualstudio.com/items?itemName=SteveCadwallader.CodeMaid)
+3) [EF Core Power Tools](https://marketplace.visualstudio.com/items?itemName=ErikEJ.EFCorePowerTools)
+4) [Github Extension for Visual Studio](https://marketplace.visualstudio.com/items?itemName=GitHub.GitHubExtensionforVisualStudio)
