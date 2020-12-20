@@ -6,6 +6,8 @@ namespace PS.Shared.Extensions
     {
         public static string ToColorKey(this ScraperText source)
         {
+            if (source.Category == null) return "High";
+
             var category = source.Category.Name;
             if (category.Equals("Uncategorized"))
                 return "High";

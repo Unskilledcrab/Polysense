@@ -8,13 +8,18 @@
 		     xmlns:syncfusionskin ="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
              mc:Ignorable="d"
              syncfusionskin:SfSkinManager.Theme="{syncfusionskin:SkinManagerExtension ThemeName=MaterialDark}">
-    <StackPanel>
-        <Button Command="{Binding UpdateCommand}" Content="Get New Content" />
-        <Notification:SfBusyIndicator IsBusy="{Binding IsBusy}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Button Grid.Row="0" Command="{Binding UpdateCommand}" Content="Get New Content" />
+        <Notification:SfBusyIndicator Grid.Row="1" IsBusy="{Binding IsBusy}">
             <ScrollViewer>
                 <kanban:SfKanban
                     x:Name="NAME_SfKanban"
-                    MaxHeight="500"
+                    MaxHeight="900"
                     Columns="{Binding ScraperColumns}"
                     ItemsSource="{Binding ScraperTasks}">
 
@@ -29,5 +34,5 @@
                 </kanban:SfKanban>
             </ScrollViewer>
         </Notification:SfBusyIndicator>
-    </StackPanel>
+    </Grid>
 </UserControl>

@@ -13,7 +13,7 @@ namespace PS.UI.WPF.Extensions
                 ID = source.Id.ToString(),
                 Title = source.Text,
                 Description = source.Text,
-                Category = source.Category.Name,
+                Category = source.Category != null ? source.Category.Name : "Uncategorized",
                 ColorKey = source.ToColorKey(),
                 Tags = new string[] { source.GetDomainName() }
             };
