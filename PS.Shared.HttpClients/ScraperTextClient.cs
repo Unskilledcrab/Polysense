@@ -1,4 +1,5 @@
-﻿using PS.Shared.Models;
+﻿using PS.Shared.HttpClients.Abstractions;
+using PS.Shared.Models;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -7,21 +8,11 @@ using System.Threading.Tasks;
 
 namespace PS.Shared.HttpClients
 {
-    public class ScraperTextClient : PolysenseClient
+    public class ScraperTextClient : BaseClient<ScraperText>
     {
         public ScraperTextClient(HttpClient httpClient) : base(httpClient)
         {
             client.BaseAddress = new Uri($"{client.BaseAddress}ScraperTexts/");
-        }
-
-        public async Task<IEnumerable<ScraperText>> GetScraperTexts(CancellationToken token = default)
-        {
-            return await GetAsync<IEnumerable<ScraperText>>(string.Empty, token);
-        }
-
-        public async Task<ScraperText> GetScraperText(int id, CancellationToken token = default)
-        {
-            return await GetAsync<ScraperText>($"{id}", token);
         }
 
         public async Task<IEnumerable<ScraperText>> GetScraperTextByCategoryId(int categoryId, CancellationToken token = default)
@@ -32,21 +23,6 @@ namespace PS.Shared.HttpClients
         public async Task<IEnumerable<ScraperText>> GetScraperTextByCategoryNull(CancellationToken token = default)
         {
             return await GetAsync<IEnumerable<ScraperText>>("category/null", token);
-        }
-
-        public async Task<ScraperText> SetScraperText(ScraperText ScraperText, CancellationToken token = default)
-        {
-            return await PostAsync(ScraperText, string.Empty, token);
-        }
-
-        public async Task<ScraperText> UpdateScraperText(ScraperText ScraperText, CancellationToken token = default)
-        {
-            return await PutAsync(ScraperText, string.Empty, token);
-        }
-
-        public async Task<ScraperText> DeleteScraperText(int id, CancellationToken token = default)
-        {
-            return await DeleteAsync<ScraperText>($"{id}", token);
         }
     }
 }

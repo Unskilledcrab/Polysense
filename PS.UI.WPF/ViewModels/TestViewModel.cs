@@ -40,9 +40,9 @@ namespace PS.UI.WPF.ViewModels
             if (e.IsCancel || e.SelectedColumnIndex == e.TargetColumnIndex) return;
 
             var card = e.SelectedCard.Content as KanbanModel;
-            var scraperText = await scraperClient.GetScraperText(Convert.ToInt32(card.ID));
+            var scraperText = await scraperClient.GetEntity(Convert.ToInt32(card.ID));
             scraperText.Category.Name = card.Category.ToString();
-            await scraperClient.UpdateScraperText(scraperText);
+            await scraperClient.UpdateEntity(scraperText);
         }
 
         private void Initalize()

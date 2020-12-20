@@ -5,30 +5,26 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using PS.Web.API.Extensions;
 using PS.Shared.Http;
-using PS.Shared.Models;
-using PS.Web.API.Data;
+        using PS.Shared.Models;
+        using PS.Web.API.Data;
 
 namespace PS.Web.API.Controllers
 {
     public class PoliticiansController : BaseAPI
     {
 
-        public PoliticiansController(PolysenseContext context) : base(context)
-        {
-        }
+    public PoliticiansController(PolysenseContext context) : base(context)
+    {
+    }
 
-        // GET: api/Politicians
-        [HttpGet]
-        public async Task<ActionResult<PagedResponse<IEnumerable<Politician>>>> GetPolitician([FromQuery] PaginationFilter filter)
+    // GET: api/Politicians
+    [HttpGet]
+    public async Task<ActionResult<PagedResponse<IEnumerable<Politician>>>> GetPolitician([FromQuery] PaginationFilter filter)
         {
-            var validFilter = new PaginationFilter(filter.PageNumber, filter.PageSize);
-            var pagedData = await _context.Politician
-               .Skip((validFilter.PageNumber - 1) * validFilter.PageSize)
-               .Take(validFilter.PageSize)
-               .ToListAsync();
-            var totalRecords = await _context.Politician.CountAsync();
-            return Ok(new PagedResponse<IEnumerable<Politician>>(pagedData, validFilter.PageNumber, validFilter.PageSize, totalRecords));
+            var pagedData = await _context.Politician.GetPageResponse(filter.PageNumber, filter.PageSize);
+            return Ok(pagedData);
         }
 
         // GET: api/Politicians/5

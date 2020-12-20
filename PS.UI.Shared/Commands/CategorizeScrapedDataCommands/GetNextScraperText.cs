@@ -17,7 +17,7 @@ namespace PS.UI.Shared.Commands.CategorizeScrapedDataCommands
 
                 if (vm.Excerpts == null)
                 {
-                    vm.Excerpts = await vm.scraperClient.GetScraperTexts(token);
+                    vm.Excerpts = (await vm.scraperClient.GetEntities(token: token)).Data;
                     vm.SelectedExcerpt = vm.Excerpts.FirstOrDefault();
                 }
                 else
@@ -25,7 +25,7 @@ namespace PS.UI.Shared.Commands.CategorizeScrapedDataCommands
 
                 if (vm.SelectedExcerpt == null)
                 {
-                    vm.Excerpts = await vm.scraperClient.GetScraperTexts(token);
+                    vm.Excerpts = (await vm.scraperClient.GetEntities(token: token)).Data;
                     vm.SelectedExcerpt = vm.Excerpts.FirstOrDefault();
                 }
             }

@@ -40,7 +40,7 @@ namespace PS.UI.Shared.ViewModels
             //Need to disable the button while this processes somehow
             if (Excerpts == null)
             {
-                Excerpts = await scraperClient.GetScraperTexts(token);
+                Excerpts = (await scraperClient.GetEntities(token: token)).Data;
                 SelectedExcerpt = Excerpts.FirstOrDefault();
             }
             else
@@ -48,7 +48,7 @@ namespace PS.UI.Shared.ViewModels
 
             if (SelectedExcerpt == null)
             {
-                Excerpts = await scraperClient.GetScraperTexts(token);
+                Excerpts = (await scraperClient.GetEntities(token: token)).Data;
                 SelectedExcerpt = Excerpts.FirstOrDefault();
             }
         }

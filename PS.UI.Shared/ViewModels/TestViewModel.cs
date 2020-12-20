@@ -28,14 +28,14 @@ namespace PS.UI.Shared.ViewModels
 
         protected async Task GetCategories(CancellationToken token)
         {
-            var response = await categoryClient.GetTextCategorys(token: token);
+            var response = await categoryClient.GetEntities(token: token);
             Categories = response.Data;
         }
 
         protected async Task GetScrapedText(CancellationToken token)
         {
-            var response = await scraperClient.GetScraperTexts(token: token);
-            ScrapedTexts = response;
+            var response = await scraperClient.GetEntities(token: token);
+            ScrapedTexts = response.Data;
         }
     }
 }

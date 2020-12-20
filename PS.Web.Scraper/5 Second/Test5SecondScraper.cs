@@ -33,7 +33,7 @@ namespace PS.Web.Scraper._5_Second
                 try
                 {
                     // Try to upload the new scraped text data
-                    await client.SetScraperText(new ScraperText { Text = headlinerText, Website = nodeURL });
+                    await client.SetEntity(new ScraperText { Text = headlinerText, Website = nodeURL });
                 }
                 catch (HttpRequestException ex)
                 {

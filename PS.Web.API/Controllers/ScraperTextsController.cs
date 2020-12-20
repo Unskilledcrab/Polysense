@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using PS.Shared.Http;
 using PS.Shared.Models;
 using PS.Web.API.Data;
+using PS.Web.API.Extensions;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,11 +18,10 @@ namespace PS.Web.API.Controllers
 
         // GET: api/ScraperTexts
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<ScraperText>>> GetScraperText()
+        public async Task<ActionResult<PagedResponse<IEnumerable<ScraperText>>>> GetScraperText([FromQuery] PaginationFilter filter)
         {
-            var scraperText = await _context.ScraperText.Include(s => s.Category).ToListAsync();
-
-            return scraperText;
+            var pagedData = await _context.ScraperText.Include(s => s.Category).GetPageResponse(filter.PageNumber, filter.PageSize);
+            return Ok(pagedData);
         }
 
         // GET: api/ScraperTexts/5
