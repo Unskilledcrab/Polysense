@@ -1,4 +1,5 @@
 using Microsoft.Extensions.Hosting;
+using PS.Shared.HttpClients;
 using PS.Web.Scraper.Extensions;
 
 namespace PS.Web.Scraper
@@ -14,6 +15,7 @@ namespace PS.Web.Scraper
             Host.CreateDefaultBuilder(args)
                 .ConfigureServices((hostContext, services) =>
                 {
+                    services.AddHttpClients();
                     services.AddWebScrapers();
                 });
     }

@@ -21,7 +21,7 @@ namespace PS.UI.Shared.ViewModels
 
         public event EventHandler AfterUpdate;
 
-        public string Title { get; set; }
+        public string Title { get; set; } = "No Title";
         public ICommand CancelUpdateCommand { get; set; }
         public ICommand UpdateCommand { get; set; }
         public bool IsBusy { get; set; } = false;
@@ -61,7 +61,7 @@ namespace PS.UI.Shared.ViewModels
             }
             catch (Exception ex)
             {
-                var test = ex;
+                Console.WriteLine(ex.Message);
                 throw;
             }
             finally

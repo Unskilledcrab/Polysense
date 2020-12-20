@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using PS.Shared.Http;
 using PS.Shared.Models;
 using PS.Web.API.Data;
+using PS.Web.API.Extensions;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,9 +18,10 @@ namespace PS.Web.API.Controllers
 
         // GET: api/TextCategories
         [HttpGet]
-        public IEnumerable<TextCategory> GetTextCategory()
+        public async Task<ActionResult<PagedResponse<IEnumerable<TextCategory>>>> GetTextCategory([FromQuery] PaginationFilter filter)
         {
-            return _context.TextCategory;
+            var pagedData = await _context.TextCategory.GetPageResponse(filter.PageNumber, filter.PageSize);
+            return Ok(pagedData);
         }
 
         // GET: api/TextCategories/5

@@ -8,24 +8,34 @@ namespace PS.UI.Shared.ViewModels
 {
     public class TestViewModel : BaseViewModel
     {
-        private readonly PoliticianClient httpClient;
+        protected readonly ScraperTextClient scraperClient;
+        protected readonly TextCategoryClient categoryClient;
 
-        public TestViewModel(PoliticianClient httpClient)
+        public TestViewModel(ScraperTextClient scraperClient, TextCategoryClient categoryClient)
         {
-            this.httpClient = httpClient;
+            this.scraperClient = scraperClient;
+            this.categoryClient = categoryClient;
         }
 
-        public IEnumerable<Politician> Politicians { get; set; }
+        public IEnumerable<ScraperText> ScrapedTexts { get; set; } = new List<ScraperText>();
+        public IEnumerable<TextCategory> Categories { get; set; } = new List<TextCategory>();
 
         public override async Task OnUpdate(CancellationToken token)
         {
-            await GetPoliticians(token);
+            await GetScrapedText(token);
+            await GetCategories(token);
         }
 
-        private async Task GetPoliticians(CancellationToken token)
+        protected async Task GetCategories(CancellationToken token)
         {
-            var response = await httpClient.GetPoliticians(token: token);
-            Politicians = response.Data;
+            var response = await categoryClient.GetTextCategorys(token: token);
+            Categories = response.Data;
+        }
+
+        protected async Task GetScrapedText(CancellationToken token)
+        {
+            var response = await scraperClient.GetScraperTexts(token: token);
+            ScrapedTexts = response;
         }
     }
 }

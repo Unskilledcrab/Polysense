@@ -3,13 +3,13 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:uc="clr-namespace:PS.UI.WPF.UserControls"
+        xmlns:kanban="clr-namespace:Syncfusion.UI.Xaml.Kanban;assembly=Syncfusion.SfKanban.WPF"
         xmlns:Notification="clr-namespace:Syncfusion.Windows.Controls.Notification;assembly=Syncfusion.SfBusyIndicator.WPF"
+		xmlns:syncfusionskin ="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <StackPanel>
-        <Button Command="{Binding UpdateCommand}" Content="Test Me" Height="40" />
-        <Notification:SfBusyIndicator IsBusy="{Binding IsBusy}">
-            <DataGrid ItemsSource="{Binding Politicians}" />
-        </Notification:SfBusyIndicator>
-    </StackPanel>
+        WindowStartupLocation="CenterScreen"
+        Title="{Binding Title}"
+        syncfusionskin:SfSkinManager.Theme="{syncfusionskin:SkinManagerExtension ThemeName=MaterialDark}">
+    <uc:KanbanText CardDragEndCommand="{Binding CardDragEndCommand}" />
 </Window>

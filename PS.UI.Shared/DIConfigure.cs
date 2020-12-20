@@ -20,6 +20,7 @@ namespace PS.UI.Shared
         public static IServiceCollection AddViewModels(this IServiceCollection services)
         {
             services.AddTransient<TestViewModel>();
+            services.AddTransient<CategorizeScrapedDataViewModel>();
             return services;
         }
     }

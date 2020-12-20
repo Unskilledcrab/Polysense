@@ -1,5 +1,4 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using PS.Shared.HttpClients;
 using PS.Web.Scraper.Abstractions;
 using PS.Web.Scraper.Helpers;
 using PS.Web.Scraper.Interfaces;
@@ -11,7 +10,6 @@ namespace PS.Web.Scraper.Extensions
     {
         public static IServiceCollection AddWebScrapers(this IServiceCollection services)
         {
-            services.AddHttpClients();
 #if DEBUG
             services.AddCronJob<TestWebScraper>(c =>
             {

@@ -1,0 +1,13 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- Buttons / etc -->
+    <Color x:Key="Primary">#2196F3</Color>
+    <Color x:Key="PrimaryFont">White</Color>
+    <Color x:Key="Disabled">#332196F3</Color>
+
+    <!-- Theme -->
+    <Color x:Key="Font">Black</Color>
+    <Color x:Key="BGPrimary">#FF9AE4FF</Color>
+    <Color x:Key="BGSecondary">White</Color>
+</ResourceDictionary>
