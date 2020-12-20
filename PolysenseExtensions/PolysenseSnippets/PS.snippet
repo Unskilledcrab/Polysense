@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Model Configuration Template</Title>
+      <Author>Unskilled</Author>
+      <Description>Creates a base context configuration</Description>
+      <Shortcut>PSConfig</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>model</ID>
+          <ToolTip>the model class name</ToolTip>
+          <Default>ModelClassName</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[
+        public class $model$Configuration : IEntityTypeConfiguration<$model$>
+        {
+            public void Configure(EntityTypeBuilder<$model$> builder)
+            {
+                builder.HasKey(b => b.Id);
+            }
+        }
+        ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Client Template</Title>
+      <Author>Unskilled</Author>
+      <Description>Creates a client for the PS API for a given model</Description>
+      <Shortcut>PSClient</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>model</ID>
+          <ToolTip>the model class name</ToolTip>
+          <Default>ModelClassName</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[
+        public class $model$Client : BaseClient<$model$>
+        {
+            public $model$Client(HttpClient httpClient) : base(httpClient)
+            {
+                client.BaseAddress = new Uri($$"{client.BaseAddress}$model$s/");
+            }
+        }
+        ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <!--WEB SCAPER SNIPPETS-->
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>WebScraper Template</Title>
+      <Author>Unskilled</Author>
+      <Description>Creates a base scraper configuration</Description>
+      <Shortcut>PSScraper</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>Name</ID>
+          <ToolTip>The name of your scraper</ToolTip>
+          <Default>ScraperName</Default>
+        </Literal>
+        <Literal>
+          <ID>Time</ID>
+          <ToolTip>The amount of time your scraper takes</ToolTip>
+          <Default>5</Default>
+        </Literal>
+        <Literal>
+          <ID>UnitofTime</ID>
+          <ToolTip>The unit of time of your scraper</ToolTip>
+          <Default>Second</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[
+        public class $Name$$Time$$UnitofTime$Scraper : BaseScraper, ITestWebScraper
+        {
+            protected async override Task Scrape(HtmlWeb website, ILogger logger, CancellationToken token)
+            {
+                var watch = Stopwatch.StartNew();
+                logger.LogInformation("Default $Time$ $UnitofTime$ scraper on UB Unlimited");
+
+                var doc = await website.LoadFromWebAsync("https://www.ubunlimited.com");
+
+                watch.Stop();
+                var elapsedTime = watch.ElapsedMilliseconds;
+                logger.LogInformation($$"Scrapped UB Unlimited in {elapsedTime} ms");
+            }
+        }
+        ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
