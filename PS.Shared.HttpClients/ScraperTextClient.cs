@@ -11,7 +11,7 @@ namespace PS.Shared.HttpClients
     {
         public ScraperTextClient(HttpClient httpClient) : base(httpClient)
         {
-            client.BaseAddress = new Uri($"{client.BaseAddress}ScraperTexts");
+            client.BaseAddress = new Uri($"{client.BaseAddress}ScraperTexts/");
         }
 
         public async Task<IEnumerable<ScraperText>> GetScraperTexts(CancellationToken token = default)
@@ -21,7 +21,7 @@ namespace PS.Shared.HttpClients
 
         public async Task<ScraperText> GetScraperText(int id, CancellationToken token = default)
         {
-            return await GetAsync<ScraperText>($"/{id}", token);
+            return await GetAsync<ScraperText>($"{id}", token);
         }
 
         public async Task<IEnumerable<ScraperText>> GetScraperTextByCategoryId(int categoryId, CancellationToken token = default)
@@ -46,7 +46,7 @@ namespace PS.Shared.HttpClients
 
         public async Task<ScraperText> DeleteScraperText(int id, CancellationToken token = default)
         {
-            return await DeleteAsync<ScraperText>($"/{id}", token);
+            return await DeleteAsync<ScraperText>($"{id}", token);
         }
     }
 }

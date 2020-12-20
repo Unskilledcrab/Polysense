@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+        xmlns:uc="clr-namespace:PS.UI.WPF.UserControls"
         xmlns:kanban="clr-namespace:Syncfusion.UI.Xaml.Kanban;assembly=Syncfusion.SfKanban.WPF"
         xmlns:Notification="clr-namespace:Syncfusion.Windows.Controls.Notification;assembly=Syncfusion.SfBusyIndicator.WPF"
 		xmlns:syncfusionskin ="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
@@ -11,22 +11,5 @@
         WindowStartupLocation="CenterScreen"
         Title="{Binding Title}"
         syncfusionskin:SfSkinManager.Theme="{syncfusionskin:SkinManagerExtension ThemeName=MaterialDark}">
-    <StackPanel>
-        <Button Command="{Binding UpdateCommand}" Content="Get New Content" />
-        <Notification:SfBusyIndicator IsBusy="{Binding IsBusy}">
-            <ScrollViewer>
-                <kanban:SfKanban Columns="{Binding ScraperColumns}" ItemsSource="{Binding ScraperTasks}">
-
-                    <kanban:SfKanban.IndicatorColorPalette>
-                        <kanban:ColorMapping Color="#FFECB93C"
-                                     Key="High"></kanban:ColorMapping>
-                        <kanban:ColorMapping Color="#FF57B94C"
-                                     Key="Normal"></kanban:ColorMapping>
-                        <kanban:ColorMapping Color="#FF5187C6"
-                                     Key="Low"></kanban:ColorMapping>
-                    </kanban:SfKanban.IndicatorColorPalette>
-                </kanban:SfKanban>
-            </ScrollViewer>
-        </Notification:SfBusyIndicator>
-    </StackPanel>
+    <uc:KanbanText CardDragEndCommand="{Binding CardDragEndCommand}" />
 </Window>

@@ -50,7 +50,7 @@
         {
             public $model$Client(HttpClient httpClient) : base(httpClient)
             {
-                client.BaseAddress = new Uri($$"{client.BaseAddress}$model$s");
+                client.BaseAddress = new Uri($$"{client.BaseAddress}$model$s/");
             }
 
             public async Task<PagedResponse<IEnumerable<$model$>>> Get$model$s(int pageNumber = 1, int pageSize = PaginationFilter.DefaultPageSize, CancellationToken token = default)
@@ -61,7 +61,7 @@
 
             public async Task<$model$> Get$model$(int id, CancellationToken token = default)
             {
-                return await GetAsync<$model$>($$"/{id}", token);
+                return await GetAsync<$model$>($$"{id}", token);
             }
 
             public async Task<$model$> Set$model$($model$ $model$, CancellationToken token = default)
@@ -76,7 +76,7 @@
 
             public async Task<$model$> Delete$model$(int id, CancellationToken token = default)
             {
-                return await DeleteAsync<$model$>($$"/{id}", token);
+                return await DeleteAsync<$model$>($$"{id}", token);
             }
             
             public async Task<$model$> Delete$model$($model$ $model$, CancellationToken token = default)

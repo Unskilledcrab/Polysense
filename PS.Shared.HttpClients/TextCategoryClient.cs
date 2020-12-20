@@ -12,7 +12,7 @@ namespace PS.Shared.HttpClients
     {
         public TextCategoryClient(HttpClient httpClient) : base(httpClient)
         {
-            client.BaseAddress = new Uri($"{client.BaseAddress}TextCategories");
+            client.BaseAddress = new Uri($"{client.BaseAddress}TextCategories/");
         }
 
         public async Task<PagedResponse<IEnumerable<TextCategory>>> GetTextCategorys(int pageNumber = 1, int pageSize = PaginationFilter.DefaultPageSize, CancellationToken token = default)
@@ -23,7 +23,7 @@ namespace PS.Shared.HttpClients
 
         public async Task<TextCategory> GetTextCategory(int id, CancellationToken token = default)
         {
-            return await GetAsync<TextCategory>($"/{id}", token);
+            return await GetAsync<TextCategory>($"{id}", token);
         }
 
         public async Task<TextCategory> SetTextCategory(TextCategory TextCategory, CancellationToken token = default)
@@ -38,7 +38,7 @@ namespace PS.Shared.HttpClients
 
         public async Task<TextCategory> DeleteTextCategory(int id, CancellationToken token = default)
         {
-            return await DeleteAsync<TextCategory>($"/{id}", token);
+            return await DeleteAsync<TextCategory>($"{id}", token);
         }
 
         public async Task<TextCategory> DeleteTextCategory(TextCategory TextCategory, CancellationToken token = default)

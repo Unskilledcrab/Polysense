@@ -12,7 +12,7 @@ namespace PS.Shared.HttpClients
     {
         public PoliticianClient(HttpClient httpClient) : base(httpClient)
         {
-            client.BaseAddress = new Uri($"{client.BaseAddress}politicians");
+            client.BaseAddress = new Uri($"{client.BaseAddress}politicians/");
         }
 
         public async Task<PagedResponse<IEnumerable<Politician>>> GetPoliticians(int pageNumber = 1, int pageSize = PaginationFilter.DefaultPageSize, CancellationToken token = default)
@@ -23,7 +23,7 @@ namespace PS.Shared.HttpClients
 
         public async Task<Politician> GetPolitician(int id, CancellationToken token = default)
         {
-            return await GetAsync<Politician>($"/{id}", token);
+            return await GetAsync<Politician>($"{id}", token);
         }
 
         public async Task<Politician> SetPolitician(Politician politician, CancellationToken token = default)
@@ -38,7 +38,7 @@ namespace PS.Shared.HttpClients
 
         public async Task<Politician> DeletePolitician(int id, CancellationToken token = default)
         {
-            return await DeleteAsync<Politician>($"/{id}", token);
+            return await DeleteAsync<Politician>($"{id}", token);
         }
 
         public async Task<Politician> DeletePolitician(Politician politician, CancellationToken token = default)

@@ -8,8 +8,8 @@ namespace PS.UI.Shared.ViewModels
 {
     public class TestViewModel : BaseViewModel
     {
-        private readonly ScraperTextClient scraperClient;
-        private readonly TextCategoryClient categoryClient;
+        protected readonly ScraperTextClient scraperClient;
+        protected readonly TextCategoryClient categoryClient;
 
         public TestViewModel(ScraperTextClient scraperClient, TextCategoryClient categoryClient)
         {
