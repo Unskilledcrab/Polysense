@@ -20,7 +20,7 @@ namespace PS.Web.Scraper._5_Second
         protected override async Task Scrape(ScraperTextClient client, HtmlWeb website, ILogger logger, CancellationToken token)
         {
             var watch = Stopwatch.StartNew();
-            logger.LogInformation("About to scrape CNN Politics");
+            logger.LogInformation("About to scrape Fox Politics");
             string sourceURL = "https://www.foxnews.com/politics";
             var doc = await website.LoadFromWebAsync(sourceURL);
             var docNode = doc.DocumentNode;
@@ -59,12 +59,6 @@ namespace PS.Web.Scraper._5_Second
             {
                 var headlinerText = element.Text;
                 var url = element.FindElement(By.TagName("a")).GetAttribute("href");
-                //resultsList.Add(new ScraperText()
-                //{
-                //  Website = url,
-                //  Text = headlineText
-                //});
-
                 try
                 {
                     // Try to upload the new scraped text data
