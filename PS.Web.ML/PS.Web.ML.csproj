@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\PS.Shared\PS.Shared.csproj" />
+    <ProjectReference Include="..\PS.Web.Scraper\PS.Web.Scraper.csproj" />
   </ItemGroup>
 
 </Project>
