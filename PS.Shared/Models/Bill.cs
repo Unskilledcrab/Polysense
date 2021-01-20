@@ -10,7 +10,9 @@ namespace PS.Shared.Models
         public ICollection<Politician> Cosponsors { get; set; }
         public DateTime IntroductionDatetime { get; set; }
         public string Name { get; set; }
-        public Politician Sponsor { get; set; }
+
+        //public Politician Sponsor { get; set; }
+        public string Sponsor { get; set; }
 
         /// <summary>
         /// When this is set it needs to update this property and add the status to the Bill Status table

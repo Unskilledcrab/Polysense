@@ -11,7 +11,8 @@ namespace PS.Shared.Models
         TextPublished,
         PassedHouse,
         PassedSenate,
-        SignedByPresident
+        SignedByPresident,
+        Unkown
     }
 
     public class BillStatus : BaseEntity
