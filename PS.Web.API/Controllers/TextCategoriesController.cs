@@ -87,7 +87,7 @@ namespace PS.Web.API.Controllers
                 return BadRequest(ModelState);
             }
 
-            _context.TextCategory.Add(textCategory);
+            await _context.UpdateOrCreate(textCategory);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetTextCategory", new { id = textCategory.Id }, textCategory);

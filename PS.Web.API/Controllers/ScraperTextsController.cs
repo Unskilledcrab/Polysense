@@ -85,11 +85,9 @@ namespace PS.Web.API.Controllers
                 return BadRequest();
             }
 
-            _context.Entry(scraperText).State = EntityState.Modified;
-
             try
             {
-                await _context.SaveChangesAsync();
+                await _context.UpdateOrCreate(scraperText);
             }
             catch (DbUpdateConcurrencyException)
             {
@@ -115,23 +113,8 @@ namespace PS.Web.API.Controllers
                 return BadRequest(ModelState);
             }
 
-            var isMatchingText = _context.ScraperText.Any(s => s.Text == scraperText.Text);
-
-            if (isMatchingText == false)
-            {
-                if (scraperText.Category != null)
-                {
-                    var category = await _context.TextCategory.FirstOrDefaultAsync(p => p.Id == scraperText.Category.Id);
-                    scraperText.Category = category;
-                }
-
-                _context.ScraperText.Add(scraperText);
-                await _context.SaveChangesAsync();
-
-                return CreatedAtAction("GetScraperText", new { id = scraperText.Id }, scraperText);
-            }
-            else
-                return Conflict("Scraper already exists!");
+            await _context.UpdateOrCreate(scraperText);
+            return CreatedAtAction("GetScraperText", new { id = scraperText.Id }, scraperText);
         }
 
         // DELETE: api/ScraperTexts/5
@@ -143,8 +126,10 @@ namespace PS.Web.API.Controllers
                 return BadRequest(ModelState);
             }
 
+            var success = await _context.TryDelete(_context.ScraperText, id);
+
             var scraperText = await _context.ScraperText.FindAsync(id);
-            if (scraperText == null)
+            if (!success)
             {
                 return NotFound();
             }

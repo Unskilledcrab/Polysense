@@ -41,7 +41,10 @@ namespace PS.UI.WPF.ViewModels
 
             var card = e.SelectedCard.Content as KanbanModel;
             var scraperText = await scraperClient.GetEntity(Convert.ToInt32(card.ID));
-            scraperText.Category.Name = card.Category.ToString();
+            scraperText.Category = new PS.Shared.Models.TextCategory
+            {
+                Name = card.Category.ToString()
+            };
             await scraperClient.UpdateEntity(scraperText);
         }
 

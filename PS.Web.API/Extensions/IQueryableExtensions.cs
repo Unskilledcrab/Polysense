@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PS.Web.API.Extensions
 {
-    public static class DbSetExtensions
+    public static class IQueryableExtensions
     {
         public static async Task<PagedResponse<IEnumerable<T>>> GetPageResponse<T>(this IQueryable<T> dbSet, int pageNumber, int pageSize)
         {
