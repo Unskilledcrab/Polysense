@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using PS.Web.Scraper.Abstractions;
+using PS.Web.Scraper.Attributes;
 using PS.Web.Scraper.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -22,6 +23,24 @@ namespace PS.Web.Scraper.Helpers
                 webScrapers.Add(scaper);
             }
             return webScrapers;
+        }
+
+        public static void BuildScrapers()
+        {
+            var allScrapers = Assembly.GetAssembly(typeof(BaseScraper)).GetTypes()
+                .Where(t => typeof(BaseScraper).IsAssignableFrom(t) && t.IsAbstract == false);
+
+            var timers = new List<string>();
+            foreach (var scraperType in allScrapers)
+            {
+                ScraperAttribute attribute = (ScraperAttribute)Attribute.GetCustomAttribute(scraperType, typeof(ScraperAttribute));
+                if (attribute != null)
+                {
+                    var expression = CronExpressionHelpers.CronMappings.GetValueOrDefault(attribute.Timer);
+                    if (!timers.Contains(expression))
+                        timers.Add(expression);
+                }
+            }
         }
     }
 }
