@@ -1,5 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using PS.UI.Shared;
+using PS.UI.Shared.Extensions;
 
 namespace PS.UI.Blazor
 {

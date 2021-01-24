@@ -1,5 +1,4 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace PS.UI.Xamarin
 {
@@ -8,8 +7,8 @@ namespace PS.UI.Xamarin
         public App()
         {
             InitializeComponent();
-            Container.Create();
-            MainPage = Container.ServiceProvider.GetRequiredService<AppShell>();
+            IoC.Create();
+            MainPage = IoC.Get<AppShell>();
         }
 
         protected override void OnStart()

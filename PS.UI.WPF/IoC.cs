@@ -1,12 +1,14 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using PS.UI.Shared;
+using PS.UI.Shared.Extensions;
 using System;
 
 namespace PS.UI.WPF
 {
-    public static class Container
+    public static class IoC
     {
         public static IServiceProvider ServiceProvider { get; private set; }
+
+        public static T Get<T>() => ServiceProvider.GetRequiredService<T>();
 
         public static void Create()
         {

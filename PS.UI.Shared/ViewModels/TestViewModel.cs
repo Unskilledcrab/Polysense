@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PS.UI.Shared.ViewModels
 {
-    public class TestViewModel : BaseViewModel
+    public class TestViewModel : BaseUpdateViewModel
     {
         protected readonly ScraperTextClient scraperClient;
         protected readonly TextCategoryClient categoryClient;

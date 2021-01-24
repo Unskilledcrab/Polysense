@@ -2,9 +2,9 @@
 using PS.Shared.HttpClients;
 using PS.UI.Shared.ViewModels;
 
-namespace PS.UI.Shared
+namespace PS.UI.Shared.Extensions
 {
-    public static class DIConfigure
+    public static class ServiceCollectionExtensions
     {
         public static IServiceCollection AddSharedServices(this IServiceCollection services)
         {
