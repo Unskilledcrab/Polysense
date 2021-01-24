@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using PS.Shared.Http;
 using PS.Shared.Models;
 using PS.Web.API.Data;
@@ -57,23 +56,7 @@ namespace PS.Web.API.Controllers
                 return BadRequest();
             }
 
-            _context.Entry(textCategory).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!TextCategoryExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+            await _context.UpdateOrCreate(textCategory);
 
             return NoContent();
         }
@@ -88,8 +71,6 @@ namespace PS.Web.API.Controllers
             }
 
             await _context.UpdateOrCreate(textCategory);
-            await _context.SaveChangesAsync();
-
             return CreatedAtAction("GetTextCategory", new { id = textCategory.Id }, textCategory);
         }
 

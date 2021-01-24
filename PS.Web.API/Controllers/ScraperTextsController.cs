@@ -85,21 +85,7 @@ namespace PS.Web.API.Controllers
                 return BadRequest();
             }
 
-            try
-            {
-                await _context.UpdateOrCreate(scraperText);
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!ScraperTextExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+            await _context.UpdateOrCreate(scraperText);
 
             return NoContent();
         }
