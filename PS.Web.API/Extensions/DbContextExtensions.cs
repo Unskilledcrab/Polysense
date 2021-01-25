@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PS.Shared.Models.Abstractions;
 using System;
-using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
@@ -28,7 +27,7 @@ namespace PS.Web.API.Extensions
 
         public static async Task UpdateOrCreate<T>(this DbContext dbContext, DbSet<T> dbSet, T model, Expression<Func<T, bool>> identityPredicate) where T : BaseEntity
         {
-            var dbModel = await dbSet.FirstOrDefaultAsync(identityPredicate);
+            var dbModel = await dbSet.AsNoTracking().FirstOrDefaultAsync(identityPredicate);
             if (dbModel == null)
             {
                 dbSet.Add(model);
@@ -36,7 +35,6 @@ namespace PS.Web.API.Extensions
             }
             else
             {
-                dbContext.Entry(dbModel).State = EntityState.Detached;
                 model.Id = dbModel.Id;
                 dbContext.Entry(model).State = EntityState.Modified;
                 await dbContext.SaveChangesAsync();
