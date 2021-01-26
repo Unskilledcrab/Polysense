@@ -18,10 +18,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Commands\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\PS.Shared.HttpClients\PS.Shared.HttpClients.csproj" />
   </ItemGroup>
 
