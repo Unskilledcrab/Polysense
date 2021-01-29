@@ -22,7 +22,7 @@ namespace PS.Shared.HttpClients
         public async Task<T> DeleteAsync<T>(T deleteObject, string endpoint = "", CancellationToken token = default) where T : BaseEntity
         {
             token.ThrowIfCancellationRequested();
-            var response = await client.DeleteAsync($"{endpoint}/{deleteObject.Id}", token).ConfigureAwait(false);
+            var response = await client.DeleteAsync($"{endpoint}{deleteObject.Id}", token).ConfigureAwait(false);
             return await DeserializeResponse<T>(response);
         }
 
@@ -47,10 +47,10 @@ namespace PS.Shared.HttpClients
             return await DeserializeResponse<T>(response);
         }
 
-        public async Task<T> PutAsync<T>(T postObject, string endpoint = "", CancellationToken token = default) where T : class
+        public async Task<T> PutAsync<T>(T postObject, string endpoint = "", CancellationToken token = default) where T : BaseEntity
         {
             token.ThrowIfCancellationRequested();
-            var response = await client.PutAsync(endpoint, postObject, new JsonMediaTypeFormatter(), token).ConfigureAwait(false);
+            var response = await client.PutAsync($"{endpoint}{postObject.Id}", postObject, new JsonMediaTypeFormatter(), token).ConfigureAwait(false);
             return await DeserializeResponse<T>(response);
         }
 
