@@ -19,7 +19,7 @@ namespace PS.Web.API.Controllers
         [HttpGet]
         public async Task<ActionResult<PagedResponse<IEnumerable<TextCategory>>>> GetTextCategory([FromQuery] PaginationFilter filter)
         {
-            var pagedData = await _context.TextCategory.GetPageResponse(filter.PageNumber, filter.PageSize);
+            var pagedData = await _context.TextCategory.GetPageResponseAsync(filter.PageNumber, filter.PageSize);
             return Ok(pagedData);
         }
 
@@ -56,7 +56,7 @@ namespace PS.Web.API.Controllers
                 return BadRequest();
             }
 
-            await _context.UpdateOrCreate(textCategory);
+            await _context.UpdateOrCreateAsync(textCategory);
 
             return NoContent();
         }
@@ -70,7 +70,7 @@ namespace PS.Web.API.Controllers
                 return BadRequest(ModelState);
             }
 
-            await _context.UpdateOrCreate(textCategory);
+            await _context.UpdateOrCreateAsync(textCategory);
             return CreatedAtAction("GetTextCategory", new { id = textCategory.Id }, textCategory);
         }
 

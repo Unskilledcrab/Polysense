@@ -8,7 +8,7 @@ namespace PS.Web.API.Extensions
 {
     public static class IQueryableExtensions
     {
-        public static async Task<PagedResponse<IEnumerable<T>>> GetPageResponse<T>(this IQueryable<T> dbSet, int pageNumber, int pageSize)
+        public static async Task<PagedResponse<IEnumerable<T>>> GetPageResponseAsync<T>(this IQueryable<T> dbSet, int pageNumber, int pageSize)
         {
             var validFilter = new PaginationFilter(pageNumber, pageSize);
             var pagedData = await dbSet

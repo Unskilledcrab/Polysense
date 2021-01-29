@@ -20,7 +20,7 @@ namespace PS.Web.API.Controllers
         [HttpGet]
         public async Task<ActionResult<PagedResponse<IEnumerable<ScraperText>>>> GetScraperText([FromQuery] PaginationFilter filter)
         {
-            var pagedData = await _context.ScraperText.Include(s => s.Category).GetPageResponse(filter.PageNumber, filter.PageSize);
+            var pagedData = await _context.ScraperText.Include(s => s.Category).GetPageResponseAsync(filter.PageNumber, filter.PageSize);
             return Ok(pagedData);
         }
 
@@ -85,7 +85,7 @@ namespace PS.Web.API.Controllers
                 return BadRequest();
             }
 
-            await _context.UpdateOrCreate(scraperText);
+            await _context.UpdateOrCreateAsync(scraperText);
 
             return NoContent();
         }
@@ -99,7 +99,7 @@ namespace PS.Web.API.Controllers
                 return BadRequest(ModelState);
             }
 
-            await _context.UpdateOrCreate(scraperText);
+            await _context.UpdateOrCreateAsync(scraperText);
             return CreatedAtAction("GetScraperText", new { id = scraperText.Id }, scraperText);
         }
 
@@ -112,7 +112,7 @@ namespace PS.Web.API.Controllers
                 return BadRequest(ModelState);
             }
 
-            var success = await _context.TryDelete(_context.ScraperText, id);
+            var success = await _context.TryDeleteAsync(_context.ScraperText, id);
 
             var scraperText = await _context.ScraperText.FindAsync(id);
             if (!success)
