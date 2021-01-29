@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PS.Shared.Models.Abstractions;
 using System;
-using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
@@ -9,23 +8,6 @@ namespace PS.Web.API.Extensions
 {
     public static class DbContextExtensions
     {
-        public static async Task BulkUpdateOrCreateAsync<T>(this DbContext dbContext, DbSet<T> dbSet, IEnumerable<T> model) where T : BaseEntity
-        {
-            var dbModel = await dbSet.FindAsync(model.Id);
-            if (dbModel == null)
-            {
-                dbSet.AddRange(model);
-                await dbContext.SaveChangesAsync();
-            }
-            else
-            {
-                dbContext.Entry(dbModel).State = EntityState.Detached;
-                model.Id = dbModel.Id;
-                dbContext.Entry(model).State = EntityState.Modified;
-                await dbContext.SaveChangesAsync();
-            }
-        }
-
         public static async Task UpdateOrCreateAsync<T>(this DbContext dbContext, DbSet<T> dbSet, T model) where T : BaseEntity
         {
             if (model.Id <= 0)
