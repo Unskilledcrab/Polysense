@@ -18,9 +18,6 @@ namespace PS.UI.WPF
             IoC.Create();
             var mainWindow = IoC.Get<TestWindow>();
             mainWindow.Show();
-
-            //var catWindow = Container.ServiceProvider.GetRequiredService<CategorizeScrapedDataWindow>();
-            //catWindow.Show();
         }
     }
 }

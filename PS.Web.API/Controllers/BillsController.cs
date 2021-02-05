@@ -36,7 +36,7 @@ namespace PS.Web.API.Controllers
         [HttpGet]
         public async Task<ActionResult<PagedResponse<IEnumerable<Bill>>>> GetBill([FromQuery] PaginationFilter filter)
         {
-            var pagedData = await _context.Bill.GetPageResponse(filter.PageNumber, filter.PageSize);
+            var pagedData = await _context.Bill.GetPageResponseAsync(filter.PageNumber, filter.PageSize);
             return Ok(pagedData);
         }
 

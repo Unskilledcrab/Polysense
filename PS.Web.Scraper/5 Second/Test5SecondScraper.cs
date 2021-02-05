@@ -4,6 +4,7 @@ using Microsoft.Extensions.Logging;
 using PS.Shared.HttpClients;
 using PS.Shared.Models;
 using PS.Web.Scraper.Abstractions;
+using PS.Web.Scraper.Attributes;
 using PS.Web.Scraper.Interfaces;
 using System.Diagnostics;
 using System.Net.Http;
@@ -12,6 +13,7 @@ using System.Threading.Tasks;
 
 namespace PS.Web.Scraper._5_Second
 {
+    [Scraper(TimerType.Every10Minutes)]
     public class Test5SecondScraper : BaseScraper, ITestWebScraper
     {
         //blah

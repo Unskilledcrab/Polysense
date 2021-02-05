@@ -37,11 +37,21 @@ namespace PS.UI.WPF.ViewModels
 
         internal async Task OnCardDragEnd(KanbanDragEndEventArgs e)
         {
+            // If the drag was cancelled or dragged to the same column
             if (e.IsCancel || e.SelectedColumnIndex == e.TargetColumnIndex) return;
 
             var card = e.SelectedCard.Content as KanbanModel;
+
+            // Get the scraperText model from the db for this card
             var scraperText = await scraperClient.GetEntity(Convert.ToInt32(card.ID));
-            scraperText.Category.Name = card.Category.ToString();
+
+            // Update the cards category to the dropped category
+            scraperText.Category = new PS.Shared.Models.TextCategory
+            {
+                Name = card.Category.ToString()
+            };
+
+            // Update the database
             await scraperClient.UpdateEntity(scraperText);
         }
 
@@ -50,6 +60,7 @@ namespace PS.UI.WPF.ViewModels
             if (isInitalized) return;
             foreach (var category in Categories)
                 ScraperColumns.Add(category.ToKanbanColumn());
+            isInitalized = true;
         }
     }
 }

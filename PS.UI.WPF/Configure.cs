@@ -14,7 +14,6 @@ namespace PS.UI.WPF
         public static IServiceCollection AddViews(this IServiceCollection services)
         {
             services.AddSingleton<TestWindow>();
-            services.AddSingleton<CategorizeScrapedDataWindow>();
             return services;
         }
 

@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using PS.Shared.Http;
 using PS.Shared.Models;
 using PS.Web.API.Data;
@@ -20,7 +19,7 @@ namespace PS.Web.API.Controllers
         [HttpGet]
         public async Task<ActionResult<PagedResponse<IEnumerable<TextCategory>>>> GetTextCategory([FromQuery] PaginationFilter filter)
         {
-            var pagedData = await _context.TextCategory.GetPageResponse(filter.PageNumber, filter.PageSize);
+            var pagedData = await _context.TextCategory.GetPageResponseAsync(filter.PageNumber, filter.PageSize);
             return Ok(pagedData);
         }
 
@@ -57,23 +56,7 @@ namespace PS.Web.API.Controllers
                 return BadRequest();
             }
 
-            _context.Entry(textCategory).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!TextCategoryExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+            await _context.UpdateOrCreateAsync(textCategory);
 
             return NoContent();
         }
@@ -87,9 +70,7 @@ namespace PS.Web.API.Controllers
                 return BadRequest(ModelState);
             }
 
-            _context.TextCategory.Add(textCategory);
-            await _context.SaveChangesAsync();
-
+            await _context.UpdateOrCreateAsync(textCategory);
             return CreatedAtAction("GetTextCategory", new { id = textCategory.Id }, textCategory);
         }
 

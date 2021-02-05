@@ -23,7 +23,7 @@ namespace PS.Web.API.Controllers
     [HttpGet]
     public async Task<ActionResult<PagedResponse<IEnumerable<Politician>>>> GetPolitician([FromQuery] PaginationFilter filter)
         {
-            var pagedData = await _context.Politician.GetPageResponse(filter.PageNumber, filter.PageSize);
+            var pagedData = await _context.Politician.GetPageResponseAsync(filter.PageNumber, filter.PageSize);
             return Ok(pagedData);
         }
 
