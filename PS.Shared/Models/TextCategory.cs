@@ -4,6 +4,6 @@ namespace PS.Shared.Models
 {
     public class TextCategory : BaseEntity
     {
-        public string Name { get; set; }
+        public string Name { get; set; } = "Not Categorized";
     }
 }

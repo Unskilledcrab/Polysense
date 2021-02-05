@@ -6,6 +6,6 @@ namespace PS.Shared.Models
     {
         public string Website { get; set; }
         public string Text { get; set; }
-        public TextCategory Category { get; set; }
+        public TextCategory Category { get; set; } = new TextCategory();
     }
 }
