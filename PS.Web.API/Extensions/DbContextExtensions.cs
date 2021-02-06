@@ -10,6 +10,7 @@ namespace PS.Web.API.Extensions
     {
         public static async Task UpdateOrCreateAsync<T>(this DbContext dbContext, DbSet<T> dbSet, T model) where T : BaseEntity
         {
+            if (model == null) return;
             if (model.Id <= 0)
             {
                 dbSet.Add(model);
@@ -33,6 +34,7 @@ namespace PS.Web.API.Extensions
 
         public static async Task UpdateOrCreateAsync<T>(this DbContext dbContext, DbSet<T> dbSet, T model, Expression<Func<T, bool>> identityPredicate) where T : BaseEntity
         {
+            if (model == null) return;
             var dbModel = await dbSet.AsNoTracking().FirstOrDefaultAsync(identityPredicate);
             if (dbModel == null)
             {
