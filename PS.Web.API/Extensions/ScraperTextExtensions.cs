@@ -7,10 +7,10 @@ namespace PS.Web.API.Extensions
 {
     public static class ScraperTextExtensions
     {
-        public static async Task UpdateOrCreateAsync(this PolysenseContext dbContext, ScraperText scraperText)
+        public static async Task<ScraperText> UpdateOrCreateAsync(this PolysenseContext dbContext, ScraperText scraperText)
         {
             await dbContext.UpdateOrCreateAsync(scraperText.Category);
-            await dbContext.UpdateOrCreateAsync(dbContext.ScraperText, scraperText, s => s.Id == scraperText.Id || s.Text == scraperText.Text);
+            return await dbContext.UpdateOrCreateAsync(dbContext.ScraperText, scraperText, s => s.Id == scraperText.Id || s.Text == scraperText.Text);
         }
 
         public static Task<bool> TryDeleteAsync(this PolysenseContext dbContext, DbSet<ScraperText> dbSet, int id)

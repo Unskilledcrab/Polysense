@@ -8,54 +8,56 @@ namespace PS.Web.API.Extensions
 {
     public static class DbContextExtensions
     {
-        public static async Task UpdateOrCreateAsync<T>(this DbContext dbContext, DbSet<T> dbSet, T model) where T : BaseEntity
+        public static async Task<T> UpdateOrCreateAsync<T>(this DbContext dbContext, DbSet<T> dbSet, T model) where T : BaseEntity
         {
-            if (model == null) return;
+            if (model == null) return null;
             if (model.Id <= 0)
             {
                 dbSet.Add(model);
-                await dbContext.SaveChangesAsync();
-                return;
+                await dbContext.SaveChangesAsync().ConfigureAwait(false);
+                return model;
             }
-            var dbModel = await dbSet.FindAsync(model.Id);
+            var dbModel = await dbSet.FindAsync(model.Id).ConfigureAwait(false);
             if (dbModel == null)
             {
                 dbSet.Add(model);
-                await dbContext.SaveChangesAsync();
+                await dbContext.SaveChangesAsync().ConfigureAwait(false);
             }
             else
             {
                 dbContext.Entry(dbModel).State = EntityState.Detached;
                 model.Id = dbModel.Id;
                 dbContext.Entry(model).State = EntityState.Modified;
-                await dbContext.SaveChangesAsync();
+                await dbContext.SaveChangesAsync().ConfigureAwait(false);
             }
+            return model;
         }
 
-        public static async Task UpdateOrCreateAsync<T>(this DbContext dbContext, DbSet<T> dbSet, T model, Expression<Func<T, bool>> identityPredicate) where T : BaseEntity
+        public static async Task<T> UpdateOrCreateAsync<T>(this DbContext dbContext, DbSet<T> dbSet, T model, Expression<Func<T, bool>> identityPredicate) where T : BaseEntity
         {
-            if (model == null) return;
-            var dbModel = await dbSet.AsNoTracking().FirstOrDefaultAsync(identityPredicate);
+            if (model == null) return null;
+            var dbModel = await dbSet.AsNoTracking().FirstOrDefaultAsync(identityPredicate).ConfigureAwait(false);
             if (dbModel == null)
             {
                 dbSet.Add(model);
-                await dbContext.SaveChangesAsync();
+                await dbContext.SaveChangesAsync().ConfigureAwait(false);
             }
             else
             {
                 model.Id = dbModel.Id;
                 dbContext.Entry(model).State = EntityState.Modified;
-                await dbContext.SaveChangesAsync();
+                await dbContext.SaveChangesAsync().ConfigureAwait(false);
             }
+            return model;
         }
 
         public static async Task<bool> TryDeleteAsync<T>(this DbContext dbContext, DbSet<T> dbSet, int id) where T : class
         {
-            var dbModel = await dbSet.FindAsync(id);
+            var dbModel = await dbSet.FindAsync(id).ConfigureAwait(false);
             if (dbModel != null)
             {
                 dbSet.Remove(dbModel);
-                await dbContext.SaveChangesAsync();
+                await dbContext.SaveChangesAsync().ConfigureAwait(false);
                 return true;
             }
             else
@@ -64,11 +66,11 @@ namespace PS.Web.API.Extensions
 
         public static async Task<bool> TryDeleteAsync<T>(this DbContext dbContext, DbSet<T> dbSet, T model) where T : BaseEntity
         {
-            var dbModel = await dbSet.FindAsync(model.Id);
+            var dbModel = await dbSet.FindAsync(model.Id).ConfigureAwait(false);
             if (dbModel != null)
             {
                 dbSet.Remove(dbModel);
-                await dbContext.SaveChangesAsync();
+                await dbContext.SaveChangesAsync().ConfigureAwait(false);
                 return true;
             }
             else
@@ -77,11 +79,11 @@ namespace PS.Web.API.Extensions
 
         public static async Task<bool> TryDeleteAsync<T>(this DbContext dbContext, DbSet<T> dbSet, Expression<Func<T, bool>> identityPredicate) where T : BaseEntity
         {
-            var dbModel = await dbSet.FirstOrDefaultAsync(identityPredicate);
+            var dbModel = await dbSet.FirstOrDefaultAsync(identityPredicate).ConfigureAwait(false);
             if (dbModel != null)
             {
                 dbSet.Remove(dbModel);
-                await dbContext.SaveChangesAsync();
+                await dbContext.SaveChangesAsync().ConfigureAwait(false);
                 return true;
             }
             else
