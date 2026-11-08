@@ -111,6 +111,13 @@ these patterns. They are experiments: keep the ones readers find easier, and cha
 - Each tab ends with links to the next and previous tabs.
 - Tables become stacked cards on narrow screens.
 
+## To try: questions to weigh
+
+The owner wants pages that make readers think about the issue rather than pick a team. To try in the next
+trials: end each decision with two or three neutral questions that both sides would accept as fair, such
+as "How much should parents be able to reach their child during the school day?" The bias panel checks
+them like any other text. Keep the idea only if readers find it useful.
+
 ## Accessibility and performance
 
 - Meet **WCAG 2.2 AA**.

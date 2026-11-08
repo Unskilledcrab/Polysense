@@ -13,6 +13,8 @@ Claiming to be unbiased isn't enough. We make fairness **structural, measurable 
    - Evidence labels follow the evidence, so we never equalize ratings to look balanced.
 3. **No endorsements, ratings, scorecards or "truth meters."**
 4. **Neutral naming.** Use bill numbers and plain descriptions. Advocacy nicknames appear only in quotes.
+   **Issues, not teams:** no party or left-right labels on people, arguments or organizations unless a
+   fact can't be understood without one ([content-style-guide.md](../product/content-style-guide.md)).
 5. **The loaded-word list** is enforced outside quotes ([content-style-guide.md](../product/content-style-guide.md)).
 6. **Transparent topic selection.** A published rubric and a public coverage log, including what we
    *didn't* cover and the sponsor-party mix ([topic-selection.md](topic-selection.md)).

@@ -27,6 +27,10 @@ All of these keep the existing guardrails ([CLAUDE.md](../../CLAUDE.md), [nonpar
 - Documented statements carry speaker, date, venue and the verbatim passage. Nothing is attributed to a
   candidate that they didn't say.
 - Extra care near elections. Legislators are also future candidates.
+- **Issues, not teams.** Describe legislators and candidates by role and record, and organize by issue,
+  not by party or left vs. right. A party appears only when a fact can't be understood without it (a
+  party-line vote, for example). This matters most here, because voting content is where team framing
+  creeps in fastest.
 
 ## Open questions for the owner
 

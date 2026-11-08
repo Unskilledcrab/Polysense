@@ -36,6 +36,10 @@ LOADED = [
     "gut ", "guts ", "crack down", "crackdown", "job-killing", "disastrous", "draconian",
     "reckless", "landmark", "historic", "sweeping",
 ]
+# Party and left-right labels: a warning outside quotes, so the drafter checks the fact really needs one
+# (style guide §7: keep political parties out of it). Whole words only, so "nonpartisan" doesn't match.
+PARTY = re.compile(r"\b(republicans?|democrats?|democratic party|gop|liberals?|conservatives?|left-wing|right-wing|"
+                   r"far-left|far-right|the left|the right|partisan|bipartisan)\b", re.I)
 
 
 NUMBER_WORDS = {
@@ -133,6 +137,9 @@ def main(workspace: Path, passages_path: Path) -> int:
             for word in LOADED:
                 if word in f" {unquoted} ":
                     warnings.append(f"L{no}: loaded word '{word.strip()}' outside a quote")
+            for m_party in PARTY.finditer(unquoted):
+                warnings.append(f"L{no}: party or left-right label '{m_party.group(0)}' outside a quote; "
+                                "keep it only if the fact needs it")
         tail = line[pos:].strip()
         if re.search(r"[A-Za-z]{2,}", tail):
             errors.append(f"L{no}: sentence without citation or tag: {tail[:80]}")

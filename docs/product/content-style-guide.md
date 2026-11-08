@@ -3,7 +3,7 @@
 **Goal:** a reader who gives us 30 seconds leaves knowing what's being decided, who it affects, and what
 they can do. Someone who gives us 30 minutes can check every claim.
 
-This guide is **v0.3**: working rules from one trial, not settled policy. Each manual trial and
+This guide is **v0.4**: working rules from one trial, not settled policy. Each manual trial and
 comprehension round updates it, and changes are recorded at the bottom. After each trial, review the rules
 against the [tenets](vision.md#tenets): keep the ones that helped, simplify the ones that didn't, and
 retire any that a later trial makes unnecessary.
@@ -81,7 +81,12 @@ If something doesn't fit, it moves to a deeper layer. It is not crammed in.
   into a quote.
 - Anticipated arguments use "Some people may argue…" and are never attributed.
 - **Never name minors.** Describe them by role.
-- **Party labels:** for every speaker or for none.
+- **Keep political parties out of it.** Describe people by their role (state senator, superintendent,
+  teacher), and arguments by the issue. Say "supporters" and "opponents" of this decision, never "the
+  left" or "conservatives". Describe organizations by what they do and where they stand on this
+  decision, not by ideology. Mention a party only when a fact can't be understood without it (a
+  party-line vote, for example), and then the same way for every side. The aim is to help readers think
+  about the issue, not to sort them into teams.
 - **Pronouns:** use a pronoun for a person only when a source gives it. Otherwise repeat the name or the
   role ("this senator").
 - **Timing words matter.** "No later than July 1" is not "on July 1". Keep the law's own precision.
@@ -118,3 +123,4 @@ overcorrecting, against critics.
 | 2026-11-08 | v0.1: quote punctuation, paraphrase vs. quote, minors, party labels, timing words, subgroup statistics | Trial 001 (HB 1009) drafting and planted-error design |
 | 2026-11-08 | v0.2: argument-card rules (one bar for every side) | Trial 001 verification rounds 1–2 |
 | 2026-11-08 | v0.3: pronouns need a source; absence claims need the whole text | Trial 001 verification round 3 |
+| 2026-11-08 | v0.4: keep political parties out of it (replaces "party labels for every speaker or none") | Owner direction after Trial 001 |

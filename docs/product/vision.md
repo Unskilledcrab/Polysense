@@ -27,7 +27,7 @@ Set by the project owner on 2026-11-08, after reviewing the first prototype. Eve
 process change should hold to all three:
 
 1. **Correct and nonbiased.** Every claim matches its source. Each side gets its strongest case, under
-   the same rules.
+   the same rules. It's about issues and facts, not parties or left vs. right.
 2. **Concise and digestible.** Answer first, plain words, no more than a reader needs. Designed for a phone
    first.
 3. **Informative and actionable.** Readers learn what matters and what they can do about it.

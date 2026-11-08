@@ -43,8 +43,9 @@ apply to everything we publish, whoever it helps or hurts.
   ([verification protocol](../process/verification-protocol.md)).
 - **Minors are never named.** Describe them by role ("a 17-year-old student who testified"), even if
   news reports name them.
-- **Party labels** appear only if we can show them for every speaker on the page. Otherwise none
-  appear.
+- **Keep political parties out of it.** Describe people by their role and arguments by the issue,
+  never as left vs. right. Mention a party only when a fact can't be understood without it (a party-line
+  vote, for example), and then the same way for every side.
 
 ## Things we never do
 

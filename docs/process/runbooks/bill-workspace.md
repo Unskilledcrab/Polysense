@@ -25,8 +25,8 @@ Find each of these, in priority order:
 4. **Current law** being changed (the O.C.G.A. sections named in the bill).
 5. **Hearing records:** agendas, video timestamps, written testimony.
 6. **Documented arguments from more than one side:** testimony, sponsor and opponent statements, and
-   analyses from organizations across the spectrum (for example GBPI and the Georgia Public Policy
-   Foundation). Label where each organization stands.
+   analyses from organizations with different views (for example GBPI and the Georgia Public Policy
+   Foundation). Record where each one stands on *this decision*, not an ideological label.
 7. **Neutral context:** state agency reports and nonpartisan research.
 8. **News coverage** for timeline and context. Use it as secondary support only, never as the only source
    for a fact.

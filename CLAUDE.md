@@ -5,7 +5,7 @@ Read [docs/README.md](docs/README.md) for the doc map before starting non-trivia
 
 ## Tenets (from the owner; these don't change)
 
-1. **Correct and nonbiased.**
+1. **Correct and nonbiased**, about issues and facts, not parties or left vs. right.
 2. **Concise and digestible**, designed for a phone first.
 3. **Informative and actionable.**
 
@@ -37,7 +37,9 @@ automate any pipeline step, unless the user asks you to and the step has passed 
 4. **Never attribute an "anticipated" argument** to a named person or organization. Documented arguments
    need a speaker, a date, a venue and a verbatim source passage.
    - **Never name minors.** Describe them by role, even when news reports name them.
-   - Show party labels only if you can show them for every speaker on the page.
+   - **Keep political parties out of it.** Describe people by their role (state senator, teacher) and
+     arguments by the issue, never as left vs. right. Mention a party only when a fact can't be understood
+     without it (a party-line vote, for example), and then the same way for every side.
 5. **Nonpartisan by structure.** Use the same template and fields for every option and side. Give each
    option its strongest case for and against. Assign no ratings, scores or endorsements of candidates or
    bills, and never use symmetry to equalize unequal evidence.
