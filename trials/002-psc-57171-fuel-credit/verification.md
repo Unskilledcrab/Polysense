@@ -365,6 +365,8 @@ tests; A1–B17 = the coordinator's brief for revision 6). Revision 6 keeps revi
 | A12 | "No party asks to count" (SC L257) | "no party whose testimony we read asks to count" (adds P-131) | 257 |
 | A13 | "A needed cost, not a surplus" contradicted GIPL's words (SC L276; M UW3 in part) | "GIPL calls part of that money a 'surplus' that 'is needed' and 'does not provide further surplus' to lower rates" (P-098) | 276 |
 | A14 | Staff's revised returns read as the target (SC L280; E16) | "with estimated earned returns of 10.3, 10.9 and 10.9 percent" (P-091) | 280 |
+| A15 | Card 8's premise: GIPL's P-094 says the peak-hour part of the real-time price is set too low, so "set on marginal cost" overstated what no party disputes (SC L266 questionable, the part left as O1 at first) | The support sentence now says no party whose testimony we could read disputes that the price is "designed as a marginal-cost price" (P-121, P-042, P-110), "though GIPL says its peak-hour part is set too low" (P-094 in the tag). The label's first part covers only the design, and its "Mixed" part adds GIPL's peak-price point. Grades unchanged (the coordinator's decision on O1) | 262, 266 |
+| A16 | Card 7's premise: P-065 shows that for non-subscription renewable program expenses the over- or under-recovery is "determined in base rates per FCR-27 stipulation", so not every left-out cost is paid through the fuel charge (SC L254 questionable, the part left as O1 at first) | The support sentence and the label's first part now say "most costs left out of the credit"; a new sentence names the exception and quotes P-065. Grade unchanged, since the narrowed claim holds (the coordinator's decision on O1) | 250, 254 |
 | B15 | "Every plan" left out Plan A, today's method (E1; SC framing L9) | "Every proposed change we could read would raise the credit" | 9 |
 | B16 | No direction words on the bill figures; "$100 million" of what (E2; SC framing L9) | "Georgia Power estimates each $100 million cuts a typical home's fuel charge by about $1.48 a month, and adds about $1.65 if base rates rise by that much" | 9 |
 | B17 | Home line 15: "fuel credit" and "base side" undefined; it read like a fight over renewable power (SC home framing L15, two medium) | Defines the fuel credit; says Georgia Power and GIPL want "its math" to leave out both the cost and the power of contracts such as solar and wind, while PIA Staff wants both counted; says fuel charges for customers on standard rates go down and the same dollars stop helping pay base costs, "the rest of the bill"; "the last written testimony on the schedule" | home 15 |
@@ -375,7 +377,7 @@ The status line (line 3) also changed.
 
 | # | Open item (who raised it) | Note |
 |---|---|---|
-| O1 | **Two accuracy points inside flagged lines, left because fixing them would change another card's label** (the coordinator allowed only card 5's): GIPL's P-094 says the peak-hour part of the real-time price is set too low, which bears on card 8's premise that the price "is set on marginal cost" (SC L266); P-065 shows one left-out item (non-subscription renewables) is trued up in base rates, which bears on card 7's premise that left-out costs are paid through the fuel charge (SC L254) | **For the coordinator to decide before or in round 6** |
+| O1 | Two accuracy points inside flagged lines (SC L254 and L266) would change cards 7's and 8's labels | **Fixed in revision 6** as A15 and A16, by the coordinator's decision: round 6 re-runs the whole panel anyway |
 | O2 | Every card but card 5 leads with "Supported", often for background facts, so the cards look equally supported; grade the "In short" premise first, or show agreed facts as "Common ground" (E8; U IM6; U LA1–LA5; M LA2–LA5) | See C1 |
 | O3 | Card 8's size uses Georgia Power's $264 million while card 7 says no public estimate exists (E9, F5, M LA1) | See C2 |
 | O4 | Staff's 0.49-point estimate (P-091) for Plan A and card 9 (E11, U UW9, M MI1, M IM2); carried from round 4's O5 | All sides raise it |
@@ -408,7 +410,7 @@ The status line (line 3) also changed.
 ## Step 5 checklist (revision 6)
 
 - [x] **Every sentence is cited or tagged.** `check_citations.py` (now with the check for unscoped absence claims) on
-      `workspace.md`: PASS, 426 units (328 cited, 44 analysis, 44 editorial, 10 computed), 0 errors, 0 warnings.
+      `workspace.md`: PASS, 427 units (329 cited, 44 analysis, 44 editorial, 10 computed), 0 errors, 0 warnings.
       `home.md`: PASS, 10 units (9 cited, 1 computed).
 - [x] **Quotes verbatim; numbers and dates in a cited passage or `{computed}`** (same run). The two new `{computed}`
       items are the "nearly all" thresholds at lines 106 and 116.
@@ -416,18 +418,20 @@ The status line (line 3) also changed.
       marks its redaction.
 - [x] **Hashes**: `verify_hashes.py` PASS, 66 files across 35 retrieved sources.
 - [x] **Reading grade** (`readability.py`): 30-second 7.0 (156 words), L1 6.8, L2 8.3, L3 8.3 (target ≤ 8.5). Not
-      targeted: Layer 4 10.2. Card labels up to 72 words (the "whose testimony we could read" scope).
+      targeted: Layer 4 10.2. Card labels up to 83 words (the "whose testimony we could read" scope; card 8's label also names
+      GIPL's peak-price point).
 - [x] **Scope held.** One evidence grade changed (card 5's first part, from "Supported" to "Mixed"). Eight labels'
-      parentheses were scoped without grade changes, and card 9's "In short" uses GIPL's own words (A13). No card order or
+      parentheses were scoped without grade changes; cards 7's and 8's first parts were also narrowed (A15, A16), and card 9's "In short" uses GIPL's own words (A13). No card order or
       plan structure changed. The test render parses, and the folded cards show "Supported · Mixed" (cards 1–4, 6–8),
       "Mixed" (card 5) and "Supported · Uncertain" (card 9).
-- [x] **Length.** 426 units (revision 5: 420).
+- [x] **Length.** 427 units (revision 5: 420).
 
 ## Where I'm least sure (revision 6)
 
 1. **Card 5's new grade** rests on GIPL's account of Georgia Power's view (P-102). No passage gives Georgia Power's own words
    on where the money is credited; its P-124 (base-side money helps pay fixed costs) is close but not the same claim.
-2. **Cards 7 and 8** keep premises that the source check questioned for reasons beyond scope (O1).
+2. **Cards 7 and 8** keep "Supported" on narrowed premises (A15, A16): the price's design, and "most" left-out costs. Both
+   rest on absence of dispute in the filings we read.
 3. **"Nearly all"** (lines 106 and 116) rests on two measures that differ: about 95% by GAM's class shares, about 90% for
    Georgia Power's typical home.
 4. **P-107's redaction** was confirmed by the coordinating session on a rendered page image, not by this trial's tools.
