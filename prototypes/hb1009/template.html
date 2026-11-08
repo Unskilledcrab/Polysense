@@ -430,10 +430,17 @@ footer { margin-top: 40px; font-size: .82rem; color: var(--muted) }
     var s = sectionById("arguments"), L = el("section", { class: "layer" });
     L.appendChild(layerHead(4, "Arguments you'll hear", "Each card shows who makes the argument, what backs it up, who disagrees, and what cuts against it. Tap a card to open it."));
     if (s.blocks.length) L.appendChild(el("div", { class: "card stack" }, [renderBlocks(s.blocks)]));
-    s.subs.forEach(function (a, i) {
-      var meta = a.cardMeta || {};
+    var firstCard = true;
+    s.subs.forEach(function (a) {
+      if (!a.cardMeta) {  // a non-card subsection, such as "How to read these cards": collapsed by default
+        var m = el("details", { class: "more" }, [el("summary", { text: a.title })]);
+        m.appendChild(renderBlocks(a.blocks));
+        L.appendChild(m);
+        return;
+      }
+      var meta = a.cardMeta;
       var d = el("details", { class: "arg" });
-      if (i === 0) d.setAttribute("open", "");
+      if (firstCard) { d.setAttribute("open", ""); firstCard = false; }
       var chips = el("div", { class: "chips" }, [
         el("span", { class: "chip", text: meta.side ? (meta.side.charAt(0).toUpperCase() + meta.side.slice(1)) : "" }),
         el("span", { class: "chip" + (meta.kind === "Anticipated" ? " warn" : ""), text: meta.kind === "Anticipated" ? "Anticipated · not said by a named person" : "Said on the record" }),
@@ -448,7 +455,7 @@ footer { margin-top: 40px; font-size: .82rem; color: var(--muted) }
       d.appendChild(el("div", { class: "body" }, [renderBlocks(rest)]));
       L.appendChild(d);
     });
-    L.appendChild(el("p", { class: "notice", text: "What the evidence labels mean: Supported = good evidence, with limits we name. Mixed = credible evidence points both ways. Uncertain = little evidence yet, and we say why. Not mainly a factual question = a values question that evidence can't settle. Every card uses the same fields for both sides, and the order of cards is not a ranking. Disagreements about values are not treated as misinformation." }));
+    L.appendChild(el("p", { class: "notice", text: "Every card uses the same fields for both sides, and one rule sets every evidence label (see \u201cHow to read these cards\u201d). Disagreements about values are not treated as misinformation." }));
     return L;
   }
 
