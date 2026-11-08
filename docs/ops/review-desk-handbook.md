@@ -1,7 +1,9 @@
 # Review desk handbook
 
-Reviewers are the last line of defense. AI and automated checks prove only that a citation **exists**.
-Only a person can confirm that it **supports** the sentence.
+This is the rubric every verifier applies. During the proof of concept, the verifiers are the independent
+AI agents of the [verification protocol](../process/verification-protocol.md), with no human in the loop
+([ADR 0014](../adr/0014-ai-only-verification.md)). A citation that merely **exists** proves nothing. The
+verifier must confirm that it **supports** the sentence, and quote the words that do.
 
 ## What "supports" means
 
@@ -34,21 +36,22 @@ Common traps:
 - **Clarity.** Score each layer 1–5. Could a busy reader get the 30-second version in 30 seconds?
 - **Status and dates.** Do status, dates and actions match the official record as of the capture time?
 
-## Two-person rule
+## Two independent passes
 
-These need a **second reviewer** before publication:
+These need **two independent verification passes** (a blind source check and the bias panel, each run by
+agents with fresh context) before publication:
 - anything that names a real speaker (documented arguments);
 - anything about elections or voting;
 - every correction.
 
-Until the project has a second reviewer, such content is **not published**.
-
 ## Recording
 
-Fill in `review.md` (one verdict per citation, clarity scores, fairness notes, time spent). In the
-application, these become Review rows tied to the revision being approved.
+Verifier reports are saved as JSON in the trial's `verification/` folder. `check_verifier.py` confirms
+every evidence span against the passages. In the application, these become Review rows tied to the
+revision being approved.
 
 ## Calibration
 
-Once a month, two reviewers independently check 50 random citations. The target is at least 95%
-agreement. Disagreements become examples in this handbook.
+Every trial runs a verifier on a copy with hidden planted errors, and the catch rate is recorded. The
+target is at least 90% with no ungrounded evidence spans. Misses become new examples in this handbook,
+new planted-error types, or prompt and tool fixes.

@@ -6,8 +6,11 @@ Please report security problems **privately**. Use GitHub's private vulnerabilit
 repository's **Security** tab and choose **Report a vulnerability**. Do not open a public issue for a
 security problem.
 
-> Maintainer to-do: enable "Private vulnerability reporting" in the repository settings, and publish a
-> `/.well-known/security.txt` when the site launches.
+> Maintainer to-do (approved by the owner on 2026-11-08):
+> - Turn on private vulnerability reporting: repository **Settings → Code security → Private
+>   vulnerability reporting → Enable**. This repository setting can't be changed from a pull request or
+>   commit.
+> - Publish a `/.well-known/security.txt` when the site launches.
 
 Please include what you found, how to reproduce it, and the impact you expect.
 

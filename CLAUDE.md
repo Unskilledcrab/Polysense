@@ -14,6 +14,11 @@ automate any pipeline step, unless the user asks you to and the step has passed 
 1. **Prove by hand, then automate.** Every future pipeline step is first done manually from a runbook in
    `docs/process/runbooks/`. Outputs go in `trials/NNN-slug/`. A step is automated only after it passes
    the automation gate, and the manual outputs become the evaluation set the automation must match.
+   - **No human in the verification loop** ([ADR 0014](docs/adr/0014-ai-only-verification.md)). Verify
+     with the [verification protocol](docs/process/verification-protocol.md): deterministic gate,
+     blind source check with machine-checked evidence spans, bias panel, and seeded-error calibration.
+   - Never call content "verified" without that protocol's recorded results.
+   - The owner gives feedback on the user experience, not on facts.
 2. **Every sentence is accounted for.** In content, each factual sentence cites a passage (`[P-012]`), or
    is tagged `{analysis}`, `{editorial}` or `{computed: show the arithmetic}`. Quotes must appear
    verbatim in the cited passage.
@@ -22,6 +27,8 @@ automate any pipeline step, unless the user asks you to and the step has passed 
    sources instead.
 4. **Never attribute an "anticipated" argument** to a named person or organization. Documented arguments
    need a speaker, a date, a venue and a verbatim source passage.
+   - **Never name minors.** Describe them by role, even when news reports name them.
+   - Show party labels only if you can show them for every speaker on the page.
 5. **Nonpartisan by structure.** Use the same template and fields for every option and side. Give each
    option its strongest case for and against. Assign no ratings, scores or endorsements of candidates or
    bills, and never use symmetry to equalize unequal evidence.

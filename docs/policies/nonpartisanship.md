@@ -20,8 +20,12 @@ Claiming to be unbiased isn't enough. We make fairness **structural, measurable 
 ## Measuring it
 
 - Track the **sponsor-party mix** of covered bills, published quarterly.
-- **Cross-spectrum pre-readers.** Before a workspace is published, people from different political
-  leanings read it and answer: "Is your side's argument fairly stated? Is the other side's?"
+- **Bias panel.** Before a workspace is published, independent agents argue for each side's fair
+  representation (a supporter's advocate and a critic's advocate). A standards editor runs a flip test.
+  Each advocate must rate their side as fairly represented (at least 4/5). See the
+  [verification protocol](../process/verification-protocol.md).
+- **Real readers.** Readers' "Did this favor one side?" answers and public bias challenges are tracked
+  by self-described leaning.
 - Ask comprehension-round participants **"Did this favor one side?"** and log the answers by
   self-described leaning.
 - Any bias challenge gets a public answer, even when the answer is "no change".

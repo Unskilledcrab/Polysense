@@ -1,0 +1,504 @@
+<title>Civic Prototype · HB 1009</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap">
+<style>
+/* Layout: one calm reading column (~46rem) under a sticky bar; the bill page adds layer tabs and an evidence drawer. */
+:root {
+  --bg: #f5f7f4; --surface: #ffffff; --sunk: #eef2ee; --ink: #16201c; --muted: #56625c; --line: #d6ddd7;
+  --accent: #1d5a45; --accent-ink: #ffffff; --accent-soft: #e2efe8; --gold: #8a5a00; --gold-soft: #f6ead2;
+  --ok: #2b7046; --ok-soft: #e1f0e6; --warn: #8a5a00; --warn-soft: #f6ead2; --bad: #a33a3a; --bad-soft: #f6e2e2;
+  --ins: #1d5a45; --ins-bg: #dcefe4; --del: #a33a3a; --del-bg: #f6e2e2;
+  --font-display: "Newsreader", Georgia, "Times New Roman", serif;
+  --font-body: "Atkinson Hyperlegible", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --radius: 10px; --shadow: 0 1px 2px rgba(22, 32, 28, .06), 0 6px 18px rgba(22, 32, 28, .06);
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0e1412; --surface: #151d1a; --sunk: #111816; --ink: #e5ece8; --muted: #9eaba5; --line: #2a3531;
+  --accent: #7cc9a6; --accent-ink: #0e1412; --accent-soft: #193027; --gold: #e2b65c; --gold-soft: #2c2412;
+  --ok: #7cc9a6; --ok-soft: #16291f; --warn: #e2b65c; --warn-soft: #2c2412; --bad: #ee8b8b; --bad-soft: #321a1a;
+  --ins: #8fdab6; --ins-bg: #173326; --del: #f09a9a; --del-bg: #3a1d1d; --shadow: none; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0e1412; --surface: #151d1a; --sunk: #111816; --ink: #e5ece8; --muted: #9eaba5; --line: #2a3531;
+  --accent: #7cc9a6; --accent-ink: #0e1412; --accent-soft: #193027; --gold: #e2b65c; --gold-soft: #2c2412;
+  --ok: #7cc9a6; --ok-soft: #16291f; --warn: #e2b65c; --warn-soft: #2c2412; --bad: #ee8b8b; --bad-soft: #321a1a;
+  --ins: #8fdab6; --ins-bg: #173326; --del: #f09a9a; --del-bg: #3a1d1d; --shadow: none; color-scheme: dark }
+
+* { box-sizing: border-box }
+html { -webkit-text-size-adjust: 100% }
+body { background: var(--bg); color: var(--ink); font: 17px/1.6 var(--font-body); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--surface) }
+a { color: var(--accent) }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 4px }
+.wrap { max-width: 46rem; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)) }
+
+/* Top bar */
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--surface); border-bottom: 1px solid var(--line) }
+.bar .wrap { display: flex; align-items: center; gap: 12px; padding-block: 10px; flex-wrap: wrap }
+.brand { font: 600 1.15rem/1 var(--font-display); letter-spacing: .01em; color: var(--ink); text-decoration: none; display: flex; align-items: baseline; gap: 8px }
+.brand small { font: 500 .7rem/1 var(--font-mono); color: var(--muted); letter-spacing: .06em; text-transform: uppercase }
+.nav { display: flex; gap: 4px; margin-left: auto; flex-wrap: wrap }
+.nav a { font-size: .9rem; text-decoration: none; color: var(--muted); padding: 8px 10px; border-radius: 8px; min-height: 40px; display: inline-flex; align-items: center }
+.nav a[aria-current="page"] { color: var(--ink); background: var(--sunk); font-weight: 700 }
+
+main { padding-block: 22px 72px }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.2; text-wrap: balance; margin: 0 }
+h1 { font-size: clamp(1.7rem, 4.6vw, 2.3rem) }
+h2 { font-size: 1.35rem }
+h3 { font-size: 1.12rem }
+p { margin: 0 }
+.eyebrow { font: 500 .75rem/1.2 var(--font-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted) }
+.lede { color: var(--muted); max-width: 40rem }
+.stack { display: flex; flex-direction: column; gap: 14px }
+.stack-lg { display: flex; flex-direction: column; gap: 28px }
+.notice { font-size: .92rem; color: var(--muted); border-left: 3px solid var(--line); padding: 2px 0 2px 12px }
+
+/* Chips and badges */
+.chips { display: flex; flex-wrap: wrap; gap: 6px }
+.chip { font-size: .78rem; line-height: 1.2; padding: 4px 9px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--muted); white-space: nowrap }
+.chip.law { background: var(--accent-soft); border-color: var(--accent); color: var(--accent) }
+.chip.ok { background: var(--ok-soft); border-color: var(--ok); color: var(--ok) }
+.chip.warn { background: var(--warn-soft); border-color: var(--warn); color: var(--warn) }
+.chip.bad { background: var(--bad-soft); border-color: var(--bad); color: var(--bad) }
+.power { font: 700 .72rem/1 var(--font-mono); letter-spacing: .06em; text-transform: uppercase; padding: 5px 8px; border-radius: 6px; display: inline-flex; align-items: center; gap: 6px }
+.power::before { content: ""; width: 8px; height: 8px; display: inline-block; border: 2px solid currentColor }
+.power.decide { color: var(--accent); background: var(--accent-soft) } .power.decide::before { background: currentColor }
+.power.input { color: var(--gold); background: var(--gold-soft) } .power.input::before { border-radius: 50% }
+.power.observe { color: var(--muted); background: var(--sunk) } .power.observe::before { border-radius: 50%; background: transparent }
+
+/* Source chips inside sentences */
+.u { }
+.src { font: 500 .72rem/1 var(--font-body); vertical-align: .12em; margin-left: 4px; padding: 3px 7px; border-radius: 999px; border: 1px solid var(--line); background: var(--sunk); color: var(--accent); cursor: pointer; min-height: 24px }
+.src:hover { border-color: var(--accent) }
+.src.tag { color: var(--muted); border-style: dashed; background: transparent }
+.src.tag.editorial { color: var(--gold) }
+
+/* Cards */
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px 18px; box-shadow: var(--shadow) }
+.home-sec { display: flex; flex-direction: column; gap: 12px }
+.home-sec > h2 { display: flex; align-items: baseline; gap: 10px }
+.home-sec > h2 .count { font: 500 .8rem var(--font-mono); color: var(--muted) }
+.item { display: grid; gap: 8px }
+.item .when { font: 500 .85rem/1.2 var(--font-mono); color: var(--ink) }
+.item .go { font-weight: 700; text-decoration: none; justify-self: start; padding: 6px 0; min-height: 40px; display: inline-flex; align-items: center }
+.address { display: flex; gap: 8px; flex-wrap: wrap; align-items: center }
+.address input { flex: 1 1 14rem; min-width: 0; font: inherit; padding: 10px 12px; border-radius: 8px; border: 1px solid var(--line); background: var(--sunk); color: var(--muted) }
+.address button { font: inherit; padding: 10px 14px; border-radius: 8px; border: 1px solid var(--line); background: var(--sunk); color: var(--muted) }
+
+/* Bill header and 30-second box */
+.billcode { font: 500 .85rem/1 var(--font-mono); color: var(--accent); letter-spacing: .04em }
+.thirty { background: var(--surface); border: 2px solid var(--accent); border-radius: var(--radius); padding: 16px 18px }
+.thirty h2 { font-size: 1.05rem; margin-bottom: 8px; font-family: var(--font-body); font-weight: 700; letter-spacing: .01em }
+.thirty ul { margin: 0; padding-left: 1.1rem; display: flex; flex-direction: column; gap: 8px }
+.disclose { font-size: .86rem; color: var(--muted); display: flex; gap: 8px; align-items: flex-start }
+.disclose::before { content: "i"; font: 700 .75rem/1.35rem var(--font-mono); flex: 0 0 1.35rem; text-align: center; border-radius: 50%; border: 1px solid var(--muted) }
+
+/* Layer tabs */
+.tabs { display: flex; flex-wrap: wrap; gap: 6px; padding: 6px; background: var(--sunk); border-radius: 12px; position: sticky; top: calc(env(safe-area-inset-top, 0px) + 62px); z-index: 4 }
+.tabs a { text-decoration: none; color: var(--muted); font-size: .92rem; padding: 8px 12px; border-radius: 8px; min-height: 40px; display: inline-flex; align-items: center; gap: 6px }
+.tabs a .n { font: 500 .7rem var(--font-mono); opacity: .8 }
+.tabs a[aria-selected="true"] { background: var(--surface); color: var(--ink); font-weight: 700; box-shadow: var(--shadow) }
+
+/* Workspace content */
+.layer { display: flex; flex-direction: column; gap: 18px }
+.layer-head { display: flex; flex-direction: column; gap: 4px }
+.blocks { display: flex; flex-direction: column; gap: 10px; margin: 0; padding: 0; list-style: none }
+.blocks li { padding-left: 16px; position: relative }
+.blocks li::before { content: ""; position: absolute; left: 2px; top: .75em; width: 6px; height: 6px; border-radius: 50%; background: var(--line) }
+.blocks.num { counter-reset: n } .blocks.num li { counter-increment: n; padding-left: 26px }
+.blocks.num li::before { content: counter(n); width: auto; height: auto; background: none; top: 0; font: 700 .85rem/1.6 var(--font-mono); color: var(--accent) }
+.label { font-weight: 700 }
+.timeline li .label { font: 500 .85rem var(--font-mono); color: var(--ink); margin-right: 4px }
+.sub { display: flex; flex-direction: column; gap: 10px }
+.options { display: grid; gap: 14px }
+.opt-head { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; flex-wrap: wrap }
+details.arg { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow) }
+details.arg > summary { list-style: none; cursor: pointer; padding: 14px 16px; display: grid; gap: 8px }
+details.arg > summary::-webkit-details-marker { display: none }
+details.arg > summary h3 { display: flex; gap: 10px; align-items: baseline }
+details.arg > summary h3::after { content: "+"; margin-left: auto; font: 500 1.1rem var(--font-mono); color: var(--muted) }
+details.arg[open] > summary h3::after { content: "−" }
+details.arg .body { padding: 0 16px 16px; display: flex; flex-direction: column; gap: 10px; border-top: 1px dashed var(--line); padding-top: 12px }
+.ev { font: 700 .74rem/1 var(--font-mono); letter-spacing: .03em; padding: 5px 8px; border-radius: 6px; border: 1px solid currentColor }
+.ev.supported { color: var(--ok) } .ev.mixed, .ev.uncertain { color: var(--warn) } .ev.values { color: var(--muted) }
+
+/* Bill markup */
+.markup { font: .9rem/1.7 var(--font-mono); background: var(--sunk); border: 1px solid var(--line); border-radius: var(--radius); padding: 12px 14px; overflow-x: auto }
+.markup .ln { color: var(--muted); display: inline-block; width: 2.4em; user-select: none }
+.markup del { color: var(--del); background: var(--del-bg); text-decoration: line-through; text-decoration-thickness: 2px }
+.markup ins { color: var(--ins); background: var(--ins-bg); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px }
+details.more > summary { cursor: pointer; font-weight: 700; color: var(--accent); min-height: 40px; display: flex; align-items: center }
+
+/* Evidence list */
+.sources { display: flex; flex-direction: column; gap: 10px }
+.source { display: grid; gap: 6px }
+.source .meta { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: .82rem; color: var(--muted) }
+.hash { font-family: var(--font-mono); font-size: .8rem }
+.type { font: 700 .7rem/1 var(--font-mono); letter-spacing: .05em; text-transform: uppercase; padding: 4px 7px; border-radius: 5px; background: var(--sunk); color: var(--muted); justify-self: start }
+.type.primary { background: var(--accent-soft); color: var(--accent) }
+
+/* Checks view */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); gap: 10px }
+.stat { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 12px 14px; display: grid; gap: 2px }
+.stat b { font: 600 1.5rem/1.1 var(--font-display); font-variant-numeric: tabular-nums }
+.stat span { font-size: .85rem; color: var(--muted) }
+table.t { width: 100%; border-collapse: collapse; font-size: .9rem }
+table.t th, table.t td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--line); vertical-align: top }
+.tablebox { overflow-x: auto }
+
+/* Drawer */
+.scrim { position: fixed; inset: 0; background: rgba(0, 0, 0, .35); z-index: 20 }
+.drawer { position: fixed; z-index: 21; background: var(--surface); color: var(--ink); border: 1px solid var(--line); box-shadow: 0 10px 40px rgba(0, 0, 0, .25);
+  left: 0; right: 0; bottom: 0; max-height: 78vh; overflow-y: auto; border-radius: 16px 16px 0 0;
+  padding: 18px max(16px, env(safe-area-inset-right, 0px)) calc(18px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)) }
+@media (min-width: 900px) { .drawer { left: auto; top: 0; bottom: 0; width: 30rem; max-height: none; border-radius: 0; padding-top: calc(18px + env(safe-area-inset-top, 0px)) } }
+.drawer .close { float: right; font: inherit; border: 1px solid var(--line); background: var(--sunk); color: var(--ink); border-radius: 8px; padding: 6px 12px; min-height: 40px }
+.drawer blockquote { margin: 10px 0; padding: 12px 14px; border-left: 3px solid var(--accent); background: var(--sunk); border-radius: 0 8px 8px 0; font-size: .95rem }
+.drawer dl { display: grid; grid-template-columns: max-content 1fr; gap: 4px 12px; font-size: .85rem; margin: 10px 0 }
+.drawer dt { color: var(--muted) } .drawer dd { margin: 0; min-width: 0; overflow-wrap: anywhere }
+
+footer { margin-top: 40px; font-size: .82rem; color: var(--muted) }
+@media (prefers-reduced-motion: no-preference) { .drawer { animation: up .18s ease-out } @keyframes up { from { transform: translateY(12px); opacity: .6 } } }
+</style>
+
+<header class="bar"><div class="wrap">
+  <a class="brand" href="#home">civic <small>prototype · trial 001</small></a>
+  <nav class="nav" aria-label="Main">
+    <a href="#home" data-nav="home">Home</a>
+    <a href="#hb1009" data-nav="hb1009">HB 1009</a>
+    <a href="#checks" data-nav="checks">How we checked</a>
+  </nav>
+</div></header>
+
+<main class="wrap" id="app" tabindex="-1"></main>
+<div id="drawer-root"></div>
+
+<script type="application/json" id="data">/*__DATA__*/</script>
+<script>
+(function () {
+  "use strict";
+  var D = JSON.parse(document.getElementById("data").textContent);
+  var app = document.getElementById("app");
+  var LAYERS = [
+    { id: "overview", tab: "Participate", n: "1" },
+    { id: "decision", tab: "Decision", n: "2" },
+    { id: "options", tab: "Options", n: "3" },
+    { id: "arguments", tab: "Arguments", n: "4" },
+    { id: "evidence", tab: "Evidence", n: "5" }
+  ];
+  var TAG_LABEL = { analysis: "Our analysis", editorial: "Our framing", computed: "Our math" };
+
+  function el(tag, attrs, kids) {
+    var n = document.createElement(tag);
+    if (attrs) for (var k in attrs) {
+      if (k === "class") n.className = attrs[k];
+      else if (k === "text") n.textContent = attrs[k];
+      else if (k.slice(0, 2) === "on") n.addEventListener(k.slice(2), attrs[k]);
+      else n.setAttribute(k, attrs[k]);
+    }
+    (kids || []).forEach(function (c) { if (c != null) n.appendChild(typeof c === "string" ? document.createTextNode(c) : c); });
+    return n;
+  }
+
+  // A sentence unit: text + source chips (one per source) or a tag chip.
+  function units(list) {
+    var frag = document.createDocumentFragment();
+    list.forEach(function (u, i) {
+      if (i > 0) frag.appendChild(document.createTextNode(" "));
+      frag.appendChild(el("span", { class: "u", text: u.t }));
+      if (u.cite) {
+        var seen = {};
+        u.cite.forEach(function (pid) {
+          var p = D.passages[pid]; if (!p) return;
+          var sid = p.source; if (seen[sid]) { seen[sid].push(pid); return; }
+          seen[sid] = [pid];
+          var b = el("button", { class: "src", type: "button", text: (D.sources[sid] || {}).short || sid,
+            "aria-label": "Show source: " + ((D.sources[sid] || {}).title || sid) });
+          b.addEventListener("click", function () { openPassages(seen[sid], b); });
+          frag.appendChild(b);
+        });
+      } else if (u.tag) {
+        var t = el("button", { class: "src tag " + u.tag, type: "button", text: TAG_LABEL[u.tag] || u.tag,
+          "aria-label": (TAG_LABEL[u.tag] || u.tag) + ": what this means" });
+        t.addEventListener("click", function () { openTag(u, t); });
+        frag.appendChild(t);
+      }
+    });
+    return frag;
+  }
+
+  function block(b) {
+    var li = el("li");
+    if (b.label) { li.appendChild(el("span", { class: "label", text: b.label + (b.kind === "timeline" ? "" : ": ") })); li.appendChild(document.createTextNode(" ")); }
+    li.appendChild(units(b.units));
+    return li;
+  }
+  function blockList(blocks, cls) {
+    var ul = el(cls && cls.indexOf("num") >= 0 ? "ol" : "ul", { class: "blocks " + (cls || "") });
+    blocks.forEach(function (b) { ul.appendChild(block(b)); });
+    return ul;
+  }
+  function paras(blocks) {
+    var wrap = el("div", { class: "stack" });
+    blocks.forEach(function (b) {
+      var p = el("p");
+      if (b.label) { p.appendChild(el("span", { class: "label", text: b.label + ": " })); }
+      p.appendChild(units(b.units)); wrap.appendChild(p);
+    });
+    return wrap;
+  }
+  function renderBlocks(blocks) {
+    var out = el("div", { class: "stack" }), run = [], kind = null;
+    function flush() {
+      if (!run.length) return;
+      out.appendChild(kind === "para" ? paras(run) : blockList(run, kind === "num" ? "num" : ""));
+      run = [];
+    }
+    blocks.forEach(function (b) { var k = b.kind === "num" ? "num" : (b.kind === "para" ? "para" : "bullet"); if (k !== kind) { flush(); kind = k; } run.push(b); });
+    flush();
+    return out;
+  }
+
+  // ---------- Drawer ----------
+  var lastFocus = null;
+  function closeDrawer() {
+    var r = document.getElementById("drawer-root"); r.innerHTML = "";
+    document.removeEventListener("keydown", escClose);
+    if (lastFocus) lastFocus.focus();
+  }
+  function escClose(e) { if (e.key === "Escape") closeDrawer(); }
+  function drawer(title, content, opener) {
+    lastFocus = opener || null;
+    var root = document.getElementById("drawer-root"); root.innerHTML = "";
+    var scrim = el("div", { class: "scrim", onclick: closeDrawer });
+    var close = el("button", { class: "close", type: "button", text: "Close", onclick: closeDrawer });
+    var box = el("aside", { class: "drawer", role: "dialog", "aria-modal": "true", "aria-label": title }, [close, el("p", { class: "eyebrow", text: title }), content]);
+    root.appendChild(scrim); root.appendChild(box);
+    document.addEventListener("keydown", escClose);
+    close.focus();
+  }
+  function openPassages(pids, opener) {
+    var p0 = D.passages[pids[0]], s = D.sources[p0.source] || {};
+    var c = el("div", { class: "stack" });
+    c.appendChild(el("h3", { text: s.title || p0.source }));
+    c.appendChild(el("span", { class: "type" + (s.type === "primary-government" ? " primary" : ""), text: s.typeLabel || s.type || "" }));
+    pids.forEach(function (pid) {
+      var p = D.passages[pid];
+      c.appendChild(el("p", { class: "eyebrow", text: pid + " · " + p.locator }));
+      c.appendChild(el("blockquote", { text: p.text }));
+      if (p.note) c.appendChild(el("p", { class: "notice", text: "Note: " + p.note }));
+    });
+    var dl = el("dl");
+    [["Publisher", s.publisher], ["Captured", s.retrieved_at], ["SHA-256", s.sha256 ? s.sha256.slice(0, 16) + "…" : "n/a"], ["How captured", s.method]].forEach(function (r) {
+      if (!r[1]) return; dl.appendChild(el("dt", { text: r[0] })); dl.appendChild(el("dd", { class: r[0] === "SHA-256" ? "hash" : "", text: r[1] }));
+    });
+    c.appendChild(dl);
+    if (s.url) c.appendChild(el("a", { href: s.url, target: "_blank", rel: "noopener", text: "Open the original source ↗" }));
+    drawer("Source", c, opener);
+  }
+  function openTag(u, opener) {
+    var expl = {
+      analysis: "This sentence is our own reasoning from the cited facts, not a direct statement from a source.",
+      editorial: "This sentence is our framing, such as what's missing or uncertain. It can't be cited, so we label it and our checkers review it.",
+      computed: "We calculated this number from figures in the sources. The math is shown below."
+    }[u.tag];
+    var c = el("div", { class: "stack" }, [el("h3", { text: TAG_LABEL[u.tag] }), el("p", { text: expl })]);
+    if (u.note) c.appendChild(el("blockquote", { text: u.note.replace(/P-(\d{3})/g, "passage P-$1") }));
+    drawer("How to read this", c, opener);
+  }
+
+  // ---------- Views ----------
+  function viewHome() {
+    var h = D.home, root = el("div", { class: "stack-lg" });
+    root.appendChild(el("div", { class: "stack" }, [
+      el("p", { class: "eyebrow", text: "Georgia · your civic dashboard" }),
+      el("h1", { text: "What can I influence?" }),
+      el("p", { class: "lede", text: "Decisions you can act on, what's coming up, and what just happened. Every line links to its source." }),
+      el("div", { class: "address" }, [
+        el("input", { id: "addr", type: "text", disabled: "", placeholder: "Your address (district lookup comes in Trial C)", "aria-label": "Address (not available yet)" }),
+        el("button", { type: "button", disabled: "", text: "Find my districts" })
+      ]),
+      el("p", { class: "notice", text: "Prototype: this page is built only from Trial 001 (HB 1009, 2026). A real dashboard would list hearings, votes and deadlines across your districts." })
+    ]));
+    h.sections.forEach(function (sec) {
+      var s = el("section", { class: "home-sec", "aria-labelledby": "h-" + sec.id });
+      s.appendChild(el("h2", { id: "h-" + sec.id }, [sec.title, el("span", { class: "count", text: String(sec.items.length) })]));
+      sec.items.forEach(function (it) {
+        var top = el("div", { class: "chips" });
+        if (it.power) top.appendChild(el("span", { class: "power " + it.power.toLowerCase(), text: it.power }));
+        top.appendChild(el("span", { class: "when", text: it.when }));
+        var card = el("article", { class: "card item" }, [top, el("p", null, [units(it.units)]),
+          el("a", { class: "go", href: "#hb1009", text: "HB 1009: phones in high schools →" })]);
+        s.appendChild(card);
+      });
+      root.appendChild(s);
+    });
+    return root;
+  }
+
+  function sectionById(id) { return D.workspace.sections.filter(function (s) { return s.id === id; })[0]; }
+
+  function layerHead(n, title, sub) {
+    return el("div", { class: "layer-head" }, [el("p", { class: "eyebrow", text: "Layer " + n }), el("h2", { text: title }), sub ? el("p", { class: "lede", text: sub }) : null]);
+  }
+
+  function viewBill(layer) {
+    var W = D.workspace, root = el("div", { class: "stack-lg" });
+    var m = D.meta;
+    root.appendChild(el("div", { class: "stack" }, [
+      el("p", { class: "billcode", text: "HB 1009 · 2026 · ACT 395" }),
+      el("h1", { text: "Phones in Georgia high schools" }),
+      el("div", { class: "chips" }, [
+        el("span", { class: "chip law", text: "Law · signed May 5, 2026" }),
+        el("span", { class: "chip", text: "Takes effect Dec 31, 2026" }),
+        el("a", { class: "chip " + (m.verified ? "ok" : "warn"), href: "#checks", text: m.statusText })
+      ]),
+      el("p", { class: "disclose", text: m.disclosure })
+    ]));
+    var sum = sectionById("summary");
+    var box = el("section", { class: "thirty", "aria-labelledby": "h-30" }, [el("h2", { id: "h-30", text: "The 30-second version" })]);
+    var ul = el("ul");
+    sum.blocks.forEach(function (b) { ul.appendChild(block(b)); });
+    box.appendChild(ul); root.appendChild(box);
+
+    var tabs = el("nav", { class: "tabs", "aria-label": "Layers" });
+    LAYERS.forEach(function (L) {
+      tabs.appendChild(el("a", { href: "#hb1009-" + L.id, "aria-selected": String(L.id === layer) }, [el("span", { class: "n", text: L.n }), L.tab]));
+    });
+    root.appendChild(tabs);
+    root.appendChild(({ overview: layerOverview, decision: layerDecision, options: layerOptions, arguments: layerArguments, evidence: layerEvidence })[layer]());
+    return root;
+  }
+
+  function subs(sec) { var o = {}; sec.subs.forEach(function (s) { o[s.title] = s; }); return o; }
+
+  function layerOverview() {
+    var s = sectionById("overview"), S = subs(s), L = el("section", { class: "layer" });
+    L.appendChild(layerHead(1, "Participate", "What happened, what's coming, and what you can still do."));
+    var t = el("div", { class: "sub" }, [el("h3", { text: "What happened" })]);
+    var ul = el("ul", { class: "blocks timeline" });
+    S["What happened"].blocks.forEach(function (b) { var c = Object.assign({}, b, { kind: "timeline" }); ul.appendChild(block(c)); });
+    t.appendChild(ul); L.appendChild(t);
+    L.appendChild(el("div", { class: "sub" }, [el("h3", { text: "Coming up" }), renderBlocks(S["Coming up"].blocks)]));
+    var act = el("div", { class: "sub" }, [el("h3", { text: "What you can do" })]);
+    S["What you can do"].blocks.forEach(function (b) {
+      act.appendChild(el("div", { class: "card item" }, [el("div", { class: "chips" }, [el("span", { class: "power " + b.label.toLowerCase(), text: b.label })]), el("p", null, [units(b.units)])]));
+    });
+    L.appendChild(act);
+    return L;
+  }
+
+  function layerDecision() {
+    var s = sectionById("decision"), L = el("section", { class: "layer" });
+    L.appendChild(layerHead(2, "The decision"));
+    L.appendChild(renderBlocks(s.blocks));
+    var more = el("details", { class: "more" }, [el("summary", { text: "See the exact changes in the bill text" })]);
+    var mk = el("div", { class: "markup", role: "region", "aria-label": "Bill text with deletions struck through and additions underlined" });
+    D.billChanges.forEach(function (line) {
+      var row = el("div"); row.appendChild(el("span", { class: "ln", text: String(line.n) }));
+      line.segs.forEach(function (sg) { row.appendChild(sg.k === "txt" ? document.createTextNode(sg.t) : el(sg.k, { text: sg.t })); });
+      mk.appendChild(row);
+    });
+    more.appendChild(el("div", { class: "stack" }, [
+      el("p", { class: "notice", text: "From the bill as passed (pages 2-3). Georgia bills strike out removed words and underline new ones." }), mk]));
+    L.appendChild(more);
+    return L;
+  }
+
+  function layerOptions() {
+    var s = sectionById("options"), L = el("section", { class: "layer" });
+    L.appendChild(layerHead(3, "Options and tradeoffs", "What lawmakers could have done, and who gains or gives up what."));
+    var grid = el("div", { class: "options" });
+    s.subs.forEach(function (o) {
+      var chip = /as passed/i.test(o.title) ? el("span", { class: "chip law", text: "Now law" }) : /failed/i.test(o.title) ? el("span", { class: "chip bad", text: "Voted down 13-38" }) : el("span", { class: "chip", text: "Before HB 1009" });
+      grid.appendChild(el("article", { class: "card stack" }, [el("div", { class: "opt-head" }, [el("h3", { text: o.title.replace(/^Option [A-C]: /, "") }), chip]), renderBlocks(o.blocks)]));
+    });
+    L.appendChild(grid);
+    return L;
+  }
+
+  function evClass(label) { return /support/i.test(label) ? "supported" : /mixed/i.test(label) ? "mixed" : /uncertain/i.test(label) ? "uncertain" : "values"; }
+
+  function layerArguments() {
+    var s = sectionById("arguments"), L = el("section", { class: "layer" });
+    L.appendChild(layerHead(4, "Arguments you'll hear", "Each card shows who makes the argument, what backs it up, and what cuts against it. Tap a card to open it."));
+    s.subs.forEach(function (a, i) {
+      var meta = a.cardMeta || {};
+      var d = el("details", { class: "arg" });
+      if (i === 0) d.setAttribute("open", "");
+      var chips = el("div", { class: "chips" }, [
+        el("span", { class: "chip" + (meta.kind === "Anticipated" ? " warn" : ""), text: meta.kind === "Anticipated" ? "Anticipated · not said by a named person" : "Documented · said on the record" }),
+        el("span", { class: "chip", text: "Type: " + (meta.claimType || "") })
+      ]);
+      d.appendChild(el("summary", null, [el("h3", { text: a.title.replace(/^\d+\.\s*/, "") }), chips, el("div", null, [el("span", { class: "ev " + evClass(meta.evidence || ""), text: "Evidence: " + (meta.evidence || "") })])]));
+      d.appendChild(el("div", { class: "body" }, [renderBlocks(a.blocks)]));
+      L.appendChild(d);
+    });
+    L.appendChild(el("p", { class: "notice", text: "Evidence labels: Supported · Mixed · Uncertain · Not a factual question. Disagreements about values are not treated as misinformation." }));
+    return L;
+  }
+
+  function layerEvidence() {
+    var L = el("section", { class: "layer" });
+    L.appendChild(layerHead(5, "Evidence", "Every source we cite, archived on the date shown. Anyone can download the original and compare its SHA-256 fingerprint."));
+    var list = el("div", { class: "sources" });
+    D.sourceOrder.forEach(function (sid) {
+      var s = D.sources[sid];
+      var pids = Object.keys(D.passages).filter(function (k) { return D.passages[k].source === sid; });
+      var card = el("article", { class: "card source" }, [
+        el("span", { class: "type" + (s.type === "primary-government" ? " primary" : ""), text: s.typeLabel }),
+        el("h3", { text: s.title }),
+        el("p", { class: "lede", text: s.why || "" }),
+        el("div", { class: "meta" }, [el("span", { text: "Captured " + (s.retrieved_at || "") }), el("span", { class: "hash", text: "sha256 " + (s.sha256 || "").slice(0, 12) + "…" }), el("span", { text: pids.length + " passages cited" })])
+      ]);
+      var row = el("div", { class: "chips" });
+      if (pids.length) { var b = el("button", { class: "src", type: "button", text: "Read the passages" }); b.addEventListener("click", function () { openPassages(pids, b); }); row.appendChild(b); }
+      if (s.url) row.appendChild(el("a", { class: "chip", href: s.url, target: "_blank", rel: "noopener", text: "Original ↗" }));
+      card.appendChild(row);
+      list.appendChild(card);
+    });
+    L.appendChild(list);
+    return L;
+  }
+
+  function viewChecks() {
+    var V = D.verification, root = el("div", { class: "stack-lg" });
+    root.appendChild(el("div", { class: "stack" }, [el("p", { class: "eyebrow", text: "Trial 001 · how this page was checked" }), el("h1", { text: "How we checked HB 1009" }),
+      el("p", { class: "lede", text: V.intro })]));
+    var stats = el("div", { class: "stats" });
+    V.stats.forEach(function (st) { stats.appendChild(el("div", { class: "stat" }, [el("b", { text: st.value }), el("span", { text: st.label })])); });
+    root.appendChild(stats);
+    V.sections.forEach(function (sec) {
+      var s = el("section", { class: "stack" }, [el("h2", { text: sec.title })]);
+      sec.paras.forEach(function (p) { s.appendChild(el("p", { text: p })); });
+      if (sec.rows) {
+        var tb = el("table", { class: "t" }), thead = el("tr");
+        sec.head.forEach(function (h) { thead.appendChild(el("th", { text: h })); });
+        tb.appendChild(el("thead", null, [thead]));
+        var tbody = el("tbody");
+        sec.rows.forEach(function (r) { var tr = el("tr"); r.forEach(function (c) { tr.appendChild(el("td", { text: c })); }); tbody.appendChild(tr); });
+        tb.appendChild(tbody); s.appendChild(el("div", { class: "tablebox" }, [tb]));
+      }
+      root.appendChild(s);
+    });
+    return root;
+  }
+
+  // ---------- Router ----------
+  function route() {
+    var h = (location.hash || "#home").slice(1), view = "home", layer = "overview";
+    if (h === "hb1009") view = "hb1009";
+    else if (h.indexOf("hb1009-") === 0) { view = "hb1009"; layer = h.slice(7); if (!LAYERS.some(function (L) { return L.id === layer; })) layer = "overview"; }
+    else if (h === "checks") view = "checks";
+    app.innerHTML = "";
+    app.appendChild(view === "home" ? viewHome() : view === "checks" ? viewChecks() : viewBill(layer));
+    app.appendChild(el("footer", { text: D.meta.footer }));
+    document.querySelectorAll("[data-nav]").forEach(function (a) { if (a.getAttribute("data-nav") === view) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
+    if (view !== "hb1009" || h === "hb1009") window.scrollTo(0, 0);
+  }
+  window.addEventListener("hashchange", function () { closeDrawer(); route(); });
+  route();
+})();
+</script>

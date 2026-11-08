@@ -3,6 +3,11 @@
 Readability formulas help, but **only people can tell us whether something is understood.** Every round
 tests real comprehension and navigation.
 
+**During the proof of concept**, the owner reviews each trial's clickable prototype and gives feedback on
+the experience: what's confusing, what's missing, what's hard to find. Fact and bias checking are not
+the owner's job; the [verification protocol](../process/verification-protocol.md) does that. The
+comprehension rounds below start once there are enough pages to test.
+
 ## Round format
 
 - **Participants:** 5 per round, recruited across ages, education levels, devices and political

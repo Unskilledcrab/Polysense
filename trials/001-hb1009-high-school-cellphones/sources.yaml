@@ -1,179 +1,213 @@
 # Sources for Trial 001 (HB 1009, 2026). See docs/process/runbooks/bill-workspace.md, steps 1-2.
-# status: discovered (URL known, not fetched) | to-locate (we know it exists; URL not yet found)
-#         | candidate (may exist; verify) | retrieved | blocked | rejected
+# status: retrieved | covered-by (facts available from another retrieved source) | not-retrieved | rejected
 # type:   primary-government | secondary-research | advocacy | news | local-government
-# Search-engine summaries are used for DISCOVERY ONLY. They are never cited as evidence.
+# Files live in _raw/ (git-ignored). Re-download a URL and compare sha256 to check our copy.
+# Search-engine summaries were used for DISCOVERY ONLY and are never cited.
 trial: 001-hb1009-high-school-cellphones
-bill: {state: GA, session: "2025-2026", number: "HB 1009"}
+bill: {state: GA, session: "2025-2026", number: "HB 1009", legis_ga_id: 72304, act: "Act 395"}
 discovered_on: "2026-11-08"
-discovered_via: "web search (fetching blocked by environment network policy)"
+retrieved_on: "2026-11-08"
+user_agent: "Mozilla/5.0 (compatible; civic-research-trial/0.1; +https://github.com/Unskilledcrab/Polysense)"
 
 sources:
   # --- Primary government records -------------------------------------------------------------
   - id: S01
-    title: "HB 1009 bill text (version unknown: introduced, substitute or enrolled)"
+    title: "HB 1009, as passed House and Senate (26 LC 49 2527/AP)"
     publisher: Georgia General Assembly
     type: primary-government
     url: "https://www.legis.ga.gov/api/legislation/document/20252026/247117"
-    needed_for: [layer2, layer3, D1, D4, D5]
-    status: blocked
-    blocked_reason: "proxy 403: www.legis.ga.gov not in environment allowlist"
-    retrieved_at: null
-    sha256: null
-    local_file: null
-    archive_url: null
+    status: retrieved
+    retrieved_at: "2026-11-08T04:03:25Z"
+    http_status: 200
+    content_type: application/pdf
+    sha256: 9a6046e5d581bf4eed3fbf3f2501b853f68be0aa07371160700b2469a5b97130
+    local_file: hb1009-247117.pdf
+    derived: [hb1009-247117.txt, hb1009-247117.clean.txt, hb1009-247117.old.txt]
     license: public record
-    notes: "Search snippet mentions the 'distraction-free education' definition and a K-8 deadline of July 1, 2026. Confirm which version this is."
+    settles: [D1, D4, D5]
+    notes: "Strike-through/underline markup recovered with trials/tools/pdf_markup.py and checked visually (pp. 2-3)."
+  - id: S01b
+    title: "HB 1009, earlier version (LC 49 2527/a)"
+    publisher: Georgia General Assembly
+    type: primary-government
+    url: "https://www.legis.ga.gov/api/legislation/document/20252026/240040"
+    status: retrieved
+    retrieved_at: "2026-11-08T04:03:26Z"
+    http_status: 200
+    content_type: application/pdf
+    sha256: 5680ab7a750b1b3273cf572018b2ab4817d7a96c369d6879dbbe45dff405c6e2
+    local_file: hb1009-240040.pdf
+    license: public record
+    notes: "Text identical to S01 apart from page headers (diff of extracted text), so the bill passed without changes."
   - id: S02
-    title: "HB 1009 status page: history, sponsors, committees, versions, votes"
+    title: "HB 1009 bill record: status history, sponsors, committees, versions, votes"
     publisher: Georgia General Assembly
     type: primary-government
-    url: null
-    needed_for: [layer1, D2, D3, D6]
-    status: to-locate
+    url: "https://www.legis.ga.gov/legislation/72304"
+    status: retrieved
+    method: "Public page loaded in headless Chromium; saved the JSON the page itself requested (api/legislation/detail/72304) and the rendered page text."
+    retrieved_at: "2026-11-08T04:02:25Z"
+    files:
+      - {local_file: hb1009-detail-72304.json, sha256: df47fc6c1fed506a58a565fbd4c451afa06e9739d224442ba8a8e0112483e26b}
+      - {local_file: hb1009-page-72304.txt, sha256: 8a3cae057f7f7cf9129c7b5172aaf3ad847684c946c1cd5a17c61e275ebfd6cd, captured_at: "2026-11-08T04:02:32Z"}
     license: public record
+    settles: [D2, D3, D6]
   - id: S03
-    title: "HB 1009 every other version (as introduced, committee substitutes with LC numbers, enrolled)"
-    publisher: Georgia General Assembly
+    title: "Senate Floor Amendment 1 to HB 1009 (AM 49 0318), marked LOST"
+    publisher: Georgia State Senate
     type: primary-government
-    url: null
-    needed_for: [layer2, D1, D4, D5]
-    status: to-locate
+    url: "https://www.legis.ga.gov/api/legislation/document/20252026/246996"
+    status: retrieved
+    retrieved_at: "2026-11-08T04:03:27Z"
+    http_status: 200
+    content_type: application/pdf
+    sha256: bcdf2460d040811cc512ea8cf7128e7ebcba1e3f8907fc6ff01b71d314087989
+    local_file: hb1009-246996.pdf
     license: public record
   - id: S04
-    title: "House roll call on HB 1009 (reported 145-20 on 2026-02-24)"
-    publisher: Georgia House of Representatives
+    title: "House roll call on HB 1009 (Vote #545)"
     type: primary-government
-    url: null
-    needed_for: [layer1, D6]
-    status: to-locate
-    license: public record
+    status: covered-by
+    covered_by: S02
+    notes: "Totals, date and caption come from S02. Member-by-member votes not retrieved (not needed for this workspace)."
   - id: S05
-    title: "Senate roll call on HB 1009 (reported 52-0 on 2026-03-23)"
-    publisher: Georgia State Senate
+    title: "Senate roll calls on HB 1009 (Votes #783, #784)"
     type: primary-government
-    url: null
-    needed_for: [layer1, D6]
-    status: to-locate
-    license: public record
+    status: covered-by
+    covered_by: S02
   - id: S06
-    title: "Senate Children and Families Committee meeting on HB 1009: agenda and video"
-    publisher: Georgia State Senate
+    title: "Senate Children and Families Committee hearing on HB 1009: agenda and video"
     type: primary-government
-    url: null
-    needed_for: [layer1, layer4, D3]
-    status: to-locate
-    license: public record
-    notes: "Reported testimony from State School Superintendent Richard Woods and students. Quote only from the video or official record."
+    status: not-retrieved
+    notes: "GAP. Testimony is cited from news reports of the hearing (S16b). Next trial: retrieve the meeting record and video."
   - id: S07
-    title: "House committee/subcommittee hearing(s) on HB 1009: agenda and video"
-    publisher: Georgia House of Representatives
+    title: "House Education Committee hearing(s) on HB 1009: agenda and video"
     type: primary-government
-    url: null
-    needed_for: [layer1, layer4, D3]
-    status: to-locate
-    license: public record
+    status: not-retrieved
+    notes: "GAP, as for S06."
   - id: S08
-    title: "Current law before HB 1009: HB 340 (2025) 'Distraction-Free Education Act', enrolled text and the O.C.G.A. section it created"
-    publisher: Georgia General Assembly
+    title: "Law before HB 1009: O.C.G.A. 20-2-324.8 as enacted by HB 340 (2025)"
     type: primary-government
-    url: null
-    needed_for: [layer2, layer3]
-    status: to-locate
-    license: public record
+    status: covered-by
+    covered_by: S01
+    notes: "Read from S01's markup: unmarked + struck text = prior law (hb1009-247117.old.txt)."
   - id: S09
-    title: "Governor's press release on signing HB 1009 (reported 2026-05-05)"
+    title: "Gov. Kemp Signs Bills Strengthening Literacy and K-12 Schools (press release, 2026-05-05)"
     publisher: Office of the Governor
     type: primary-government
-    url: null
-    needed_for: [layer1, D2]
-    status: to-locate
+    url: "https://gov.georgia.gov/press-releases/2026-05-05/gov-kemp-signs-bills-strengthening-literacy-and-k-12-schools"
+    status: retrieved
+    retrieved_at: "2026-11-08T04:05:36Z"
+    http_status: 200
+    content_type: text/html
+    sha256: 83d7747fe616e08326ec43d8d7e7cbea717471f2855e45592385c5976603d203
+    local_file: S09.html
     license: public record
-  - id: S10
-    title: "Fiscal note for HB 1009, if one was requested"
-    publisher: Dept. of Audits and Accounts / OPB
+    settles: [D2]
+  - id: S10a
+    title: "OPB: Fiscal Notes (process page)"
+    publisher: Governor's Office of Planning and Budget
     type: primary-government
-    url: null
-    needed_for: [layer3, D7]
-    status: to-locate
-    license: public record
-    notes: "If none exists, the workspace says so as an {editorial} 'what's missing' sentence."
+    url: "https://opb.georgia.gov/budget-information/fiscal-notes"
+    status: retrieved
+    retrieved_at: "2026-11-08T04:05:44Z"
+    sha256: 51396d498cdca9ae83b79c77d666e0ee991c2cfd3fbd94d0776be5bfd48bb680
+    local_file: S10a.html
+  - id: S10b
+    title: "DOAA: Fiscal Notes (process page)"
+    publisher: Department of Audits and Accounts
+    type: primary-government
+    url: "https://www.audits2.ga.gov/legislative-resources/fiscal-notes/"
+    status: retrieved
+    retrieved_at: "2026-11-08T04:05:45Z"
+    sha256: 8e62bff2ae95497c0ef52434a46ceae344c9e1999933fe211aee17d739434bf8
+    local_file: S10b.html
+  - id: S10c
+    title: "OPB: Fiscal notes, 2025-2026 Regular Session (list)"
+    publisher: Governor's Office of Planning and Budget
+    type: primary-government
+    url: "https://opb.georgia.gov/budget-information/fiscal-notes/2025-2026-regular-session"
+    status: retrieved
+    retrieved_at: "2026-11-08T04:06:10Z"
+    sha256: d4386a2edbea81049b678d8012a4de8c7710949e2bf4aab394c38e36f9a4b934
+    local_file: S10c.html
+    settles: [D7]
+    notes: "53 'House Bill' entries; none for 1009. Absence on this list is not proof that no note exists."
   - id: S11
-    title: "Georgia Department of Education recommendation to extend the ban to high schools (reported Nov 2025)"
-    publisher: Georgia Department of Education
+    title: "Georgia Department of Education support for extending the ban"
     type: primary-government
-    url: null
-    needed_for: [layer4]
-    status: to-locate
-    license: public record
+    status: covered-by
+    covered_by: S12
+    notes: "State School Superintendent's statement quoted in the Emory release (S12) and his testimony reported in S16b."
 
   # --- Research ------------------------------------------------------------------------------
   - id: S12
-    title: "Emory University survey of Georgia parents on a high school phone ban (reported ~71% support; about three-quarters of opponents cite emergency communication)"
+    title: "Most Georgia Parents Support Banning Cellphones in High Schools, New Poll Finds (Emory Rollins School of Public Health)"
     publisher: Emory University
     type: secondary-research
-    url: null
-    needed_for: [layer4]
-    status: to-locate
-    notes: "Need methodology: sample size, dates, question wording."
-  - id: S13
-    title: "Research on school phone restrictions: candidate studies (Florida statewide ban study; UK 'SMART Schools' study; Norway smartphone-ban study)"
-    publisher: various
+    url: "https://sph.emory.edu/news/most-georgia-parents-support-banning-cellphones-high-schools-new-poll-finds"
+    status: retrieved
+    retrieved_at: "2026-11-08T04:05:37Z"
+    sha256: dec405bf387c2cc034aed3ac52de0af142df57a64153bf91d42c7e1bfb599442
+    local_file: S12.html
+    notes: "1,002 Georgia parents, Oct 30-Nov 24, 2025, population-representative estimates; tables include standard errors."
+  - id: S13a
+    title: "Figlio & Özek, The Impact of Cellphone Bans in Schools on Student Outcomes: Evidence from Florida (NBER WP 34388, Oct 2025): abstract page"
+    publisher: National Bureau of Economic Research
     type: secondary-research
-    url: null
-    needed_for: [layer3, layer4]
-    status: candidate
-    notes: "Listed from the agent's prior knowledge, NOT yet verified. Confirm each paper exists and read its findings in the paper itself before citing. Savannah Magazine's summary (S18) is a lead only."
+    url: "https://www.nber.org/papers/w34388"
+    status: retrieved
+    retrieved_at: "2026-11-08T04:05:38Z"
+    sha256: 65142a15ae9bddb8d6238f54e540c48186ac0b1e5ec9bc37734692bedfd75bb6
+    local_file: S13a.html
+    notes: "Abstract only; full paper not read. Working paper (not peer-reviewed at time of capture, as far as the page shows)."
+  - id: S13b
+    title: "Goodyear et al., School phone policies and their association with mental wellbeing, phone use, and social media use (SMART Schools), The Lancet Regional Health - Europe: abstract via University of Birmingham"
+    publisher: University of Birmingham (research portal)
+    type: secondary-research
+    url: "https://research.birmingham.ac.uk/en/publications/school-phone-policies-and-their-association-with-mental-wellbeing/"
+    status: retrieved
+    retrieved_at: "2026-11-08T04:05:39Z"
+    sha256: 014977004b2cd653c2f2f7c9124921875590fc9ff607a86061e74a3ddd4a6985
+    local_file: S13b.html
+    notes: "Abstract only. A search summary claimed the study also found no difference in attainment and behaviour; the abstract does not say that, so we don't either."
 
-  # --- News / context (secondary support only; never the only source for a fact) -------------
-  - id: S14
-    title: "AJC: Georgia Senate backs high school cellphone ban, sending bill to Kemp's desk (Mar 2026)"
-    publisher: Atlanta Journal-Constitution
-    type: news
-    url: "https://www.ajc.com/education/2026/03/georgia-senate-backs-high-school-cellphone-ban-sending-bill-to-kemps-desk"
-    needed_for: [leads]
-    status: discovered
-    notes: "Paywalled. Leads: testimony quotes, failed Senate amendment, Emory survey, Apalachee context."
-  - id: S15
-    title: "WABE: Bill to ban cell phone usage at high schools clears Georgia state House"
-    publisher: WABE
-    type: news
-    url: "https://www.wabe.org/bill-to-ban-cell-phone-usage-at-high-schools-clears-georgia-state-house/"
-    needed_for: [timeline]
-    status: discovered
+  # --- News (secondary; used for documented arguments as reported) ---------------------------
   - id: S16
-    title: "Atlanta News First: Georgia bill would ban high school cellphone use, sparking debate over enforcement and safety (2026-03-12)"
-    publisher: Atlanta News First (Gray)
+    title: "Georgia bill would ban high school cellphone use, sparking debate over enforcement and safety (Atlanta News First, 2026-03-12)"
+    publisher: Atlanta News First (Gray Media)
     type: news
     url: "https://www.atlantanewsfirst.com/2026/03/12/georgia-bill-would-ban-high-school-cellphone-use-sparking-debate-over-enforcement-safety/"
-    needed_for: [layer4-leads]
-    status: discovered
-  - id: S17
-    title: "WABE: Georgia governor signs high school cell phone ban, K-3 literacy bills into law"
-    publisher: WABE
+    status: retrieved
+    retrieved_at: "2026-11-08T04:05:41Z"
+    sha256: b41b8406c25df37f7e287e8f6325d183d5c743bb1d8ed7ee886bcb68ddf167c8
+    local_file: S16.html
+  - id: S16b
+    title: "Georgia high school cellphone ban bill nears final passage (Atlanta News First, 2026-03-17)"
+    publisher: Atlanta News First (Gray Media)
     type: news
-    url: "https://www.wabe.org/georgia-governor-signs-high-school-cell-phone-ban-k-3-literacy-bills-into-law/"
-    needed_for: [timeline, D1, D2]
-    status: discovered
-  - id: S18
-    title: "Savannah Magazine: What do Georgia's cellphone bans mean for Savannah-area students?"
-    publisher: Savannah Magazine
-    type: news
-    url: "https://savannahmagazine.com/education/the-quiet-after-the-ping/"
-    needed_for: [leads, D1, D5]
-    status: discovered
+    url: "https://www.atlantanewsfirst.com/2026/03/17/georgia-high-school-cellphone-ban-bill-nears-final-passage/"
+    status: retrieved
+    retrieved_at: "2026-11-08T04:05:42Z"
+    sha256: 0c7e1e7692a2bc2a65456c3472af2f9ea62b0538838ca6dc560e60a3398a58dc
+    local_file: S16b.html
+    notes: "Reports the Senate committee hearing. Spells the student witness 'D'Silva'; another outlet (search result) spelled it 'De Silva'. We withhold the minor's name anyway."
   - id: S19
-    title: "Cairo High School (Grady County Schools) page on the phone ban (states a 2026-27 start)"
+    title: "Georgia House Bill 1009 Implementation (Cairo High School news, 2026-06-01)"
     publisher: Grady County Schools
     type: local-government
     url: "https://chs.grady.k12.ga.us/o/chs/article/2955954"
-    needed_for: [D1]
-    status: discovered
-    notes: "Conflicts with other reports. It may describe a district policy that goes beyond the state law."
-  - id: S20
-    title: "AJC: Teachers, parents love GA cellphone ban, now lawmakers turn to high schools (Feb 2026)"
-    publisher: Atlanta Journal-Constitution
-    type: news
-    url: "https://www.ajc.com/education/2026/02/teachers-parents-love-ga-cellphone-ban-now-lawmakers-turn-to-high-schools"
-    needed_for: [leads]
-    status: discovered
+    status: retrieved
+    method: "Plain request returned a bot-check page (S19.html, sha256 32ed63159c77e21ee19ca1b9aa3213ccf0218eb59539560b132a8e68ef0e18ea). Re-loaded in headless Chromium; hash is of the rendered visible text."
+    retrieved_at: "2026-11-08T04:06:39Z"
+    sha256: da0bee6bd90afbf9ec34e47822a422d956d51cf980ba118283bd438159062b02
+    local_file: S19-rendered.txt
+    settles: [D1]
+
+  # --- Discovered but not used ---------------------------------------------------------------
+  - {id: S13c, title: "Norway smartphone-ban study (candidate from prior knowledge)", type: secondary-research, status: rejected, notes: "Not needed after S13a/S13b; never verified, so not cited."}
+  - {id: S14, title: "AJC: Senate backs high school cellphone ban (Mar 2026)", type: news, url: "https://www.ajc.com/education/2026/03/georgia-senate-backs-high-school-cellphone-ban-sending-bill-to-kemps-desk", status: rejected, notes: "Paywalled; leads only."}
+  - {id: S15, title: "WABE: bill clears Georgia state House", type: news, url: "https://www.wabe.org/bill-to-ban-cell-phone-usage-at-high-schools-clears-georgia-state-house/", status: rejected, notes: "Site returns 403 to scripted requests; primary vote record (S02) covers it."}
+  - {id: S17, title: "WABE: governor signs high school cell phone ban", type: news, url: "https://www.wabe.org/georgia-governor-signs-high-school-cell-phone-ban-k-3-literacy-bills-into-law/", status: rejected, notes: "403; Governor's release (S09) covers it."}
+  - {id: S18, title: "Savannah Magazine: what the cellphone bans mean for Savannah-area students", type: news, url: "https://savannahmagazine.com/education/the-quiet-after-the-ping/", status: rejected, notes: "Not needed; its research summary is secondary to S13a/S13b."}
+  - {id: S20, title: "AJC: teachers, parents love GA cellphone ban (Feb 2026)", type: news, url: "https://www.ajc.com/education/2026/02/teachers-parents-love-ga-cellphone-ban-now-lawmakers-turn-to-high-schools", status: rejected, notes: "Paywalled."}

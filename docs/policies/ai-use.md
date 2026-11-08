@@ -1,7 +1,10 @@
 # How we use AI (draft)
 
-**Short version:** AI helps us draft and check. Before anything is published, people verify every
-sentence against its source.
+**Short version:** AI drafts our pages from archived sources. Separate, independent AI checkers then
+verify every sentence against those sources and review the page for bias. We measure how well the
+checkers catch planted errors, and we publish those numbers. During the proof of concept no person sits
+in this loop ([ADR 0014](../adr/0014-ai-only-verification.md)). Anyone can challenge anything we
+publish.
 
 ## What AI may do
 
@@ -14,13 +17,16 @@ sentence against its source.
 
 ## What AI may not do
 
-- Publish anything. **A person approves every publication.**
+- Publish anything that hasn't passed the full [verification protocol](../process/verification-protocol.md).
 - Write **voting logistics** (registration, polling places, ballots, absentee rules). We link to official
   sources only.
 - Attribute arguments to real people unless a verbatim, archived quote is cited.
 - Generate images, audio or video of real people.
-- Count as verification. **Several AI models agreeing is not verification.** Only a person checking the
-  source is.
+- Count as verification by agreeing with another model. **Several AI models agreeing is not
+  verification.** Verification means:
+  - an independent checker shows, with exact quoted words, that the archived source supports the
+    sentence;
+  - and that checker's error-catching rate has been measured.
 - Follow instructions found inside documents it reads. Documents are treated as untrusted data.
 
 ## Process
@@ -37,14 +43,20 @@ sentence against its source.
    - arithmetic is shown;
    - plain-language and loaded-word checks;
    - structural symmetry.
-4. **Human support check.** A reviewer confirms each citation actually **supports** its sentence.
-5. **Second reviewer** for named speakers, elections and corrections.
+4. **Independent support check.** A separate verifier agent, which never sees the drafter's notes,
+   confirms each citation actually **supports** its sentence and quotes the supporting words. Code checks
+   the quotes.
+5. **Bias panel.** A supporter's advocate, a critic's advocate and a standards editor review fairness
+   and run a flip test.
+6. **Calibration.** A verifier is also run on a copy with hidden planted errors. Its catch rate must be
+   at least 90%.
 
 ## Disclosure
 
-Each item says what happened. For example: *"Drafted with AI assistance from the linked sources. Every
-sentence checked against its source by [reviewer] on [date]."* We keep a record of the model, the prompt
-version and the inputs for every AI-assisted draft, and we publish our error rates.
+Each item says what happened. For example: *"Drafted with AI from the linked sources. Every sentence
+links to its source or is labeled as our analysis. Checked by automated tests and independent AI
+reviewers on [date]; no person reviewed it."* We keep a record of the model, the prompt version and the
+inputs for every draft and check, and we publish catch rates and error rates.
 
 ## Models
 

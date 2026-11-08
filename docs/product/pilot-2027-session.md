@@ -10,7 +10,9 @@ Sine Die about late March or early April, and then the Governor's 40-day signing
   legislators.
 - It starts soon enough to learn before the 2028 election cycle.
 
-**Built by:** one developer with AI assistance, plus (before public beta) a part-time paid reviewer.
+**Built by:** one developer with AI assistance. Verification is AI-only: a measured, independent
+[verification protocol](../process/verification-protocol.md), with no human in the loop
+([ADR 0014](../adr/0014-ai-only-verification.md)).
 
 ## User journeys
 
@@ -40,20 +42,16 @@ Sine Die about late March or early April, and then the Governor's 40-day signing
 | Governor veto-window tracker for every passed bill | Persisted topic follows (topic filters are just URL parameters) |
 | Special elections, when called, listed as "vote" items with official links only | Bulk data downloads and a publicly announced API |
 
-### Why only 6–8 workspaces
+### How many workspaces
 
-A careful workspace takes about **12–16 reviewer-hours**:
+The first plan assumed human review at about 12–16 hours per workspace. Without a human in the loop,
+the limits are:
+- the agent's time to retrieve and draft;
+- the verification protocol's run time and fix cycles;
+- the owner's time to review the user experience.
 
-| Task | Hours |
-|---|---|
-| Sources | about 4 |
-| Drafting and checks | about 1–2 |
-| Checking roughly 100 citations | about 4–5 |
-| Symmetry and editing | about 2 |
-| Second review | about 2 |
-
-Each new substitute bill adds 3–5 hours. Reviewer time, not AI cost, is the constraint. The manual trials
-will measure the real numbers.
+Trial 001 is the first measurement ([log](../../trials/001-hb1009-high-school-cellphones/log.md)). Start
+at 6–8 for the session and raise the number only if verification stays clean at scale.
 
 ## "Act now" items during a session
 
@@ -78,7 +76,7 @@ coverage log along with the sponsor-party mix.
 | Area | Target |
 |---|---|
 | Understanding | Each comprehension round passes with at least 4 of 5 participants ([usability-testing.md](usability-testing.md)) |
-| Accuracy | Fewer than 2 substantive corrections per 100 claims; at least 95% agreement in a monthly 50-citation audit; zero errors in voting logistics |
+| Accuracy | Fewer than 2 substantive corrections per 100 claims; verifier catch rate at least 90% on planted errors every trial; zero ungrounded verifier evidence; zero errors in voting logistics |
 | Gate coverage | 100% of published sentences cited or typed |
 | Responsiveness | First response to a challenge within 2 business days; resolved within 7 |
 | Timeliness | Covered hearings listed at least 24 hours ahead; median under 3 hours from a legislature posting to our listing |
@@ -91,10 +89,9 @@ coverage log along with the sponsor-party mix.
 Public beta needs all of the following:
 - a cleared public name;
 - published policies;
-- a second reviewer in place;
+- the verification protocol passing its thresholds on at least 3 trials;
 - media liability insurance;
 - a fiscal sponsor;
 - 3 verified workspaces;
+- the owner's sign-off on the user experience;
 - one passed comprehension round.
-
-Until a second reviewer exists, nothing that attributes arguments to named speakers is published.

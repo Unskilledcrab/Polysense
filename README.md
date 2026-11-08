@@ -37,6 +37,8 @@ Blazor, Angular and React clients) still lives on the `Development` branch.
 Start at **[docs/README.md](docs/README.md)**. It lists every document and the order to read them in.
 
 Manual trials (each process done by hand before anything is automated) live in **[trials/](trials/)**.
+The clickable prototype built from Trial 001 is in **[prototypes/hb1009/](prototypes/hb1009/)**. Open
+`index.html` in a browser.
 
 ## License
 

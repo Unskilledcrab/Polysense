@@ -1,52 +1,35 @@
-# Review: Trial 001 (HB 1009)
+# Owner feedback on the experience: Trial 001 (HB 1009)
 
-**Reviewer:** ______  **Date:** ______  **Time spent:** ______ min
+Facts and fairness are checked by the [verification protocol](verification.md), with no human in the
+loop. **This form is only about the experience:** is it easy to use, easy to find things, and above all
+easy to understand?
 
-## Part A: now (steps 0–1)
+Open the prototype (`prototypes/hb1009/index.html`, or the published link) on your phone if you can. You
+can also leave comments directly on the published page.
 
-| Question | Your answer |
-|---|---|
-| Do you agree with choosing HB 1009 for Trial #1? If not, which bill and why? | |
-| Are the rubric scores in [README.md](README.md) fair? | |
-| Any important source missing from [sources.yaml](sources.yaml)? (Think: who would object to this law, and where did they say so?) | |
-| Are the source *types* labeled correctly (government, research, advocacy, news)? | |
-| Anything in the discrepancy list (D1–D7) that looks wrong? | |
+## Quick reactions (one line each is plenty)
 
-## Part B: after the workspace is drafted (steps 4–6)
-
-### Citation support (one row per cited sentence; the agent pre-fills the first two columns)
-
-| # | Sentence (short) | Passage | Verdict: supports / partial / no / wrong span | Note |
-|---|---|---|---|---|
-| 1 | | | | |
-
-### Tagged sentences
-
-| # | Tag | Fair and accurate? | Note |
+| Screen | What worked | What confused you or felt like too much | What's missing |
 |---|---|---|---|
-| 1 | {editorial} | | |
+| Home ("What can I influence?") | | | |
+| HB 1009, 30-second version | | | |
+| Layer 1: Participate | | | |
+| Layer 2: Decision (incl. "See the exact changes in the bill text") | | | |
+| Layer 3: Options | | | |
+| Layer 4: Arguments (cards) | | | |
+| Layer 5: Evidence | | | |
+| Source drawer (tap a source chip) | | | |
+| "Our analysis / Our framing / Our math" chips | | | |
+| "How we checked" page | | | |
 
-### Clarity (1 = confusing, 5 = crystal clear)
+## Five questions
 
-| Section | Score | What would make it clearer? |
-|---|---|---|
-| 30-second version | | |
-| Layer 1: Participate | | |
-| Layer 2: Decision | | |
-| Layer 3: Options | | |
-| Layer 4: Arguments | | |
-| Layer 5: Evidence | | |
+1. After 30 seconds on the HB 1009 page, could you say what the law does and when it starts?
+2. Was it obvious what *you* could do about it?
+3. Did any part feel like it was taking a side? Which words?
+4. Did the source chips and labels make you trust it more, or just add clutter?
+5. On your phone, was anything hard to tap, read or find?
 
-### Fairness
+## Anything else
 
-- Would a supporter say their best argument is fairly stated? ______
-- Would an opponent (for example, a parent worried about emergencies) say the same? ______
-- Any false balance, or unequal evidence treated as equal? ______
-- Any loaded words or framing? ______
-
-## Verdict
-
-☐ Pass ☐ Pass after fixes (list them) ☐ Fail (why)
-
-Fixes required:
-1.
+-

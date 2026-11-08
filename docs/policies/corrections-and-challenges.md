@@ -39,8 +39,9 @@ shows exactly what changed. Every revision has a class:
 | **Correction** | We were wrong | **Prominent notice** at the top of the item and an entry in the site-wide **corrections log** |
 | **Re-evaluation** | Same facts, changed judgment (for example an evidence label) | Notice explaining why |
 
-Corrections need a second reviewer. We correct quickly and visibly, inside the text rather than in a
-footnote.
+Corrections need a second independent verification pass
+([verification protocol](../process/verification-protocol.md)). We correct quickly and visibly, inside the
+text rather than in a footnote.
 
 ## Our records
 

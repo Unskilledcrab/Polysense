@@ -1,4 +1,4 @@
-# Runbook: bill decision workspace (manual), v0.1
+# Runbook: bill decision workspace (manual), v0.2
 
 **Purpose:** turn one bill into a clear, fully cited decision workspace (the 30-second version plus
 Layers 1–5) by hand. **Output:** `trials/NNN-<bill>/`.
@@ -45,13 +45,27 @@ Rules added after Trial 001:
 
 ## Step 2: Snapshot
 
-1. Download each source into `_raw/` (git-ignored).
-2. Compute its `sha256` and record it with `retrieved_at` (UTC) and the HTTP status in `sources.yaml`.
-3. Request an Internet Archive capture where allowed, and record the archive URL.
-4. If a source can't be fetched, mark it `blocked` with the reason. **Never substitute another
-   document.**
+1. Download each source into `_raw/` (git-ignored) with `trials/tools/snapshot.py`. It saves the exact
+   bytes, the response headers, the visible text, and prints the `sha256` and `retrieved_at`.
+2. **legis.ga.gov:** find the bill with the public search form in a headless browser (Session 2025-2026
+   = id 1033; "Doc. Number" field). Load `legislation/<id>` and save the JSON the page itself requests
+   (`api/legislation/detail/<id>`). Version PDFs download directly from
+   `api/legislation/document/<session>/<versionId>`. Don't copy the site's hidden API key into our code.
+3. If a site returns a bot check instead of content, re-load it in a headless browser and hash the
+   rendered text. Record the `method`.
+4. Record everything in `sources.yaml`, then run `verify_hashes.py`.
+5. Request an Internet Archive capture where allowed, and record the archive URL.
+6. If a source can't be fetched, mark it `not-retrieved` or `rejected` with the reason. **Never
+   substitute another document.**
+
+**Bill PDFs: strike-through and underline matter.** Plain text extraction merges deleted and inserted
+words ("restricted prohibited"). Run `pdf_markup.py`, which writes the default markup, `--clean` (as
+enacted) and `--old` (prior law). Spot-check one rendered page visually.
 
 ## Step 3: Extract passages
+
+Choose passages in `passages.spec.yaml` (source, file, locator, exact start and end words). Then run
+`build_passages.py` to copy the spans mechanically, so there are no typing errors.
 
 1. Split each source into numbered passages: `P-001` and onward, unique across the trial.
 2. Use natural units: a bill section or subsection, a table row, or a paragraph.
@@ -93,15 +107,27 @@ Every sentence ends with a passage citation `[P-###]` or a tag (`{analysis}`, `{
 - [ ] Length budgets are met
 - [ ] "Where I'm least sure" lists the claims most likely to be wrong, and why
 
-## Step 6: Human review (`review.md`)
+## Step 6: Independent verification (no human in the loop)
 
-The reviewer:
-- checks each citation (supports / partial / does not support / wrong span);
-- scores clarity 1–5 for each layer;
-- flags unfairness;
-- records their time.
+Run the [verification protocol](../verification-protocol.md):
+1. **Planted-error copy.** Make a copy of `workspace.md` with 10+ hidden errors of varied types. Move
+   the answer key outside the repository while verifiers run.
+2. **Five fresh agents in parallel:**
+   - a blind source check on `workspace.md`;
+   - a blind source check on the planted-error copy;
+   - a supporter's advocate;
+   - a critic's advocate;
+   - a standards editor with a flip test.
 
-Fix everything flagged before the trial counts as passed. Fixes are logged.
+   Each reads only the page and `passages.md`.
+3. Run `check_verifier.py` on each source-check report: grounding of every evidence span, then the catch
+   rate against the key.
+4. Triage every flag. Fix the text, or show with passage text why the flag is wrong. Log both.
+5. Re-run the deterministic gate and a fresh blind source check on the revised text.
+6. Write the results into `verification.md` and `verification/summary.json`.
+
+Then render the prototype (`render_prototype.py`) so the owner can give feedback on the user experience
+(`review.md`).
 
 ## Step 7: Comprehension check
 
@@ -121,3 +147,4 @@ on this workspace.
 |---|---|---|---|
 | v0 | 2026-11-08 | Created from research | — |
 | v0.1 | 2026-11-08 | Step 1: search summaries are discovery-only; discrepancy list; "hosts needed" list | [001](../../../trials/001-hb1009-high-school-cellphones/log.md) (steps 0–1) |
+| v0.2 | 2026-11-08 | Step 2: snapshot tool, legis.ga.gov browser method, bot-check fallback, strike/underline extraction. Step 3: passage spec + builder. Step 6: AI-only verification protocol replaces human review | [001](../../../trials/001-hb1009-high-school-cellphones/log.md) (steps 2–6) |

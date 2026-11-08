@@ -25,6 +25,7 @@ The project is in **planning and manual trials**. These documents are the plan. 
 | Doc | What it covers |
 |---|---|
 | [process/prove-then-automate.md](process/prove-then-automate.md) | Trials, the automation gate, shadow mode |
+| [process/verification-protocol.md](process/verification-protocol.md) | AI-only fact and bias checking: source check, bias panel, planted-error calibration |
 | [process/runbooks/bill-workspace.md](process/runbooks/bill-workspace.md) | Step-by-step manual runbook for a bill workspace |
 | [process/runbooks/_template.md](process/runbooks/_template.md) | Template for new runbooks |
 | [ops/review-desk-handbook.md](ops/review-desk-handbook.md) | What a reviewer checks, and what "supports the claim" means |
@@ -49,7 +50,7 @@ The project is in **planning and manual trials**. These documents are the plan. 
 | [architecture/data-model.md](architecture/data-model.md) | Entities, identifiers, time validity, revisions |
 | [architecture/ingestion.md](architecture/ingestion.md) | Source connectors, snapshots, change detection |
 | [architecture/ai-pipeline.md](architecture/ai-pipeline.md) | AI drafting, the verification gate and evals (built last) |
-| [adr/](adr/) | Architecture decision records 0001–0013 |
+| [adr/](adr/) | Architecture decision records 0001–0014 |
 
 ## 6. Research behind the plan (as of 2026-11-08)
 

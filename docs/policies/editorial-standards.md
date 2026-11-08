@@ -39,7 +39,12 @@ apply to everything we publish, whoever it helps or hurts.
   **verbatim** quote from an archived source.
 - **Anticipated** arguments are labeled "Some people may argue…", and are **never attributed** to a
   person or organization.
-- Documented arguments need **two reviewers** before publication.
+- Documented arguments need **two independent verification passes** before publication
+  ([verification protocol](../process/verification-protocol.md)).
+- **Minors are never named.** Describe them by role ("a 17-year-old student who testified"), even if
+  news reports name them.
+- **Party labels** appear only if we can show them for every speaker on the page. Otherwise none
+  appear.
 
 ## Things we never do
 
@@ -51,6 +56,8 @@ apply to everything we publish, whoever it helps or hurts.
 
 ## Review
 
-- Every published item has a named reviewer and a date.
-- Named-speaker, election-related and correction content needs two reviewers.
-- Reviewers follow the [review desk handbook](../ops/review-desk-handbook.md).
+- Every published item shows when and how it was verified, with links to the verification records.
+- Named-speaker, election-related and correction content needs two independent verification passes.
+- Verifiers apply the [review desk handbook](../ops/review-desk-handbook.md) rubric. During the proof of
+  concept the verifiers are independent AI agents, with no human in the loop
+  ([ADR 0014](../adr/0014-ai-only-verification.md)).

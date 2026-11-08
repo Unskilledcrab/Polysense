@@ -47,15 +47,17 @@ archived passages (hashed) ──► 1. Draft with citations ──► 2. Classi
   Never equalized ratings.
 - Length budgets.
 
-### 4. Human review
+### 4. Independent verification (no human in the loop, [ADR 0014](../adr/0014-ai-only-verification.md))
 
-Reviewers follow the [review desk handbook](../ops/review-desk-handbook.md). Every citation gets a
-verdict (supports, partial, no, wrong span). A second reviewer is required for named speakers, election
-content and corrections.
+The [verification protocol](../process/verification-protocol.md) applies the
+[review desk handbook](../ops/review-desk-handbook.md) rubric. Every citation gets a verdict (supports,
+partial, no, wrong span) from a blind verifier, which must quote the supporting words; code checks those
+quotes. A bias panel reviews fairness. A planted-error run measures the verifier's catch rate.
 
 ### 5. Publish
 
-A person approves. A Revision is appended with AIRun provenance.
+Publication happens only after the protocol passes. A Revision is appended with AIRun provenance and
+links to the verification records.
 
 ## Provenance and reproducibility
 
@@ -88,7 +90,7 @@ AI drafting may replace manual drafting for a workspace type only when, across a
 compared with the manual baseline:
 - the gate pass rate is at least the manual baseline;
 - the share of citations judged *does not support* or *wrong span* is ≤ the manual baseline, and below 3%;
-- reviewer time per workspace is no worse;
+- verification fix cycles per workspace are no worse;
 - the comprehension and length budgets are met.
 
 Re-run the full eval before **any** model or prompt change.

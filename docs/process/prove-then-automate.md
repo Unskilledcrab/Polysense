@@ -19,10 +19,14 @@ The **AI agent working in a session** (for example, Claude Code) does each step 
 runbook, as a person would. It uses only the tools a person would: fetching documents, reading them,
 writing passages and drafts, and running small check scripts.
 
-The **human reviewer** (the project owner, later a paid second reviewer) then:
-- checks the output against the sources;
-- fills in `review.md`;
-- and decides whether the trial passed.
+**Verification has no human in the loop** ([ADR 0014](../adr/0014-ai-only-verification.md)). The
+[verification protocol](verification-protocol.md) checks the output with:
+- a deterministic gate;
+- a blind, independent source verifier whose evidence spans code confirms;
+- a bias panel;
+- seeded-error calibration that measures how well the verifier catches planted errors.
+
+The project owner gives feedback on the **user experience** of the resulting pages.
 
 ## Trials
 
@@ -35,7 +39,8 @@ Each trial is a folder, `trials/NNN-slug/`:
 | `passages.md` | Numbered passages `P-###` with page/paragraph locators. Full text only for public government records; short cited excerpts for copyrighted works |
 | `workspace.md` (or the trial's output) | The product output, with every sentence cited or tagged |
 | `verification.md` | Checklist results and "where I'm least sure" |
-| `review.md` | The reviewer's verdicts: support per claim, clarity scores, time |
+| `verification/` | Raw reports from the verification protocol (source check, bias panel, calibration) and a summary |
+| `review.md` | The owner's feedback on the user experience |
 | `log.md` | Every step with time taken, friction, failures, rules learned and automation ideas |
 
 Raw downloaded files go in `trials/NNN-slug/_raw/`, which git ignores. Their hashes live in
@@ -80,10 +85,10 @@ Mechanical, low-judgment steps come first. Judgment comes last.
 5. Deterministic checks (citation coverage, verbatim quotes, numbers, readability, loaded words)
 6. **AI drafting**: last, in shadow mode, and never without a human support check
 
-## What is never automated
+## What is never skipped (even once automated)
 
-- The human **support check** (does this passage actually support this sentence?).
-- **Publishing.** A person always approves.
-- **Voting logistics.** Always official links.
-- Deciding **what to cover.** The rubric scores can be computed, but a person makes the decision and logs
-  it.
+- The **independent support check**: does each passage actually support its sentence? It is done by a
+  verifier separate from the drafter, with machine-checked evidence spans.
+- **Calibration.** No verifier is trusted without a measured catch rate on planted errors.
+- **Voting logistics.** Always official links, never generated.
+- **Coverage decisions are logged** with their rubric scores and reasons.

@@ -68,11 +68,21 @@ If something doesn't fit, it moves to a deeper layer. It is not crammed in.
 ## 7. Quotes and attribution
 
 - Quotes are **verbatim**, with a passage citation. Never paraphrase inside quotation marks.
+- American punctuation is allowed: one closing period or comma may sit inside the quotation marks even
+  if the speaker's sentence continued. Every word must still match the source.
 - Documented arguments name the speaker, their role, the venue and the date.
+- When a news report paraphrases someone, say so ("argued", "said he worried"). Don't turn a paraphrase
+  into a quote.
 - Anticipated arguments use "Some people may argue…" and are never attributed.
+- **Never name minors.** Describe them by role.
+- **Party labels:** for every speaker or for none.
+- **Timing words matter.** "No later than July 1" is not "on July 1". Keep the law's own precision.
+- **Subgroup statistics:** say who was asked ("Among parents who oppose a ban, 74.8%…"), never let a
+  subgroup figure read as everyone.
 
 ## Change log
 
 | Date | Change | Learned from |
 |---|---|---|
 | 2026-11-08 | v0 created from research | Planning |
+| 2026-11-08 | v0.1: quote punctuation, paraphrase vs. quote, minors, party labels, timing words, subgroup statistics | Trial 001 (HB 1009) drafting and planted-error design |

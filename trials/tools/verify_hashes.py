@@ -42,15 +42,17 @@ def main(manifest: Path, show: bool) -> int:
         counts[status] = counts.get(status, 0) + 1
         if status != "retrieved":
             continue
-        local = raw / str(src.get("local_file", ""))
-        if not src.get("local_file") or not local.is_file():
-            print(f"MISSING  {src['id']}: {local}")
-            bad += 1
-        elif sha256(local) != src.get("sha256"):
-            print(f"MISMATCH {src['id']}: recorded {src.get('sha256')} != actual {sha256(local)}")
-            bad += 1
-        else:
-            print(f"OK       {src['id']}: {src['sha256'][:12]}…  {src.get('title', '')[:60]}")
+        entries = src.get("files") or [{"local_file": src.get("local_file"), "sha256": src.get("sha256")}]
+        for entry in entries:
+            local = raw / str(entry.get("local_file") or "")
+            if not entry.get("local_file") or not local.is_file():
+                print(f"MISSING  {src['id']}: {local}")
+                bad += 1
+            elif sha256(local) != entry.get("sha256"):
+                print(f"MISMATCH {src['id']}: recorded {entry.get('sha256')} != actual {sha256(local)}")
+                bad += 1
+            else:
+                print(f"OK       {src['id']}: {entry['sha256'][:12]}…  {entry['local_file']}")
     print("status counts:", counts)
     print(f"Result: {'FAIL' if bad else 'PASS'} ({bad} problems)")
     return 1 if bad else 0

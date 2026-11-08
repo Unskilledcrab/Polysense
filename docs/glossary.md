@@ -38,7 +38,13 @@
 | **Runbook** | Written step-by-step instructions for a manual process |
 | **Automation gate** | The five conditions a step must meet before it may be automated |
 | **Shadow mode** | Automation runs beside the manual process and is compared against it, but isn't published |
-| **Gold data** | The reviewed outputs of manual trials, used as the standard automation must meet |
+| **Gold data** | The verified outputs of manual trials, used as the standard automation must meet |
+| **Verification protocol** | The AI-only way we check facts and fairness during the proof of concept (no human in the loop) |
+| **Independent verifier** | A fresh AI agent that sees only the page and its passages, never the drafter's notes, and judges each sentence |
+| **Evidence span** | The exact words a verifier quotes from a passage to show it supports a sentence; code confirms they exist |
+| **Bias panel** | A supporter's advocate, a critic's advocate and a standards editor who each review a page for fairness |
+| **Flip test** | Asking whether a sentence about one side would be written the same way about the other side |
+| **Seeded-error calibration** | Planting known errors in a test copy and measuring how many a verifier catches (its **catch rate**) |
 
 ## Georgia legislative terms
 

@@ -7,8 +7,8 @@ Usage:
 Conventions (see docs/product/content-style-guide.md, section 6):
   * Every sentence ends with a marker placed right after it:
       [P-012] or [P-012, P-013]    factual sentence cited to passage(s)
-      {analysis}                   our synthesis of cited facts
-      {editorial}                  framing that cannot be cited (needs reviewer sign-off)
+      {analysis} / {analysis: how}   our synthesis of cited facts (optionally say how)
+      {editorial} / {editorial: why} framing that cannot be cited (needs verifier sign-off)
       {computed: <arithmetic>}     arithmetic from cited numbers
   * Passages in passages.md look like:
       ### P-001 · S01 · p.1, lines 1-4
@@ -26,7 +26,7 @@ import sys
 import unicodedata
 from pathlib import Path
 
-MARKER = re.compile(r"\[(P-\d{3}(?:\s*,\s*P-\d{3})*)\]|\{(analysis|editorial)\}|\{computed:[^}]*\}")
+MARKER = re.compile(r"\[(P-\d{3}(?:\s*,\s*P-\d{3})*)\]|\{(analysis|editorial)(?::[^}]*)?\}|\{computed:[^}]*\}")
 PASSAGE_HEAD = re.compile(r"^###\s+(P-\d{3})\b")
 QUOTE = re.compile(r"[\"“]([^\"”]{3,})[\"”]")
 NUMBER = re.compile(r"(?<![\w-])\$?\d[\d,]*(?:\.\d+)?%?")
@@ -36,6 +36,17 @@ LOADED = [
     "gut ", "guts ", "crack down", "crackdown", "job-killing", "disastrous", "draconian",
     "reckless", "landmark", "historic", "sweeping",
 ]
+
+
+NUMBER_WORDS = {
+    "zero": "0", "one": "1", "two": "2", "three": "3", "four": "4", "five": "5", "six": "6",
+    "seven": "7", "eight": "8", "nine": "9", "ten": "10", "eleven": "11", "twelve": "12",
+}
+
+
+def with_numerals(text: str) -> str:
+    """Add digit forms of number words so 'grade twelve' also matches '12'."""
+    return text + " " + " ".join(NUMBER_WORDS[w] for w in re.findall(r"[a-z]+", text) if w in NUMBER_WORDS)
 
 
 def norm(text: str) -> str:
@@ -105,11 +116,14 @@ def main(workspace: Path, passages_path: Path) -> int:
                     continue
                 cited = " ".join(passages[i] for i in ids)
                 for q in QUOTE.findall(chunk):
-                    if norm(q) not in cited:
+                    # American style may add one closing period/comma inside the quote marks;
+                    # every word must still match the passage exactly.
+                    if norm(q).rstrip(".,") not in cited:
                         errors.append(f"L{no}: quote not verbatim in {ids}: \"{q[:60]}\"")
+                cited_nums = with_numerals(cited).replace(",", "")
                 for n in NUMBER.findall(chunk):
                     bare = n.replace("$", "").replace(",", "").rstrip("%")
-                    if bare not in cited.replace(",", ""):
+                    if bare not in cited_nums:
                         warnings.append(f"L{no}: number {n} not found in {ids} (tag {{computed}} if derived)")
             else:
                 kind = m.group(2) or "computed"
