@@ -996,3 +996,98 @@ Codes as before (SC, SCH, DC, SUP, CRIT, ED, FT; M, U, I, L). Numbers are revisi
 9. **Item 13:** I moved the vice-chair note rather than saying what the outlet asked about, because P-073 doesn't say.
 10. **Option B's two sentences** were split only for the Layer 3 reading grade, so they are listed as changed units
     though their content is the same.
+
+## Targeted re-check results (revision 5.1)
+
+Run by the coordinating session on revision 5.1's 43 changed units (`t003-rev51/changed-units.txt`, copied into
+`verification/round5-targeted/`), with a separate flip test by a standards editor. Reports are copied unchanged into
+`verification/round5-targeted/`: `source-check.json` (3324a244d42abea6…), `fliptest.json` (fd8b1e650b575331…),
+`changed-units.txt` (182f848611a829f0…). The page checked was revision 5.1 (workspace sha256 04cb4524cbc2…, commit
+2820274).
+
+| Check | Result |
+|---|---|
+| Source re-check (43 units) | **14 supports, 3 partial, 0 does not support, 0 wrong span**; 26 tags valid, 0 questionable; 0 ungrounded spans. 9 framing notes (all low) |
+| Flip test | Neutrality **3/5**, **no high issue**, 5 medium and 4 low. The 5 medium issues show a lean toward the current process in the values guide and the "In short" lines |
+
+**The three partials (all low):**
+- Line 128's "(set aside)" glossed "filed" inside a cited sentence, without a tag, and folding in the old sentence lost "without approving it".
+- Line 143 (also lines 92 and 166) credited "5% of current funding" to both Resolution 26-0729 and FOX 5, though each uses its own terms.
+- home.md line 5's "before it adopts the budget" didn't cite P-005, which gives the timing.
+
+**The flip test's medium issues:**
+1. Barrett's line was headed by "transparency", a value both sides claim, while the supporters' header was theirs alone.
+2. The critics' objection to the commission's makeup, their "primary objection" (P-076), had no line, and the closing line didn't say why.
+3. Card 4's "In short" was 16 of 39 words in Ellis's quotes, and its caveat pointed to a comparison it never stated.
+4. Card 3's "In short" quoted only the hedge "effectively", which reads as scare quotes.
+5. Card 6's "In short" named its speakers by what they want and alone used an "own accounts" caveat.
+
+Low notes: card 1's "confirms" and card 2's status sentence; card 5's status sentence; the "court funding" heading; the
+one-sided caveat in line 135's tag.
+
+## Revision 5.2: what changed (change class: correction; reason: last fixes after the targeted re-check)
+
+Only the brief's 8 items changed. Revision 5.1 is the baseline (commit 2820274). No card claim, evidence grade or side
+changed. The changed units are listed by r5.2 line in the drafter's scratch file `t003-rev52/changed-units.txt`, sent
+to the coordinator. "r5.1" and "r5.2" are line numbers.
+
+| # | Item | r5.1 line | r5.2 line | What changed |
+|---|---|---|---|---|
+| 1 | Untagged "set aside" gloss | 128, 121, 172, home 14 | 128, 121, 172, home 14 | Each is now an `{analysis}` unit citing P-024 and P-025: "...was set aside (filed) on Nov 4." (Layer 3 intro, still 60 words); "The Board set the resolution aside (filed it) on Nov 4."; on line 172 the cited sentence now says only "it was filed Nov 4", followed by "Filing set Resolution 26-0729 aside without approving it."; home: "voted to set aside (file) a resolution ...", whose tag also says the limit's terms are FOX 5's (P-077). The page.yaml chip "Set aside (filed) Nov 4" can't carry a tag (open item) |
+| 2 | Two sources' wording merged | 92, 143, 166 | 92, 143, 166 | Each source in its own words: FOX 5, "5% above current allocations" (P-077); the resolution, 5% of each department's "base budget" (P-029). Layer 2: "A FOX 5 report says a directive asked departments to limit 2027 requests for extra money to "5% above current allocations." Commissioner Barrett's resolution says the commission restricted requests to 5% of each department's "base budget."" Options and Arguments: "FOX 5 says ... "5% above current allocations." Resolution 26-0729 puts it at 5% of each department's "base budget."" |
+| 3 | home.md line 5 | home 5 | home 5 | "Speak at the Fulton County commissioners' public comment, in person or by Zoom, before the Board adopts the budget." Now cites P-005; 24 words with the next sentence. "Board of Commissioners'" became "commissioners'" to stay at 25 words |
+| 4 | Values guide | 132-136 | 132-136 | **One line per side, each with a value only that side states, in card order** (card 1, card 2, card 3). Today's process: names both sponsors (P-016, P-017); quote shortened to "earlier and ongoing input" to fit. **The justice officials:** their primary objection (P-076), in Judge Johnson's words for the coalition (P-078): "If you care most about the justice system's voice: Chief Probate Judge Kenya Johnson, for six justice officials, said they decline to join "a process that unnecessarily limits the voices of the justice system."" **Option C:** "informed decision-making", in Resolution 26-0729's own "true picture" words (P-028), in the same document-says form as line 132. **Gammage's court-funding line was removed:** one line per side, and his "lack of proper investment" is already on card 6. Transparency now appears only in the shared note, "Two sides claim transparency: ...", whose tag cites the title as P-024 and P-027. The closing line now says each side gets one line, so the officials' requests for more money and a January vote are on cards 6 and 5. Lines are 34, 34 and 35 words; quotes 6, 11 and 8 |
+| 5 | Card 4's "In short" | 214 | 214 | The effect in our voice ("If the claim is right, all commissioners and staff can hear departments' requests."), then Ellis's words, kept short ("open meetings" and "more transparent and open" than in recent years), then what records back and don't ("Records back the announced hearings, not the comparison."). 40 words, 6 of them quoted; the comparison the caveat refers to is now stated |
+| 6 | Card 3's "In short" | 202 | 202 | Quotes the resolution's claim word, not its hedge: "Resolution 26-0729 says the 5% limit effectively makes the code's rule on requests "impossible."" States what is on record and what isn't: "The code's rule and 2026 practice are on record; the conflict isn't settled." 39 words |
+| 7 | Card 6's "In short" | 238 | 238 | The flip test's form: "Funding decisions could affect court delays, jail conditions and public safety, justice officials said, Atlanta News First reported. The officials asked for more money. County records back added jail-agreement costs, not most other needs." 34 words. No motive tag and no "own accounts" caveat |
+| 8 | Low notes | 142, 242, 51, 143, 166, 78, 135, 16 | same | "Fund Balance Minimum Reserve" quoted as one unbroken string (lines 142 and 242); "leaves", not "left" (142). The public defender is defined as the office that "defends people charged with crimes who can't afford a lawyer" (lines 51, 143, 166). The probate judge is defined where the other offices are (Options and Arguments: "heads the court that handles estates, guardianships, marriage licenses and weapons carry licenses, among other services", P-087, P-076). "The six offices" (line 166). "The 2026 proposal" (line 242), citing P-046 as well, which shows the message came with that proposal. Misdemeanors defined (line 78: "less serious crimes, called misdemeanors"). Line 135's tag cites P-024 and P-027. Line 16: "2027 funding for the jail, courts, prosecutors and public defender's office isn't known as of Nov 8, 2026" (reworded to keep the line at 45 words) |
+
+Also changed: the status line ("revision 5.2: last fixes after the targeted re-check; re-check pending") and the "How
+this page was made" line.
+
+### Revision 5.2: deterministic gate (run by the drafter)
+
+| Check | Result |
+|---|---|
+| `check_citations.py` on workspace.md | **Pass**: 443 units (276 cited, 111 analysis, 36 editorial, 20 computed), 0 errors, 0 warnings |
+| `check_citations.py` on home.md | **Pass**: 5 units (3 cited, 2 analysis), 0 errors, 0 warnings |
+| `readability.py` | **Pass**: 30-second version 7.2, What it means for you 7.3, Layer 1 8.0, Layer 2 8.3, Layer 3 8.3; 0 sections over target; no budget warnings; no CHECK lines. Layer 4 8.6 (not targeted). Longest card label 84 words (card 3, unchanged) |
+| Length budgets | 30-second version 90. "If you" lines 45, 45 and 45; first sentences 22, 25 and 18. Values lines 34, 34 and 35 (quotes 6, 11 and 8). Layer 3 intro 60. "In short" lines 40, 40, 39, 40, 40 and 34. Home items 24, 20, 25 and 23 |
+| `verify_hashes.py` | **Pass**: 36/36 retrieved, 0 problems |
+| Passages | 102, unchanged |
+| Test render (to scratch) | Renders version 5.2 with no warnings; no asterisks in the page data |
+
+### Open items after revision 5.2 (re-check notes not taken)
+
+- **Source re-check:**
+  - Line 15's "the tax rate is decided separately" is present tense and rests on past cycles (optional fix: "in 2026 the tax rate was decided separately").
+  - Line 44's negative claim can be checked only against the S11 excerpts.
+  - Line 136's tag cites the minutes for a claim about every archived source.
+  - The page.yaml chip "Set aside (filed) Nov 4" glosses "filed" and can carry only a citation comment.
+- **Flip test (low):**
+  - Card 1's "The county code confirms these rules" could read "The code's text backs these rules", and card 2's status sentence could credit the hearing notice (P-042).
+  - Card 5's "In short" status sentence could give its label's Supported and Uncertain parts instead of the no-December-plan point.
+  - Line 135's tag keeps "a comparison card 4 rates Uncertain" for Ellis only. The brief changed only its citation; the flip test suggests dropping that caveat or adding one for Option C.
+  - The "court funding" heading and the "seeking more money" tag left with the Gammage line; court funding stays on card 6.
+- **Earlier open items** from rounds 4 and 5 stand as listed above (Open items after revision 5.1), except those this
+  revision closed:
+  - the critics' who-drafts line (R5-C1, now the justice officials' line);
+  - "court funding" as a heading (CRIT U134);
+  - Barrett's circular heading (CRIT U133);
+  - "has no line" for the January vote (SC 135);
+  - the public defender, probate judge and misdemeanor definitions.
+
+### Where I'm least sure (revision 5.2)
+
+1. **The justice officials' line** quotes Judge Johnson, who spoke for the coalition (P-078). "The justice system's
+   voice" is my heading for her "the voices of the justice system". "Decline to join" paraphrases "respectfully decline
+   to participate in" outside the quotes, as FOX 5's own summary does.
+2. **One line per side** drops Gammage's court-funding line. Readers who care most about court funding now find it only
+   on card 6, which the closing line points to.
+3. **Card 4's first sentence** ("all commissioners and staff can hear departments' requests") is our plain reading of
+   Ellis's "all commissioners and their staff are able to attend and hear what is said". It keeps his narrowing to
+   commissioners and staff, as revision 5.1's item 10 asked, but in our voice.
+4. **Card 3's "impossible"** is one quoted word. It is the resolution's claim word, as the flip test suggested, but it
+   could still read as a scare quote.
+5. **home.md line 5** says "the Fulton County commissioners'" rather than naming the Board of Commissioners, to fit the
+   25 words with "before the Board adopts the budget".
