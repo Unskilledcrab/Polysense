@@ -1,0 +1,118 @@
+{
+ "checker": "independent-source-verifier",
+ "document": "/home/user/Polysense/trials/001-hb1009-high-school-cellphones/page.yaml",
+ "units": [
+  {
+   "line": 6,
+   "sentence": "House Bill 1009 · 2026 · Act 395",
+   "marker": "[P-054, P-024]",
+   "verdict": "supports",
+   "evidence_span": "05/05/2026 Act 395 05/05/2026 House Date Signed by Governor",
+   "correct_passage": "",
+   "problem": "The 'code' string isn't in the brief's list, but page.yaml marks it reader-facing, so it was checked too.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 7,
+   "sentence": "Georgia lawmakers ban school-day phone use in public high schools by July 1, 2027",
+   "marker": "[P-056, P-024, P-007, P-004, P-005]",
+   "verdict": "supports",
+   "evidence_span": "Beginning no later than July 1, 2027, no public school student in grades nine through 12 shall be permitted to access personal electronic devices during the school day",
+   "correct_passage": "",
+   "problem": "Fine for a headline: 'by' keeps 'no later than'. Minor: 'phone use' is narrower than the law's 'access' to any personal electronic device (P-003, P-004).",
+   "suggested_fix": ""
+  },
+  {
+   "line": 8,
+   "sentence": "Phones in Georgia public high schools (House Bill 1009)",
+   "marker": "[P-054, P-007]",
+   "verdict": "supports",
+   "evidence_span": "ban on personal electronic devices for public high school students",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 10,
+   "sentence": "Signed into law May 5, 2026",
+   "marker": "[P-024]",
+   "verdict": "supports",
+   "evidence_span": "05/05/2026 Act 395 05/05/2026 House Date Signed by Governor",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 11,
+   "sentence": "Takes effect Dec 31, 2026",
+   "marker": "[P-019]",
+   "verdict": "supports",
+   "evidence_span": "This Act shall become effective December 31, 2026.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 12,
+   "sentence": "High schools start by July 1, 2027",
+   "marker": "[P-007]",
+   "verdict": "supports",
+   "evidence_span": "Beginning no later than July 1, 2027, no public school student in grades nine through 12",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 14,
+   "sentence": "Before House Bill 1009",
+   "marker": "[P-006, P-066, P-054]",
+   "verdict": "supports",
+   "evidence_span": "Prohibit bell-to-bell access to personal electronic devices by students in kindergarten through grade eight",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 15,
+   "sentence": "Signed into law",
+   "marker": "[P-024]",
+   "verdict": "supports",
+   "evidence_span": "05/05/2026 Act 395 05/05/2026 House Date Signed by Governor",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 16,
+   "sentence": "Voted down, 13 to 38",
+   "marker": "[P-026, P-027]",
+   "verdict": "supports",
+   "evidence_span": "\"name\": \"Senate Vote #783\", \"yea\": 13, \"nay\": 38,",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  }
+ ],
+ "framing_issues": [
+  {
+   "line": 16,
+   "text": "\"Option C\": {text: \"Voted down, 13 to 38\", kind: bad}",
+   "issue": "The chip text is factual, but the 'bad' style (unlike Option A's neutral chip and Option B's 'law' style) may render as a negative judgment of the option rather than its outcome. Use a neutral 'failed' or 'outcome' style.",
+   "severity": "low"
+  },
+  {
+   "line": 7,
+   "text": "Georgia lawmakers ban school-day phone use in public high schools by July 1, 2027",
+   "issue": "'Phone use' understates the rule, which bars access (holding, wearing or using, P-003) to any personal electronic device, including smartwatches, tablets and headphones (P-004). That is acceptable in a headline, but the link text repeats the phone-only framing.",
+   "severity": "low"
+  }
+ ],
+ "summary": {
+  "units_checked": 9,
+  "supports": 9,
+  "partial": 0,
+  "does_not_support": 0,
+  "wrong_span": 0,
+  "questionable_or_invalid_tags": 0
+ }
+}

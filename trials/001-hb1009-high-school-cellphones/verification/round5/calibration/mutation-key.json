@@ -1,0 +1,155 @@
+[
+ {
+  "id": "M01",
+  "type": "dropped-condition",
+  "line": 14,
+  "original": "any point in the school day, with some exceptions.",
+  "mutated": "any point in the school day, with no exceptions.",
+  "keywords": [
+   "no exceptions",
+   "exception",
+   "health",
+   "disability"
+  ]
+ },
+ {
+  "id": "M02",
+  "type": "wrong-deadline",
+  "line": 16,
+  "original": "By July 1, 2027, at the latest, your school must enforce",
+  "mutated": "By Jan 1, 2027, at the latest, your school must enforce",
+  "keywords": [
+   "jan 1",
+   "july 1",
+   "jul 1",
+   "deadline",
+   "date"
+  ]
+ },
+ {
+  "id": "M03",
+  "type": "widened-audience",
+  "line": 9,
+  "original": "Public high school students, their families and school staff.",
+  "mutated": "All Georgia high school students, including private schools, their families and school staff.",
+  "keywords": [
+   "private",
+   "all georgia",
+   "public",
+   "widen"
+  ]
+ },
+ {
+  "id": "M04",
+  "type": "invented-money",
+  "line": 15,
+  "original": "The law sets aside no money and doesn't require families to pay for anything.",
+  "mutated": "The law sets aside $10 million for phone storage, so families pay nothing.",
+  "keywords": [
+   "10 million",
+   "sets aside",
+   "funding",
+   "no money",
+   "fund"
+  ]
+ },
+ {
+  "id": "M05",
+  "type": "number",
+  "line": 60,
+  "original": "The House passed the bill, 145 to 20.",
+  "mutated": "The House passed the bill, 154 to 20.",
+  "keywords": [
+   "154",
+   "145",
+   "vote",
+   "tally",
+   "count"
+  ]
+ },
+ {
+  "id": "M06",
+  "type": "values-wrong-side",
+  "line": 102,
+  "original": "Darryl Adams, a teacher who opposed the bill,",
+  "mutated": "Darryl Adams, a teacher who supported the bill,",
+  "keywords": [
+   "supported",
+   "opposed",
+   "adams",
+   "side",
+   "worries"
+  ]
+ },
+ {
+  "id": "M07",
+  "type": "recommendation-word",
+  "line": 104,
+  "original": "and this guide does not recommend any option.",
+  "mutated": "and for most families Option B is the best fit.",
+  "keywords": [
+   "best",
+   "recommend",
+   "fit",
+   "endorse"
+  ]
+ },
+ {
+  "id": "M08",
+  "type": "changed-frequency",
+  "line": 46,
+  "original": "which it must adopt, and revise as needed, by January 1 each year. [P-008] The law calls",
+  "mutated": "which it must adopt once, by January 1, 2027. [P-008] The law calls",
+  "keywords": [
+   "once",
+   "each year",
+   "every year",
+   "annual"
+  ]
+ },
+ {
+  "id": "M09",
+  "type": "unknown-stated-as-known",
+  "line": 27,
+  "original": "Each district or school picks the date, up to July 1, 2027, and our sources include only one school's plan, as of Nov 8, 2026.",
+  "mutated": "Every Georgia public high school will start the ban on Jan 1, 2027.",
+  "keywords": [
+   "every",
+   "jan 1",
+   "picks",
+   "not known",
+   "each district",
+   "one school"
+  ]
+ },
+ {
+  "id": "M10",
+  "type": "altered-quote",
+  "line": 103,
+  "original": "is both an academic issue and a mental health issue.",
+  "mutated": "is the most important issue in education today.",
+  "keywords": [
+   "verbatim",
+   "quote",
+   "most important",
+   "altered",
+   "misquot",
+   "wording"
+  ]
+ },
+ {
+  "id": "M11",
+  "type": "reversed-direction",
+  "line": 21,
+  "original": "but schools can still give students laptops and tablets for schoolwork.",
+  "mutated": "and schools can no longer give students laptops or tablets for schoolwork.",
+  "keywords": [
+   "laptop",
+   "no longer",
+   "can still",
+   "school-issued",
+   "schoolwork",
+   "instruction"
+  ]
+ }
+]

@@ -1,0 +1,864 @@
+{
+ "checker": "independent-source-verifier (calibration)",
+ "document": "/tmp/claude-0/-home-user-Polysense/4b35850c-ec47-54a0-9fd6-ae740d1b4ece/scratchpad/verify-t001/round5-cal/workspace.mut.md",
+ "units": [
+  {
+   "line": 8,
+   "sentence": "House Bill (HB) 1009 will bar public high school students from using phones and similar devices during the school day, unless a health or disability plan explicitly requires one.",
+   "marker": "[P-054, P-007, P-003, P-004, P-005, P-002, P-013]",
+   "verdict": "supports",
+   "evidence_span": "no public school student in grades nine through 12 shall be permitted to access personal electronic devices during the school day, except as otherwise provided in this Code section or required by law",
+   "reason": "P-007 bars grade 9-12 public school students from device access during the school day; P-004 covers similar devices; P-013 gives the plan exception.",
+   "correct_passage": "",
+   "problem": "Minor; does not change the verdict. The plan exception matches P-013, but P-007 also excepts access 'required by law', which this summary leaves out (line 119 includes it).",
+   "suggested_fix": "Optional: '...unless a health or disability plan explicitly requires one, or another law requires access.'"
+  },
+  {
+   "line": 8,
+   "sentence": "Georgia lawmakers and the governor approved the law.",
+   "marker": "[P-056, P-024]",
+   "verdict": "supports",
+   "evidence_span": "05/05/2026 House Date Signed by Governor 04/06/2026 House Sent to Governor 03/23/2026 Senate Passed/Adopted",
+   "reason": "P-024 shows House and Senate passage and the governor's signature; P-056 is the General Assembly's enacting clause.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 9,
+   "sentence": "All Georgia high school students, including private schools, their families and school staff.",
+   "marker": "[P-007, P-011, P-014]",
+   "verdict": "does_not_support",
+   "evidence_span": "",
+   "reason": "Coverage is public school students only.",
+   "correct_passage": "P-007",
+   "problem": "Contradicted by the cited text. The ban reaches only public school students: P-007 'no public school student in grades nine through 12 shall be permitted to access personal electronic devices'; P-014 binds 'Each local school system and public school'. Nothing in the full enacted text (P-001 to P-019 and P-056 to P-061) covers private schools. 'All' also overstates: students in virtual or remote instruction away from campus are outside the 'school day' (P-005). Conflicts with the page title and line 8 ('public high school students').",
+   "suggested_fix": "Who it affects: Georgia public high school students, their families and public school staff. [P-007, P-011, P-014]"
+  },
+  {
+   "line": 10,
+   "sentence": "High schools must start the ban by July 1, 2027, and districts set the details.",
+   "marker": "[P-007, P-008]",
+   "verdict": "supports",
+   "evidence_span": "Beginning no later than July 1, 2027, no public school student in grades nine through 12 shall be permitted to access personal electronic devices during the school day",
+   "reason": "P-007 sets 'no later than July 1, 2027'; P-008 has each local school system and public school adopt the policies.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 10,
+   "sentence": "You can ask your district how it will run the rules, or tell lawmakers whether to keep or change the law.",
+   "marker": "{editorial: suggested actions; districts set policies each year under P-008, and the General Assembly can amend laws in later sessions}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "reason": "Neutral suggested actions (keep or change); P-008 makes districts adopt and revise policies each year. No option is recommended.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 14,
+   "sentence": "By July 1, 2027, at the latest, you can't use phones or similar devices at any point in the school day, with no exceptions.",
+   "marker": "[P-007, P-004, P-002, P-013]",
+   "verdict": "does_not_support",
+   "evidence_span": "",
+   "reason": "The date and the bell-to-bell scope are supported (P-007, P-002); 'with no exceptions' is contradicted.",
+   "correct_passage": "P-013",
+   "problem": "'with no exceptions' is contradicted by two of the cited passages. P-013: a student whose IEP, Section 504 Plan or medical plan 'explicitly mandates the use of a personal electronic device for medical or educational purposes shall be permitted to access the device'. P-007 itself says 'except as otherwise provided in this Code section or required by law'. Also conflicts with the page's own lines 8, 79, 119 and 214.",
+   "suggested_fix": "By July 1, 2027, at the latest, you can't use phones or similar devices at any point in the school day, unless your IEP, Section 504 plan or medical plan explicitly requires one, or another law requires access. [P-007, P-004, P-002, P-013]"
+  },
+  {
+   "line": 14,
+   "sentence": "Breaking the rule brings consequences that grow each time, such as warnings or taking the device.",
+   "marker": "[P-012]",
+   "verdict": "supports",
+   "evidence_span": "subject to progressive consequences in accordance with the local school system's or public school's student code of conduct, including, but not limited to, verbal warnings, confiscation of personal electronic devices",
+   "reason": "'Progressive consequences' with verbal warnings and confiscation as examples.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 14,
+   "sentence": "Your school may start sooner.",
+   "marker": "{analysis: P-007 sets \"no later than\"; one school planned to start in the 2026-2027 school year (P-054)}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "reason": "P-007 sets only a latest date; P-054 shows one school starting in 2026-2027.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 15,
+   "sentence": "Starting no later than July 1, 2027, you'll need to contact the school to reach your child during the school day.",
+   "marker": "[P-007, P-011]",
+   "verdict": "supports",
+   "evidence_span": "Require parents or guardians who need to communicate with their student during the school day to contact the school directly",
+   "reason": "P-011(B); P-007 gives the latest start.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 15,
+   "sentence": "All emergency messages will go through the school's own systems.",
+   "marker": "[P-011]",
+   "verdict": "supports",
+   "evidence_span": "Facilitate all emergency communication through school emergency communication management systems and coordinated by school personnel",
+   "reason": "P-011(A).",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 15,
+   "sentence": "The law sets aside $10 million for phone storage, so families pay nothing.",
+   "marker": "{analysis: no funding or fee provision in the law's full text, P-001 to P-019 and P-056 to P-061}",
+   "verdict": "invalid",
+   "evidence_span": "",
+   "reason": "The sentence asserts the opposite of its own tag.",
+   "correct_passage": "",
+   "problem": "Fabricated money claim. The full enacted text (P-001 to P-019 and P-056 to P-061) contains no appropriation, dollar figure or fee provision, and the tag's own reasoning ('no funding or fee provision') contradicts the sentence. 'Families pay nothing' is also unsupported. Contradicts the page's lines 16, 29, 119 and 200 ('sets aside no money'; 'the law doesn't say who pays').",
+   "suggested_fix": "The law doesn't say who pays for phone storage. {analysis: no funding or fee provision in the law's full text, P-001 to P-019 and P-056 to P-061}"
+  },
+  {
+   "line": 16,
+   "sentence": "By Jan 1, 2027, at the latest, your school must enforce the phone ban, which may include assigning staff and checking phone storage.",
+   "marker": "[P-007, P-014]",
+   "verdict": "does_not_support",
+   "evidence_span": "",
+   "reason": "The duties are supported by P-014; the deadline is contradicted by P-007.",
+   "correct_passage": "P-007",
+   "problem": "Wrong deadline. P-007 sets the high school ban 'Beginning no later than July 1, 2027'. Neither cited passage gives Jan 1, 2027: P-014 has no date, and Jan 1 is P-008's yearly policy-adoption deadline, not the start of the ban. Contradicts the page's own lines 10, 14, 22, 52 and 109.",
+   "suggested_fix": "By July 1, 2027, at the latest, your school must enforce the phone ban, which may include assigning staff and checking phone storage. [P-007, P-014]"
+  },
+  {
+   "line": 16,
+   "sentence": "The law sets aside no money for these duties.",
+   "marker": "{analysis: no funding provision in the law's full text, P-001 to P-019 and P-056 to P-061}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "reason": "Confirmed: no appropriation or funding language anywhere in P-001 to P-019 and P-056 to P-061.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 16,
+   "sentence": "The Georgia Department of Education must give schools guidance and technical support.",
+   "marker": "[P-016]",
+   "verdict": "supports",
+   "evidence_span": "The Department of Education shall provide local school systems and public schools with guidance and technical support",
+   "reason": "P-016.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 17,
+   "sentence": "A 2025 law already bars these students from using phones and similar devices during the school day.",
+   "marker": "[P-006, P-028]",
+   "verdict": "supports",
+   "evidence_span": "Beginning no later than July 1, 2026, no public school student in kindergarten through grade eight shall be permitted to access personal electronic devices during the school day",
+   "reason": "P-006 (K-8 ban, in force since no later than July 1, 2026); P-028 dates HB 340 to 2025.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 17,
+   "sentence": "HB 1009 leaves that rule as it was.",
+   "marker": "{analysis: the bill marks no deletions or additions in that subsection (P-006)}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "reason": "P-006 is archived as existing law, unchanged.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 17,
+   "sentence": "The new law makes districts and schools adopt or update their policies by January 1 every year, not just once.",
+   "marker": "[P-008, P-020]",
+   "verdict": "supports",
+   "evidence_span": "By January 1 each year, each local school system and public school shall adopt, and revise as appropriate, policies and procedures",
+   "reason": "P-008 'By January 1 each year' vs. the old one-time 'By January 1, 2026' (P-020).",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 21,
+   "sentence": "The law takes effect Dec 31, 2026.",
+   "marker": "[P-019]",
+   "verdict": "supports",
+   "evidence_span": "This Act shall become effective December 31, 2026.",
+   "reason": "P-019.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 21,
+   "sentence": "High schools must start the ban no later than July 1, 2027, so the ban will be in place by the 2027-28 school year.",
+   "marker": "{analysis: P-007 sets \"no later than July 1, 2027\"; a news report put the start in the 2027-28 school year (P-072)}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "reason": "July 1, 2027 comes before the 2027-28 school year; P-072 agrees.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 21,
+   "sentence": "The ban covers personal phones, smartwatches, tablets, headphones and similar devices, and schools can no longer give students laptops or tablets for schoolwork.",
+   "marker": "[P-004, P-017]",
+   "verdict": "does_not_support",
+   "evidence_span": "",
+   "reason": "The device list is supported by P-004; the second clause is contradicted by P-017.",
+   "correct_passage": "P-017",
+   "problem": "Second clause reverses the cited P-017: 'Nothing in this Code section shall be construed or applied to prohibit or limit a local school system or public school from providing school equipment, including, but not limited to, laptops and tablets, for student use for educational purposes.' Contradicts the page's own lines 92 and 214.",
+   "suggested_fix": "The ban covers personal phones, smartwatches, tablets, headphones and similar devices, but schools can still give students laptops or tablets for schoolwork. [P-004, P-017]"
+  },
+  {
+   "line": 21,
+   "sentence": "Breaking the rule brings consequences that grow each time, such as warnings, taking the device or notifying parents.",
+   "marker": "[P-012]",
+   "verdict": "supports",
+   "evidence_span": "shall be subject to progressive consequences in accordance with the local school system's or public school's student code of conduct, including, but not limited to, verbal warnings, confiscation of personal electronic devices, parental notification",
+   "reason": "P-012.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 21,
+   "sentence": "Charter schools and other schools that can usually skip some state rules can't skip this one.",
+   "marker": "[P-018]",
+   "verdict": "supports",
+   "evidence_span": "This Code section shall not be subject to waiver pursuant to Code Section 20-2-82 for a strategic waivers school system, Code Section 20-2-2063.2 or 20-2-2065 for a charter system, Code Section 20-2-2065 for a charter school",
+   "reason": "P-018.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 22,
+   "sentence": "Each district and public school sets the details in a policy, which it must adopt, and revise as needed, by January 1 each year.",
+   "marker": "[P-008]",
+   "verdict": "supports",
+   "evidence_span": "By January 1 each year, each local school system and public school shall adopt, and revise as appropriate, policies and procedures",
+   "reason": "P-008.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 22,
+   "sentence": "The details include where phones are kept, such as lockers or locked pouches, and rules for field trips, school transportation and sports.",
+   "marker": "[P-009, P-010]",
+   "verdict": "supports",
+   "evidence_span": "Establish appropriate methods for storing students' personal electronic devices, including, but not limited to, a student's locker, a locked pouch, or a designated place in the classroom",
+   "reason": "P-009 (storage); P-010 (field trips, daily transportation, athletic events).",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 22,
+   "sentence": "Each district's or school's code of conduct sets the exact consequences.",
+   "marker": "[P-012]",
+   "verdict": "supports",
+   "evidence_span": "progressive consequences in accordance with the local school system's or public school's student code of conduct",
+   "reason": "P-012.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 22,
+   "sentence": "Each district or school also picks its start date, up to July 1, 2027.",
+   "marker": "{analysis: P-007 sets \"no later than\"; one school picked an earlier start (P-054)}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "reason": "P-007 sets only the latest date; P-054 shows an earlier local start.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 23,
+   "sentence": "Georgia's lawmakers, the General Assembly, can change the law in a later session.",
+   "marker": "{editorial: the General Assembly can amend laws in later sessions}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "reason": "General, neutral fact about the legislature.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 27,
+   "sentence": "Every Georgia public high school will start the ban on Jan 1, 2027.",
+   "marker": "{analysis: P-007 sets \"no later than\"; P-054 is the only school plan in our sources}",
+   "verdict": "invalid",
+   "evidence_span": "",
+   "reason": "The tag's own reasoning contradicts the sentence.",
+   "correct_passage": "P-007",
+   "problem": "States an unknown future as known, in the 'Not known yet' section, with a wrong date. No source sets a single statewide start: P-007 says 'no later than July 1, 2027' (not Jan 1, 2027), and P-054 shows Cairo High School planning to begin in the 2026-2027 school year. Contradicts the page's own lines 14, 22 and 53.",
+   "suggested_fix": "Each high school can start any time up to July 1, 2027, and our sources show only one school's plan (Cairo High School, the 2026-2027 school year), as of Nov 8, 2026. {analysis: P-007 sets \"no later than\"; P-054 is the only school plan in our sources}"
+  },
+  {
+   "line": 28,
+   "sentence": "The law gives examples, but each district's or school's code of conduct sets the exact steps, and we haven't reviewed any code of conduct, as of Nov 8, 2026.",
+   "marker": "{analysis: P-012 leaves the steps to each code of conduct; no code of conduct is in our sources}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "reason": "P-012; no code of conduct is among the passages.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 29,
+   "sentence": "Each district chooses how phones are stored, the law doesn't say who pays, and we haven't seen any district's choice, as of Nov 8, 2026.",
+   "marker": "{analysis: P-009; no funding or fee provision in the law's full text, P-001 to P-019 and P-056 to P-061}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "reason": "P-009 leaves storage to each system; the enacted text has no funding or fee provision. (Line 15 contradicts this correct line.)",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 30,
+   "sentence": "We found no official cost estimate, called a fiscal note, on the state's list for 2026 bills, as of Nov 8, 2026.",
+   "marker": "{analysis: the list's whole 2026 section (P-069) has no entry for HB 1009}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "reason": "P-069 names no HB 1009 ('1009' does not occur in it).",
+   "correct_passage": "",
+   "problem": "Note only: the last entry, 'LC 47 3887 (PDF, 293.99 KB)', has no description; its LC number is not HB 1009's (LC 49 2527, per P-027), so the conclusion holds.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 30,
+   "sentence": "Costs also depend on each district's choices, such as lockers or locked pouches.",
+   "marker": "{analysis: storage options are listed in P-009}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "reason": "P-009.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 31,
+   "sentence": "High schools don't have to start until July 1, 2027, so there are no Georgia high school results yet, as of Nov 8, 2026.",
+   "marker": "{analysis: P-007; none in the sources reviewed}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "reason": "No Georgia high school outcome data appears in the passages; P-007's latest start is July 1, 2027.",
+   "correct_passage": "",
+   "problem": "Minor wording: the sentence asserts that no results exist, while the basis is that none are in the sources reviewed; P-046 quotes a senator saying high schools have already done it with success (a claim without data). Same wording on line 150.",
+   "suggested_fix": "...so we found no measured Georgia high school results yet, as of Nov 8, 2026."
+  },
+  {
+   "line": 37,
+   "sentence": "Ask your school district how it will store phones, handle emergency messages, run off-campus activities and respond when students break the rules.",
+   "marker": "{editorial: suggested action; districts set these under P-009, P-010, P-011 and P-012}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "reason": "Neutral suggested action; the topics are the ones P-009 to P-012 leave to districts.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 37,
+   "sentence": "Each district and public school must adopt or update its policy by January 1 each year.",
+   "marker": "[P-008]",
+   "verdict": "supports",
+   "evidence_span": "By January 1 each year, each local school system and public school shall adopt, and revise as appropriate, policies and procedures",
+   "reason": "P-008.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 38,
+   "sentence": "If your district holds a family workshop, question-and-answer session or town hall, you can ask your questions there.",
+   "marker": "{editorial: suggested action}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "reason": "Neutral suggested action.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 38,
+   "sentence": "The law encourages districts and schools to hold such events.",
+   "marker": "[P-060]",
+   "verdict": "supports",
+   "evidence_span": "is encouraged to host student and parent engagement activities designed to promote distraction-free education through personal electronic device-free, independent play and learning, including, but not limited to, family workshops, question and answer sessions, town halls",
+   "reason": "P-060.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 39,
+   "sentence": "Tell state lawmakers in the General Assembly what you think of the law, whether you want it kept or changed.",
+   "marker": "{editorial: suggested action; the General Assembly can amend laws in later sessions}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "reason": "Neutral (kept or changed).",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 40,
+   "sentence": "Check your school's handbook or website, where each district and school must publish the rules.",
+   "marker": "[P-015]",
+   "verdict": "supports",
+   "evidence_span": "Ensure that parents, guardians, and students are informed of such policies and procedures through student and family handbooks, student codes of conduct, school public websites",
+   "reason": "P-015(B).",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 44,
+   "sentence": "Georgia's lawmakers, in the House and the Senate, passed HB 1009 in 2026.",
+   "marker": "[P-056, P-024, P-025, P-054]",
+   "verdict": "supports",
+   "evidence_span": "03/23/2026 Senate Passed/Adopted 03/23/2026 Senate Third Read 03/19/2026 Senate Read Second Time 03/18/2026 Senate Committee Favorably Reported 02/25/2026 Senate Read and Referred 02/24/2026 House Passed/Adopted",
+   "reason": "P-024 House and Senate passage; P-025 votes.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 44,
+   "sentence": "The General Assembly can change the law in a later session.",
+   "marker": "{editorial: the General Assembly can amend laws in later sessions}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "reason": "General, neutral fact.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 44,
+   "sentence": "Our sources give no phone number, email or meeting for lawmakers.",
+   "marker": "{editorial: none of the archived sources lists one}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "reason": "No contact details for lawmakers appear in any passage.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 45,
+   "sentence": "Gov. Brian Kemp signed HB 1009 into law on May 5, 2026.",
+   "marker": "[P-024, P-054]",
+   "verdict": "supports",
+   "evidence_span": "05/05/2026 Act 395 05/05/2026 House Date Signed by Governor",
+   "reason": "P-024 date; P-054 names Governor Brian Kemp.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 45,
+   "sentence": "Our sources give no phone number, email or meeting for the governor's office.",
+   "marker": "{editorial: none of the archived sources lists one}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "reason": "No contact details for the governor's office appear in any passage.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 46,
+   "sentence": "Each district and public school sets the details in a policy, which it must adopt once, by January 1, 2027.",
+   "marker": "[P-008]",
+   "verdict": "does_not_support",
+   "evidence_span": "",
+   "reason": "Adoption by each system is supported; 'once' is contradicted.",
+   "correct_passage": "P-008",
+   "problem": "Wrong recurrence. P-008: 'By January 1 each year, each local school system and public school shall adopt, and revise as appropriate, policies and procedures'. The deadline repeats every year; the one-time deadline belonged to the old law (January 1, 2026, P-020). Contradicts the page's own lines 17, 22, 37, 51 and 84.",
+   "suggested_fix": "Each district and public school sets the details in a policy, which it must adopt, and revise as needed, by January 1 each year. [P-008]"
+  },
+  {
+   "line": 46,
+   "sentence": "The law calls a district a \"local school system.\"",
+   "marker": "[P-008]",
+   "verdict": "supports",
+   "evidence_span": "each local school system and public school shall adopt",
+   "reason": "P-008.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 46,
+   "sentence": "The rules must appear in student and family handbooks, codes of conduct and school websites.",
+   "marker": "[P-015]",
+   "verdict": "supports",
+   "evidence_span": "Ensure that parents, guardians, and students are informed of such policies and procedures through student and family handbooks, student codes of conduct, school public websites",
+   "reason": "P-015(B).",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 46,
+   "sentence": "The law encourages districts and schools to hold family workshops, question-and-answer sessions and town halls.",
+   "marker": "[P-060]",
+   "verdict": "supports",
+   "evidence_span": "is encouraged to host student and parent engagement activities designed to promote distraction-free education through personal electronic device-free, independent play and learning, including, but not limited to, family workshops, question and answer sessions, town halls",
+   "reason": "P-060.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 46,
+   "sentence": "Our sources give no phone numbers or emails for districts.",
+   "marker": "{editorial: none of the archived sources lists one for any district}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "reason": "No district contact details appear in any passage.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 50,
+   "sentence": "The law takes effect.",
+   "marker": "[P-019]",
+   "verdict": "supports",
+   "evidence_span": "This Act shall become effective December 31, 2026.",
+   "reason": "P-019: Dec 31, 2026.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 51,
+   "sentence": "Each school district and public school must adopt its device policy, revising it as needed, to cover kindergarten through 12th grade.",
+   "marker": "[P-008]",
+   "verdict": "supports",
+   "evidence_span": "each year, each local school system and public school shall adopt, and revise as appropriate, policies and procedures that, at a minimum: (1) Prohibit bell-to-bell access to personal electronic devices by students in kindergarten through grade twelve",
+   "reason": "P-008.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 51,
+   "sentence": "The first such deadline under the new law is Jan 1, 2027.",
+   "marker": "{analysis: P-008 sets \"January 1 each year\" and the law takes effect Dec 31, 2026 (P-019)}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "reason": "Follows from P-008 and P-019.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 52,
+   "sentence": "Public high schools must start the ban.",
+   "marker": "[P-007]",
+   "verdict": "supports",
+   "evidence_span": "Beginning no later than July 1, 2027, no public school student in grades nine through 12 shall be permitted to access personal electronic devices during the school day",
+   "reason": "P-007: no later than July 1, 2027.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 53,
+   "sentence": "At least one school planned to start sooner: on June 1, 2026, Cairo High School said it would begin in the 2026-2027 school year.",
+   "marker": "[P-054]",
+   "verdict": "supports",
+   "evidence_span": "Cairo High School will begin implementation of this law in the 2026-2027 school year.",
+   "reason": "P-054, dated June 1, 2026.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 54,
+   "sentence": "The Georgia Department of Education must give schools guidance and technical support.",
+   "marker": "[P-016]",
+   "verdict": "supports",
+   "evidence_span": "The Department of Education shall provide local school systems and public schools with guidance and technical support",
+   "reason": "P-016.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 58,
+   "sentence": "The bill was filed in the House.",
+   "marker": "[P-024]",
+   "verdict": "supports",
+   "evidence_span": "01/27/2026 House First Readers 01/16/2026 House Hopper",
+   "reason": "P-024: '01/16/2026 House Hopper' (filed).",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 59,
+   "sentence": "A House committee on education recommended passing the bill.",
+   "marker": "[P-024, P-023]",
+   "verdict": "supports",
+   "evidence_span": "02/06/2026 House Committee Favorably Reported",
+   "reason": "P-024 date; P-023 'House Committee: Education'.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 60,
+   "sentence": "The House passed the bill, 154 to 20.",
+   "marker": "[P-025]",
+   "verdict": "does_not_support",
+   "evidence_span": "",
+   "reason": "The date and passage are supported; the yea count is wrong.",
+   "correct_passage": "P-025",
+   "problem": "Wrong vote count. P-025: '02/24/2026 House Vote #545 145 20 8 7', so 145 yeas and 20 nays, not 154. The page's own line 117 says 145 to 20.",
+   "suggested_fix": "Feb 24: The House passed the bill, 145 to 20. [P-025]"
+  },
+  {
+   "line": 61,
+   "sentence": "A Senate committee on children and families recommended passing the bill.",
+   "marker": "[P-024, P-023]",
+   "verdict": "supports",
+   "evidence_span": "03/18/2026 Senate Committee Favorably Reported",
+   "reason": "P-024 date; P-023 'Senate Committee: Children and Families'.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 62,
+   "sentence": "Senators voted down, 13 to 38, a change that would have let districts allow high school students to use phones between classes.",
+   "marker": "[P-026, P-027]",
+   "verdict": "supports",
+   "evidence_span": "\"caption\": \"ADOPTION OF AMENDMENT #1 BY THE SENATOR FROM THE 38TH\", \"date\": \"2026-03-23T11:58:00\", \"name\": \"Senate Vote #783\", \"yea\": 13, \"nay\": 38,",
+   "reason": "P-026 vote; P-027 amendment text (transitions between classes, local policy).",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 63,
+   "sentence": "The Senate passed the bill, 52 to 0.",
+   "marker": "[P-025]",
+   "verdict": "supports",
+   "evidence_span": "03/23/2026 Senate Vote #784 52 0 3 1",
+   "reason": "P-025.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 64,
+   "sentence": "The governor signed the bill into law as Act 395.",
+   "marker": "[P-024]",
+   "verdict": "supports",
+   "evidence_span": "05/05/2026 Act 395 05/05/2026 House Date Signed by Governor",
+   "reason": "P-024.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 64,
+   "sentence": "Act 395 is the law's number; HB 1009 was the bill's number.",
+   "marker": "{analysis: plain-language note; P-024 lists both numbers}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "reason": "P-024 is the HB 1009 bill page and lists Act 395.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 98,
+   "sentence": "This tab compares three options.",
+   "marker": "{editorial}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "reason": "Structural statement.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 98,
+   "sentence": "Option A keeps the old law, which covered only kindergarten through 8th grade.",
+   "marker": "[P-006, P-066]",
+   "verdict": "supports",
+   "evidence_span": "Prohibit bell-to-bell access to personal electronic devices by students in kindergarten through grade eight",
+   "reason": "P-066 (prior (c)(1)); P-006.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 98,
+   "sentence": "Option B is House Bill (HB) 1009, which extends the ban to high schools and is now law.",
+   "marker": "[P-054, P-028, P-024]",
+   "verdict": "supports",
+   "evidence_span": "expands the prohibition of personal electronic devices in public schools to include high school grades nine through twelve",
+   "reason": "P-028; P-024 'Act 395'.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 98,
+   "sentence": "Option C is a change, voted down by state senators, that would have let school districts allow phones between classes.",
+   "marker": "[P-027, P-026]",
+   "verdict": "supports",
+   "evidence_span": "brief transitions 6 between classes for students in grades nine through 12, during which access to personal 7 electronic devices may be permitted",
+   "reason": "P-027 (LOST); P-026 (13-38).",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 102,
+   "sentence": "Darryl Adams, a teacher who supported the bill, said \"We have a lot of older teachers that do not want to have that confrontation.\"",
+   "marker": "[P-047, P-048]",
+   "verdict": "does_not_support",
+   "evidence_span": "",
+   "reason": "The quote is verbatim (P-047); the speaker's side is wrong.",
+   "correct_passage": "P-047, P-048",
+   "problem": "Misstates the speaker's side. Adams opposed the bill: P-047 'he worries the bill would put the burden on teachers and administrators to police phones, a task that can invite conflict'; P-048 'Adams also argues that high school students, who are older and often more independent, should be allowed to keep access to their phones.' The page itself counts him as the one person quoted against the law (line 134) and uses him on the opposing side (lines 110, 187, 199, 211). With this error both values-guide lines present supporters.",
+   "suggested_fix": "Darryl Adams, a teacher who opposed the bill, said \"We have a lot of older teachers that do not want to have that confrontation.\" [P-047, P-048]"
+  },
+  {
+   "line": 103,
+   "sentence": "State School Superintendent Richard Woods, who called for the ban, said \"Students’ ability to learn without distractions is the most important issue in education today.\"",
+   "marker": "[P-036]",
+   "verdict": "does_not_support",
+   "evidence_span": "",
+   "reason": "The side ('called for the ban') is supported by P-036; the quote is not verbatim.",
+   "correct_passage": "P-036",
+   "problem": "Fabricated quote. P-036 reads: 'Students’ ability to learn without distractions is both an academic issue and a mental health issue'. The words 'the most important issue in education today' appear in no passage. The page quotes the line correctly at line 151.",
+   "suggested_fix": "State School Superintendent Richard Woods, who called for the ban, said \"Students’ ability to learn without distractions is both an academic issue and a mental health issue.\" [P-036]"
+  },
+  {
+   "line": 104,
+   "sentence": "Option C, the change state senators voted down, has no line because we found no documented argument for it, and for most families Option B is the best fit.",
+   "marker": "{editorial}",
+   "verdict": "invalid",
+   "evidence_span": "",
+   "reason": "An editorial tag cannot carry an endorsement.",
+   "correct_passage": "",
+   "problem": "The page recommends an option ('for most families Option B is the best fit'). That breaks the no-endorsement rule, and no source supports it. The first clause is fine: no passage documents an argument for Option C (P-027 records only that Senator Kemp of the 38th offered it).",
+   "suggested_fix": "Option C, the change state senators voted down, has no line because we found no documented argument for it. {editorial}"
+  }
+ ],
+ "framing_issues": [
+  {
+   "line": 9,
+   "text": "including private schools",
+   "issue": "Tells private-school families the law covers them; it covers public school students only (P-007). Readers would be wrong about who is affected.",
+   "severity": "high"
+  },
+  {
+   "line": 14,
+   "text": "with no exceptions",
+   "issue": "Tells students with an IEP, Section 504 plan or medical plan that they have no exception, which could keep them from using a right the law gives (P-013). Conflicts with lines 8, 79, 119 and 214.",
+   "severity": "high"
+  },
+  {
+   "line": 15,
+   "text": "The law sets aside $10 million for phone storage, so families pay nothing.",
+   "issue": "Invented money claim placed under an {analysis} tag whose reasoning says the opposite. Contradicts lines 16, 29, 119 and 200.",
+   "severity": "high"
+  },
+  {
+   "line": 16,
+   "text": "By Jan 1, 2027, at the latest, your school must enforce the phone ban",
+   "issue": "Wrong enforcement deadline for school staff (P-007: July 1, 2027). Conflicts with lines 10, 14, 22, 52 and 109.",
+   "severity": "high"
+  },
+  {
+   "line": 21,
+   "text": "schools can no longer give students laptops or tablets for schoolwork",
+   "issue": "Reverses P-017 and contradicts lines 92 and 214. Could mislead families about school-issued devices.",
+   "severity": "high"
+  },
+  {
+   "line": 27,
+   "text": "Every Georgia public high school will start the ban on Jan 1, 2027.",
+   "issue": "Presents an unknown as settled fact, with a wrong date, under the heading 'Not known yet'. Conflicts with lines 14, 22 and 53.",
+   "severity": "high"
+  },
+  {
+   "line": 46,
+   "text": "which it must adopt once, by January 1, 2027",
+   "issue": "Misstates how often the policy deadline recurs, in the 'Who decides' section. Readers would miss that policies are adopted and revised every year by January 1, which is a yearly chance for input. Conflicts with lines 17, 22, 37, 51 and 84.",
+   "severity": "medium"
+  },
+  {
+   "line": 60,
+   "text": "154 to 20",
+   "issue": "Transposed House vote (P-025: 145 to 20). Contradicts line 117.",
+   "severity": "medium"
+  },
+  {
+   "line": 102,
+   "text": "a teacher who supported the bill",
+   "issue": "The values guide gets a speaker's side wrong. Both values-guide lines now present supporters, so the opposing side's documented concern (teacher confrontations) loses its voice and the guide tilts toward Option B.",
+   "severity": "high"
+  },
+  {
+   "line": 103,
+   "text": "is the most important issue in education today",
+   "issue": "Fabricated quote attributed to a named official, which breaks the verbatim-quote rule.",
+   "severity": "high"
+  },
+  {
+   "line": 104,
+   "text": "for most families Option B is the best fit",
+   "issue": "The page itself recommends an option, which breaks the nonpartisan structure (no ratings or endorsements).",
+   "severity": "high"
+  },
+  {
+   "line": 8,
+   "text": "unless a health or disability plan explicitly requires one",
+   "issue": "Leaves out P-007's 'or required by law' exception. That is acceptable in a summary, and line 119 states it fully.",
+   "severity": "low"
+  },
+  {
+   "line": 31,
+   "text": "so there are no Georgia high school results yet",
+   "issue": "Says no results exist when the basis is 'none in the sources reviewed'. P-046 quotes a senator saying high schools have already done it with success (a claim without data). Suggest 'we found no measured results'. Same wording on line 150.",
+   "severity": "low"
+  }
+ ],
+ "summary": {
+  "units_checked": 70,
+  "supports": 37,
+  "partial": 0,
+  "does_not_support": 8,
+  "wrong_span": 0,
+  "questionable_or_invalid_tags": 3
+ }
+}

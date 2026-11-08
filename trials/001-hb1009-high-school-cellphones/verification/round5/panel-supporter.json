@@ -1,0 +1,120 @@
+{
+  "role": "supporter-advocate",
+  "rating": 4,
+  "missing_arguments": [
+    {
+      "argument": "The Florida finding that matters most for a high-school law: the bans' effects were 'more pronounced in middle and high school settings where student smartphone ownership is more common.' It appears only in the 'How to read these cards' preamble (line 144). It is not on card 1 or in Option B 'Who benefits'. Add it to card 1 'What supports it' and keep the page's existing caveat (the summary doesn't say whether this includes suspensions or how much of the day the bans covered).",
+      "passages": ["P-040"]
+    },
+    {
+      "argument": "The law's own answer to the emergency concern: every district's policy must set clear communication protocols that send all emergency communication through school emergency communication management systems, coordinated by school personnel. The page says this in the parent line (15) and in Layer 2 (78), but not on card 4, where the emergency argument is weighed. Add it to card 4 'What challenges it' next to Gazmararian. Then line 191 ('The law doesn't require the rapid parent alerts...') is read against what the law does require.",
+      "passages": ["P-011"]
+    },
+    {
+      "argument": "Supporters' claim that the ban helps teachers. Harrell said lawmakers like to hear that a policy change 'means teachers can focus on instruction again', and Woods said he had heard 'nothing but support from teachers across Georgia'. Both appear only as rebuttals on card 5. They are missing from Option B 'Who benefits' and from the staff 'If you' line, so teachers appear mainly as a cost of the law.",
+      "passages": ["P-045", "P-053"]
+    },
+    {
+      "argument": "The 17-year-old student told lawmakers that 'phones have become addictive for teens'. The page keeps only the cigarette quote. The addiction claim answers the 41.9% of opposing parents who said students need to learn responsible use, so it fits card 6 'Who disagrees'.",
+      "passages": ["P-052", "P-035"]
+    },
+    {
+      "argument": "Context for card 3's date-gap challenge: under the old law, every district had to adopt its K-8 bell-to-bell policy by Jan 1, 2026, about four months before the high school bill was signed on May 5, 2026. Without this date, readers may think the K-8 rule hadn't started anywhere when the governor's office cited its 'success'.",
+      "passages": ["P-020", "P-066", "P-024", "P-028"]
+    },
+    {
+      "argument": "The English study's result that helps supporters: strict schools had about 40 minutes less phone time and 32 minutes less social media time during school. It is in card 2 'What supports it' (line 164), but not in card 2's label or 'In short', and not in Option B 'Who benefits'. Keep the page's caveats with it: it shows a link, not cause and effect, and found no evidence of a difference in weekday or weekend use.",
+      "passages": ["P-042", "P-041"]
+    },
+    {
+      "argument": "Safety as a reason to support the ban: 60.3% of supporting parents cited better physical health and safety. This appears in Option B (line 118) but on no card, so on the cards safety appears only as an opponent concern (card 4). It could go in card 2 'Who says it' with the other survey reasons, as long as it isn't presented as an answer to the emergency-contact concern.",
+      "passages": ["P-034"]
+    }
+  ],
+  "unfair_wording": [
+    {
+      "line": 191,
+      "text": "The law doesn't require the rapid parent alerts or guaranteed phone access Gazmararian described. ... Districts can add faster parent alerts, because the law sets minimum rules, but by our reading they can't allow students' own phones in an emergency unless a plan or another law requires access.",
+      "why": "This is accurate, but card 4 only says what the law lacks. A reader of the card never learns what the law does require: clear emergency-communication protocols that run through school systems and are coordinated by staff (P-011). The card also makes the 'no emergency exception for students' own phones' point twice (lines 188 and 191).",
+      "severity": "medium"
+    },
+    {
+      "line": 16,
+      "text": "The law sets aside no money for these duties.",
+      "why": "This drops the caveat the page uses elsewhere (lines 119 and 200: any state funding would come through the state budget, which we didn't review). In the most-read section, it reads as an argument that schools must do this work without funding, an argument no documented speaker made. Add the budget sentence, or drop this sentence here.",
+      "severity": "medium"
+    },
+    {
+      "line": 162,
+      "text": "Teens' mental health and in-person friendships would improve, supporters say. [P-036, P-051, P-071] A study in England found no evidence of better well-being among 12- to 15-year-olds at schools with strict phone rules. [P-041, P-042, P-043] That study couldn't test cause and effect.",
+      "why": "Leading with the study's main outcome is right. But the null result is then repeated in 'Who disagrees' (165) and 'What challenges it' (166), four times in all counting the label. The study's result that helps supporters (less phone and social media time during school, P-042) appears once (164). Merge the repeat in lines 165 and 166, and add a clause about in-school use to the summary or the label.",
+      "severity": "low"
+    },
+    {
+      "line": 154,
+      "text": "In the Florida study, the test-score gains came in the second year, after a first year in which suspensions rose. [P-039, P-040]",
+      "why": "The real limit is that the gains took until year two. The suspension clause brings card 5's cost onto card 1. Card 5's 'What challenges it' (202) doesn't do the reverse: it never says that test scores improved after the same adjustment period (P-040). Either drop the clause here or add the matching note on card 5.",
+      "severity": "low"
+    },
+    {
+      "line": 178,
+      "text": "The high school ban was signed on May 5, 2026, before the statewide K-8 deadline of July 1, 2026. [P-024, P-006] So schools weren't yet required to enforce the K-8 rule statewide when the high school ban was signed.",
+      "why": "This is accurate, but the card's only challenge is the page's own inference from two dates. It leaves out that every district had to adopt its K-8 policy by Jan 1, 2026 (P-020, P-066). Add that date so the challenge doesn't suggest the K-8 rule hadn't started anywhere.",
+      "severity": "low"
+    },
+    {
+      "line": 201,
+      "text": "Sen. Sally Harrell said legislators want to hear teachers say, \"I can just teach again.\" [P-045]",
+      "why": "This shrinks her point to what legislators 'want to hear' and drops the substance of the same passage: that a policy change 'means teachers can focus on instruction again.' A fix that stays close to the passage: Sen. Sally Harrell said lawmakers like to hear that a policy change means teachers can focus on instruction again: \"When you hear a teacher say, 'I can just teach again,' that's what legislators want to hear.\"",
+      "severity": "low"
+    },
+    {
+      "line": 14,
+      "text": "By July 1, 2027, at the latest, you can't use phones or similar devices at any point in the school day, with some exceptions. [P-007, P-004, P-002, P-013] Breaking the rule brings consequences that grow each time, such as warnings or taking the device. [P-012]",
+      "why": "The whole line is restrictions and penalties. 'With some exceptions' is vaguer than the 30-second version. Name the exception (a device the student's IEP, 504 or medical plan requires, P-013) and add that schools can still provide laptops and tablets for schoolwork (P-017).",
+      "severity": "low"
+    }
+  ],
+  "imbalance": [
+    {
+      "issue": "The same Florida working paper gets two standards. On card 1 (supporters) it comes with 'with limits', 'Florida only', 'doesn't describe how much of the school day the bans covered', 'no Georgia results yet' and the uncertainty 'whether Georgia high schools will see results like Florida's' (lines 148, 155, 156). On card 5 (opponents) the same paper provides the 'early suspensions' half of a 'Supported' label (196) with none of those caveats. Card 5's 'What's missing' and 'What's uncertain' (203-204) cover only staff workload. Option B (120) says suspension effects in Georgia aren't known, but card 5 doesn't. Give card 5 the same Florida-only and no-Georgia-results caveats.",
+      "severity": "medium"
+    },
+    {
+      "issue": "Opponent cards 4 and 5 start their labels with 'Supported', but what is supported is an undisputed description of how the law works (families contact the school; schools must enforce). Supporters agree with that description (Harrell, P-044). The parts in dispute (emergency safety; staff burden and confrontation) are uncertain. Supporter cards are built on disputed outcomes. So at a glance the labels show two 'Supported' for opponents and one 'Supported, with limits' for supporters, even though the evidence on the disputed points is closer to even. The rule allows this. The fix is wording that names what is supported (see the label proposals).",
+      "severity": "low"
+    },
+    {
+      "issue": "Group-level findings are repeated for one side only. The finding that favors opponents ('especially among Black students', P-039) appears four times (lines 110, 119, 198, 200). The finding most relevant to supporters (effects were larger in middle and high schools, P-040) appears once, with a caveat, in the preamble (144), and on no card or option. Keep the first. Add the second wherever the study is cited for learning (card 1, Option B).",
+      "severity": "low"
+    },
+    {
+      "issue": "Option B 'Who benefits' (line 118, about 80 words) is a little over half as long as 'Who pays' (line 119, about 140 words). Part of that gap is fair, because the law's duties are concrete. But 'Who benefits' leaves out items the passages support: Florida's larger effects in high schools (P-040), less phone and social media time during school at strict English schools (P-042, a link only), and supporters' claim that teachers can focus on instruction again (P-045, P-053).",
+      "severity": "low"
+    }
+  ],
+  "label_disagreements": [
+    {
+      "argument": "5. Enforcing the ban will burden school staff and can lead to conflict",
+      "label": "Supported on new duties and early suspensions (the law's text; one Florida working paper); uncertain on staff workload (not measured)",
+      "proposed": "Supported on new duties (the law's text); supported, with limits, on a short-term rise in suspensions (one Florida working paper; the rise faded after year one; no Georgia results yet); uncertain on staff workload and teacher confrontations (not measured)",
+      "why": "Card 1 uses the same paper and is labeled 'Supported, with limits ... no Georgia results yet'. The rule should give one study the same qualifiers whichever side it helps. Adams's main claim, confrontation, isn't measured: the card's own 'What's missing' (203) says neither Woods's account nor Adams's concern 'has been measured'. Suspensions are related to confrontation but are a different outcome."
+    },
+    {
+      "argument": "4. Families lose direct contact with students during the school day",
+      "label": "Supported on the facts (the law's text); uncertain on emergency safety (no data on how school alerts perform, or on whether students' own phones make emergencies safer)",
+      "proposed": "Supported that families must reach students through the school (the law's text); uncertain on emergency safety (no data on how school alerts perform, or on whether students' own phones make emergencies safer)",
+      "why": "'The facts' is vague and reads like a verdict on the opponents' argument. What the law's text supports is the law's own design, which supporters agree with (P-044). The disputed claim is emergency safety, and the card says there is no data on it. Naming what is supported keeps the rule and removes the tilt a quick reader would see."
+    },
+    {
+      "argument": "2. The ban will help teens' mental health and friendships",
+      "label": "Uncertain (one study of 12- to 15-year-olds in England found no evidence of a well-being difference; it couldn't test cause and effect)",
+      "proposed": "Uncertain (statements; one study of 12- to 15-year-olds in England, which couldn't test cause and effect, found less phone and social media time during school but no evidence of a well-being difference; neither study summary measured friendships)",
+      "why": "'Uncertain' is correct under the rule. But the note in parentheses gives only the study's null result and leaves out its finding on in-school use (P-042). It also doesn't say that neither study measured friendships (P-064). Card 1's label lists its study's limits; this label should give the English study's full result."
+    }
+  ],
+  "questions_to_weigh": "Mostly neutral, and I would accept all three. Q1 (line 220) tests our main claim both ways ('helps or hurts') and asks how soon anyone could know, which is fair. Supporters would add that Florida's gains appeared only in year two (P-040), so a fair test needs at least two school years. Q2 (line 221) is practical and treats the law as settled, which we welcome. But it assumes students' own phones are the normal way to get news in an emergency. The page itself says its sources have no data on whether students' own phones make emergencies safer (line 192), and the law requires schools to set emergency-communication protocols (P-011). A more neutral version: 'What is the best way for families to get timely news in an emergency: school alert systems, students' own phones, or both?' Q3 (line 222: the state, each district or each family) is a fair values question that people on my side would accept. We would answer 'the state'.",
+  "values_guide": "Yes. Our line (103) uses Woods's own words: 'Students' ability to learn without distractions is both an academic issue and a mental health issue' (P-036). That is our strongest documented values statement, because it covers both learning and mental health. It is the same length as the opponent line (35 words each) and carries at least equal authority (a state superintendent compared with a classroom teacher). Adams's line (102) uses his own words and claims no more than its evidence shows. It states a value, it is credited to 'a teacher' rather than to teachers as a group, and it isn't even the opponents' most common concern (emergency contact, cited by 74.8% of opposing parents, P-035). So the guide doesn't favor them. Two small notes. (1) The guide puts the opponent line first, while the cards put supporters first. That is fine if the order is meant to alternate, but the page should say that here, too, the order is not a ranking. (2) Teachers appear only as an opponent value, though the passages also have supporters speaking for teachers (P-045, P-053). No third line is needed, but elsewhere on the page teachers shouldn't read as only one side's concern (see missing argument 3).",
+  "if_you_lines": "No line gives the other side's gains without its costs. But the student and staff lines lean against us: they describe the law only as restrictions, penalties and duties that come with no money, and say nothing about what the law is for. (1) Staff line (16): 'The law sets aside no money for these duties' lacks the budget caveat the page uses on lines 119 and 200. Add 'Any state funding would come through the state budget, which we didn't review.' (2) Student line (14): replace 'with some exceptions' with the actual exception (a device the student's IEP, 504 or medical plan requires, P-013), and add that schools can still provide laptops and tablets (P-017). (3) Neither these lines nor the 30-second version says what the law is for. One factual sentence from P-057 would give the purpose without claiming results. Its stated aim is 'to minimize distractions, improve academic outcomes, and increase meaningful interactions and focused learning experiences.' The parent and K-8 lines are neutral. The parent line's 'All emergency messages will go through the school's own systems' is fair to both sides.",
+  "verdict_summary": "Mostly fair to supporters, and a few choices even favor us. Each of our three main arguments (learning, mental health and friendships, early results in Georgia) has documented speakers and a label that fits the page's rule. The law's stated purpose, the 70.8% parent support and the 145-20 and 52-0 votes are on the page. Woods's line in the values guide is strong and evenly matched. Choices that favor us: parent support is listed under 'Who benefits', and the sources quote five supporters to one opponent, which the page rightly says doesn't measure how many people hold each view. Fixes: (1) treat the Florida working paper the same on card 5 as on card 1 ('with limits', Florida only, no Georgia results yet); (2) put the law's own emergency-communication requirement (P-011) on card 4; (3) add to card 1 that Florida's effects were larger in middle and high schools (P-040); (4) add the budget caveat to the staff 'If you' line; (5) say exactly what is 'Supported' in the card 4 and 5 labels. Each fix holds both sides to the same standard. None asks for balance the evidence doesn't support."
+}

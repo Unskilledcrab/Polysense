@@ -1,0 +1,110 @@
+{
+  "role": "critic-advocate",
+  "rating": 4,
+  "missing_arguments": [
+    {
+      "argument": "The parent-support numbers don't measure support for this law's design. The Emory survey ran Oct 30 to Nov 24, 2025, before HB 1009 was filed on Jan 16, 2026. Its question, 'Do you support high schools banning student cellphone use during the school day?', didn't spell out what opponents object to: the ban covers breaks and time between classes, and emergency contact goes only through the school. To be fair to the other side, the release does frame the result as support for extending the K-8 ban (P-031), so it is relevant. But the 70.8% figure appears three times (lines 118, 140, 213), once as the rebuttal on card 6, without this note. Suggested {analysis} for the survey paragraph: 'The survey was taken before HB 1009 was filed and asked about a school-day ban in general terms, not this law's details.'",
+      "passages": ["P-032", "P-033", "P-024", "P-031", "P-002", "P-011"]
+    },
+    {
+      "argument": "Card 6's responsible-use reason (41.9% of opposing parents) has no supporting evidence on the card, but the English study bears on it. At strict schools, students had less phone and social media time during school, but there was 'no evidence for differences' in weekday or weekend use, and the authors found no evidence that strict rules go with less 'overall phone and social media use.' That fits the concern that a school ban moves phone time rather than building habits. Add it to card 6 'What supports it' with card 2's limits: ages 12 to 15, England, links not causes, and it doesn't measure responsible use itself.",
+      "passages": ["P-042", "P-043", "P-041", "P-035"]
+    },
+    {
+      "argument": "Card 6 answers the health-app concern (26.6% of opposing parents) with the plan exception (line 214) but leaves out the burden that comes with it. A student who relies on a phone or smartwatch health app may use it only if an IEP, Section 504 plan or medical plan 'explicitly mandates' the device, so families must get such a plan first. Option B 'Who pays' already says this; card 6 should too, e.g. in 'What's missing.'",
+      "passages": ["P-013", "P-004", "P-035"]
+    }
+  ],
+  "unfair_wording": [
+    {
+      "line": 102,
+      "text": "- **If you care most about sparing teachers from confrontations over phones:** Darryl Adams, a teacher who opposed the bill, said \"We have a lot of older teachers that do not want to have that confrontation.\" [P-047, P-048]",
+      "why": "This is our side's only line in the values guide, and it uses our narrowest, least sympathetic documented value. Read alone, 'older teachers that do not want to have that confrontation' can sound like staff avoiding a duty. It sits next to the State School Superintendent's 'learning without distractions ... academic issue and a mental health issue.' Our strongest documented value is reaching your child in an emergency: it was opposing parents' top reason (74.8%, P-035), the news summary names it as one of opponents' two concerns (P-071), and Adams voiced it as a parent with a lockdown example (P-049). Lead with that value (see values_guide), and describe Adams as 'a teacher and parent' (P-049).",
+      "severity": "high"
+    },
+    {
+      "line": 202,
+      "text": "Districts must also regularly review whether their rules work and adjust them as needed. [P-015]",
+      "why": "A new duty is listed under 'What challenges it' as if it reduced the staff burden, while Option B (line 119) correctly counts 'review policies every year' as a cost. A review also can't ease the core burden, because districts can only change methods, not the ban itself (P-007; no waivers, P-018). Drop the sentence, or add that the review is itself a new duty and can't loosen the ban.",
+      "severity": "medium"
+    },
+    {
+      "line": 191,
+      "text": "Adams's lockdown account is one family's experience; the quoted passage doesn't say when it happened or what phone rules applied.",
+      "why": "The caveat is fair, and the pro cards carry similar ones (lines 167, 174). But this is the only account of a real emergency in our sources, and it describes a parent going hours without updates during a lockdown, the situation the law routes through school systems (P-011). The label and 'In short' say only that there is 'no data on how school alerts perform' (lines 184, 186), and the clause about phone rules invites the reader to discount the account. Add: 'It is the only account of a real emergency in our sources.'",
+      "severity": "low"
+    },
+    {
+      "line": 15,
+      "text": "The law sets aside no money and doesn't require families to pay for anything.",
+      "why": "This is literally true, but in the top summary it reads as 'no cost to families.' Line 29 says whether storage 'costs families anything' is not known, because districts choose storage and the law doesn't say who pays. Use the same wording here, e.g. 'The law doesn't say who pays for phone storage, such as lockers or locked pouches; each district chooses' (P-009).",
+      "severity": "low"
+    },
+    {
+      "line": 182,
+      "text": "### 4. Families lose direct contact with students during the school day",
+      "why": "The title states the everyday version of our argument. The documented concern is emergencies: 'fewer ways to reach their children during emergencies' (P-071), 74.8% of opposing parents (P-035), and Adams's account (P-049). The emergency version is also factual on the law's text: there is no emergency exception for students' own phones, and all emergency communication goes through school systems (P-007, P-011, P-013). Suggest: 'Families lose direct contact with students during the school day, including in emergencies.'",
+      "severity": "low"
+    },
+    {
+      "line": 213,
+      "text": "- **Who disagrees:** Students testified in support of the ban, and a 17-year-old said, \"Social media is the cigarette of our generation.\" [P-052] Most parents surveyed, 70.8%, supported a high school ban. [P-033]",
+      "why": "Listing who disagrees is fair, but this reuses card 2's most vivid quote and answers a 'who should decide' argument with a majority figure. A majority doesn't answer 'it should be parental choice.' The 70.8% also comes from a survey taken before the bill existed (see missing_arguments). Keep the line but add the survey note, or drop the repeated quote, which already appears on card 2.",
+      "severity": "low"
+    },
+    {
+      "line": 190,
+      "text": "Julie Gazmararian, a professor at the Rollins School of Public Health, said, \"Parents’ concerns about emergency access are valid and understandable. However, effective cellphone policies can address this by establishing rapid parent notification systems and guaranteed access to phones when needed.\" [P-037]",
+      "why": "Her first sentence supports our concern, but the whole quote is filed as a challenge. This is minor, because line 191 then shows the law requires neither remedy she names, which is fair to us. Optionally, note under 'What supports it' that she called the concerns 'valid and understandable.'",
+      "severity": "low"
+    }
+  ],
+  "imbalance": [
+    {
+      "issue": "Values guide (lines 102-103): the supporters' line comes from the State School Superintendent and states their broadest value, students' learning and mental health. Ours comes from 'a teacher' and states sparing older teachers a confrontation. The gap in appeal and authority comes from which value was picked, not from the evidence. Woods's line also states 'a mental health issue' with no flag, while card 2 rates that effect Uncertain. This is the same root problem as unfair_wording line 102 (rated high there), and the fix belongs on our line.",
+      "severity": "medium"
+    },
+    {
+      "issue": "The English study is missing from Layer 3 (lines 96-128). Option A 'Who pays' (line 111) quotes Woods calling for the ban 'to end the harm caused by constant technology access and interruption.' Option B 'Who benefits' (line 118) lists supporters' reasons, including 69.1% 'better mental health' and 71.2% 'in-person social interactions.' The only well-being study found no evidence of a difference, and its authors say current bans 'require further development' (P-042, P-043), but it appears only in Layer 4. Layer 3 does carry the Florida findings that cut both ways, so this is the one place it is lopsided. Fix: add one sentence to Option B (e.g. 'A study of 12- to 15-year-olds in England found no evidence of better well-being at schools with strict phone rules; it couldn't test cause and effect.'), or drop Woods's 'end the harm' quote from Option A, since card 2 already has it.",
+      "severity": "medium"
+    },
+    {
+      "issue": "Option B's survey reasons (lines 118-119): 'Who benefits' lists all four supporter reasons (87.7%, 71.2%, 69.1%, 60.3%), but 'Who pays' gives only one of the five opponent reasons (74.8%, emergencies). The values cost never appears in Option B: families who would allow their teen a phone lose that choice (45.5% said 'should be parental choice'; 41.9% 'students need to learn responsible use', P-035). 'Who pays' is longer overall, so this is about which reasons are shown, not space. Add the top two or three opposing reasons, or trim the supporter reasons to match.",
+      "severity": "low"
+    },
+    {
+      "issue": "The 70.8% support figure appears three times (lines 118, 140, 213), once as the rebuttal to our values card, with no note that the survey ran Oct 30 to Nov 24, 2025, before the bill was filed on Jan 16, 2026, or that it asked about a school-day ban in general terms (P-032, P-033, P-024).",
+      "severity": "low"
+    },
+    {
+      "issue": "Speaker count (line 134): 'five people who spoke for the law' against 'one person who spoke against the law, a teacher.' The caveat that the count reflects whom the sources quoted is good. Also noting that 20 House members voted no and none are quoted in our sources (P-025) would keep the count from implying our side is a lone voice.",
+      "severity": "low"
+    },
+    {
+      "issue": "Option A 'What's uncertain' (line 112) repeats Harrell's 'it's been very successful' with no note that it is unmeasured, while card 3 rates the same claim Uncertain (statements only). Add 'no source we reviewed measured those results.'",
+      "severity": "low"
+    },
+    {
+      "issue": "Verbs and modals inherited from the sources: line 132 says supporters' ban 'would cut distractions' but opponents' 'could spark conflict' (P-071), and line 201 says Woods 'told lawmakers' while line 199 says Adams 'said he worries' (P-047). These are faithful to the sources and the page already uses 'said' for both sides, so this is low priority. Where the page paraphrases, use the same modal for both sides.",
+      "severity": "low"
+    }
+  ],
+  "label_disagreements": [
+    {
+      "argument": "Card 5: Enforcing the ban will burden school staff and can lead to conflict (our side)",
+      "label": "Supported on new duties and early suspensions (the law's text; one Florida working paper); uncertain on staff workload (not measured)",
+      "proposed": "Supported on new duties (the law's text); supported, with limits, on early suspensions (one Florida working paper; no Georgia results yet); uncertain on staff workload (not measured)",
+      "why": "For honesty and consistency. Card 1 rests on the same Florida working paper and its label says 'with limits' and 'no Georgia results yet.' The suspension finding has the same limits, and the summary doesn't say whether the larger middle- and high-school effects include suspensions (line 144). As written, our card gets a cleaner label than theirs for the same study."
+    },
+    {
+      "argument": "Card 1: The ban will help students learn (supporters' side)",
+      "label": "Supported, with limits (one Florida working paper designed to estimate cause and effect; gains in year two; no Georgia results yet)",
+      "proposed": "Supported, with limits (one Florida working paper designed to estimate cause and effect; gains in year two; the summary doesn't say how much of the school day Florida's bans covered; no Georgia results yet)",
+      "why": "'Supported' follows the printed rule, and I don't dispute it. But the claim predicts results for Georgia's whole-day ban, and the card's own 'What's missing' (line 155) says the summary doesn't describe the bans' scope. That limit belongs in the label beside 'year two.' The gains may also run mostly through fewer unexcused absences rather than fewer distractions (P-040); that is already in the card body and needn't go in the label. I agree with the labels on cards 2, 3, 4 and 6 as printed."
+    }
+  ],
+  "questions_to_weigh": "Mostly neutral; most people on our side would accept them. Q3 ('the state, each school district or each family?') is fair and gives family choice equal footing. Q1 says 'helps or hurts,' which is good, but it names only learning and well-being, the outcomes supporters stress. Add discipline and emergency response, which opponents worry about and the Florida study measured (P-039): 'What results would show whether the ban helps or hurts learning, well-being, discipline and emergency response in Georgia high schools, and how soon could anyone know?' Q2 raises our main concern, which is good, but 'How can families get timely news...' assumes a workable answer exists within the ban, echoing the 'policies can address this' framing. A neutral version: 'Can families get timely news in an emergency when students can't use their own phones during the school day, and how would anyone know?' Optional fourth question on the one cause-and-effect tradeoff in the sources: 'How should schools weigh an early rise in suspensions, which a Florida study found especially among Black students, against test-score gains that came in the second year?' (P-039, P-040).",
+  "values_guide": "Our line is present, listed first, in Adams's own words and the same length as the supporters' line (36 words each). But it uses our narrowest documented value, sparing 'older teachers' a 'confrontation', which on its own can read as staff avoiding a duty. It sits next to the State School Superintendent's broad 'learning without distractions ... both an academic issue and a mental health issue.' Our strongest documented value is being able to reach your child in an emergency. It was opposing parents' top reason (74.8%, P-035), it is one of the two opponent concerns in the news summary (P-071), and Adams voiced it as a parent (P-049). Suggested line (about 32 words): 'If you care most about reaching your child in an emergency: Darryl Adams, a teacher and parent who opposed the bill, said phones can be critical for families seeking information during emergencies. [P-049, P-048]' P-049 is the reporter's paraphrase, not a direct quote. If the guide requires direct wording, use the survey's answer text, 'No way to reach child during emergency' (P-035). To keep the teacher line as well, add the emergency line as a second opponent line and pair it with Harrell's 'that education time needs to be protected' (P-044) for symmetry. Woods's line fairly states his value. It does assert a mental-health effect that card 2 rates Uncertain, but as his own quote that is acceptable; the fix belongs on our line, not his.",
+  "if_you_lines": "Fair overall. The lines state what changes and who must do what. None claims gains for students, and the staff line pairs the new duties with 'sets aside no money.' Two tweaks. (1) Parent line (line 15): 'The law sets aside no money and doesn't require families to pay for anything' reads as 'no cost to you,' but line 29 says whether storage 'costs families anything' is not known. Use the same wording: 'The law doesn't say who pays for phone storage, such as lockers or locked pouches; each district chooses' (P-009). (2) Add to the parent line the most actionable effect for families worried about health apps (26.6% of opposing parents, P-035): a phone or smartwatch used for a health need is allowed only if an IEP, Section 504 plan or medical plan explicitly requires it (P-013, P-004). The student line's 'with some exceptions' is vague but not slanted. The 30-second version is neutral and offers both 'keep or change.'",
+  "verdict_summary": "Mostly fair to opponents. Our three main arguments each get a full card with the same fields: emergency contact, the enforcement burden with the Florida suspension finding, and teen independence with parental choice. Our cards are slightly longer (about 950 words against 850). The labels follow the printed rule, and card 5's is, if anything, generous to us. Card 4 is strong: it says the law has no emergency exception for students' own phones and doesn't require the remedies the Emory professor described. Card 2 gives the English study's null finding prominently. The one high-severity problem is the values guide: our only line uses our weakest documented value (sparing older teachers a confrontation), not our strongest (reaching your child in an emergency: P-035, P-049, P-071), and it sits against the superintendent's learning-and-mental-health line. Medium: Layer 3 states supporters' well-being claims (Woods's 'end the harm', 69.1% 'better mental health') without the English study, and card 5 lists a new review duty as easing the staff burden. Fixing the values-guide line and those two items would make this a 5."
+}
