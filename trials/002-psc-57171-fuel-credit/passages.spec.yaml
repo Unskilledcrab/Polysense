@@ -28,8 +28,6 @@ passages:
   - {id: P-001, source: S01, file: S01.txt, locator: "docket page: docket fields",
      start: "Docket #57171", end: "Status: Open"}
   # --- S01b: the docket's filing list (JSON the docket page itself requests) ---------------------
-  - {id: P-002, source: S01b, file: S01b.txt, locator: "filing list: document 228918",
-     start: "\"documentId\":228918", end: "\"filedDate\":\"2026-09-22T00:00:00\""}
   - {id: P-003, source: S01b, file: S01b.txt, locator: "filing list: document 229261",
      start: "\"documentId\":229261", end: "\"hasAttachment\":false"}
   # --- S02: Procedural and Scheduling Order, adopted 2026-07-07 (readable .docx copy) -------------
@@ -158,10 +156,6 @@ passages:
      start: "The revenues Georgia Power receives from large load customers", end: "non-large load customers in the FCR clause."}
   - {id: P-056, source: S06, file: S06-pdf.txt, locator: "p.17, lines 5-10",
      start: "In their FCR-27 testimony filed in Docket No. 56765", end: "load cost model."}
-  - {id: P-057, source: S06, file: S06-pdf.txt, locator: "p.17, lines 14-23",
-     start: "PIA Staff and intervenors have expressed concern regarding", end: "denominator of the RTP fuel credit rate calculation.",
-     fix: [["non- dispatchable", "non-dispatchable"]],
-     note: "Rejoined 'non-dispatchable', split by a line-end hyphen."}
   - {id: P-058, source: S06, file: S06-pdf.txt, locator: "p.18, lines 2-13",
      start: "There are two potential options", end: "larger allocation of RTP revenues to the fuel clause.",
      fix: [["non- dispatchable", "non-dispatchable"]],
@@ -192,8 +186,6 @@ passages:
      start: "[footnote 4] The $1.35 per month savings", end: "1,000 kWhs per month."}
   - {id: P-068, source: S07, file: S07-docx.txt, locator: "p.8, reporting recommendation 1",
      start: "1) Monthly RTP Reporting:", end: "starting no later than January 1, 2027."}
-  - {id: P-069, source: S07, file: S07-docx.txt, locator: "p.9, why Staff investigated",
-     start: "Staff recognized that RTP customer load is growing significantly", end: "address Staff’s concerns in this docket."}
   - {id: P-070, source: S07, file: S07-docx.txt, locator: "p.9, RTP load growth",
      start: "The Company acknowledged the growth in new economic development load", end: "mainly be based on RTP pricing."}
   - {id: P-071, source: S07, file: S07-docx.txt, locator: "footnote 10",
@@ -307,8 +299,6 @@ passages:
      start: "PIA Staff’s guidelines are new policy recommendations", end: "by their own admission."}
   - {id: P-121, source: S11, file: S11-rebuttal.txt, locator: "section II, overarching concerns",
      start: "PIA Staff’s recommendations endeavor to treat RTP load more like non-RTP load", end: "competitive value of RTP as a marginal cost-based rate."}
-  - {id: P-122, source: S11, file: S11-rebuttal.txt, locator: "section III, pipeline costs are fixed",
-     start: "In other words, FT costs are established and fixed years in advance", end: "how much energy is produced by a facility."}
   - {id: P-123, source: S11, file: S11-rebuttal.txt, locator: "section III, double recovery",
      start: "The Company would only be double recovering", end: "not included in base revenue requirements."}
   - {id: P-124, source: S11, file: S11-rebuttal.txt, locator: "section III, revenue on the base side",

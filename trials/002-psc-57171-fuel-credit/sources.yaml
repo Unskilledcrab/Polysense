@@ -5,10 +5,10 @@
 #         in the contested case (Georgia Power, PIA Staff, GIPL, GAM, RSM). The runbook's list has no fitting
 #         type; see log.md. PIA Staff is a party here (S02, P-006), so its testimony is a party filing too.
 # Files live in _raw/ (git-ignored). Re-download a URL and compare sha256 to check our copy.
-# Files inside a downloaded .zip were extracted with extract/safe_unzip.py (flat names, new directory);
+# Files inside a downloaded .zip were extracted with trials/tools/extract/safe_unzip.py (flat names, new directory);
 # each member that is cited is listed with its own sha256 next to the archive's.
 # Text derivatives (derived:) were made mechanically: .docx -> docx2txt.py (stdlib), PDF -> pdf2txt.py
-# (pdfplumber), .xlsx -> xlsx2txt.py (stdlib). Scripts are in extract/ in this trial folder; see log.md.
+# (pdfplumber), .xlsx -> xlsx2txt.py (stdlib). Scripts are in trials/tools/extract/ (adopted from this trial); see log.md.
 # Search-engine summaries were used for DISCOVERY ONLY and are never cited.
 trial: 002-psc-57171-fuel-credit
 decision: {state: GA, body: "Georgia Public Service Commission", docket: "57171", title: "RTP Revenue Credit and Allocation Methodology", final_decision_scheduled: "2026-12-15"}
@@ -328,16 +328,17 @@ sources:
     settles: [D7]
     notes: "Redacted dollar amounts appear as gaps after '$'."
   - id: S10
-    title: "RSM: Direct Testimony of Jim Clarkson (filed 2026-09-22)"
+    title: "Resource Supply Management: Direct Testimony of Jim Clarkson (filed 2026-09-22)"
     publisher: Resource Supply Management
     type: party-filing
     url: "https://psc.ga.gov/search/facts-document/?documentId=228918"
     status: retrieved
     retrieved_at: "2026-11-08T07:02:16Z"
     files:
+      - {local_file: S10.html, sha256: 5fbf0ddef110692b59154caee4418500e9b7fb7a5d50a62a6f132a89898c6868, captured_at: "2026-11-08T07:02:16Z", note: "document page; its company field names the party (P-162)"}
       - {local_file: S10-pdf.pdf, sha256: d91a2bb1ac83aa68040a046b561c8fcbd7f8cb92ff9cbf7ebcd4cd29979a6dd3, captured_at: "2026-11-08T07:03:00Z", url: "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/228918/109809", note: "5 scanned pages, no text layer"}
-      - {local_file: S10.html, sha256: 5fbf0ddef110692b59154caee4418500e9b7fb7a5d50a62a6f132a89898c6868, captured_at: "2026-11-08T07:02:16Z", note: "document page"}
-    notes: "Read by eye only (no text layer, no approved OCR), so not cited. The cover is dated October 15, 2026 although the docket lists it as filed 2026-09-22. It argues for offering marginal-cost (real-time) pricing to existing customers' loads, not just new ones, and takes no position on Option 1 or Option 2 (see D13)."
+    derived: [S10.txt]
+    notes: "Revision 2 cites only the document page (P-162), which names the party and the filing date. The testimony itself was read by eye only (no text layer, no approved OCR), so it is not cited or summarized. The cover is dated October 15, 2026 although the docket lists it as filed 2026-09-22. It argues for offering marginal-cost (real-time) pricing to existing customers' loads, not just new ones, and takes no position on Option 1 or Option 2 (see D13)."
   - id: S11
     title: "Georgia Power: RTP Rebuttal Testimony of Dr. Ross Beppler, Lee Evans and Brandon Looney (2026-10-27)"
     publisher: Georgia Power Company

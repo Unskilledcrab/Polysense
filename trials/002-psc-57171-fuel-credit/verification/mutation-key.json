@@ -1,0 +1,154 @@
+[
+ {
+  "id": "M01",
+  "type": "number",
+  "line": 59,
+  "original": "About 2,300 customers use the day-ahead version and 170 use the hour-ahead version.",
+  "mutated": "About 2,300 customers use the day-ahead version and 710 use the hour-ahead version.",
+  "keywords": [
+   "710",
+   "170"
+  ]
+ },
+ {
+  "id": "M02",
+  "type": "date",
+  "line": 33,
+  "original": "- **Oct 27:** Georgia Power filed its rebuttal testimony.",
+  "mutated": "- **Oct 29:** Georgia Power filed its rebuttal testimony.",
+  "keywords": [
+   "oct 29",
+   "oct 27",
+   "october 27",
+   "october 29",
+   "10/27",
+   "2026-10-27"
+  ]
+ },
+ {
+  "id": "M03",
+  "type": "deadline-time",
+  "line": 38,
+  "original": "- **Dec 2, 4 p.m.:** Deadline for the parties",
+  "mutated": "- **Dec 2, 5 p.m.:** Deadline for the parties",
+  "keywords": [
+   "5 p.m",
+   "4 p.m",
+   "4:00",
+   "5:00"
+  ]
+ },
+ {
+  "id": "M04",
+  "type": "wrong-decider",
+  "line": 16,
+  "original": "- **Decide:** The PSC's five commissioners make the decision.",
+  "mutated": "- **Decide:** The PSC's Energy Committee makes the decision.",
+  "keywords": [
+   "energy committee",
+   "administrative session",
+   "five commissioners",
+   "commissioners make"
+  ]
+ },
+ {
+  "id": "M05",
+  "type": "misattribution",
+  "line": 173,
+  "original": "PIA Staff said: \"FT is necessary for all hours across each month in order to reliably serve customers.\"",
+  "mutated": "GAM said: \"FT is necessary for all hours across each month in order to reliably serve customers.\"",
+  "keywords": [
+   "gam",
+   "pia staff",
+   "attribut",
+   "manufacturers"
+  ]
+ },
+ {
+  "id": "M06",
+  "type": "reversed-direction",
+  "line": 9,
+  "original": "Counting more of the money toward fuel would lower their fuel charge.",
+  "mutated": "Counting more of the money toward fuel would raise their fuel charge.",
+  "keywords": [
+   "raise",
+   "lower",
+   "direction",
+   "revers",
+   "increase",
+   "decrease"
+  ]
+ },
+ {
+  "id": "M07",
+  "type": "scope",
+  "line": 59,
+  "original": "Business customers that use at least 250 kilowatts can choose it.",
+  "mutated": "Any business customer can choose it.",
+  "keywords": [
+   "250",
+   "kilowatt",
+   "any business",
+   "scope",
+   "eligib"
+  ]
+ },
+ {
+  "id": "M08",
+  "type": "wrong-person",
+  "line": 18,
+  "original": "Two of the terms, Hubbard's and Wise's, end on Dec 31, 2026.",
+  "mutated": "Two of the terms, Hubbard's and Johnson's, end on Dec 31, 2026.",
+  "keywords": [
+   "johnson",
+   "wise"
+  ]
+ },
+ {
+  "id": "M09",
+  "type": "arithmetic",
+  "line": 48,
+  "original": "For the Dec 15 vote, send yours no later than Dec 14 at 9:30 a.m. {computed: the Dec 15 Administrative Session starts at 9:30 a.m. (P-024); 24 hours earlier (P-030) is 9:30 a.m. on Dec 14}",
+  "mutated": "For the Dec 15 vote, send yours no later than Dec 13 at 9:30 a.m. {computed: the Dec 15 Administrative Session starts at 9:30 a.m. (P-024); 24 hours earlier (P-030) is 9:30 a.m. on Dec 13}",
+  "keywords": [
+   "dec 13",
+   "dec 14",
+   "24 hours",
+   "arithmetic"
+  ]
+ },
+ {
+  "id": "M10",
+  "type": "loaded-word",
+  "line": 30,
+  "original": "Georgia Power asked the PSC to strike parts of GIPL's testimony.",
+  "mutated": "Georgia Power tried to silence parts of GIPL's testimony.",
+  "keywords": [
+   "silence",
+   "loaded"
+  ]
+ },
+ {
+  "id": "M11",
+  "type": "procedural-meaning",
+  "line": 23,
+  "original": "The PSC approved a settlement of Georgia Power's fuel-rate case.",
+  "mutated": "The PSC rejected a settlement of Georgia Power's fuel-rate case.",
+  "keywords": [
+   "rejected",
+   "approved",
+   "settlement"
+  ]
+ },
+ {
+  "id": "M12",
+  "type": "number",
+  "line": 85,
+  "original": "a typical home's bill would drop by about $1.48 a month",
+  "mutated": "a typical home's bill would drop by about $1.84 a month",
+  "keywords": [
+   "1.84",
+   "1.48"
+  ]
+ }
+]

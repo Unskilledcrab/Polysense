@@ -8,9 +8,6 @@ Blacked-out (redacted) values appear as they do in the public copies: dotted cel
 ### P-001 · S01 · docket page: docket fields
 > Docket #57171 Title: RTP Revenue Credit and Allocation Methodology Industry: Electric Date: 06/02/2026 Status: Open
 
-### P-002 · S01b · filing list: document 228918
-> "documentId":228918,"description":"Jim Clarkson Direct Testimony ","filedDate":"2026-09-22T00:00:00"
-
 ### P-003 · S01b · filing list: document 229261
 > "documentId":229261,"description":"Transcript from hearing held on October 15, 2026","filedDate":"2026-10-26T00:00:00","receivedDate":"2026-10-26T00:00:00","companyDetailsVm":[{"companyName":"Hearing Transcript","companyId":3901,"companyIndustryVm":[],"selectedIndustries":[],"contactVm":[],"companyContactVm":[],"slug":"hearing-transcript-1","addresses":[],"userId":0,"isGeneralError":false,"isUserBlocked":false,"createdOn":"2026-11-08T02:00:39.0357437-05:00","modifiedOn":"2026-11-08T02:00:39.0357451-05:00","isActive":true}],"isCurrentUserHasSubscribed":false,"hasAttachment":false
 
@@ -182,11 +179,6 @@ Blacked-out (redacted) values appear as they do in the public copies: dotted cel
 ### P-056 · S06 · p.17, lines 5-10
 > In their FCR-27 testimony filed in Docket No. 56765, PIA Staff showed a 1-CP (coincident peak) allocation of FT costs. The Company agrees with this approach but proposes using a winter CP and basing the allocation on the share of organic versus large load demand growth. This approach is consistent with the capacity need that drove the incremental generation resources and the allocation in the large load cost model.
 
-### P-057 · S06 · p.17, lines 14-23
-> PIA Staff and intervenors have expressed concern regarding the treatment of non-dispatchable PPAs in the RTP fuel credit calculation. Such a change to the treatment of non-dispatchable PPAs will impact the fuel allocation for all RTP incremental load, including non-large load commercial and industrial customers. Q. DESCRIBE THE CURRENT TREATMENT OF NON-DISPATCHABLE PPAS IN THE RTP FUEL CREDIT CALCULATION. A. As approved, the RTP fuel credit rate is derived from the marginal replacement fuel costs of all Georgia Power units. Although there are some units, such as the non-dispatchable PPAs, which do not have marginal replacement fuel costs, the output of those units is included in the denominator of the RTP fuel credit rate calculation.
-
-*Note: Rejoined 'non-dispatchable', split by a line-end hyphen.*
-
 ### P-058 · S06 · p.18, lines 2-13
 > There are two potential options to address their concern. The first option is to exclude both the costs and the output from non-dispatchable PPAs in the RTP fuel credit calculation. This is consistent with an approach that the RTP fuel credit should be derived from marginal replacement fuel costs. Removing non-dispatchable PPA output (MWh) from the denominator of the RTP fuel credit calculation will increase the RTP fuel credit rate and thus the recording of all RTP revenues to the fuel clause. However, this approach is not based on all Georgia Power generating units running, as originally approved. The second option is to include both the costs and the MWh from non-dispatchable PPAs in the RTP fuel credit calculation. This would break from the marginal fuel cost-based approach approved and in place since 2010 but also result in a larger allocation of RTP revenues to the fuel clause.
 
@@ -229,9 +221,6 @@ Blacked-out (redacted) values appear as they do in the public copies: dotted cel
 
 ### P-068 · S07 · p.8, reporting recommendation 1
 > 1) Monthly RTP Reporting: Staff recommends monthly fuel reporting include sufficient detail on RTP fuel credit rate, mega-watt hour (“MWh”) sales, RTP fuel revenues compared to the average non-RTP fuel rates. The monthly fuel report filed by the Company under Docket 3382 should include a new separate line item in Retail Fuel Revenues section showing RTP sales (MWhs) and RTP revenues. The Company should file a corresponding separate report to show the calculation of RTP revenues credited to fuel revenues, starting no later than January 1, 2027.
-
-### P-069 · S07 · p.9, why Staff investigated
-> Staff recognized that RTP customer load is growing significantly and the dollars allocated to fuel revenues would also grow significantly. Given this RTP revenue growth, it was critical to confirm the RTP Fuel Credit Methodology accurately assigns RTP revenues to fuel revenues. In Docket No. 56765 (FCR-27) Staff’s evaluation indicated the current RTP Fuel Credit Methodology does not allocate sufficient RTP revenues to fuel revenues. Based on Staff’s findings, a settlement was reached in FCR-27 to investigate and address Staff’s concerns in this docket.
 
 ### P-070 · S07 · p.9, RTP load growth
 > The Company acknowledged the growth in new economic development load will mainly be based on RTP pricing.
@@ -394,9 +383,6 @@ Blacked-out (redacted) values appear as they do in the public copies: dotted cel
 
 ### P-121 · S11 · section II, overarching concerns
 > PIA Staff’s recommendations endeavor to treat RTP load more like non-RTP load in how costs and revenues are allocated. However, the RTP rate is by design a marginal cost-based rate that is not intended to recover all embedded costs. This does not mean that RTP customers do not pay their fair share of system costs or cost to serve. Rather, the pricing for RTP is dynamic and allows participating customers to take on price risk to better manage how and when they use energy. Eligible commercial and industrial customers can respond to price signals and modify their usage on an hourly basis. RTP customers and non-RTP customers are not similarly situated and do not take service on similar rates by design. Efforts to make RTP cost and revenue allocations more like those for non-RTP customers would undermine the effectiveness and competitive value of RTP as a marginal cost-based rate.
-
-### P-122 · S11 · section III, pipeline costs are fixed
-> In other words, FT costs are established and fixed years in advance of operation and do not vary based on how much energy is produced by a facility.
 
 ### P-123 · S11 · section III, double recovery
 > The Company would only be double recovering if it was charging customers for FT costs in both fuel and base rates; however, FT costs are charged to fuel and are not included in base revenue requirements.
