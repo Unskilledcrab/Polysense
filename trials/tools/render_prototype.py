@@ -24,8 +24,12 @@ except ImportError:  # pragma: no cover
     sys.exit("needs PyYAML: uv run --with pyyaml python3 trials/tools/render_prototype.py ...")
 
 MARKER = re.compile(r"\[(P-\d{3}(?:\s*,\s*P-\d{3})*)\]|\{(analysis|editorial)(?::\s*([^}]*))?\}|\{computed:\s*([^}]*)\}")
-SECTION_IDS = {"30-second": "summary", "layer 1": "overview", "layer 2": "decision", "layer 3": "options",
-               "layer 4": "arguments", "layer 5": "evidence"}
+SECTION_IDS = {"30-second": "summary", "what it means for you": "you", "layer 1": "overview", "layer 2": "decision",
+               "layer 3": "options", "layer 4": "arguments", "layer 5": "evidence"}
+KINDS = ("law", "regulatory-case", "budget")    # page.yaml `kind`: sets the decision and options headings
+POWERS = ("Decide", "Input", "Observe")          # the reader's participation power (glossary)
+MONTHS = {m: i for i, m in enumerate(["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"], 1)}
+BOLD = re.compile(r"\*\*(.+?)\*\*")
 TYPE_LABEL = {"primary-government": "Primary · government", "secondary-research": "Research", "news": "News",
               "local-government": "Local government", "advocacy": "Advocacy", "party-filing": "Party filing"}
 
@@ -44,7 +48,31 @@ def split_units(text: str) -> list[dict]:
     tail = text[pos:].strip()
     if tail:
         out.append({"t": tail})
+    for u in out:
+        # Inline **bold** inside a sentence (not a leading label) becomes segments, so readers never see
+        # asterisks (usability feedback: the PSC page showed "**Take-or-pay contracts**").
+        if "**" in u["t"]:
+            segs, last = [], 0
+            for m in BOLD.finditer(u["t"]):
+                if m.start() > last:
+                    segs.append({"t": u["t"][last:m.start()]})
+                segs.append({"t": m.group(1), "b": True})
+                last = m.end()
+            if last < len(u["t"]):
+                segs.append({"t": u["t"][last:]})
+            u["t"] = "".join(x["t"] for x in segs)
+            u["segs"] = segs
+            if "**" in u["t"]:
+                print(f"WARN unmatched ** in: {u['t'][:70]}", file=sys.stderr)
     return [u for u in out if u["t"] or u.get("cite") or u.get("tag")]
+
+
+def iso_date(label: str) -> str | None:
+    """'Nov 18, 2026, 10 a.m.' -> '2026-11-18' (the first month-day-year in the label)."""
+    m = re.search(r"\b([A-Z][a-z]{2,8})\.? (\d{1,2}), (\d{4})\b", label or "")
+    if not m or m.group(1)[:3].lower() not in MONTHS:
+        return None
+    return f"{m.group(3)}-{MONTHS[m.group(1)[:3].lower()]:02d}-{int(m.group(2)):02d}"
 
 
 def parse_block(line: str) -> dict:
@@ -128,8 +156,25 @@ def parse_home(path: Path) -> dict:
                 first, rest = [x.strip() for x in label.split("·", 1)]
                 if first in ("Decide", "Input", "Observe"):
                     power, when = first, rest
-            cur["items"].append({"power": power, "when": when, "units": b["units"]})
+            date = iso_date(when)
+            if not date:
+                print(f"WARN {path.parent.name} home item has no 'Mon D, YYYY' date: {label!r}", file=sys.stderr)
+            if power == "Decide":
+                print(f"WARN {path.parent.name} home item uses Decide; that's for the reader's own vote", file=sys.stderr)
+            cur["items"].append({"power": power, "when": when, "date": date, "units": b["units"]})
     return {"sections": secs}
+
+
+def check_powers(trial: Path, ws: dict) -> None:
+    """Decide/Input/Observe are the reader's powers: warn when one labels anything outside 'What you can do'."""
+    for sec in ws["sections"]:
+        for sub in [None] + sec["subs"]:
+            title, blocks = (sec["title"], sec["blocks"]) if sub is None else (sub["title"], sub["blocks"])
+            for b in blocks:
+                head = (b.get("label") or "").split("·")[0].strip()
+                if head in POWERS and not title.lower().startswith("what you can do"):
+                    print(f"WARN {trial.name}: '{head}' label under '{title}'; powers belong in 'What you can do'",
+                          file=sys.stderr)
 
 
 def parse_passages(path: Path) -> dict:
@@ -182,7 +227,11 @@ def bill_changes(markup_path: Path, wanted: list[tuple[str, int]]) -> list[dict]
 def build_workspace(trial: Path) -> dict:
     cfg = yaml.safe_load((trial / "page.yaml").read_text(encoding="utf-8"))
     short = cfg.get("short_labels") or {}
+    kind = cfg.get("kind")
+    if kind not in KINDS:
+        sys.exit(f"{trial / 'page.yaml'}: kind must be one of {KINDS}, not {kind!r}")
     workspace, why = parse_workspace(trial / "workspace.md")
+    check_powers(trial, workspace)
     passages = parse_passages(trial / "passages.md")
     srcs = yaml.safe_load((trial / "sources.yaml").read_text(encoding="utf-8"))["sources"]
     order = [x["id"] for x in srcs]
@@ -205,7 +254,7 @@ def build_workspace(trial: Path) -> dict:
     markup = cfg.get("markup") or {}
     changes = bill_changes(trial / markup["file"], [tuple(x) for x in markup["lines"]]) if markup else []
     return {
-        "slug": cfg["slug"], "code": cfg["code"], "title": cfg["title"], "linkText": cfg["link_text"],
+        "slug": cfg["slug"], "code": cfg["code"], "title": cfg["title"], "linkText": cfg["link_text"], "kind": kind,
         "trial": trial.name.split("-")[0],
         "status": cfg.get("status") or [], "optionChips": cfg.get("option_chips") or {},
         "verified": bool(verification.get("verified")),

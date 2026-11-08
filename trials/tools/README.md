@@ -81,3 +81,15 @@ Run Python tools with `uv run --with <deps> python3 trials/tools/<tool>.py …`.
   read; the style guide asks for the whole text. Trial 002's round 5 source check flagged 10 of these, and
   the warning finds the same lines. Scoped wording passes ("no party whose testimony we read …",
   "no archived record …"). There were no false alarms on Trials 001 and 003.
+
+- **Reader-first pages (style guide v0.6, usability feedback):**
+  - `render_prototype.py` reads a new section, "What it means for you", and a `kind` in `page.yaml`
+    (law, regulatory-case or budget; anything else stops the build). It turns inline **bold** into
+    segments, so readers never see asterisks. It dates home items (it warns when an item has no
+    "Mon D, YYYY" date), and it warns when Decide, Input or Observe labels anything outside "What you can
+    do", because those are the reader's powers. Self-test: a misspelled kind stopped the build; an undated
+    home item warned; the current pages render with 13 bold segments and no asterisks.
+  - `readability.py` grades "What it means for you" as a targeted section and warns on the new length
+    budgets (30-second version, "If you" lines, "In short", values lines, Layer 3 intro). It also prints
+    CHECK lines for "both", "neither" or "either" standing alone. These are prompts, not warnings, because
+    "no data on either" is fine when the two things are named in the same sentence.

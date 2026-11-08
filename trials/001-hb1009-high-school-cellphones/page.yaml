@@ -1,6 +1,7 @@
 # How this trial's workspace appears in the prototype (display settings only; all content comes from
 # workspace.md, home.md, passages.md and sources.yaml). Read by trials/tools/render_prototype.py.
 slug: hb1009                       # used in page links: #hb1009, #hb1009-options, #hb1009-checks
+kind: law                    # law | regulatory-case | budget: sets the decision and options headings
 code: "HB 1009 · 2026 · Act 395"
 title: "Phones in Georgia high schools"
 link_text: "HB 1009: phones in high schools"

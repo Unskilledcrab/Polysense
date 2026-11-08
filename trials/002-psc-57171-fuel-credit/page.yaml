@@ -1,6 +1,7 @@
 # How this trial's workspace appears in the prototype (display settings only; all content comes from
 # workspace.md, home.md, passages.md and sources.yaml). Read by trials/tools/render_prototype.py.
 slug: psc-57171                    # used in page links: #psc-57171, #psc-57171-options, #psc-57171-checks
+kind: regulatory-case                    # law | regulatory-case | budget: sets the decision and options headings
 code: "PSC Docket 57171 · 2026"
 title: "Business customers' real-time payments and your power bill"
 link_text: "PSC 57171: real-time payments and fuel costs"

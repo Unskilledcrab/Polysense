@@ -1,6 +1,7 @@
 # How this trial's workspace appears in the prototype (display settings only; all content comes from
 # workspace.md, home.md, passages.md and sources.yaml). Read by trials/tools/render_prototype.py.
 slug: fulton-budget-2027           # used in page links: #fulton-budget-2027, #fulton-budget-2027-options, ...
+kind: budget                    # law | regulatory-case | budget: sets the decision and options headings
 code: "Fulton County · 2027 budget"
 title: "Fulton County's 2027 budget"
 link_text: "Fulton County 2027 budget"
