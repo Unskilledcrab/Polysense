@@ -144,6 +144,9 @@ span of a hashed snapshot listed in [sources.yaml](sources.yaml), or of a text f
 ### P-038 · S05 · p.10, item 26-0766
 > 26-0766 Board of Commissioners Discussion: Update on the Budget Committee and the budget approval process. (Abdur-Rahman)
 
+### P-096 · S05b · p.1, heading and document status (ratified 2026-11-04; see P-091)
+> FULTON COUNTY BOARD OF COMMISSIONERS SECOND REGULAR MEETING October 21, 2026 10:00 AM Fulton County Government Center Assembly Hall 141 Pryor Street SW Atlanta, Georgia 30303 POST AGENDA MINUTES This document is tentative, has not been ratified or approved by the Board of Commissioners, and is not binding on the County or any officer. Scheduled date for ratification: November 4, 2026
+
 ### P-088 · S05b · p.15, item 26-0729 (motion to approve, 2026-10-21; whole entry)
 > 26-0729 Board of Commissioners Request approval of a Resolution to ensure transparency and informed decision-making in the development of the Fulton County budget; to prohibit across-the-board caps on departmental budget requests; to remove the 5% cap placed on all Fulton County departments for the 2027 budget; to require that all departmental budget requests are disclosed in the proposed budget; and for other purposes. (Barrett) (MOTION TO APPROVE FAILED) A motion was made by Commissioner Barrett and seconded by Commissioner Arrington, to approve. The motion failed by the following vote: Yea: Barrett Nay: Ellis Absent: Thorne, and Abdur-Rahman Did Not Vote: Pitts, and Arrington
 
@@ -152,8 +155,8 @@ span of a hashed snapshot listed in [sources.yaml](sources.yaml), or of a text f
 
 *Note: The whole entry: it ends with the vote to add the item, and the next line is 'ADJOURNMENT'. It records no summary of the discussion.*
 
-### P-090 · S05c · p.1, document status
-> POST AGENDA MINUTES This document is tentative, has not been ratified or approved by the Board of Commissioners, and is not binding on the County or any officer. Scheduled date for ratification: November 18, 2026
+### P-090 · S05c · p.1, heading and document status
+> FULTON COUNTY BOARD OF COMMISSIONERS FIRST REGULAR MEETING November 04, 2026 10:00 AM Fulton County Government Center Assembly Hall 141 Pryor Street SW Atlanta, Georgia 30303 POST AGENDA MINUTES This document is tentative, has not been ratified or approved by the Board of Commissioners, and is not binding on the County or any officer. Scheduled date for ratification: November 18, 2026
 
 ### P-091 · S05c · p.4, item 26-0746 (ratification of minutes; whole entry)
 > 26-0746 Clerk to the Commission Ratification of Minutes. (RATIFIED) First Regular Meeting Minutes, October 7, 2026 Second Regular Meeting Post Agenda Minutes, October 21, 2026 A motion was made by Commissioner Barrett and seconded by Commissioner Thorne, to ratify the meeting minutes. The motion passed by the following vote: Yea: Pitts, Thorne, Ellis, Barrett, and Abdur-Rahman Absent: Arrington

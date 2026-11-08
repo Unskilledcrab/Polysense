@@ -120,13 +120,15 @@ passages:
   - {id: P-038, source: S05, file: S05.txt, locator: "p.10, item 26-0766",
      start: "26-0766 Board of Commissioners", end: "(Abdur-Rahman)"}
   # --- S05b, S05c: the Clerk's post agenda minutes, 2026-10-21 and 2026-11-04 (revision 3 minutes search) ----------
+  - {id: P-096, source: S05b, file: S05b.txt, locator: "p.1, heading and document status (ratified 2026-11-04; see P-091)",
+     start: "FULTON COUNTY BOARD OF COMMISSIONERS SECOND REGULAR MEETING", end: "Scheduled date for ratification: November 4, 2026"}
   - {id: P-088, source: S05b, file: S05b.txt, locator: "p.15, item 26-0729 (motion to approve, 2026-10-21; whole entry)",
      start: "26-0729 Board of Commissioners", end: "Did Not Vote: Pitts, and Arrington"}
   - {id: P-089, source: S05b, file: S05b.txt, locator: "p.17, added item 26-0735 (budget update, 2026-10-21; whole entry)",
      start: "26-0735 Board of Commissioners", end: "Absent: Thorne",
      note: "The whole entry: it ends with the vote to add the item, and the next line is 'ADJOURNMENT'. It records no summary of the discussion."}
-  - {id: P-090, source: S05c, file: S05c.txt, locator: "p.1, document status",
-     start: "POST AGENDA MINUTES", end: "Scheduled date for ratification: November 18, 2026"}
+  - {id: P-090, source: S05c, file: S05c.txt, locator: "p.1, heading and document status",
+     start: "FULTON COUNTY BOARD OF COMMISSIONERS FIRST REGULAR MEETING", end: "Scheduled date for ratification: November 18, 2026"}
   - {id: P-091, source: S05c, file: S05c.txt, locator: "p.4, item 26-0746 (ratification of minutes; whole entry)",
      start: "26-0746 Clerk to the Commission", end: "Absent: Arrington"}
   - {id: P-092, source: S05c, file: S05c.txt, locator: "p.11, item 26-0729 (motions to approve and to file, 2026-11-04; whole entry)",
