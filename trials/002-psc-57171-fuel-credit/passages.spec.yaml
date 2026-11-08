@@ -185,7 +185,7 @@ passages:
   - {id: P-067, source: S07, file: S07-docx.txt, locator: "footnote 4",
      start: "[footnote 4] The $1.35 per month savings", end: "1,000 kWhs per month."}
   - {id: P-068, source: S07, file: S07-docx.txt, locator: "p.8, reporting recommendation 1",
-     start: "1) Monthly RTP Reporting:", end: "starting no later than January 1, 2027."}
+     start: "1) Monthly RTP Reporting:", end: "starting no later than January 1, 2027.", end_occurrence: 1}
   - {id: P-070, source: S07, file: S07-docx.txt, locator: "p.9, RTP load growth",
      start: "The Company acknowledged the growth in new economic development load", end: "mainly be based on RTP pricing."}
   - {id: P-071, source: S07, file: S07-docx.txt, locator: "footnote 10",
