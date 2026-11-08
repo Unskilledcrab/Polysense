@@ -1,0 +1,107 @@
+# Runbook: bill decision workspace (manual), v0
+
+**Purpose:** turn one bill into a clear, fully cited decision workspace (the 30-second version plus
+Layers 1–5) by hand. **Output:** `trials/NNN-<bill>/`.
+
+**Automation gate:** not passed (0 of 3 runs). See
+[prove-then-automate.md](../prove-then-automate.md).
+
+**Time:** record the start and end of every step in `log.md`.
+
+## Step 0: Choose and justify
+
+1. Score the candidate with the [topic-selection rubric](../../policies/topic-selection.md).
+2. Write the scores and a one-paragraph rationale in `README.md`.
+3. Exclude local acts, honorary resolutions and anything about a candidate for office.
+
+## Step 1: Find sources (primary first)
+
+Find each of these, in priority order:
+
+1. **Bill text, every version** (as introduced, committee substitutes with LC numbers, as passed,
+   enrolled) from legis.ga.gov.
+2. **Status history and votes** from legis.ga.gov, cross-checked with Open States or LegiScan.
+3. **Fiscal note**, if one exists (Department of Audits and Accounts / OPB).
+4. **Current law** being changed (the O.C.G.A. sections named in the bill).
+5. **Hearing records:** agendas, video timestamps, written testimony.
+6. **Documented arguments from more than one side:** testimony, sponsor and opponent statements, and
+   analyses from organizations across the spectrum (for example GBPI and the Georgia Public Policy
+   Foundation). Label where each organization stands.
+7. **Neutral context:** state agency reports and nonpartisan research.
+8. **News coverage** for timeline and context. Use it as secondary support only, never as the only source
+   for a fact.
+
+For each source, record the id, title, publisher, **type** (`primary-government`, `secondary-research`,
+`advocacy`, `news`), URL and why it's needed.
+
+## Step 2: Snapshot
+
+1. Download each source into `_raw/` (git-ignored).
+2. Compute its `sha256` and record it with `retrieved_at` (UTC) and the HTTP status in `sources.yaml`.
+3. Request an Internet Archive capture where allowed, and record the archive URL.
+4. If a source can't be fetched, mark it `blocked` with the reason. **Never substitute another
+   document.**
+
+## Step 3: Extract passages
+
+1. Split each source into numbered passages: `P-001` and onward, unique across the trial.
+2. Use natural units: a bill section or subsection, a table row, or a paragraph.
+3. Record the source id and a locator (page and line, or section number) for each passage.
+4. Government records may be copied in full. For copyrighted analyses, copy only the passages you will
+   cite, keeping each excerpt short.
+5. Do not edit passage text. Fix extraction glitches only, and note the fix.
+
+## Step 4: Draft
+
+Follow the [content-style-guide](../../product/content-style-guide.md) and the
+[experience template](../../product/experience.md):
+
+1. **30-second version** (3 lines).
+2. **Layer 1: Participate.** What opportunities existed or exist, with dates. For a past session, this is
+   written as "what happened".
+3. **Layer 2: Decision.** At most 80 words, plus at most 5 "what would change" bullets.
+4. **Layer 3: Options.** Include the status quo. For each option: who benefits, who pays, what's
+   uncertain.
+5. **Layer 4: Arguments.** Documented arguments first, with speaker, venue, date and a verbatim quote.
+   Anticipated arguments are labeled and unattributed. Each card has the claim, what supports it, what's
+   missing, what challenges it and what's uncertain. Mark the claim type.
+6. **Layer 5: Evidence.** Every source with a type badge, capture date, hash prefix and "why this source".
+
+Every sentence ends with a passage citation `[P-###]` or a tag (`{analysis}`, `{editorial}`,
+`{computed: …}`).
+
+## Step 5: Verify (deterministic checklist → `verification.md`)
+
+- [ ] Every sentence is cited or tagged (`trials/tools/check_citations.py`)
+- [ ] Every quoted span appears verbatim in its cited passage
+- [ ] Every number and date appears in a cited passage, or is `{computed}` with the arithmetic shown
+- [ ] Every cited passage id exists
+- [ ] Every source in `sources.yaml` has a sha256, and the file in `_raw/` matches it
+- [ ] Reading grade for the 30-second version and Layers 1–3 is 6–8, with outliers listed
+- [ ] Jargon watch-list terms are defined or removed
+- [ ] Loaded-word list scan is clean outside quotes
+- [ ] Structural symmetry: every option has the same fields, and its strongest case for and against
+- [ ] Length budgets are met
+- [ ] "Where I'm least sure" lists the claims most likely to be wrong, and why
+
+## Step 6: Human review (`review.md`)
+
+The reviewer:
+- checks each citation (supports / partial / does not support / wrong span);
+- scores clarity 1–5 for each layer;
+- flags unfairness;
+- records their time.
+
+Fix everything flagged before the trial counts as passed. Fixes are logged.
+
+## Step 7: Comprehension check
+
+When a usability round is scheduled, run the [comprehension tasks](../../product/usability-testing.md)
+on this workspace.
+
+## Step 8: Retrospective (`log.md`)
+
+- Record the time per step, what was hard, and any failures.
+- Record the rules learned, then update this runbook, the style guide and the policies. Bump the runbook
+  version.
+- List automation candidates and what would be needed for each to pass the gate.

@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.python-version
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.pyright/
+.coverage
+htmlcov/
+dist/
+build/
+
+# Node (vendored front-end assets are committed; tooling caches are not)
+node_modules/
+
+# Environment & secrets — never commit
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Local data
+/data/
+/media/
+/staticfiles/
+*.sqlite3
+*.dump
+
+# Raw source downloads for trials (hashes are recorded in sources.yaml; files stay local)
+trials/**/_raw/
+
+# Editors / OS
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
