@@ -96,6 +96,15 @@ Where the text layer drops a redaction entirely, the passage marks it as "[black
 ### P-032 · S19 · FAQ: role and responsibility (administrative sessions)
 > Administrative sessions of the Georgia Public Service Commission are held the first and third Tuesday of each month in hearing room number 110 at 244 Washington St. in Atlanta. Proceedings are open to the public.
 
+### P-169 · S19 · FAQ: role and responsibility (paragraph 1, first two sentences)
+> The Georgia Public Service Commission has exclusive power to decide what are fair and reasonable rates for services under its jurisdiction. It must balance Georgia citizens' need for reliable services and reasonable rates with the need for utilities to earn a reasonable return on investment.
+
+### P-170 · S19 · FAQ: What Is Regulated by the PSC? (electric list)
+> What Is Regulated by the PSC? Electric Investor-owned electric power companies (1) Electric membership corporations (42) (Territory and financing only) Municipally-owned electric power companies (52) (Territory only)
+
+### P-171 · S19 · FAQ: role and responsibility (standing committees)
+> When regulated companies bring a rate request before the PSC, it may be taken up first by one of the Commission's three standing committees on which the commissioners serve: Telecommunications, Energy, or Administrative Affairs.
+
 ### P-033 · S17 · Stan Wise bio: header fields
 > Commissioner Stan Wise Commissioner Since: September 5, 2026 Elected: 1994; Re-elected: 2000, 2006, 2012; Appointed: 2026 Serves Through: December 31, 2026
 

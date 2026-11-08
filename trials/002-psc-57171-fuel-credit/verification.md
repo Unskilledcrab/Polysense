@@ -5,14 +5,13 @@ human in the loop ([ADR 0014](../../docs/adr/0014-ai-only-verification.md)). The
 agents run by the coordinator; the drafter ran only the deterministic gate. Copies of each round's inputs and
 raw reports are in [verification/round1/](verification/round1/), [verification/round2/](verification/round2/),
 [verification/round3/](verification/round3/), [verification/round4/](verification/round4/),
-[verification/round5/](verification/round5/) and [verification/round6/](verification/round6/).
+[verification/round5/](verification/round5/) and [verification/round6/](verification/round6/); revision 6.3, before the
+reader-first update, is in [verification/round7/](verification/round7/).
 
-**Status: passed checks (round 6); not "verified".** Rounds 1 to 4 failed the bias panel. Round 5 (revision 5) passed;
-revision 6 changed card 5's evidence label, so round 6 re-ran the whole panel, and it passed too: the gate was clean, the
-blind source check found 0 unsupported claims and 0 wrong spans with 437/437 spans grounded, both advocates rated the
-page 4/5, and the editor found no high-severity issue. Revision 6.1 makes only the accuracy fixes listed below, with no
-label, claim or structure change; a targeted re-check of those sentences is pending. The remaining suggestions are open
-items.
+**Status: revision 7 (reader-first update); checks pending.** Revision 6.3 passed checks in round 6 (with the
+targeted re-checks at the end of this file). Revision 7 rewrites the page for readers after usability feedback, without
+changing any evidence label, card claim, card order or plan structure; it needs a new round of checks. See
+"Revision 7: reader-first update" at the end.
 
 ## Round 1 (revision 1, `verification/round1/workspace.r1.md`)
 
@@ -710,3 +709,66 @@ list of changed units.
 
 The protocol's targeted re-check is done: no re-check found an unsupported claim, and the last one found nothing
 that misstates a passage. **Status: Passed checks (round 6), revision 6.3.**
+
+## Revision 7: reader-first update (checks pending)
+
+Change class **update**; reason: reader-first revision after usability feedback. Revision 6.3's page, home items and
+display settings are kept in `verification/round7/` (`workspace.r6.3.md`, `home.r6.3.md`, `page.r6.3.yaml`). The
+contract is the style guide v0.6 (section 9) and runbook v0.6, Step 4. The coordinator's notes from a lay-reader test
+(a renter with a Georgia Power bill) were folded in. **No evidence label, card claim, card order or plan structure
+changed**: the nine label lines are identical to revision 6.3's.
+
+| Part | What changed |
+|---|---|
+| Title and chips (`page.yaml`) | Title: "Georgia regulators decide Dec 15 how much business real-time payments lower others' fuel charges" (14 words). Plain link text, status chips and option chips, each with a citation comment; plain source chips ("Utility testimony", not "GP testimony") |
+| 30-second version | 89 words by `readability.py` (was 149–160). Names the decider and says what it is: the PSC, "five commissioners who set utility rates" (P-031, P-169) |
+| What it means for you (new) | Four "If you…" lines: a home bill; a business on standard rates; a business on real-time prices; an EMC or city utility customer (from new passage P-170). Then "Where the money comes from" (5 steps, with the fuel credit described as a fuel-account entry), "Decided now, and decided later" and "Not known yet" (each item says why, dated as of Nov 8, 2026). The $1.48 and $1.65 per $100 million are labeled examples, not any plan's effect; no per-home figure is computed for a plan |
+| New passages | P-169 (the PSC decides "fair and reasonable rates" for services under its jurisdiction), P-170 (what the PSC regulates: EMCs "Territory and financing only", city-owned power companies "Territory only") and P-171 (the PSC's three standing committees), all from the archived PSC FAQ (S19), built with `build_passages.py` |
+| Layer 1 | Order: What you can do; Who decides, and how to reach them; Coming up; What happened. The Decide label is gone. The five commissioners are listed in one format (role; serves through), with the PSC's email and phones exactly as P-163 gives them and where the commissioners vote (P-032). The Executive Secretary's Office number is added (P-022); the Nov 12 arrival time is computed (about 9:05 a.m.); the Dec 14 cutoff is called the earliest possible. The May 28 entry gives the review's purpose in the order's words ("shall further review", "may make modifications if appropriate") and Georgia Power's own statement that it "supported and agreed to this subsequent review" (P-053). Stan Wise's Sep 5 appointment moved to the timeline, so every commissioner gets the same format |
+| Layer 2 | The PSC defined at first mention on the tab (P-169). Item 1 says what take-or-pay contracts are, why counting their energy without their cost lowers the credit (P-058), and names all three choices, including keeping today's count. Parties defined at first mention on the tab, GIPL by who it is (P-093). Glossary entries added: standard rates, fuel credit ("an accounting entry, not a credit on anyone's bill"), base side, base rate case timing (P-054), double recovery, Return on Equity, interchange energy rate. The scope sentence now cites the order and both sides, not Georgia Power's rebuttal alone (round 6 O12); the base-side change is described as a drop in base revenue for the plans in the case (round 6 O12, U UW2). Long sentences split |
+| Layer 3 | Intro of 60 words that defines each party. New "If you care most about…" guide: one line per plan (A to D) from a documented, verbatim quote (below). Plain wording in Plan A; "the public copy doesn't say why" where Georgia Power's estimates are blacked out (no passage gives a reason); "As filed" for GIPL's power-line split; the three policy-related costs named (P-089) |
+| Layer 4 | Every "In short" rewritten (≤ 40 words): the effect on people, then the side's claim with its reason (cards 1 and 5 now give one, round 6 O5), then "Evidence: …" restating the label. GIPL described by its member congregations (P-093). Fold-ins from round 6 O12: "had said" in cards 1 and 7, card 3's summer-peak detail (P-145), no "Layer 2" references in the page text. Bare "It says" sentences now name the speaker |
+| Home | Five items, each ≤ 25 words before its action, each dated, institutions defined; no Decide label; the PSC's local and toll-free numbers as P-163 gives them |
+
+**The values guide, as written**
+
+- Plan A: "If you care most about keeping base rates down: Jonathan Ly, GAM's witness, who argues against a bigger credit, said 'increasing the RTP fuel credit would put upward pressure on base rates.'" [P-153, P-115]
+- Plan B: "If you care most about large new customers paying their pipeline costs: Georgia Power's witness panel, which backs Plan B, said it proposes that those costs 'be fully recovered from those customers.'" [P-041, P-055]
+- Plan C: "If you care most about matching fuel costs with fuel revenues: PIA Staff's witness panel, which backs Plan C, said 'fuel related costs should correspondingly be matched with fuel revenues to cover those costs.'" [P-059, P-062]
+- Plan D: "If you care most about keeping costs from shifting to customers on standard rates: John D. Wilson, GIPL's witness, who backs Plan D, said of today's credit, 'This shifts costs to FCR customers.'" [P-152, P-099]
+
+**What the sources couldn't support (left out or said plainly)**
+
+- Why Georgia Power's estimates are blacked out: no passage says; the page says "the public copy doesn't say why".
+- A typical home's net for any plan, and the date of the next base rate case: no filing we read gives either.
+- Whether customers of EMCs or city utilities feel any indirect effect: no passage says; their line says only that this
+  case doesn't set their power company's rates.
+- GIPL's members' stake or power use, and the Nov 12 hearing room: not in the passages.
+- How each commissioner was chosen is left out for all five, so the format stays the same.
+
+**Where I'm least sure (revision 7)**
+
+1. **"If you pay a Georgia Power bill at home"**: "any proposed plan" rests on each plan's take-or-pay option raising the
+   credit (P-058, P-115). "Recover the same money" is the system-wide amount; a home's share of the base side differs
+   from its share of the fuel side (P-116), which is why the line says only that coming out ahead depends on the next base
+   rate case.
+2. **"If you run a business on standard rates"** repeats the home line's first sentence; GAM's class-share claim is
+   attributed, and the page's own analysis of it is in Layer 2.
+3. **"If your business pays real-time prices"**: "not your hourly prices" rests on Georgia Power's scope statement
+   (P-133) and GIPL's answer that rate design is outside this case (P-107); GIPL still wants new real-time pricing
+   proposed.
+4. **"If your power comes from an EMC or a city-owned utility"**: "it doesn't set your power company's rates" is our
+   reading of the FAQ's "Territory and financing only" and "Territory only" (P-170). The same FAQ page reports a 2011
+   budget, so its list may be dated; the page uses no counts from it.
+5. **Values guide, Plan A**: no party whose testimony we read backs today's method in every part. GAM argues against a
+   bigger credit but accepts either take-or-pay option if the PSC finds a change is needed (P-111); the guide's closing
+   line says so.
+6. **Values guide, Plan B**: Georgia Power's pipeline-cost value (P-055) was chosen over its marginal-cost value (P-119,
+   P-129). GIPL's plan also recovers new pipeline fees from large-load customers (P-096); the closing line says one value
+   can apply to more than one plan.
+
+**Gate (revision 7)**: `check_citations.py` PASS on `workspace.md` (512 units: 388 cited, 52 analysis, 62 editorial,
+10 computed; 0 errors, 0 warnings) and `home.md` (8 units; 0 errors, 0 warnings). `readability.py`: 30-second 8.4
+(89 words), What it means for you 8.4, Layer 1 7.5, Layer 2 8.2, Layer 3 8.4 (Layer 4 9.9, not targeted); no budget
+warnings and no CHECK lines. `verify_hashes.py` PASS. `build_passages.py`: 166 passages, 0 errors, all cited. Test
+render: no warnings about Decide labels or undated home items.

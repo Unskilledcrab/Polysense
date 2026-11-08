@@ -48,6 +48,7 @@ every lead was re-checked on a primary page and re-snapshotted here.
 | Revision 6.1: accuracy fixes | 14:35 → 14:38 | Saved revision 6's page, home and passages and the five round 6 reports in `verification/round6/`; read them. Made the coordinator's nine accuracy fixes (lines 9, 24, 76, 110, 138, 174, 195 and 254, and home line 15) with no label, card claim or structure change, checked line by line against revision 6. Gate clean: 430 units, 0 errors, 0 warnings. verification.md: round 6 results, 9 fixes, 14 open items, 9 contradictions; this log; README | Line 9's narrower wording added 4 words to the 30-second version (160) |
 | *Targeted re-checks 1 to 3* | (coordinator) | Fresh blind agents on the changed units only. Re-check 1 (13 units): 0 unsupported, 1 questionable tag (line 174 implied Staff revised its profit-rate estimates) plus five precision points; fixed by the coordinator as revision 6.2. Re-check 2 (7 units): nothing misstates a passage; one note on the 30-second version, read alone, fixed as 6.3 ("take-or-pay estimates"). Re-check 3 (1 unit): supports. Gate after each revision: 0 errors, 0 warnings | The 30-second version is read alone, so a line accurate in context can still mislead there; treat that as an accuracy flag |
 | **Status** | — | **Passed checks (round 6)**, revision 6.3 | — |
+| Revision 7: reader-first update | 19:43 → 20:07 | Read the reader-first brief, style guide v0.6 (section 9), runbook v0.6 Step 4, the tools notes and the lay reader's answers. Saved revision 6.3's page, home and display settings in `verification/round7/`. Added P-169 to P-171 from the archived PSC FAQ (S19). Rewrote the 30-second version (89 words), added "What it means for you" (4 "If you" lines, money steps, decided now and later, not known yet), reordered Layer 1 with "Who decides, and how to reach them", a 60-word Layer 3 intro and a values guide from verbatim quotes, and rewrote every "In short". No evidence label, card claim, card order or plan structure changed. Gate clean: 512 units, 0 errors, 0 warnings; targeted sections 7.5 to 8.4 | First pass: Layers 2 and 3 read 8.8, two "If you" lines and three "In short" lines ran over budget, and two bare "neither"s; fixed by splitting sentences and naming things. Bare "It says" sentences across the cards now name the speaker. No passage says why Georgia Power's estimates are blacked out, so the page says the public copy doesn't say why |
 
 ## Where the runbook did not fit (and what I did)
 
@@ -115,6 +116,7 @@ every lead was re-checked on a primary page and re-snapshotted here.
 - `check_citations.py`: warn on unscoped absence claims ("no party disputes …"). **Adopted** before revision 6.
 - `build_passages.py`: its doc comment limits `fix` to extraction glitches; revision 6 also uses one to mark a redaction the
   text layer drops (P-107, checked on a rendered page image). → Document that use, or add a `redaction` key.
+- `readability.py`: CHECK lines catch bare "both", "neither" and "either" but not sentence-initial "It" or "This"; revision 7 found about 25 "It says" sentences by hand. → Add those to the CHECK prompts.
 - An **approved OCR tool** (with a dependencies.md entry) is needed for scanned filings.
 
 ## Rules learned (proposed; not yet applied to the runbook or style guide)
@@ -194,6 +196,14 @@ From round 6 (revision 6.1):
 36. **A summary sentence can't claim more than its citations.** "Every proposed change" was true of the take-or-pay options
     the citations covered, not of every fallback in the plans.
 37. **Mark a look-back as a look-back.** A "had been in place" estimate is not a saving from adopting a plan now.
+
+From the reader-first update (revision 7):
+
+38. **Write each "If you" line's first sentence to stand alone**, with the condition the source gives, and say why the
+    size isn't known instead of offering an example as if it were a plan's effect.
+39. **A values line must quote the party, not our summary of it.** When no party backs an option in full, say so in the
+    guide rather than stretching a quote.
+40. **Name the speaker in every sentence** ("Georgia Power said", not "It said"); readers land mid-card on a phone.
 
 ## Automation notes (not eligible: 0 of 3 runs for this kind of decision)
 

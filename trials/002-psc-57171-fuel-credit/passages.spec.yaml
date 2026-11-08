@@ -95,6 +95,12 @@ passages:
      start: "Today, five elected Commissioners", end: "a gas burner is used."}
   - {id: P-032, source: S19, file: S19.txt, locator: "FAQ: role and responsibility (administrative sessions)",
      start: "Administrative sessions of the Georgia Public Service Commission are held", end: "Proceedings are open to the public."}
+  - {id: P-169, source: S19, file: S19.txt, locator: "FAQ: role and responsibility (paragraph 1, first two sentences)",
+     start: "The Georgia Public Service Commission has exclusive power to decide", end: "reasonable return on investment."}
+  - {id: P-170, source: S19, file: S19.txt, locator: "FAQ: What Is Regulated by the PSC? (electric list)",
+     start: "What Is Regulated by the PSC?", end: "Municipally-owned electric power companies (52) (Territory only)"}
+  - {id: P-171, source: S19, file: S19.txt, locator: "FAQ: role and responsibility (standing committees)",
+     start: "When regulated companies bring a rate request before the PSC", end: "Telecommunications, Energy, or Administrative Affairs."}
   # --- S17, S17b-e: commissioners' PSC bio pages (party labels and family details left out) ----------
   - {id: P-033, source: S17, file: S17.txt, locator: "Stan Wise bio: header fields",
      start: "Commissioner Stan Wise Commissioner Since", end: "Serves Through: December 31, 2026"}
