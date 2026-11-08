@@ -1,0 +1,84 @@
+{
+ "checker": "independent-source-verifier",
+ "document": "/home/user/Polysense/trials/003-fulton-2027-budget/home.md",
+ "units": [
+  {
+   "line": 5,
+   "sentence": "Input · Nov 18, 2026, 10 a.m.: Speak at the Fulton County Board of Commissioners' public comment, in person or by Zoom; the Board adopts the budget.",
+   "marker": "[P-036, P-039, P-067, P-014]",
+   "verdict": "supports",
+   "evidence_span": "Residents have two options to participate in public comment: in person and virtually via Zoom.",
+   "correct_passage": "",
+   "problem": "Each fact is supported: Nov 18 10 a.m. meeting (P-039), in person or Zoom (P-067), the full Board adopts (P-014). But read alone under a dated 'Act now' heading, '; the Board adopts the budget' can be read as adoption happening on Nov 18. Adoption is due by the second regular January meeting (P-005), expected Jan 20 (P-041).",
+   "suggested_fix": "...in person or by Zoom. The Board, which must adopt the budget by its second regular January meeting, hears public comment at each regular meeting."
+  },
+  {
+   "line": 5,
+   "sentence": "Submit requests before 10 a.m.",
+   "marker": "[P-067]",
+   "verdict": "supports",
+   "evidence_span": "All virtual public comments and requests to speak in person must be submitted before the clerk sounds the start of the 10 a.m. meeting.",
+   "correct_passage": "",
+   "problem": "Vague read alone: it doesn't say which requests (Zoom comments and requests to speak in person) or how to reach the Clerk.",
+   "suggested_fix": "Zoom comments and requests to speak in person are due before the 10 a.m. start; call the Clerk at 404-612-8200."
+  },
+  {
+   "line": 9,
+   "sentence": "By Nov 15, 2026: The Budget Commission, two commissioners and two county staff, must propose Fulton County's 2027 budget to the Board of Commissioners.",
+   "marker": "{analysis: the county code sets \"no later than November 15\" for the following year's budget (P-005); P-008 lists the members}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Quote 'no later than November 15' is verbatim in P-005; the 2026 date follows from 'for the following year'.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 10,
+   "sentence": "Expected by Jan 20, 2027: The Fulton County Board of Commissioners must adopt the 2027 budget by its second regular January meeting, which the proposed schedule sets for Jan 20.",
+   "marker": "[P-005, P-041]",
+   "verdict": "supports",
+   "evidence_span": "by no later than the second regular meeting in January of the year to which it applies",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 14,
+   "sentence": "Nov 4, 2026: Fulton's Board of Commissioners voted to file, or set aside, a resolution to end a limit holding departments' requests to 5% above current funding.",
+   "marker": "[P-024, P-025, P-077]",
+   "verdict": "supports",
+   "evidence_span": "to remove the 5% cap placed on all Fulton County departments for the 2027 budget",
+   "correct_passage": "",
+   "problem": "Minor: 'holding departments' requests to 5% above current funding' is FOX 5's description (P-077), stated here as fact. The workspace calls the limit's exact terms uncertain because no written instruction was found.",
+   "suggested_fix": ""
+  }
+ ],
+ "framing_issues": [
+  {
+   "line": 5,
+   "text": "Input · Nov 18, 2026, 10 a.m.: ... ; the Board adopts the budget.",
+   "issue": "Under a dated 'Act now' heading, '; the Board adopts the budget' can be read as adoption on Nov 18. Adoption is due by the second regular January meeting, expected Jan 20 (P-005, P-041), and no record puts the budget on the Nov 18 agenda.",
+   "severity": "medium"
+  },
+  {
+   "line": 5,
+   "text": "Submit requests before 10 a.m.",
+   "issue": "Vague read alone: which requests (Zoom comments, requests to speak in person) and where to submit them aren't said.",
+   "severity": "low"
+  },
+  {
+   "line": 14,
+   "text": "a limit holding departments' requests to 5% above current funding",
+   "issue": "FOX 5's description of the limit (P-077) is stated as fact. The workspace calls the exact terms uncertain because no written instruction was found.",
+   "severity": "low"
+  }
+ ],
+ "summary": {
+  "units_checked": 5,
+  "supports": 4,
+  "partial": 0,
+  "does_not_support": 0,
+  "wrong_span": 0,
+  "questionable_or_invalid_tags": 0
+ }
+}

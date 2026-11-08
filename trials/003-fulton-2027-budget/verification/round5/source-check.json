@@ -1,0 +1,4262 @@
+{
+ "checker": "independent-source-verifier",
+ "document": "/home/user/Polysense/trials/003-fulton-2027-budget/workspace.md",
+ "units": [
+  {
+   "line": 8,
+   "sentence": "Fulton County's 2027 budget: what the county spends.",
+   "marker": "[P-005, P-042]",
+   "verdict": "supports",
+   "evidence_span": "a proposed budget governing expenditures of all county funds",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 8,
+   "sentence": "Fulton County's Board of Commissioners, a chairman and six district seats, decides.",
+   "marker": "[P-014, P-035]",
+   "verdict": "supports",
+   "evidence_span": "Final authority to adopt the annual budget remains exclusively with the full board of commissioners",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 8,
+   "sentence": "A Budget Commission of two commissioners and two staff must propose the budget by Nov 15.",
+   "marker": "[P-005, P-008]",
+   "verdict": "supports",
+   "evidence_span": "by no later than November 15, a proposed budget",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 8,
+   "sentence": "The commission's makeup and a limit on requests to 5% above current funding are disputed.",
+   "marker": "{analysis: Barrett and six justice officials object to the makeup (P-072, P-076); Resolution 26-0729 and the officials object to the limit (P-029, P-077)...}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Basis holds: P-072 (Barrett) and P-076 (officials' 'primary objection' to the two-commissioner panel) dispute the makeup; P-029 and P-077 dispute the limit. Minor: '5% above current funding' is FOX 5's wording (P-077); the resolution says requests may not exceed 5% of 'base budget' (P-029). The tag discloses this.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 9,
+   "sentence": "Who it affects: Fulton County residents and property owners; property tax is the county's main income.",
+   "marker": "[P-103, P-101]",
+   "verdict": "supports",
+   "evidence_span": "The County’s primary source of revenue is property tax.",
+   "correct_passage": "",
+   "problem": "Minor: P-103 and P-101 describe the 2026 budget, not 2027; the general point carries over.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 10,
+   "sentence": "The Board must vote by its second regular January meeting.",
+   "marker": "[P-005]",
+   "verdict": "supports",
+   "evidence_span": "adopted by the board of commissioners by no later than the second regular meeting in January",
+   "correct_passage": "",
+   "problem": "Minor: the code requires adoption, not just a vote ('must vote' is weaker than 'shall be adopted').",
+   "suggested_fix": "The Board must adopt the budget by its second regular January meeting."
+  },
+  {
+   "line": 10,
+   "sentence": "Speak at Board meetings from Nov 18, 2026.",
+   "marker": "[P-036, P-039]",
+   "verdict": "supports",
+   "evidence_span": "Citizens are allowed to voice County related opinions, concerns, requests, etc. during the Public Comment portion of the Commission meeting.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 14,
+   "sentence": "What the county will spend in 2027 on the jail, courts, libraries and other services isn't known as of Nov 8, 2026.",
+   "marker": "{analysis: the budget page on Nov 8 had no 2027 proposal (P-045); P-054 lists these services}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Read alone on the home page it keeps the right direction ('isn't known') and date. P-045's newest documents are all FY2026.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 14,
+   "sentence": "A proposal is due by Nov 15; the Board must adopt a budget by its second regular January meeting, expected Jan 20, 2027.",
+   "marker": "[P-005, P-041]",
+   "verdict": "supports",
+   "evidence_span": "by no later than the second regular meeting in January of the year to which it applies",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 15,
+   "sentence": "Whether your 2027 county property tax changes isn't known as of Nov 8, 2026; the proposal wasn't posted, and the tax rate comes later.",
+   "marker": "{analysis: no 2027 proposal on the budget page (P-045); in the 2026 cycle the millage rate was a separate decision after the January vote (P-046, P-098, P-101)}",
+   "verdict": "questionable",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "'Isn't known' is right, but 'the tax rate comes later' states the 2027 timing as certain from one prior cycle (P-101, P-098 describe 2026 only). This sentence also appears alone on the home page, where the 2026-cycle basis is not visible.",
+   "suggested_fix": "...; the proposal wasn't posted, and in 2026 the tax rate was set months after the budget."
+  },
+  {
+   "line": 15,
+   "sentence": "Bills also depend on property values.",
+   "marker": "[P-102]",
+   "verdict": "supports",
+   "evidence_span": "The tax digest value combined with the millage rate is used to determine the tax billing amount.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 15,
+   "sentence": "In 2026, a tax-rate hearing was set for Sept 30, after the January budget vote.",
+   "marker": "[P-098, P-046]",
+   "verdict": "supports",
+   "evidence_span": "for the purpose of a Public Hearing on proposed millage rate",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 16,
+   "sentence": "What the jail, courts, prosecutors and public defender get for 2027 isn't known as of Nov 8, 2026.",
+   "marker": "{analysis: the budget page on Nov 8 had no 2027 proposal (P-045)}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Read alone on the home page it keeps the right direction and audience.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 16,
+   "sentence": "Six of their leaders asked for more money.",
+   "marker": "[P-069, P-070]",
+   "verdict": "supports",
+   "evidence_span": "The officials are also calling for more funding",
+   "correct_passage": "",
+   "problem": "'Their' is vague: the six (P-069) include the court clerk and probate judge, not only jail/court/prosecutor heads; acceptable but see framing.",
+   "suggested_fix": "The leaders of six justice offices asked for more money."
+  },
+  {
+   "line": 16,
+   "sentence": "What the draft funds isn't known.",
+   "marker": "{analysis: the 2027 proposal wasn't on the county's budget page on Nov 8 (P-045)}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 16,
+   "sentence": "Adoption is due by the second regular January meeting, expected Jan 20, 2027.",
+   "marker": "[P-005, P-041]",
+   "verdict": "supports",
+   "evidence_span": "adopted by the board of commissioners by no later than the second regular meeting in January",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 20,
+   "sentence": "The General Fund is the county's biggest fund: $1,057,100,578 in the 2026 budget.",
+   "marker": "[P-052, P-054]",
+   "verdict": "supports",
+   "evidence_span": "General Fund $ 954.1 $ 989.8 $ 1,057.1",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 20,
+   "sentence": "The county's other funds are \"specialty funds,\" such as for water and the airport.",
+   "marker": "[P-045, P-052]",
+   "verdict": "supports",
+   "evidence_span": "Budgets are adopted annually for the General Fund and other specialty funds.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 21,
+   "sentence": "Property tax is the General Fund's biggest source of money: $834,032,152 in the 2026 budget.",
+   "marker": "[P-054, P-101]",
+   "verdict": "supports",
+   "evidence_span": "The County’s primary source of revenue is property tax.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 22,
+   "sentence": "The county's property tax billing comes from the value of taxable property and the tax rate, called the millage rate.",
+   "marker": "[P-102]",
+   "verdict": "supports",
+   "evidence_span": "The tax digest value combined with the millage rate is used to determine the tax billing amount.",
+   "correct_passage": "",
+   "problem": "'Value of taxable property' is a plain-language gloss of 'tax digest value'; acceptable.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 23,
+   "sentence": "The General Fund pays for the sheriff, who runs the jail, and for the courts, libraries and senior services.",
+   "marker": "{analysis: P-054 lists these under General Fund spending; P-060 ties the sheriff's staff to the jail}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "P-054 lists Sheriff, court lines, Library and Senior Services. 'Who runs the jail' is slightly stronger than P-060 (sheriff's staff 'require work at the jail'), but a fair reading.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 24,
+   "sentence": "In 2026, the plan spends $73,637,614 more than it expects to take in, using savings, which the budget calls \"fund balance.\"",
+   "marker": "[P-054]",
+   "verdict": "supports",
+   "evidence_span": "$ 6,868 $ (73,637,614) Fund Balance - Beginning",
+   "correct_passage": "",
+   "problem": "Minor: the quoted words are capitalized 'Fund Balance' in the source.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 28,
+   "sentence": "Now: The Board adopts the 2027 budget, which sets county spending, by its second regular meeting in January 2027.",
+   "marker": "[P-005, P-041]",
+   "verdict": "supports",
+   "evidence_span": "shall constitute the board of commissioners' appropriation of all funds for such year",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 29,
+   "sentence": "Later: The property tax rate has its own decision.",
+   "marker": "{analysis: in the 2026 cycle, the rate was a separate decision, planned for after the budget (P-046, P-098, P-101)}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Generalizes from one cycle, but P-101 (rate 'will take place during the summer of 2026') and P-098 support a separate decision.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 29,
+   "sentence": "In 2026, the Board adopted the budget on Jan 21 and scheduled a hearing on the proposed tax rate for Sept 30.",
+   "marker": "[P-046, P-098]",
+   "verdict": "supports",
+   "evidence_span": "Final Adopted Budget was approved by the Board of Commissioners on January 21, 2026",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 30,
+   "sentence": "Later: Changes to the adopted budget during the year need a formal Board vote at an advertised regular meeting.",
+   "marker": "[P-006]",
+   "verdict": "supports",
+   "evidence_span": "may be revised during the year only by formal action of the board of commissioners in a regular meeting which has been advertised",
+   "correct_passage": "",
+   "problem": "Minor: 'formal action', not specifically 'vote'.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 31,
+   "sentence": "Already decided: Who sits on the Budget Commission for the 2027 budget, approved Aug 19, 2026.",
+   "marker": "[P-021, P-022]",
+   "verdict": "supports",
+   "evidence_span": "A motion was made by Vice Chair Abdur-Rahman and seconded by Commissioner Ellis, to approve. The motion passed",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 35,
+   "sentence": "How much the county will spend in 2027, and on what: not known as of Nov 8, 2026, because the proposal wasn't on the county's budget page.",
+   "marker": "{analysis: P-045, captured Nov 8, 2026; the proposal is due by Nov 15 (P-005)}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 36,
+   "sentence": "Whether your property tax bill will change: not known as of Nov 8, 2026, because the 2027 tax rate isn't set and the proposal wasn't on the county's budget page.",
+   "marker": "{analysis: P-045; in the 2026 cycle the rate was planned for after the budget (P-098, P-101), and bills also depend on property values (P-102)}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 37,
+   "sentence": "When the Board will hold its budget hearing and vote: not known as of Nov 8, 2026; the newest notice was for the Budget Commission's October hearings.",
+   "marker": "{analysis: P-042, captured Nov 8, 2026}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 38,
+   "sentence": "Why the 5% limit was set: not known as of Nov 8, 2026; the minutes we archived record no reason, and we didn't review the meeting video.",
+   "marker": "{analysis: P-088 and P-092; see sources.yaml, S16}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Basis holds (P-088, P-092 record votes only). Note the limit was set by the Budget Commission (P-029), whose own records were not found; Board minutes are an indirect place to look. 'sources.yaml, S16' is an internal reference a reader can't follow.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 44,
+   "sentence": "Input: Speak during public comment at a Board meeting, in person or by Zoom.",
+   "marker": "[P-067]",
+   "verdict": "supports",
+   "evidence_span": "Residents have two options to participate in public comment: in person and virtually via Zoom.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 44,
+   "sentence": "Zoom comments and requests to speak in person must be submitted before the meeting starts at 10 a.m.",
+   "marker": "[P-067]",
+   "verdict": "supports",
+   "evidence_span": "All virtual public comments and requests to speak in person must be submitted before the clerk sounds the start of the 10 a.m. meeting.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 44,
+   "sentence": "The Clerk to the Commission keeps the Board's records, such as its agendas and minutes.",
+   "marker": "[P-097]",
+   "verdict": "supports",
+   "evidence_span": "the retention and preservation of official records, including meeting agendas, minutes",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 44,
+   "sentence": "The Clerk's web page doesn't say where to submit comments or requests.",
+   "marker": "{analysis: P-067 is the page's whole public-comment text}",
+   "verdict": "questionable",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "The negative rests on P-067 being the page's complete public-comment text, but neither P-067's heading nor any note in PASSAGES says it is complete, so a checker cannot confirm the absence.",
+   "suggested_fix": "Add a note to P-067 stating it is the page's full public-comment text, or soften to 'The part of the Clerk's page we archived doesn't say...'."
+  },
+  {
+   "line": 44,
+   "sentence": "To ask, or to arrange a speaking date, call the Office of the Clerk to the Commission at 404-612-8200.",
+   "marker": "[P-036, P-039]",
+   "verdict": "supports",
+   "evidence_span": "For more information or to arrange a speaking date, contact the Clerk’s Office.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 44,
+   "sentence": "Staff check each speaker's residency, and people from Fulton County and its businesses and groups go first.",
+   "marker": "[P-036]",
+   "verdict": "supports",
+   "evidence_span": "County staff shall verify the residency of each public speaker prior to such person being heard by the board.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 44,
+   "sentence": "Each speaker gets up to two minutes.",
+   "marker": "[P-036]",
+   "verdict": "supports",
+   "evidence_span": "Speakers will be granted up to two minutes each.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 44,
+   "sentence": "Public comment lasts up to 60 minutes; if speakers remain, it resumes at the end of the meeting.",
+   "marker": "[P-036]",
+   "verdict": "supports",
+   "evidence_span": "public comment will be suspended and the business portion of the BOC meeting will commence. Public comment will resume at the end of the meeting.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 45,
+   "sentence": "The meeting rules also mention comments sent by email or by phone, but the Clerk's page lists only in person and Zoom.",
+   "marker": "[P-036, P-067]",
+   "verdict": "supports",
+   "evidence_span": "commenting in-person, via emails or via Zoom or other electronic media (i.e., phone call)",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 45,
+   "sentence": "Call the Clerk's office to ask how to send a written comment.",
+   "marker": "{editorial: suggested action; see README, D9}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Fine as a suggested action; 'README, D9' is an internal reference a reader can't follow.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 46,
+   "sentence": "The Clerk's Public Notices page is at fultoncountyga.gov/Commissioners/Clerk-to-the-Commission/Public-Notices.",
+   "marker": "[P-100, P-039]",
+   "verdict": "supports",
+   "evidence_span": "<a href=\"/Commissioners/Clerk-to-the-Commission/Public-Notices\" class=\"tertiary-menu__link\" title=\"Link to information about public notices\" >Public Notices</a>",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 46,
+   "sentence": "Watch that page for the budget hearing, and take part.",
+   "marker": "{editorial: suggested action; a hearing came before adoption in the 2026 cycle as state law requires (P-047), and the county posts hearing notices there (P-042)}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Reasonable advice. Missing context: the 2026-cycle hearing was held 'at a meeting on December 3, 2025' (P-047), a Wednesday (35 days before Wednesday, Jan 7, 2026 in P-039), so likely a regular meeting; readers may also need to watch regular-meeting agendas, not only the notices page.",
+   "suggested_fix": "Watch that page and the Board's meeting agendas for the budget hearing."
+  },
+  {
+   "line": 47,
+   "sentence": "Tell Board members what the budget should fund, cut or keep the same.",
+   "marker": "{editorial: suggested action; the full Board adopts the budget (P-014)}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 47,
+   "sentence": "You can also say what you think of how the budget is being prepared.",
+   "marker": "{editorial: suggested action}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 47,
+   "sentence": "The chairman represents the whole county, and each other member represents one district.",
+   "marker": "{analysis: P-035 lists the chairman as \"At-Large\" and the others by district}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 47,
+   "sentence": "This page can't look up your district.",
+   "marker": "{editorial}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 47,
+   "sentence": "The county's website links a Commission District Finder at fultoncountyga.gov/Commission-District-Finder.",
+   "marker": "[P-099, P-039]",
+   "verdict": "supports",
+   "evidence_span": "<a href=\"/Commission-District-Finder\" class=\"desktop-utility-nav__link\" title=\"\" >Commission District Finder</a>",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 47,
+   "sentence": "The District 4 seat is vacant, so people there can contact the chairman.",
+   "marker": "{analysis: P-035 lists District 4 as \"Vacant\" and the chairman as \"At-Large\"}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Minor timing: P-035 shows the seat vacant on the Nov 4 agenda; present tense 'is vacant' (as of Nov 8) goes slightly beyond it. Line 61 words this correctly.",
+   "suggested_fix": "The District 4 seat was vacant on the Nov 4 agenda, so people there can contact the chairman."
+  },
+  {
+   "line": 48,
+   "sentence": "Observe: Read the proposal when it comes out; a copy goes to the Clerk to the Commission the day it is submitted.",
+   "marker": "[P-006]",
+   "verdict": "supports",
+   "evidence_span": "A copy of the proposed budget shall be transmitted to the county clerk of the commission of Fulton County on the date it is submitted",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 49,
+   "sentence": "Observe: Read the two resolutions behind the dispute.",
+   "marker": "[P-001, P-027]",
+   "verdict": "supports",
+   "evidence_span": "TO REMOVE THE 5% CAP PLACED ON ALL FULTON COUNTY DEPARTMENTS FOR THE 2027 BUDGET",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 49,
+   "sentence": "Resolution 26-0460 set up the commission, and Resolution 26-0729 sought to remove the 5% limit.",
+   "marker": "[P-001, P-017, P-024, P-027]",
+   "verdict": "supports",
+   "evidence_span": "to remove the 5% cap placed on all Fulton County departments for the 2027 budget",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 50,
+   "sentence": "Observe: Read the 2026 adopted budget book on the county's budget page.",
+   "marker": "[P-045, P-046]",
+   "verdict": "supports",
+   "evidence_span": "Adopted budget documents are provided below.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 50,
+   "sentence": "The book includes the budget message sent with the proposal, and a table of the General Fund's money in and out.",
+   "marker": "[P-046, P-054]",
+   "verdict": "supports",
+   "evidence_span": "In this booklet, you will find the budget message submitted to the Board as part of the Fiscal Year 2026 Proposed Budget",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 51,
+   "sentence": "Several offices' own 2027 budget presentations are on the county's data website, data.fultoncountyga.gov, including the sheriff's and public defender's.",
+   "marker": "[P-055, P-056, P-057, P-058, P-094, P-095]",
+   "verdict": "supports",
+   "evidence_span": "\"name\" : \"Sheriff Budget Presentation_2027\"",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 52,
+   "sentence": "If you need a disability accommodation to take part, call the Clerk to the Commission at 404.612.8200.",
+   "marker": "[P-067]",
+   "verdict": "supports",
+   "evidence_span": "To request reasonable accommodations based on disability, including this notification in an alternate format, please contact the Fulton County Clerk to the Commission at 404.612.8200.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 56,
+   "sentence": "Fulton County Board of Commissioners: adopts the budget, and only the full Board can.",
+   "marker": "[P-014]",
+   "verdict": "supports",
+   "evidence_span": "Final authority to adopt the annual budget remains exclusively with the full board of commissioners",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 56,
+   "sentence": "On the Nov 4 agenda, the Board had a chairman, who serves at large, and six district seats.",
+   "marker": "[P-035]",
+   "verdict": "supports",
+   "evidence_span": "Robert L. Pitts, Chairman (At-Large) Bridget Thorne, Commissioner (District 1)",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 57,
+   "sentence": "Chairman, who represents the whole county (At-Large): Robert Pitts.",
+   "marker": "[P-035]",
+   "verdict": "supports",
+   "evidence_span": "Robert L. Pitts, Chairman (At-Large)",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 58,
+   "sentence": "District 1: Commissioner Bridget Thorne.",
+   "marker": "[P-035]",
+   "verdict": "supports",
+   "evidence_span": "Bridget Thorne, Commissioner (District 1)",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 59,
+   "sentence": "District 2: Commissioner Bob Ellis, also on the Budget Commission.",
+   "marker": "[P-035, P-021]",
+   "verdict": "supports",
+   "evidence_span": "Bob Ellis, Commissioner (District 2)",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 60,
+   "sentence": "District 3: Commissioner Dana Barrett.",
+   "marker": "[P-035]",
+   "verdict": "supports",
+   "evidence_span": "Dana Barrett, Commissioner (District 3)",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 61,
+   "sentence": "District 4: vacant on the Nov 4 agenda.",
+   "marker": "[P-035]",
+   "verdict": "supports",
+   "evidence_span": "Dana Barrett, Commissioner (District 3) Vacant (District 4)",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 62,
+   "sentence": "District 5: Commissioner Marvin Arrington.",
+   "marker": "[P-035]",
+   "verdict": "supports",
+   "evidence_span": "Marvin S. Arrington, Jr., Commissioner (District 5)",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 63,
+   "sentence": "District 6: Vice Chair Khadijah Abdur-Rahman, also on the Budget Commission.",
+   "marker": "[P-035, P-021]",
+   "verdict": "supports",
+   "evidence_span": "Khadijah Abdur-Rahman, Vice Chair (District 6)",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 64,
+   "sentence": "Budget Commission (proposes the budget; can't adopt it): the county manager and the chief financial officer, plus Commissioner Ellis for districts 1 to 3 and Vice Chair Abdur-Rahman for districts 4 to 6.",
+   "marker": "[P-008, P-014, P-021]",
+   "verdict": "supports",
+   "evidence_span": "The budget commission shall be composed of four (4) members: (1) The county manager; (2) The chief financial officer;",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 64,
+   "sentence": "To be eligible for the 2027 budget, a commissioner needed a year on the Board and a term not ending in 2026.",
+   "marker": "[P-010]",
+   "verdict": "supports",
+   "evidence_span": "a commissioner whose term expires in 2026 shall not be eligible to serve on the budget commission convened to develop the Fiscal Year 2027 budget",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 64,
+   "sentence": "Ellis was the only eligible member from districts 1 to 3, and an eligible vice chair serves automatically.",
+   "marker": "[P-021, P-011]",
+   "verdict": "supports",
+   "evidence_span": "Commissioner Ellis is the only eligible Commissioner to serve as the Northern Representative",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 65,
+   "sentence": "How to reach them: Speak during public comment at a Board meeting, or call the Office of the Clerk to the Commission at 404-612-8200.",
+   "marker": "[P-036, P-039]",
+   "verdict": "supports",
+   "evidence_span": "please contact the Office of the Clerk to the Commission at 404-612-8200",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 65,
+   "sentence": "Our sources don't say how Board members are chosen or how long their terms are.",
+   "marker": "{analysis: none of the archived sources does}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Checked: P-010 mentions terms expiring but gives no length; P-009 covers choosing commission members, not Board members.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 65,
+   "sentence": "They give no direct phone or email for any commissioner or for the Budget Commission.",
+   "marker": "{analysis: none of the archived sources does}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 69,
+   "sentence": "By Nov 15: The Budget Commission must submit its proposed budget to the Board.",
+   "marker": "[P-005]",
+   "verdict": "supports",
+   "evidence_span": "The budget commission shall submit or cause to be submitted annually to the board of commissioners, by no later than November 15, a proposed budget",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 69,
+   "sentence": "Nov 15, 2026 falls on a Sunday.",
+   "marker": "{computed: Nov 4, 2026 is a Wednesday (P-039), and Nov 15 is 11 days later}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Rechecked: P-039 lists Wednesday, November 4, 2026; +11 days = Sunday.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 69,
+   "sentence": "Section 2-261 doesn't say what happens when the deadline falls on a weekend.",
+   "marker": "{analysis: its full text is in P-005 and P-006; we did not check other sections or state law}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 69,
+   "sentence": "In the 2026 cycle, the county manager submitted the proposal on Nov 15, 2025, and it was presented on Nov 19.",
+   "marker": "[P-047, P-046]",
+   "verdict": "supports",
+   "evidence_span": "Fulton County's County Manager submitted a proposed budget to the Board of Commissioners on November 15th, 2025",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 69,
+   "sentence": "Nov 15, 2025 was a Saturday.",
+   "marker": "{computed: Nov 15, 2025 is 365 days before Sunday, Nov 15, 2026, so a Saturday}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Rechecked: 2026 has no Feb 29, so 365 days = 52 weeks + 1 day; one weekday before Sunday is Saturday.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 69,
+   "sentence": "A copy goes to the Clerk to the Commission the day it is submitted.",
+   "marker": "[P-006]",
+   "verdict": "supports",
+   "evidence_span": "A copy of the proposed budget shall be transmitted to the county clerk of the commission of Fulton County",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 70,
+   "sentence": "Nov 18, Dec 2 and Dec 16, 10 a.m.: The Board holds regular meetings in the Assembly Hall of the Fulton County Government Center, 141 Pryor Street SW, Atlanta.",
+   "marker": "[P-039]",
+   "verdict": "supports",
+   "evidence_span": "all meetings will be held on the first and third Wednesdays of each month at 10:00 a.m. in the Fulton County Government Center – Assembly Hall, 141 Pryor Street SW, Atlanta, Georgia.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 71,
+   "sentence": "The county's 2026 budget resolution says state law required a public hearing before that budget was adopted.",
+   "marker": "[P-047, P-046]",
+   "verdict": "supports",
+   "evidence_span": "held a public hearing, as required by O.C.G.A. § 36-81-5, at a meeting on December 3, 2025",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 71,
+   "sentence": "The 2026 cycle's hearing was held at a meeting on Dec 3, 2025.",
+   "marker": "[P-047, P-046]",
+   "verdict": "supports",
+   "evidence_span": "at a meeting on December 3, 2025",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 71,
+   "sentence": "On Nov 8, the newest notice on the county's Public Notices page was for the commission's October hearings.",
+   "marker": "{analysis: P-042, captured Nov 8, 2026}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 71,
+   "sentence": "Notices also appear in the county's legal newspaper and are posted at the Government Center.",
+   "marker": "[P-042]",
+   "verdict": "supports",
+   "evidence_span": "Public Notices of the Board also appear in the county legal organ and posted throughout the Government Center",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 71,
+   "sentence": "Our sources don't name the newspaper, and we didn't check the newspaper or the posted notices.",
+   "marker": "{editorial: scope note}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 72,
+   "sentence": "The Board must adopt the budget \"no later than the second regular meeting in January.\"",
+   "marker": "[P-005, P-041]",
+   "verdict": "supports",
+   "evidence_span": "by no later than the second regular meeting in January of the year to which it applies",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 72,
+   "sentence": "The proposed 2027 schedule puts that meeting on Jan 20, 2027, after a first meeting on Jan 6.",
+   "marker": "[P-041]",
+   "verdict": "supports",
+   "evidence_span": "Proposed 2027 Meeting Schedule First Regular Meetings Second Regular Meetings Wednesday, January 6, 2027 Wednesday, January 20, 2027",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 72,
+   "sentence": "The county's records say the 2027 calendar was approved with the consent agenda.",
+   "marker": "[P-040]",
+   "verdict": "supports",
+   "evidence_span": "Request approval of the proposed 2027 Fulton County Board of Commissioners’ Meeting Calendar. (APPROVED UPON ADOPTION OF THE CONSENT AGENDA)",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 72,
+   "sentence": "A consent agenda is a group of routine items passed in one vote.",
+   "marker": "[P-085]",
+   "verdict": "supports",
+   "evidence_span": "All matters listed on the Consent Agenda are considered routine by the County Commission and will be enacted by one motion.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 72,
+   "sentence": "But the calendar's record still shows the status \"Agenda Ready,\" and the posted schedule is labeled \"Proposed.\"",
+   "marker": "[P-040, P-041]",
+   "verdict": "supports",
+   "evidence_span": "Fulton County Board of Commissioners Proposed 2027 Meeting Schedule",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 72,
+   "sentence": "Those labels suggest the schedule may not be final.",
+   "marker": "{analysis: P-040 and P-041}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Also consistent with P-040's empty MatterPassedDate (null).",
+   "suggested_fix": ""
+  },
+  {
+   "line": 72,
+   "sentence": "So treat Jan 20 as the expected date until the Clerk to the Commission posts a final schedule.",
+   "marker": "{editorial}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 72,
+   "sentence": "The Board may vote earlier, since the deadline is \"no later than.\"",
+   "marker": "[P-005]",
+   "verdict": "supports",
+   "evidence_span": "The budget shall then be adopted by the board of commissioners by no later than the second regular meeting in January",
+   "correct_passage": "",
+   "problem": "Minor: an earlier vote must still follow the required public hearing (P-047), which this sentence omits.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 72,
+   "sentence": "In the 2026 cycle, the Board adopted its budget on Jan 21, 2026.",
+   "marker": "[P-046]",
+   "verdict": "supports",
+   "evidence_span": "approved by the Board of Commissioners on January 21, 2026",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 76,
+   "sentence": "Aug 5, 2026: The Board voted to bring back a Budget Commission to help develop the county's budget, as one did until 2018.",
+   "marker": "[P-017, P-018, P-002, P-003]",
+   "verdict": "supports",
+   "evidence_span": "to re-establish a Budget Commission to assist in the development of the County's annual budget",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 76,
+   "sentence": "Yes: Chairman Pitts, Commissioners Thorne and Ellis, and Vice Chair Abdur-Rahman.",
+   "marker": "[P-020, P-035]",
+   "verdict": "supports",
+   "evidence_span": "\"VotePersonName\":\"Robert L. Pitts\",\"VoteValueId\":16,\"VoteValueName\":\"Yea\"",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 76,
+   "sentence": "Commissioner Arrington abstained, and Commissioner Barrett is listed as not voting.",
+   "marker": "[P-020, P-035]",
+   "verdict": "supports",
+   "evidence_span": "\"VotePersonName\":\"Marvin S. Arrington, Jr.\",\"VoteValueId\":21,\"VoteValueName\":\"Abstain\"",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 76,
+   "sentence": "To abstain is to choose formally not to vote yes or no.",
+   "marker": "{analysis: plain-language definition; the roll call records \"Abstain\" and \"Did Not Vote\" as different values (P-020)}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 77,
+   "sentence": "Aug 19: The Board approved the commission's members: Commissioner Bob Ellis for the north and Vice Chair Khadijah Abdur-Rahman for the south.",
+   "marker": "[P-021, P-022]",
+   "verdict": "supports",
+   "evidence_span": "Vice Chair Abdur-Rahman is eligible to serve as the Southern Representative and will serve without nomination",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 77,
+   "sentence": "Barrett had the item taken off the consent agenda for a separate vote, and voted no.",
+   "marker": "[P-021, P-023]",
+   "verdict": "supports",
+   "evidence_span": "ITEM REMOVED FROM THE CONSENT AGENDA FOR SEPARATE CONSIDERATION AS REQUESTED BY COMMISSIONER BARRETT",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 77,
+   "sentence": "Pitts, Thorne, Ellis and Abdur-Rahman voted yes, and Arrington was absent.",
+   "marker": "[P-023]",
+   "verdict": "supports",
+   "evidence_span": "\"VotePersonName\":\"Marvin S. Arrington, Jr.\",\"VoteValueId\":19,\"VoteValueName\":\"Absent\"",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 78,
+   "sentence": "Oct 7: The sheriff, district attorney, solicitor-general, court clerk, probate judge and public defender held a news conference and sent the Board a letter.",
+   "marker": "[P-068, P-069]",
+   "verdict": "supports",
+   "evidence_span": "County leaders held a news conference on the steps of the Fulton County Courthouse Wednesday morning and sent a detailed letter to the Board of Commissioners",
+   "correct_passage": "",
+   "problem": "Minor: P-069 says 'County leaders' held it and the six 'attended'; P-076 (not cited) says the leaders sent the letter. The date is inferred from P-068 plus 'Wednesday morning'.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 78,
+   "sentence": "They objected to presenting their needs to a two-commissioner panel rather than the full Board, FOX 5 reported.",
+   "marker": "[P-076, P-080]",
+   "verdict": "supports",
+   "evidence_span": "Their primary objection centers on a new framework that require department heads to present critical funding needs to a two-commissioner panel rather than the full board.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 78,
+   "sentence": "They also raised concerns about the 5% limit.",
+   "marker": "[P-077]",
+   "verdict": "supports",
+   "evidence_span": "The justice leaders also raised concerns over a directive asking all county departments to limit any request for additional funding to 5% above current allocations",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 78,
+   "sentence": "They said they would not present in person at the commission's hearings, but had sent their 2027 requests in writing.",
+   "marker": "[P-076, P-080]",
+   "verdict": "supports",
+   "evidence_span": "all participating justice department leaders confirmed they have submitted their formal 2027 budget requests in writing",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 78,
+   "sentence": "In Atlanta News First's report, Commissioner Barrett said some current board members were trying to take control of the budget process.",
+   "marker": "[P-072]",
+   "verdict": "supports",
+   "evidence_span": "alleged some current board members are trying to take control of the budget process",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 78,
+   "sentence": "In the same report, Commissioner Ellis responded that the commission's meetings are open meetings.",
+   "marker": "[P-073]",
+   "verdict": "supports",
+   "evidence_span": "We have a budget commission. Those meetings are open meetings.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 78,
+   "sentence": "FOX 5 reported that, in response to the officials, Ellis said the full Board will review and vote on the final budget.",
+   "marker": "[P-079, P-080]",
+   "verdict": "supports",
+   "evidence_span": "the full Board of Commissioners will review and vote on the final budget",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 78,
+   "sentence": "The solicitor-general's office prosecutes misdemeanors.",
+   "marker": "{analysis: plain-language definition; P-062 cites ABA benchmarks for misdemeanor prosecution among the office's challenges}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Partly outside knowledge, but consistent with P-062 and labeled as a definition.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 78,
+   "sentence": "The probate court handles estates, guardianships, marriage licenses and weapons carry licenses, among other services.",
+   "marker": "[P-087]",
+   "verdict": "supports",
+   "evidence_span": "estates, guardianships, marriage licenses, weapons carry licenses, and other essential Court services",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 79,
+   "sentence": "Oct 12 to 22: The Budget Commission scheduled six days of hearings with county departments.",
+   "marker": "[P-042, P-043]",
+   "verdict": "supports",
+   "evidence_span": "Special called meetings of the Fulton County Budget Commission will be conducted on the dates and locations provided above for the purpose of holding budget hearings",
+   "correct_passage": "",
+   "problem": "Minor: the notice doesn't say who set the dates (the code gives that to the county manager and CFO, P-015).",
+   "suggested_fix": ""
+  },
+  {
+   "line": 79,
+   "sentence": "The six offices had hour-long slots on Oct 13, Oct 14 and Oct 22.",
+   "marker": "[P-043, P-044]",
+   "verdict": "supports",
+   "evidence_span": "10:00-11:00 Public Defender Justice & Safety 11:00-12:00 Sheriff Justice & Safety",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 80,
+   "sentence": "Oct 21: Commissioner Barrett moved, or formally proposed, that the Board approve Resolution 26-0729, which Barrett sponsored.",
+   "marker": "[P-025, P-032, P-024]",
+   "verdict": "supports",
+   "evidence_span": "A motion was made by Commissioner Barrett and seconded by Commissioner Arrington, to approve. The motion failed by the following vote:",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 80,
+   "sentence": "That resolution would have removed a 5% limit on departments' requests for extra money.",
+   "marker": "[P-024, P-029]",
+   "verdict": "supports",
+   "evidence_span": "by placing the 5% cap on departmental enhancement requests",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 80,
+   "sentence": "Commissioner Arrington seconded the motion.",
+   "marker": "[P-025]",
+   "verdict": "supports",
+   "evidence_span": "seconded by Commissioner Arrington, to approve. The motion failed by the following vote:",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 80,
+   "sentence": "To second a motion is to back bringing it to a vote.",
+   "marker": "{analysis: plain-language definition}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 80,
+   "sentence": "Barrett voted yes, and Ellis voted no.",
+   "marker": "[P-033]",
+   "verdict": "supports",
+   "evidence_span": "\"VotePersonName\":\"Bob Ellis\",\"VoteValueId\":17,\"VoteValueName\":\"Nay\",\"VoteSort\":3,\"VoteResult\":2,\"VoteEventItemId\":205210},{\"VoteId\":32725,\"VoteGuid\":\"667BB2FB-1DC8-44A2-9734-0BB9D85235BD\",\"VoteLastModifiedUtc\":\"2026-10-22T13:50:41.4\",\"VoteRowVersion\":\"AAAAAAEHJYc=\",\"VotePersonId\":568,\"VotePersonName\":\"Dana Barrett\",\"VoteValueId\":16,\"VoteValueName\":\"Yea\"",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 80,
+   "sentence": "Pitts and Arrington did not vote, and Thorne and Abdur-Rahman were absent.",
+   "marker": "[P-033]",
+   "verdict": "supports",
+   "evidence_span": "\"VotePersonName\":\"Robert L. Pitts\",\"VoteValueId\":26,\"VoteValueName\":\"Did Not Vote\"",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 80,
+   "sentence": "The Clerk's minutes record the motion as failed.",
+   "marker": "[P-096, P-088]",
+   "verdict": "supports",
+   "evidence_span": "The motion failed by the following vote: Yea: Barrett Nay: Ellis",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 80,
+   "sentence": "The motion got 1 yes vote among the Board's 6 members.",
+   "marker": "{computed: P-033 lists 1 \"Yea\"; P-035 lists 6 members and a vacant seat}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Count is right (P-033 has 6 people, 1 Yea). Minor: P-035 is the Nov 4 roster; P-033 itself shows the 6 members on Oct 21.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 80,
+   "sentence": "Our sources don't state how many yes votes a motion needs.",
+   "marker": "{analysis: none of the archived sources does}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Checked: 'majority vote' appears only for commission selection (P-009, P-010), not Board motions.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 81,
+   "sentence": "Nov 4: Barrett moved again to approve the resolution, and Arrington seconded, but no vote was taken on that motion.",
+   "marker": "[P-025]",
+   "verdict": "supports",
+   "evidence_span": "a. A motion was made by Commissioner Barrett and seconded by Commissioner Arrington, to approve. (NO VOTE TAKEN)",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 81,
+   "sentence": "Instead, on a substitute motion by Abdur-Rahman, seconded by Thorne, the Board voted to file the resolution.",
+   "marker": "[P-025]",
+   "verdict": "supports",
+   "evidence_span": "b. A substitute motion was made by Vice Chair Abdur-Rahman and seconded by Commissioner Thorne, to file. The motion passed by the following vote:",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 81,
+   "sentence": "Filing set the resolution aside without approving it, and its record shows no later action.",
+   "marker": "{analysis: its status is \"Filed\" (P-024), and its full history (P-025) has no later step}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "No passage defines 'file', but the reading follows from status 'Filed' (not 'Passed') and the untaken motion to approve; P-025 is labeled the whole history.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 81,
+   "sentence": "A substitute motion is one offered in place of the motion being considered.",
+   "marker": "{analysis: plain-language definition}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 81,
+   "sentence": "Pitts, Thorne, Ellis and Abdur-Rahman voted yes; Barrett voted no; Arrington did not vote.",
+   "marker": "[P-034]",
+   "verdict": "supports",
+   "evidence_span": "\"VotePersonName\":\"Marvin S. Arrington, Jr.\",\"VoteValueId\":26,\"VoteValueName\":\"Did Not Vote\"",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 81,
+   "sentence": "The Board also discussed an item under the vice chair's name: \"Update on the Budget Committee and the budget approval process.\"",
+   "marker": "[P-093, P-035]",
+   "verdict": "supports",
+   "evidence_span": "Discussion: Update on the Budget Committee and the budget approval process. (Abdur-Rahman) (DISCUSSED)",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 81,
+   "sentence": "That item's \"Budget Committee\" is likely the Budget Commission; we found no separate committee.",
+   "marker": "{analysis: P-089 and P-093 list the same update under the vice chair, who serves on the commission (P-021); see README, D10}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Properly hedged with 'likely'.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 85,
+   "sentence": "What's being decided: How much Fulton County will spend in 2027, and on what.",
+   "marker": "[P-005, P-042]",
+   "verdict": "supports",
+   "evidence_span": "a proposed budget governing expenditures of all county funds, including capital outlay and public works projects, for the following year",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 85,
+   "sentence": "The Fulton County Board of Commissioners decides: a chairman and six district seats, one vacant on Nov 4.",
+   "marker": "[P-014, P-035]",
+   "verdict": "supports",
+   "evidence_span": "Final authority to adopt the annual budget remains exclusively with the full board of commissioners",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 85,
+   "sentence": "A Budget Commission of two commissioners and two county staff must propose a budget by Nov 15.",
+   "marker": "[P-005, P-008]",
+   "verdict": "supports",
+   "evidence_span": "The budget commission shall be composed of four (4) members",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 87,
+   "sentence": "Not posted yet: On Nov 8, the county's budget page didn't show the 2027 proposal, and the newest notice ... was for the Budget Commission's October hearings.",
+   "marker": "{analysis: P-045 and P-042, captured Nov 8, 2026}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 91,
+   "sentence": "A four-member Budget Commission, including two commissioners, helps draft the budget; since 2018, the county manager had done it alone.",
+   "marker": "[P-005, P-008, P-003]",
+   "verdict": "supports",
+   "evidence_span": "the county manager solely creates and submits the proposed budget",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 92,
+   "sentence": "Departments' requests for extra money for 2027 were limited to 5% of their current funding, Commissioner Barrett's resolution and a FOX 5 report say.",
+   "marker": "[P-029, P-077, P-080]",
+   "verdict": "supports",
+   "evidence_span": "restricted all departments to making budget requests that do not exceed 5% of their “base budget” for 2027",
+   "correct_passage": "",
+   "problem": "Minor: FOX 5 calls it 'a directive asking' departments to limit requests (P-077), softer than 'were limited'; attribution to both sources is given.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 96,
+   "sentence": "From 1953 until 2018, a budget commission drafted Fulton's budget.",
+   "marker": "[P-002, P-003]",
+   "verdict": "supports",
+   "evidence_span": "entrusted the creation and proposal of the annual budgets to a county budget commission",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 96,
+   "sentence": "Its members were the Board chairman, the county manager and the chief financial officer.",
+   "marker": "[P-002]",
+   "verdict": "supports",
+   "evidence_span": "a budget commission composed of the chairman of the board of commissioners, the county manager, and the chief financial officer",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 96,
+   "sentence": "In 2018, the Board gave that job to the county manager alone.",
+   "marker": "[P-003]",
+   "verdict": "supports",
+   "evidence_span": "where the county manager solely creates and submits the proposed budget",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 96,
+   "sentence": "Resolution 26-0460, adopted Aug 5, 2026, brought a commission back \"in a modified form.\"",
+   "marker": "[P-004, P-017]",
+   "verdict": "supports",
+   "evidence_span": "to reconstitute a Budget Commission in a modified form",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 96,
+   "sentence": "Commissioner Ellis and Vice Chair Abdur-Rahman sponsored it.",
+   "marker": "[P-016, P-017]",
+   "verdict": "supports",
+   "evidence_span": "SPONSORED BY: Bob Ellis, Commissioner (District 2) CO-SPONSORED BY: Khadijah Abdur-Rahman, Vice Chair (District 6)",
+   "correct_passage": "",
+   "problem": "Minor: Abdur-Rahman is listed as co-sponsor.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 97,
+   "sentence": "The new commission's members are the county manager, the chief financial officer, Commissioner Bob Ellis (north) and Vice Chair Khadijah Abdur-Rahman (south).",
+   "marker": "[P-008, P-021]",
+   "verdict": "supports",
+   "evidence_span": "Commissioner Ellis is the only eligible Commissioner to serve as the Northern Representative",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 97,
+   "sentence": "The county manager and chief financial officer still prepare the budget documents and ask departments for their budget proposals.",
+   "marker": "[P-012]",
+   "verdict": "supports",
+   "evidence_span": "including preparing budget documents, soliciting budget proposals from county departments",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 97,
+   "sentence": "The commission works by agreement; if it can't agree, the county manager decides how to present the draft.",
+   "marker": "[P-014]",
+   "verdict": "supports",
+   "evidence_span": "Where differences arise or consensus on an issue cannot be reached, the County Manager shall determine the best approach forward for presenting a proposed budget",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 98,
+   "sentence": "The two commissioner members are chosen before each budget cycle at a publicly announced Board meeting.",
+   "marker": "[P-009]",
+   "verdict": "supports",
+   "evidence_span": "Selection under this code section shall occur at a regularly scheduled and duly noticed board of commissioners meeting",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 98,
+   "sentence": "One comes from districts 1 to 3, and one from districts 4 to 6.",
+   "marker": "[P-008]",
+   "verdict": "supports",
+   "evidence_span": "One member of the board of commissioners representing commission district 1, 2, or 3",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 98,
+   "sentence": "To be eligible, a member must have served a year, and must not have a term ending in the year the budget is drafted.",
+   "marker": "[P-010]",
+   "verdict": "supports",
+   "evidence_span": "A commissioner shall have served on the board of commissioners for at least one (1) year to be eligible to serve on the budget commission.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 98,
+   "sentence": "The rules have a fallback if no one in a group is eligible.",
+   "marker": "[P-010]",
+   "verdict": "supports",
+   "evidence_span": "In the event that every commissioner within a district grouping described in paragraphs (c)(1) or (c)(2) is simultaneously ineligible",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 98,
+   "sentence": "An eligible vice chair serves automatically.",
+   "marker": "[P-011]",
+   "verdict": "supports",
+   "evidence_span": "the vice chair shall automatically serve as the Northern Representative or Southern Representative",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 98,
+   "sentence": "For the 2027 budget, Ellis was the only eligible member from districts 1 to 3.",
+   "marker": "[P-021]",
+   "verdict": "supports",
+   "evidence_span": "Commissioner Ellis is the only eligible Commissioner to serve as the Northern Representative",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 99,
+   "sentence": "The two commissioners must ask all commissioners for their budget priorities.",
+   "marker": "[P-013]",
+   "verdict": "supports",
+   "evidence_span": "solicit budget priorities, requests, and concerns from all members of the board of commissioners",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 99,
+   "sentence": "They take part in reviewing departments' requests, and they report to the full Board.",
+   "marker": "[P-013]",
+   "verdict": "supports",
+   "evidence_span": "participate directly and continuously with the county manager and chief financial officer throughout the budget development process, including review of departmental requests",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 100,
+   "sentence": "The county code says the proposal \"will serve, as presented, as the operating budget until a final budget is adopted.\"",
+   "marker": "[P-005]",
+   "verdict": "supports",
+   "evidence_span": "This proposed budget will serve, as presented, as the operating budget until a final budget is adopted.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 100,
+   "sentence": "The operating budget is the spending plan the county runs on.",
+   "marker": "{analysis: plain-language definition}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 100,
+   "sentence": "The proposal covers 2027, so this applies only to 2027 spending before the Board adopts a budget.",
+   "marker": "{analysis: P-005 says the proposal governs spending \"for the following year,\" and adoption is due by the second regular meeting in January}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 104,
+   "sentence": "The Board adopted the 2026 budget on Jan 21, 2026.",
+   "marker": "[P-046]",
+   "verdict": "supports",
+   "evidence_span": "Final Adopted Budget was approved by the Board of Commissioners on January 21, 2026",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 104,
+   "sentence": "Its General Fund, the largest of the county's funds, was $1,057,100,578.",
+   "marker": "[P-054, P-052]",
+   "verdict": "supports",
+   "evidence_span": "General Fund $ 954.1 $ 989.8 $ 1,057.1",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 104,
+   "sentence": "The General Fund pays for many county offices, including the sheriff, the courts, libraries and senior services.",
+   "marker": "{analysis: P-054 lists these under General Fund spending}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 105,
+   "sentence": "Justice and safety got $507.5 million of the General Fund.",
+   "marker": "[P-053]",
+   "verdict": "supports",
+   "evidence_span": "General Fund $ 160.6 $ 507.5 $ 194.0 $ 150.6 $ 44.4 $ 1,057.1",
+   "correct_passage": "",
+   "problem": "Relies on P-053's note for the column order (the extracted headings are interleaved).",
+   "suggested_fix": ""
+  },
+  {
+   "line": 105,
+   "sentence": "That is about 48 cents of every General Fund dollar.",
+   "marker": "{computed: $507.5 million ÷ $1,057.1 million ≈ 0.48}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Rechecked: 507.5 / 1,057.1 = 0.480.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 106,
+   "sentence": "The sheriff's office had $156,663,989.",
+   "marker": "[P-054]",
+   "verdict": "supports",
+   "evidence_span": "Sheriff 142,515,283 147,321,288 153,841,987 $ 156,275,873 3 88,116 $ 156,663,989",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 106,
+   "sentence": "A separate \"Consent Decree\" line held $50,000,000 for the county's jail agreement with the federal Department of Justice, described below.",
+   "marker": "[P-054, P-048]",
+   "verdict": "supports",
+   "evidence_span": "- Consent Decree $ 31,843,000 21,213,868 (3,056,868) $ 50,000,000",
+   "correct_passage": "",
+   "problem": "Minor: the line sits under 'Non Agency' in P-054, not as a stand-alone department line; linking it to the DOJ agreement relies on P-048/P-050's 'consent decree' wording.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 107,
+   "sentence": "Property taxes are the biggest source of General Fund money, at $834,032,152.",
+   "marker": "[P-054]",
+   "verdict": "supports",
+   "evidence_span": "$ 815,496,192 $ 4,055,960 $ 14,480,000 $ 834,032,152",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 108,
+   "sentence": "The 2026 plan spends $73,637,614 more than it expects to take in.",
+   "marker": "[P-054]",
+   "verdict": "supports",
+   "evidence_span": "$ 6,868 $ (73,637,614) Fund Balance - Beginning",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 108,
+   "sentence": "Savings, called fund balance, cover the gap and fall from $252,638,514 to $179,000,901.",
+   "marker": "[P-054]",
+   "verdict": "supports",
+   "evidence_span": "Fund Balance - Ending $ 227,341,577 $ 239,657,878 $ 252,638,514 $ 195,535,519 $ 179,000,901",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 108,
+   "sentence": "That leaves about $2.8 million above the plan's minimum reserve.",
+   "marker": "{computed: $179,000,901 − $176,218,666 = $2,782,235 (P-054)}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Rechecked: 179,000,901 − 176,218,666 = 2,782,235.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 108,
+   "sentence": "The minimum reserve is the least savings the plan says the county must keep.",
+   "marker": "{analysis: plain-language reading of the schedule's \"Fund Balance Minimum Reserve Requirement\" (P-054)}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 108,
+   "sentence": "In 2023, 2024 and 2025, actual revenue topped actual spending, by about $3.0 million, $12.3 million and $13.0 million.",
+   "marker": "[P-054]",
+   "verdict": "supports",
+   "evidence_span": "Revenues > Expenditures $ 2,978,328 $ 12,316,301 $ 12,980,636",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 108,
+   "sentence": "Over those years, savings grew from $224,363,249 to $252,638,514.",
+   "marker": "[P-054]",
+   "verdict": "supports",
+   "evidence_span": "Fund Balance - Beginning $ 224,363,249 $ 227,341,577 $ 239,657,878 $ 252,638,514",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 112,
+   "sentence": "In January 2025, the county entered into an agreement with the federal Department of Justice.",
+   "marker": "[P-048]",
+   "verdict": "supports",
+   "evidence_span": "In January 2025, the County entered into an agreement with the United States Department of Justice",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 112,
+   "sentence": "Its aim was \"to address constitutional violations at the Fulton County Jail.\"",
+   "marker": "[P-048]",
+   "verdict": "supports",
+   "evidence_span": "to address constitutional violations at the Fulton County Jail",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 112,
+   "sentence": "The county says the agreement \"mandated the County implement specific reforms.\"",
+   "marker": "[P-048]",
+   "verdict": "supports",
+   "evidence_span": "and mandated the County implement specific reforms to improve jail conditions",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 112,
+   "sentence": "They cover safety from violence, health care, \"staffing and supervision,\" and living conditions.",
+   "marker": "[P-048]",
+   "verdict": "supports",
+   "evidence_span": "including providing better safety from violence, ensuring adequate medical and mental health care, improving staffing and supervision, and creating sanitary and humane living conditions",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 112,
+   "sentence": "Budget documents call the work to meet it consent decree compliance.",
+   "marker": "{analysis: P-048 describes the agreement and, in the next sentence, \"consent decree compliance\"}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 112,
+   "sentence": "In general, a consent decree is a legal settlement that a court approves and can enforce.",
+   "marker": "{analysis: plain-language definition}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Hedged with 'In general', but no passage says a court approved this agreement; placed next to the jail agreement, readers may infer it is court-enforced.",
+   "suggested_fix": "Add: 'Our sources don't say whether a court approved this agreement.'"
+  },
+  {
+   "line": 113,
+   "sentence": "The 2026 proposal set aside $31,843,000 for consent decree costs, and the adopted budget has $50,000,000.",
+   "marker": "[P-054]",
+   "verdict": "supports",
+   "evidence_span": "- Consent Decree $ 31,843,000 21,213,868 (3,056,868) $ 50,000,000",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 113,
+   "sentence": "That is $18,157,000 more.",
+   "marker": "{computed: $50,000,000 − $31,843,000 = $18,157,000 (P-054)}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Rechecked; also equals the two change columns 21,213,868 − 3,056,868.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 113,
+   "sentence": "The budget message sent with the 2026 proposal said these \"costs could exceed a range from $30 - $60 million.\"",
+   "marker": "[P-050, P-046]",
+   "verdict": "supports",
+   "evidence_span": "costs could exceed a range from $30 - $60 million",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 113,
+   "sentence": "It added that \"this number is expected to grow.\"",
+   "marker": "[P-050]",
+   "verdict": "supports",
+   "evidence_span": "this number is expected to grow",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 117,
+   "sentence": "Section 2-261 ... says the proposal \"shall include the budget requests of all of the county's departments, agencies, elected officials and authorities.\"",
+   "marker": "[P-005]",
+   "verdict": "supports",
+   "evidence_span": "shall include the budget requests of all of the county's departments, agencies, elected officials and authorities",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 118,
+   "sentence": "Neither Section 2-261 nor Section 2-263 mentions a cap on requests, either to allow one or to forbid one.",
+   "marker": "{analysis: their full text is archived in P-005 to P-015}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Checked P-005 to P-015: no cap or limit on requests appears.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 119,
+   "sentence": "The resolution to remove the limit says the Budget Commission set it, at 5% of each department's \"base budget\" for 2027.",
+   "marker": "[P-029]",
+   "verdict": "supports",
+   "evidence_span": "the newly established Budget Commission has restricted all departments to making budget requests that do not exceed 5% of their “base budget” for 2027",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 120,
+   "sentence": "We found no written instruction for the 5% limit, so its exact wording and date aren't known; no source we reviewed disputes that the limit exists.",
+   "marker": "{analysis: see README, D4}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Checked: P-029 and P-077 both describe the limit; no passage, including Ellis's statements (P-073, P-079), denies it exists.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 121,
+   "sentence": "Resolution 26-0729 says it would \"clarify\" the code by adding a ban: \"No limits or caps shall be placed\" on what any department ... can request.",
+   "marker": "[P-083, P-030, P-024]",
+   "verdict": "supports",
+   "evidence_span": "No limits or caps shall be placed on what a department, agency, elected official, or authority can request.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 121,
+   "sentence": "The Board filed the resolution, setting it aside, on Nov 4.",
+   "marker": "[P-024, P-025]",
+   "verdict": "supports",
+   "evidence_span": "b. A substitute motion was made by Vice Chair Abdur-Rahman and seconded by Commissioner Thorne, to file. The motion passed",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 122,
+   "sentence": "In the 2026 budget, the county's \"Base Budget\" meant the current funding needed for past spending patterns, including staff.",
+   "marker": "[P-086]",
+   "verdict": "supports",
+   "evidence_span": "This represents the current funding needed to address historical spending patterns including personnel expenditures (filled and vacant) and other operational spending.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 123,
+   "sentence": "The budget message sent with the 2026 proposal said departments' extra requests were \"included as an appendix.\"",
+   "marker": "[P-049, P-046]",
+   "verdict": "supports",
+   "evidence_span": "The enhancement submissions are included as an appendix",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 123,
+   "sentence": "Beyond the extra requests it had already considered, it counted almost $158 million more for staff and operations and over $64 million for capital.",
+   "marker": "[P-051]",
+   "verdict": "supports",
+   "evidence_span": "there were almost $158 million in unique personnel/operating requests and over $64 million in capital requests",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 123,
+   "sentence": "These came from departments, agencies and outside groups.",
+   "marker": "[P-051]",
+   "verdict": "supports",
+   "evidence_span": "received from departments, agencies and external stakeholders during the FY2026 budget process",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 123,
+   "sentence": "Capital requests are for buildings, equipment and projects.",
+   "marker": "{analysis: plain-language definition}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 124,
+   "sentence": "The 2026 proposal also included \"a 1% decrease across all agencies and departments,\" worth $10 million.",
+   "marker": "[P-050]",
+   "verdict": "supports",
+   "evidence_span": "Includes a decrease of $10 million in the general fund budget by instituting a 1% decrease across all agencies and departments",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 124,
+   "sentence": "That was a cut to spending, not a limit on requests.",
+   "marker": "{analysis: P-050 describes a spending decrease}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 128,
+   "sentence": "The Fulton County Board of Commissioners must adopt a budget by its second regular January meeting.",
+   "marker": "[P-005]",
+   "verdict": "supports",
+   "evidence_span": "The budget shall then be adopted by the board of commissioners by no later than the second regular meeting in January",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 128,
+   "sentence": "The Board can adopt the proposal of the Budget Commission ... as it is or with changes.",
+   "marker": "{analysis: P-005; P-008 lists the members; the county describes state law as letting the Board adopt more or less than proposed (P-047)}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 128,
+   "sentence": "Option C, a proposal to change how drafts are built, was filed on Nov 4.",
+   "marker": "[P-024, P-025]",
+   "verdict": "supports",
+   "evidence_span": "to prohibit across-the-board caps on departmental budget requests; to remove the 5% cap placed on all Fulton County departments for the 2027 budget; to require that all departmental budget requests are disclosed in the proposed budget",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 128,
+   "sentence": "Filing set Option C aside without approving it.",
+   "marker": "{analysis: its status is \"Filed\" (P-024), and its history shows no later action (P-025)}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 132,
+   "sentence": "If you care most about transparency and openness: Commissioner Bob Ellis, who sponsored today's process, which Option C would change, said that process is \"more transparent and open than anything we’ve had in recent years.\"",
+   "marker": "[P-073, P-016, P-024]",
+   "verdict": "partial",
+   "evidence_span": "more transparent and open than anything we’ve had in recent years",
+   "correct_passage": "",
+   "problem": "Quote is verbatim, speaker is right, and the value matches the quote. But 'who sponsored today's process, which Option C would change' blurs two things: Ellis sponsored Resolution 26-0460, the commission's rules (P-016). Option C targets the 5% cap, which P-029 says the Budget Commission set, and request disclosure. No passage shows Ellis set or sponsored the cap. Ellis made the remark in reply to Barrett's charge about the commission (P-072, P-073), not about the cap or Option C, so pairing it against Option C suggests a position he isn't quoted taking.",
+   "suggested_fix": "Commissioner Bob Ellis, who sponsored the resolution that created the Budget Commission, said the commission's process is \"more transparent and open than anything we’ve had in recent years.\""
+  },
+  {
+   "line": 133,
+   "sentence": "If you care most about transparency and informed decision-making: Commissioner Dana Barrett, who sponsored Option C, proposed it \"to ensure transparency and informed decision-making in the development of the Fulton County budget.\"",
+   "marker": "[P-024, P-032]",
+   "verdict": "supports",
+   "evidence_span": "to ensure transparency and informed decision-making in the development of the Fulton County budget",
+   "correct_passage": "",
+   "problem": "Minor: the quoted words are the resolution's title (P-024, P-027), not words Barrett is recorded speaking; 'proposed it' fits since she sponsored it (P-032).",
+   "suggested_fix": ""
+  },
+  {
+   "line": 134,
+   "sentence": "If you care most about court funding: Solicitor-General Keith Gammage, one of six justice officials seeking more money, said they believe there is \"a lack of proper investment in the entire ecosystem of the courts.\"",
+   "marker": "[P-077, P-069, P-070]",
+   "verdict": "supports",
+   "evidence_span": "what we believe to be a lack of proper investment in the entire ecosystem of the courts",
+   "correct_passage": "",
+   "problem": "Quote verbatim, speaker named in P-077, value faithful. No option is attached to him, which is correct.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 135,
+   "sentence": "No archived source argues for Option A over Option B, or the reverse.",
+   "marker": "{editorial: no archived statement argues for adopting the proposal unchanged or for changing it; both options keep today's process}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Content checks out. Label: this is a factual claim about the sources, so {analysis} fits better than {editorial}.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 135,
+   "sentence": "The officials' request for a January vote has no line; our sources quote no one making it.",
+   "marker": "{editorial: P-070 gives the request only in Atlanta News First's words}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Correct (P-070 is paraphrase only). 'Has no line' is unclear to readers, and a factual claim about sources fits {analysis} better than {editorial}.",
+   "suggested_fix": "This guide has no entry for the officials' request for a January vote, because our sources quote no one making it."
+  },
+  {
+   "line": 135,
+   "sentence": "This guide doesn't recommend an option.",
+   "marker": "{editorial}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 139,
+   "sentence": "What it does: The Board adopts the Budget Commission's plan without changes.",
+   "marker": "{analysis: a description of the option}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 140,
+   "sentence": "Where it stands: The plan is due by Nov 15 and was not on the county's budget page on Nov 8.",
+   "marker": "{analysis: P-005 sets the deadline; P-045 was captured Nov 8, 2026}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 141,
+   "sentence": "Who benefits: If the plan holds spending down, taxpayers and the county's savings (its \"fund balance\") benefit.",
+   "marker": "{analysis: a conditional reading; the plan is not public yet; P-054 calls the savings \"Fund Balance\"}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 141,
+   "sentence": "The offices whose requests the plan funds, and the people who use their services, also benefit.",
+   "marker": "{analysis}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 142,
+   "sentence": "Who pays: Offices whose needs go beyond the 5% limit, and the people who use their services, if the plan leaves those needs out.",
+   "marker": "{analysis: the limit as described in P-029 and P-077}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 142,
+   "sentence": "That limit holds requests for extra money to 5% of current funding.",
+   "marker": "[P-029, P-077, P-080]",
+   "verdict": "partial",
+   "evidence_span": "a directive asking all county departments to limit any request for additional funding to 5% above current allocations",
+   "correct_passage": "",
+   "problem": "Stated as settled fact, with no attribution. The only sources are an advocate's resolution (P-029) and a news report of a directive 'asking' departments (P-077). The page itself calls the exact terms 'Uncertain (no written instruction)' (card 3) and attributes the same claim elsewhere (lines 92, 165). The caveats are uneven.",
+   "suggested_fix": "Resolution 26-0729 and FOX 5 say that limit holds requests for extra money to 5% of current funding."
+  },
+  {
+   "line": 142,
+   "sentence": "Six justice officials are asking for more money, citing staffing shortages, court delays and jail overcrowding.",
+   "marker": "[P-069, P-070]",
+   "verdict": "supports",
+   "evidence_span": "calling for more funding to address what they describe as staffing shortages, court delays and jail overcrowding",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 142,
+   "sentence": "The six are the sheriff, district attorney, solicitor-general, court clerk, probate judge and public defender.",
+   "marker": "[P-069]",
+   "verdict": "supports",
+   "evidence_span": "The sheriff, district attorney, solicitor-general, court clerk, probate judge and public defender attended the news conference.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 143,
+   "sentence": "What's uncertain: What the plan contains, because it isn't public yet.",
+   "marker": "{editorial}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 143,
+   "sentence": "When the Board will vote; the county code sets only a latest date, and the justice officials asked for January.",
+   "marker": "[P-005, P-070]",
+   "verdict": "supports",
+   "evidence_span": "The group is asking commissioners to wait until January to approve the county’s 2027 spending plan",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 147,
+   "sentence": "What it does: The Board adds, cuts or moves money before it votes.",
+   "marker": "{analysis: a description of the option}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 147,
+   "sentence": "The county's 2026 budget resolution says state law lets the Board adopt amounts \"greater or less than the sums presented in the proposed budget.\"",
+   "marker": "[P-047, P-046]",
+   "verdict": "supports",
+   "evidence_span": "whether greater or less than the sums presented in the proposed budget",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 148,
+   "sentence": "Where it stands: The proposal isn't out, so there is nothing to change yet.",
+   "marker": "{analysis: P-045, captured Nov 8, 2026}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 148,
+   "sentence": "Last cycle, the budget book lists changes to the proposal dated Jan 7 and Jan 21, 2026, and the Board adopted the amended budget on Jan 21.",
+   "marker": "[P-054, P-046]",
+   "verdict": "supports",
+   "evidence_span": "and amendments approved on January 21, 2026",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 148,
+   "sentence": "The adopted budget raised consent decree spending by $18,157,000.",
+   "marker": "{computed: $50,000,000 adopted − $31,843,000 proposed (P-054)}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 148,
+   "sentence": "That money pays for the county's jail agreement with the federal Department of Justice.",
+   "marker": "[P-054, P-048]",
+   "verdict": "supports",
+   "evidence_span": "In January 2025, the County entered into an agreement with the United States Department of Justice to address constitutional violations at the Fulton County Jail",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 148,
+   "sentence": "On the revenue side, it dropped a proposed $32,170,000 line of \"Additional Property Taxes\" and raised the regular property tax line by $18,535,960.",
+   "marker": "{computed: P-054: \"Additional Property Taxes (Consent)\" $32,170,000 proposed to none adopted; \"Property Taxes\" changed by $4,055,960 + $14,480,000 = $18,535,960}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Rechecked: 4,055,960 + 14,480,000 = 18,535,960, and 815,496,192 + 18,535,960 = 834,032,152. Minor: the dropped line is labeled '(Consent)' in P-054, a link to consent decree costs that the sentence drops.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 148,
+   "sentence": "Taken together, total property-tax revenue ended $13,634,040 below the proposal.",
+   "marker": "{computed: proposed $815,496,192 + $32,170,000 = $847,666,192; adopted $834,032,152; difference $13,634,040 (P-054)}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Rechecked: 847,666,192 − 834,032,152 = 13,634,040.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 148,
+   "sentence": "The adopted General Fund, the county's biggest fund, ended up about 0.4% larger than proposed.",
+   "marker": "{computed: $1,057,100,578 ÷ $1,053,152,000 ≈ 1.004 (P-054); P-052 ranks the funds}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Rechecked: ratio 1.00375, about 0.4%.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 149,
+   "sentence": "Who benefits: If the Board adds money, the offices it funds ... gain; if it cuts, taxpayers and the county's savings gain.",
+   "marker": "{analysis: both directions are allowed (P-047)}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 150,
+   "sentence": "Who pays: If the Board adds money, taxpayers, other programs or savings pay; if it cuts, the offices cut ... pay.",
+   "marker": "{analysis}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 151,
+   "sentence": "What's uncertain: How much room 2027 revenue leaves, because the proposal isn't public yet.",
+   "marker": "{editorial}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 155,
+   "sentence": "What it does: It would have barred any cap on what county departments, and other offices and bodies the county funds, can request.",
+   "marker": "[P-030, P-005]",
+   "verdict": "supports",
+   "evidence_span": "No limits or caps shall be placed on what a department, agency, elected official, or authority can request.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 155,
+   "sentence": "It would have required the proposal to include all requests, including ones left out because of the 5% cap.",
+   "marker": "[P-030, P-031]",
+   "verdict": "supports",
+   "evidence_span": "that was omitted due to the 5% cap and shall have those requests included in the FY2027 Proposed Budget",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 155,
+   "sentence": "The resolution itself spent no money; it would have changed what is asked for and shown.",
+   "marker": "{analysis: based on its full text, P-027 to P-032, P-083 and P-084}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 156,
+   "sentence": "Where it stands: A motion to approve it failed on Oct 21, with 1 yes, 1 no, 2 not voting and 2 absent.",
+   "marker": "{computed: P-033 lists 1 \"Yea\", 1 \"Nay\", 2 \"Did Not Vote\" and 2 \"Absent\"}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Recounted P-033: Barrett Yea; Ellis Nay; Pitts, Arrington Did Not Vote; Thorne, Abdur-Rahman Absent.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 156,
+   "sentence": "The Board filed it on Nov 4, by 4 votes to 1.",
+   "marker": "{computed: P-034 lists 4 \"Yea\", 1 \"Nay\" and 1 \"Did Not Vote\"}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Recounted P-034: Pitts, Thorne, Ellis, Abdur-Rahman Yea; Barrett Nay; Arrington Did Not Vote.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 156,
+   "sentence": "Its record shows no later action.",
+   "marker": "[P-025]",
+   "verdict": "supports",
+   "evidence_span": "b. A substitute motion was made by Vice Chair Abdur-Rahman and seconded by Commissioner Thorne, to file.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 157,
+   "sentence": "Who benefits: Board members and the public would see every request in the draft.",
+   "marker": "{analysis: P-030 would require the proposal to include all requests}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 157,
+   "sentence": "Departments whose needs go beyond 5% could ask for the full amount.",
+   "marker": "{analysis: P-030 would bar caps on requests}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 157,
+   "sentence": "The resolution says listing requests in the proposed budget has let the Board \"get a true picture of the departments’ needs.\"",
+   "marker": "[P-028]",
+   "verdict": "supports",
+   "evidence_span": "which has allowed the Board of Commissioners to get a true picture of the departments’ needs",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 158,
+   "sentence": "Who pays: Budget staff would have had 25 days to add any omitted requests that departments chose to submit.",
+   "marker": "{computed: if adopted Oct 21 (P-025), the proposal was due Nov 15 (P-031), 25 days later; P-031 gives departments \"the opportunity to submit\" omitted requests}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Rechecked: Oct 21 to Nov 15 is 25 days; P-084 makes it effective on adoption.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 159,
+   "sentence": "What's uncertain: Whether listing every request would change what the Board funds, since the Board can add or cut either way.",
+   "marker": "{editorial}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 163,
+   "sentence": "The Fulton County Board of Commissioners' votes are listed under What happened, on the Summary tab.",
+   "marker": "{analysis: P-020, P-023, P-033 and P-034}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 163,
+   "sentence": "The cards don't use the votes as evidence for either side, because the records don't give each member's reasons.",
+   "marker": "{editorial: evidence rule; the minutes record votes only (P-088, P-092)}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 163,
+   "sentence": "The Budget Commission is a four-member panel, two commissioners and two county staff, that must propose the budget.",
+   "marker": "[P-005, P-008]",
+   "verdict": "supports",
+   "evidence_span": "The budget commission shall be composed of four (4) members",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 163,
+   "sentence": "Our archived sources quote one commissioner, Bob Ellis, backing the commission process.",
+   "marker": "{analysis: P-073, P-079}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Checked: Abdur-Rahman was not reached (P-073); no other commissioner is quoted in support. P-079 is a paraphrase, P-073 the quotes.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 163,
+   "sentence": "They also include Resolution 26-0460, which Ellis and Vice Chair Abdur-Rahman sponsored and which states its reasons.",
+   "marker": "{analysis: P-004, P-016}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 163,
+   "sentence": "They quote Chief Probate Judge Kenya Johnson, Sheriff Patrick Labat and Commissioner Dana Barrett criticizing the process, plus Solicitor-General Keith Gammage on funding.",
+   "marker": "{analysis: P-078, P-072, P-071 and P-077}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 163,
+   "sentence": "They also include Resolution 26-0729, which Barrett sponsored and which states its reasons.",
+   "marker": "{analysis: P-027 to P-032}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 163,
+   "sentence": "That reflects whom the sources quoted, not how many people hold each view.",
+   "marker": "{editorial}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 163,
+   "sentence": "The county code mentioned on the cards is the Fulton County Code of Ordinances, the county's local laws.",
+   "marker": "[P-017]",
+   "verdict": "supports",
+   "evidence_span": "to amend Section 2-261 of the Fulton County Code of Ordinances",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 165,
+   "sentence": "The 5% limit holds departments' requests for extra money to 5% of current funding, Resolution 26-0729 and FOX 5 say.",
+   "marker": "[P-029, P-024, P-077, P-080]",
+   "verdict": "supports",
+   "evidence_span": "limit any request for additional funding to 5% above current allocations",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 165,
+   "sentence": "No archived record or statement gives a reason for the limit, or for filing, or setting aside, the resolution to remove it.",
+   "marker": "{analysis: none of the archived records or statements does; the minutes and the unreviewed meeting video are noted in Layer 5}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Checked: P-088 and P-092 give votes only; P-073 and P-079 don't mention the limit; P-049 and P-050 concern 2026.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 165,
+   "sentence": "Atlanta News First said it was still waiting to hear back from the vice chair, who serves on the commission.",
+   "marker": "[P-073, P-021]",
+   "verdict": "supports",
+   "evidence_span": "Atlanta News First is still waiting to hear back from Commissioner Khadijah Abdur-Rahman.",
+   "correct_passage": "",
+   "problem": "Accurate, but P-073 doesn't say what she was asked about (the article's context is Barrett's allegation about the commission). Placed right after 'no ... statement gives a reason for the limit', it can imply she was asked about the limit and didn't answer.",
+   "suggested_fix": "Move it next to Ellis's response, or add: 'about Commissioner Barrett's criticism of the commission.'"
+  },
+  {
+   "line": 165,
+   "sentence": "The leaders of six justice offices asked for more money: the sheriff, district attorney, solicitor-general, court clerk, probate judge and public defender.",
+   "marker": "[P-069, P-070]",
+   "verdict": "supports",
+   "evidence_span": "The officials are also calling for more funding",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 165,
+   "sentence": "No 2027 source we archived argued against more money for those offices.",
+   "marker": "{analysis: none of the archived statements does}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "No archived statement argues against it. Context: the 5% directive itself (P-029, P-077) is a 2027 constraint on requests, though not an argument; the 2026 budget message's 'no additional resources available' (P-049) is pre-2027.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 169,
+   "sentence": "Every card uses the same fields, and one rule sets every evidence label.",
+   "marker": "{editorial: labeling rule}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 169,
+   "sentence": "\"Supported\" means a record that settles the point backs the claim.",
+   "marker": "{editorial: labeling rule}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 169,
+   "sentence": "For what a rule says, that record is the rule's own text.",
+   "marker": "{editorial: labeling rule}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 169,
+   "sentence": "For money, needs or effects, it is a county record written by someone other than the people making the claim...",
+   "marker": "{editorial: labeling rule}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 169,
+   "sentence": "\"Uncertain\" means only statements or requests by the people making the claim back it, no record settles it, or the key document isn't out yet.",
+   "marker": "{editorial: labeling rule}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 169,
+   "sentence": "\"A values question\" means that part of the claim is about what is fair or right, not mainly about facts.",
+   "marker": "{editorial: labeling rule}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 169,
+   "sentence": "When a card makes more than one claim, each part gets its own label.",
+   "marker": "{editorial: labeling rule}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 169,
+   "sentence": "A claim type says \"with a values question\" when the card also asks what is fair or right, and the label names that question.",
+   "marker": "{editorial: labeling rule}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 169,
+   "sentence": "\"Documented\" means a real person or body made the argument, and we cite where.",
+   "marker": "{editorial: labeling rule}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 169,
+   "sentence": "Cards are paired by topic: who drafts (1 and 2), requests and openness (3 and 4), then timing (5) and funding (6).",
+   "marker": "{editorial: ordering rule}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 169,
+   "sentence": "The first pair starts with the case for the current process, and the second with the case against it; the order is not a ranking.",
+   "marker": "{editorial: ordering rule}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Matches the cards: 1 supports, 2 critical; 3 critical, 4 supports.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 171,
+   "sentence": "Six justice officials, the sheriff, district attorney, solicitor-general, superior court clerk, chief probate judge and public defender, call themselves \"Justice Leaders.\"",
+   "marker": "[P-076]",
+   "verdict": "supports",
+   "evidence_span": "The coalition calling themselves \"Justice Leaders,\" which includes the sheriff, district attorney, superior court clerk, solicitor general, probate court chief judge and public defender",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 171,
+   "sentence": "Their letter is not on any page we could find.",
+   "marker": "{analysis: see README, D6}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 171,
+   "sentence": "Their views, and Ellis's statements, come from two news reports published Oct 7, 2026, the day of the officials' news conference on the courthouse steps.",
+   "marker": "[P-068, P-069, P-074, P-080]",
+   "verdict": "supports",
+   "evidence_span": "County leaders held a news conference on the steps of the Fulton County Courthouse Wednesday morning",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 171,
+   "sentence": "The resolutions quoted below are Board records: Resolution 26-0460 (Ellis, Abdur-Rahman; adopted Aug 5, 2026) and Resolution 26-0729 (Barrett; its motion to approve failed Oct 21, and it was filed, or set aside, Nov 4).",
+   "marker": "[P-016, P-017, P-024, P-032]",
+   "verdict": "supports",
+   "evidence_span": "(Barrett) (MOTION TO APPROVE FAILED ON 10/21/26) (FILED)",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 177,
+   "sentence": "In short: North and south Fulton would each have a commissioner shaping the draft, and the full Board still votes.",
+   "marker": "{analysis: P-004, P-008 and P-014}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 177,
+   "sentence": "Resolution 26-0460 calls this \"earlier and ongoing input\" from Board members.",
+   "marker": "[P-004, P-017]",
+   "verdict": "supports",
+   "evidence_span": "with earlier and ongoing input from members of the Board",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 177,
+   "sentence": "The county code confirms these rules; results wait on the draft.",
+   "marker": "{analysis: P-007 to P-015; the draft is due by Nov 15 (P-005)}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 178,
+   "sentence": "Who says it: Commissioner Bob Ellis and Vice Chair Khadijah Abdur-Rahman sponsored Resolution 26-0460.",
+   "marker": "[P-016, P-017]",
+   "verdict": "supports",
+   "evidence_span": "SPONSORED BY: Bob Ellis, Commissioner (District 2) CO-SPONSORED BY: Khadijah Abdur-Rahman, Vice Chair (District 6)",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 178,
+   "sentence": "It says the new commission is \"structured to ensure balanced representation from both the northern and southern portions of Fulton County.\"",
+   "marker": "[P-004]",
+   "verdict": "supports",
+   "evidence_span": "structured to ensure balanced representation from both the northern and southern portions of Fulton County",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 178,
+   "sentence": "It says the design preserves \"the full Board's exclusive authority to adopt the County's annual budget.\"",
+   "marker": "[P-004]",
+   "verdict": "supports",
+   "evidence_span": "while preserving the full Board's exclusive authority to adopt the County's annual budget",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 178,
+   "sentence": "It says a budget commission drafted the budget from 1953 until 2018.",
+   "marker": "[P-002, P-003]",
+   "verdict": "supports",
+   "evidence_span": "the 2016 budget ordinance maintained the use of a budget commission composed of the chairman of the board of commissioners, the county manager, and the chief financial officer",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 178,
+   "sentence": "Ellis said the full Board will review and vote on the final budget, FOX 5 reported.",
+   "marker": "[P-079, P-080]",
+   "verdict": "supports",
+   "evidence_span": "the full Board of Commissioners will review and vote on the final budget",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 179,
+   "sentence": "What supports it: The code says the commission can't adopt, amend or approve the budget.",
+   "marker": "[P-014]",
+   "verdict": "supports",
+   "evidence_span": "Nothing in this code section shall be construed to grant the budget commission authority to adopt, amend, or approve the County budget.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 179,
+   "sentence": "Only the full Board can.",
+   "marker": "[P-014]",
+   "verdict": "supports",
+   "evidence_span": "Final authority to adopt the annual budget remains exclusively with the full board of commissioners",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 179,
+   "sentence": "The county manager and chief financial officer still prepare the budget documents.",
+   "marker": "[P-012]",
+   "verdict": "supports",
+   "evidence_span": "shall retain administrative responsibility for budget preparation and presentation, including preparing budget documents",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 179,
+   "sentence": "The two commissioners must ask all commissioners for their budget priorities and report to the full Board.",
+   "marker": "[P-013]",
+   "verdict": "supports",
+   "evidence_span": "report periodically to the full board of commissioners on the status of budget development",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 179,
+   "sentence": "The code says they stand for \"the policy priorities of the full board of commissioners.\"",
+   "marker": "[P-007]",
+   "verdict": "supports",
+   "evidence_span": "with the policy priorities of the full board of commissioners, as represented by two commissioners selected in accordance with this code section",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 179,
+   "sentence": "It also says each represents \"the interests and priorities of their respective district grouping.\"",
+   "marker": "[P-013]",
+   "verdict": "supports",
+   "evidence_span": "represent the interests and priorities of their respective district grouping throughout the budget development process",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 180,
+   "sentence": "Who disagrees: FOX 5 reported that the justice officials' main objection is to presenting their needs to a two-commissioner panel rather than the full Board.",
+   "marker": "[P-076, P-080]",
+   "verdict": "supports",
+   "evidence_span": "Their primary objection centers on a new framework that require department heads to present critical funding needs to a two-commissioner panel rather than the full board.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 180,
+   "sentence": "Commissioner Dana Barrett said the two are \"creating a budget commission that only they qualify to be on.\"",
+   "marker": "[P-072]",
+   "verdict": "supports",
+   "evidence_span": "creating a budget commission that only they qualify to be on.",
+   "correct_passage": "",
+   "problem": "'The two' relies on line 178 for its referent; P-072 names Ellis and Abdur-Rahman.",
+   "suggested_fix": "...said Ellis and Abdur-Rahman are \"creating...\""
+  },
+  {
+   "line": 181,
+   "sentence": "What challenges it: The 1953-2018 commission's only Board member was the chairman, who serves at large; the new one has two district commissioners instead.",
+   "marker": "[P-002, P-003, P-008, P-035]",
+   "verdict": "supports",
+   "evidence_span": "a budget commission composed of the chairman of the board of commissioners, the county manager, and the chief financial officer",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 181,
+   "sentence": "In the 2026 cycle, the adopted General Fund ... ended about 0.4% above the county manager's proposal, though some lines moved by millions of dollars.",
+   "marker": "{computed: $1,057,100,578 ÷ $1,053,152,000 ≈ 1.004 (P-054 ...); for example, the \"Consent Decree\" line rose by $18,157,000 (P-054)}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Arithmetic is right. Note the card uses the Board's small net change to the manager's draft as a challenge to the commission; the inference is thin, but it is labeled computed and hedged.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 181,
+   "sentence": "Commissioner Barrett's Resolution 26-0729 says the commission failed its duty to ask all commissioners for their priorities when it set the 5% cap.",
+   "marker": "[P-029, P-032, P-024]",
+   "verdict": "supports",
+   "evidence_span": "the Budget Commission failed to uphold its required duty to",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 182,
+   "sentence": "What's missing: Apart from that claim, we found no record on whether the two asked every commissioner for priorities.",
+   "marker": "{analysis: none in the sources reviewed; the claim is in P-029}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 183,
+   "sentence": "What's uncertain: Whether the budget will differ from one drafted by the county manager alone.",
+   "marker": "{editorial}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 183,
+   "sentence": "The draft isn't out, and there is no other draft to compare.",
+   "marker": "{analysis: P-045, captured Nov 8, 2026}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 189,
+   "sentence": "In short: Department heads must present their needs to two commissioners, not the full Board, critics say.",
+   "marker": "[P-076]",
+   "verdict": "supports",
+   "evidence_span": "require department heads to present critical funding needs to a two-commissioner panel rather than the full board",
+   "correct_passage": "",
+   "problem": "Minor: the panel also includes the county manager and CFO (P-008); the sentence carries the critics' framing, and it is attributed.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 189,
+   "sentence": "Commissioner Barrett said the rules let only those two serve.",
+   "marker": "[P-072]",
+   "verdict": "supports",
+   "evidence_span": "creating a budget commission that only they qualify to be on",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 189,
+   "sentence": "Who serves is on record; the two commissioners' effect on the draft isn't known yet.",
+   "marker": "{analysis: P-021; the draft is due by Nov 15 (P-005)}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 190,
+   "sentence": "Who says it: Chief Probate Judge Kenya Johnson spoke for the group.",
+   "marker": "[P-078]",
+   "verdict": "supports",
+   "evidence_span": "Fulton County Chief Probate Judge Kenya Johnson, speaking on behalf of the coalition",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 190,
+   "sentence": "Johnson said, \"We respectfully decline to participate in a process that unnecessarily limits the voices of the justice system.\"",
+   "marker": "[P-078]",
+   "verdict": "supports",
+   "evidence_span": "We respectfully decline to participate in a process that unnecessarily limits the voices of the justice system",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 190,
+   "sentence": "FOX 5 reported that Sheriff Patrick Labat criticized the two-commissioner arrangement as unfair to county agencies and taxpayers.",
+   "marker": "[P-078, P-080]",
+   "verdict": "supports",
+   "evidence_span": "Sheriff Patrick Labat criticized the two-commissioner arrangement as unfair to county agencies and taxpayers.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 190,
+   "sentence": "Labat said, \"For two commissioners to take a hold of this project—hijack this process is simply unfair.\"",
+   "marker": "[P-078]",
+   "verdict": "supports",
+   "evidence_span": "For two commissioners to take a hold of this project—hijack this process is simply unfair",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 190,
+   "sentence": "Commissioner Dana Barrett said the two are \"creating a budget commission that only they qualify to be on.\"",
+   "marker": "[P-072]",
+   "verdict": "supports",
+   "evidence_span": "creating a budget commission that only they qualify to be on.",
+   "correct_passage": "",
+   "problem": "'The two' is vague here; P-072 names Ellis and Abdur-Rahman.",
+   "suggested_fix": "Commissioner Dana Barrett said Ellis and Abdur-Rahman are \"creating...\""
+  },
+  {
+   "line": 190,
+   "sentence": "Barrett also said, \"There are some shenanigans among some of the current board members who are angling to take control of the budget process in a way that I feel is inappropriate.\"",
+   "marker": "[P-072]",
+   "verdict": "supports",
+   "evidence_span": "There are some shenanigans among some of the current board members who are angling to take control of the budget process in a way that I feel is inappropriate",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 191,
+   "sentence": "What supports it: Ellis and Abdur-Rahman, the commission's two commissioners, sponsored the rules that decide who serves.",
+   "marker": "[P-016, P-017, P-021]",
+   "verdict": "supports",
+   "evidence_span": "SPONSORED BY: Bob Ellis, Commissioner (District 2) CO-SPONSORED BY: Khadijah Abdur-Rahman, Vice Chair (District 6)",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 191,
+   "sentence": "Under those rules, which require a year on the Board and a term not ending in 2026, Ellis was the only eligible member from districts 1 to 3 for the 2027 budget.",
+   "marker": "[P-021, P-010]",
+   "verdict": "supports",
+   "evidence_span": "Commissioner Ellis is the only eligible Commissioner to serve as the Northern Representative and will serve without nomination",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 191,
+   "sentence": "The vice chair served automatically.",
+   "marker": "[P-021, P-011]",
+   "verdict": "supports",
+   "evidence_span": "Vice Chair Abdur-Rahman is eligible to serve as the Southern Representative and will serve without nomination pursuant to F.C.C. Sec. 2-263(e)(1).",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 191,
+   "sentence": "Neither Ellis nor the vice chair needed a nomination by their district group; the Board approved the item naming them on Aug 19.",
+   "marker": "[P-021, P-022, P-009]",
+   "verdict": "supports",
+   "evidence_span": "Where application of the eligibility or Vice Chair provisions leaves only one eligible Commissioner to serve within a district grouping, nomination by that group is not necessary.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 191,
+   "sentence": "The county's notice lists the hearings as \"Special called meetings of the Fulton County Budget Commission.\"",
+   "marker": "[P-042]",
+   "verdict": "supports",
+   "evidence_span": "Special called meetings of the Fulton County Budget Commission will be conducted",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 191,
+   "sentence": "The two \"participate directly and continuously with the county manager and chief financial officer,\" including in reviewing departments' requests.",
+   "marker": "[P-013]",
+   "verdict": "supports",
+   "evidence_span": "participate directly and continuously with the county manager and chief financial officer throughout the budget development process, including review of departmental requests",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 191,
+   "sentence": "The code has the commission help prepare the recommended budget it presents to the full Board.",
+   "marker": "[P-013, P-015]",
+   "verdict": "supports",
+   "evidence_span": "participate with the county manager and chief financial officer in preparing the recommended budget for presentation to the full board of commissioners",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 192,
+   "sentence": "Who disagrees: Commissioner Bob Ellis said, \"They are speaking and addressing the budget commission just like a standard committee structure.\"",
+   "marker": "[P-073]",
+   "verdict": "supports",
+   "evidence_span": "They are speaking and addressing the budget commission just like a standard committee structure",
+   "correct_passage": "",
+   "problem": "Minor: the quote ends mid-sentence in the source ('..., but all commissioners...'); the closing period inside the quote marks is added.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 192,
+   "sentence": "Ellis added that \"all commissioners and their staff are able to attend and hear what is said.\"",
+   "marker": "[P-073]",
+   "verdict": "supports",
+   "evidence_span": "all commissioners and their staff are able to attend and hear what is said",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 192,
+   "sentence": "FOX 5 reported that Ellis, addressing the officials' concerns, noted that the commission is solely responsible for drafting recommendations and that the full Board will review and vote on the final budget.",
+   "marker": "[P-079, P-080]",
+   "verdict": "supports",
+   "evidence_span": "noting that the Budget Commission is solely responsible for drafting recommendations and that the full Board of Commissioners will review and vote on the final budget",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 193,
+   "sentence": "What challenges it: The commission can't adopt or change the budget.",
+   "marker": "[P-014]",
+   "verdict": "supports",
+   "evidence_span": "Nothing in this code section shall be construed to grant the budget commission authority to adopt, amend, or approve the County budget.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 193,
+   "sentence": "It has four members, and two are county staff: the county manager and the chief financial officer.",
+   "marker": "[P-008]",
+   "verdict": "supports",
+   "evidence_span": "The budget commission shall be composed of four (4) members: (1) The county manager; (2) The chief financial officer;",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 193,
+   "sentence": "When it can't agree, the county manager decides how to present the draft.",
+   "marker": "[P-014]",
+   "verdict": "supports",
+   "evidence_span": "Where differences arise or consensus on an issue cannot be reached, the County Manager shall determine the best approach forward",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 193,
+   "sentence": "The rules choose the two commissioners again before each budget cycle.",
+   "marker": "[P-009]",
+   "verdict": "supports",
+   "evidence_span": "Prior to the commencement of each annual budget development cycle",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 193,
+   "sentence": "Each of the six offices had a hearing slot, and FOX 5 reported that they sent their requests in writing.",
+   "marker": "[P-043, P-044, P-080]",
+   "verdict": "supports",
+   "evidence_span": "all participating justice department leaders confirmed they have submitted their formal 2027 budget requests in writing",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 194,
+   "sentence": "What's missing: We did not find the justice officials' letter, so their statements come from news reports.",
+   "marker": "{analysis: see README, D6}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 194,
+   "sentence": "Our sources don't say why the other two commissioners from districts 1 to 3 were not eligible.",
+   "marker": "{analysis: P-021 gives no reason; P-010 lists the grounds, less than a year on the Board or a term ending in 2026}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 195,
+   "sentence": "What's uncertain: How much the two commissioners shape the draft, because it isn't out yet.",
+   "marker": "{editorial}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 201,
+   "sentence": "In short: If the claim is right, the draft won't show departments' full requests.",
+   "marker": "{analysis: what the card's claim would mean}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 201,
+   "sentence": "Resolution 26-0729 says the 5% limit makes the county code's rule on requests \"effectively\" impossible to meet.",
+   "marker": "[P-029, P-024]",
+   "verdict": "supports",
+   "evidence_span": "the Budget Commission is effectively making its mandate to submit a proposed budget that includes the budget requests of the County’s departments impossible",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 201,
+   "sentence": "The code and budget book back part; the rest is unsettled.",
+   "marker": "{analysis: the label above names each part}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 202,
+   "sentence": "Who says it: Commissioner Barrett's Resolution 26-0729 calls the cap an \"unprecedented restriction.\"",
+   "marker": "[P-029, P-032, P-024]",
+   "verdict": "supports",
+   "evidence_span": "in implementing this unprecedented restriction on the departments",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 202,
+   "sentence": "It says across-the-board spending cuts and caps let \"legacy spending\" go unchecked \"while new and often necessary funding is denied.\"",
+   "marker": "[P-028]",
+   "verdict": "supports",
+   "evidence_span": "as they allow legacy spending in some departments to go unchecked while new and often necessary funding is denied",
+   "correct_passage": "",
+   "problem": "Minor: drops 'in some departments' after 'legacy spending'.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 202,
+   "sentence": "It says the Government Finance Officers Association calls such \"spending cuts or caps\" a sign of weak budgeting.",
+   "marker": "[P-028]",
+   "verdict": "supports",
+   "evidence_span": "identifies across-the- board spending cuts or caps as a symptom of weak budget development practices",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 202,
+   "sentence": "It cites advice from The Pew Charitable Trusts to \"resist the temptation\" of across-the-board cuts.",
+   "marker": "[P-028]",
+   "verdict": "supports",
+   "evidence_span": "resist the temptation to make indiscriminate, across-the-board budget cuts",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 202,
+   "sentence": "It says the county has long listed departments' extra requests in its public proposed budget.",
+   "marker": "[P-028]",
+   "verdict": "supports",
+   "evidence_span": "Fulton County has traditionally included departmental budget “enhancement requests” in its publicly available Proposed Budget",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 202,
+   "sentence": "It says that let the Board \"get a true picture of the departments’ needs\" and adjust the budget.",
+   "marker": "[P-028]",
+   "verdict": "supports",
+   "evidence_span": "to get a true picture of the departments’ needs and to make adjustments to the budget based on these requests",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 202,
+   "sentence": "The justice officials raised concerns about the limit, FOX 5 reported.",
+   "marker": "[P-077, P-080]",
+   "verdict": "supports",
+   "evidence_span": "The justice leaders also raised concerns over a directive asking all county departments to limit any request for additional funding",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 203,
+   "sentence": "What supports it: The code says the draft \"shall include the budget requests of all of the county's departments.\"",
+   "marker": "[P-005]",
+   "verdict": "supports",
+   "evidence_span": "shall include the budget requests of all of the county's departments",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 203,
+   "sentence": "In the 2026 cycle, \"All submissions were received and carefully reviewed,\" and extra requests were \"included as an appendix.\"",
+   "marker": "[P-049, P-046]",
+   "verdict": "supports",
+   "evidence_span": "All submissions were received and carefully reviewed",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 203,
+   "sentence": "The resolution says department budgets changed by \"a decrease of 4 percent to an increase of 43 percent\" from FY2025 to FY2026.",
+   "marker": "[P-028]",
+   "verdict": "supports",
+   "evidence_span": "ranged from a decrease of 4 percent to an increase of 43 percent",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 203,
+   "sentence": "It says 27 of the county's 41 General Fund departments and agencies asked for more than 5% for 2026, and 14 of them got increases above 5%.",
+   "marker": "[P-029]",
+   "verdict": "supports",
+   "evidence_span": "27 of the county’s 41 General Fund departments and agencies submitted budget enhancement requests exceeding 5% of their base budgets and 14 of them received budget increases that exceeded 5%",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 203,
+   "sentence": "The public defender's posted 2027 slides list six requests totaling $4,720,447.",
+   "marker": "{computed: $76,981 + $3,793,366 + $755,884 + $30,000 + $58,000 + $6,216 = $4,720,447 (P-064)}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Rechecked the sum: 4,720,447.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 203,
+   "sentence": "That is about 3.3 times 5% of the office's 2026 budget.",
+   "marker": "{computed: 5% of $28,395,566 = $1,419,778 (P-054); $4,720,447 ÷ $1,419,778 ≈ 3.3}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Rechecked: 1,419,778.3; ratio 3.32. Caveat: the cap is on the 2027 'base budget' (P-029), which may differ from the 2026 adopted line; the sentence says '2026 budget' explicitly.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 204,
+   "sentence": "Who disagrees: No one in the sources we reviewed disputed this directly.",
+   "marker": "{analysis: none of Ellis's archived statements, or Resolution 26-0460, mentions the limit}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Checked: no passage states a counter-argument. Ellis's no vote (P-033) and the 4-1 vote to file (P-034) are actions against the resolution without stated reasons; the next sentence notes this.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 204,
+   "sentence": "The minutes record votes on the resolution, but no reasons (see What happened).",
+   "marker": "{analysis: P-088 and P-092}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 205,
+   "sentence": "What challenges it: The county's 2026 budget resolution says state law lets the Board adopt amounts \"greater or less than the sums presented in the proposed budget.\"",
+   "marker": "[P-047, P-046]",
+   "verdict": "supports",
+   "evidence_span": "whether greater or less than the sums presented in the proposed budget",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 205,
+   "sentence": "In 2026, the Board adopted more than the draft for four of the six justice offices.",
+   "marker": "{computed: P-054: the sheriff, public defender, solicitor-general and superior court clerk lines rose ...; the district attorney and probate court lines didn't change}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Rechecked P-054: Sheriff +388,116; Public Defender +381,857; Solicitor General +1,543,705; Superior & Magistrate Court - Clerk +370,750; District Attorney and Probate Court unchanged.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 205,
+   "sentence": "As the resolution quotes them, the finance officers' association and Pew speak of across-the-board spending cuts or caps, not limits on requests.",
+   "marker": "{analysis: P-028}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Minor imprecision: as quoted, Pew speaks only of 'across-the-board budget cuts'; only GFOA mentions caps.",
+   "suggested_fix": "...the finance officers' association speaks of spending cuts or caps, and Pew of budget cuts, not limits on requests."
+  },
+  {
+   "line": 205,
+   "sentence": "The resolution and FOX 5 describe the limit as applying to requests for extra money.",
+   "marker": "[P-029, P-077, P-080]",
+   "verdict": "supports",
+   "evidence_span": "limit any request for additional funding to 5% above current allocations",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 205,
+   "sentence": "For the 2026 budget, the county described its \"Base Budget\" as the current funding needed for past spending patterns, including staff.",
+   "marker": "[P-086]",
+   "verdict": "supports",
+   "evidence_span": "This represents the current funding needed to address historical spending patterns including personnel expenditures",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 205,
+   "sentence": "The resolution says departments may describe broader needs, but only \"in narrative form.\"",
+   "marker": "[P-029]",
+   "verdict": "supports",
+   "evidence_span": "only allows departments to describe broader needs in narrative form",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 205,
+   "sentence": "Outside the draft, at least one office's requests above 5% are public: the public defender's posted slides list $4,720,447 in requests.",
+   "marker": "{analysis: P-057 and P-064; \"above 5%\" is measured against its 2026 budget, as under What supports it}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 206,
+   "sentence": "What's missing: We did not find the commission's written 5% instruction.",
+   "marker": "{analysis: see README, D4}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 206,
+   "sentence": "We did not check the resolution's figures against budget books.",
+   "marker": "{analysis: scope note}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 206,
+   "sentence": "We did not check past years' budget instructions for earlier limits on requests.",
+   "marker": "{analysis: scope note}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 206,
+   "sentence": "The minutes give no reasons for the limit, and we did not review the meeting video, where reasons may have been given.",
+   "marker": "{analysis: P-088 to P-093; see sources.yaml, S16}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 207,
+   "sentence": "What's uncertain: Whether the Nov 15 draft will show requests above 5%.",
+   "marker": "{editorial}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 207,
+   "sentence": "Whether a cap fits the code's rule on requests; the code mentions no cap, and no source we reviewed settles it.",
+   "marker": "{analysis: P-005 to P-015; P-029 argues it does not fit}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 207,
+   "sentence": "The jail agreement is the county's January 2025 agreement with the federal Department of Justice \"to address constitutional violations at the Fulton County Jail.\"",
+   "marker": "[P-048]",
+   "verdict": "supports",
+   "evidence_span": "to address constitutional violations at the Fulton County Jail",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 207,
+   "sentence": "Budget documents call meeting that agreement \"consent decree compliance.\"",
+   "marker": "[P-048]",
+   "verdict": "supports",
+   "evidence_span": "We were challenged with navigating consent decree compliance",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 207,
+   "sentence": "Whether the limit covers costs tied to court orders or the jail agreement, such as the sheriff's \"Consent Decree Compliance\" and \"Court Ordered Contract\" requests.",
+   "marker": "{analysis: P-061; the limit's descriptions (P-029, P-077) don't say, and in 2026 consent decree money sat in its own line (P-054)}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 213,
+   "sentence": "In short: If the claim is right, other commissioners and their staff can follow the commission's work.",
+   "marker": "{analysis: what the card's claim would mean}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 213,
+   "sentence": "Commissioner Bob Ellis said the commission's meetings are \"open meetings.\"",
+   "marker": "[P-073]",
+   "verdict": "supports",
+   "evidence_span": "Those meetings are open meetings.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 213,
+   "sentence": "Records back the announced hearings; the \"recent years\" comparison rests on Ellis's statement.",
+   "marker": "{analysis: P-042 and P-055 to P-058; the comparison is in P-073}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 214,
+   "sentence": "Who says it: Ellis said, \"Those meetings are open meetings.\"",
+   "marker": "[P-073]",
+   "verdict": "supports",
+   "evidence_span": "We have a budget commission. Those meetings are open meetings.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 214,
+   "sentence": "Ellis also said, \"The process we’ve laid out is more transparent and open than anything we’ve had in recent years.\"",
+   "marker": "[P-073]",
+   "verdict": "supports",
+   "evidence_span": "The process we’ve laid out is more transparent and open than anything we’ve had in recent years",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 215,
+   "sentence": "What supports it: The county posted a public notice for the commission's six days of hearings.",
+   "marker": "[P-042]",
+   "verdict": "supports",
+   "evidence_span": "October 2026 PUBLIC NOTICE Fulton County Budget Commission - SPECIAL CALLED MEETINGS",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 215,
+   "sentence": "Several offices' 2027 presentations are on the county's data website.",
+   "marker": "[P-055, P-056, P-057, P-058, P-094, P-095]",
+   "verdict": "supports",
+   "evidence_span": "\"name\" : \"Solicitor General Budget Presentation_2027\"",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 215,
+   "sentence": "They include the sheriff's and the public defender's.",
+   "marker": "[P-055, P-057]",
+   "verdict": "supports",
+   "evidence_span": "\"name\" : \"Public Defender Budget Presentation_2027\"",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 215,
+   "sentence": "The code requires the two commissioners to report to the full Board on the budget's progress.",
+   "marker": "[P-013]",
+   "verdict": "supports",
+   "evidence_span": "report periodically to the full board of commissioners on the status of budget development",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 215,
+   "sentence": "The Board's Oct 21 and Nov 4 meetings each took up an update on the budget process.",
+   "marker": "[P-096, P-089, P-090, P-093]",
+   "verdict": "supports",
+   "evidence_span": "Update on the Budget Committee and the budget approval process. (Abdur-Rahman) (APPROVED TO ADD/DISCUSSED)",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 216,
+   "sentence": "Who disagrees: Resolution 26-0729 sought \"to ensure transparency,\" by requiring every department's request to be \"disclosed in the proposed budget.\"",
+   "marker": "[P-024]",
+   "verdict": "supports",
+   "evidence_span": "to require that all departmental budget requests are disclosed in the proposed budget",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 216,
+   "sentence": "Judge Johnson, speaking for the justice officials, objected to \"a process that unnecessarily limits the voices of the justice system.\"",
+   "marker": "[P-078]",
+   "verdict": "supports",
+   "evidence_span": "a process that unnecessarily limits the voices of the justice system",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 216,
+   "sentence": "The resolution does not say the meetings were closed.",
+   "marker": "{analysis: its full text is archived in P-027 to P-032, P-083 and P-084}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 217,
+   "sentence": "What challenges it: The resolution says departments may describe broader needs only \"in narrative form.\"",
+   "marker": "[P-029]",
+   "verdict": "supports",
+   "evidence_span": "only allows departments to describe broader needs in narrative form",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 217,
+   "sentence": "The 2026 cycle also held formal hearings; the county \"reinstated formal budget hearings\" that year.",
+   "marker": "[P-049, P-046]",
+   "verdict": "supports",
+   "evidence_span": "The County reinstated formal budget hearings allowing department and agencies the platform",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 217,
+   "sentence": "The 2026 budget message said extra requests were \"included as an appendix.\"",
+   "marker": "[P-049, P-046]",
+   "verdict": "supports",
+   "evidence_span": "The enhancement submissions are included as an appendix",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 217,
+   "sentence": "The Oct 21 update was added to that day's agenda at the meeting itself, and the minutes don't record what either update said.",
+   "marker": "[P-096, P-089, P-090, P-093]",
+   "verdict": "supports",
+   "evidence_span": "to approve adding item #26-0735 to the Second Regular Meeting Agenda",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 218,
+   "sentence": "What's missing: We did not find the commission's written instructions to departments.",
+   "marker": "{analysis: see README, D4}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 218,
+   "sentence": "We did not check Ellis's comparison against older records.",
+   "marker": "{analysis: scope note}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 218,
+   "sentence": "Ellis's statements, like the officials', come from two news reports.",
+   "marker": "{analysis: P-073 and P-079}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 219,
+   "sentence": "What's uncertain: Whether the commission's other meetings, beyond the October hearings, are publicly announced and open.",
+   "marker": "{analysis: the only notice we found is for the October hearings (P-042), and the code lets the county manager and chief financial officer set its schedule (P-015)}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 225,
+   "sentence": "In short: Waiting until January would give incoming board members a say in the 2027 budget, Atlanta News First reported.",
+   "marker": "[P-070]",
+   "verdict": "supports",
+   "evidence_span": "which would give incoming board members a say in the budget",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 225,
+   "sentence": "Justice officials asked the Board to wait.",
+   "marker": "[P-070]",
+   "verdict": "supports",
+   "evidence_span": "The group is asking commissioners to wait until January to approve the county’s 2027 spending plan",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 225,
+   "sentence": "We found no plan for a December vote; whether to wait is a values question.",
+   "marker": "{analysis: no notice or record we archived sets a December vote (P-041, P-042); Ellis said there is no talk of an early vote (P-073)}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Minor: the relevant December meetings (Dec 2, Dec 16) are on the 2026 schedule (P-039), not P-041; no record sets a budget vote at either.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 226,
+   "sentence": "Who says it: The sheriff, district attorney, solicitor-general, court clerk, probate judge and public defender made this request, Atlanta News First reported.",
+   "marker": "[P-069, P-070]",
+   "verdict": "supports",
+   "evidence_span": "The group is asking commissioners to wait until January",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 227,
+   "sentence": "What supports it: In the 2026 cycle, the Board adopted its budget in January, on Jan 21, 2026.",
+   "marker": "[P-046]",
+   "verdict": "supports",
+   "evidence_span": "approved by the Board of Commissioners on January 21, 2026",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 227,
+   "sentence": "Atlanta News First reported that \"A January vote is normal protocol.\"",
+   "marker": "[P-070]",
+   "verdict": "supports",
+   "evidence_span": "A January vote is normal protocol",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 228,
+   "sentence": "Who disagrees: No one in the sources we reviewed disputed this directly.",
+   "marker": "{analysis: none of the archived statements does}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Checked: no passage argues for a December vote; Ellis's 'no talk of an early vote' (P-073) is not a dispute.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 229,
+   "sentence": "What challenges it: The deadline is \"no later than the second regular meeting in January,\" so an earlier vote is allowed.",
+   "marker": "[P-005]",
+   "verdict": "supports",
+   "evidence_span": "by no later than the second regular meeting in January of the year to which it applies",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 229,
+   "sentence": "Atlanta News First reported that \"current law does not prohibit commissioners from voting earlier.\"",
+   "marker": "[P-070]",
+   "verdict": "supports",
+   "evidence_span": "current law does not prohibit commissioners from voting earlier",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 230,
+   "sentence": "What's missing: We found no county notice of when the Board plans its hearing or vote.",
+   "marker": "{analysis: the newest notice on Nov 8 was for October's hearings (P-042)}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 230,
+   "sentence": "Our sources don't say who the incoming board members are or when they take office.",
+   "marker": "{analysis: none of the archived sources does}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 231,
+   "sentence": "What's uncertain: When the Board will hold its hearing and vote, since no date is posted.",
+   "marker": "{editorial}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 231,
+   "sentence": "Commissioner Ellis said there is no talk of an early vote, Atlanta News First reported.",
+   "marker": "[P-073]",
+   "verdict": "supports",
+   "evidence_span": "Ellis also said there is no talk of an early vote.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 237,
+   "sentence": "In short: Funding could affect court delays, jail conditions and public safety, said justice officials seeking more money, Atlanta News First reported.",
+   "marker": "[P-069, P-070]",
+   "verdict": "supports",
+   "evidence_span": "warning that funding decisions could affect court delays, jail conditions and public safety",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 237,
+   "sentence": "County records back added costs of the jail agreement; other needs rest mainly on the offices' own accounts.",
+   "marker": "{analysis: P-048 to P-050 and P-054; P-061 to P-066}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 238,
+   "sentence": "Who says it: Solicitor-General Keith Gammage said, \"Each year we are underfunded.\"",
+   "marker": "[P-071]",
+   "verdict": "supports",
+   "evidence_span": "Each year we are underfunded.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 238,
+   "sentence": "Gammage said one investigator carries \"a caseload - upwards of 400.\"",
+   "marker": "[P-071]",
+   "verdict": "supports",
+   "evidence_span": "is one investigator to carry a caseload - upwards of 400",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 238,
+   "sentence": "Gammage also cited \"a lack of proper investment\" in the courts.",
+   "marker": "[P-077]",
+   "verdict": "supports",
+   "evidence_span": "a lack of proper investment in the entire ecosystem of the courts",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 238,
+   "sentence": "Atlanta News First reported that the officials said funding decisions could affect court delays, jail conditions and public safety.",
+   "marker": "[P-069]",
+   "verdict": "supports",
+   "evidence_span": "warning that funding decisions could affect court delays, jail conditions and public safety",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 239,
+   "sentence": "What supports it: The county says it entered the jail agreement \"to address constitutional violations at the Fulton County Jail.\"",
+   "marker": "[P-048]",
+   "verdict": "supports",
+   "evidence_span": "to address constitutional violations at the Fulton County Jail",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 239,
+   "sentence": "The county says the agreement \"mandated the County implement specific reforms,\" including \"improving staffing and supervision.\"",
+   "marker": "[P-048]",
+   "verdict": "supports",
+   "evidence_span": "mandated the County implement specific reforms to improve jail conditions, including providing better safety from violence",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 239,
+   "sentence": "The 2026 budget message said \"additional resources will be needed for consent decree compliance.\"",
+   "marker": "[P-049, P-046]",
+   "verdict": "supports",
+   "evidence_span": "additional resources will be needed for consent decree compliance",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 239,
+   "sentence": "It said these costs are \"expected to grow.\"",
+   "marker": "[P-050, P-046]",
+   "verdict": "supports",
+   "evidence_span": "as costs accelerate from partial year to full year recurring implementation, this number is expected to grow",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 239,
+   "sentence": "In the 2026 cycle, the Board raised consent decree funding from $31,843,000 to $50,000,000.",
+   "marker": "[P-054]",
+   "verdict": "supports",
+   "evidence_span": "- Consent Decree $ 31,843,000 21,213,868 (3,056,868) $ 50,000,000",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 239,
+   "sentence": "That is $18,157,000 more than proposed.",
+   "marker": "{computed: $50,000,000 − $31,843,000 = $18,157,000 (P-054)}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 239,
+   "sentence": "It raised the solicitor-general's budget from $14,605,358 to $16,149,063.",
+   "marker": "[P-054]",
+   "verdict": "supports",
+   "evidence_span": "Solicitor General 11,466,310 12,672,803 13,204,950 $ 14,605,358 2 76,000 1,267,705 $ 16,149,063",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 239,
+   "sentence": "The sheriff's 2027 budget slides call for a staffing plan \"to stabilize staffing and strengthen compliance.\"",
+   "marker": "[P-060, P-055]",
+   "verdict": "supports",
+   "evidence_span": "Implement a comprehensive staffing strategy that restores full-time positions",
+   "correct_passage": "",
+   "problem": "Minor: the slide is headed as 2026 challenges and resolutions (P-060's locator), inside the 2027 budget deck.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 239,
+   "sentence": "The slides also ask for more overtime funding \"to align with operational realities and Consent Decree mandates.\"",
+   "marker": "[P-060]",
+   "verdict": "supports",
+   "evidence_span": "Increase overtime funding allocation to align with operational realities and Consent Decree mandates.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 239,
+   "sentence": "The office's 2027 requests include \"Consent Decree Compliance.\"",
+   "marker": "[P-061, P-055]",
+   "verdict": "supports",
+   "evidence_span": "2027 ENHANCEMENT PRIORITIZATION Request Ranking Personnel Attraction/Retention/Recruitment 1 Consent Decree Compliance 1",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 239,
+   "sentence": "The solicitor-general's slides list \"Caseload Growth without proportional staffing\" as a challenge.",
+   "marker": "[P-062, P-056]",
+   "verdict": "supports",
+   "evidence_span": "CHALLENGES Caseload Growth without proportional staffing",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 239,
+   "sentence": "Those slides also cite outside advice that prosecutors \"should not carry workloads so large/complex that they endanger fairness, accuracy or the timely processing of charges.\"",
+   "marker": "[P-062]",
+   "verdict": "supports",
+   "evidence_span": "ABA advises that prosecutors should not carry workloads so large/complex that they endanger fairness, accuracy or the timely processing of charges.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 239,
+   "sentence": "The probate court says \"Insufficient staffing and rising caseloads cause backlogs and delays.\"",
+   "marker": "[P-065]",
+   "verdict": "supports",
+   "evidence_span": "Insufficient staffing and rising caseloads cause backlogs and delays in critical probate services.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 239,
+   "sentence": "It asks for 6 court clerks and 1 associate judge.",
+   "marker": "[P-066]",
+   "verdict": "supports",
+   "evidence_span": "6 Court Operations Specialists (Clerks) 1 1 Associate Judge 2",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 239,
+   "sentence": "The public defender asks for $3,793,366 for attorney positions.",
+   "marker": "[P-064]",
+   "verdict": "supports",
+   "evidence_span": "ATTORNEY POSITIONS: As outlined in Form H Summary Enhancement $3,793,366",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 240,
+   "sentence": "Who disagrees: No one in the sources we reviewed disputed this directly.",
+   "marker": "{analysis: none of the archived statements does}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Checked: the 5% directive (P-077) and the 2026 'no additional resources' line (P-049) are constraints, not stated disputes; the card lists P-049 under challenges.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 241,
+   "sentence": "What challenges it: The 2026 budget message said there were \"no additional resources available\" for new programs beyond current services.",
+   "marker": "[P-049, P-046]",
+   "verdict": "supports",
+   "evidence_span": "there were no additional resources available to fund program enhancements above and beyond the increased costs for maintaining a current service level",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 241,
+   "sentence": "Consent decree costs were \"still being vetted\" when that proposal was written.",
+   "marker": "[P-050]",
+   "verdict": "supports",
+   "evidence_span": "all decree compliance related costs are still being vetted",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 241,
+   "sentence": "The 2026 plan spends $73,637,614 more than it takes in, using savings, which the budget calls \"fund balance.\"",
+   "marker": "[P-054]",
+   "verdict": "supports",
+   "evidence_span": "$ 6,868 $ (73,637,614) Fund Balance - Beginning",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 242,
+   "sentence": "What's missing: We found no outside data on court and prosecutor caseloads or staffing.",
+   "marker": "{analysis: none in the sources reviewed}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 243,
+   "sentence": "What's uncertain: How much of these requests the draft will fund, because it isn't public yet.",
+   "marker": "{editorial}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 247,
+   "sentence": "Who should shape the first draft: staff alone, staff with the chairman, staff with two commissioners ..., or the whole Board?",
+   "marker": "{editorial: a question; the choices come from P-002, P-003, P-008 and P-014}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 247,
+   "sentence": "If commissioners take part, how should they be chosen?",
+   "marker": "{editorial}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 248,
+   "sentence": "Should departments' requests for extra money have a set limit, or should the draft list them without one?",
+   "marker": "{editorial}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 249,
+   "sentence": "Should the Board adopt the budget in December, or wait until January?",
+   "marker": "{editorial}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 250,
+   "sentence": "How should the justice offices' requests be weighed against other county services and the county's savings?",
+   "marker": "{editorial}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 274,
+   "sentence": "The minutes of the Oct 21 and Nov 4 meetings, kept by the Clerk to the Commission, record the motions and votes on Resolution 26-0729.",
+   "marker": "[P-096, P-088, P-090, P-092, P-097]",
+   "verdict": "supports",
+   "evidence_span": "A motion was made by Commissioner Barrett and seconded by Commissioner Arrington, to approve. The motion failed by the following vote: Yea: Barrett Nay: Ellis",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 274,
+   "sentence": "They give no reasons.",
+   "marker": "{analysis: P-088 and P-092 are the full entries, and the full minutes are archived (sources.yaml, S05b and S05c)}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 274,
+   "sentence": "Both meetings also took up an \"Update on the Budget Committee and the budget approval process,\" which the minutes list only as discussed.",
+   "marker": "[P-089, P-093]",
+   "verdict": "supports",
+   "evidence_span": "Update on the Budget Committee and the budget approval process. (Abdur-Rahman) (DISCUSSED)",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 274,
+   "sentence": "The Board approved the Oct 21 minutes on Nov 4; the Nov 4 minutes are marked \"tentative,\" meaning not yet approved, until a vote set for Nov 18.",
+   "marker": "[P-091, P-090]",
+   "verdict": "supports",
+   "evidence_span": "This document is tentative, has not been ratified or approved by the Board of Commissioners",
+   "correct_passage": "",
+   "problem": "Minor: the record of the Oct 21 ratification (P-091) is itself in the still-tentative Nov 4 minutes (P-090).",
+   "suggested_fix": ""
+  },
+  {
+   "line": 274,
+   "sentence": "The county's records link video of both meetings.",
+   "marker": "[P-025]",
+   "verdict": "supports",
+   "evidence_span": "\"MatterHistoryVideo\":153978,\"MatterHistoryVideoIndex\":11025,\"MatterHistoryVersion\":\"1\",\"MatterHistoryAgendaNote\":null,\"MatterHistoryMinutesNote\":null,\"MatterHistoryActionDate\":\"2026-10-21T00:00:00\",\"MatterHistoryActionId\":383,\"MatterHistoryActionName\":\"approve\",\"MatterHistoryActionText\":\"A motion was made",
+   "correct_passage": "",
+   "problem": "Minor: P-025 holds video IDs (153978, 154869), not links as such.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 274,
+   "sentence": "We did not review the video, so reasons may have been given there.",
+   "marker": "{editorial: scope note; see sources.yaml, S16}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  }
+ ],
+ "framing_issues": [
+  {
+   "line": 132,
+   "text": "Commissioner Bob Ellis, who sponsored today's process, which Option C would change",
+   "issue": "Values guide blurs the commission rules Ellis sponsored (Resolution 26-0460, P-016) with the 5% cap, which P-029 says the Budget Commission set, and which Option C targets. His 'more transparent and open' remark replied to Barrett's charge about the commission (P-072, P-073), not to the cap or Option C. Pairing it against Option C implies a position he isn't quoted taking.",
+   "severity": "medium"
+  },
+  {
+   "line": 130,
+   "text": "If you care most about… (transparency; transparency; court funding)",
+   "issue": "Missing context in the reader-first values guide. Two entries favor disclosure and more court money, and none covers a reader who cares most about holding spending or taxes down. That gap reflects the sources: no archived source gives the case for the 5% limit (line 165). But the guide doesn't say so, so the asymmetry looks like a choice.",
+   "severity": "medium"
+  },
+  {
+   "line": 142,
+   "text": "That limit holds requests for extra money to 5% of current funding.",
+   "issue": "Uneven caveats: the limit's terms are stated flatly in Option A, but attributed to the resolution and FOX 5 elsewhere (lines 92, 165) and labeled 'Exact terms: Uncertain' in card 3.",
+   "severity": "medium"
+  },
+  {
+   "line": 165,
+   "text": "Atlanta News First said it was still waiting to hear back from the vice chair, who serves on the commission.",
+   "issue": "Placed right after 'No archived record or statement gives a reason for the limit', this reads as if the vice chair was asked about the limit and didn't answer. P-073 shows the request came in a story about Barrett's charge against the commission.",
+   "severity": "medium"
+  },
+  {
+   "line": 15,
+   "text": "the proposal wasn't posted, and the tax rate comes later.",
+   "issue": "This sentence also appears alone on the home page. It states the 2027 tax-rate timing as certain, based on one prior cycle (P-098, P-101 describe 2026), and the reader can't see that basis.",
+   "severity": "medium"
+  },
+  {
+   "line": 46,
+   "text": "Watch that page for the budget hearing, and take part.",
+   "issue": "Missing context: the 2026-cycle hearing was 'at a meeting on December 3, 2025' (P-047), a Wednesday and likely a regular meeting. Watching only the Public Notices page could miss a hearing held at a regular meeting.",
+   "severity": "low"
+  },
+  {
+   "line": 28,
+   "text": "Now: The Board adopts the 2027 budget ... by its second regular meeting in January 2027.",
+   "issue": "The 'Now' label sits on a decision due in January 2027; readers may misread the timing. 'This cycle' or 'By January' is clearer.",
+   "severity": "low"
+  },
+  {
+   "line": 16,
+   "text": "Six of their leaders asked for more money.",
+   "issue": "Vague reference: 'their' points back to 'the jail, courts, prosecutors and public defender'. The six include the court clerk and probate judge (P-069), so name the six.",
+   "severity": "low"
+  },
+  {
+   "line": 180,
+   "text": "Commissioner Dana Barrett said the two are \"creating a budget commission...\"",
+   "issue": "Vague reference 'the two' (also line 190); readers must look back to find Ellis and Abdur-Rahman, whom P-072 names.",
+   "severity": "low"
+  },
+  {
+   "line": 135,
+   "text": "The officials' request for a January vote has no line",
+   "issue": "'Has no line' is unclear to a new reader. Two factual claims about the sources here are tagged {editorial} rather than {analysis}.",
+   "severity": "low"
+  },
+  {
+   "line": 112,
+   "text": "In general, a consent decree is a legal settlement that a court approves and can enforce.",
+   "issue": "Next to the jail agreement, this suggests a court approved and enforces this agreement; no passage says so (P-048 says only 'agreement').",
+   "severity": "low"
+  },
+  {
+   "line": 181,
+   "text": "the adopted General Fund ... ended about 0.4% above the county manager's proposal",
+   "issue": "Listed under 'What challenges it' without saying why it challenges the claim (presumably that the drafter's proposal largely sets the outcome). A new reader can't place its relevance.",
+   "severity": "low"
+  },
+  {
+   "line": 158,
+   "text": "Who pays: Budget staff would have had 25 days to add any omitted requests",
+   "issue": "Uneven depth across options. Options A and B name taxpayers, programs or savings as possible payers. Option C names only staff time and doesn't note that a fuller list of requests could add pressure to fund more.",
+   "severity": "low"
+  },
+  {
+   "line": 38,
+   "text": "see sources.yaml, S16 (also README D4, D6, D9, D10 at lines 45, 81, 120, 171, 194, 206, 218, 274)",
+   "issue": "Internal file references that a phone reader can't open or place.",
+   "severity": "low"
+  },
+  {
+   "line": 191,
+   "text": "\"Special called meetings of the Fulton County Budget Commission.\"",
+   "issue": "Technical term 'special called meeting' is quoted without a plain-language gloss.",
+   "severity": "low"
+  },
+  {
+   "line": 202,
+   "text": "The Pew Charitable Trusts",
+   "issue": "Organization introduced without saying what it is; a new reader can't judge the weight of its advice.",
+   "severity": "low"
+  }
+ ],
+ "summary": {
+  "units_checked": 415,
+  "supports": 265,
+  "partial": 2,
+  "does_not_support": 0,
+  "wrong_span": 0,
+  "questionable_or_invalid_tags": 2
+ }
+}

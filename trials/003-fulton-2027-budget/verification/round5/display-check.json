@@ -1,0 +1,98 @@
+{
+ "checker": "independent-source-verifier",
+ "document": "/home/user/Polysense/trials/003-fulton-2027-budget/page.yaml",
+ "units": [
+  {
+   "line": 6,
+   "sentence": "title: Fulton County commissioners must adopt the 2027 budget by their second regular January meeting",
+   "marker": "[P-005, P-014, P-041]",
+   "verdict": "supports",
+   "evidence_span": "The budget shall then be adopted by the board of commissioners by no later than the second regular meeting in January",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 7,
+   "sentence": "link_text: Fulton County's 2027 budget",
+   "marker": "[P-005, P-042]",
+   "verdict": "supports",
+   "evidence_span": "budget hearings for Fulton County’s 2027 General Fund Budget",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 9,
+   "sentence": "status chip: Budget Commission draft due by Nov 15, 2026",
+   "marker": "[P-005]",
+   "verdict": "supports",
+   "evidence_span": "The budget commission shall submit or cause to be submitted annually to the board of commissioners, by no later than November 15, a proposed budget",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 10,
+   "sentence": "status chip: Board vote due by its 2nd regular January meeting, expected Jan 20",
+   "marker": "[P-005, P-041]",
+   "verdict": "supports",
+   "evidence_span": "adopted by the board of commissioners by no later than the second regular meeting in January",
+   "correct_passage": "",
+   "problem": "Minor: the code requires adoption by that meeting, not just a vote; the title says 'adopt' correctly.",
+   "suggested_fix": "Board must adopt by its 2nd regular January meeting, expected Jan 20"
+  },
+  {
+   "line": 12,
+   "sentence": "Option A chip: Draft due Nov 15",
+   "marker": "[P-005]",
+   "verdict": "supports",
+   "evidence_span": "by no later than November 15, a proposed budget",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 13,
+   "sentence": "Option B chip: Board can add or cut money",
+   "marker": "[P-047]",
+   "verdict": "supports",
+   "evidence_span": "whether greater or less than the sums presented in the proposed budget",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 14,
+   "sentence": "Option C chip: Set aside (filed) Nov 4",
+   "marker": "[P-024, P-025]",
+   "verdict": "supports",
+   "evidence_span": "b. A substitute motion was made by Vice Chair Abdur-Rahman and seconded by Commissioner Thorne, to file. The motion passed by the following vote:",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  }
+ ],
+ "framing_issues": [
+  {
+   "line": 10,
+   "text": "Board vote due by its 2nd regular January meeting, expected Jan 20",
+   "issue": "'Vote due' is weaker than the code's 'shall be adopted ... by'; a failed vote wouldn't meet the deadline. The title uses 'adopt' correctly.",
+   "severity": "low"
+  },
+  {
+   "line": 12,
+   "text": "Option A chip: Draft due Nov 15",
+   "issue": "The chips differ in kind across options: A shows a status date, B a power, C an outcome. Option A's chip describes the draft, not the option (adopt as presented).",
+   "severity": "low"
+  }
+ ],
+ "summary": {
+  "units_checked": 7,
+  "supports": 7,
+  "partial": 0,
+  "does_not_support": 0,
+  "wrong_span": 0,
+  "questionable_or_invalid_tags": 0
+ }
+}

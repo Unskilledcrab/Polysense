@@ -1,0 +1,152 @@
+[
+ {
+  "id": "M01",
+  "type": "wrong-deadline",
+  "line": 14,
+  "original": "A proposal is due by Nov 15;",
+  "mutated": "A proposal is due by Nov 25;",
+  "keywords": [
+   "nov 25",
+   "nov 15",
+   "deadline",
+   "due"
+  ]
+ },
+ {
+  "id": "M02",
+  "type": "unknown-stated-as-known",
+  "line": 15,
+  "original": "Whether your 2027 county property tax changes isn't known as of Nov 8, 2026; the proposal wasn't posted, and the tax rate comes later.",
+  "mutated": "Your 2027 county property tax will go down, because the proposal holds spending to 5% above current funding.",
+  "keywords": [
+   "go down",
+   "not known",
+   "isn't known",
+   "will",
+   "unsupported",
+   "5%"
+  ]
+ },
+ {
+  "id": "M03",
+  "type": "date",
+  "line": 31,
+  "original": "approved Aug 19, 2026.",
+  "mutated": "approved Aug 5, 2026.",
+  "keywords": [
+   "aug 5",
+   "aug 19",
+   "august"
+  ]
+ },
+ {
+  "id": "M04",
+  "type": "wrong-person",
+  "line": 58,
+  "original": "- **District 1:** Commissioner Bridget Thorne. [P-035]",
+  "mutated": "- **District 1:** Commissioner Bridget Thorne, also on the Budget Commission. [P-035, P-021]",
+  "keywords": [
+   "thorne",
+   "budget commission",
+   "not on",
+   "three",
+   "two commissioners"
+  ]
+ },
+ {
+  "id": "M05",
+  "type": "altered-quote",
+  "line": 132,
+  "original": "more transparent and open than anything we\u2019ve had in recent years.",
+  "mutated": "more transparent and open than any county process in Georgia.",
+  "keywords": [
+   "verbatim",
+   "quote",
+   "any county",
+   "in georgia",
+   "altered",
+   "misquot",
+   "recent years"
+  ]
+ },
+ {
+  "id": "M06",
+  "type": "values-wrong-side",
+  "line": 133,
+  "original": "Commissioner Dana Barrett, who sponsored Option C,",
+  "mutated": "Commissioner Dana Barrett, who opposed Option C,",
+  "keywords": [
+   "opposed",
+   "sponsor",
+   "barrett",
+   "side"
+  ]
+ },
+ {
+  "id": "M07",
+  "type": "recommendation-word",
+  "line": 135,
+  "original": "This guide doesn't recommend an option.",
+  "mutated": "Option B is the most balanced choice.",
+  "keywords": [
+   "recommend",
+   "balanced",
+   "choice",
+   "endorse",
+   "best"
+  ]
+ },
+ {
+  "id": "M08",
+  "type": "number",
+  "line": 134,
+  "original": "one of six justice officials seeking more money,",
+  "mutated": "one of nine justice officials seeking more money,",
+  "keywords": [
+   "nine",
+   "six",
+   "number",
+   "count"
+  ]
+ },
+ {
+  "id": "M09",
+  "type": "procedure",
+  "line": 28,
+  "original": "by its second regular meeting in January 2027.",
+  "mutated": "by its first regular meeting in January 2027.",
+  "keywords": [
+   "first",
+   "second",
+   "regular meeting",
+   "deadline"
+  ]
+ },
+ {
+  "id": "M10",
+  "type": "contact-detail",
+  "line": 52,
+  "original": "call the Clerk to the Commission at 404.612.8200.",
+  "mutated": "call the Clerk to the Commission at 404.612.8020.",
+  "keywords": [
+   "8020",
+   "8200",
+   "phone",
+   "number"
+  ]
+ },
+ {
+  "id": "M11",
+  "type": "widened-scope",
+  "line": 23,
+  "original": "and for the courts, libraries and senior services.",
+  "mutated": "and for the courts, libraries, water service and the airport.",
+  "keywords": [
+   "water",
+   "airport",
+   "specialty",
+   "scope",
+   "general fund"
+  ]
+ }
+]
