@@ -64,7 +64,9 @@ asked to add). So "done" is defined in advance:
    CLAUDE.md (a loaded word, a subgroup figure before its base rate, undefined jargon). A **targeted
    re-check** confirms the fixes: a fresh blind agent checks only the changed sentences against the
    passages. The whole panel re-runs only if a fix changes a card's claim, its evidence label, or which
-   side a point supports. If a fix changes a values-guide line or an "In short" line, the targeted re-check
+   side a point supports. Narrowing the words that say what a label part covers, so they match the source,
+   without changing its grade ("Hearings held: Supported" to "Hearings scheduled: Supported" when the
+   source is a notice) is an accuracy fix, not a label change. If a fix changes a values-guide line or an "In short" line, the targeted re-check
    also runs the editor's flip test on just those lines, since a source check can't judge balance. If a
    targeted re-check flags something, fix it and re-check only those units again.
    Stop when a re-check finds nothing that misstates a passage; its style notes become open items. (Trial 003
