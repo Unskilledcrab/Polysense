@@ -27,7 +27,7 @@ MARKER = re.compile(r"\[(P-\d{3}(?:\s*,\s*P-\d{3})*)\]|\{(analysis|editorial)(?:
 SECTION_IDS = {"30-second": "summary", "layer 1": "overview", "layer 2": "decision", "layer 3": "options",
                "layer 4": "arguments", "layer 5": "evidence"}
 TYPE_LABEL = {"primary-government": "Primary · government", "secondary-research": "Research", "news": "News",
-              "local-government": "Local government", "advocacy": "Advocacy"}
+              "local-government": "Local government", "advocacy": "Advocacy", "party-filing": "Party filing"}
 
 
 def split_units(text: str) -> list[dict]:
