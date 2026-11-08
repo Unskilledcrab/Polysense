@@ -7,7 +7,7 @@
 | **Done by** | AI agent (Claude Code), by hand |
 | **Verified by** | The AI-only [verification protocol](../../docs/process/verification-protocol.md); no human in the loop ([ADR 0014](../../docs/adr/0014-ai-only-verification.md)) |
 | **Owner's role** | Feedback on the user experience ([review.md](review.md)) |
-| **Status** | **Passed checks (round 4)**; revision 5 published. Rounds 1 and 2 failed the bias panel; rounds 3 and 4 passed it; targeted re-checks confirmed the accuracy fixes. Open items for the next full round are in [verification.md](verification.md). Owner reviewed the experience on 2026-11-08 ([review.md](review.md)). Prototype: [prototypes/hb1009/](../../prototypes/hb1009/) |
+| **Status** | **Revision 6: reader-first update; checks pending** (2026-11-08, [runbook v0.6](../../docs/process/runbooks/bill-workspace.md), Step 4). The deterministic gate passes; the blind source check and bias panel have not run on it. Revision 5 **passed checks (round 4)** and is archived in [verification/round5/](verification/round5/). Rounds 1 and 2 failed the bias panel; rounds 3 and 4 passed it; targeted re-checks confirmed the accuracy fixes. Open items and the revision 6 notes are in [verification.md](verification.md). Owner reviewed the experience on 2026-11-08 ([review.md](review.md)). Prototype: [prototypes/hb1009/](../../prototypes/hb1009/) |
 
 ## Why this bill (step 0)
 
@@ -46,7 +46,7 @@ of when the bill was live in the 2026 session:
 | File | What it is |
 |---|---|
 | [sources.yaml](sources.yaml) | 14 retrieved sources with SHA-256 hashes (raw files in `_raw/`, git-ignored) |
-| [passages.spec.yaml](passages.spec.yaml) → [passages.md](passages.md) | 67 hand-chosen passages, copied mechanically. They cover the bill's full enacted text, the prior-law wording the page compares against, and the Florida study's whole abstract |
+| [passages.spec.yaml](passages.spec.yaml) → [passages.md](passages.md) | 71 hand-chosen passages, copied mechanically. They cover the bill's full enacted text, the prior-law wording the page compares against, and the Florida study's whole abstract |
 | [workspace.md](workspace.md) | The page: 30-second version + Layers 1–5. Every sentence cited or labeled |
 | [home.md](home.md) | Home-page items built from this trial |
 | [verification.md](verification.md) + [verification/](verification/) | Every verification report, the planted-error copy and its answer key, dispositions |

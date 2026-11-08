@@ -1,10 +1,10 @@
 {
- "verified": true,
- "statusText": "Passed checks (round 4)",
- "intro": "An AI agent wrote this page from saved copies of its sources. Separate AI checkers, which never saw the drafting, then checked it in rounds. In this trial, no person checked the facts. Here is what the checkers did, what they found, and what is still open.",
+ "verified": false,
+ "statusText": "Reader-first update; checks pending",
+ "intro": "On Nov 8, 2026, this page was rewritten for readers new to the subject (revision 6), and the new version has not been checked yet. The results below are for revision 5. An AI agent wrote this page from saved copies of its sources. Separate AI checkers, which never saw the drafting, then checked it in rounds. In this trial, no person checked the facts. Here is what the checkers did, what they found, and what is still open.",
  "stats": [
   {
-   "value": "189",
+   "value": "250",
    "label": "sentences, each tied to a source or labeled as our own analysis"
   },
   {

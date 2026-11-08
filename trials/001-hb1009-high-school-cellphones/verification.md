@@ -219,3 +219,62 @@ reports are in [verification/round5-targeted/](verification/round5-targeted/).
 14. "Georgia teens" is broader than the public high school students the law covers (line 130).
 15. Card 3's challenge could note that districts had to adopt K-8 policies by 2026-01-01 (line 140).
 16. Card 6's summary drops "allowed" from "should be allowed to keep access" (line 172).
+
+## Revision 6: reader-first update (2026-11-08, checks pending)
+
+Change class **update**. Reason: reader-first revision after usability feedback. Revision 5 is archived in
+[verification/round5/](verification/round5/) (`workspace.r5.md`, `home.r5.md`, `page.r5.yaml`). The page now follows
+the reader-first contract (style guide v0.6, section 9; runbook v0.6, Step 4). The changes also answer an AI lay-reader
+check of revision 5 (persona: a parent of a 10th grader). That reader couldn't tell when their child's school starts,
+what happens to a student who uses a phone, or what the law costs a family. They read the Arguments tab's opening
+figures as leaning toward the law, and didn't know what "HB" means.
+
+**Not changed:** every evidence label, card claim (title), card order, option title and the side each point
+supports. This was checked mechanically against `workspace.r5.md`. Outside "In short", card edits are plain-language
+only: a role ("State Sen."), a defined name, or a bare "it", "this" or "they" replaced by its noun.
+
+### What changed, by part
+
+| Part | Change |
+|---|---|
+| 30-second version | Leads with what the law does and spells out House Bill (HB). Names the deciders (Georgia lawmakers and the governor). Keeps the health-or-disability-plan exception and both suggested actions: ask the district, or tell lawmakers whether to keep or change the law. 90 words |
+| What it means for you (new) | Four "If you…" lines: high school students, their families, school staff, and families of K-8 students. Each says what changes and when. The students line gives the consequences; the families line says the law sets aside no money and doesn't require families to pay. "Decided now, and decided later" explains Dec 31, 2026 (the law takes effect) versus July 1, 2027 (the latest start), and that each district or school picks its start date. "Not known yet" has 5 dated items, each with its reason. There is no "Where the money comes from", because no source describes money moving |
+| Layer 1 | New order: What you can do; Who decides, and how to reach them; Coming up; What happened. "Who decides" lists the General Assembly, the governor, and each district and public school in one format. It gives only the routes the sources give (handbooks, websites, encouraged workshops and town halls) and says the sources give no phone or email. "Your state representative and senator" became "state lawmakers in the General Assembly". Committee steps and Act 395 are explained in plain words |
+| Layer 2 | Open items 9 and 10 fixed. "District" defined as the law's "local school system". Consequences now say each code of conduct sets the exact steps |
+| Layer 3 | New intro (56 words) and values guide: Option A from Darryl Adams (P-047), Option B from Richard Woods (P-036). Option C has no documented argument, so it gets no line, and the guide says so. Option B's long sentences split (open item 6). The Florida study, the survey's maker and Sen. Harrell's role are defined at first mention |
+| Layer 4 | The tab now opens with both sides in one news report's words (P-071), then who our sources quote. The survey split moved into "How to read these cards", still before any subgroup figure. The vote tallies left this tab; they remain in Layer 1 and Options B and C. Every "In short" was rewritten: people first, then the claim, then the evidence status (29–37 words). Study notes cut from about 200 to about 130 words. Added "Questions to weigh" (3 questions). Open item 14 fixed in card 2 |
+| home.md | Items spell out House Bill 1009, run 12–22 words, and each has a dated label |
+| page.yaml | Title: "Georgia lawmakers ban school-day phone use in public high schools by July 1, 2027". The code and link text spell out House Bill. Status chips: signed May 5, 2026; takes effect Dec 31, 2026; high schools start by July 1, 2027. Option chips are plain. Each reader-facing string has a citation comment. `kind` and `markup` are unchanged |
+| Passages | Added P-070 (S12: who runs the survey), P-071 (S16b: both sides in one sentence) and P-072 (S16b: the high school start in school-year terms). All come from snapshots already archived; the rebuild reproduced the 68 earlier passages exactly |
+| `verification/summary.json` | Status set to "Reader-first update; checks pending" (`verified: false`). The intro says the results shown are for revision 5. Unit count updated to 250 |
+
+### Deterministic gate (revision 6)
+
+| Check | Result |
+|---|---|
+| `check_citations.py` | workspace: 250 units (152 cited, 61 analysis, 34 editorial, 3 computed), 0 errors, 0 warnings. home: 6 units, 0 errors, 0 warnings |
+| `readability.py` | 30-second 7.7, What it means for you 7.8, Layer 1 5.9, Layer 2 8.2, Layer 3 7.8 (Layer 4 7.9, not targeted). No budget warnings, no CHECK lines |
+| `verify_hashes.py` | PASS |
+| Test render | No warnings |
+
+The independent checks (blind source check, bias panel) have not run on revision 6.
+
+### Open items
+
+- **Folded in:**
+  - 6: sentences in Option B and card 2 split. Opposing "In short" lines now run 32–36 words and supporting ones 29–37. Study notes are shorter.
+  - 9: "now" removed, and "each school district and public school" used where the duty is stated.
+  - 10: "student access to personal devices is banned".
+  - 14: "Georgia's public high school students".
+- **Touched by the rewrite** (the next full round should confirm): 13 (card 2's summary no longer says "the one study we found" and names the comparison) and 16 (card 6's summary keeps "should be allowed").
+- **Still open:** 1–5, 7, 8, 11, 12, 15.
+
+### Where I'm least sure
+
+1. **Values guide, Option A.** Adams's only verbatim quote is about older teachers not wanting "that confrontation". His other points (older students' independence, phones in emergencies) survive only as paraphrase. Emergency contact is the reason opposing parents cited most (74.8%), so this line may not show that side's strongest value. A verbatim lockdown quote exists in S16 and S16b, but it doesn't fit the 20-word quote and 35-word line budgets without cutting its meaning.
+2. **Values guide, both lines.** "Who opposed the bill" and "who called for the ban" are our mapping of each speaker to Options A and B; neither speaker named an option.
+3. **"If you…", families.** "Doesn't require families to pay for anything" is an absence claim over the law's full text. A district could still ask families to buy a pouch; that appears under "Not known yet".
+4. **"If you…", K-8 families.** "Leaves that rule as it was" rests on the bill's markup (no deletions or additions in (b)(1)), not on a passage that says so.
+5. **"If you…", staff.** "Your school must enforce the phone ban by July 1, 2027" joins the monitoring duty (P-014) to the start date (P-007).
+6. **"If you…", students.** "At any point in the school day" paraphrases bell-to-bell (P-002); a checker may prefer "during".
+7. **"Decided now".** "In place by the 2027-28 school year" combines the law's deadline with one news report's school-year framing (P-072).
