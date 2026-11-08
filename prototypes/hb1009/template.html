@@ -494,7 +494,7 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
   }
   function headerChips(w) {
     var row = el("div", { class: "chips" });
-    w.status.forEach(function (c) { row.appendChild(el("span", { class: "chip" + (c.kind ? " " + c.kind : ""), text: c.text })); });
+    w.status.forEach(function (c) { row.appendChild(el("span", { class: "chip wrap" + (c.kind ? " " + c.kind : ""), text: c.text })); });
     row.appendChild(statusChip(w));
     return row;
   }
@@ -813,6 +813,14 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
       list.appendChild(card);
     });
     L.appendChild(list);
+    // Notes in Layer 5 (for example, what the meeting minutes and video do and don't record) show after the sources.
+    var ev = sectionById("evidence");
+    if (ev) ev.subs.forEach(function (sub) {
+      if (!sub.blocks.length) return;
+      var d = el("details", { class: "more" }, [el("summary", { text: sub.title })]);
+      d.appendChild(renderBlocks(sub.blocks));
+      L.appendChild(d);
+    });
     return L;
   }
 
