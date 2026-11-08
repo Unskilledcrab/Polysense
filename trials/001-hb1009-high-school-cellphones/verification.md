@@ -726,3 +726,30 @@ unchanged from revision 6.3. The changed units are listed in `changed-units.txt`
     general conclusion (P-043) on card 2 (SC, optional).
 80. The supporters' values label paraphrases its quote more loosely than the opponents' label does; the editor judged it
     justified and asked for no change (E).
+
+## Targeted re-check 3 results (revision 6.4) and status
+
+Checked by fresh blind agents on 2026-11-08 (`verification/round6-targeted-3/`):
+
+- **Source re-check, 11 changed units:** 6 supported, 5 tags valid, 0 partial, 0 unsupported, 0 ungrounded spans. It found
+  nothing that misstates a passage. Its framing notes are open items below.
+- **Flip test (values guide, "If you" lines, "In short" lines):** neutrality 4/5, no medium or high issues. Five low
+  notes are open items.
+
+Under the protocol's stop rule, revision 6.4 is the trial's current version: **passed checks (round 6)**, then three
+targeted re-checks.
+
+Open items added (not fixed in this cycle):
+
+- **K-8 line:** "drops e-readers from its incomplete list of example devices". The law's general definition (P-004) may
+  still cover e-readers, so a parent could misread the change. Not on the home page.
+- **Students line:** "similar devices" could name the law's examples (smartwatches, headphones). The line could say that
+  school-issued laptops and tablets for schoolwork stay allowed (P-017), and that "access" includes holding or wearing a
+  device (P-003).
+- **Card 1 vs card 5:** card 1's data-gap sentence ends "yet"; card 5's doesn't.
+- **Card 5:** states only the "can invite conflict" half of its claim; the burden half is implied (P-047).
+- **Card 6:** "opponents say" comes before the "because" clause.
+- **Staff line:** could pair "no money" with the state's guidance duty (P-016).
+- **Parent line:** "who pays for phone storage" assumes a cost; line 31 asks "whether that costs families anything".
+- **L182:** "how their success was measured" could say "how success was judged".
+

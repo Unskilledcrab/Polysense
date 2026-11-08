@@ -1,30 +1,30 @@
 {
- "verified": false,
- "statusText": "Reader-first update; checks pending",
- "intro": "On Nov 8, 2026, this page was rewritten for readers new to the subject (revision 6), and the new version has not been checked yet. The results below are for revision 5. An AI agent wrote this page from saved copies of its sources. Separate AI checkers, which never saw the drafting, then checked it in rounds. In this trial, no person checked the facts. Here is what the checkers did, what they found, and what is still open.",
+ "verified": true,
+ "statusText": "Passed checks (round 6), revision 6.4",
+ "intro": "On Nov 8, 2026, this page was rewritten for readers new to the subject, after usability feedback: it now says what the law means for students, families and staff, and what each side says it protects. An AI agent wrote it from saved copies of its sources. Separate AI checkers, which never saw the drafting, then checked it in rounds. In this trial, no person checked the facts. Here is what the checkers did, what they found, and what is still open.",
  "stats": [
   {
-   "value": "250",
+   "value": "286",
    "label": "sentences, each tied to a source or labeled as our own analysis"
   },
   {
    "value": "0",
-   "label": "claims found unsupported by their sources, in 4 rounds and 2 follow-up checks"
+   "label": "claims found unsupported by their sources, in 6 rounds and 5 follow-up checks"
   },
   {
-   "value": "13 of 13",
-   "label": "hidden test errors the fact-checker caught"
+   "value": "10 of 10",
+   "label": "hidden test errors the fact-checker caught in round 6 (11 of 11 in round 5)"
   },
   {
    "value": "4 of 5",
-   "label": "fairness rating from both the supporters' and the critics' reviewer, rounds 3 and 4"
+   "label": "fairness rating from both the supporters' and the critics' reviewer, rounds 5 and 6"
   }
  ],
  "sections": [
   {
    "title": "What we checked",
    "paras": [
-    "Each round runs the same checks. A page passes a round only when every check passes. After that, we fix only sentences that misstate a source or break our writing rules, and a fresh checker looks again at just those sentences. Other suggestions wait for the next full round."
+    "Each round runs the same checks. A page passes a round only when every check passes. After that, we fix only sentences that misstate a source or break our writing rules, and fresh checkers look again at just those sentences: one for facts, and one that asks of each changed summary line whether we would write it the same way about the other side. Other suggestions wait for the next full round."
    ],
    "head": [
     "Check",
@@ -49,7 +49,7 @@
     ],
     [
      "Testing the fact-checker",
-     "We hid 13 errors in a copy of the page, such as a wrong date, a misquote and one group's figure shown as everyone's. The fact-checker had to find them without knowing they were there.",
+     "Each round, we hid errors in a copy of the page, such as a wrong deadline, an exception the law doesn't make, a misquoted survey answer and a sentence recommending an option. The fact-checker had to find them without knowing they were there.",
      "At least 9 of every 10 caught"
     ]
    ]
@@ -57,7 +57,7 @@
   {
    "title": "What each round found",
    "paras": [
-    "No fact-check found a claim that its sources didn't support, only sentences that said more than the sources did. The fairness panel failed twice before both side reviewers gave the page 4 of 5."
+    "No fact-check found a claim that its sources didn't support, only sentences that said more than the sources did. Rounds 1 to 4 checked earlier versions. Round 5 checked the rewrite for new readers, and round 6 checked one evidence label that all three panelists asked us to change."
    ],
    "head": [
     "Round",
@@ -101,12 +101,28 @@
      "Passed. We then fixed every sentence that said more than its source"
     ],
     [
+     "5",
+     "149 supported, 3 partly, 0 unsupported",
+     "4 of 5",
+     "4 of 5",
+     "4, 4",
+     "Passed. The rewrite for new readers"
+    ],
+    [
+     "6",
+     "166 supported, 3 partly, 0 unsupported",
+     "4 of 5",
+     "4 of 5",
+     "4, 3",
+     "Passed. Card 5's label now treats the Florida study as card 1 does"
+    ],
+    [
      "Follow-up",
-     "53 changed sentences, then 17: none unsupported",
+     "50 changed sentences, then 12, then 11: none unsupported",
      "",
      "",
      "",
-     "Passed. The page you see is this version"
+     "Passed. The page you see is this version (6.4)"
     ]
    ]
   },
@@ -116,11 +132,11 @@
     "These suggestions change a card, a label or the balance between sides, so they wait for the next full round. Some contradict each other; we list both views rather than pick one quietly."
    ],
    "items": [
-    "Card 5's evidence label should use the same \"with limits\" wording as card 1, because both rest on the same Florida study.",
-    "Reviewers disagree on whether to quote Sen. Harrell in full in Option A, and on what card 4's label should say about emergency safety.",
-    "Option B's list of costs is longer than its list of benefits; reviewers suggested ways to even them out without changing the evidence.",
-    "Officials answer the one named critic on several cards, because our sources quote few critics. The next trials will look harder for more voices.",
-    "Several lines can be plainer, and the argument cards could say when and where each person spoke."
+    "Reviewers disagree on two evidence labels: supporters want card 2's and card 5's labels worded differently; critics accept them. Labels change only in a full round.",
+    "Card 2's title says \"friendships\"; the survey's words are \"in-person social interactions\". Titles change only in a full round.",
+    "The K-8 line notes the law dropped e-readers from its list of examples; the law's general definition may still cover them.",
+    "Our sources give no phone number or email for lawmakers or school districts, so the page can't list them.",
+    "The State School Superintendent's job isn't described in any source we saved."
    ]
   },
   {

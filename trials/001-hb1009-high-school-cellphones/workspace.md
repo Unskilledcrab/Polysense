@@ -1,6 +1,6 @@
 # House Bill 1009 (2026): Phones in Georgia public high schools
 
-Status: Law (Act 395) · Signed May 5, 2026 · Takes effect Dec 31, 2026 · Trial 001, revision 6.4: fixes from the second targeted re-check; re-check pending, see verification.md <!-- nocheck -->
+Status: Law (Act 395) · Signed May 5, 2026 · Takes effect Dec 31, 2026 · Trial 001, revision 6.4: passed checks (round 6), then three targeted re-checks; see verification.md <!-- nocheck -->
 How this page was made: an AI agent drafted it from archived sources; every sentence is cited or labeled. <!-- nocheck -->
 
 ## 30-second version

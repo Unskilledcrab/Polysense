@@ -1,0 +1,197 @@
+{
+ "checker": "independent-source-verifier (targeted)",
+ "document": "/home/user/Polysense/trials/001-hb1009-high-school-cellphones/workspace.md",
+ "units": [
+  {
+   "file": "workspace.md",
+   "line": 14,
+   "sentence": "By July 1, 2027, you can't access phones or similar devices during the school day.",
+   "marker": "[P-007, P-004, P-005]",
+   "verdict": "supports",
+   "evidence_span": "Beginning no later than July 1, 2027, no public school student in grades nine through 12 shall be permitted to access personal electronic devices during the school day",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "P-007 bars grade 9-12 access 'Beginning no later than July 1, 2027', so 'By July 1, 2027' is the correct outer date; P-004 defines the devices and P-005 the school day. P-007's exceptions ('except as otherwise provided in this Code section or required by law') open the very next sentence ('Exceptions: ...'), so dropping 'with some exceptions' does not overstate the ban. Wording issues are listed under framing_issues."
+  },
+  {
+   "file": "workspace.md",
+   "line": 14,
+   "sentence": "Exceptions: only the access your disability or medical plan explicitly requires, or another law requires.",
+   "marker": "{analysis: P-013 allows the access a student's IEP, Section 504 plan or medical plan explicitly requires, \"as necessary to fulfill the requirements\" of that plan, and P-007 allows access \"required by law\"; \"disability plan\" is our plain-language term for an IEP or Section 504 plan, not from the cited sources}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "Valid. P-013 permits access only where an IEP, Section 504 Plan or medical plan 'explicitly mandates the use of a personal electronic device' and only 'as necessary to fulfill the requirements' of that plan; P-007 excepts access 'required by law'. Both quoted phrases are verbatim. The only other carve-out in the enacted text (P-001 to P-019, P-056 to P-061) is for school equipment (P-017), not personal devices, so 'only' holds. The 'disability plan' gloss is correctly labeled as the page's own term, not from the sources."
+  },
+  {
+   "file": "workspace.md",
+   "line": 15,
+   "sentence": "By July 1, 2027, reaching your child during the school day means contacting the school; staff must coordinate all emergency messages.",
+   "marker": "[P-007, P-011]",
+   "verdict": "supports",
+   "evidence_span": "Facilitate all emergency communication through school emergency communication management systems and coordinated by school personnel; (B) Require parents or guardians who need to communicate with their student during the school day to contact the school directly",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "P-011 requires protocols that route 'all emergency communication' through school systems 'coordinated by school personnel' and that require parents who need to reach their student during the school day 'to contact the school directly'; 'must' fits P-008's 'shall adopt'. P-007 gives the July 1, 2027 outer date. These protocols belong to the policies due by January 1 each year (P-008), so they may apply sooner; 'By' allows for that."
+  },
+  {
+   "file": "workspace.md",
+   "line": 15,
+   "sentence": "Not known as of Nov 8, 2026: who pays for phone storage (the law sets aside no money; we didn't review the state budget).",
+   "marker": "{analysis: each district chooses storage (P-009); no funding or fee provision in the law's full text, P-001 to P-019 and P-056 to P-061; any state funding would come through the state budget, which is outside our sources}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "Valid. Storage methods are left to each district and public school (P-009, under P-008's lead-in). I checked the whole enacted text, P-001 to P-019 and P-056 to P-061: there is no appropriation, funding or fee provision; P-016 gives only guidance and technical support. The state-budget point is labeled as outside the sources, and the date is absolute."
+  },
+  {
+   "file": "workspace.md",
+   "line": 17,
+   "sentence": "The bill drops e-readers from its incomplete list of example devices and requires yearly policies.",
+   "marker": "[P-004, P-021, P-008, P-020]",
+   "verdict": "supports",
+   "evidence_span": "Such term includes, but is not limited to, smartphones, smartwatches, tablets, headphones, and other devices",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "P-021 (prior law) lists 'tablets, e-readers, headphones'; P-004 (as enacted) lists 'tablets, headphones' after 'includes, but is not limited to', so e-readers were dropped from a list that is not exhaustive. P-020 set a one-time 'By January 1, 2026' deadline; P-008 sets 'By January 1 each year ... adopt, and revise as appropriate'. What the e-reader change means for readers is a clarity gap, listed under framing_issues."
+  },
+  {
+   "file": "workspace.md",
+   "line": 182,
+   "sentence": "Harrell's remark, as reported, doesn't name the high schools or say how their success was measured.",
+   "marker": "{analysis: based on P-046, with P-044 naming her as a state senator}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "Valid. P-046 paraphrases her ('schools around the state have already implemented similar restrictions with success') and quotes her ('It has been done in high schools already, it’s been very successful') without naming any school or giving any measure; P-044 calls her 'State Sen. Sally Harrell'. The 'as reported' caveat matches the one given to Adams on L194."
+  },
+  {
+   "file": "workspace.md",
+   "line": 189,
+   "sentence": "Phones can be critical for families in an emergency, opponents say.",
+   "marker": "[P-049, P-047, P-035, P-071]",
+   "verdict": "supports",
+   "evidence_span": "Adams said phones can be critical for families seeking information during emergencies",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "P-049: Adams said phones 'can be critical for families seeking information during emergencies'; P-071: 'opponents warned it could ... leave parents with fewer ways to reach their children during emergencies'; P-035: 74.8% of opposing parents cited 'No way to reach child during emergency'. The plural 'opponents' is backed by P-071 and P-035, 'can be' keeps the hedge, and Adams's narrower 'seeking information' wording is kept where he is named (L190). The new word order matches the supporters' cards ('..., supporters say')."
+  },
+  {
+   "file": "workspace.md",
+   "line": 194,
+   "sentence": "Adams's account, as reported, doesn't say when two of his daughters were in a lockdown, or what phone rules applied.",
+   "marker": "{analysis: based on P-049, with P-047 naming him as a teacher}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "Valid. P-049 says only that he 'recalled a time when two of his daughters were in lockdown and he was unable to get updates for hours', with no date, place or phone rules; P-047 names him as 'a teacher'. The caveat mirrors the one given to Harrell on L182."
+  },
+  {
+   "file": "workspace.md",
+   "line": 201,
+   "sentence": "Schools must enforce the ban.",
+   "marker": "[P-014]",
+   "verdict": "supports",
+   "evidence_span": "Each local school system and public school shall: (A) Implement appropriate monitoring and enforcement mechanisms to ensure compliance with policies and procedures",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "P-014: each local school system and public school 'shall' implement monitoring and enforcement mechanisms to ensure compliance with the required policies, which include the ban (P-008). 'Must' matches 'shall'; the sentence does not turn P-014's 'may include' examples into duties."
+  },
+  {
+   "file": "workspace.md",
+   "line": 201,
+   "sentence": "Staff policing phones can invite conflict, opponents say.",
+   "marker": "[P-047, P-071]",
+   "verdict": "supports",
+   "evidence_span": "put the burden on teachers and administrators to police phones, a task that can invite conflict",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "P-047: Adams worries the bill would make teachers and administrators 'police phones, a task that can invite conflict'; P-071: 'opponents warned it could spark conflict for school staff'. 'Can' keeps the hedge, 'policing' is the source's own word, and the claim is attributed to opponents."
+  },
+  {
+   "file": "workspace.md",
+   "line": 201,
+   "sentence": "We found no measured Georgia high school results or workload data.",
+   "marker": "{analysis: none in the sources reviewed, though a state senator said limits had been used in high schools already (P-046); no archived source includes workload data; Georgia's high school ban must start no later than July 1, 2027 (P-007)}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "Valid. No archived passage reports measured Georgia high school outcomes or staff workload; P-046 is a statement, not data ('similar restrictions' paraphrased fairly as 'limits'); P-007 sets the 'no later than July 1, 2027' start, and the only school plan in the sources (P-054) starts in 2026-2027, so no results could exist yet."
+  }
+ ],
+ "framing_issues": [
+  {
+   "file": "workspace.md",
+   "line": 14,
+   "text": "you can't access phones or similar devices during the school day",
+   "issue": "'Similar devices' is vague in both directions on the student's own line. The law names smartwatches, tablets and headphones (P-004), and a student may not count earbuds or a smartwatch as 'similar' to a phone. The line also drops 'personal', so together with 'only' in the next sentence it can read as banning school-issued laptops and tablets, which the law keeps allowed (P-017). Suggested fix: 'you can't access your own phone, smartwatch, headphones or similar devices during the school day. [P-007, P-004, P-005]' and add 'School-issued laptops and tablets for schoolwork are still allowed. [P-017]'",
+   "severity": "medium"
+  },
+  {
+   "file": "workspace.md",
+   "line": 14,
+   "text": "you can't access",
+   "issue": "Undefined term: 'access' is the law's defined term (P-003: viewing, holding, wearing or otherwise using a device for things like messages, going online, games or music). On this line a student may read it as 'use' only, though holding or wearing counts. The definition appears only further down (L22, L78). Suggested fix: 'you can't use, hold or wear ...' with [P-003] added to the citation.",
+   "severity": "low"
+  },
+  {
+   "file": "workspace.md",
+   "line": 14,
+   "text": "only the access your disability or medical plan explicitly requires",
+   "issue": "Undefined coined term: 'disability plan' is the page's own term (correctly labeled in the tag), but families and schools know these as an IEP or a 504 plan, and 'disability plan' and 'medical plan' are also everyday names for insurance plans. Naming the plans readers will recognize is clearer than replacing them. Suggested fix: 'only the access your IEP, 504 plan (school plans for students with disabilities) or medical plan explicitly requires, or another law requires', keeping the definition tagged {analysis}.",
+   "severity": "low"
+  },
+  {
+   "file": "workspace.md",
+   "line": 17,
+   "text": "The bill drops e-readers from its incomplete list of example devices",
+   "issue": "Not actionable as written: it doesn't say what the change means for e-readers. A parent of a K-8 student may read it as 'e-readers are now allowed', but the law's general definition still reaches 'any portable electronic device capable of transmitting, receiving, or accessing communications, data, or media' (P-004), and no passage exempts e-readers. Suggested fix: add 'The law's general definition still covers any portable device that can access data or media. [P-004]' and, if a conclusion about e-readers is drawn, tag it {analysis}.",
+   "severity": "medium"
+  },
+  {
+   "file": "workspace.md",
+   "line": 17,
+   "text": "The bill drops e-readers from its incomplete list ... and requires yearly policies",
+   "issue": "Vague references: 'The bill' and 'its' follow a sentence that names both HB 1009 and House Bill 340, so readers may not know which bill or list is meant. 'Incomplete' can read as 'unfinished' rather than 'examples only'. 'Requires yearly policies' is vaguer than P-008 (adopt, and revise as appropriate, by January 1 each year). Suggested fix: 'HB 1009 also removes e-readers from the law's list of example devices, which isn't a full list, and makes each district and school adopt or update its policy by January 1 every year.'",
+   "severity": "low"
+  },
+  {
+   "file": "workspace.md",
+   "line": 182,
+   "text": "or say how their success was measured",
+   "issue": "'Their success' takes Harrell's claimed success as given, on a card whose evidence label is 'Uncertain (statements only; no measured results)'. Suggested fix: 'or say how success was judged'.",
+   "severity": "low"
+  },
+  {
+   "file": "workspace.md",
+   "line": 201,
+   "text": "We found no measured Georgia high school results or workload data.",
+   "issue": "'Results' doesn't say of what (suspensions, conflict, learning). The same caveat is also worded differently on the two sides: card 1 (supports, L153) says 'We found no measured results from Georgia high schools yet.', and card 5 (opposes) drops 'yet'. Suggested fix: use the same wording on both cards, e.g. 'We found no measured results from Georgia high schools yet, and no workload data.'",
+   "severity": "low"
+  }
+ ],
+ "summary": {
+  "units_checked": 11,
+  "supports": 6,
+  "partial": 0,
+  "does_not_support": 0,
+  "wrong_span": 0,
+  "questionable_or_invalid_tags": 0
+ }
+}
