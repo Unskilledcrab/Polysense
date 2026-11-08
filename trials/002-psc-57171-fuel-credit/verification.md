@@ -772,3 +772,123 @@ changed**: the nine label lines are identical to revision 6.3's.
 (89 words), What it means for you 8.4, Layer 1 7.5, Layer 2 8.2, Layer 3 8.4 (Layer 4 9.9, not targeted); no budget
 warnings and no CHECK lines. `verify_hashes.py` PASS. `build_passages.py`: 166 passages, 0 errors, all cited. Test
 render: no warnings about Decide labels or undated home items.
+
+## Round 7 (revision 7, `verification/round7/workspace.r7.md`): passed
+
+| Layer | Check | Result |
+|---|---|---|
+| 1 | Deterministic gate | **Pass** (revision 7, above): 512 units, 0 errors, 0 warnings; `home.md` 8 units; reading grades 8.4, 8.4, 7.5, 8.2 and 8.4 in the targeted sections (Layer 4 9.9); hashes PASS |
+| 2 | Blind source check (`source-check.json`, `source-check-home.json`, `display-check.json`) | Page: 512 units, **381 supports, 7 partial, 0 does not support, 0 wrong span**; 121 tags valid, 3 questionable; 19 framing issues (4 medium, 15 low). Home: 8 units, 7 supports, 1 valid tag; 2 framing issues (low). Display strings (`page.yaml`): 8 units, 6 supports, 2 partial; 4 framing issues (1 medium, 3 low). **0 ungrounded evidence spans** (403 spans), by the coordinator's check |
+| 3 | Bias panel | Advocate for Georgia Power's and GAM's positions **4/5** (7 missing arguments; 13 wording items, 6 medium; 8 imbalance items, 1 high, 6 medium; 6 label notes). Advocate for PIA Staff's and GIPL's positions **4/5** (8 missing arguments; 9 wording items, 5 medium; 10 imbalance items, 1 high, 5 medium; 4 label notes). Standards editor: neutrality 4/5, clarity 3/5; 25 issues (**0 high**, 10 medium, 15 low) and 12 flip-test items |
+| 4 | Calibration (`verification/round7/calibration/`) | Caught **10 of 10** planted errors (the coordinator's count; the drafter did not open the folder) |
+| – | Lay reader (experimental; `verification/lay-reader/revised/`) | Not a pass condition. Questions 1, 2, 5 and 6 answered; 3 with effort; 4 partly (how to send a comment); 39 terms it couldn't place |
+
+**Round 7 passes**: the gate is clean, the source check found 0 unsupported claims, 0 wrong spans and 0 ungrounded spans,
+both advocates rated their side 4/5, and the editor found no high-severity issue. Each advocate also marked one imbalance
+item "high". The utility side's (U IM1, the "In short" lines) breaks style guide section 8 and is fixed in revision 7.1
+(item 15). The more-credit side's (M IM1, card 5's label) would change a label, so it is an open item (C1).
+
+Codes: SC = page source check, SH = home check, SD = display-string check (L = revision 7 line); U and M = the two
+advocates (MA missing argument, UW wording, IM imbalance, LA label note, numbered in report order); E = editor issues
+(E1–E25) and F = flip tests (F1–F12), in report order; LR = lay reader.
+
+### Revision 7.1: what changed
+
+Change class **correction** for items 1–14 and **update** for items 15–24; reason: "fixes after passing round 7".
+Revision 7 is archived in `verification/round7/` (`workspace.r7.md`, `home.r7.md`, `page.r7.yaml`). **No card claim,
+evidence label or side changed**: the nine evidence labels are identical to revision 7's. Card titles 1 and 2 change only
+their "(Option 1)" and "(Option 2)" tags, and the "Side" field of those two cards is renamed the same way (item 21). Line
+numbers are revision 7.1's. The changed units are listed in the coordinator's scratch folder as `changed-units.txt`
+(144 changed or new units on 75 lines, 113 units removed or replaced, 1 home line, 12 `page.yaml` strings).
+
+| # | Finding (who raised it) | Change in revision 7.1 | Lines |
+|---|---|---|---|
+| 1 | P-011 gives the date, not a definition of briefs (SC L38 partial) | "Briefs are due by 4 p.m. on Dec 2, 2026" [P-011]; the definition is its own `{analysis: plain-language definition}` sentence | 38 |
+| 2 | "One of three committees": the calendar names a fourth (SC L71 partial; SC framing L71) | "The PSC's Energy Committee, a committee of its commissioners, …" | 72 |
+| 3 | P-105's "This" is one recommendation, not GIPL's whole plan (SC L145, L328 partial) | "GIPL says a change it recommends …" at both places. In the same line 146 sentence pair, "it says … its plan" became "PIA Staff says … Staff's plan" (SC framing L330, low) | 146, 331 |
+| 4 | The "homes come out behind" conclusions rest on an unstated condition (SC L148, two questionable tags; SC framing L148; E6; U UW8) | The condition is in the visible sentences: "If the later base-side change is shared among customer groups the way base revenues are today, that ranking holds …"; "On that condition, and with no added carrying cost, homes as a group come out ahead in dollars unless about 95% or more of the base-side change reaches base rates." The typical home's point (about 90%) is tied to Georgia Power's per-$100 million examples, which follow its storm-cost and fuel-rate changes (P-141). "Only if nearly all of it" is gone; the tag notes P-016 and P-105 | 149 |
+| 5 | GAM's position overstated as arguing against a bigger credit (SC L158, L162 partial, L166 questionable; SC framing L158, L162; E1, E9, F1; U UW7) | Layer 3 intro: "GAM, a manufacturers' group, warns of upward pressure on base rates" (P-115). Values line: "GAM's witness, who warns about a bigger fuel credit, said …". The Plan A note no longer calls GAM's line Plan A's. Every "either take-or-pay option" sentence now follows P-111: "GAM says that if the PSC finds a change is needed, either take-or-pay choice would "adequately address" the concerns of PIA Staff and intervenors" (the passage names PIA Staff's and intervenors' concerns, not GAM's own). Card 9's "Who says it" adds that sentence (E8, F9); its title, side and label are unchanged. GAM's opposition to crediting real-time money against pipeline fees (P-110) stays in Plan A and cards 3, 4 and 6 | 159, 166, 167, 172, 180, 188, 196, 330 |
+| 6 | P-055 doesn't show that new pipeline fees are covered through the credit (SC L180 partial) | "The fuel charge also would not carry new pipeline fees tied to large-load customers. [P-055, P-065] Those customers' real-time payments would cover the fees. [P-065, P-127]" | 181 |
+| 7 | "Get a bigger fuel credit" reads as a bill credit (SC framing L180, L188, L196) | Plans B–D: "Customers on standard rates," then "more real-time money would count toward fuel" (Plan B adds "which lowers the fuel charge", P-144) | 181, 189, 197 |
+| 8 | Line 50's tag said the FAQ doesn't mention committee meetings; the FAQ names the standing committees (P-171) | The tag now says so, and that the archived FAQ doesn't say whether the public may attend or speak; the sentence is unchanged | 51 |
+| 9 | "Base rates are frozen through 2028" in the page's voice (SC framing L172; E12) | "Georgia Power says base rates are frozen through 2028." [P-054] | 173 |
+| 10 | "Dec 15, 9:30 a.m." reads as the decision's time (brief; SH framing L5) | Heading "Dec 15"; the session "starts at 9:30 a.m."; a new process note says the case's time in the session isn't posted as of Nov 8, 2026 | 73 |
+| 11 | Cards 3 and 5 said large-load customers would be "charged" or would "pay" pipeline fees; no plan changes what those customers pay (E5) | Card 3 and card 5 "In short": "New large-load pipeline fees would stay off fuel charges" (P-055, P-096). The cards' bodies and Plans B and D keep the passages' own account: the fees are "recovered from" those customers by counting their real-time payments toward fuel (P-127) | 257, 281 |
+| 12 | Card 7's "by their own admission" has no PIA Staff passage (M UW5) | Removed: the quote now ends at "principles." Georgia Power's footnotes for it cite the Oct 15 transcript (Tr. 298-99), which is listed without a file, so no Staff passage can be cited | 309 |
+| 13 | `page.yaml` (SD L7 and L14 partial; SD framing L7, L14) | `link_text`: "Larger businesses' real-time power payments and your fuel charge" [P-016, P-044, P-144]. Plan C chip: "PSC staff's plan" [P-006, P-059, P-073]. Every reader-facing string keeps a citation comment | `page.yaml` |
+| 14 | 1-800-282-5813 is "outside metro-Atlanta" in one place and "inside Georgia only" in another (LR; round 6 O12) | Line 48 now attributes "inside Georgia only" to the Sep 1 legal notice that says it (P-021, P-022). Lines 46, 49 and 63 keep the public witness page's "(outside metro-Atlanta)" (P-163). Neither description is merged into the other | 48 |
+| 15 | "In short" lines give the fuel side only (U IM1 high, UW5, UW6; LR "seemed to favor") | Cards 1, 2 and 4: "Fuel charges would likely fall; base rates could rise later." Card 7: "Counting costs such as coal rail car leases would likely lower fuel charges; base rates could rise later." Cards 3 and 5: "New large-load pipeline fees would stay off fuel charges; base rates could rise later." Card 6: "Fuel charges keep paying pipeline fees; real-time money keeps lowering base costs" (P-111, P-124). Card 8: "Fuel charges keep paying most left-out costs; Georgia Power says real-time customers pay their share through the base side" (attributed, since PIA Staff and GIPL dispute it). Each line is ≤ 40 words; claims and labels unchanged (two claim sentences lost one or two words: card 6 "fixed costs" → "fixed"; card 8's claim is split into its two halves) | 233, 245, 257, 269, 281, 293, 305, 317 |
+| 16 | "The public copy doesn't say why" only for Georgia Power (SC framing L35; E2, F2; U UW2, IM2) | Removed at lines 35, 158, 180 and 196 (revision 7). One "Not known yet" item now covers every party: the public copies black out some figures from Georgia Power, PIA Staff and GAM and some words from GIPL, and "the copies we read give no reason for any party's blacked-out material" `{editorial: scoped to the copies we read}` | 35, 40, 159, 181, 197 |
+| 17 | Uneven caveats (M UW2, UW1, UW4, IM2; U UW3, IM5; F7) | (a) Card 7's "not a finding by the PSC" note is removed; no side's statement carries one now. (b) GIPL's complaint in its own words: Georgia Power "has consistently refused" to let intervenors review the model (P-103), in Plan B and card 3. (c) GIPL's capital-substitution quote moved from Plan A's "Who benefits" to its "What's uncertain", as a short quote plus paraphrase, so no plan's benefit field ends on a rebuttal. (d) Plan C's "Where it stands" adds PIA Staff's on-record answers, marked "had said": "simply for illustration purposes" (P-145), "consistent with the 2010 rate case proposal" (P-073) and "consistent with the manner in which fuel costs are recovered" (P-084); P-127 now says "if large projects fall through". For the same evenness (F7), Plan B's adds Georgia Power's on-record answer to Staff's "partial solution": existing fees "are not driven by large load growth" (P-051) | 175, 180, 183, 188, 261, 307 |
+| 18 | Values guide (SC L162; E9, E19, F3, F12; U values_guide, IM6; M values_guide, IM3) | One line per side with a documented argument, in one form, "<party>'s witness(es), who back(s) Plan X (GAM: who warns about a bigger fuel credit), said "…"", with no witness named individually. Georgia Power, Plan B: "preserve the integrity and structure of the RTP rate design" (P-131). PIA Staff, Plan C: its "all customers" guideline (P-062), as the more-credit advocate asked. GIPL, Plan D: "This shifts costs to FCR customers," with FCR defined right after. GAM: P-115. A note says Plan A has no line, that Georgia Power also says it protects existing customers (P-054, the value GIPL's line names), and that Resource Supply Management isn't covered. Lines are 31–33 words; quotes 5–12 words; no recommendation words | 163–167 |
+| 19 | "What it means for you" lines don't share fields (E7, E24; LR) | Each line: direction first (≤ 25 words), then size or why it isn't known, then when, marked "as of Nov 8, 2026". To fit 45 words, the home line drops "Whether you come out ahead depends on the next base rate case" (the money steps say it) and the business line drops GAM's group comparison (C6) | 14–17 |
+| 20 | Define at first mention on each tab (E10; LR unclear terms) | Summary: real-time prices (8), fuel charge and base rates (9), the fuel credit as an accounting entry (23), base rate case (25), GAM (40), GIPL (79), EMC "territory and financing" in plain words (17); docket was already defined at its first body mention (52). What's decided: real-time customers, the fuel credit (accounting entry), fuel charge, base rates and the PSC (94); "FCR customers" right after the quote (146); "the docket's filing list" → "the case's filing list" (155). Options: the parties, RTP, the fuel credit (accounting entry) and base rates (159); "FCR customers" right after the quote (165). Arguments: a "Words on these cards" paragraph (RTP, fuel credit, fuel charge, base rates, take-or-pay contracts and choices, pipeline fees) (213); "FCR customers" after the quote (331) | 8, 9, 17, 23, 25, 40, 79, 94, 146, 155, 159, 165, 213, 331 |
+| 21 | "Option 1" and "Option 2" next to Plans A–D (LR) | Reader text says "take-or-pay choice 1" and "2", mapped once on each tab to the filings' "Option 1" and "Option 2" (171, 213). Card titles 1 and 2 change only that tag; their Side fields are renamed the same way; quotes and evidence labels keep "Option". Sources table "why" cells follow | 35, 171–197, 213, 229–251, 339, 357–360 |
+| 22 | Title frames the decision as fuel-side only (U UW1; LR; SD framing L6; E21) | "Georgia regulators' Dec 15 decision: how real-time payments split between fuel and base costs" (14 words) [P-013, P-016, P-061, P-169]; the page's H1 matches | `page.yaml`, 1 |
+| 23 | The comment item didn't say where to ask (LR question 4) | The item leads with "Send the PSC a public comment by 9:30 a.m. on Dec 14, 2026" (computed), then says the PSC's Public Comments page doesn't say how to send a comment, then gives the phones and email (P-163). The home item adds the email | 49; home 5 |
+| 24 | Source labels didn't say who (LR) | "GIPL testimony", "GAM testimony", "PIA Staff testimony", "PIA Staff corrections", "Georgia Power testimony", "Georgia Power data", "Georgia Power rebuttal", "Georgia Power motion"; S10 "Filing page" (the old "Resource Supply" chip read like a typo beside the party's name). Some labels are now three words | `page.yaml` |
+
+Other text that changed to fit a budget or a definition: the 30-second version dropped "Dates can change." (the "Coming
+up" list still says so) to fit the new definitions in 90 words; the comment item dropped the Public Comments page's
+"relevant feedback" description; the real-time line's "New large-load customers on one tariff have no baseline" became
+"Any baseline power you have" (P-071 cited) and a tag note.
+
+### Open items (round 7, not changed in revision 7.1)
+
+| # | Open item (who raised it) | Note |
+|---|---|---|
+| O1 | Labels: cards 4 and 7 graded "Supported" on background facts (U IM7, LA1, LA2); card 3 should credit GIPL's agreement and P-127 (U LA4); card 6's size part (U LA6) and its access-charge premise (M LA3); card 8's size part (M IM6, LA2); card 9 "disputed" (M LA4); one label per card, or rename the "Supported" part (E3); "Mixed" versus the legend's "Contested" (E15) | Label changes need a full round; see C1–C4 |
+| O2 | Card 9's title and side, "Limit the shift", are the page's words, not a remedy GAM proposes (E8) | Changes a card's claim |
+| O3 | GIPL's peak-price finding in the basics, "Also raised" and card 8 (U UW4, IM4; E4, F5) | See C2 |
+| O4 | Missing arguments for Georgia Power and GAM (U MA1–MA7): P-121 "not similarly situated", P-045, P-052 in card 8, P-046 in Plan A, P-168's conclusion, P-110's second half, P-127's second half | Content additions |
+| O5 | Missing arguments for PIA Staff and GIPL (M MA1–MA8): the 0.49-point profit estimate as a Plan A cost (carried since round 4), the 2026–2031 growth in Plan A, Staff's answer in card 7, P-048 and P-058 in card 2, GIPL's reason for the peak-price finding, P-124's "(like FT)", the transparency points side by side | Content additions; Plan C's answers (M MA3, MA4) were added under item 17 |
+| O6 | Card 6's challenges go unanswered though GAM's P-110 and Georgia Power's P-123 answer them (U IM3) | Round 4 and 5 views differ on third-party answers (round 6 C5) |
+| O7 | Plan fields: Plan A leans toward its supporters (M IM4); Plan B's "Who pays" omits the costs that stay on the fuel charge (M IM5); Plans B and D's "Who pays" lack a blacked-out note (M IM10); Plan C's per-home benefit without a per-home cost (F6); the $102 and the data-center quote side by side in Layer 2 (M IM9, E11, F4, SC framing L146); line 147's counterpoints (M IM7); GIPL's "two critical factors" not named in Plan A and card 8 (M UW3); Georgia Power's P-058 clipped and "fixes" (U UW9, IM8); P-145 inside card 3's support (U UW10); card 3's "so" and missing P-127 reason (U UW11); P-051 used for Staff in card 4 (U UW13); card 5's "Who disagrees" through GIPL's account (E16, F8); GIPL's description caveat (F10); the reports sentence quotes one side (F11) | Next revision |
+| O8 | Questions to weigh: Q2's now-versus-later frame (U, M question notes); Q3 mixes choices; no question on monthly reports (E23; M) | See C7 |
+| O9 | Clarity: Layer 4 reads at grade 9.9 (E17); line 224's errata note (E17); terms still undefined: carrying costs, hedging, demand response, baseload or intermediate generation (SC framing L186), and lay-reader terms outside the brief's list (power-pool trades, large-load cost model, winter peak, embedded costs, rate schedules, Southern Company Services and the consulting firms); unlabeled bullets under "What you can do" (E22); "set to vote" (E25); vague references at line 145 ("based on its recent storm-cost and fuel-rate changes", SC framing L144) and line 175's three uses of "it" (SC framing L174); the page header's "PSC Docket 57171" chip comes before the first body definition of "docket" | Next revision |
+| O10 | 30-second version: say why the review exists (M IM8); "Decided by Dec 15" and the title state a scheduled date (SC framing L1) | Next revision |
+| O11 | Home: "Each plan we could read" is vague and sits under the Oct 27 item (SH framing L15); the Dec 14 deadline shown without "earliest possible" (SH framing L5); the Nov 12 hearing is on Georgia Power's rebuttal (SH L9 note) | Next revision |
+| O12 | The errata flagged three times in Plan C's benefit field (M UW8); GIPL's Oct 14 answer to the motion sits far below the request (M UW9); GIPL as "a group of congregations" (SC framing L37); uneven option-chip naming (SD framing L13) | Next revision |
+
+### Contradicting suggestions (round 7)
+
+| # | Point | Views, side by side | Choice now |
+|---|---|---|---|
+| C1 | Card 5's first label part | M (IM1 high, LA1): grade it "Supported"; the only conflict is GIPL's account of Georgia Power's view. U (LA5): add "Uncertain" for which split GIPL now backs. E (E16, F8): use Georgia Power's own words (P-124) in "Who disagrees" | No change (labels frozen after a pass) |
+| C2 | GIPL's peak-price finding | U (UW4, IM4, LA3) and E (E4, F5): it is under a pending motion to strike and GIPL calls rate design out of scope; drop it from the basics and card 8's label, or note the motion. M (MA6, UW7): add GIPL's reason, "because the reliability cost component was set inconsistently with the peaker method" | No change |
+| C3 | "Supported" parts on background facts | U (IM7, LA1, LA2) and E (E3): grade each card's disputed premise. M: cards 1, 2, 4 and 7 are "labeled fairly and in parallel" | No change |
+| C4 | Size parts of cards 6, 7 and 8 | M (IM6, LA2): card 8 should match card 7's "no public estimate". U (LA6): card 6 should cite the $264 million as card 8 does | No change |
+| C5 | The "not a finding by the PSC" caveat on GIPL's data-center report | M (UW2): drop it or apply it to every side. E (E11, F4) and SC (framing L146): keep the quote once, with the caveat, or add the caveat at line 146 | Revision 7.1 removes it (brief item 17); adding a caveat for every side stays open |
+| C6 | GAM's group comparison on the "If you" lines | E (E7): put it on both standard-rate lines or neither. U (if_you_lines): add it to the home line. M (if_you_lines): add the page's own computed point (a home comes out behind only if nearly all of the shift reaches base rates) to the home line | Revision 7.1: neither, because direction, size and when fill the 45-word budget; the comparison and the computed point stay in Layer 2 (line 149) |
+| C7 | Q2 | U: "a likely lower fuel charge against the same dollars coming off the base side". M: add "which split best matches fuel costs with the revenue that covers them?" | No change |
+| C8 | Georgia Power's values line | U (values_guide, IM6): use its marginal-cost value for Option 1 (P-119, P-129). M (values_guide, IM3): its pipeline value (P-055) is shared with GIPL's plan and with the review's purpose (P-053) | Revision 7.1 uses Georgia Power's own conclusion, P-131 ("preserve the integrity and structure of the RTP rate design"), which covers its whole plan and needs no "Option 1" in the quote; neither advocate proposed this exact quote |
+| C9 | GIPL's values line | U: reword without the disputed premise and note that Georgia Power claims the same value (P-054, P-127). M: fair and strong as written | Revision 7.1: "protecting customers on standard rates", the quote kept, and a note that Georgia Power also says it protects existing customers (P-054) |
+
+### Step 5 checklist (revision 7.1)
+
+- [x] **Every sentence is cited or tagged.** `check_citations.py` on `workspace.md`: PASS, 541 units (408 cited, 57 analysis,
+      65 editorial, 11 computed), 0 errors, 0 warnings. `home.md`: PASS, 8 units (7 cited, 1 computed), 0 errors, 0 warnings.
+- [x] **Passages unchanged**: 166 passages, no new ones; all cited. `verify_hashes.py`: PASS.
+- [x] **Reading grade** (`readability.py`): 30-second 7.3 (90 words), What it means for you 7.2, Layer 1 7.4, Layer 2 8.4,
+      Layer 3 8.4 (target ≤ 8.5). Not targeted: Layer 4 9.9. No budget WARN lines and no CHECK lines. Longest card label
+      83 words (card 8, unchanged).
+- [x] **Test render**: no warnings; the page shows "version 7.1".
+- [x] **Scope held**: the nine evidence labels are identical to revision 7's; no card claim or side changed; card order
+      and plan structure unchanged.
+- [ ] **Targeted re-check** of the changed units: pending (run by the coordinator).
+
+### Where I'm least sure (revision 7.1)
+
+1. **Georgia Power's values line** quotes P-131, a whole-plan statement about keeping the real-time rate's design, not
+   the marginal-cost line the utility advocate proposed (C8). The value "keeping the real-time rate's design intact" is
+   faithful to the quote but plainer than the testimony's "marginal cost-based rate" reasoning.
+2. **P-111's "concerns"**: the brief described them as GAM's own; the passage says "PIA Staff and intervenors'
+   concerns", so the page says that.
+3. **The "If you" lines lost two points to the 45-word budget** (item 19, C6). The home line no longer says that coming
+   out ahead depends on the next base rate case; the money steps right below it do.
+4. **Item 11**: Plans B and D still say new pipeline fees "would be recovered from" large-load customers, the passages'
+   own words (P-055, P-096); only cards 3 and 5 changed, as the brief listed. A reader could still take "recovered from"
+   as a new charge.
+5. **"Customers on standard rates."** now stands as its own cited sentence in Plans B–D's "Who benefits"; a checker may
+   read a one-phrase sentence as thinly supported.
+6. **The 30-second version is exactly 90 words**, at the budget, after "Dates can change." was dropped.
