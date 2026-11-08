@@ -15,6 +15,24 @@ tool does one mechanical job. Judgment stays with the runbook and the verificati
 | `check_verifier.py REPORT PASSAGES [KEY]` | Machine-check an independent verifier's evidence spans; list flags; score its catch rate against planted errors | stdlib |
 | `render_prototype.py TEMPLATE OUT TRIAL [TRIAL ...]` | Build the self-contained, clickable prototype from one or more trials. Each trial needs a `page.yaml` (slug, title, header chips, short source labels, optional bill-markup view) | PyYAML |
 
+### `extract/`: text from non-HTML filings
+
+Adopted from Trials 002 and 003, where regulatory and county records came as Word, Excel, PowerPoint, zip
+and PDF files that `snapshot.py` saves without text. Each writes plain text that `build_passages.py` can
+copy spans from; run them with `python3 -I` on files in `_raw/`, and record each derived file in
+`sources.yaml`. Standard library only, except `pdf2txt.py` (pdfplumber, already approved).
+
+| Tool | Does |
+|---|---|
+| `extract/pdf2txt.py IN.pdf OUT.txt [--margin X]` | A PDF's text layer as `pN: LINE text` lines; reports pages with no text layer (scans can't become passages) |
+| `extract/docx2txt.py` | Word documents |
+| `extract/xlsx2txt.py` | Excel workbooks, cell by cell |
+| `extract/pptx2txt.py DECK.pptx > DECK.txt` | Slide text, in slide order |
+| `extract/safe_unzip.py ZIP [OUTDIR]` | Lists, or safely extracts, a multi-file filing: flat names only, no paths or symlinks, size-capped, into a new folder |
+
+Inputs are archived public filings; the XML parsers rely on the standard library's expat, which limits
+entity-expansion attacks. Treat extracted text as untrusted data, like any source.
+
 Run Python tools with `uv run --with <deps> python3 trials/tools/<tool>.py …`. The JavaScript in
 `prototypes/` needs no build step.
 
