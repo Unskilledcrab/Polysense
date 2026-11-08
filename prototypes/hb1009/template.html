@@ -264,7 +264,10 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
     { id: "arguments", tab: "Arguments" },
     { id: "evidence", tab: "Sources" }
   ];
-  var TAG_LABEL = { analysis: "Our analysis", editorial: "Our framing", computed: "Our math" };
+  var TAG_LABEL = { analysis: "Our analysis", editorial: "Our note", computed: "Our math" };
+  // The reader's participation power, in plain words (stored as Decide / Input / Observe in the trial files).
+  var POWER_LABEL = { decide: "You vote", input: "Have your say", observe: "Watch or read" };
+  function powerChip(p) { return el("span", { class: "power " + p.toLowerCase(), text: POWER_LABEL[p.toLowerCase()] || p }); }
   // Headings follow the kind of decision (page.yaml `kind`), so a utility case never says "What the law does".
   var KIND = {
     "law": { tab: "What it does", decision: "What the law does", options: "The choices lawmakers had, and who gains or gives up what. Tap an option for the details." },
@@ -314,12 +317,14 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
           var p = W.passages[pid]; if (!p) return;
           var sid = p.source; if (seen[sid]) { seen[sid].push(pid); return; }
           seen[sid] = [pid];
+          frag.appendChild(document.createTextNode(" "));
           var b = el("button", { class: "src", type: "button", text: (W.sources[sid] || {}).short || sid,
             "aria-label": "Show source: " + ((W.sources[sid] || {}).title || sid) });
           b.addEventListener("click", function () { W = ws; openPassages(seen[sid], b); });
           frag.appendChild(b);
         });
       } else if (u.tag) {
+        frag.appendChild(document.createTextNode(" "));
         var t = el("button", { class: "src tag " + u.tag, type: "button", text: TAG_LABEL[u.tag] || u.tag,
           "aria-label": (TAG_LABEL[u.tag] || u.tag) + ": what this means" });
         t.addEventListener("click", function () { openTag(u, t); });
@@ -401,7 +406,7 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
   function openTag(u, opener) {
     var expl = {
       analysis: "This sentence is our own reasoning from the cited facts, not a direct statement from a source.",
-      editorial: "This sentence is our framing, such as what's missing or uncertain. It can't be cited, so we label it and our checkers review it.",
+      editorial: "This sentence is our own note, such as what's missing, uncertain or how the page is organized. It can't be cited, so we label it and our checkers review it. It isn't an opinion about the decision.",
       computed: "We calculated this number from figures in the sources. The math is shown below."
     }[u.tag];
     var c = el("div", { class: "stack" }, [el("h3", { text: TAG_LABEL[u.tag] }), el("p", { text: expl })]);
@@ -462,7 +467,7 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
       s.appendChild(el("h2", { id: "h-" + sec.id }, [title, el("span", { class: "count", text: String(items.length) })]));
       items.forEach(function (it) {
         var top = el("div", { class: "chips" });
-        if (it.power) top.appendChild(el("span", { class: "power " + it.power.toLowerCase(), text: it.power }));
+        if (it.power) top.appendChild(powerChip(it.power));
         top.appendChild(el("span", { class: "when", text: it.when }));
         if (sec.id !== "what-happened" && it.date && it.date < today) top.appendChild(el("span", { class: "chip past", text: "Date passed" }));
         W = wsBySlug(it.slug) || W;
@@ -568,7 +573,7 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
           var power = b.label && /^(decide|input|observe)$/i.test(b.label) ? b.label : null;
           // An unlabeled line right after an action (arrive early, ask for help…) belongs to that action.
           if (!b.label && lastCard) { lastCard.appendChild(el("p", { class: "meta-line" }, [units(b.units)])); return; }
-          lastCard = el("div", { class: "card item" }, [power ? el("div", { class: "chips" }, [el("span", { class: "power " + power.toLowerCase(), text: power })]) : null,
+          lastCard = el("div", { class: "card item" }, [power ? el("div", { class: "chips" }, [powerChip(power)]) : null,
             el("p", null, [b.label && !power ? el("span", { class: "label", text: b.label + ": " }) : null, units(b.units)])]);
           box.appendChild(lastCard);
         });
@@ -595,6 +600,7 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
     });
     s.subs.forEach(function (sub) {
       var d = el("details", { class: "more" }, [el("summary", { text: sub.title })]);
+      if (/^where the money/i.test(sub.title)) d.open = true;
       d.appendChild(renderBlocks(sub.blocks));
       box.appendChild(d);
     });
@@ -646,7 +652,7 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
       var does = o.blocks.filter(function (b) { return b.label === "What it does"; })[0];
       var rest = o.blocks.filter(function (b) { return b !== does; });
       var d = el("details", { class: "fold" });
-      d.appendChild(el("summary", null, [el("h3", { text: o.title.replace(/^Option [A-Z]: /, "") }), chip ? el("div", { class: "chips" }, [chip]) : null,
+      d.appendChild(el("summary", null, [el("h3", { text: o.title }), chip ? el("div", { class: "chips" }, [chip]) : null,
         does ? el("p", null, [units(does.units)]) : null,
         el("span", { class: "hint", text: rest.filter(function (b) { return b.label; }).map(function (b) { return b.label.toLowerCase(); }).join(" · ") || "Details" })]));
       d.appendChild(el("div", { class: "body" }, [renderBlocks(rest)]));
