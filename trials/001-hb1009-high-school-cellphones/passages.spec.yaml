@@ -114,9 +114,11 @@ passages:
   - {id: P-044, source: S16, file: S16.txt, locator: "article, paragraphs 2-3 (Sen. Harrell)",
      start: "State Sen. Sally Harrell said", end: "needs to be protected,” Harrell said."}
   - {id: P-045, source: S16, file: S16.txt, locator: "article, Sen. Harrell on teachers",
-     start: "“When you hear a teacher say", end: "that’s what legislators want to hear,” she said."}
+     start: "Harrell said lawmakers like to hear", end: "that’s what legislators want to hear,” she said.",
+     note: "Widened in revision 5 to include the sentence naming the speaker; the quote itself says only 'she said'."}
   - {id: P-046, source: S16, file: S16.txt, locator: "article, Sen. Harrell on other high schools",
-     start: "“It has been done in high schools already", end: "rolling that out statewide,” she said."}
+     start: "Harrell said schools around the state", end: "rolling that out statewide,” she said.",
+     note: "Widened in revision 5 to include the sentence naming the speaker; the quote itself says only 'she said'."}
   - {id: P-047, source: S16, file: S16.txt, locator: "article, teacher Darryl Adams on enforcement",
      start: "Darryl Adams, a teacher, said he worries", end: "do not want to have that confrontation,” Adams said."}
   - {id: P-048, source: S16, file: S16.txt, locator: "article, Adams on older students",
@@ -163,6 +165,9 @@ passages:
      note: "Added so the whole abstract is archived as passages (P-067, P-038, P-068, P-039, P-040), making 'the summary doesn't say what the bans covered' checkable."}
   - {id: P-068, source: S13a, file: S13a.txt, locator: "abstract, lead-in to findings",
      start: "Several important findings emerge.", end: "Several important findings emerge."}
+  - {id: P-069, source: S10c, file: S10c.txt, locator: "the list's whole 2026 section",
+     start: "Fiscal Notes 2026", end: "(PDF, 293.99 KB)",
+     note: "A public government record, archived in full so that 'no fiscal note for HB 1009 on this list' can be checked. Captured 2026-11-08."}
   - {id: P-064, source: S13b, file: S13b.txt, locator: "abstract, outcomes",
      start: "The primary outcome was mental wellbeing", end: "smartphone and social media time."}
   # --- S19: Cairo High School (Grady County Schools) page, 2026-06-01 ------------------------

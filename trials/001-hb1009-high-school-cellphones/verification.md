@@ -129,6 +129,69 @@ S = supporter's advocate, C = critic's advocate, E = standards editor, SC = blin
 | 29 | Every concern is raised by one ordinary person and answered by officials (E) | **Kept for this trial, and disclosed** on the page. The runbook (v0.3) now has the drafter count voices per side before drafting and search for more on the thin side |
 | 30 | The law's purpose is missing from card 1 and the 30-second version (S) | **Kept.** The law's own text isn't a side's speaker; Layer 2 states it |
 
-## Round 4 (revision 4, current `workspace.md`)
+## Round 4 (revision 4, `verification/round4/workspace.r4.md`)
 
-*Running: fresh blind source check, supporter's advocate, critic's advocate and standards editor.*
+| Layer | Check | Result |
+|---|---|---|
+| 1 | Deterministic gate | **Pass.** 180 units (114 cited, 44 analysis, 19 editorial, 3 computed), 0 errors, 0 warnings |
+| 2 | Blind source check (fresh agent) | **108 supports, 6 partial, 0 does not support, 0 wrong span.** 8 tags questionable, 0 invalid; 12 framing issues (3 medium, 9 low). **180/180 evidence spans grounded.** No wrong number, date, vote count or quote |
+| 3 | Bias panel | **Pass.** Supporter's advocate 4/5. Critic's advocate 4/5. Standards editor: neutrality 4/5, clarity 3/5, **no high-severity issue** (28 issues: 8 medium, 20 low; 15 flip-test asymmetries) |
+| 4 | Calibration | Carried over from round 1 |
+
+**Round 4 passes** under the protocol's "when a page is done" rule. Revision 5 makes only accuracy fixes
+and fixes for breaches of written rules. A targeted blind re-check covers the 53 changed or new units.
+Everything else from round 4 is an open item, listed below.
+
+### Fixed in revision 5 (accuracy and written rules)
+
+| Finding (who raised it) | Fix |
+|---|---|
+| Three Harrell quotes relied on a passage heading to name the speaker; the passage text said only "she said" (SC) | P-045 and P-046 widened to include the article's sentences that name her. Card 3 quotes her sentence in full |
+| The "no fiscal note" claim cited only the list's 2026 heading (SC) | Added P-069, the list's whole 2026 section. The claim now points to it |
+| One Florida working paper was stated in the page's own voice ("In Florida, bans led to…") (SC) | Each mention now says what the study found, for the gains and the suspensions alike |
+| The failed amendment also dropped "breaks" from the school-day definition (SC) | Option C now says so |
+| Overstatements: "attendance gains found" (the authors say "suggest"); "younger students" for ages 12 to 15; "the article" and "the source" for single excerpts; "Emory" (no passage names it); the K-8 conclusion; the effective date given as the high school deadline (SC) | Each reworded to what its passage supports |
+| Voice tally left out the public health professor (SC) | Added |
+| A pro-law sentence sat in card 1's "What challenges it" field (SC, C, E) | Removed; the English study's missing test-score results stay under "What's missing" |
+| Woods's words narrowed; "said … would burden" firmer than "worries"; "all" dropped from "all emergency communication"; "calling parents" for "notifying"; the page called phones a distraction in its own voice; "Schools" for high schools; adopting vs. reviewing a policy; Cairo's plan undated; "how far off it could be" (S, C, E) | Each fixed to match its passage |
+| Written-rule breaches: subgroup figures before the base rate in Option B; "expected" vs. "said" for the same survey question; "support" vs. "argued against"; loaded "even" and "suffer"; undefined jargon (IEP, recreational, steady state, Documented, claim type); "critics" vs. "supporters" (S, E) | Base rates first; "cited" for both sides; "spoke for" and "spoke against"; neutral words; terms defined |
+| Card 1 was the only "In short" line with no limit (C, E; style guide: same form on every card) | Adds "There are no Georgia results yet" |
+
+### Open items for the next full round
+
+These need a card, label or balance change, so they wait for the next revision and a full panel. Where
+reviewers disagreed, both views are listed.
+
+1. **Card 5's label** carries the Florida study without the "with limits; no Georgia results yet" wording
+   that card 1 uses for the same study; card 5 also lacks the study's Florida-only and scope caveats
+   (S, E).
+2. **Contradictions to resolve:**
+   - Option A's Harrell quote: in full (round-3 supporter) or trimmed to the factual part (round-4
+     critic and editor).
+   - Card 4's label: include "whether students' own phones make emergencies safer" (round-3 supporter)
+     or drop it because no source claims it (round-4 critic).
+   - The law's emergency-communication requirement in card 4: a safeguard to list (round-4 supporter)
+     or not a finding against the claim (round-2 critic, round-3 source check).
+   - "Use" vs. "hold, wear or use" in the 30-second version: "hold or wear" overstated the law without
+     its purpose clause (round-3 source check); "use" understates it (round-4 critic).
+   - Card 2's in-school phone time: support for the claim (round-2 and round-4 supporter) or only the
+     rule doing what it says (round-3 and round-4 critic).
+3. **Option B** benefits run about 50 words against about 130 for costs; its "What's uncertain"
+   sentence lumps unequal evidence together (S, E).
+4. **Voices:** "Supporters say" vs. a single named teacher in the summaries; officials answer the only
+   opposing voice; card order always puts supporters first (C, E). Runbook v0.3 now asks the drafter to
+   count voices before drafting.
+5. **Field filing:** the expert's quote sits in "What challenges it" while the English researchers sit
+   in "Who disagrees"; card 6's survey reasons sit in "What supports it"; card 6's "What's uncertain"
+   repeats its summary (E).
+6. **Plain language:** Option B and card 2 read near grade 11; opposing cards' summaries run 34–37 words;
+   the study notes run about 200 words (E).
+7. **Missing points the passages support:** the breadth of "access" and open-ended consequences
+   (card 5); the plan exception's narrowness (card 6); the absences explanation (card 1); a statewide
+   rule with no waivers (Option B); larger effects in middle and high schools (card 1) (C, S).
+8. **Documented arguments** show speaker and source, but not the date and venue on the card; dates
+   are in the source drawer (E).
+
+## Targeted re-check (revision 5, current `workspace.md`)
+
+*Running: a fresh blind agent checks the 53 changed or new units.*

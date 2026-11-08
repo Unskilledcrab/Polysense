@@ -1,0 +1,101 @@
+{
+  "role": "supporter-advocate",
+  "rating": 4,
+  "missing_arguments": [
+    {
+      "argument": "The Florida finding most relevant to a high school law is missing from card 1 and from Option B 'Who benefits'. The study's summary says ban effects were 'more pronounced in middle and high school settings where student smartphone ownership is more common.' It appears only once, in the Layer 4 intro (line 106). Add it to card 1 'What supports it'. Keep the page's existing caveat that the summary doesn't say which effects this covers (possibly suspensions too), and note the same ambiguity on card 5.",
+      "passages": ["P-040"]
+    },
+    {
+      "argument": "Card 4 'What challenges it' leaves out the law's own answer to the emergency concern. Every district must 'establish clear communication protocols' that send all emergency communication through school emergency communication systems, coordinated by school staff. Card 4 uses P-011 only for 'parents must contact the school' and, inside an analysis tag, as a restriction.",
+      "passages": ["P-011"]
+    },
+    {
+      "argument": "Card 4 'Who disagrees' could add that supporting parents see safety the other way: 60.3% of them expected better physical health and safety. Adjusted for group size, that is about 43% of all parents {computed: 0.603 x 0.708 = 0.427}, compared with about 22% of all parents who oppose a ban and cited emergency contact {computed: 0.748 x 0.292 = 0.218}.",
+      "passages": ["P-034", "P-035", "P-033"]
+    },
+    {
+      "argument": "Option B 'Who benefits' names no benefit to teachers or schools, while 'Who pays' lists four school duties. Documented supporter statements say teachers gain. Sen. Harrell said legislators want to hear teachers say 'I can just teach again,' and Woods told lawmakers he had heard nothing but support from teachers. Today these appear only on card 5, as rebuttals. Mark both as statements without measurements, as card 5 does.",
+      "passages": ["P-045", "P-053"]
+    },
+    {
+      "argument": "Option B 'Who benefits' lacks the mirror of Option A's 'High school rules could differ from one district to the next'. One statewide rule now covers every public high school, and charter and strategic-waiver systems cannot opt out. This can go in as an {analysis} item.",
+      "passages": ["P-007", "P-018"]
+    },
+    {
+      "argument": "Card 1 says only that the English study 'reports no test-score results'. It leaves out that the same study measured the distraction mechanism card 1 relies on: strict schools had about 40 minutes less phone time and 32 minutes less social media time during school. Present it as a link, not a cause, because the study is cross-sectional.",
+      "passages": ["P-042", "P-041"]
+    },
+    {
+      "argument": "Option C 'Who pays' could note that the sponsor credited the bell-to-bell design itself. Hilton said districts reported improved focus and less isolation among younger students under 'bell-to-bell' limits. The failed amendment would have carved class transitions out of that design. It is a statement without data, about younger students, and should be labeled that way.",
+      "passages": ["P-051", "P-027", "P-002"]
+    }
+  ],
+  "unfair_wording": [
+    {
+      "line": 124,
+      "text": "Supporters expect better mental health and friendships; the one study we found, of younger students in England, found no evidence of a well-being difference. [P-034, P-042]",
+      "why": "The summary line gives only the counter-evidence. It leaves out the design limit the label states ('it couldn't test cause and effect') and the measured drop in in-school phone and social media time. Card 5's summary, by contrast, leads with evidence for the critics' view. Suggest: '...strict schools had less phone and social media time during school, but the study found no evidence of a well-being difference and couldn't test cause and effect.'",
+      "severity": "low"
+    },
+    {
+      "line": 125,
+      "text": "Students testified in support at the hearing, and the article reported that one told lawmakers phones \"have become addictive for teens.\" [P-052]",
+      "why": "This adds a second distancing layer ('the article reported that one told'). The page never does that for Adams, whose views are also reporter paraphrases (P-047 to P-049) and get a plain 'said'. Drop the quote marks around the reporter's paraphrase and write 'a 17-year-old student told lawmakers that phones have become addictive for teens.' Card 6 already treats the same student plainly.",
+      "severity": "low"
+    },
+    {
+      "line": 75,
+      "text": "State School Superintendent Richard Woods called for extending the ban to end the harm he said constant phone access causes. [P-036]",
+      "why": "The paraphrase drops 'and interruption', which is the distraction half of Woods's point. It narrows 'technology access' to 'phone access' and adds a 'he said' hedge that the Adams sentence in line 74 doesn't get. Use the verbatim wording card 2 already uses: 'to end the harm caused by constant technology access and interruption.'",
+      "severity": "low"
+    },
+    {
+      "line": 160,
+      "text": "Teacher Darryl Adams said policing phones would burden teachers and administrators and can invite conflict",
+      "why": "The summary line turns P-047's 'he worries the bill would put the burden on teachers' into a flat prediction. That makes the critic's claim firmer than the source does. Line 161 gets it right ('said he worries'). Use 'worries that' here too.",
+      "severity": "low"
+    }
+  ],
+  "imbalance": [
+    {
+      "issue": "The same Florida study gets different caveats on the two sides. Card 1 attaches its limits: Florida data only and the summary not saying how much of the school day the bans covered (line 117), plus no Georgia results yet (lines 110 and 118). Card 5 relies on the same study's suspension finding (lines 160 and 162) with none of these caveats; its 'What's missing' and 'What's uncertain' cover only workload. Add the same three caveats to card 5.",
+      "severity": "medium"
+    },
+    {
+      "issue": "In Option B, the two groups' survey reasons appear side by side before readers learn the group sizes. Line 82 has 87.7% of supporting parents and line 83 has 74.8% of opposing parents, but the overall split (70.8% support, 29.2% oppose) first appears at line 96. The parallel framing makes a minority concern look as common as the majority's expectations. About 62% of all parents are supporters expecting better focus {computed: 0.877 x 0.708 = 0.621}; about 22% are opponents citing emergency contact {computed: 0.748 x 0.292 = 0.218}. Give the 70.8/29.2 split (P-033) in Option B, or give the shares of all parents.",
+      "severity": "medium"
+    },
+    {
+      "issue": "Option B 'Who benefits' runs about 50 words; 'Who pays' runs about 130. The costs are accurate and cited and should stay. But benefits the passages support are missing: larger effects in middle and high schools (P-040), one statewide rule with no waivers (P-007, P-018), and teachers' reported relief (P-045, P-053). Option A, by contrast, is balanced (four sentences per side).",
+      "severity": "medium"
+    },
+    {
+      "issue": "Subgroup details get uneven emphasis. 'Especially among Black students', the critic-side detail, appears four times (lines 74, 83, 160 and 162). That is accurate and should stay. 'More pronounced in middle and high school settings', the supporter-side detail for a high school law, appears once (line 106), immediately qualified, and on no card or option.",
+      "severity": "low"
+    },
+    {
+      "issue": "Card 2 states the English null result in four places: label (line 122), 'In short' (line 124), 'Who disagrees' with two quotes (line 127) and 'What challenges it' (line 128), which restates the first quote. The authors' line that bans 'in their current form' need 'further development' is about English school policies, and the card doesn't say so. Card 1 gets an explicit scope caveat for Florida. Card 2 gets only an indirect one for England (line 130), though the English strict schools banned only recreational use (P-041) while Georgia bans all access, including holding or wearing a device (P-003, P-002). Cut the duplicate challenge sentence and add the scope caveat to 'What's missing'.",
+      "severity": "low"
+    },
+    {
+      "issue": "Card 1 'What challenges it' (line 116) brings in the suspension rise ('after a first year in which suspensions rose'), a fifth mention of that finding. Card 5 does not bring in the later test-score or absence gains in return. The study's own phrase, that gains came 'after that initial adjustment period' (P-040), covers the timing without repeating the other side's evidence on a supporter card.",
+      "severity": "low"
+    }
+  ],
+  "label_disagreements": [
+    {
+      "argument": "5. Enforcing the ban will burden school staff and can lead to conflict",
+      "label": "Supported on new duties and early suspensions (the law's text; one Florida working paper); uncertain on staff workload (not measured)",
+      "proposed": "Supported on new duties (the law's text); supported, with limits, on a short-term rise in suspensions (one Florida working paper; the rise began to fade after year one; no Georgia results yet); uncertain on staff workload and day-to-day confrontations (not measured)",
+      "why": "Card 1 cites the same working paper with the same Florida-to-Georgia gap, and its label reads 'Supported, with limits ... no Georgia results yet'. Card 5's suspension finding gets a plain 'Supported'. The same rule should produce the same hedge. Also, the card's core claim, that the work will be a burden and cause confrontations, is unmeasured. A label that opens with a plain 'Supported' makes card 5 look better supported than card 1."
+    },
+    {
+      "argument": "2. The ban will help teens' mental health and friendships",
+      "label": "Uncertain (one study of 12- to 15-year-olds in England found no evidence of a well-being difference; it couldn't test cause and effect)",
+      "proposed": "Uncertain (statements and parent expectations; one study of 12- to 15-year-olds in England found no evidence of a well-being difference, but it couldn't test cause and effect and its strict schools banned only recreational use; no study of high school students under an all-day ban)",
+      "why": "I agree with 'Uncertain'; it follows the page's own rule. This is a minor parity tweak. Card 1's label lists the limits of its supporting evidence. Card 2's label lists the counter-evidence's design limit but not its policy-scope gap, which the card body itself gives as the reason the question is open (line 130)."
+    }
+  ],
+  "verdict_summary": "Fair to supporters overall. The page quotes supporters verbatim with documented sources (Kemp, Woods, Hilton, Harrell, a student). It leads Layer 4 with 70.8% parent support and the 145-20 and 52-0 votes, states the law's purpose (P-057), labels the Florida causal evidence 'Supported, with limits', and says plainly that no source disputed the learning claim or that the rules work. Labels on cards 1, 3, 4 and 6 are fair, and card 2's 'Uncertain' is correct under the stated rule. Card space is roughly even (about 680 words for the supporter cards and about 810 for the critic cards, with opposing evidence on both). Main fixes: give card 5 the same Florida caveats and 'with limits' hedge as card 1; add P-040's larger middle- and high-school effects to card 1 and Option B; show the 70.8/29.2 split before Option B's survey reasons and fill out its thin benefits field; add P-011's required emergency protocol to card 4's challenges; and trim card 2's repeated null result. Nothing is high severity."
+}

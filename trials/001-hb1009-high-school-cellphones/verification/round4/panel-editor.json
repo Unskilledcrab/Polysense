@@ -1,0 +1,324 @@
+{
+  "role": "standards-editor",
+  "rating_neutrality": 4,
+  "rating_clarity": 3,
+  "issues": [
+    {
+      "line": 76,
+      "text": "Sen. Sally Harrell said, \"It has been done in high schools already, it’s been very successful and we look forward to rolling that out statewide.\" [P-046] We found no count of districts that already had them.",
+      "rule": 1,
+      "problem": "A supporter's full promotional quote (\"very successful ... look forward to rolling that out statewide\") sits in Option A's \"What's uncertain\" field, which should name an unknown and say why. It gives Option A two supporter voices (Woods, Harrell) against one opponent (Adams) and repeats card 3. \"had them\" has no clear antecedent.",
+      "fix": "Keep only the fact that bears on the uncertainty: \"Sen. Sally Harrell said some high schools had already done this [P-046], but we found no count of districts that already limited phones. {analysis: none in the sources reviewed}\"",
+      "severity": "medium"
+    },
+    {
+      "line": 116,
+      "text": "Neither study summary we read reports that bans hurt learning.",
+      "rule": 1,
+      "problem": "This sentence supports the claim but sits in card 1's \"What challenges it\" field, which softens the challenge. It says nothing for the English study, which reported no learning outcomes (line 117 says so). No opposing card puts a supporting point in its challenge field, so the field is used unevenly.",
+      "fix": "Delete it. If a second challenge is wanted, use a real limit from P-040, labeled as analysis: \"The study says fewer unexcused absences may explain a large share of the gains, so the gains may not come mainly from fewer distractions in class.\" This could be moved here from line 114.",
+      "severity": "medium"
+    },
+    {
+      "line": 158,
+      "text": "Evidence: Supported on new duties and early suspensions (the law's text; one Florida working paper); uncertain on staff workload (not measured)",
+      "rule": 2,
+      "problem": "The same Florida working paper is \"Supported, with limits ... no Georgia results yet\" in card 1 (line 110). Card 1 also says the data are Florida-only (117) and asks whether Georgia will match Florida (118). Card 5 uses the paper's suspension finding with none of those limits, in its label, \"What's missing\" or \"What's uncertain\". One rubric should carry the same limits whichever side a study helps. The label also starts with an uncontested premise (the law adds duties), while the contested core claim (a burden on staff) is unmeasured.",
+      "fix": "Label: \"Uncertain on staff burden (not measured); supported on new duties (the law's text); supported, with limits, on a first-year rise in suspensions (one Florida working paper; no Georgia results yet)\". Add to line 165: \"The suspension finding is from Florida only, and its summary doesn't say how much of the day the bans covered.\" Add to line 166: \"...and whether Georgia will see a rise in suspensions like Florida's.\"",
+      "severity": "medium"
+    },
+    {
+      "line": 82,
+      "text": "Among parents who back a ban, 87.7% expected better focus and learning, 71.2% better in-person social interactions, 69.1% better mental health and 60.3% better physical health and safety.",
+      "rule": 3,
+      "problem": "The two sides' survey answers get different verbs. Supporters' reasons are things they \"expected\" (lines 82, 113, 125). Opponents' reasons are things they \"said\" (lines 83, 149, 172-174). Both groups answered the same \"reasons for supporting/opposing\" question. Line 82 also says \"back\" where the rest of the page says \"support\".",
+      "fix": "Use one verb for every reason item on both sides, e.g. \"cited\": \"87.7% of parents who support a ban cited better focus and learning\" and \"74.8% of parents who oppose a ban cited having no way to reach their child in an emergency.\" Use \"support\" throughout.",
+      "severity": "medium"
+    },
+    {
+      "line": 172,
+      "text": "In short: Teacher Darryl Adams said high school students should keep access to their phones, and among parents who oppose a ban, 45.5% said it should be the parents' choice.",
+      "rule": 3,
+      "problem": "Every pro summary opens with the group \"Supporters say/expect/point to\" (lines 112, 124, 136), even card 3, which rests on just two sources. Con summaries open with one named teacher (lines 160, 172), even though card 6 also rests on opposing parents. The opposing view reads as one person's view.",
+      "fix": "Use one rule for both sides and state it in \"How to read these cards\": say \"supporters\" or \"opponents\" when more than one source makes the point, and name the speaker when only one does. Card 6: \"Opponents say high school students should keep phone access; 45.5% of parents who oppose a ban said it should be the parents' choice.\" Card 5 has one source, so keep the teacher's name.",
+      "severity": "medium"
+    },
+    {
+      "line": 83,
+      "text": "Who pays: Families won't be able to reach students directly during the school day ... The law gives schools state guidance but sets aside no money; any state funding would come through the budget, which we didn't review.",
+      "rule": 1,
+      "problem": "In Option B, \"Who pays\" runs 132 words in 6 sentences and \"Who benefits\" runs 50 words in 2 (Option A is balanced at 64 vs 66). The funding sentence overlaps the cost point in \"What's uncertain\" (line 84). The benefit list leaves out material the page uses elsewhere, such as less phone and social media time during school where strict rules exist [P-042] and the district reports of better focus [P-051], each with its own evidence label.",
+      "fix": "Move the funding sentence into \"What's uncertain\" next to the cost sentence, and merge the school-duties and health-plan sentences. Add one or two labeled benefit items, e.g. \"In an English study, schools with strict rules had about 40 minutes less phone time during school, a link rather than proof of cause [P-042].\" Aim for similar length without changing what the evidence says.",
+      "severity": "medium"
+    },
+    {
+      "line": 84,
+      "text": "Whether, and how much, focus, learning and well-being will change in Georgia high schools, and whether suspensions will rise or emergency contact will suffer, since the evidence so far is limited (see Layer 4).",
+      "rule": 2,
+      "problem": "This one 34-word sentence lumps a causal Florida finding, a null finding from a single snapshot study, and no data at all into one \"limited\" pile, which hides how unequal the evidence is. It also gives a possible cost the loaded word \"suffer\", while possible benefits only \"change\".",
+      "fix": "Split it and say what each piece rests on: \"We don't know if Georgia will see Florida's pattern: more suspensions at first, then better test scores in year two. The one well-being study found no difference. No source measured how emergency contact works under a ban.\"",
+      "severity": "medium"
+    },
+    {
+      "line": 98,
+      "text": "In the Senate, 13 senators voted for an amendment that would have let districts allow high school students to use phones between classes; it failed, and no senator voted against the final bill.",
+      "rule": 10,
+      "problem": "Reading level: the page is about grade 8 overall by a Flesch-Kincaid estimate, at the top of the target range. Option B and card 2 are about grade 11, and card 4 is about grade 10. Several sentences run 30-34 words (lines 84, 98, 153, 154, 160, 172), usually joined by semicolons.",
+      "fix": "Keep sentences to about 20 words and split at semicolons. For example, line 98 becomes: \"In the Senate, 13 senators voted to let districts allow phones between classes. That change failed. No senator voted against the final bill.\"",
+      "severity": "medium"
+    },
+    {
+      "line": 8,
+      "text": "Public high school students won't be allowed to use phones or similar devices during the school day, even between classes.",
+      "rule": 3,
+      "problem": "\"even\" is an intensifier that presents the rule as surprisingly strict. That is a framing choice in the most-read line of the page.",
+      "fix": "\"...during the school day, including between classes.\"",
+      "severity": "low"
+    },
+    {
+      "line": 42,
+      "text": "It defines a \"distraction-free education\" as one where student devices are banned to reduce distractions, improve school results, and increase meaningful interactions and focused learning.",
+      "rule": 3,
+      "problem": "The law's own approving words (\"meaningful interactions\", \"focused learning\") appear in the page's voice without quotation marks. They sit in the top block of Layer 2 with no matching frame from the other side. The word budget is still met: \"What was decided\" plus \"Before this law\" is 48 words, or 73 with this line.",
+      "fix": "Quote it and attribute it: The law says the ban is meant \"to minimize distractions, improve academic outcomes, and increase meaningful interactions and focused learning experiences.\" [P-057] Or move the line to \"Other rules in the law\".",
+      "severity": "low"
+    },
+    {
+      "line": 74,
+      "text": "Schools avoid new monitoring and enforcement duties and keep local control.",
+      "rule": 3,
+      "problem": "\"local control\" is a slogan from education-policy debates, used here in the page's own voice. \"Schools\" should be \"High schools\", because K-8 schools already have these rules.",
+      "fix": "\"High schools avoid new monitoring and enforcement duties, and districts keep deciding high school phone rules.\"",
+      "severity": "low"
+    },
+    {
+      "line": 160,
+      "text": "Teacher Darryl Adams said policing phones would burden teachers and administrators and can invite conflict",
+      "rule": 3,
+      "problem": "Loaded words show up in paraphrase outside quotation marks on both sides: \"policing\" and \"police phones\" for Adams (lines 160-161), and \"the harm he said constant phone access causes\" for Woods (line 75). Line 75 also narrows Woods's \"constant technology access and interruption\" to \"phone access\".",
+      "fix": "Treat both sides the same way. Either quote the source and attribute it, as line 125 does for the student (\"the article reported that he worries the bill would put 'the burden on teachers and administrators to police phones'\"; Woods: \"to end the harm caused by constant technology access and interruption\"), or use neutral paraphrase for both (\"enforcing the phone rules\").",
+      "severity": "low"
+    },
+    {
+      "line": 152,
+      "text": "An Emory public health professor, Julie Gazmararian, said, \"Parents’ concerns about emergency access are valid and understandable. However, effective cellphone policies can address this...",
+      "rule": 1,
+      "problem": "An expert's opinion sits in the evidence field (\"What challenges it\"). In card 2 the researchers who disagree sit under \"Who disagrees\" (line 127). So a statement against an opposing claim gets the weight of evidence, but statements against a supporting claim do not.",
+      "fix": "Move the quote to \"Who disagrees\", or introduce it as an expert view rather than a study. Fill \"What challenges it\" with points from the law's text: districts may add measures beyond the minimum [P-008], and emergency messages go through school systems [P-011].",
+      "severity": "low"
+    },
+    {
+      "line": 174,
+      "text": "Among parents who oppose a ban, 26.6% said phones are needed for health tools or apps and 19.8% said they're needed for schoolwork.",
+      "rule": 1,
+      "problem": "Card 6 is the only card that puts survey reasons, which are opinions, in \"What supports it\". Every other card puts them under \"Who says it\".",
+      "fix": "Move these figures to \"Who says it\". In \"What supports it\", use the law's text: a student who uses a health app without a plan that explicitly requires a device loses access during the day [P-013, P-007]. Option B makes the same point at line 83.",
+      "severity": "low"
+    },
+    {
+      "line": 178,
+      "text": "This is mainly a disagreement about who should decide and what school is for.",
+      "rule": 8,
+      "problem": "The field doesn't name anything uncertain or say why. It repeats the values note in the summary (line 172), while every other card states a specific unknown and its reason.",
+      "fix": "\"Whether teens learn responsible phone use better with or without a ban, since no source measured it. The rest is a values question about who should decide.\"",
+      "severity": "low"
+    },
+    {
+      "line": 141,
+      "text": "No source we reviewed measured how the K-8 ban is working.",
+      "rule": 8,
+      "problem": "The card's claim also rests on Sen. Harrell's statement that high schools \"already\" did this (line 137). The field only covers K-8.",
+      "fix": "\"No source we reviewed measured how the K-8 ban, or the high school limits Sen. Harrell described, are working.\"",
+      "severity": "low"
+    },
+    {
+      "line": 153,
+      "text": "Districts can add faster parent alerts, because the law sets minimum rules, but they can't allow students' own phones in an emergency unless a plan or another law requires it.",
+      "rule": 8,
+      "problem": "This states a legal conclusion as settled fact, and it overlaps line 150.",
+      "fix": "\"By our reading, the text has no exception that lets districts allow students' own phones in an emergency, unless a plan or another law requires it.\" Then drop the overlap with line 150.",
+      "severity": "low"
+    },
+    {
+      "line": 27,
+      "text": "The first such deadline under the new law is Jan 1, 2027.",
+      "rule": 8,
+      "problem": "This deadline is worked out from two dates, but it is stated as fact. It falls one day after the law takes effect, which readers may question.",
+      "fix": "\"By our reading of the dates, the first deadline is Jan 1, 2027, one day after the law takes effect.\"",
+      "severity": "low"
+    },
+    {
+      "line": 29,
+      "text": "At least one school plans to start sooner: Cairo High School said it would begin in the 2026-2027 school year.",
+      "rule": 8,
+      "problem": "\"plans\" is present tense and the notice has no date. The notice is dated June 1, 2026, and that school year is already under way.",
+      "fix": "\"Cairo High School said on June 1, 2026, that it would begin in the 2026-2027 school year.\"",
+      "severity": "low"
+    },
+    {
+      "line": 96,
+      "text": "The survey's margin of error, or how far off it could be, is about 4 points either way.",
+      "rule": 8,
+      "problem": "\"how far off it could be\" sounds like a maximum. The margin of error is a 95% range.",
+      "fix": "\"...or how far off it is likely to be, is about 4 points either way.\"",
+      "severity": "low"
+    },
+    {
+      "line": 10,
+      "text": "You can share your views with your school district or your state lawmakers, who can keep or change the law.",
+      "rule": 4,
+      "problem": "Readers may think districts can keep or change the law. They can't (P-018 bars opting out). The page should say plainly which route handles what.",
+      "fix": "\"Tell your school district how you want the rules run, and tell your state lawmakers whether to keep or change the law.\"",
+      "severity": "low"
+    },
+    {
+      "line": 8,
+      "text": "Schools must start no later than July 1, 2027. (line 8) ... The law takes effect Dec 31, 2026. (line 10)",
+      "rule": 9,
+      "problem": "The 30-second version has the right number of items (3), but they aren't short: about 95-100 words, two items of 3 sentences each, and the two key dates split across separate bullets.",
+      "fix": "Use at most 2 sentences per item. Put both dates together in \"What's next\": \"The law takes effect Dec 31, 2026; high schools must start the ban by July 1, 2027.\"",
+      "severity": "low"
+    },
+    {
+      "line": 148,
+      "text": "Students won't be allowed to use phones during the school day, so families will have to reach them through the school. [P-007, P-011] Our sources have no data on how this affects safety in a crisis.",
+      "rule": 9,
+      "problem": "The opposing cards' summaries run 34-37 words (lines 148, 160, 172). The supporting cards' run 22-25. Card 5's summary opens with a 30-word sentence, so it is the least scannable.",
+      "fix": "Cap every summary at about 25 words, and apply the same caveat rule to all six cards (see the flip test).",
+      "severity": "low"
+    },
+    {
+      "line": 106,
+      "text": "Two studies appear below. [P-055, P-041] The Florida study is a 2025 working paper designed to estimate cause and effect.",
+      "rule": 10,
+      "problem": "This is a block of about 200 words and 13 sentences on study methods, in a section meant to help readers scan the cards.",
+      "fix": "Make two short study profiles, Florida and England, of at most 3 bullets each. Move \"It doesn't say whether that applies to every effect, including suspensions\" into card 5's \"What's missing\".",
+      "severity": "low"
+    },
+    {
+      "line": 110,
+      "text": "Documented · Side: supports the law · Claim type: predictive",
+      "rule": 10,
+      "problem": "Several terms are never defined or simplified. The card headers use \"Documented\" and \"Claim type: predictive/factual\". Line 164 has \"a new steady state after an initial adjustment period\". Line 106 has \"recreational phone use\". Line 51 never spells out IEP. Line 125 says \"at the hearing\" though no hearing was introduced.",
+      "fix": "Add to \"How to read these cards\": \"'Documented' means a real person said it and we cite where; a 'predictive' claim is about what will happen.\" Rewrite as \"things may have settled down after schools adjusted\", \"phone use for fun\", \"IEP (Individualized Education Program)\" and \"at a legislative hearing\".",
+      "severity": "low"
+    },
+    {
+      "line": 113,
+      "text": "Gov. Brian Kemp said the bills he signed would \"reduce distractions in the classroom.\"",
+      "rule": 6,
+      "problem": "No anticipated arguments appear, which passes. But the \"Documented\" cards never show when a statement was made, and show where only sometimes (\"told lawmakers\", \"at the hearing\"). The project standard for a documented argument is speaker, date, venue and verbatim passage. Both sides lack this equally.",
+      "fix": "For each speaker on both sides, add the date and venue from the archived source, e.g. \"(signing release, May 5, 2026)\" or \"(quoted by Atlanta News First, [date])\". Where the source gives no date, write \"date not stated\".",
+      "severity": "low"
+    },
+    {
+      "line": 175,
+      "text": "Students testified in support of the ban, and a 17-year-old said, \"Social media is the cigarette of our generation.\" [P-052] Most parents surveyed, 70.8%, supported a high school ban.",
+      "rule": 5,
+      "problem": "A values claim is answered with a head count and a metaphor, not with the other side's documented values position. That can read as if popularity settles a values question. The supporters' own values case (\"that education time needs to be protected\", P-044) appears only as a rebuttal in card 4.",
+      "fix": "Under \"Who disagrees\" in card 6, answer value with value: add Harrell's P-044 statement. Keep the 70.8% figure only in the Layer 4 intro, where both shares appear.",
+      "severity": "low"
+    },
+    {
+      "line": 52,
+      "text": "Breaking the rules leads to escalating consequences, such as warnings, taking the device, calling parents and other actions.",
+      "rule": 8,
+      "problem": "Two paraphrases are less precise than the law. P-012 says \"parental notification\", which doesn't have to be a call, and \"escalating\" is above the target reading level. Line 56 says policies \"must be reviewed every year ... instead of by a one-time deadline\", which mixes up adopting a policy with reviewing it.",
+      "fix": "Write \"notifying parents\" and \"consequences that get stronger each time\". For line 56: \"Districts must now adopt or update their policies by January 1 every year. The old law set a one-time deadline of January 1, 2026.\"",
+      "severity": "low"
+    }
+  ],
+  "flip_test": [
+    {
+      "line": 98,
+      "text": "Our archived sources quote four officials and one student who support the law, and one teacher who argued against it.",
+      "asymmetry": "Different verbs in one sentence: supporters \"support\" (a stance) while the opponent \"argued against\" (active advocacy).",
+      "fix": "\"...who spoke for the law, and one teacher who spoke against it.\""
+    },
+    {
+      "line": 82,
+      "text": "Among parents who back a ban, 87.7% expected better focus and learning",
+      "asymmetry": "Supporters' survey reasons are \"expected\" (lines 82, 113, 125), while opponents' reasons are \"said\" (lines 83, 149, 172-174). \"back\" and \"support\" are both used for the same group.",
+      "fix": "Use one verb (\"cited\") and one word (\"support\") for both sides."
+    },
+    {
+      "line": 160,
+      "text": "In short: Teacher Darryl Adams said policing phones would burden teachers and administrators",
+      "asymmetry": "Pro summaries use the group word \"Supporters\" (lines 112, 124, 136), while con summaries name a single teacher (lines 160, 172). Card 6 also rests on opposing parents. Supporters read as a movement and opponents as one person.",
+      "fix": "Card 6: \"Opponents say...\"; name a single speaker only when one source exists, on either side."
+    },
+    {
+      "line": 112,
+      "text": "In short: Supporters say fewer distractions mean more learning; a Florida study found phone bans led to better test scores in the second year.",
+      "asymmetry": "Unequal caveats: card 1's summary is the only one without a limit. Cards 2-6 each carry one (no well-being difference; statements only; no safety data; workload not measured; mainly values). Con summaries are also longer (34-37 vs 22-25 words).",
+      "fix": "Add \"There are no Georgia results yet.\" to card 1, or move every caveat into the header labels, and keep all summaries to about 25 words or less."
+    },
+    {
+      "line": 158,
+      "text": "Evidence: Supported on new duties and early suspensions (the law's text; one Florida working paper)",
+      "asymmetry": "The same Florida working paper carries \"with limits\", \"Florida only\" and \"no Georgia results yet\" when it helps supporters (lines 110, 117, 118). It carries none of these when it helps opponents (lines 158, 165, 166). Option A applies \"If Florida's results apply here\" evenly to both sides (lines 74-75), so the gap is only in the cards.",
+      "fix": "Give card 5 the same limits in its label, \"What's missing\" and \"What's uncertain\"."
+    },
+    {
+      "line": 116,
+      "text": "Neither study summary we read reports that bans hurt learning.",
+      "asymmetry": "Card 1's challenge field holds a point that helps supporters. No con card's challenge field holds a point that helps opponents.",
+      "fix": "Delete it, or replace it with a real limit (see issues)."
+    },
+    {
+      "line": 83,
+      "text": "Who pays: ... (132 words, 6 sentences) vs Who benefits (line 82: 50 words, 2 sentences)",
+      "asymmetry": "Unequal space in Option B: the cost list is 2.6 times the benefit list. Option A's lists are about even (64 vs 66 words).",
+      "fix": "Rebalance as described in the issues, without changing what the evidence says."
+    },
+    {
+      "line": 76,
+      "text": "Sen. Sally Harrell said, \"It has been done in high schools already, it’s been very successful and we look forward to rolling that out statewide.\"",
+      "asymmetry": "Unequal number of voices: Option A quotes two supporters (Woods in \"Who pays\", Harrell in \"What's uncertain\") and one opponent (Adams). The extra supporter quote is promotional and sits in a neutral field.",
+      "fix": "Paraphrase only the factual part, so Option A has one voice per side."
+    },
+    {
+      "line": 151,
+      "text": "Sen. Sally Harrell said, \"We’ve gotten very dependent on being able to reach our kids whenever we want to, but that education time needs to be protected.\"",
+      "asymmetry": "Official vs ordinary voices: every con card is rebutted by named officials (Harrell at lines 151 and 163, Woods at 163), a student (175) or the poll majority (175). Pro cards' \"Who disagrees\" fields say \"No one\" (lines 115, 139) or quote researchers (127). Rebuttal fields total 209 words on con cards vs 159 on pro cards. The only con voice is a teacher; pro voices include a governor, a superintendent, the sponsor and a senator. Line 98 discloses that this reflects whom the sources quoted.",
+      "fix": "Keep the line 98 disclosure and repeat it briefly in each con card's \"Who says it\". Show card 1's related opposing data, which now sits only in a tag: 19.8% of opposing parents said phones are needed for schoolwork. Before publishing, search the archive for an on-record official opponent, e.g. a House \"nay\" voter or the amendment's sponsor. If none exists, record the search as blocked rather than inventing balance."
+    },
+    {
+      "line": 161,
+      "text": "Teacher Darryl Adams said he worries the bill would put the burden on teachers and administrators to police phones",
+      "asymmetry": "The con view is framed as a \"worry\", while pro views are framed as statements of fact (\"said the bills he signed would reduce distractions\", \"called for\").",
+      "fix": "\"The article reported that Adams worries...\" (the convention line 125 uses for the student), or \"Adams said the bill could put...\""
+    },
+    {
+      "line": 152,
+      "text": "An Emory public health professor, Julie Gazmararian, said",
+      "asymmetry": "Experts are filed in different fields: the researchers who disagree in card 2 sit under \"Who disagrees\" (line 127), but the expert in card 4 sits in \"What challenges it\" (line 152). An opinion against an opposing claim gets the weight of evidence.",
+      "fix": "File expert statements in the same field on both sides."
+    },
+    {
+      "line": 175,
+      "text": "Most parents surveyed, 70.8%, supported a high school ban.",
+      "asymmetry": "The majority figure is used against an opposing values claim, but no pro card cites the 29.2% who opposed. The supporters' own values case (P-044) appears only as a rebuttal.",
+      "fix": "Answer value with value in card 6 (Harrell, P-044), and keep the poll's topline in the Layer 4 intro."
+    },
+    {
+      "line": 102,
+      "text": "Cards for the law come first, then cards against it; the order is not a ranking.",
+      "asymmetry": "Order: all pro cards come before all con cards, so supporters always get the first word, even though the page says the order is not a ranking.",
+      "fix": "Alternate pro and con cards, or pair them by topic (learning with phones needed for schoolwork, enforcement with already working)."
+    },
+    {
+      "line": 84,
+      "text": "whether suspensions will rise or emergency contact will suffer",
+      "asymmetry": "Different verbs: possible benefits \"change\" (neutral), while a possible cost will \"suffer\" (loaded).",
+      "fix": "Use neutral verbs both ways, e.g. \"be affected\"."
+    },
+    {
+      "line": 192,
+      "text": "What supporters and critics said at the time",
+      "asymmetry": "\"critics\" has a more negative ring than \"supporters\". The matching term is \"opponents\".",
+      "fix": "\"What supporters and opponents said at the time\"."
+    }
+  ],
+  "verdict_summary": "No high-severity problems. Several rules pass: all six cards share one template; the law, the old law and the failed amendment each get benefits and costs; no minor is named; no argument is anticipated; 'What you can do' doesn't push a side; values are treated as legitimate; and evidence labels mostly follow the stated rubric. The page also discloses that its sources quote more supporters than opponents. What remains are medium-sized asymmetries that run both ways. Some favor supporters: card 1's challenge field holds a pro point, card 1's summary has no caveat, and a promotional Harrell quote sits in Option A. Some favor opponents: card 5 drops the Florida study's limits, and Option B's cost list is 2.6 times its benefit list. Others are uneven verbs ('expected' vs 'said'; 'support' vs 'argued against') and group vs single-voice summaries. Clarity: the 30-second version and Layer 1 read at about grade 3-6, and the Layer 2 budget is met (48 words; 5 items). But Option B and card 2 read at about grade 11 and card 4 at about grade 10, the opposing cards' summaries run 34-37 words, one methods paragraph is about 200 words, and the card-header labels are never defined. Fix the medium items before calling the page ready."
+}

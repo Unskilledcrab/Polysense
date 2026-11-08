@@ -1,0 +1,127 @@
+{
+  "role": "critic-advocate",
+  "rating": 4,
+  "missing_arguments": [
+    {
+      "argument": "Card 5 (enforcement burden) leaves out how much the law asks staff to police. The ban covers 'access', defined as 'viewing, holding, wearing, or otherwise using' a device, not just using it [P-003]. Named devices include smartwatches and headphones [P-004]. The period runs through breaks, transitions and assemblies [P-002], and schools must monitor and enforce all of it [P-014]. An analysis-tagged line under 'What supports it' would ground Adams's burden-and-conflict concern [P-047] in the law's own text.",
+      "passages": ["P-003", "P-004", "P-002", "P-014", "P-047"]
+    },
+    {
+      "argument": "Card 5 cites P-012 only for confiscation. The same provision makes consequences 'progressive' and open-ended: 'other actions as deemed appropriate' under each school's code of conduct. Saying so next to the Florida suspension finding [P-039] gives the discipline concern its basis in the law's text, without claiming the law requires suspensions.",
+      "passages": ["P-012", "P-039"]
+    },
+    {
+      "argument": "Card 6 answers the health-tools concern (26.6% of opposing parents [P-035]) with the plan exception, then stops. The exception covers only a student whose IEP, 504 or medical plan 'explicitly mandates' a device, and only 'as necessary' to meet that plan [P-013]. A student who uses a health app without such a plan has no exception [P-007]. Option B already says this (line 83), but in card 6 the 'What challenges it' field reads as if the exception settles the concern.",
+      "passages": ["P-013", "P-007", "P-035"]
+    },
+    {
+      "argument": "Card 1 says supporters think 'fewer distractions mean more learning'. But the Florida authors said fewer unexcused absences 'may explain a large fraction of the test score gains' [P-040]. The page lists that only under 'What supports it'. It also belongs under 'What's missing' as an analysis-tagged limit, attributed to no critic: the study doesn't show the gains came from fewer distractions in class, which is the reason supporters give [P-029, P-036].",
+      "passages": ["P-040", "P-029", "P-036"]
+    }
+  ],
+  "unfair_wording": [
+    {
+      "line": 112,
+      "text": "Supporters say fewer distractions mean more learning; a Florida study found phone bans led to better test scores in the second year. [P-029, P-036, P-040]",
+      "why": "Card 1 is the only card whose 'In short' states no limit on its evidence. The other five all end with one, including all three critic cards ('Our sources have no data...', 'No source we reviewed measured staff workload', 'This is mainly a question of values'). Add a limit taken from the card's own label, such as: 'It's one working paper from Florida, and there are no Georgia results yet.'",
+      "severity": "medium"
+    },
+    {
+      "line": 116,
+      "text": "Neither study summary we read reports that bans hurt learning.",
+      "why": "This sits in 'What challenges it' but defends the claim. 'Neither' also overstates, because the English study didn't measure learning, as line 117 says. No critic card gets a matching 'nothing shows otherwise' line in its challenge field. Line 115 already says no one disputed the claim, so card 1 carries two 'nothing against it' notes. Move this to 'What's missing' and reword it: 'Only the Florida study measured learning.'",
+      "severity": "medium"
+    },
+    {
+      "line": 76,
+      "text": "Sen. Sally Harrell said, \"It has been done in high schools already, it’s been very successful and we look forward to rolling that out statewide.\" [P-046]",
+      "why": "Only the first clause bears on Option A's uncertainty, which is whether districts would have limited phones on their own. The rest is an unmeasured success claim. Card 3 labels it 'statements only', but here it has no caveat, inside the neutral options section. It also gives Option A two supporter voices (Woods, Harrell) against one critic (Adams). Trim the quote to the verbatim 'It has been done in high schools already', or add that she cited no data.",
+      "severity": "medium"
+    },
+    {
+      "line": 8,
+      "text": "Public high school students won't be allowed to use phones or similar devices during the school day, even between classes.",
+      "why": "The law bars 'access', which it defines as 'viewing, holding, wearing, or otherwise using' a device (P-003). That is broader than 'use'. The same wording appears on lines 48 and 148. The breadth matters to the enforcement concern. Suggest 'hold, wear or use'.",
+      "severity": "low"
+    },
+    {
+      "line": 50,
+      "text": "Emergency messages go through the school's own systems. [P-011]",
+      "why": "P-011 says 'all emergency communication' goes through school systems. Dropping 'all' softens the point critics care most about: the school becomes the only channel.",
+      "severity": "low"
+    },
+    {
+      "line": 75,
+      "text": "In districts without limits, phones stay in class, the kind of distraction the new law aims to reduce.",
+      "why": "In its own voice, the page calls phones in class 'the kind of distraction'. Whether they distract is the point in dispute: 19.8% of opposing parents say phones are needed for schoolwork (P-035). Attribute the framing to the law instead: 'phones can stay in class, which the law treats as a distraction (P-057).'",
+      "severity": "low"
+    },
+    {
+      "line": 106,
+      "text": "It doesn't say whether that applies to every effect, including suspensions.",
+      "why": "The hedge is accurate. But naming only suspensions casts doubt on the finding critics rely on, while 'effects were larger in middle and high schools' is left to stand for the test-score and absence findings. Neutral version: 'It doesn't say which of its three findings this covers.'",
+      "severity": "low"
+    },
+    {
+      "line": 126,
+      "text": "In the English study, strict rules went with about 40 minutes less phone time and about 32 minutes less social media time during school.",
+      "why": "Less phone time during school under a phone rule only shows the rule doing what it says. It isn't evidence of better mental health or friendships. It also comes from a study whose authors said their findings 'do not provide evidence to support' such policies (P-043). If it stays under 'What supports it', the same sentence should say the study found no difference across whole weekdays or weekends (P-042).",
+      "severity": "low"
+    },
+    {
+      "line": 144,
+      "text": "Families lose direct contact with students during the school day",
+      "why": "The concern behind this card is emergencies: 74.8% of opposing parents (P-035), and Adams (P-049). The law's text supports adding 'including in emergencies'. P-011 sends all emergency communication through school systems, and line 150 notes there is no emergency exception.",
+      "severity": "low"
+    },
+    {
+      "line": 164,
+      "text": "Districts must also regularly review whether their rules work and adjust them as needed. [P-015]",
+      "why": "Here a review duty counts as easing the burden. Option B (line 83) counts the yearly review as a cost to schools. The duty cuts both ways, so either say that here or drop it from 'What challenges it'.",
+      "severity": "low"
+    }
+  ],
+  "imbalance": [
+    {
+      "issue": "The 30-second version (line 8) names the law's main exception, for students with health or disability plans. It leaves out the law's main cost to families: parents must go through the school, and all emergency communication runs through school systems (P-011). That was the top reason opposing parents gave (74.8%, P-035). Many readers stop at the summary, so they see the exception but not the change critics object to most. Add: 'Parents who need to reach their child during the school day must contact the school, including in emergencies. [P-011]'",
+      "severity": "medium"
+    },
+    {
+      "issue": "The sources quote five supporters (four officials and a student) and one critic. The page discloses this (line 98), which is right, but the effect adds up across the cards. Supporters fill 'Who disagrees' on all three critic cards: officials on cards 4 and 5 (two of them on card 5), and a student plus the poll on card 6. Meanwhile cards 1 and 3 say no one in the sources disputed the claim. In those two fields, add that the sources quote one critic, who didn't address this point. Then an empty field reads as a gap in the sources, not as agreement.",
+      "severity": "low"
+    },
+    {
+      "issue": "Option B 'Who benefits' (line 82) lists all four reasons that supporting parents gave (87.7%, 71.2%, 69.1%, 60.3%). One is a mental-health expectation that the only well-being study found no evidence for (P-042). 'Who pays' (line 83) gives one of the five opposing reasons (74.8%) and leaves out parental choice (45.5%) and learning responsible use (41.9%). 'Who pays' is longer overall, so this is minor. Give each side its top reason, or add the two missing ones.",
+      "severity": "low"
+    },
+    {
+      "issue": "Option C 'What's uncertain' (line 92) asks only the supporters' question: would phones between classes hurt focus or learning? No one has measured whether between-class access would make family contact easier or reduce enforcement conflict either. Name both questions.",
+      "severity": "low"
+    },
+    {
+      "issue": "All three cards for the law come before the three against it. The page says the order is not a ranking (line 102), but the first card readers see is the best-supported card for the law. Alternating the sides would remove that first-position advantage.",
+      "severity": "low"
+    }
+  ],
+  "label_disagreements": [
+    {
+      "argument": "4. Families lose direct contact with students during the school day",
+      "label": "Supported on the facts (the law's text); uncertain on emergency safety (no data on how school alerts perform, or on whether students' own phones make emergencies safer)",
+      "proposed": "Supported on the facts (the law's text: families must go through the school, including in emergencies, with no exception for students' own phones); uncertain on how well school alerts will keep families informed in a crisis (no data)",
+      "why": "The documented concern is about contact and information: 'No way to reach child during emergency' (P-035), and phones being 'critical for families seeking information during emergencies' (P-049). The law's text settles the contact part (P-007, P-011, P-013). The clause 'whether students' own phones make emergencies safer' attaches the 'uncertain' tag to a broader claim that no archived source makes. It also hints at a counter-argument no source raised. The neutral 'or not' version can stay in 'What's uncertain'."
+    },
+    {
+      "argument": "1. The ban will help students learn (and, for consistency, card 5's suspension finding)",
+      "label": "Supported, with limits (one Florida working paper designed to estimate cause and effect; gains in year two; no Georgia results yet)",
+      "proposed": "Supported, with limits (one Florida working paper designed to estimate cause and effect; gains in year two; its summary doesn't say how much of the day Florida's bans covered, while Georgia's covers the whole day; no Georgia results yet)",
+      "why": "'Supported' fits the page's own rule, and I don't dispute it. But the card's 'What's missing' field already names the unknown scope of Florida's bans. That is the most direct reason Florida's result may not carry over to Georgia, so it belongs in the label next to 'no Georgia results yet'. The caveat cuts both ways, so add it to card 5's 'early suspensions' clause too."
+    },
+    {
+      "argument": "2. The ban will help teens' mental health and friendships",
+      "label": "Uncertain (one study of 12- to 15-year-olds in England found no evidence of a well-being difference; it couldn't test cause and effect)",
+      "proposed": "Uncertain (the evidence for better mental health or friendships is statements and expectations; the one study, of 12- to 15-year-olds in England, found no evidence of better well-being or of less phone use overall; it couldn't test cause and effect)",
+      "why": "Card 3's label says 'statements only' for the same kind of support: Hilton's district reports, which came with no data (P-051). Card 2 relies on those reports and on parents' expectations (P-034), and its label should say so. The study's second null result, no difference in weekday or weekend phone use (P-042, P-043), bears on how supporters say the benefit would come about. 'Uncertain' stays, per the page's rule."
+    }
+  ],
+  "verdict_summary": "The page is fair to critics on substance. Every critic point the passages support appears at full strength: all three of Adams's concerns; all five reasons opposing parents gave; the English authors' conclusion that their findings 'do not provide evidence to support' such bans; Florida's rise in suspensions, especially among Black students; no money and no fiscal note; Gazmararian's safeguards, which the law doesn't require; the lack of an emergency exception; and a high school ban signed before statewide K-8 results were available. No critic is described dismissively. Verbs are neutral for both sides. Caveats on critic evidence, such as 'one family's experience' (line 153), are accurate and matched by caveats on supporters' claims. Labels follow the page's stated rule, and the Florida study is applied to both sides. The remaining tilt is in framing, not facts. Card 1 is the only card with no limit in its 'In short', and its challenge field includes a reassurance. The 30-second version shows the health exception but not the loss of direct family contact. Option A repeats Harrell's unmeasured 'very successful'. Card 4's label attaches 'uncertain' to a safety claim critics didn't make instead of the contact claim the law settles. Nothing is high severity. Fixing the medium items and the card 4 label would earn a 5."
+}
