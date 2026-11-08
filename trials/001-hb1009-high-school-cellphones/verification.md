@@ -278,3 +278,192 @@ The independent checks (blind source check, bias panel) have not run on revision
 5. **"If you…", staff.** "Your school must enforce the phone ban by July 1, 2027" joins the monitoring duty (P-014) to the start date (P-007).
 6. **"If you…", students.** "At any point in the school day" paraphrases bell-to-bell (P-002); a checker may prefer "during".
 7. **"Decided now".** "In place by the 2027-28 school year" combines the law's deadline with one news report's school-year framing (P-072).
+
+## Round 5 results (revision 6, `verification/round5/workspace.r6.md`)
+
+Inputs and reports are in [verification/round5/](verification/round5/): the page, home items and `page.yaml` strings as
+checked (`workspace.r6.md`, `home.r6.md`, `page.r6.yaml`, `passages.r6.md`), and every report.
+
+| Layer | Check | Result |
+|---|---|---|
+| 1 | Deterministic gate | **Pass.** 250 units (152 cited, 61 analysis, 34 editorial, 3 computed), 0 errors, 0 warnings; home 6 units, 0 errors, 0 warnings. Reading grade: 30-second 7.7, What it means for you 7.8, L1 5.9, L2 8.2, L3 7.8 |
+| 2 | Blind source check of the page (fresh agent) | **149 supports, 3 partial, 0 does not support, 0 wrong span.** 93 tags valid, 5 questionable, 0 invalid; 11 framing issues (3 medium, 8 low). **250/250 evidence spans grounded** (`check_verifier.py`) |
+| 2 | Blind source check of the home items | 4 supports, 2 tags valid; 2 low framing issues; 6/6 spans grounded |
+| 2 | Display check (`page.yaml` strings) | 9 supports; 2 low framing issues; 9/9 spans grounded |
+| 3 | Bias panel | **Pass.** Supporter's advocate **4/5** (7 missing arguments; wording notes 2 medium, 5 low; imbalance 1 medium, 3 low; 3 label proposals). Critic's advocate **4/5** (3 missing arguments; wording notes 1 high, 1 medium, 5 low; imbalance 2 medium, 5 low; 2 label proposals). Standards editor: neutrality 4/5, clarity 4/5, **no high-severity issue** (23 issues: 7 medium, 16 low; 14 flip-test notes) |
+| 4 | Planted-error calibration (fresh blind verifier on a copy with hidden errors, `verification/round5/calibration/`) | **11 of 11 caught** |
+| — | Lay-reader check (experimental, not a pass condition; [grades](verification/lay-reader/revised/grades.md)) | Revision 6 before this round: answered all six questions; listed 41 terms it couldn't place (12.0 per 1,000 words, down from 16.8). Its HB 1009 terms went to the revision 6.1 fix list (items 19 and 20 below) |
+
+**Round 5 passes** under the protocol's "when a page is done" rule: the gate is clean; the source checks found 0
+unsupported claims, 0 wrong spans and 0 ungrounded spans; both advocates rated their side 4/5; and the editor found no
+high-severity issue. The critic's one high-severity note was about its own side's values-guide line; the pass rule counts
+the editor's.
+
+The three panel reports agree on three things: card 5's evidence label should treat the Florida working paper as card 1
+does (all three, the critic included); the opponents' values line used their narrowest value (critic high; editor and
+source check medium); and the accuracy flags. A label change re-runs the whole panel, so revision 6.1 gets a full
+round 6. Revision 6 stays the fallback.
+
+## Revision 6.1: what changed (2026-11-08, checks pending)
+
+Reason: **fixes after passing round 5**. Change class **correction** for items 1–7 (accuracy) and **update** for items
+8–20. Revision 6 is archived in `verification/round5/` (`workspace.r6.md`, `home.r6.md`, `page.r6.yaml`,
+`passages.r6.md`). `home.md` is unchanged.
+
+**Not changed:** every card claim (title), the card order, each card's side, the option titles, and every evidence label
+except card 5's (item 8).
+
+| # | Item | Done? | What changed |
+|---|---|---|---|
+| 1 | Law's second exception | Done | The 30-second version: "unless a disability or medical plan explicitly requires it, or another law does" (P-007). The same pair now appears in the students line, "Decided by the law" and Layer 2 item 4 |
+| 2 | Families and staff money lines | Done | Families line: "Not known as of Nov 8, 2026: who pays for phone storage; the law doesn't say or set aside money, and we didn't review the state budget." Staff line: "…the law sets aside no money, and we didn't review the state budget." The caveat is the short form of the one in Option B and card 5, to fit the 45-word line budget; its tags carry the full wording |
+| 3 | "No Georgia high school results" | Done | "Not known yet" and card 1's "In short" now say "we found no measured results from Georgia high schools"; their tags note P-046 and P-054 |
+| 4 | "School day" is the bell-to-bell period | Done | Layer 2 item 1 cites P-005 and P-002; Option B's "What it does" cites P-007, P-005 and P-002 |
+| 5 | Card 1 "Who disagrees" | Done | "No one quoted in our sources disputed this claim directly." Then, base rate first: "Of the 29.2% of parents who opposed a high school ban in the Emory survey, 19.8% cited "Phones needed for schoolwork" as a reason." [P-033, P-035] |
+| 6 | Card 3's dates | Done | Card 3's "What challenges it" adds that districts and public schools had to adopt K-8 policies by Jan 1, 2026 (P-020, P-066); only the latest K-8 start date, July 1, 2026, hadn't passed when the high school ban was signed |
+| 7 | Attribution | Done | P-047 added wherever an Adams line cites only P-048 or P-049 (Option A; cards 4 and 6, including their "In short" lines); P-044 wherever a Harrell line cites only P-045 or P-046 (Option A; cards 3 and 5, including card 3's "In short") |
+| 8 | Card 5's label | Done | "Supported on new duties (the law's text); supported, with limits on early suspensions (one Florida working paper; no Georgia results yet); uncertain on staff workload (not measured)". Card 5 also gets card 1's caveats: "What's missing" adds the Florida-only data and the summary's silence on how much of the day the bans covered; "What's uncertain" adds whether Georgia high schools will see a rise in suspensions like Florida's. Claim, side and "In short" unchanged |
+| 9 | Printed labeling rule | Done | "How to read these cards" defines "Supported, with limits" as card 1 and card 5 use it ({editorial: labeling rule}). It mentions no label the page doesn't use |
+| 10 | Values guide | Done | One line per side, in card order, same form, from the same survey: supporters' top reason ("Improved academic focus and learning", P-034) and opponents' top reason ("No way to reach child during emergency", P-035). 31 and 35 words; quotes 5 and 7 words. A first line names the survey (P-032, P-070). The Option C line is unchanged. Woods's and Adams's quotes stay on their cards |
+| 11 | Option A's case | Done | Option A "Who benefits" adds the base rate (29.2% opposed) and all five opposing reasons (P-033, P-035), the way Option B uses P-034. Option B's survey sentence now takes the same short form, since the values guide names the survey at the top of the tab |
+| 12 | England study in Layer 3 | Done | After Woods's quote (Option A "Who pays") and after the 69.1% (Option B "Who benefits"): the study's two findings (less phone and social media time during school; no evidence of better well-being) and that it couldn't test cause and effect |
+| 13 | Card 5's review duty | Done | The review-and-adjust duty (P-015) moved from "What challenges it" to "What supports it", as a duty, matching Option B's "Who pays" |
+| 14 | Card 4: emergency protocols | Done | "What's missing" opens with the law's requirement that policies send all emergency communication through school systems coordinated by school staff (P-008, P-011), then what the law doesn't require. Placed there, not under "What challenges it" (see open item 2) |
+| 15 | Card 1: middle and high schools | Done | "What supports it" adds that the summary found larger effects in middle and high schools (P-040), with the caveat that it doesn't say whether that includes suspensions |
+| 16 | "If you…" lines | Done | Each line ends "Not known as of Nov 8, 2026: …" (students: your school's start date; families: who pays for phone storage; staff: how much work enforcement takes; K-8 families: what your district changes in its yearly policy update). To fit 45 words, the students line's consequences moved to "Not known yet" (which now gives the law's examples) and "Decided by the law"; the staff line's Department of Education sentence stays under "Coming up" |
+| 17 | Who decides, and how to reach them | Partly | **Governor:** archived the governor's contact page (S22; P-073, P-074); the entry now gives the phone number and mailing address. **General Assembly:** the lawmaker lookup page (S21) is blocked: `snapshot.py` saved only the site's loading screen. **Districts:** no Department of Education district directory found (S23 blocked). Both keep the current sentence. No "your legislator", nothing on elections or voting |
+| 18 | Questions to weigh, question 2 | Done | "How well can school alert systems and students' own phones each keep families informed in an emergency, and how could anyone know?" |
+| 19 | Plain language | Mostly | See the list below. Not done: the State School Superintendent's job (no passage describes it) |
+| 20 | Source labels | Done | "General Assembly bill page", "Governor's press release", "Emory parent survey", "Atlanta News First, Mar 12" and "…, Mar 17"; new "Governor's contact page" |
+
+**Item 19, by term** (first mention on each tab: Summary, What it does, Options, Arguments):
+
+- **Act 395:** the header code on every tab and the home card now reads "House Bill 1009 · 2026 · became law as Act 395"
+  (P-024). The Summary timeline keeps its note.
+- **Which plans count:** the 30-second version and students line say "disability or medical plan". "Decided by the law",
+  Layer 2, Option B and card 6 name the IEP, Section 504 plan and medical plan and define IEP and 504 plans. Card 4 says
+  "a student's disability or medical plan".
+- **Similar devices:** the 30-second version lists phones, smartwatches and tablets; "Decided by the law" and Layer 2 list
+  all four of P-004's examples.
+- **The exceptions:** the students line names both.
+- **The school's own systems:** Layer 2 item 3 says school staff coordinate all emergency messages, and that "all" covers
+  messages from the school and between families and students. The Summary tab no longer uses the phrase.
+- **One term:** "access" wherever the cited passage says access, defined from P-003 on the Summary and What it does tabs.
+  "Use" remains only for the survey, the England study and health apps.
+- **Bell-to-bell:** named as the law's term on the Summary, What it does and Options tabs. The Arguments tab doesn't use
+  it.
+- **The 2025 law:** "House Bill 340" on the Summary (K-8 line), What it does and Options tabs (P-028). Card 3 already named
+  HB 340 and now adds "(K-8)".
+- **The sponsor:** the Arguments tab's voice count names "the bill's sponsor, state Rep. Scott Hilton" (P-028, P-051) and,
+  in the same form, every other named speaker.
+- **Dec 31, 2026 and July 1, 2027:** "Decided by the law" says what applies from Dec 31 (the yearly K-12 policy, first due
+  Jan 1, 2027), that the ban must start by July 1, 2027, and that the law doesn't say how the January deadline fits with
+  the July start date. Layer 2 and Option A say what begins on Dec 31. The header chips now read "Law takes effect Dec 31,
+  2026" and "High school ban starts by July 1, 2027".
+
+**Sources and passages:** S22 (governor's contact page) retrieved; S21 and S23 recorded as blocked in `sources.yaml`,
+with what each fetch returned. P-073 and P-074 come from the S22 snapshot through `passages.spec.yaml`; the rebuild
+reproduced the 71 earlier passages exactly.
+
+### Deterministic gate (revision 6.1)
+
+| Check | Result |
+|---|---|
+| `check_citations.py` | workspace: 280 units (169 cited, 74 analysis, 34 editorial, 3 computed), 0 errors, 0 warnings. home: 6 units, 0 errors, 0 warnings |
+| `readability.py` | 30-second 7.7 (90 words), What it means for you 8.3, Layer 1 6.0, Layer 2 8.4, Layer 3 7.9 (Layer 4 8.0, not targeted). No budget warnings and no CHECK lines. "If you…" lines 45, 45, 45 and 44 words (first sentences 18 to 20); values lines 31 and 35; longest "In short" 37; Layer 3 intro 60 |
+| `verify_hashes.py` | PASS (15 retrieved, S22 added) |
+| Test render | No warnings: version 6.1, 73 passages, 12 sources. In headless Chrome, card 5's label shows part by part ("Supported: new duties · Supported, with limits: early suspensions · Uncertain: staff workload") |
+
+The blind source check and the bias panel have not run on revision 6.1 (round 6).
+
+### Where I'm least sure
+
+1. **"If you…" budgets.** Every line is at or near 45 words, so the state-budget caveat there is the short form ("we
+   didn't review the state budget"), the staff line lost the Department of Education's guidance (still under "Coming
+   up"), and the students line lost the consequences (now in "Not known yet"). The supporter may read the staff line as
+   duties and no money with no help.
+2. **Values guide.** Both lines quote the survey's own reason wording, which parents cited; the template's caption still
+   says "In each side's own words". The survey ran before HB 1009 was filed (the critic's timing point), for both lines
+   alike. "Top reason" is read from each table, without a test of the gaps between reasons.
+3. **"Disability or medical plan"** is our plain gloss for IEP, Section 504 and medical plans in the 30-second version and
+   students line; the exact names and the IEP definition sit one fold down on the Summary tab.
+4. **Card 4, item 14.** The law's emergency protocol sits under "What's missing", between the supporter's request for
+   "What challenges it" and rounds 2 and 3, which said the law's own requirement isn't a finding against the claim.
+5. **Card 5's label** has no comma after "limits", so the template splits it part by part. Read raw, "with limits on
+   early suspensions" could be parsed as "limits on suspensions".
+6. **Dates.** "The law doesn't say how the January policy deadline fits with the July start date" is an absence claim over
+   the full text. It sits next to "Each district or school also picks its start date, up to July 1, 2027", an inference
+   the editor flagged (open item 40).
+7. **England study in Layer 3** now appears twice (Options A and B), and in Option A right after Woods's quote. Both
+   placements give both findings.
+8. **Card 1 "Who disagrees".** A survey reason ("Phones needed for schoolwork") is the nearest thing to a dispute; it is a
+   reason for opposing, not a finding about learning.
+9. **"All" means every direction** (Layer 2 item 3) is our reading of "all emergency communication".
+10. **Display strings changed** (code and two chips); the display check should run again.
+11. **Blocked sources.** legis.ga.gov builds its pages with scripts, so `snapshot.py` can't save the lookup (S02 needed a
+    browser); a browser capture might work, but the brief named `snapshot.py`. The governor's page links "Constituent
+    Services" to georgia.gov, which we didn't fetch.
+
+### Open items
+
+**Earlier items:** 1 (card 5's label) and 15 (card 3's K-8 policy date) are done (items 8 and 6). From item 2, card 4's
+emergency requirement is placed (item 14) and "use" vs. "hold, wear or use" is settled by "access" with P-003's
+definition; its other bullets stay open. Item 7's larger middle- and high-school effects are on card 1 (item 15); its
+other points stay open. Still open: 3, 4, 5, 8, 11, 12. Round 6 should confirm 13 and 16.
+
+**From round 5, not taken** (S = supporter's advocate, C = critic's advocate, E = standards editor, SC = source check,
+LR = lay reader). Where reviewers disagree, both views are given.
+
+17. Card 4's label: say what is "Supported" ("that families must reach students through the school") (S). The critic
+    agrees with card 4's label as printed (C).
+18. Card 2's label and "In short": add the lower in-school phone and social media time, and that neither summary measured
+    friendships (S). The critic agrees with card 2's label as printed (C).
+19. Card 1's label: add "the summary doesn't say how much of the school day Florida's bans covered" (C).
+20. Card 5's label, parts not taken: "the rise faded after year one" (S); "uncertain on staff workload and
+    confrontations" (S) or "and conflict" (E).
+21. Card 4's title: "…, including in emergencies" (C). A title change needs a full panel.
+22. Card 4: the no-emergency-exception point is made twice (S); Adams's account is the only account of a real emergency
+    in our sources (C); Gazmararian's "valid and understandable" could also go under "What supports it" (C, optional).
+23. Card 4: state its values question (families' contact against protected class time) in "What's uncertain" and the
+    label (E).
+24. Card 6 "Who disagrees": add the student's "phones have become addictive for teens" (S). Or drop the repeated
+    cigarette quote and add the survey-timing note to the 70.8% (C).
+25. Card 6: the English study's lack of a difference in overall phone use, under "What supports it" (C); the health-app
+    plan requirement as a burden, under "What's missing" (C).
+26. Card 5: give Harrell's point in full ("teachers can focus on instruction again") (S), or drop the line or move it to a
+    supporting card (E). Card 1's challenge mentions the first-year suspensions, but card 5 doesn't mention the year-two
+    test gains (S).
+27. Card 2: the null result appears four times (S). Round 3 kept it as the card's evidence status.
+28. Supporters' teacher argument (Harrell P-045, Woods P-053) in Option B's "Who benefits" and the staff line; the 60.3%
+    safety reason on a card (S).
+29. Voice count: add the English study's authors (E) and the 20 House "no" votes, none quoted (C).
+30. Survey timing: the Emory survey ran Oct 30 to Nov 24, 2025, before HB 1009 was filed, and asked about a school-day
+    ban in general terms (C).
+31. "Support isn't a benefit": the 70.8% under Option B's "Who benefits" (SC, E). Revision 6.1 mirrors it in Option A
+    (item 11) instead of moving it; the supporter counts it among the choices that favor its side (S).
+32. Option B lists every supporters' reason but one opponents' reason (C, E). The supporter calls Option B's "Who
+    benefits" the shorter field, missing points (S). Drafter's note: Option A's "Who pays" doesn't carry the supporters'
+    top reason the way Option B's "Who pays" carries the opponents'.
+33. Option B: Florida's larger effects in middle and high schools (S); the first "What's uncertain" sentences give their
+    reasons only in tags (E); move caveats to even out field lengths (E).
+34. Option C: rules that differ by district as a cost, as in Option A (E); option titles in one form (E).
+35. Option A's "What's uncertain": say Harrell's "very successful" wasn't measured (C).
+36. The values-guide caption in the template, "In each side's own words, from the record", now introduces survey wording
+    (drafter's note).
+37. Layer 2: retitle "How the law describes distraction-free education" as "The law's stated goals" (E).
+38. Questions to weigh: question 1 should add discipline and emergency response (C), or note that a fair test needs two
+    school years (S); an optional fourth question on early suspensions vs. year-two gains (C).
+39. Plain language beyond item 19: the State School Superintendent's job (no passage), the Georgia Department of
+    Education, the Rollins School of Public Health, and "school district" at first mention on the Summary, Layer 1 and
+    Layer 3 tabs (E); the word "sponsor"; "randomized experiment" (E); "the quoted passage" (SC); "In that study" on
+    card 5 (SC); when lawmakers next meet, whether "breaks" includes lunch, and the "Cairo High" label (LR).
+40. Summary tab: lead the K-8 line with the direction (SC, E); "Each district or school also picks its start date" is an
+    inference (E); Cairo High's plan under "Coming up" though the 2026-27 year has begun (E); the fiscal-note tag should
+    mention the undescribed LC 47 3887 entry (E); "Input" for asking a district (E); P-060's stated purpose (E); every
+    decider in one four-field format (E); the students line could add school laptops (S); the law's purpose (P-057) in
+    the 30-second version or "If you…" lines (S); the families line could add the health-app plan rule (C).
+41. Home and display: home items "takes effect" and the Jan 1 / July 1 pair read alone (SC); "District policies" also bind
+    schools (SC); the title and link text say "phone use" while the page now says "access"; Option C's chip uses the
+    "bad" style (display check).
+42. Verbs: "would cut" vs. "could spark" and "said he worries" vs. "told lawmakers" (C, E). The editor advises no change
+    to the line that follows its source (P-071).

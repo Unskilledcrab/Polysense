@@ -240,3 +240,11 @@ text (struck words removed, underlined words kept), recovered with `trials/tools
 
 ### P-072 · S16b · article, start dates
 > Under the new measure, restrictions for high school students would begin in the 2027-28 school year.
+
+### P-073 · S22 · Office of the Governor contact page: page title
+> Contact Us | Governor Brian P. Kemp Office of the Governor
+
+### P-074 · S22 · Office of the Governor contact page: phone and mailing address
+> Primary (404) 656-1776 Visit: (details) 206 Washington Street 111 State Capitol Atlanta, GA 30334 Mail to 206 Washington Street Suite 203, State Capitol Atlanta, GA 30334
+
+*Note: Removed spaces left by link and line boundaries in the HTML ('( details )' and 'Atlanta , GA').*

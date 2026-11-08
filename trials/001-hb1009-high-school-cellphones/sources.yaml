@@ -204,6 +204,36 @@ sources:
     local_file: S19-rendered.txt
     settles: [D1]
 
+  # --- Official contact and lookup pages (revision 6.1, "Who decides, and how to reach them") --------
+  # URLs found by search (discovery only); each page fetched once with trials/tools/snapshot.py.
+  - id: S21
+    title: "Find Your Legislator (Georgia General Assembly lookup page)"
+    publisher: Georgia General Assembly
+    type: primary-government
+    url: "https://www.legis.ga.gov/find-my-legislator"
+    status: not-retrieved
+    notes: "BLOCKED 2026-11-08T21:22:31Z: snapshot.py got HTTP 200, but only the site's loading screen ('Loading... This might take a few seconds.'). The lookup is built by the site's scripts, so there is no text to cite. The shell is kept as evidence in _raw/S21.html (sha256 513375fe68989e8f75e35bc09b67cf1ef1851595317233cf380e506d73257d4c). Not cited; the page keeps 'Our sources give no phone number, email or meeting for lawmakers.'"
+  - id: S22
+    title: "Contact Us | Governor Brian P. Kemp Office of the Governor"
+    publisher: Office of the Governor
+    type: primary-government
+    url: "https://gov.georgia.gov/contact-us"
+    status: retrieved
+    retrieved_at: "2026-11-08T21:22:47Z"
+    http_status: 200
+    content_type: text/html
+    sha256: 05d32a368802824f25beb3ce6d7816caa222b2d8353e002fb893dd869891a2a2
+    local_file: S22.html
+    license: public record
+    notes: "The office's public phone number and mailing address (the State Capitol). The page's 'Constituent Services' link goes to georgia.gov, which we did not fetch."
+  - id: S23
+    title: "Georgia Department of Education: school district directory"
+    publisher: Georgia Department of Education
+    type: primary-government
+    url: "https://gadoe.org/district-schools/"
+    status: not-retrieved
+    notes: "BLOCKED 2026-11-08T21:23:23Z: searches of gadoe.org found no district directory. The URL above, GaDOE's 'Georgia Schools & Districts' page, was the likeliest place; snapshot.py got HTTP 200 (sha256 dc759dbdfa7b8937b92e5ddac9267e2a4ec79e922fd5d5d6658e03fb8f896295, kept in _raw/S23.html), but the page is a resource hub for district staff, loads its text by script, and lists no districts or contacts. Not cited; the page keeps 'Our sources give no phone numbers or emails for districts.'"
+
   # --- Discovered but not used ---------------------------------------------------------------
   - {id: S13c, title: "Norway smartphone-ban study (candidate from prior knowledge)", type: secondary-research, status: rejected, notes: "Not needed after S13a/S13b; never verified, so not cited."}
   - {id: S14, title: "AJC: Senate backs high school cellphone ban (Mar 2026)", type: news, url: "https://www.ajc.com/education/2026/03/georgia-senate-backs-high-school-cellphone-ban-sending-bill-to-kemps-desk", status: rejected, notes: "Paywalled; leads only."}

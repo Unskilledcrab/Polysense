@@ -7,7 +7,7 @@
 | **Done by** | AI agent (Claude Code), by hand |
 | **Verified by** | The AI-only [verification protocol](../../docs/process/verification-protocol.md); no human in the loop ([ADR 0014](../../docs/adr/0014-ai-only-verification.md)) |
 | **Owner's role** | Feedback on the user experience ([review.md](review.md)) |
-| **Status** | **Revision 6: reader-first update; checks pending** (2026-11-08, [runbook v0.6](../../docs/process/runbooks/bill-workspace.md), Step 4). The deterministic gate passes; the blind source check and bias panel have not run on it. Revision 5 **passed checks (round 4)** and is archived in [verification/round5/](verification/round5/). Rounds 1 and 2 failed the bias panel; rounds 3 and 4 passed it; targeted re-checks confirmed the accuracy fixes. Open items and the revision 6 notes are in [verification.md](verification.md). Owner reviewed the experience on 2026-11-08 ([review.md](review.md)). Prototype: [prototypes/hb1009/](../../prototypes/hb1009/) |
+| **Status** | **Revision 6.1: fixes after passing round 5; checks pending** (2026-11-08). Revision 6 (the reader-first update) **passed checks (round 5)**: 0 unsupported claims and 0 wrong or ungrounded spans, both advocates 4/5, no high-severity editor issue, planted errors caught 11 of 11. Revision 6.1 makes only the agreed fixes; because card 5's evidence label changed, it needs a full round 6, and revision 6 stays the fallback. The deterministic gate passes on 6.1. Revisions 5 and 6 are archived in [verification/round5/](verification/round5/). Rounds 1 and 2 failed the bias panel; rounds 3, 4 and 5 passed it. Open items and the revision 6.1 notes are in [verification.md](verification.md). Owner reviewed the experience on 2026-11-08 ([review.md](review.md)). Prototype: [prototypes/hb1009/](../../prototypes/hb1009/) |
 
 ## Why this bill (step 0)
 
@@ -45,8 +45,8 @@ of when the bill was live in the 2026 session:
 
 | File | What it is |
 |---|---|
-| [sources.yaml](sources.yaml) | 14 retrieved sources with SHA-256 hashes (raw files in `_raw/`, git-ignored) |
-| [passages.spec.yaml](passages.spec.yaml) → [passages.md](passages.md) | 71 hand-chosen passages, copied mechanically. They cover the bill's full enacted text, the prior-law wording the page compares against, and the Florida study's whole abstract |
+| [sources.yaml](sources.yaml) | 15 retrieved sources with SHA-256 hashes (raw files in `_raw/`, git-ignored), plus sources covered elsewhere, blocked or rejected |
+| [passages.spec.yaml](passages.spec.yaml) → [passages.md](passages.md) | 73 hand-chosen passages, copied mechanically. They cover the bill's full enacted text, the prior-law wording the page compares against, and the Florida study's whole abstract |
 | [workspace.md](workspace.md) | The page: 30-second version + Layers 1–5. Every sentence cited or labeled |
 | [home.md](home.md) | Home-page items built from this trial |
 | [verification.md](verification.md) + [verification/](verification/) | Every verification report, the planted-error copy and its answer key, dispositions |

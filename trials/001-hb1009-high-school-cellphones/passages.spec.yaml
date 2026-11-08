@@ -187,3 +187,11 @@ passages:
      start: "Supporters argued the move would cut distractions", end: "reach their children during emergencies."}
   - {id: P-072, source: S16b, file: S16b.txt, locator: "article, start dates",
      start: "Under the new measure, restrictions for high school students", end: "in the 2027-28 school year."}
+  # --- Added in revision 6.1: the governor's office contact page (S22), for "Who decides, and how to
+  #     reach them". The legislator lookup (S21) and a district directory (S23) were blocked; see sources.yaml.
+  - {id: P-073, source: S22, file: S22.txt, locator: "Office of the Governor contact page: page title",
+     start: "Contact Us | Governor Brian P. Kemp Office of the Governor", end: "Contact Us | Governor Brian P. Kemp Office of the Governor"}
+  - {id: P-074, source: S22, file: S22.txt, locator: "Office of the Governor contact page: phone and mailing address",
+     start: "Primary (404) 656-1776", end: "Suite 203, State Capitol Atlanta , GA 30334",
+     fix: [["( details )", "(details)"], ["Atlanta , GA", "Atlanta, GA"]],
+     note: "Removed spaces left by link and line boundaries in the HTML ('( details )' and 'Atlanta , GA')."}

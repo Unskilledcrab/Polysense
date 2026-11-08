@@ -3,15 +3,15 @@
 slug: psc-57171                    # used in page links: #psc-57171, #psc-57171-options, #psc-57171-checks
 kind: regulatory-case                    # law | regulatory-case | budget: sets the decision and options headings
 code: "PSC Docket 57171 · 2026"
-title: "Georgia regulators decide Dec 15 how much business real-time payments lower others' fuel charges"  # [P-013, P-016, P-144, P-169]
-link_text: "Business power payments and your fuel charge"  # [P-016, P-144]
+title: "Georgia regulators' Dec 15 decision: how real-time payments split between fuel and base costs"  # [P-013, P-016, P-061, P-169]
+link_text: "Larger businesses' real-time power payments and your fuel charge"  # [P-016, P-044, P-144]
 status:                            # chips under the title
   - {text: "Open case at the Georgia Public Service Commission"}  # [P-001, P-016]
   - {text: "Decision scheduled Dec 15, 2026"}  # [P-013]
 option_chips:                      # one chip per option, matched by the start of the option's heading; all unstyled on purpose
   "Plan A": {text: "Keep today's method"}  # [P-048]
   "Plan B": {text: "Georgia Power's plan"}  # [P-119, P-128]
-  "Plan C": {text: "Advocacy staff's plan"}  # [P-006, P-073]
+  "Plan C": {text: "PSC staff's plan"}  # [P-006, P-059, P-073]
   "Plan D": {text: "Interfaith group's plan"}  # [P-093, P-095]
 short_labels:                      # source chip labels: one or two words, so a chip fits on a phone line
   S01: Docket
@@ -19,15 +19,15 @@ short_labels:                      # source chip labels: one or two words, so a 
   S02: Schedule order
   S04: PSC calendar
   S05: Legal notice
-  S06: Utility testimony
-  S06b: Utility data
-  S07: Staff testimony
-  S07b: Staff corrections
-  S08: Interfaith testimony
-  S09: Manufacturers' testimony
-  S10: Resource Supply
-  S11: Utility rebuttal
-  S12: Motion
+  S06: Georgia Power testimony
+  S06b: Georgia Power data
+  S07: PIA Staff testimony
+  S07b: PIA Staff corrections
+  S08: GIPL testimony
+  S09: GAM testimony
+  S10: Filing page
+  S11: Georgia Power rebuttal
+  S12: Georgia Power motion
   S13: GIPL reply
   S14: Public witness
   S15: Comments
