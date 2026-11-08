@@ -1,0 +1,130 @@
+{
+ "checker": "independent-source-verifier",
+ "document": "/home/user/Polysense/trials/002-psc-57171-fuel-credit/home.md",
+ "units": [
+  {
+   "line": 5,
+   "sentence": "Input · Dec 14, 2026, 9:30 a.m.: Submit any public comment to the PSC by this time, 24 hours before the Dec 15 session where it is scheduled to vote.",
+   "marker": "{computed: comments must be submitted 24 hours before a vote (P-030); the final decision is scheduled for the Dec 15 Administrative Session (P-013), which starts at 9:30 a.m. (P-024), so a comment submitted by 9:30 a.m. on Dec 14 is on time even if this case is the session's first vote}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Arithmetic correct: the Dec 15 Administrative Session starts at 9:30 a.m. (P-024), so 24 hours earlier (P-030) is 9:30 a.m. Mon Dec 14, safe even if this case is voted first (P-013). It assumes the Dec 15 session holds the first 'Commission vote'; P-012 says the Dec 10 Energy Committee meeting 'considers' the case, and no passage says whether that counts.",
+   "suggested_fix": "Optionally add: 'Ask the PSC whether the Dec 10 committee meeting counts.'"
+  },
+  {
+   "line": 5,
+   "sentence": "To ask how to submit one, call the PSC at 404-656-4501 and press 2.",
+   "marker": "[P-163]",
+   "verdict": "supports",
+   "evidence_span": "404-656-4501 (local), press 2",
+   "correct_passage": "",
+   "problem": "Minor: P-163 is the public witness page's general contact block, not specific to comments; using it to ask is reasonable.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 9,
+   "sentence": "Nov 12, 2026: The PSC holds a hearing on how business customers' real-time payments count toward fuel costs; its calendar lists the hearing at 9:35...",
+   "marker": "[P-010, P-016, P-023]",
+   "verdict": "supports",
+   "evidence_span": "Nov 12 9:35 am Docket No. 57171 RTP Revenue Credit and Allocation Methodology Hearing",
+   "correct_passage": "",
+   "problem": "Minor: the order says the hearing begins after committee meetings that start at 9:30 a.m. (P-010, P-023), so 9:35 is a listing time and the actual start may be later.",
+   "suggested_fix": "...its calendar lists the hearing at 9:35 a.m., after committee meetings that begin at 9:30."
+  },
+  {
+   "line": 9,
+   "sentence": "To ask whether the public may speak, call the PSC at 404-656-4501 and press 2.",
+   "marker": "[P-163]",
+   "verdict": "supports",
+   "evidence_span": "404-656-4501 (local), press 2",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 10,
+   "sentence": "Dec 10, 2026: The PSC's Energy Committee takes up the case at its meeting, which begins at 9:30 a.m.",
+   "marker": "[P-012, P-024]",
+   "verdict": "supports",
+   "evidence_span": "This matter shall be considered at the scheduled Energy Committee Meeting, which begins at 9:30 a.m.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 11,
+   "sentence": "Dec 15, 2026: The PSC is scheduled to decide how much of business customers' real-time payments counts toward fuel costs.",
+   "marker": "[P-013, P-016]",
+   "verdict": "supports",
+   "evidence_span": "A Final Decision on this proceeding will be made by the Commission on December 15, 2026 at the regularly scheduled Administrative Session.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 15,
+   "sentence": "Oct 27, 2026: Georgia Power filed the last written testimony.",
+   "marker": "[P-117, P-009, P-010, P-011]",
+   "verdict": "supports",
+   "evidence_span": "October 27, 2026 Georgia Power may file any pre-filed rebuttal testimony in Docket 57171 by 4:00 p.m.",
+   "correct_passage": "",
+   "problem": "Minor: 'the last written testimony' holds only as 'the last on the schedule' (P-009 to P-011).",
+   "suggested_fix": "Georgia Power filed the last written testimony on the schedule."
+  },
+  {
+   "line": 15,
+   "sentence": "It and Georgia Interfaith Power & Light want solar, wind and biomass contracts taken out of the fuel credit entirely; PIA Staff, a party in the cas...",
+   "marker": "[P-128, P-129, P-050, P-093, P-006]",
+   "verdict": "supports",
+   "evidence_span": "The Company and GIPL recommend the Commission approve Option 1.",
+   "correct_passage": "",
+   "problem": "Supported, but see framing issues: 'taken out of the fuel credit entirely' can be misread as opposing the renewable contracts themselves. The dispute is only whether their cost and output count in the credit's math, and Georgia Power offered both options while preferring Option 1 (P-065).",
+   "suggested_fix": ""
+  },
+  {
+   "line": 15,
+   "sentence": "Either way the credit grows, and the same dollars come off the base side.",
+   "marker": "[P-058, P-115, P-061]",
+   "verdict": "supports",
+   "evidence_span": "Either of these changes would increase the amount of RTP revenues that are credited to fuel.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  }
+ ],
+ "framing_issues": [
+  {
+   "line": 15,
+   "text": "Either way the credit grows, and the same dollars come off the base side.",
+   "issue": "Technical terms left unexplained on the home page: 'fuel credit' and 'base side' are never defined there, so a reader can't tell what this means for their bill (a lower fuel charge now, with the same dollars no longer helping pay base rates).",
+   "severity": "medium"
+  },
+  {
+   "line": 15,
+   "text": "want solar, wind and biomass contracts taken out of the fuel credit entirely; PIA Staff ... wants them counted in full",
+   "issue": "Misleading-by-omission risk: this reads like a fight over renewable power itself, an issue readers may code politically, when it is only about whether the contracts' cost and output count in the credit formula. Georgia Power also offered both options and only prefers Option 1 (P-065).",
+   "severity": "medium"
+  },
+  {
+   "line": 5,
+   "text": "Submit any public comment to the PSC by this time, 24 hours before the Dec 15 session",
+   "issue": "Actionable deadline with an unstated assumption: it treats the Dec 15 Administrative Session as the first 'Commission vote'. The Dec 10 Energy Committee meeting 'considers' the case (P-012), and no passage says whether anything there triggers the 24-hour rule. Suggest telling readers to ask the PSC, or to comment before Dec 10 to be safe.",
+   "severity": "low"
+  },
+  {
+   "line": 9,
+   "text": "its calendar lists the hearing at 9:35 a.m.",
+   "issue": "Omits that the order sets the hearing to begin after committee meetings that start at 9:30 a.m. (P-010), so the start time may slip; the workspace page gives both facts.",
+   "severity": "low"
+  }
+ ],
+ "summary": {
+  "units_checked": 9,
+  "supports": 8,
+  "partial": 0,
+  "does_not_support": 0,
+  "wrong_span": 0,
+  "questionable_or_invalid_tags": 0
+ }
+}
