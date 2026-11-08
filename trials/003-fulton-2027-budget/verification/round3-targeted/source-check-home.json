@@ -1,0 +1,37 @@
+{
+  "checker": "independent-source-verifier (targeted)",
+  "document": "/home/user/Polysense/trials/003-fulton-2027-budget/home.md",
+  "units": [
+    {
+      "line": 5,
+      "sentence": "**Input · Nov 18, 2026, 10 a.m.:** Speak about the county budget during public comment at the Board's meeting, in person or by Zoom.",
+      "marker": "[P-036, P-039, P-067]",
+      "verdict": "supports",
+      "reason": "P-039 lists Wednesday, Nov 18, 2026 as a (second regular) meeting at 10:00 a.m. P-036 provides for public comment on 'County related' matters at both First and Second Regular Meetings. P-067: 'two options to participate in public comment: in person and virtually via Zoom'.",
+      "evidence_span": "Wednesday, November 18, 2026 Wednesday, December 2, 2026 Wednesday, December 16, 2026 *Except for the month of July, all meetings will be held on the first and third Wednesdays of each month at 10:00 a.m.",
+      "correct_passage": "",
+      "problem": "",
+      "suggested_fix": ""
+    },
+    {
+      "line": 14,
+      "sentence": "Filing set the resolution aside without approving it.",
+      "marker": "{analysis: plain-language meaning; its status is \"Filed\" (P-024), and its history (P-025) shows no later action}",
+      "verdict": "valid",
+      "reason": "P-024 shows the status 'Filed', not 'Passed'. P-025's full history has only three actions: the Oct 21 failed motion, the Nov 4 motion to approve ('NO VOTE TAKEN') and the Nov 4 substitute motion to file. Nothing comes later as of capture. 'Set aside without approving' is a fair plain-language reading.",
+      "evidence_span": "",
+      "correct_passage": "",
+      "problem": "",
+      "suggested_fix": ""
+    }
+  ],
+  "framing_issues": [],
+  "summary": {
+    "units_checked": 2,
+    "supports": 1,
+    "partial": 0,
+    "does_not_support": 0,
+    "wrong_span": 0,
+    "questionable_or_invalid_tags": 0
+  }
+}

@@ -1,0 +1,2 @@
+L5	**Input · Nov 18, 2026, 10 a.m.:** Speak about the county budget during public comment at the Board's meeting, in person or by Zoom. [P-036, P-039, P-067]
+L14	Filing set the resolution aside without approving it. {analysis: plain-language meaning; its status is "Filed" (P-024), and its history (P-025) shows no later action}

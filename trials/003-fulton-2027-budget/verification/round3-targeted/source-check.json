@@ -1,0 +1,303 @@
+{
+  "checker": "independent-source-verifier (targeted)",
+  "document": "/home/user/Polysense/trials/003-fulton-2027-budget/workspace.md",
+  "units": [
+    {
+      "line": 18,
+      "sentence": "In Atlanta News First's report, Commissioner Barrett said some current board members were trying to take control of the budget process.",
+      "marker": "[P-072]",
+      "verdict": "supports",
+      "reason": "P-072's reporter line says Barrett 'alleged some current board members are trying to take control of the budget process', and her direct quote ('angling to take control of the budget process') backs it. 'Said' is a neutral verb here and matches 'responded' for Ellis in the next sentence. The outlet is identified by the S20 heading and by P-073's text, not by P-072 itself.",
+      "evidence_span": "alleged some current board members are trying to take control of the budget process",
+      "correct_passage": "",
+      "problem": "",
+      "suggested_fix": ""
+    },
+    {
+      "line": 18,
+      "sentence": "In the same report, Commissioner Ellis responded that the commission's meetings are open meetings.",
+      "marker": "[P-073]",
+      "verdict": "supports",
+      "reason": "P-073 is from the same S20 article as P-072: Ellis 'responded to the allegation', saying 'We have a budget commission. Those meetings are open meetings.' 'Those meetings' refers to the budget commission's, so the paraphrase holds.",
+      "evidence_span": "We have a budget commission. Those meetings are open meetings.",
+      "correct_passage": "",
+      "problem": "",
+      "suggested_fix": ""
+    },
+    {
+      "line": 18,
+      "sentence": "FOX 5 reported that, in response to the officials, Ellis said the full Board will review and vote on the final budget.",
+      "marker": "[P-079, P-080]",
+      "verdict": "supports",
+      "reason": "P-079 is the reporter's paraphrase, without quotation marks, and the sentence correctly presents it as FOX 5's report. 'In response to the officials' fairly renders 'addressed the coalition's concerns'. P-080 names FOX 5 Atlanta and lists Ellis among the story's sources.",
+      "evidence_span": "noting that the Budget Commission is solely responsible for drafting recommendations and that the full Board of Commissioners will review and vote on the final budget",
+      "correct_passage": "",
+      "problem": "",
+      "suggested_fix": ""
+    },
+    {
+      "line": 46,
+      "sentence": "**Not published yet:** On Nov 8, neither the county's budget page nor its Public Notices page showed the 2027 proposal or a hearing date.",
+      "marker": "{analysis: P-045 and P-042, captured Nov 8, 2026}",
+      "verdict": "questionable",
+      "reason": "The substance is right. The newest documents on the budget page (P-045) are FY2026 items, so there was no 2027 proposal. The newest notice on the Public Notices page (P-042) is the October one, so there was no notice yet of the Board's public hearing before adoption.",
+      "evidence_span": "",
+      "correct_passage": "",
+      "problem": "As worded, 'or a hearing date' is contradicted by a passage the tag cites. On Nov 8 the Public Notices page (P-042) did show hearing dates: six days, Oct 12-22, 'for the purpose of holding budget hearings for Fulton County's 2027 General Fund Budget'. What it lacked was a date for the Board's public hearing, as L27 correctly says.",
+      "suggested_fix": "On Nov 8, neither the county's budget page nor its Public Notices page showed the 2027 proposal or a date for the Board's public hearing on it."
+    },
+    {
+      "line": 83,
+      "sentence": "Resolution 26-0729 says it would \"clarify\" the code by adding a ban: \"No limits or caps shall be placed\" on what any department, agency, elected official or authority can request.",
+      "marker": "[P-083, P-030, P-024]",
+      "verdict": "supports",
+      "reason": "P-083: the resolution 'amends F.C.C. Sec. 2-261 to clarify that all departmental budget requests are included in the proposed budget as follows'. P-030's proposed wording contains the no-caps sentence; P-030's note marks it as new, and it is absent from the current text (P-005). P-024 identifies 26-0729. Both quotes are verbatim, and 'any' for 'a' sits outside the quotation marks.",
+      "evidence_span": "No limits or caps shall be placed on what a department, agency, elected official, or authority can request",
+      "correct_passage": "",
+      "problem": "Minor (framing): the resolution says the amendment would clarify 'that all departmental budget requests are included in the proposed budget'. The sentence drops that object and pairs a one-word quote of \"clarify\" with 'by adding a ban', which can read as a scare quote implying the resolution mislabels a new rule.",
+      "suggested_fix": "Resolution 26-0729 says it would amend the code \"to clarify that all departmental budget requests are included in the proposed budget,\" adding a ban: \"No limits or caps shall be placed\" on what any department, agency, elected official or authority can request."
+    },
+    {
+      "line": 103,
+      "sentence": "Taken together, total property-tax revenue ended $13,634,040 below the proposal.",
+      "marker": "{computed: proposed $815,496,192 + $32,170,000 = $847,666,192; adopted $834,032,152 + $0 = $834,032,152; $847,666,192 − $834,032,152 = $13,634,040 (P-054)}",
+      "verdict": "valid",
+      "reason": "P-054: Property Taxes went from $815,496,192 proposed to $834,032,152 adopted, and Additional Property Taxes (Consent) from $32,170,000 proposed to '-' adopted. 815,496,192 + 32,170,000 = 847,666,192; 847,666,192 - 834,032,152 = 13,634,040. The change columns agree: +4,055,960 + 14,480,000 - 32,170,000 = -13,634,040. These are budgeted General Fund figures; the preceding sentences make clear that 'ended' means in the adopted budget.",
+      "evidence_span": "",
+      "correct_passage": "",
+      "problem": "",
+      "suggested_fix": ""
+    },
+    {
+      "line": 106,
+      "sentence": "**What's uncertain:** How much room 2027 revenue leaves, because the proposal isn't public yet.",
+      "marker": "{editorial}",
+      "verdict": "valid",
+      "reason": "A statement of uncertainty. Its only factual part, 'isn't public yet', is supported by P-045 (captured Nov 8, 2026), and it parallels the Option A line.",
+      "evidence_span": "",
+      "correct_passage": "",
+      "problem": "",
+      "suggested_fix": ""
+    },
+    {
+      "line": 124,
+      "sentence": "\"A values question\" means that part of the claim is about what is fair or right, not mainly about facts.",
+      "marker": "{editorial: labeling rule}",
+      "verdict": "valid",
+      "reason": "Defines the document's own label, and matches how every card uses it (Better design, Fairness, Sound budgeting, Open enough, Whether to wait, How to weigh them).",
+      "evidence_span": "",
+      "correct_passage": "",
+      "problem": "",
+      "suggested_fix": ""
+    },
+    {
+      "line": 132,
+      "sentence": "**In short:** Resolution 26-0460, which the Board adopted, says the commission adds \"earlier and ongoing input\" from Board members, balanced between north and south.",
+      "marker": "[P-004, P-017]",
+      "verdict": "supports",
+      "reason": "P-004 (Resolution 26-0460's text, S01) says the commission combines staff expertise 'with earlier and ongoing input from members of the Board, structured to ensure balanced representation from both the northern and southern portions of Fulton County'. P-017 shows 26-0460 'Passed' on 2026-08-05. The quote is verbatim, 'adds' fairly renders 'combines ... with', and the claim is attributed to the resolution rather than stated as fact.",
+      "evidence_span": "earlier and ongoing input from members of the Board, structured to ensure balanced representation from both the northern and southern portions of Fulton County",
+      "correct_passage": "",
+      "problem": "",
+      "suggested_fix": ""
+    },
+    {
+      "line": 135,
+      "sentence": "**Who disagrees:** FOX 5 reported that the justice officials' main objection is to presenting their needs to a two-commissioner panel rather than the full Board.",
+      "marker": "[P-076, P-080]",
+      "verdict": "supports",
+      "reason": "P-076 says this of the 'Justice Leaders' coalition: 'Their primary objection centers on ... a two-commissioner panel rather than the full board'. It is the reporter's paraphrase and is correctly attributed to FOX 5, which P-080 names.",
+      "evidence_span": "Their primary objection centers on a new framework that require department heads to present critical funding needs to a two-commissioner panel rather than the full board",
+      "correct_passage": "",
+      "problem": "",
+      "suggested_fix": ""
+    },
+    {
+      "line": 136,
+      "sentence": "In the 2026 cycle, the budget book lists changes to the county manager's proposal dated Jan 7, adding $20,597,446, and Jan 21, taking out $16,648,868.",
+      "marker": "[P-054, P-047]",
+      "verdict": "supports",
+      "reason": "P-054's Total of Expenditures row has these columns, per P-054's note: 2026 Proposed, Changes 1-7-26, Changes 1-21-26, 2026 Adopted. $1,053,152,000 + $20,597,446 - $16,648,868 = $1,057,100,578, so the figures tie out. P-047: the County Manager submitted the proposal on Nov 15, 2025.",
+      "evidence_span": "Total of Expenditures $ 836,101,686 $ 866,772,399 $ 920,297,281 $ 1,053,152,000 $ 20,597,446 $ ( 16,648,868) $ 1,057,100,578",
+      "correct_passage": "",
+      "problem": "Minor: both figures are net changes to General Fund spending. Each date mixed raises and cuts; for example, Jan 21 cut $16,648,868 net but added $1,267,705 for the solicitor-general. Revenue changed by different amounts (+$4,055,960 and -$16,642,000). The sentence says neither 'spending' nor 'net'.",
+      "suggested_fix": "In the 2026 cycle, the budget book lists changes to the county manager's proposed General Fund spending dated Jan 7, a net $20,597,446 added, and Jan 21, a net $16,648,868 taken out."
+    },
+    {
+      "line": 136,
+      "sentence": "Those changes included $18,157,000 more for consent decree costs.",
+      "marker": "{computed: $50,000,000 adopted − $31,843,000 proposed (P-054)}",
+      "verdict": "valid",
+      "reason": "P-054's Consent Decree line: $31,843,000 proposed, $50,000,000 adopted; 50,000,000 - 31,843,000 = 18,157,000. The change columns agree: +21,213,868 (Jan 7) - 3,056,868 (Jan 21) = +18,157,000.",
+      "evidence_span": "",
+      "correct_passage": "",
+      "problem": "",
+      "suggested_fix": ""
+    },
+    {
+      "line": 136,
+      "sentence": "Together, they left the adopted General Fund $3,948,578, or about 0.4%, above the proposal.",
+      "marker": "{computed: $20,597,446 − $16,648,868 = $3,948,578; $3,948,578 ÷ $1,053,152,000 ≈ 0.004 (P-054)}",
+      "verdict": "valid",
+      "reason": "20,597,446 - 16,648,868 = 3,948,578, which equals 1,057,100,578 - 1,053,152,000 (P-054). 3,948,578 / 1,053,152,000 = 0.00375, which rounds to 0.4%.",
+      "evidence_span": "",
+      "correct_passage": "",
+      "problem": "",
+      "suggested_fix": ""
+    },
+    {
+      "line": 136,
+      "sentence": "That means the proposal's total largely held, though some of its lines changed by millions of dollars.",
+      "marker": "{analysis: what the figures above show (P-054)}",
+      "verdict": "valid",
+      "reason": "The spending total moved 0.37%, while several P-054 lines moved by millions: Consent Decree +$18,157,000, Pension -$4,712,674, Leases/Debt -$5,500,000 and Additional Property Taxes -$32,170,000.",
+      "evidence_span": "",
+      "correct_passage": "",
+      "problem": "Minor: 'total' here means the spending total. The planned draw on savings grew from $57,102,996 to $73,637,614 (+$16,534,618), which cut the cushion above the minimum reserve from $19,975,081 to $2,782,235 (P-054). 'Some of its lines' covers this only implicitly, so 'largely held' may understate how much the Board changed the plan's bottom line.",
+      "suggested_fix": "That means the proposal's spending total largely held, though some lines, and the planned draw on savings, changed by millions of dollars."
+    },
+    {
+      "line": 136,
+      "sentence": "Commissioner Barrett's Resolution 26-0729 says the commission failed its duty to ask all commissioners for their priorities when it set the 5% cap.",
+      "marker": "[P-029, P-032, P-024]",
+      "verdict": "supports",
+      "reason": "P-029 states this. 'This unprecedented restriction' is the 5% limit described at the start of P-029, and 'when it set' fairly renders 'in implementing'. P-032 and P-024 name Barrett as the sponsor. The claim is attributed to the resolution, not stated as fact.",
+      "evidence_span": "the Budget Commission failed to uphold its required duty to \"solicit budget priorities, requests, and concerns from all members of the board of commissioners, including those not serving on the budget commission\" in implementing this unprecedented restriction",
+      "correct_passage": "",
+      "problem": "",
+      "suggested_fix": ""
+    },
+    {
+      "line": 145,
+      "sentence": "FOX 5 reported that Sheriff Patrick Labat criticized the two-commissioner arrangement as unfair to county agencies and taxpayers.",
+      "marker": "[P-078, P-080]",
+      "verdict": "supports",
+      "reason": "This is a verbatim reporter paraphrase in P-078, and P-080 names FOX 5 and lists Labat among its sources. It is correctly presented as FOX 5's report, since Labat's own quote ('hijack this process is simply unfair') does not mention agencies or taxpayers.",
+      "evidence_span": "Sheriff Patrick Labat criticized the two-commissioner arrangement as unfair to county agencies and taxpayers",
+      "correct_passage": "",
+      "problem": "",
+      "suggested_fix": ""
+    },
+    {
+      "line": 156,
+      "sentence": "**In short:** Resolution 26-0729 says the 5% cap makes the code's rule on requests \"effectively\" impossible to meet.",
+      "marker": "[P-029, P-024]",
+      "verdict": "supports",
+      "reason": "P-029 states this, and the WHEREAS before it ties the mandate to Code Section 2-261. 'Effectively' is verbatim. P-024 identifies 26-0729.",
+      "evidence_span": "by placing the 5% cap on departmental enhancement requests, the Budget Commission is effectively making its mandate to submit a proposed budget that includes the budget requests of the County’s departments impossible",
+      "correct_passage": "",
+      "problem": "Minor (framing): a one-word quote of \"effectively\" can read as a scare quote. The resolution's hedge survives without quotation marks, since 'says' already attributes it.",
+      "suggested_fix": "In short: Resolution 26-0729 says the 5% cap effectively makes the code's rule on requests impossible to meet."
+    },
+    {
+      "line": 156,
+      "sentence": "The code's text and the 2026 record support part of this; the rest depends on an unsettled reading of the code, the claimants' own figures, values or the coming draft.",
+      "marker": "{analysis: P-005 and P-049 for the supported part; the label above names the rest}",
+      "verdict": "valid",
+      "reason": "P-005 (the code requires all requests) and P-049 (2026 extras 'included as an appendix') support the premise. The other parts match the card's evidence labels: conflict with the code (uncertain), needs above 5% (the claimants' figures), effect on the draft (not out yet) and sound budgeting (values).",
+      "evidence_span": "",
+      "correct_passage": "",
+      "problem": "Minor: the list leaves out one uncertainty the label names, the limit's exact terms (there is no written instruction), so 'the rest depends on' these four things is slightly incomplete. The tag's pointer to the label covers it.",
+      "suggested_fix": "The code's text and the 2026 record support part of this; the rest depends on the limit's unwritten terms, an unsettled reading of the code, the claimants' own figures, values or the coming draft."
+    },
+    {
+      "line": 157,
+      "sentence": "**Who says it:** Commissioner Barrett's Resolution 26-0729 calls the cap an \"unprecedented restriction.\"",
+      "marker": "[P-029, P-032, P-024]",
+      "verdict": "supports",
+      "reason": "P-029: 'in implementing this unprecedented restriction on the departments', where 'this ... restriction' is the 5% limit described at the start of P-029. P-032 and P-024 name Barrett. The quote is verbatim; the period inside the closing quote is house punctuation.",
+      "evidence_span": "in implementing this unprecedented restriction on the departments",
+      "correct_passage": "",
+      "problem": "",
+      "suggested_fix": ""
+    },
+    {
+      "line": 160,
+      "sentence": "**What challenges it:** The resolution and FOX 5 describe the limit as applying to requests for extra money.",
+      "marker": "[P-029, P-077]",
+      "verdict": "supports",
+      "reason": "P-029 calls it 'the 5% cap on departmental enhancement requests'. Its first clause says 'budget requests that do not exceed 5% of their base budget', but read as a whole it describes a cap on enhancements. P-077 (S21): 'a directive asking all county departments to limit any request for additional funding to 5% above current allocations'.",
+      "evidence_span": "a directive asking all county departments to limit any request for additional funding to 5% above current allocations",
+      "correct_passage": "",
+      "problem": "Minor: FOX 5 is not named in the text of P-029 or P-077. Elsewhere the document cites P-080 whenever it names FOX 5 (e.g., L51, L157).",
+      "suggested_fix": "Cite [P-029, P-077, P-080]."
+    },
+    {
+      "line": 160,
+      "sentence": "For the 2026 budget, the county described its \"base budget\" as the current funding needed for past spending patterns, including staff.",
+      "marker": "[P-086]",
+      "verdict": "supports",
+      "reason": "P-086 (2026 budget message): 'we identified the County’s “Base Budget”. This represents the current funding needed to address historical spending patterns including personnel expenditures (filled and vacant)...'. The sentence is properly scoped to the 2026 budget.",
+      "evidence_span": "This represents the current funding needed to address historical spending patterns including personnel expenditures (filled and vacant) and other operational spending",
+      "correct_passage": "",
+      "problem": "Minor: the quoted term is capitalized in P-086 (“Base Budget”). Lowercase \"base budget\" appears only in P-029, which is not cited here, so a case-sensitive quote check would fail.",
+      "suggested_fix": "Quote it as \"Base Budget\" to match P-086, or drop the quotation marks."
+    },
+    {
+      "line": 160,
+      "sentence": "Outside the draft, at least one office's requests above 5% are public: the public defender's posted slides list $4,720,447 in requests.",
+      "marker": "{analysis: P-057 and P-064; \"above 5%\" is measured against its 2026 budget, as under What supports it}",
+      "verdict": "valid",
+      "reason": "P-064 lists six amounts: 76,981 + 3,793,366 + 755,884 + 30,000 + 58,000 + 6,216 = 4,720,447. P-057 shows the deck is posted on the county's data site. Against the 2026 adopted budget of $28,395,566 (P-054), the total is 16.6%, so it is above 5%. The tag discloses that the 2027 'base budget' isn't known. 'At least one' fits, because only the public defender's slides give amounts (P-061, P-063 and P-066 do not).",
+      "evidence_span": "",
+      "correct_passage": "",
+      "problem": "",
+      "suggested_fix": ""
+    },
+    {
+      "line": 193,
+      "sentence": "Atlanta News First reported that the officials said funding decisions could affect court delays, jail conditions and public safety.",
+      "marker": "[P-069]",
+      "verdict": "supports",
+      "reason": "P-069 (S20): the justice officials are 'warning that funding decisions could affect court delays, jail conditions and public safety'. This is the reporter's paraphrase, correctly attributed to the outlet, and 'said' for 'warning' is neutral. The outlet is identified by the S20 heading and by P-073's text, not named in P-069 itself.",
+      "evidence_span": "warning that funding decisions could affect court delays, jail conditions and public safety",
+      "correct_passage": "",
+      "problem": "",
+      "suggested_fix": ""
+    },
+    {
+      "line": 202,
+      "sentence": "Who should shape the first draft: staff alone, staff with the chairman, staff with two commissioners (one from each group of districts), or the whole Board?",
+      "marker": "{editorial: a question; the choices come from P-002, P-003, P-008 and P-014}",
+      "verdict": "valid",
+      "reason": "A neutral question. The choices match P-003 (the county manager alone), P-002 (chairman, county manager and CFO) and P-008 (county manager, CFO, and one commissioner each from districts 1-3 and 4-6). 'The whole Board' is the body P-014 names as the only one that can adopt the budget.",
+      "evidence_span": "",
+      "correct_passage": "",
+      "problem": "",
+      "suggested_fix": ""
+    },
+    {
+      "line": 203,
+      "sentence": "Should departments' requests for extra money have a set limit, or should the draft list them without one?",
+      "marker": "{editorial}",
+      "verdict": "valid",
+      "reason": "A neutral two-option question that matches the dispute (the limit in P-029 and P-077; the no-caps rule in P-030), and it favors neither option.",
+      "evidence_span": "",
+      "correct_passage": "",
+      "problem": "",
+      "suggested_fix": ""
+    }
+  ],
+  "framing_issues": [
+    {
+      "line": 83,
+      "text": "Resolution 26-0729 says it would \"clarify\" the code by adding a ban",
+      "issue": "A one-word quote of 'clarify', next to 'by adding a ban', can read as a scare quote suggesting the resolution mislabels a new rule. The resolution's own phrase is 'to clarify that all departmental budget requests are included in the proposed budget'; quoting it in full is neutral.",
+      "severity": "low"
+    },
+    {
+      "line": 156,
+      "text": "makes the code's rule on requests \"effectively\" impossible to meet",
+      "issue": "A one-word quote of an adverb can read as a scare quote. Both one-word quotes in the changed units are of Resolution 26-0729 (L83, L156), while Resolution 26-0460 is quoted in full phrases ('earlier and ongoing input', 'in a modified form'). Drop the quotation marks or quote the longer phrase.",
+      "severity": "low"
+    }
+  ],
+  "summary": {
+    "units_checked": 25,
+    "supports": 14,
+    "partial": 0,
+    "does_not_support": 0,
+    "wrong_span": 0,
+    "questionable_or_invalid_tags": 1
+  }
+}

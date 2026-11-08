@@ -1,0 +1,25 @@
+L18	In Atlanta News First's report, Commissioner Barrett said some current board members were trying to take control of the budget process. [P-072]
+L18	In the same report, Commissioner Ellis responded that the commission's meetings are open meetings. [P-073]
+L18	FOX 5 reported that, in response to the officials, Ellis said the full Board will review and vote on the final budget. [P-079, P-080]
+L46	**Not published yet:** On Nov 8, neither the county's budget page nor its Public Notices page showed the 2027 proposal or a hearing date. {analysis: P-045 and P-042, captured Nov 8, 2026}
+L83	Resolution 26-0729 says it would "clarify" the code by adding a ban: "No limits or caps shall be placed" on what any department, agency, elected official or authority can request. [P-083, P-030, P-024]
+L103	Taken together, total property-tax revenue ended $13,634,040 below the proposal. {computed: proposed $815,496,192 + $32,170,000 = $847,666,192; adopted $834,032,152 + $0 = $834,032,152; $847,666,192 − $834,032,152 = $13,634,040 (P-054)}
+L106	**What's uncertain:** How much room 2027 revenue leaves, because the proposal isn't public yet. {editorial}
+L124	"A values question" means that part of the claim is about what is fair or right, not mainly about facts. {editorial: labeling rule}
+L132	**In short:** Resolution 26-0460, which the Board adopted, says the commission adds "earlier and ongoing input" from Board members, balanced between north and south. [P-004, P-017]
+L135	**Who disagrees:** FOX 5 reported that the justice officials' main objection is to presenting their needs to a two-commissioner panel rather than the full Board. [P-076, P-080]
+L136	In the 2026 cycle, the budget book lists changes to the county manager's proposal dated Jan 7, adding $20,597,446, and Jan 21, taking out $16,648,868. [P-054, P-047]
+L136	Those changes included $18,157,000 more for consent decree costs. {computed: $50,000,000 adopted − $31,843,000 proposed (P-054)}
+L136	Together, they left the adopted General Fund $3,948,578, or about 0.4%, above the proposal. {computed: $20,597,446 − $16,648,868 = $3,948,578; $3,948,578 ÷ $1,053,152,000 ≈ 0.004 (P-054)}
+L136	That means the proposal's total largely held, though some of its lines changed by millions of dollars. {analysis: what the figures above show (P-054)}
+L136	Commissioner Barrett's Resolution 26-0729 says the commission failed its duty to ask all commissioners for their priorities when it set the 5% cap. [P-029, P-032, P-024]
+L145	FOX 5 reported that Sheriff Patrick Labat criticized the two-commissioner arrangement as unfair to county agencies and taxpayers. [P-078, P-080]
+L156	**In short:** Resolution 26-0729 says the 5% cap makes the code's rule on requests "effectively" impossible to meet. [P-029, P-024]
+L156	The code's text and the 2026 record support part of this; the rest depends on an unsettled reading of the code, the claimants' own figures, values or the coming draft. {analysis: P-005 and P-049 for the supported part; the label above names the rest}
+L157	**Who says it:** Commissioner Barrett's Resolution 26-0729 calls the cap an "unprecedented restriction." [P-029, P-032, P-024]
+L160	**What challenges it:** The resolution and FOX 5 describe the limit as applying to requests for extra money. [P-029, P-077]
+L160	For the 2026 budget, the county described its "base budget" as the current funding needed for past spending patterns, including staff. [P-086]
+L160	Outside the draft, at least one office's requests above 5% are public: the public defender's posted slides list $4,720,447 in requests. {analysis: P-057 and P-064; "above 5%" is measured against its 2026 budget, as under What supports it}
+L193	Atlanta News First reported that the officials said funding decisions could affect court delays, jail conditions and public safety. [P-069]
+L202	Who should shape the first draft: staff alone, staff with the chairman, staff with two commissioners (one from each group of districts), or the whole Board? {editorial: a question; the choices come from P-002, P-003, P-008 and P-014}
+L203	Should departments' requests for extra money have a set limit, or should the draft list them without one? {editorial}
