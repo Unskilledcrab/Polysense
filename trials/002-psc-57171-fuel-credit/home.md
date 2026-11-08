@@ -2,7 +2,7 @@
 
 ## Act now
 
-- **Input · Dec 14, 2026, 9:30 a.m.:** The Public Service Commission (PSC), Georgia's utility regulator, takes public comments until 24 hours before its Dec 15 vote. {computed: the PSC decides utility rates (P-169); comments must be submitted 24 hours before a vote (P-030); the final decision is scheduled for the Dec 15 Administrative Session (P-013), which starts at 9:30 a.m. (P-024), so a comment submitted by 9:30 a.m. on Dec 14 is on time even if this case is the session's first vote} To ask how to submit one, call 404-656-4501 (local) or 1-800-282-5813 (outside metro-Atlanta) and press 2, or email gapsc@psc.state.ga.us. [P-163]
+- **Input · Dec 14, 2026, 9:30 a.m.:** The Public Service Commission (PSC), Georgia's utility regulator, takes comments until 24 hours before a vote: by this time for its Dec 15 vote. {computed: comments must be submitted 24 hours before a Commission vote (P-030); the final decision is scheduled for the Dec 15 Administrative Session (P-013), which starts at 9:30 a.m. (P-024), so 24 hours earlier is 9:30 a.m. on Dec 14, the time in the label; the PSC decides utility rates (P-169)} Ask the PSC whether its Dec 10 committee meeting makes the deadline earlier, and how to submit: call 404-656-4501 (local) or 1-800-282-5813 (outside metro-Atlanta) and press 2, or email gapsc@psc.state.ga.us. [P-012, P-163]
 
 ## Coming up
 

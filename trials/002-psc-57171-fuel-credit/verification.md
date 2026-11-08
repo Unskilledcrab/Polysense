@@ -930,6 +930,7 @@ marked as a values-guide, "If you", "In short" or other unit).
 | 10 | The real-time line was vague and unscoped (SC L16 questionable; SC framing L16) | "Baseline power gets standard-rate changes, but some new large-load customers have none. [P-043, P-048, P-071] As of Nov 8, 2026, no filing we read gives your baseline's net or timing." "The lines above" is gone | 16 |
 | 11 | "The earliest possible cutoff" ignored the Dec 10 committee meeting (SC L49 questionable; SC framing L49, medium) | "Dec 14 at 9:30 a.m. is 24 hours before the Dec 15 session starts; the time this case comes up isn't posted as of Nov 8, 2026." Then: "The Energy Committee takes up the case on Dec 10, and no PSC page we found says whether that counts as a Commission vote, so ask the PSC whether an earlier deadline applies." No earliest cutoff is stated | 49 |
 | 12 | Low notes (SC framing) | Line 155: "Nov 8, 2026". Line 182: "which would likely lower the fuel charge". Line 176: GIPL's qualifier kept, "from an economics perspective". Line 189: Georgia Power's point that choice 2 "would depart from the marginal-cost approach in place since 2010" (P-129) now precedes PIA Staff's "2010 rate case proposal" reply. Line 214: "two take-or-pay choices, 1 and 2". Line 248: "options", not "fixes". Line 252: "take-or-pay choices … choice 2". Lines 14 and 15: "net (both changes together)". `link_text`: "… and your power bill" [P-016, P-044, P-061, P-144]. S10 label: "Resource Supply Management" | 14, 15, 155, 176, 182, 189, 214, 248, 252; `page.yaml` |
+| 13 | The home comment item gave "Dec 14, 2026, 9:30 a.m." with no caveat, unlike line 49 (coordinator, after item 11) | Home line 5 now gives the rule, 24 hours before a vote (P-030), says this time is for the Dec 15 vote, and asks readers to check with the PSC whether its Dec 10 committee meeting (P-012) makes the deadline earlier; 24 words before the action; label date unchanged | home 5 |
 
 To fit the 45-word "If you" budget with "your" and the definition of "net", lines 14 and 15 no longer say "or the
 fuel-charge date" (the "Decided now, and decided later" list still says the PSC sets that date). To keep Layer 3 at grade
@@ -959,7 +960,7 @@ fuel-charge date" (the "Decided now, and decided later" list still says the PSC 
 ### Step 5 checklist (revision 7.2)
 
 - [x] **Every sentence is cited or tagged.** `check_citations.py` on `workspace.md`: PASS, 545 units (410 cited, 58 analysis,
-      66 editorial, 11 computed), 0 errors, 0 warnings. `home.md` (unchanged): PASS, 8 units, 0 errors, 0 warnings.
+      66 editorial, 11 computed), 0 errors, 0 warnings. `home.md` (line 5 changed, item 13): PASS, 8 units (7 cited, 1 computed), 0 errors, 0 warnings.
 - [x] **Passages unchanged**: 166, all cited; `verify_hashes.py`: PASS.
 - [x] **Reading grade** (`readability.py`): 30-second 7.3 (90 words), What it means for you 7.4, Layer 1 7.4, Layer 2 8.4,
       Layer 3 8.5 (8.46; target ≤ 8.5). Not targeted: Layer 4 9.9. No budget WARN lines, no CHECK lines.
