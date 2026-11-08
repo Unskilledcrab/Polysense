@@ -30,6 +30,11 @@ every lead was re-checked on a primary page and re-snapshotted here.
 | Revision 3: draft | 10:08 → 10:10 | Rewrote `workspace.md` from the dispositions: two-part labels that grade each card's stated main claim; the take-or-pay mismatch stated in Layer 2, Plan A and card 1; a new card 7 for Georgia Power's case on other fuel costs (GAM's card is now 8); "large-load customers" for the filings' term; reasons added inside cards; repeats cut (the profit estimate to one place, Georgia Power's account of GIPL's switch to card 5, one errata note); five neutral questions | — |
 | Revision 3: gate and accuracy pass | 10:10 → 10:15 | First gate run: PASS, 0 warnings, but Layer 2 read 8.5 and Layer 3 8.4 after the new glossary entries; split long sentences until 7.6 and 7.7. Shortened labels from up to 81 words to 68. Re-read each changed sentence against its passages. Re-cited P-047 and P-072, which the draft had left uncited | Caught in my own pass: card 3's label didn't credit GIPL's peak tie; card 7's "all costs" for Georgia Power's "all embedded costs"; a Markdown link that the prototype would show raw (the template sets text, not HTML), so the docket URL stays in the source drawer |
 | Revision 3: write-up | 10:15 → 10:18 | verification.md (round 2 results, 39 dispositions, 10 contradictions, revision 3 checklist), this log, README status. `verify_hashes.py` PASS; test render: revision 3, 8 cards and 4 plans parse | — |
+| Round 3 (independent checkers) | (coordinator) | Fresh blind source check and bias panel on revision 3; calibration carried over | Source check: 321 supports, 5 partial, 0 unsupported, 402/402 spans grounded: the accuracy part is met again. Home: 1 questionable tag (the Dec 14 deadline without its time), fixed by the coordinator and re-checked. Bias panel **failed** again, but closer: the more-credit advocate 4/5, the editor 4/5 on neutrality (clarity 3/5), the utility-side advocate 3/5 with 1 high item. Two checkers saw the remaining lean as structural, toward PIA Staff |
+| Read round 3 | 11:31 → 11:40 | Saved revision 3's page, home and passages and the round 3 reports in `verification/round3/` (originals untouched); read all four reports in full | The shared items: only the fuel side of the dollar-for-dollar shift had numbers; the label rule could only return "Mixed"; replies were given on Staff's cards only; GAM's pipeline position had no card, though the printed ordering rule promised one |
+| Revision 4: draft | 11:40 → 11:43 | Rewrote from the dispositions: the base-side half in Layer 2, the 30-second version and beside every Staff figure; a label rule that grades the undisputed premise apart from the dispute; one reply rule with "had said"; a new card 6 for GAM's pipeline position (later cards renumbered); parallel plan fields; claims paired with their counters in Layer 2; new glossary entries; questions rewritten | — |
+| Revision 4: gate and accuracy pass | 11:43 → 11:47 | First gate: number warnings for "cards 8 and 9" inside a cited sentence (moved to its own `{editorial}` sentence) and for a "Table 5" whose passage never prints the 5 (reworded). The 30-second version read 8.6, so long sentences were split (6.8); labels cut from 88 words to 71. Re-read each changed sentence against its passages | Caught in my own pass: "answered" for a rebuttal that only "says"; an unattributed "real-time customers' prices would not change" (now the case's scope, cited to P-133); a Markdown link the prototype would show as raw text |
+| Revision 4: final pass, home and write-up | 11:47 → 12:03 | Cut repeats (Plan A's uncertainty, a commissioner's background line), cut the two longest labels to 67 words, led card 7's "What's missing" with what is missing, quoted Georgia Power's motion at full strength, and added Georgia Power's footnote to Plan D. `home.md`: "Observe" for Nov 12, the Oct 27 item in plain words, Dec 10 under "Coming up". verification.md (round 3 results, 30 dispositions, 11 contradictions, revision 4 checklist), this log and README. Gate re-run: clean | The page grew to 415 units (402 before); the new card adds 12 |
 
 ## Where the runbook did not fit (and what I did)
 
@@ -92,6 +97,8 @@ every lead was re-checked on a primary page and re-snapshotted here.
 - `readability.py` (new, revision 2; **adopted** before revision 3, which also leaves card labels out of the grade): the sentence counter `[.!?]+(?:\s|$)` misses sentences that end inside a closing quote
   or bracket (`."`, `.)`), so pages that quote testimony score 1–2.5 grades too high. → Allow closing quotes and brackets
   before the whitespace. Revision 2's target sections were measured both ways and pass either way.
+- `check_citations.py`: the label skip matches the singular "card N" only, so "cards 8 and 9" inside a cited sentence
+  warns. → Also skip plurals and "N and M" lists after "cards", "layers", "options" and "questions".
 - An **approved OCR tool** (with a dependencies.md entry) is needed for scanned filings.
 
 ## Rules learned (proposed; not yet applied to the runbook or style guide)
@@ -131,6 +138,20 @@ From round 2 (revision 3):
 20. **Use each party's own term**, and say when the passages give no threshold, instead of merging terms.
 21. **One description template for every party**, with no mission statements, and witness titles in the same form.
 22. **Count repeats**: a point stated four times (a profit estimate, an unverified account) weighs more than one stated once.
+
+From round 3 (revision 4):
+
+23. **Grade the premise no party disputes apart from the dispute.** A label that grades the whole summary, its "who
+    disagrees" clause included, can only say "Mixed", and then it can't tell agreed facts from real conflicts.
+24. **One reply rule for every card**, with "had said" for an answer filed before the challenge. Say which party filed
+    last, so a missing written reply doesn't read as a concession.
+25. **Give both halves of a dollar-for-dollar shift.** Wherever one side's figure appears, give the matching amount on the
+    other side and say where it goes.
+26. **Pair each claim with its documented counter, both ways, where the claim appears**, and say when a passage reports
+    concerns rather than a finding.
+27. **Follow the page's own printed rules.** When the ordering rule promises a card, write the card or change the rule.
+28. **Borrowed support carries its source's own qualifier** (a showing made "simply for illustration", a party that
+    rejects the plan), or it doesn't go in the support field.
 
 ## Automation notes (not eligible: 0 of 3 runs for this kind of decision)
 

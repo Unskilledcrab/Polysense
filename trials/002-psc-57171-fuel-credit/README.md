@@ -2,12 +2,12 @@
 
 | | |
 |---|---|
-| **Process** | A. Decision workspace, adapted from the bill runbook to a regulatory case ([runbook](../../docs/process/runbooks/bill-workspace.md) v0.3 for revision 1, v0.4 for revisions 2 and 3). Every adaptation is in [log.md](log.md) |
+| **Process** | A. Decision workspace, adapted from the bill runbook to a regulatory case ([runbook](../../docs/process/runbooks/bill-workspace.md) v0.3 for revision 1, v0.4 for revisions 2 to 4). Every adaptation is in [log.md](log.md) |
 | **Decision** | Georgia Public Service Commission (PSC) Docket 57171, "RTP Revenue Credit and Allocation Methodology": how Georgia Power splits money from customers on Real-Time Pricing (RTP), including data centers, between the fuel account that standard-rate customers' fuel charge pays and the base account. Final decision scheduled for 2026-12-15; the case must end by 2026-12-31 |
-| **Done by** | AI agent (Claude Code), by hand, 2026-11-08 (revision 1, 06:57–07:48 UTC; revision 2, 08:30–09:16 UTC; revision 3, 09:55–10:18 UTC) |
-| **Verified by** | **Not verified.** Independent checkers ran the [verification protocol](../../docs/process/verification-protocol.md) twice. Round 1 (revision 1) failed the bias panel (advocates 3/5 and 3/5; editor 3/5 and 3/5, 4 high issues); its source check found 1 unsupported and 28 partial units out of 269; calibration caught 12/12 planted errors. Round 2 (revision 2) met the accuracy part of the pass rule (289 supports, 7 partial, 0 unsupported; 357/357 spans grounded) but failed the bias panel again (advocates 3/5 and 3/5, the utility side "close to 4"; editor 3/5 and 3/5, 1 high issue). Revision 3 answers every round 2 finding ([verification.md](verification.md)) and awaits round 3 |
+| **Done by** | AI agent (Claude Code), by hand, 2026-11-08 (revision 1, 06:57–07:48 UTC; revision 2, 08:30–09:16 UTC; revision 3, 09:55–10:18 UTC; revision 4, 11:31–12:03 UTC) |
+| **Verified by** | **Not verified.** Independent checkers ran the [verification protocol](../../docs/process/verification-protocol.md) three times. Round 1 (revision 1) failed the bias panel (advocates 3/5 and 3/5; editor 3/5 and 3/5, 4 high issues); its source check found 1 unsupported and 28 partial units out of 269; calibration caught 12/12 planted errors. Round 2 (revision 2) met the accuracy part of the pass rule (289 supports, 7 partial, 0 unsupported; 357/357 spans grounded) but failed the bias panel again (advocates 3/5 and 3/5, the utility side "close to 4"; editor 3/5 and 3/5, 1 high issue). Round 3 (revision 3) met the accuracy part again (321 supports, 5 partial, 0 unsupported; 402/402 spans grounded) and came closer on the bias panel, but failed it (advocate for PIA Staff's and GIPL's positions 4/5; editor 4/5 on neutrality, 3/5 on clarity; advocate for Georgia Power's and GAM's positions 3/5, 1 high item). Revision 4 answers every round 3 finding ([verification.md](verification.md)) and awaits round 4 |
 | **Owner's role** | Feedback on the user experience ([review.md](review.md)) |
-| **Status** | **Revision 3 (2026-11-08), after round 2; not yet re-checked.** Gate: `check_citations.py` PASS with the whole-number check (`workspace.md` 402 units: 326 cited, 29 analysis, 42 editorial, 5 computed; `home.md` 5 units; 0 errors, 0 warnings); updated `readability.py` 30-second 7.6, Layer 1 6.3, Layer 2 7.6, Layer 3 7.7 (Layer 4 9.6, not targeted; longest card label 68 words); `verify_hashes.py` PASS (66 files, 35 retrieved sources); `build_passages.py` 163 passages, 0 errors. Revisions 1 and 2 are kept in `verification/round1/` and `verification/round2/`. The record keeps moving: see "How to resume" |
+| **Status** | **Revision 4 (2026-11-08), after round 3; not yet re-checked.** Gate: `check_citations.py` PASS (`workspace.md` 415 units: 321 cited, 43 analysis, 43 editorial, 8 computed; `home.md` 6 units; 0 errors, 0 warnings); `readability.py` 30-second 6.8, Layer 1 6.8, Layer 2 8.0, Layer 3 8.1 (Layer 4 9.9, not targeted; card labels 53–67 words); `verify_hashes.py` PASS (66 files, 35 retrieved sources); `build_passages.py` 163 passages, 0 errors. Revisions 1 to 3 are kept in `verification/round1/` to `verification/round3/`. The record keeps moving: see "How to resume" |
 
 ## Why this decision (step 0)
 
@@ -64,7 +64,7 @@ All seen on **2026-11-08** (snapshots 07:00–07:09 UTC). Dates and times can ch
 
 ## How to resume (the record keeps moving)
 
-1. Run round 3 of the independent [verification protocol](../../docs/process/verification-protocol.md) on revision 3 (rounds 1 and 2 ran on revisions 1 and 2; see verification.md).
+1. Run round 4 of the independent [verification protocol](../../docs/process/verification-protocol.md) on revision 4 (rounds 1 to 3 ran on revisions 1 to 3; see verification.md).
 2. Before 2026-11-12: re-snapshot S03, S04 and S04b for a time, room or agenda. After it: look for the transcript.
 3. After 2026-12-02: snapshot the briefs and proposed orders (new sources). They will be the parties' final positions; write
    the next revision with a change class and reason (append-only; [ADR 0006](../../docs/adr/0006-append-only-revisions.md)).
@@ -82,7 +82,7 @@ All seen on **2026-11-08** (snapshots 07:00–07:09 UTC). Dates and times can ch
 | [workspace.md](workspace.md) | The page: 30-second version + Layers 1–5. Every sentence cited or labeled |
 | [home.md](home.md) | Home-page items built from this trial |
 | [page.yaml](page.yaml) | Display settings for the prototype |
-| [verification.md](verification.md) | Round 1 and round 2 results, the disposition of every finding, contradicting suggestions, the step 5 checklists for revisions 1 to 3, and "where I'm least sure" |
-| [verification/round1/](verification/round1/), [verification/round2/](verification/round2/) | Copies of each round's inputs (the page, home items and passages the checkers read) and the checkers' raw reports |
+| [verification.md](verification.md) | Results of rounds 1 to 3, the disposition of every finding, contradicting suggestions, the step 5 checklists for revisions 1 to 4, and "where I'm least sure" |
+| [verification/round1/](verification/round1/), [verification/round2/](verification/round2/), [verification/round3/](verification/round3/) | Copies of each round's inputs (the page, home items and passages the checkers read) and the checkers' raw reports |
 | [log.md](log.md) | Step-by-step log with times, friction, every place the runbook didn't fit, and tool change requests |
 | [review.md](review.md) | The owner's feedback form on the experience |
