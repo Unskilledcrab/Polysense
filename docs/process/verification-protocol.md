@@ -56,6 +56,11 @@ asked to add). So "done" is defined in advance:
 4. The page is then labeled **"Passed checks (round N)"**, never "verified" in general, and that label
    links to the open items.
 
+**When only the editor blocks a round.** If both advocates already rate their side 4 or more and the round
+fails only on the editor's high-severity issues, the next revision fixes only those issues and the accuracy
+flags. Broad edits at that point tend to unsettle a balance both sides now accept. Trial 001 (round 3) and
+Trial 002 (round 4) each passed the next round this way.
+
 ## Independence rules
 
 - Verifiers get **only** the workspace (or mutated copy) and `passages.md`. They are not given the log,
