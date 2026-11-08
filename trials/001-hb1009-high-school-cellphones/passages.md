@@ -199,6 +199,16 @@ text (struck words removed, underlined words kept), recovered with `trials/tools
 ### P-062 · S10c · list section heading for 2026
 > Fiscal Notes 2026 Document Description
 
+### P-065 · S01 · p.3, lines 52-54 (prior law, (c)(3))
+> (3) Establish clear procedures for off-site events or activities, including all school sponsored events and field trips, daily transportation, athletic and extracurricular events, and other instructional opportunities that do not occur on school grounds,
+
+*Note: Prior-law reading from the strike-through/underline markup: the dual enrollment, work-based learning and apprenticeship wording is underlined (new) in HB 1009. The prior clause's final punctuation is not recoverable from the markup.*
+
+### P-066 · S01 · p.3, lines 47-48 (prior law, (c)(1))
+> (1) Prohibit bell-to-bell access to personal electronic devices by students in kindergarten through grade eight
+
+*Note: Prior-law reading from the markup: 'eight' is struck and 'twelve' underlined in HB 1009.*
+
 ### P-064 · S13b · abstract, outcomes
 > The primary outcome was mental wellbeing (assessed using Warwick–Edinburgh Mental Well-Being Scale [WEMWBS]). Secondary outcomes included smartphone and social media time.
 

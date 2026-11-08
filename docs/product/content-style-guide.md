@@ -63,7 +63,7 @@ If something doesn't fit, it moves to a deeper layer. It is not crammed in.
 | `[P-012]` | A factual sentence supported by a cited passage | "The bill sets a $500 cap. [P-012]" |
 | `{computed: …}` | Arithmetic from cited numbers, with the work shown | "{computed: $12M ÷ 1.6M students ≈ $7.50 per student}" |
 | `{analysis}` | Our explanation or synthesis of cited facts | "Together, these changes mainly affect renters." |
-| `{editorial}` | Framing that can't be cited, such as "what's missing" or "what's uncertain". Needs reviewer sign-off | "The fiscal note does not estimate effects on local budgets." |
+| `{editorial}` | Framing that can't be cited, such as "what's missing" or "what's uncertain". The blind source check rates each one valid, questionable or invalid ([verification protocol](../process/verification-protocol.md)) | "The fiscal note does not estimate effects on local budgets." |
 
 ## 7. Quotes and attribution
 
@@ -80,9 +80,32 @@ If something doesn't fit, it moves to a deeper layer. It is not crammed in.
 - **Subgroup statistics:** say who was asked ("Among parents who oppose a ban, 74.8%…"), never let a
   subgroup figure read as everyone.
 
+## 8. Argument cards: one bar for every side
+
+Learned from Trial 001, where the bias panel failed twice: first against supporters, then, after
+overcorrecting, against critics.
+
+- **One template, same order:** In short · Who says it · What supports it · Who disagrees · What
+  challenges it · What's missing · What's uncertain.
+- **In short:** the claim in its side's own terms, then its evidence status, in the same form on every
+  card. Don't end one side's summaries with a rebuttal unless every card gets one.
+- **Who disagrees:** only a statement that answers *this card's* claim. A general remark doesn't count.
+  If no source disputes the claim, write "No one in the sources we reviewed disputed this directly".
+- **Evidence label:** a vocabulary word, then its basis in parentheses ("Supported, with limits (one
+  Florida working paper; gains in year two)"). Labels follow the evidence and may differ between
+  sides. Never equalize them.
+- **Use a study for everything it found.** If a study supplies one side's cost, also show the benefits
+  it found, and the reverse.
+- **Same verbs, same hedges.** "Said" for every speaker. If one outlet's report gets "according to",
+  every report from that outlet gets it.
+- **Say who is quoted.** If the named voices come mostly from one side, say so, and say it reflects whom
+  the sources quoted, not how many people hold each view.
+- **Base rates first.** Give the overall split before any figure from one group.
+
 ## Change log
 
 | Date | Change | Learned from |
 |---|---|---|
 | 2026-11-08 | v0 created from research | Planning |
 | 2026-11-08 | v0.1: quote punctuation, paraphrase vs. quote, minors, party labels, timing words, subgroup statistics | Trial 001 (HB 1009) drafting and planted-error design |
+| 2026-11-08 | v0.2: argument-card rules (one bar for every side) | Trial 001 verification rounds 1–2 |

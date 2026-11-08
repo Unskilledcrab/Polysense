@@ -155,6 +155,9 @@ passages:
   - {id: P-065, source: S01, file: hb1009-247117.old.txt, locator: "p.3, lines 52-54 (prior law, (c)(3))",
      start: "(3) Establish clear procedures for off-site events", end: "that do not occur on school grounds,",
      note: "Prior-law reading from the strike-through/underline markup: the dual enrollment, work-based learning and apprenticeship wording is underlined (new) in HB 1009. The prior clause's final punctuation is not recoverable from the markup."}
+  - {id: P-066, source: S01, file: hb1009-247117.old.txt, locator: "p.3, lines 47-48 (prior law, (c)(1))",
+     start: "(1) Prohibit bell-to-bell access to personal electronic devices by students in kindergarten", end: "through grade eight",
+     note: "Prior-law reading from the markup: 'eight' is struck and 'twelve' underlined in HB 1009."}
   - {id: P-064, source: S13b, file: S13b.txt, locator: "abstract, outcomes",
      start: "The primary outcome was mental wellbeing", end: "smartphone and social media time."}
   # --- S19: Cairo High School (Grady County Schools) page, 2026-06-01 ------------------------

@@ -40,8 +40,8 @@ archived passages (hashed) ──► 1. Draft with citations ──► 2. Classi
 - `cited_text` appears verbatim in the hashed passage.
 - Every number and date appears in a cited passage. Otherwise the sentence must be `computed`, with its
   arithmetic shown and re-checked.
-- `editorial` sentences ("what's missing", "what's uncertain") are flagged for explicit reviewer
-  sign-off.
+- `editorial` sentences ("what's missing", "what's uncertain") are flagged for the blind source check,
+  which rates each one valid, questionable or invalid (the verification protocol, ADR 0014).
 - Reading grade, jargon list and loaded-word list (outside quotes).
 - **Structural** symmetry: every option has the same fields, and its strongest case for and against.
   Never equalized ratings.

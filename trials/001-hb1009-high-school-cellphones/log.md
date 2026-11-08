@@ -20,7 +20,9 @@ a person would need. Human review time is recorded separately in `review.md`.
 | Prototype | 04:17 → 04:26 | Built `render_prototype.py` + template (home, 5 layer tabs, evidence drawer, bill markup view, "How we checked" page). Smoke test: 7 views × 2 widths, 0 script errors, 0 horizontal overflow | — |
 | Verification round 1 | 04:17 → 04:36 | Reports: supporter 3/5 (04:27); critic 3/5 (04:29); calibration **13/13 caught**, 92/92 spans grounded (04:30); editor neutrality 3/5, clarity 4/5 (04:32); blind source check of the real page 58 supports, 9 partial, 0 unsupported, 0 wrong span (04:36) | The panel **failed**, and rightly. My draft had given critics 4 cards to supporters' 2 (one of them invented as "anticipated"), cut two supporter quotes and one expert's concession, put an expert's proposal under "What the law says", and used a different template for each side's cards. The source checks found no wrong facts, only overstatements |
 | Revision 2 | 04:30 → 04:39 | Drafted in the scratchpad while the last verifier finished (so its input didn't change underneath it); swapped in at 04:38. 135 units (99 cited, 21 analysis, 13 editorial, 2 computed). Added 7 passages: the full bill text, the fiscal list's 2026 heading, the English study's outcomes. Gate: 0 errors, 0 warnings | Fixed a checker false positive ("Sen." read as a sentence end) |
-| Verification round 2 | 04:39 → … | Four fresh agents: blind source check, supporter's advocate, critic's advocate, standards editor. Calibration carried over (same verifier prompt) | — |
+| Verification round 2 | 04:39 → 05:12 | Four fresh agents; calibration carried over (same verifier prompt). Reports: critic 4/5 (04:47); supporter **3/5** (04:50); editor neutrality 4/5, clarity 4/5, no high-severity issues (04:53); blind source check 89 supports, 10 partial, 0 unsupported, 0 wrong span, 135/135 spans grounded (05:11) | The panel **failed again, from the other side.** Round 1's fixes had overcorrected: Option B cited the Florida study only for its costs, two of three supporter summaries ended in a rebuttal, and "Who disagrees" used a looser bar for supporters' rebuttals than for critics'. Accuracy slips too: a reporter's paraphrase in quote marks, "replaced when signed" for a law that takes effect later |
+| Revision 3 | after 04:53 → 05:13 | Drafted in the scratchpad while the source check finished; swapped in at 05:13. 150 units. Added P-065 and P-066 (prior-law text). Every round-2 finding dispositioned (see verification.md). Gate: 0 errors, 0 warnings. Reading grade: 30-second 8.1, L1 5.6, L2 7.6, L3 7.3 | The additions pushed Layer 2 to grade 9.3; five sentence splits brought it to 7.6 |
+| Verification round 3 | 05:14 → … | Four fresh agents on revision 3: blind source check, supporter's advocate, critic's advocate, standards editor | — |
 
 ## Rules learned (fed back into the runbook)
 
@@ -45,6 +47,12 @@ a person would need. Human review time is recorded separately in `review.md`.
 9. **The verifier can be measured.** It caught 13/13 planted errors, including subtle ones such as
    "on" vs. "no later than", a subgroup figure presented as everyone, and a misattributed quote. The
    code-only gate caught 1/13. Calibration is what makes AI-only verification defensible.
+10. **Fixing bias can overcorrect.** Revision 2 answered critics' complaints so thoroughly that the
+    supporter's advocate then failed it. Both advocates must re-rate every revision, not only the one who
+    complained. → Verification protocol, layer 5: every round reruns the whole panel.
+11. **Apply one evidence bar to both sides, then let the results differ.** "Who disagrees" now lists only
+    statements that answer the card's own claim, for every card. Labels name their basis in the same
+    form. → Style guide v0.2, section 8.
 
 ## Automation notes (not yet eligible: 0 of 3 runs)
 

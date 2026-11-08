@@ -7,7 +7,7 @@
 | **Done by** | AI agent (Claude Code), by hand |
 | **Verified by** | The AI-only [verification protocol](../../docs/process/verification-protocol.md); no human in the loop ([ADR 0014](../../docs/adr/0014-ai-only-verification.md)) |
 | **Owner's role** | Feedback on the user experience ([review.md](review.md)) |
-| **Status** | Steps 0–5 done. Verification round 1 done (see [verification.md](verification.md)); revision 2 in round-2 verification. Prototype: [prototypes/hb1009/](../../prototypes/hb1009/) |
+| **Status** | Steps 0–5 done. Verification rounds 1 and 2 done, both failed the bias panel and led to revisions (see [verification.md](verification.md)); revision 3 in round-3 verification. Prototype: [prototypes/hb1009/](../../prototypes/hb1009/) |
 
 ## Why this bill (step 0)
 
@@ -46,7 +46,7 @@ of when the bill was live in the 2026 session:
 | File | What it is |
 |---|---|
 | [sources.yaml](sources.yaml) | 14 retrieved sources with SHA-256 hashes (raw files in `_raw/`, git-ignored) |
-| [passages.spec.yaml](passages.spec.yaml) → [passages.md](passages.md) | 63 hand-chosen passages, copied mechanically. Bill passages cover the full enacted text |
+| [passages.spec.yaml](passages.spec.yaml) → [passages.md](passages.md) | 65 hand-chosen passages, copied mechanically. Bill passages cover the full enacted text, plus the prior-law wording the page compares against |
 | [workspace.md](workspace.md) | The page: 30-second version + Layers 1–5. Every sentence cited or labeled |
 | [home.md](home.md) | Home-page items built from this trial |
 | [verification.md](verification.md) + [verification/](verification/) | Every verification report, the planted-error copy and its answer key, dispositions |

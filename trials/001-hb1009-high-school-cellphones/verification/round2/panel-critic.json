@@ -1,0 +1,127 @@
+{
+  "role": "critic-advocate",
+  "rating": 4,
+  "missing_arguments": [
+    {
+      "argument": "Discipline and equity as a harm to students, not only a staff-workload issue. The Florida study found that enforcing bans 'led to a significant increase in student suspensions in the short-term, especially among Black students' (from the same causal design the page praises in card 1). HB 1009 does not cap consequences: it allows 'other actions as deemed appropriate' under each district's code of conduct. The page puts the suspension finding only inside the staff-burden card (5) and Option B, and card 5 cites P-012 only for device confiscation. Give it its own card, or retitle card 5 (for example '...and push more students into discipline') and quote the open-ended consequences clause.",
+      "passages": ["P-039", "P-038", "P-012"]
+    },
+    {
+      "argument": "No emergency exception for students. The only exception the law names is a device that an IEP, Section 504 plan or medical plan explicitly mandates. 'Access' includes merely holding a device, and phones may be stored in a locker or locked pouch, so during a lockdown a student's own phone may be out of reach by design. Card 4 covers parents going through the school, and notes the law lacks the 'guaranteed access to phones' Gazmararian described, but never says plainly that students themselves have no emergency access to stored phones.",
+      "passages": ["P-007", "P-003", "P-009", "P-013", "P-037"]
+    },
+    {
+      "argument": "Students with health needs but no formal plan. 26.6% of opposing parents said phones are needed for health tools or apps. The exception requires a plan that 'explicitly mandates' a device, smartwatches are listed devices, and wearing one counts as access. The page carries this only as a sub-point of the autonomy card (card 6, line 162), where it reads as a values point rather than a concrete health and safety gap. Move it to card 4 or give it its own line.",
+      "passages": ["P-035", "P-013", "P-003", "P-004"]
+    },
+    {
+      "argument": "Unfunded duties belong in the enforcement-burden card. The law adds storage, monitoring, storage audits, annual policy revision, effectiveness reviews and family notices. The state's role is guidance and technical support, and the enacted text sets aside no money. The page also found no fiscal note. This appears in Option B (line 79) but not in card 5, where readers weigh the burden argument.",
+      "passages": ["P-008", "P-009", "P-014", "P-015", "P-016", "P-030", "P-062"]
+    },
+    {
+      "argument": "The law reaches beyond class time. Districts must also set device procedures for daily transportation, field trips, and athletic and extracurricular events, and must communicate rules for them. That matters to families trying to reach a student on the bus or at an away game, and to older students in dual enrollment or work-based learning. Line 55 lists only dual enrollment, work-based learning and apprenticeships, and line 34 says only 'off-campus programs'.",
+      "passages": ["P-010", "P-059", "P-001"]
+    },
+    {
+      "argument": "Local control and no opt-out. Charter and strategic-waiver systems cannot waive the law, and a local-option amendment for transitions between classes failed 13-38. Sen. Harrell's own statement that 'it has been done in high schools already' suggests some schools acted without a state mandate. Option A lists district-by-district variation only as a cost (line 71) and says 'we found no count of districts that already did' (line 72) without noting P-046. Local flexibility should appear as a benefit in Options A and C.",
+      "passages": ["P-018", "P-026", "P-027", "P-046", "P-050"]
+    }
+  ],
+  "unfair_wording": [
+    {
+      "line": 115,
+      "text": "- **Who disagrees:** No one in the sources we reviewed disputed this directly. {analysis: none of the archived statements argues against this claim}",
+      "why": "P-043 is an archived statement by the English study's authors. It says there is 'no evidence' that restrictive policies are associated with 'better mental wellbeing' and that the findings 'do not provide evidence to support' such bans in their current form. That is a direct dissent on this exact claim, so 'no one disputed this' makes a weakly supported claim look uncontested. Name the study authors here.",
+      "severity": "medium"
+    },
+    {
+      "line": 150,
+      "text": "In Florida, suspensions rose in the short term after phone bans, especially among Black students. [P-039]",
+      "why": "P-039 says 'the enforcement of cellphone bans in schools led to a significant increase in student suspensions'. The page turns causal language ('led to'), 'significant' and the link to enforcement into a merely temporal 'rose ... after'. Card 1 (line 102), by contrast, credits the same study with being 'designed to estimate cause and effect' for the pro-side finding. Line 79 uses the same weak wording. Suggested fix: 'Enforcing phone bans led to a significant short-term rise in suspensions, especially among Black students.'",
+      "severity": "medium"
+    },
+    {
+      "line": 164,
+      "text": "- **What challenges it:** In Florida, the effects of phone bans were larger in middle and high schools. [P-040]",
+      "why": "The source sentence goes on to say 'where student smartphone ownership is more common'. Dropping the authors' explanation turns a finding about phone ownership into an apparent rebuttal of older students' maturity. It is the only challenge listed on card 6, so the omission carries weight. Add the explanation.",
+      "severity": "low"
+    },
+    {
+      "line": 161,
+      "text": "A Senate amendment from the senator for the 38th District would have let districts allow phones between classes for grades 9 to 12, and it failed, 13 to 38. [P-027, P-026]",
+      "why": "Every supporting official is named with a title (Gov. Brian Kemp, Superintendent Richard Woods, Sen. Sally Harrell, Rep. Scott Hilton), but the only legislator on the critics' side is left unnamed, even though P-027 says 'Senator Kemp of the 38th'. If the concern is confusion with the governor, write 'Sen. Kemp of the 38th District (not Gov. Brian Kemp)'. Lines 20 and 84 also leave the sponsor unnamed.",
+      "severity": "low"
+    },
+    {
+      "line": 127,
+      "text": "- **Who disagrees:** No named critic disputed that the rules work; teacher Darryl Adams's concerns were about enforcement (see card 5). {analysis: based on P-047 to P-049}",
+      "why": "This narrows Adams's concerns to enforcement, yet the same tag cites P-048 and P-049, where he raises older students' independence and emergency contact. Enforcement difficulty also bears on whether rules 'work'. Suggested fix: 'his concerns were about enforcement, emergencies and older students (cards 4-6), not whether limits reduce distraction.'",
+      "severity": "low"
+    },
+    {
+      "line": 140,
+      "text": "- **What challenges it:** The law requires emergency communication to go through school systems run by staff. [P-011]",
+      "why": "Supporters treat the staff-run channel as the safeguard; critics see it as the bottleneck. Adams could not get updates for hours during a lockdown (P-049). The page lists the channel only as a rebuttal. Note that it cuts both ways. The 'What's missing' line (no time limit, no rapid notification) partly balances this.",
+      "severity": "low"
+    }
+  ],
+  "imbalance": [
+    {
+      "issue": "The page credits causal design only to the pro-side Florida finding. Card 1 (line 102) adds 'The study was designed to estimate cause and effect, not just links' for test scores. Card 5 and Option B give the same study's suspension finding as a temporal 'rose ... after' with no causal note. The critic-friendly English study gets an in-card design caveat (line 117), but card 1 never says in the card that the Florida study is a quasi-experimental working paper read only in summary. That appears only in the Layer 4 intro (line 94).",
+      "severity": "medium"
+    },
+    {
+      "issue": "Evidence labels are asymmetric. Card 4's core claim is the statute's own wording (P-007, P-011), yet it gets the hedged 'Supported, with limits', the same grade as card 1's prediction resting on one working paper. Card 3's factual claim has no measured evidence at all and is labeled the softer 'Uncertain' rather than unsupported.",
+      "severity": "medium"
+    },
+    {
+      "issue": "'Who disagrees' is asymmetric. All three critic cards list a supporter rebuttal (Sen. Harrell twice, and a student who testified in support), while supporter cards 1 and 2 say 'No one in the sources we reviewed disputed this directly'. Part of this reflects the archive, which quotes four named officials for the law and one named critic, a teacher. But card 2 overlooks P-043, and the page never tells readers that the empty fields reflect source coverage, not consensus. An {editorial} note on source coverage would fix this.",
+      "severity": "medium"
+    },
+    {
+      "issue": "Card 3 rates Harrell's 'it's been very successful' (P-046) 'Uncertain (reports, not measured results)', yet card 5 uses it at face value as the rebuttal (line 151: 'say similar rules have worked in other high schools'), with no note that no measured results were cited.",
+      "severity": "low"
+    },
+    {
+      "issue": "Card 3's 'What supports it' (line 126) lists what legislators 'want to hear' (P-045) and Woods hearing 'nothing but support from teachers' (P-053). Both show desire or support for the law, not evidence that limits work. The 'Uncertain' label softens this, but the field name implies evidence.",
+      "severity": "low"
+    },
+    {
+      "issue": "In the Options layer only supporters are quoted. Woods's 'end the harm caused by constant technology access' is Option A's main 'Who pays' item (line 71), and Harrell's 'I can just teach again' is Option B's benefit (line 78), while no critic such as Adams is quoted in any option. Woods's 'harm' claim also lacks the caveat that the one well-being study found no difference (P-042, P-043). The substance of Option B's cost list is thorough, so this is mainly about voice.",
+      "severity": "low"
+    }
+  ],
+  "label_disagreements": [
+    {
+      "argument": "4. Families lose direct contact with students during the school day",
+      "label": "Supported, with limits (the law's text; no data on crisis alerts)",
+      "proposed": "Supported (the law's text)",
+      "why": "The card's claim (students can't access phones; parents must go through the school) is the statute's own wording (P-007, P-011), with only plan-based exceptions (P-013). How well school alerts work in a crisis is a separate question, already covered under 'What's uncertain'. Hedging the label gives a legal fact the same 'with limits' grade as card 1's one-study prediction."
+    },
+    {
+      "argument": "3. Phone limits are already working in Georgia",
+      "label": "Uncertain (reports, not measured results)",
+      "proposed": "Unsupported so far (assertions only; no measured results)",
+      "why": "This is a factual claim with no outcome data in any source. The page itself says 'None of them cited measured results', and the statewide K-8 rule was not yet required when HB 1009 was signed (P-024, P-006). 'Uncertain' implies evidence on both sides. 'Unsupported so far' is accurate without calling the claim false."
+    },
+    {
+      "argument": "2. Less phone time helps teens' mental health and friendships",
+      "label": "Uncertain (no benefit found in the one study reviewed)",
+      "proposed": "Not supported, with limits (the one study found no well-being benefit; friendships not measured)",
+      "why": "Unlike card 3, this card has measured evidence, and it points against the claim: the well-being score difference was -0.48, 95% CI -2.05 to 1.06, on a scale with SD 9 (P-042). The authors draw the same conclusion (P-043). The study's limits (cross-sectional, ages 12-15, England) justify 'with limits', mirroring how card 1 treats one positive study. They do not justify the same 'Uncertain' grade as a claim with no data."
+    },
+    {
+      "argument": "1. Phone-free school days help students learn",
+      "label": "Supported, with limits (one Florida study)",
+      "proposed": "Supported, with limits (one Florida working paper, read in summary; gains only in year two, possibly via fewer absences)",
+      "why": "The grade is defensible. But critic cards spell out their gaps in the parenthetical ('staff workload not measured'), while card 1's hides its main limits: working-paper status, gains only in year two after a year of more suspensions, and the authors' note that fewer unexcused absences may explain a large share of the gains (P-039, P-040, P-055)."
+    },
+    {
+      "argument": "5. Enforcing the ban will burden school staff and cause conflict",
+      "label": "Supported, with limits (one Florida study; staff workload not measured)",
+      "proposed": "Supported, with limits (the law's text sets the new duties; one Florida study found enforcement led to more suspensions; workload not measured)",
+      "why": "The new duties rest on the statute (P-008, P-014, P-015), not only on one study, and the Florida finding is causal ('led to', P-039). The current parenthetical makes the card look as if it rests on a single study."
+    }
+  ],
+  "verdict_summary": "Mostly fair to critics, with fixable tilts. The three critic cards get the same weight as the three supporter cards. The emergency-contact argument is near full strength: 74.8% of opposing parents, Adams's lockdown story, Gazmararian calling the concern 'valid', and the note that the law requires no rapid notification and sets no time limit. Supporter claims are hedged honestly: cards 2 and 3 are labeled 'Uncertain', the page says 'None of them cited measured results', notes the K-8 timing problem, and says absences may explain Florida's gains. Option B's costs (no money, no fiscal note, more Florida suspensions among Black students) are thorough. If anything, Option B's benefit line slightly favors my side by leaving out the Florida test-score gain. The remaining tilts: (1) the Florida study's causal design is credited only for the pro-side finding, and its suspension finding is softened to 'rose ... after'; (2) card 4's statutory fact gets a hedged label, while card 3's claim with no evidence is not called unsupported; (3) card 2 says no one disputed it despite P-043; (4) the discipline/equity and health-needs concerns sit under other cards, and the law's open-ended consequences, missing student emergency access, and reach to buses and athletics are under-described; (5) the only critic-side legislator is unnamed, while all supporting officials are named. Rating: 4/5."
+}
