@@ -28,7 +28,8 @@ owner reviews it. Reviewed trials become the **gold data** that automation must 
   each time only the editor's issue remained.
 - **Checking the checker works.** The fact-checker caught all 37 planted errors across the three trials.
 - **What the trials changed:** the style guide (v0.5), the runbook (v0.5), the verification protocol's
-  "when a page is done" rule, and six tool fixes, all logged with the trial that taught them.
+  "when a page is done" rule, and about ten fixes to the tools and the prototype, each logged with the trial
+  that taught it.
 
 ## Folder layout
 
