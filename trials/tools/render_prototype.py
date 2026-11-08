@@ -68,6 +68,8 @@ def parse_card_meta(line: str) -> dict:
     parts = [p.strip() for p in line.replace("<!-- nocheck -->", "").split("·")]
     meta = {"kind": "Anticipated" if parts and parts[0].startswith("Anticipated") else "Documented"}
     for p in parts:
+        if p.lower().startswith("side:"):
+            meta["side"] = p.split(":", 1)[1].strip()
         if p.lower().startswith("claim type:"):
             meta["claimType"] = p.split(":", 1)[1].strip()
         if p.lower().startswith("evidence:"):

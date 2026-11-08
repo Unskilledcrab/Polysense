@@ -6,6 +6,7 @@
 
 ## Coming up
 
+- **Dec 31, 2026:** HB 1009 takes effect. [P-019, P-028]
 - **Jan 1, 2027:** First yearly deadline for district device policies covering kindergarten through 12th grade. {analysis: P-008 sets "January 1 each year" and the law takes effect Dec 31, 2026 (P-019), so the first deadline under the new law is Jan 1, 2027}
 - **No later than Jul 1, 2027:** Public high schools must keep students off personal devices during the school day. [P-007]
 

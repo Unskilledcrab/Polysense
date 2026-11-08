@@ -178,5 +178,29 @@ text (struck words removed, underlined words kept), recovered with `trials/tools
 ### P-053 · S16b · article, State School Superintendent testimony
 > State School Superintendent Richard Woods testified Tuesday. He told lawmakers he has heard nothing but support from teachers across Georgia.
 
+### P-056 · S01 · p.1, lines 8-14 (enacting clause, Section 1)
+> BE IT ENACTED BY THE GENERAL ASSEMBLY OF GEORGIA: SECTION 1. Chapter 2 of Title 20 of the Official Code of Georgia Annotated, relating to elementary and secondary education, is amended by revising Code Section 20-2-324.8, relating to use of personal electronic devices during school day by students, as follows: "20-2-324.8. (a) As used in this Code section, the term:
+
+### P-057 · S01 · p.2, lines 22-25, (a)(3)
+> (3) 'Distraction-free education' means a learning environment where student access to personal electronic devices is prohibited to minimize distractions, improve academic outcomes, and increase meaningful interactions and focused learning experiences.
+
+### P-058 · S01 · p.2, lines 34-38, (a)(6)
+> (6) 'School equipment' means any computer or computer networking equipment, technology or technology related device or service, or communication system or service that is operated, owned, leased, and made available to students by a local board of education, local school system, or public school and that is used for transmitting, receiving, or accessing communications, data, or media.
+
+### P-059 · S01 · p.3, lines 62-64, (c)(4)(C)
+> (C) Communicate rules for school personnel and sponsors of all school sponsored events and field trips, daily transportation, athletic and extracurricular events, and other instructional opportunities that do not occur on school grounds; and
+
+### P-060 · S01 · p.4, lines 87-92, (e)(2)
+> (2) Each local school system and public school is encouraged to host student and parent engagement activities designed to promote distraction-free education through personal electronic device-free, independent play and learning, including, but not limited to, family workshops, question and answer sessions, town halls, mindfulness or enrichment sessions, screen-free challenges, and participation in initiatives that encourage students to engage in meaningful, personal electronic device-free play and activities.
+
+### P-061 · S01 · p.5, lines 105-106, Section 3
+> SECTION 3. All laws and parts of laws in conflict with this Act are repealed.
+
+### P-062 · S10c · list section heading for 2026
+> Fiscal Notes 2026 Document Description
+
+### P-064 · S13b · abstract, outcomes
+> The primary outcome was mental wellbeing (assessed using Warwick–Edinburgh Mental Well-Being Scale [WEMWBS]). Secondary outcomes included smartphone and social media time.
+
 ### P-054 · S19 · school news page (browser-rendered)
 > Cairo High School June 1, 2026 Georgia House Bill 1009 is a law signed by Governor Brian Kemp that enacts a "bell-to-bell" ban on personal electronic devices for public high school students. The legislation requires high schools to restrict the use of devices like smartphones, smartwatches, tablets, and headphones during the instructional school day. Cairo High School will begin implementation of this law in the 2026-2027 school year.

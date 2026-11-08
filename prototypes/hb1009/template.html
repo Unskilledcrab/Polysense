@@ -394,6 +394,11 @@ footer { margin-top: 40px; font-size: .82rem; color: var(--muted) }
     var s = sectionById("decision"), L = el("section", { class: "layer" });
     L.appendChild(layerHead(2, "The decision"));
     L.appendChild(renderBlocks(s.blocks));
+    s.subs.forEach(function (sub) {
+      var d = el("details", { class: "more" }, [el("summary", { text: sub.title })]);
+      d.appendChild(renderBlocks(sub.blocks));
+      L.appendChild(d);
+    });
     var more = el("details", { class: "more" }, [el("summary", { text: "See the exact changes in the bill text" })]);
     var mk = el("div", { class: "markup", role: "region", "aria-label": "Bill text with deletions struck through and additions underlined" });
     D.billChanges.forEach(function (line) {
@@ -419,24 +424,31 @@ footer { margin-top: 40px; font-size: .82rem; color: var(--muted) }
     return L;
   }
 
-  function evClass(label) { return /support/i.test(label) ? "supported" : /mixed/i.test(label) ? "mixed" : /uncertain/i.test(label) ? "uncertain" : "values"; }
+  function evClass(label) { return /^support/i.test(label) ? "supported" : /^mixed/i.test(label) ? "mixed" : /^uncertain/i.test(label) ? "uncertain" : "values"; }
 
   function layerArguments() {
     var s = sectionById("arguments"), L = el("section", { class: "layer" });
-    L.appendChild(layerHead(4, "Arguments you'll hear", "Each card shows who makes the argument, what backs it up, and what cuts against it. Tap a card to open it."));
+    L.appendChild(layerHead(4, "Arguments you'll hear", "Each card shows who makes the argument, what backs it up, who disagrees, and what cuts against it. Tap a card to open it."));
+    if (s.blocks.length) L.appendChild(el("div", { class: "card stack" }, [renderBlocks(s.blocks)]));
     s.subs.forEach(function (a, i) {
       var meta = a.cardMeta || {};
       var d = el("details", { class: "arg" });
       if (i === 0) d.setAttribute("open", "");
       var chips = el("div", { class: "chips" }, [
-        el("span", { class: "chip" + (meta.kind === "Anticipated" ? " warn" : ""), text: meta.kind === "Anticipated" ? "Anticipated · not said by a named person" : "Documented · said on the record" }),
+        el("span", { class: "chip", text: meta.side ? (meta.side.charAt(0).toUpperCase() + meta.side.slice(1)) : "" }),
+        el("span", { class: "chip" + (meta.kind === "Anticipated" ? " warn" : ""), text: meta.kind === "Anticipated" ? "Anticipated · not said by a named person" : "Said on the record" }),
         el("span", { class: "chip", text: "Type: " + (meta.claimType || "") })
       ]);
-      d.appendChild(el("summary", null, [el("h3", { text: a.title.replace(/^\d+\.\s*/, "") }), chips, el("div", null, [el("span", { class: "ev " + evClass(meta.evidence || ""), text: "Evidence: " + (meta.evidence || "") })])]));
-      d.appendChild(el("div", { class: "body" }, [renderBlocks(a.blocks)]));
+      var shortB = a.blocks.filter(function (b) { return b.label === "In short"; })[0];
+      var rest = a.blocks.filter(function (b) { return b !== shortB; });
+      var head = [el("h3", { text: a.title.replace(/^\d+\.\s*/, "") }), chips];
+      if (shortB) head.push(el("p", null, [units(shortB.units)]));
+      head.push(el("div", null, [el("span", { class: "ev " + evClass(meta.evidence || ""), text: "Evidence: " + (meta.evidence || "") })]));
+      d.appendChild(el("summary", null, head));
+      d.appendChild(el("div", { class: "body" }, [renderBlocks(rest)]));
       L.appendChild(d);
     });
-    L.appendChild(el("p", { class: "notice", text: "Evidence labels: Supported · Mixed · Uncertain · Not a factual question. Disagreements about values are not treated as misinformation." }));
+    L.appendChild(el("p", { class: "notice", text: "Evidence labels: Supported · Mixed · Uncertain · Not mainly a factual question. Every card uses the same fields, for both sides. Disagreements about values are not treated as misinformation." }));
     return L;
   }
 

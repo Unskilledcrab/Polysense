@@ -105,7 +105,8 @@ def main(workspace: Path, passages_path: Path) -> int:
             if not re.search(r"[A-Za-z]", chunk):
                 errors.append(f"L{no}: marker {m.group(0)} has no sentence before it")
                 continue
-            if len(re.findall(r"[.!?](?:\s|$)", chunk)) > 1:
+            no_abbrev = re.sub(r"\b(?:Sen|Rep|Gov|Dr|Mr|Mrs|Ms|St|No|vs|Jan|Feb|Mar|Apr|Aug|Sept|Oct|Nov|Dec)\.", "", chunk)
+            if len(re.findall(r"[.!?](?:\s|$)", no_abbrev)) > 1:
                 warnings.append(f"L{no}: several sentences share one marker: {chunk[:70]}…")
             if m.group(1):
                 stats["cited"] += 1

@@ -1,0 +1,175 @@
+{
+  "role": "critic-advocate",
+  "rating": 3,
+  "missing_arguments": [
+    {
+      "argument": "Emergency contact, at full strength. The expert the page quotes on this (P-037) opens with 'Parents' concerns about emergency access are valid and understandable.' The two safeguards she names, 'rapid parent notification systems' and 'guaranteed access to phones when needed', do not appear in the law's text in the passages; P-011 instead routes all emergency communication through school systems coordinated by staff. P-011(B) also covers any 'parents or guardians who need to communicate with their student during the school day', not only emergencies. Adams's general point that phones 'can be critical for families seeking information during emergencies' (P-049) is dropped in favor of the anecdote alone.",
+      "passages": ["P-037", "P-011", "P-049", "P-035"]
+    },
+    {
+      "argument": "Health needs versus a narrow exception. 26.6% of opposing parents said phones are needed for health tools or apps (P-035). The law's exception covers only students whose IEP, Section 504 or medical plan 'explicitly mandates' a device, and only 'as necessary to fulfill the requirements' of that plan (P-013). Neither the concern nor the narrowness appears on the page.",
+      "passages": ["P-035", "P-013"]
+    },
+    {
+      "argument": "An official voice for flexibility for older students. Senator Kemp of the 38th (not Gov. Brian Kemp) offered an amendment letting districts allow grades 9-12 phone access during brief transitions, and 13 senators voted for it. It appears in Layers 1 and 3 but is never cited under 'Who says it' in Argument 3 (contact between classes) or Argument 5 (high schoolers are different), so the critic cards carry no official voice.",
+      "passages": ["P-026", "P-027"]
+    },
+    {
+      "argument": "Discipline and equity as a cost in its own right. In Florida, enforcing bans 'led to a significant increase in student suspensions in the short-term, especially among Black students' (P-039). The page mentions this only inside the teacher-enforcement card and as a timing caveat in Argument 1. It is missing from Option B's 'Who pays'. Line 56 also drops 'and other actions as deemed appropriate' from the consequences clause (P-012), which leaves the penalty list open-ended.",
+      "passages": ["P-039", "P-012"]
+    },
+    {
+      "argument": "The Florida gains may come mostly from attendance, not focus. The same abstract says fewer unexcused absences 'may explain a large fraction of the test score gains' (P-040). Argument 1 reports both results but not this link, which matters because the card's claim is about focus.",
+      "passages": ["P-040"]
+    },
+    {
+      "argument": "Recurring duties beyond storage. The law requires annual policy adoption or revision (P-008), monitoring and enforcement mechanisms that may include designated personnel, periodic storage audits and regular review of enforcement (P-014), family notification and regular effectiveness reviews (P-015), and procedures for off-site activities (P-010). These strengthen Arguments 4 and 6. The cost card's only rebuttal (cheaper storage, line 139) does not touch them.",
+      "passages": ["P-008", "P-014", "P-015", "P-010"]
+    },
+    {
+      "argument": "Expanded before Georgia had results. The high school ban was signed May 5, 2026 (P-024), before the K-8 ban's statewide deadline of July 1, 2026 (P-006), and no passage contains Georgia outcome data from the K-8 rule. Supporters pointed to district reports (P-051) and HB 340's 'success' (P-028), so the page should show both.",
+      "passages": ["P-006", "P-024", "P-028", "P-051"]
+    },
+    {
+      "argument": "Reach beyond the classroom (lower priority). Districts must also set device procedures for daily transportation, field trips, athletic and extracurricular events, dual enrollment, work-based learning and apprenticeships (P-010), and the title covers 'school sponsored events' (P-001). These are settings where families coordinate with students and where older students act most independently. Layer 2 omits this. The passages do not say what those procedures must be, so the page should not claim a ban there.",
+      "passages": ["P-010", "P-001"]
+    }
+  ],
+  "unfair_wording": [
+    {
+      "line": 111,
+      "text": "- **What supports it:** This concern is mainly about safety, trust and priorities, so evidence can't fully settle it. {editorial}",
+      "why": "The support slot for the critics' most-cited concern (74.8% of opposing parents) holds an editorial that supports nothing and implies no evidence exists. The passages do support it: the law's text removes direct contact (P-007, P-011), a parent went hours without lockdown updates (P-049), and an expert called the concern 'valid and understandable' (P-037).",
+      "severity": "high"
+    },
+    {
+      "line": 112,
+      "text": "- **What the law says:** Emergency communication must go through school systems run by staff, and parents must call the school to reach their child. [P-011] An Emory epidemiologist said policies can address this with \"rapid parent notification systems and guaranteed access to phones when needed.\" [P-037]",
+      "why": "Selective quotation: it drops her first sentence ('Parents' concerns about emergency access are valid and understandable') and keeps only the rebuttal half. Placing it under 'What the law says' implies the law provides these safeguards, but in the passages it requires neither and routes all emergency communication through the school. Fix: quote both sentences and state that the law's text (as excerpted) does not require either safeguard.",
+      "severity": "high"
+    },
+    {
+      "line": 101,
+      "text": "- **What supports it:** In the English study, students at schools with strict rules used phones about 40 minutes less during school time. {computed: 0.67 hours less phone time (P-042) × 60 minutes ≈ 40 minutes}",
+      "why": "Less in-school phone time is a mechanism, not a mental-health outcome, and the same study found no well-being difference (P-042, P-043). Filing it under 'What supports it' gives the supporters' weakest claim apparent support. It should say plainly that the reduction did not come with better well-being.",
+      "severity": "medium"
+    },
+    {
+      "line": 120,
+      "text": "- **Who says it:** Darryl Adams said, \"We have a lot of older teachers that do not want to have that confrontation.\" [P-047]",
+      "why": "Uses the weakest line in P-047, which reads as some older teachers' reluctance, and drops the structural argument in the same passage: the bill 'would put the burden on teachers and administrators to police phones, a task that can invite conflict.'",
+      "severity": "medium"
+    },
+    {
+      "line": 122,
+      "text": "- **What challenges it:** Sen. Sally Harrell said such rules have \"been done in high schools already\" and were \"very successful.\" [P-046] Districts choose their own storage and enforcement methods. [P-009, P-050]",
+      "why": "An unsourced claim of success, which says nothing about enforcement burden or conflict, sits in an evidence slot opposite causal evidence (P-039) with no caveat. District choice of method does not show less burden; one listed option is 'a designated place in the classroom' (P-009), which teachers would manage. This belongs under 'Who disagrees', not 'What challenges it'.",
+      "severity": "medium"
+    },
+    {
+      "line": 74,
+      "text": "- **What's uncertain:** How much focus, learning and well-being will improve in Georgia high schools (see Layer 4). {editorial}",
+      "why": "Presupposes improvement and leaves only its size uncertain, including well-being, where the page's own Argument 2 finds no evidence of benefit (P-042, P-043). Neutral version: 'Whether, and how much, focus, learning and well-being will change.' (Line 104 already uses 'change'.)",
+      "severity": "medium"
+    },
+    {
+      "line": 48,
+      "text": "4. In an emergency, communication goes through the school's own systems, and parents must contact the school to reach their child. [P-011]",
+      "why": "P-011(B) covers any 'parents or guardians who need to communicate with their student during the school day', not only emergencies. Scoping it to emergencies understates how far the law limits family contact, the critics' central concern.",
+      "severity": "medium"
+    },
+    {
+      "line": 106,
+      "text": "### 3. Parents need to reach their children in an emergency",
+      "why": "Turns the opposing parents' stated reason, 'No way to reach child during emergency' (P-035), a claim about what the law does, into a statement of need, which then supports the 'values / Not mainly a factual question' label. Closer to the source: 'Parents won't be able to reach their children directly in an emergency.'",
+      "severity": "low"
+    },
+    {
+      "line": 82,
+      "text": "- **What's uncertain:** Whether short phone breaks would cancel out the focus benefits. {editorial}",
+      "why": "Assumes the full-day ban produces focus benefits that breaks could only subtract from. No passage measures the effect of phone access during transitions. Neutral version: 'Whether allowing phones between classes would change focus or learning compared with a full-day ban.'",
+      "severity": "low"
+    },
+    {
+      "line": 137,
+      "text": "- **The argument:** Some people may argue that schools must pay for this rule without new state funding. {editorial: anticipated argument, not attributed}",
+      "why": "The attribution hedge is honest, but line 73 states the premise as fact ('The law's text includes no state money for this'). 'May argue' plus an 'Uncertain' label undersells what the page itself establishes.",
+      "severity": "low"
+    },
+    {
+      "line": 139,
+      "text": "- **What's missing:** The law lets schools use lockers or a set place in the classroom, not only locked pouches. [P-009]",
+      "why": "A rebuttal filed under 'What's missing'. It covers storage only, not the duties that apply under any storage method: designated personnel, periodic storage audits and enforcement reviews (P-014), and annual revision (P-008). It should go under 'What challenges it', paired with those duties.",
+      "severity": "low"
+    },
+    {
+      "line": 49,
+      "text": "5. Students whose IEP, Section 504 plan or medical plan requires a device may still use it. [P-013]",
+      "why": "Slightly broader than the text, which covers only plans that 'explicitly mandate' a device and allows access only 'as necessary to fulfill the requirements' of the plan. The narrowness matters to the 26.6% of opposing parents who cited health tools (P-035).",
+      "severity": "low"
+    },
+    {
+      "line": 10,
+      "text": "Each district sets details like phone storage and how parents reach students. [P-008, P-009, P-011] That is where families can still have a say. {analysis: the state decision is final; districts adopt and revise their own policies each year under P-008}",
+      "why": "Overstates local control over parent contact, since P-011 fixes that parents must go through the school. It also calls the state decision 'final', which no passage supports, and steers critics only to districts.",
+      "severity": "low"
+    }
+  ],
+  "imbalance": [
+    {
+      "issue": "Evidence-slot asymmetry: the supporters' weakest claim (Argument 2, mental health) gets a substantive-looking 'What supports it' (line 101, an intermediate result from a study that found no well-being benefit). The critics' most-cited concern (Argument 3) gets an editorial non-answer in the same slot (line 111).",
+      "severity": "high"
+    },
+    {
+      "issue": "Claim-type asymmetry: both supporter cards are graded as empirical claims, while two of four critic cards, including the strongest, carry no evidence grade. Readers may infer that one side has evidence and the other has values. That fits Argument 5, but Argument 3 has a factual core (P-007, P-011), and the page itself lists an empirical uncertainty for it (line 114).",
+      "severity": "medium"
+    },
+    {
+      "issue": "Official voices: Layer 4 cites the Governor, the State School Superintendent, the bill's sponsor and Sen. Harrell. Harrell appears three times, twice as the rebuttal to critic cards (lines 122, 130), and her 'education time' line is used twice (lines 90, 130). Critics get one named teacher-parent, and the one expert on their main concern is cut to her rebuttal half (line 112). Part of this reflects the sources, but the passages do hold an official critic-side voice that Layer 4 never uses: the 38th-district senator's amendment and its 13 votes (P-026, P-027).",
+      "severity": "medium"
+    },
+    {
+      "issue": "Rebuttal quality: every critic card carries a rebuttal from an official, an expert or the author (lines 112, 122, 130, 139), and some of these are not evidence: an unsourced 'very successful' and the bare fact of district flexibility (line 122). They sit uncaveated in evidence slots, while the critic-side evidence in the same card is caveated in-line (line 121, 'then began to fade'). The supporter cards are challenged only by studies, which is fair, but no non-evidence rebuttals are placed against them.",
+      "severity": "medium"
+    },
+    {
+      "issue": "Layer 3 framing: Option B's 'Who benefits' cites the supporters' top survey reason (87.7%), but 'Who pays' omits the two costs critics cite or evidence most: loss of direct parent-student contact all day (P-011; 74.8% of opposing parents, P-035) and the short-term rise in suspensions, especially for Black students (P-039). Lines 74 and 82 also presuppose benefits.",
+      "severity": "medium"
+    },
+    {
+      "issue": "Option A names only districts as beneficiaries and frames 'different rules from one district to the next' as the cost. It omits that high school students and families would keep whatever access their district allowed, including direct contact and phones between classes. That is the same kind of inference from P-006 the page makes on line 65.",
+      "severity": "low"
+    },
+    {
+      "issue": "Honesty note on critic-favorable claims: P-011 ends with 'and', so a (c)(4)(C) communication clause (bill lines 62-64) is not in the passages, and bill lines 87-92 are not excerpted either. The 'no timing standard' (line 113) and 'no funding provision' (lines 73, 138) editorials should be scoped to 'the passages reviewed' or checked against the full text (P-001's title lists no funding purpose, which helps). If the missing clause holds an emergency safeguard, Argument 3 must say so.",
+      "severity": "low"
+    }
+  ],
+  "label_disagreements": [
+    {
+      "argument": "3. Parents need to reach their children in an emergency",
+      "label": "Claim type: values; Evidence: Not mainly a factual question",
+      "proposed": "Claim type: factual and predictive (with a values component); Evidence: Supported, with limits (at minimum Uncertain for the predictive part)",
+      "why": "The core claim, that parents lose direct contact during the school day and must go through the school, is established by the law's text (P-007, P-011). Whether school systems will be fast enough in a crisis is an empirical question the page itself lists (line 114). So far the evidence is one anecdote of hours without updates (P-049) and an expert who calls the concern valid but solvable with safeguards the excerpted text does not require (P-037). Limits: no Georgia data on school notification performance; P-011's clause (C) is not in the passages. Grading both supporter claims while exempting the critics' top concern is asymmetric."
+    },
+    {
+      "argument": "4. Enforcement will fall on teachers and cause conflict",
+      "label": "Mixed",
+      "proposed": "Supported, with limits",
+      "why": "The only outcome evidence is causal and points one way: enforcement 'led to a significant increase in student suspensions in the short-term, especially among Black students' (P-039). That is the same study the page accepts as support for Argument 1. The 'challenges' are an unsourced assertion (P-046) and district flexibility (P-009, P-050), neither of which is contrary evidence. Limits: Florida, not Georgia; suspensions began to fade after the first year; no passage measures teacher workload directly."
+    },
+    {
+      "argument": "2. Less phone time at school improves students' mental health",
+      "label": "Uncertain",
+      "proposed": "Not supported by current evidence (limited)",
+      "why": "No passage shows a mental-health benefit. The only outcome data found no well-being difference (P-042, P-043), with an interval of -2.05 to 1.06 points on a scale with SD 9, which leaves room only for small differences. The 'supports' entry is in-school phone time, not mental health. If one causal study with limits earns 'Supported, with limits' for Argument 1, one study finding no benefit, and none finding one, should not read as an even call. The design (cross-sectional, ages 12-15, England) rules out 'contradicted'. Keeping 'Uncertain' is acceptable only if the card states plainly that the one study found no benefit."
+    },
+    {
+      "argument": "6. The law adds costs without adding money",
+      "label": "Claim type: factual; Evidence: Uncertain",
+      "proposed": "Supported, with limits",
+      "why": "The page treats 'no state money' as fact in Option B (line 73), and P-001's title lists no funding purpose. The law imposes new duties that require some staff time whatever the storage method: annual policy revision (P-008), storage (P-009), designated personnel and periodic storage audits (P-014), family notice and effectiveness reviews (P-015). Only the size of the cost is uncertain: no fiscal note was found and low-cost storage is allowed (P-009)."
+    }
+  ],
+  "verdict_summary": "The page is not stacked against critics, but the strongest critic argument is under-powered. In critics' favor: they get four of six argument cards plus Option C. The page includes an unattributed cost argument nobody in the sources made, reports the English study's negative conclusion and the Florida suspension spike among Black students, keeps verbs neutral on both sides, and leaves out several pro-ban items (71% parent support, the Superintendent's 'nothing but support from teachers', the student testimony, the sponsor's district reports, the Governor's 'proven strategies'). The labels on Argument 1 ('Supported, with limits') and Argument 5 ('Not a factual question') are fair, though Argument 1 should add P-040's attendance mechanism. Against critics: Argument 3 (emergency and daily contact, the top reason for 74.8% of opposing parents) has an editorial non-answer in its support slot, is classed as values though the law's text makes its core factual, and quotes the Emory expert only for her rebuttal after she called the concern 'valid and understandable'. Argument 4 uses Adams's weakest quote, sets an unsourced 'very successful' against causal suspension evidence, and is labeled Mixed. Layer 3 presupposes benefits (lines 74, 82) and leaves the contact and discipline costs out of Option B. Fixing Argument 3's support slot, quote and label, plus Argument 4's label, would move my rating to 4. Adding the health-exception narrowness (P-013, P-035) and the 38th-district senator's amendment as an official critic voice would make it 5."
+}

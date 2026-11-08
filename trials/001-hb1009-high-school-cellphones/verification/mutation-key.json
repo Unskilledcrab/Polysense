@@ -1,0 +1,165 @@
+[
+ {
+  "id": "M01",
+  "type": "number",
+  "line": 19,
+  "original": "The House passed it, 145 to 20.",
+  "mutated": "The House passed it, 145 to 25.",
+  "keywords": [
+   "25",
+   "vote count",
+   "145 to 20"
+  ]
+ },
+ {
+  "id": "M02",
+  "type": "date",
+  "line": 19,
+  "original": "**Feb 24:**",
+  "mutated": "**Feb 26:**",
+  "keywords": [
+   "26",
+   "feb 24",
+   "02/24",
+   "february 24"
+  ]
+ },
+ {
+  "id": "M03",
+  "type": "deadline-certainty",
+  "line": 11,
+  "original": "Schools must start by July 1, 2027, at the latest.",
+  "mutated": "Schools must start on July 1, 2027.",
+  "keywords": [
+   "no later than",
+   "at the latest",
+   "on july 1",
+   "by july 1"
+  ]
+ },
+ {
+  "id": "M04",
+  "type": "scope",
+  "line": 9,
+  "original": "Public high school students can't use, hold or wear",
+  "mutated": "All high school students, public and private, can't use, hold or wear",
+  "keywords": [
+   "private",
+   "public school"
+  ]
+ },
+ {
+  "id": "M05",
+  "type": "misattribution",
+  "line": 91,
+  "original": "Sen. Sally Harrell said \"that education time needs to be protected.\" [P-044] State School",
+  "mutated": "State School Superintendent Richard Woods said \"that education time needs to be protected.\" [P-044] State School",
+  "keywords": [
+   "harrell",
+   "misattribut",
+   "woods"
+  ]
+ },
+ {
+  "id": "M06",
+  "type": "reversed-finding",
+  "line": 92,
+  "original": "In Florida, test scores rose in the second year of school phone bans",
+  "mutated": "In Florida, test scores rose in the first year of school phone bans",
+  "keywords": [
+   "first year",
+   "second year"
+  ]
+ },
+ {
+  "id": "M07",
+  "type": "overclaim",
+  "line": 103,
+  "original": "The same study found no evidence of better mental well-being.",
+  "mutated": "The same study found that mental well-being got worse.",
+  "keywords": [
+   "worse",
+   "no evidence",
+   "overstat"
+  ]
+ },
+ {
+  "id": "M08",
+  "type": "wrong-span",
+  "line": 48,
+  "original": "Each district must choose how to store phones, such as lockers, locked pouches or a set place in the classroom. [P-009]",
+  "mutated": "Each district must choose how to store phones, such as lockers, locked pouches or a set place in the classroom. [P-012]",
+  "keywords": [
+   "p-009",
+   "wrong_span",
+   "wrong span",
+   "storage",
+   "storing"
+  ]
+ },
+ {
+  "id": "M09",
+  "type": "dropped-qualifier",
+  "line": 50,
+  "original": "Students whose IEP, Section 504 plan or medical plan requires a device may still use it.",
+  "mutated": "Students with an IEP or Section 504 plan may still use their phones.",
+  "keywords": [
+   "requires",
+   "mandates",
+   "explicitly",
+   "phones",
+   "qualifier"
+  ]
+ },
+ {
+  "id": "M10",
+  "type": "subgroup-stat",
+  "line": 111,
+  "original": "Among parents who oppose a high school ban, 74.8% said there would be no way to reach their child in an emergency.",
+  "mutated": "Overall, 74.8% of Georgia parents said there would be no way to reach their child in an emergency.",
+  "keywords": [
+   "oppose",
+   "subgroup",
+   "29%",
+   "29.2",
+   "among parents who",
+   "all parents",
+   "overall"
+  ]
+ },
+ {
+  "id": "M11",
+  "type": "arithmetic",
+  "line": 102,
+  "original": "used phones about 40 minutes less during school time",
+  "mutated": "used phones about 60 minutes less during school time",
+  "keywords": [
+   "40",
+   "60",
+   "0.67",
+   "arithmetic"
+  ]
+ },
+ {
+  "id": "M12",
+  "type": "framing-verb",
+  "line": 101,
+  "original": "The bill's sponsor, Rep. Scott Hilton, said",
+  "mutated": "The bill's sponsor, Rep. Scott Hilton, claimed",
+  "keywords": [
+   "claimed",
+   "verb"
+  ]
+ },
+ {
+  "id": "M13",
+  "type": "loaded-word",
+  "line": 57,
+  "original": "Breaking the rules leads to escalating consequences",
+  "mutated": "Breaking the rules leads to harsh, escalating consequences",
+  "keywords": [
+   "harsh",
+   "loaded"
+  ]
+ }
+]

@@ -1,0 +1,123 @@
+{
+  "role": "supporter-advocate",
+  "rating": 3,
+  "missing_arguments": [
+    {
+      "argument": "Phones crowd out face-to-face connection, and bell-to-bell limits reduce isolation. Improved in-person social interaction is the second most cited reason among supporting parents (71.2%, ahead of mental health at 69.1%; physical health and safety is 60.3%). The sponsor cited district reports of 'less isolation among younger students.' The page never mentions social interaction and files Hilton's 'further apart' line under mental health, where it meets the null English well-being result. It deserves its own card, or at least a clear line in Option B 'Who benefits'.",
+      "passages": ["P-034", "P-051"]
+    },
+    {
+      "argument": "Teachers back it because it lets them teach. Sen. Harrell cited teachers saying 'I can just teach again' (P-045), and Superintendent Woods told lawmakers he had 'heard nothing but support from teachers across Georgia' (P-053); Woods also says he hears the concern from 'students, parents, and educators' (P-036). These are secondhand accounts and should be attributed as such (Woods' 'nothing but support' is his claim, and Adams shows not every teacher agrees). Still, they are the documented answer to Argument 4 and belong under its 'What challenges it' and in Option B 'Who benefits'. The page has no supporting teacher at all.",
+      "passages": ["P-045", "P-053", "P-036"]
+    },
+    {
+      "argument": "Extend a rule supporters say is already working. The governor's office says HB 1009 'builds on the success of HB 340' (K-8). The sponsor urged quick action 'after districts reported improved focus and less isolation among younger students under bell-to-bell phone limits'. Harrell said it 'has been done in high schools already' and was 'very successful'. This is reported rather than measured and should carry that caveat, but it is the supporters' Georgia-specific case. Argument 1's line 'There is no Georgia high school data yet' currently appears without it.",
+      "passages": ["P-028", "P-051", "P-046"]
+    },
+    {
+      "argument": "Students themselves testified in support and describe phones as addictive. A 17-year-old Milton High School student told lawmakers phones have become addictive for teens: 'Social media is the cigarette of our generation' (P-052). Woods called for ending 'the harm caused by constant technology access and interruption' (P-036). This belongs in Argument 2 'Who says it' and is the most on-point reply to Argument 5 ('old enough to manage their own phones'). On the page, students appear only as people who 'give up phone access'. Describe the student by role only (a minor).",
+      "passages": ["P-052", "P-036"]
+    },
+    {
+      "argument": "Broad, bipartisan support. 70.8% of Georgia parents (SE 2.1) support a high school ban and 29.2% oppose (P-033; '71%' in P-031). The bill passed 145-20 and 52-0 (P-025), and Harrell said it had bipartisan support (P-044). The page cites this survey four times but never gives its headline result; the votes appear only as timeline entries.",
+      "passages": ["P-031", "P-033", "P-025", "P-044"]
+    },
+    {
+      "argument": "The Florida evidence is built to show cause and effect: the authors estimate 'causal effects' using detailed student-level data and a quasi-experimental strategy (P-038). Argument 1 notes that it is a working paper (P-055) but never mentions this design strength.",
+      "passages": ["P-038", "P-040", "P-055"]
+    },
+    {
+      "argument": "The English null result tested a looser rule than Georgia's. Its 'restrictive' schools only barred recreational phone use (P-041); Georgia bars viewing, holding or wearing a device from first bell to last, including breaks and transitions (P-002, P-003). The study's authors themselves limit their verdict to policies 'in their current form' that 'require further development' (P-043). The page notes the age and country gap but not this one.",
+      "passages": ["P-041", "P-043", "P-002", "P-003"]
+    },
+    {
+      "argument": "The supporters' own answer to the emergency-contact worry. Harrell's full quote names the tradeoff directly: 'We've gotten very dependent on being able to reach our kids whenever we want to, but that education time needs to be protected' (P-044). The page uses only the second half, twice (lines 90, 130), and never in Argument 3. That card has no supporter 'other side'; only the law's text (P-011) and an outside expert (P-037) answer it.",
+      "passages": ["P-044", "P-011", "P-037"]
+    }
+  ],
+  "unfair_wording": [
+    {
+      "line": 72,
+      "text": "- **Who benefits:** Supporters expect better focus; 87.7% of parents who back a ban gave that reason. [P-034]",
+      "why": "Benefits shrink to one subjective expectation, while the very next line states three costs as facts. The passages support a fuller line: Florida found significant test-score gains and fewer unexcused absences, larger in middle and high school (P-040); supporting parents also cite social interaction 71.2%, mental health 69.1% and physical health and safety 60.3% (P-034); teachers say they 'can just teach again' (P-045). Suggest: 'Students, if results resemble Florida's [P-040]; teachers [P-045]; parents who back it cite focus (87.7%), social interaction (71.2%) and mental health (69.1%) [P-034].'",
+      "severity": "medium"
+    },
+    {
+      "line": 66,
+      "text": "- **Who pays:** High school students could face different rules from one district to the next. {analysis: follows from leaving grades 9-12 to each district}",
+      "why": "Option A's only listed cost is inconsistency between districts. It omits what supporters say was actually at stake in keeping the status quo: classroom distraction (P-029, P-044) and 'the harm caused by constant technology access and interruption' (P-036). Add an attributed line, e.g. 'Supporters say students keep facing constant phone distraction during class [P-036].'",
+      "severity": "medium"
+    },
+    {
+      "line": 100,
+      "text": "- **Who says it:** The bill's sponsor, Rep. Scott Hilton, said \"The technology meant to bring people together actually makes us feel further apart.\" [P-051]",
+      "why": "Selective quotation. The same passage says Hilton urged quick action 'after districts reported improved focus and less isolation among younger students under bell-to-bell phone limits.' Keeping the aphorism and dropping his stated basis makes the sponsor look like he is relying on a slogan rather than on reported district results.",
+      "severity": "medium"
+    },
+    {
+      "line": 92,
+      "text": "- **What's missing:** Those gains came in the second year, after a first year with more suspensions. [P-039, P-040] The Florida results come from a 2025 working paper. [P-055]",
+      "why": "The main supporting study gets only its weaknesses. Its key strength, a quasi-experimental design estimating 'causal effects' from student-level data (P-038), appears nowhere on the page. Add one clause, e.g. 'The study used a quasi-experimental design meant to estimate cause and effect [P-038].'",
+      "severity": "medium"
+    },
+    {
+      "line": 130,
+      "text": "- **The other side:** Sen. Sally Harrell said \"that education time needs to be protected.\" [P-044]",
+      "why": "The only rebuttal to Argument 5 is a half-quote copied from Argument 1. It is generic and does not answer 'old enough to manage their own phones.' On-point passages exist: a 17-year-old high schooler testified that phones are addictive for teens (P-052), and Florida's effects were 'more pronounced in middle and high school settings' (P-040).",
+      "severity": "medium"
+    },
+    {
+      "line": 73,
+      "text": "Students give up phone access all day, including between classes. [P-002, P-007]",
+      "why": "'All day' overstates the restriction. It covers the school day, bell to bell (P-002, P-005). Say 'for the whole school day'.",
+      "severity": "low"
+    },
+    {
+      "line": 9,
+      "text": "- **Who it affects:** Students in public high schools, their families, and the school staff who enforce the rules. [P-007, P-014]",
+      "why": "Staff appear only as enforcers, which previews the critics' framing in Argument 4. Supporters describe teachers as beneficiaries (P-045, P-053). Neutral alternative: 'school staff, who must enforce the rules in their classrooms.'",
+      "severity": "low"
+    }
+  ],
+  "imbalance": [
+    {
+      "issue": "Card count: Layer 4 has four critic cards (3-6) and two supporter cards (1-2). One critic card (#6, unfunded costs) is 'Anticipated · not attributed to anyone', and its point is already made in Option B 'Who pays' (line 73). Meanwhile, documented supporter arguments get no card: social connection (P-034, P-051), teacher support (P-045, P-053), the K-8 and early-adopter track record (P-028, P-046, P-051) and student testimony (P-052). The author went beyond the record to add a critic argument but left out supporter arguments that are in it. Fix: add one or two supporter cards, or merge #6 into Option B.",
+      "severity": "high"
+    },
+    {
+      "issue": "Who gets a human face: the only named teacher and parent on the page is a critic, Darryl Adams, who appears in Arguments 3, 4 and 5, including a vivid lockdown story (line 110). Supporters appear only as officials (senator, superintendent, governor, sponsor) plus survey percentages. The passages also have non-official supporters: students who 'testified in support', including a 17-year-old who called social media 'the cigarette of our generation' (P-052), and teachers as reported by Harrell and Woods (P-045, P-053). As written, the page reads as politicians versus teachers and parents, which the passages don't support.",
+      "severity": "high"
+    },
+    {
+      "issue": "Survey presentation: opponents' reasons are shown as shares of opponents (74.8%, 45.5%, 41.9%; lines 110, 129) and supporters' as shares of supporters (87.7%, 69.1%; lines 72, 90, 100). The page never says that 70.8% of parents support a high school ban and 29.2% oppose it (P-033, P-031), so the two groups look equal in size. {computed: about 62% of all parents cite focus (0.708 x 0.877), versus about 22% who cite emergency contact (0.292 x 0.748), 13% parental choice and 12% responsible use}. The Layer 5 table says this source shows 'What parents think... with error margins', yet neither the topline nor any SE appears. Add the topline to the 30-second version or Option B, and give the base next to each subgroup figure.",
+      "severity": "high"
+    },
+    {
+      "issue": "The critics' main study gets lighter caveats where it is used against the learning claim. In Argument 1 (line 93), the English study is the only 'challenge', introduced with the authoritative 'concluded' and its broadest line ('do not provide evidence to support' bans), even though it measured no learning outcomes. Its cross-sectional, observational design (P-041) is flagged only in Argument 2, while the Florida paper's 'working paper' status is flagged in Argument 1. Nowhere does the page note that its 'restrictive' schools only banned recreational use (P-041), a looser rule than Georgia's no-access, bell-to-bell law (P-002, P-003). Better: 'No cited study challenges the test-score finding; an English study of well-being and phone use (not learning)...'",
+      "severity": "medium"
+    },
+    {
+      "issue": "Critic-favoring statements about the law's text that the passages can't verify. Line 113 says 'The law does not set a standard for how fast schools must notify parents.' But P-011 (lines 57-61) ends '(B) ...; and', so a subparagraph (c)(4)(C) on lines 62-64 follows, and it is not in the passages. The page can't confirm this gap in the critics' strongest card (#3). Likewise, 'The law's text includes no state money' (lines 73, 138) rests on P-001 to P-019, which skip bill lines 8-14, 22-25, 34-38, 62-64 and 87-92 and everything after line 104. And a policy bill's text alone can't show that no money comes from other sources, which card #6's title ('without adding money') implies. Either cite the full text or narrow these to 'the cited sections include no...'.",
+      "severity": "medium"
+    },
+    {
+      "issue": "Argument 4 (line 121) cites P-014 as support for 'Enforcement will fall on teachers'. But P-014 puts the duty on each school system and school and lets them assign 'designated school personnel', not classroom teachers specifically. It supports the 'enforcement is required' part of the claim, not the 'on teachers' part.",
+      "severity": "low"
+    }
+  ],
+  "label_disagreements": [
+    {
+      "argument": "5. High school students are old enough to manage their own phones",
+      "label": "Not a factual question",
+      "proposed": "Not mainly a factual question (the label Argument 3 already uses)",
+      "why": "The argument rests on a factual premise: that older students can manage phone use on their own. The passages speak to that premise. Florida's effects were 'more pronounced in middle and high school settings' (P-040). A 17-year-old testified that phones are addictive for teens (P-052). Restrictive policies cut in-school phone time by about 40 minutes (P-042, ages 12-15). Line 131's 'not about facts' takes that evidence off the table, so the critics' premise can't be checked. Keep the values framing, but show this evidence under 'The other side'."
+    },
+    {
+      "argument": "3. Parents need to reach their children in an emergency",
+      "label": "Not mainly a factual question",
+      "proposed": "Not mainly a factual question; factual part: 'no way to reach a child' is not supported as stated (the law requires a school channel), and how well that channel works in a crisis is Uncertain",
+      "why": "The 74.8% figure is for the survey reason 'No way to reach child during emergency' (P-035), which is a factual claim. In its absolute form, it conflicts with the law's text: parents must be able to contact the school directly, and emergency messages go through school systems (P-011). The values label means that sub-claim is never graded. The 'What supports it' slot (line 111) also holds a meta-comment instead of the evidence that actually exists: one parent's anecdote (P-049) and survey opinion (P-035). Grading the factual part would be fair to both sides; the label on the values core can stay."
+    }
+  ],
+  "verdict_summary": "Fair in tone, incomplete in substance. The strongest supporter case (Argument 1: focus and learning) is close to full strength: four named supporters, Florida's gains with the middle/high-school detail, honest limits, and a fair 'Supported, with limits' label. I agree with 'Uncertain' on mental health, given the null English study, which the page fairly caveats (cross-sectional, ages 12-15, England). I agree with 'Mixed' on enforcement (Florida's first-year suspension rise is real). Verbs are neutral, and a few lines even lean my way: lines 74 and 82 presume focus benefits; line 112 puts the Emory 'guaranteed access to phones' suggestion under 'What the law says', though the cited sections don't provide it; and opponents' health-app (26.6%) and schoolwork (19.8%) reasons are not shown. But my side is not fully represented. The page never gives the 70.8% parent-support topline, yet shows opponents' reasons without base rates. Every teacher and student supporter voice is missing (P-045, P-052, P-053), while the one critic teacher-parent appears three times. Social connection (71.2%) and the K-8 track record have no place on the page. Critics get four cards to supporters' two, including an anticipated card no one in the record made. Hilton's quote is cut to drop his evidence. Two critic-favoring claims about the law's text can't be verified from the passages. Relabel #5 and grade #3's factual part. All of this can be fixed by adding material, not rewriting; with those additions I would rate it 4-5."
+}
