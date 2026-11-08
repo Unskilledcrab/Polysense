@@ -1,0 +1,1 @@
+L6	**Input · Dec 14, 2026, 9:30 a.m.:** Send any public comment to the PSC by this time, 24 hours before the Dec 15 session where it is scheduled to vote. {computed: comments are due 24 hours before a vote (P-030); the Dec 15 session starts at 9:30 a.m. (P-024), so a comment sent by 9:30 a.m. on Dec 14 is on time even if the vote comes first}

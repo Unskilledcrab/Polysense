@@ -1,0 +1,4 @@
+L46	**Not posted yet:** On Nov 8, the county's budget page didn't show the 2027 proposal, and the newest notice on its Public Notices page was for the commission's October hearings. {analysis: P-045 and P-042, captured Nov 8, 2026}
+L84	In the 2026 budget, the county's "Base Budget" meant the current funding needed for past spending patterns, including staff. [P-086]
+L136	In the 2026 cycle, the budget book lists net General Fund spending changes to the county manager's proposal dated Jan 7, adding $20,597,446, and Jan 21, taking out $16,648,868. [P-054, P-047]
+L136	That means the proposal's General Fund spending total largely held, though some of its lines and its draw on savings changed by millions of dollars. {analysis: what the figures above show (P-054)}

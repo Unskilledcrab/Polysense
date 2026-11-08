@@ -1,0 +1,72 @@
+{
+  "checker": "independent-source-verifier (targeted 3)",
+  "document": "/home/user/Polysense/trials/003-fulton-2027-budget/workspace.md",
+  "units": [
+    {
+      "line": 46,
+      "sentence": "**Not posted yet:** On Nov 8, the county's budget page didn't show the 2027 proposal, and the newest notice on its Public Notices page was for the commission's October hearings.",
+      "marker": "{analysis: P-045 and P-042, captured Nov 8, 2026}",
+      "verdict": "valid",
+      "evidence_span": "",
+      "correct_passage": "",
+      "problem": "",
+      "suggested_fix": "",
+      "reason": "P-045 (budget page, captured 2026-11-08) shows only FY2026 documents among its newest documents, so saying no 2027 proposal was shown is a sound inference from absence. P-042 (Public Notices page, captured 2026-11-08) shows the newest entry is the 'October 2026' notice for the Fulton County Budget Commission's special called meetings (Oct 12-22) 'for the purpose of holding budget hearings', followed by the 'September 2026' section. Correctly tagged as analysis; consistent with the Nov 15 due date (P-005)."
+    },
+    {
+      "line": 84,
+      "sentence": "In the 2026 budget, the county's \"Base Budget\" meant the current funding needed for past spending patterns, including staff.",
+      "marker": "[P-086]",
+      "verdict": "supports",
+      "evidence_span": "This represents the current funding needed to address historical spending patterns including personnel expenditures (filled and vacant) and other operational spending.",
+      "correct_passage": "",
+      "problem": "",
+      "suggested_fix": "",
+      "reason": "P-086 is from the FY2026 budget message ('As part of our FY2026 budget development process, we identified the County's \"Base Budget\"'), so 'In the 2026 budget' and 'the county's' are right. The quoted term matches the passage's capitalization. 'Past' = 'historical'; 'including staff' is a fair plain reading of 'including personnel expenditures (filled and vacant)', and 'including' leaves room for the omitted 'other operational spending'. Scoped to 2026, so it does not claim the 2027 cap's 'base budget' (P-029) uses this definition. Optional precision only: 'staff costs, including vacant positions'."
+    },
+    {
+      "line": 136,
+      "sentence": "In the 2026 cycle, the budget book lists net General Fund spending changes to the county manager's proposal dated Jan 7, adding $20,597,446, and Jan 21, taking out $16,648,868.",
+      "marker": "[P-054, P-047]",
+      "verdict": "supports",
+      "evidence_span": "Total of Expenditures $ 836,101,686 $ 866,772,399 $ 920,297,281 $ 1,053,152,000 $ 20,597,446 $ ( 16,648,868) $ 1,057,100,578",
+      "correct_passage": "",
+      "problem": "",
+      "suggested_fix": "",
+      "reason": "P-054 (2026 adopted budget book, General Fund schedule) has the columns 2026 Proposed, 'Changes to Proposed Budget' 1-7-26 and 1-21-26, and 2026 Adopted. Its Total of Expenditures row gives +$20,597,446 and ($16,648,868), each the net of several line changes (e.g. Non Agency +18,481,499 then (17,760,623)). These are spending figures, not revenue (revenue changes were +$4,055,960 and -$16,642,000). Check: $1,053,152,000 + $20,597,446 - $16,648,868 = $1,057,100,578, the adopted total. P-047: the County Manager submitted the proposed budget on Nov 15, 2025, which supports 'the county manager's proposal'. The sentence rightly does not say who made the changes."
+    },
+    {
+      "line": 136,
+      "sentence": "That means the proposal's General Fund spending total largely held, though some of its lines and its draw on savings changed by millions of dollars.",
+      "marker": "{analysis: what the figures above show (P-054)}",
+      "verdict": "valid",
+      "evidence_span": "",
+      "correct_passage": "",
+      "problem": "",
+      "suggested_fix": "",
+      "reason": "Recomputed from P-054: spending $1,053,152,000 proposed vs $1,057,100,578 adopted, +$3,948,578 (0.37%), so 'largely held' is fair. Lines that moved by millions: Consent Decree +$18,157,000, Other -$5,523,450, Leases/Debt -$5,500,000, Pension -$4,712,674, Inmate Services -$1,700,000, Solicitor General +$1,543,705, Grady transfer +$1,002,369; revenue lines Additional Property Taxes (Consent) -$32,170,000 and Property Taxes +$18,535,960. Draw on savings (Revenues > Expenditures) went from $57,102,996 to $73,637,614, +$16,534,618 (about 29%), matching the drop in ending fund balance ($195,535,519 to $179,000,901). 'Changed by millions of dollars' is accurate, and the sentence before it gives the exact draw figures, so the size is not hidden."
+    }
+  ],
+  "framing_issues": [
+    {
+      "line": 46,
+      "text": "the newest notice on its Public Notices page was for the commission's October hearings",
+      "issue": "In Layer 2 this is the first mention of a commission. It comes right after 'The full Board of Commissioners decides' (line 44) and before the Budget Commission is named (line 50), so a reader who jumps to Layer 2 could take 'the commission' to mean the Board of Commissioners. The notice is for the Budget Commission's special called meetings (P-042). Fix: 'the Budget Commission's October hearings'.",
+      "severity": "low"
+    },
+    {
+      "line": 136,
+      "text": "changes to the county manager's proposal dated Jan 7, adding $20,597,446, and Jan 21, taking out $16,648,868",
+      "issue": "'dated Jan 7' sits next to 'proposal' and can be read as the proposal's date. The proposal was submitted Nov 15, 2025 (P-047), and the dates belong to the change columns ('Changes to Proposed Budget 1-7-26 / 1-21-26', P-054). Fix: 'lists two sets of net General Fund spending changes to the county manager's proposal: one dated Jan 7, 2026, adding $20,597,446, and one dated Jan 21, 2026, taking out $16,648,868.'",
+      "severity": "low"
+    }
+  ],
+  "summary": {
+    "units_checked": 4,
+    "supports": 2,
+    "partial": 0,
+    "does_not_support": 0,
+    "wrong_span": 0,
+    "questionable_or_invalid_tags": 0
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "checker": "independent-source-verifier (targeted 3)",
+  "document": "/home/user/Polysense/trials/002-psc-57171-fuel-credit/home.md",
+  "units": [
+    {
+      "line": 6,
+      "sentence": "**Input · Dec 14, 2026, 9:30 a.m.:** Send any public comment to the PSC by this time, 24 hours before the Dec 15 session where it is scheduled to vote.",
+      "marker": "{computed: comments are due 24 hours before a vote (P-030); the Dec 15 session starts at 9:30 a.m. (P-024), so a comment sent by 9:30 a.m. on Dec 14 is on time even if the vote comes first}",
+      "verdict": "valid",
+      "evidence_span": "",
+      "correct_passage": "",
+      "problem": "The tag does not source its premise that the PSC votes on this case at the Dec 15 session. P-024 only lists 'Dec 15 9:30 am Administrative Session'. The link to Docket 57171 comes from P-013 (a Final Decision on Dec 15 at the regularly scheduled Administrative Session). This is a citation gap only; the premise is true.",
+      "suggested_fix": "Add P-013 to the tag, e.g. {computed: comments are due 24 hours before a Commission vote (P-030); the PSC decides this case at the Dec 15 Administrative Session (P-013), which starts at 9:30 a.m. (P-024), so a comment submitted by 9:30 a.m. on Dec 14 is on time even if the vote comes first}",
+      "reason": "Recomputed: Tue 2026-12-15 09:30 minus 24 hours = Mon 2026-12-14 09:30 (same time zone, no clock change). The vote cannot come before the session opens, so 9:30 a.m. Dec 14 is at least 24 hours before any vote in that session, and the 'even if the vote comes first' logic holds. P-030: 'Comments must be submitted 24 hours before a Commission vote.' P-024: 'Dec 15 9:30 am Administrative Session'. P-013 and P-029 confirm the decision is made at that session."
+    }
+  ],
+  "framing_issues": [
+    {
+      "line": 6,
+      "text": "Send any public comment to the PSC by this time",
+      "issue": "P-030 says comments must be 'submitted' 24 hours before a vote. 'Send ... by this time' (and 'sent' in the tag) could lead a reader to mail a comment on Dec 14 that arrives too late. Use 'Submit' / 'submitted'.",
+      "severity": "low"
+    },
+    {
+      "line": 6,
+      "text": "24 hours before the Dec 15 session where it is scheduled to vote",
+      "issue": "The home page does not mention that the PSC takes up this case earlier, at the Dec 10 Energy Committee meeting starting 9:30 a.m. (P-012: 'This matter shall be considered'; P-024). The passages call Dec 15 the 'Final Decision' (P-013) and do not say any vote happens Dec 10, so the Dec 14 time is correct under P-030. But a comment submitted after the Dec 10 meeting reaches the PSC after the committee has taken up the case, and if any Commission vote were taken Dec 10, P-030's rule would point to Dec 9, 9:30 a.m. Consider adding the Dec 10 committee meeting, with an {editorial} suggestion to comment by Dec 9, 9:30 a.m. to be safe.",
+      "severity": "low"
+    }
+  ],
+  "summary": {
+    "units_checked": 1,
+    "supports": 0,
+    "partial": 0,
+    "does_not_support": 0,
+    "wrong_span": 0,
+    "questionable_or_invalid_tags": 0
+  }
+}

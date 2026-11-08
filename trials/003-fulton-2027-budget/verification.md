@@ -451,3 +451,20 @@ SUP U169); a line named in the text is revision 3.1's.
    "solely responsible for drafting recommendations", stays on card 2, because its wording is contested (C1).
 3. **home.md line 5** now says "the county budget", not "the 2027 budget", because no public comment passage names
    the 2027 budget.
+
+## Targeted re-checks (revisions 3.1 to 3.3, run by the coordinating session)
+
+Each re-check was a fresh blind agent that read only the page (or home items), the passages and a list of changed
+units, and checked only those units. Spans were machine-checked with `trials/tools/check_verifier.py`. Reports are
+copied unchanged into `verification/round3-targeted/`, `round3-targeted-2/` and `round3-targeted-3/`, each with
+its list of changed units.
+
+| Re-check | Units | Result | What it raised, and what we did |
+|---|---|---|---|
+| 1, on revision 3.1 | 25 page + 2 home | 15 of 15 cited units supported, 10 of 11 tags valid, 1 questionable; 27/27 spans grounded (8323d8852d8b6354…, 752205ee52302fb7…) | **Line 46 (questionable):** "neither page showed … a hearing date" was contradicted by P-042, which lists the commission's October hearings. Fixed in 3.2: "the newest notice … was for the commission's October hearings". Also fixed in 3.2: "net spending changes" (line 136); the planned draw on savings, $57,102,996 to $73,637,614, beside the 0.4% figure, with the analysis narrowed to the spending total; "the limit's exact terms" added to card 3's analysis (line 156); P-080 added for the FOX 5 attribution (line 160); "Base Budget" capitalized as in P-086 (line 160). Logged as open: the one-word quotes "clarify" (line 83) and "effectively" (line 156) |
+| 2, on revision 3.2 | 7 | 3 supports, 1 partial, 3 tags valid; 0 unsupported; 7/7 grounded (2607f563fb86bb72…) | **Line 136 (partial):** P-054 is the General Fund schedule, so the changes are General Fund changes. Fixed in 3.3 ("net General Fund spending changes", "General Fund spending total"). Also fixed in 3.3: line 84 quoted "base budget" in lower case against P-086 and used the 2026 definition in the present tense (now dated to 2026, as line 160 is); "Not published yet" became "Not posted yet" (line 46). Logged as open: line 160 sits the 2026 definition next to the 2027 limit (it is dated) |
+| 3, on revision 3.3 | 4 (+ Trial 002's home deadline) | 2 supports, 2 tags valid; 0 partial, 0 questionable; 4/4 grounded (08e7af968d66611d…) | **Passed.** Low notes, logged as open: line 46 could say "Budget Commission" at first mention in Layer 2; line 136's "proposal dated Jan 7" reads as the proposal's date |
+
+The protocol's targeted re-check is done: no re-check found an unsupported claim, and the last one found nothing
+to fix. **Status: Passed checks (round 3), revision 3.3.**
+

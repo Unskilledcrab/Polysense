@@ -1,0 +1,133 @@
+{
+ "verified": true,
+ "statusText": "Passed checks (round 3)",
+ "intro": "An AI agent wrote this page from saved copies of its sources. Separate AI checkers, which never saw the drafting, then checked it in rounds. In this trial, no person checked the facts. Here is what the checkers did, what they found, and what is still open.",
+ "stats": [
+  {
+   "value": "333",
+   "label": "sentences, each tied to a source or labeled as our own analysis"
+  },
+  {
+   "value": "0",
+   "label": "claims found unsupported by their sources, in 3 rounds and 3 follow-up checks"
+  },
+  {
+   "value": "12 of 12",
+   "label": "hidden test errors the fact-checker caught"
+  },
+  {
+   "value": "4 of 5",
+   "label": "fairness rating from both the supporters' and the critics' reviewer, round 3"
+  }
+ ],
+ "sections": [
+  {
+   "title": "What we checked",
+   "paras": [
+    "Each round runs the same checks. A page passes a round only when every check passes. After that, we fix only sentences that misstate a source or break our writing rules, and a fresh checker looks again at just those sentences. Other suggestions wait for the next full round."
+   ],
+   "head": [
+    "Check",
+    "What it does",
+    "Pass mark"
+   ],
+   "rows": [
+    [
+     "Automatic checks",
+     "Code confirms that every sentence cites a source passage or is labeled as our analysis, that quotes match word for word, that numbers appear in the cited passage, that saved files match their fingerprints, and that the reading level is about grade 8 or lower.",
+     "No errors"
+    ],
+    [
+     "Blind fact-check",
+     "A separate AI checker sees only this page and the source passages. For each sentence it must copy the exact words that support it, and code confirms those words are really there.",
+     "No unsupported claims"
+    ],
+    [
+     "Fairness panel",
+     "Three more AI checkers. One speaks up for supporters of the current budget process, one for its critics, and a neutral editor checks the rules. The editor also asks of each sentence: would we write it the same way about the other side?",
+     "Both side reviewers give at least 4 of 5, and no serious problem"
+    ],
+    [
+     "Testing the fact-checker",
+     "We hid 12 errors in a copy of the page, such as a wrong vote count, a quote credited to the wrong person and a change shown going the wrong way. The fact-checker had to find them without knowing they were there.",
+     "At least 9 of every 10 caught"
+    ]
+   ]
+  },
+  {
+   "title": "What each round found",
+   "paras": [
+    "No fact-check found a claim that its sources didn't support, only sentences that said more than the sources did. The fairness panel failed twice before both side reviewers gave the page 4 of 5."
+   ],
+   "head": [
+    "Round",
+    "Fact-check",
+    "Supporters' reviewer",
+    "Critics' reviewer",
+    "Editor (neutral, clear)",
+    "Result"
+   ],
+   "rows": [
+    [
+     "1",
+     "128 supported, 23 partly, 0 unsupported",
+     "3 of 5",
+     "3 of 5",
+     "3, 3",
+     "Failed. The evidence labels followed no single rule, and the page said no reasons were on record without saying we hadn't watched the meeting videos"
+    ],
+    [
+     "2",
+     "189 supported, 13 partly, 0 unsupported",
+     "3 of 5",
+     "3 of 5",
+     "3, 3",
+     "Failed. Our fixes leaned toward the current process, and one card left out a key figure"
+    ],
+    [
+     "3",
+     "205 supported, 6 partly, 0 unsupported",
+     "4 of 5",
+     "4 of 5",
+     "4, 4",
+     "Passed. We then fixed every sentence that said more than its source"
+    ],
+    [
+     "Follow-up",
+     "27 changed sentences, then 7, then 4: none unsupported",
+     "",
+     "",
+     "",
+     "Passed. The page you see is this version"
+    ]
+   ]
+  },
+  {
+   "title": "What's still open",
+   "paras": [
+    "These suggestions would change a card, a label or the balance between sides, so they wait for the next full round. Some contradict each other; we list both views rather than pick one quietly."
+   ],
+   "items": [
+    "Reviewers disagree on how to describe the Budget Commission's role. One says \"helps draft\" understates it; the other says \"the commission alone drafts\" overstates it.",
+    "Card 3's evidence label: one reviewer wants it to use the county code's exact words, and the other wants it to stress that the code says the draft \"shall include\" every department's requests.",
+    "County records could add to both sides: the duties the code gives the two commissioners, and the 2026 budget's unmet requests and thin savings.",
+    "The cards should use one rule for where a side's own figures go.",
+    "Several lines can be plainer, and some evidence labels are long.",
+    "Nobody has transcribed the Board's meeting videos, where commissioners may have explained their votes. The proposal due Nov 15 isn't public yet; when it is, several \"Uncertain\" labels can be settled."
+   ]
+  },
+  {
+   "title": "What this can't do",
+   "paras": [
+    "All the checkers are AI, like the writer, so they may share blind spots. Hiding test errors measures only the kinds of errors we thought to hide.",
+    "The checkers compare this page with the sources we saved. They can't tell what is missing from those sources."
+   ]
+  },
+  {
+   "title": "See every report",
+   "paras": [
+    "Every check, report and fix is public in the project's repository, in trials/003-fulton-2027-budget/verification.md."
+   ]
+  }
+ ]
+}
