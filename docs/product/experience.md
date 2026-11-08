@@ -93,6 +93,24 @@ the linked sources; every sentence checked against its source by [reviewer] on [
 - Breadcrumbs and layer tabs. The back button always works, because these are real URLs.
 - Personal pages use district-keyed URLs (`/my/h054-s039/`) that can be shared and bookmarked. No login.
 
+## Phone first
+
+Design for a phone first, then widen. The owner reviewed the first prototype on a phone and found it
+informative but harder to read and navigate than it should be. The second version of the prototype tries
+these patterns. They are experiments: keep the ones readers find easier, and change the rest.
+
+- The site menu sits in a bottom bar on phones, within thumb reach. Wide screens keep it at the top.
+- A bill page has one row of plainly named tabs (Summary, What it does, Options, Arguments, Sources),
+  pinned at the top while you scroll. Tab content starts near the top of the screen; the 30-second
+  version appears only on Summary.
+- Summary leads with the 30-second version, then "What you can do".
+- Labeled fields show the label on its own line and one sentence per line, with a short source chip at
+  the end of each line.
+- Options and argument cards start folded, so readers see every option and both sides' claims before
+  opening any of them.
+- Each tab ends with links to the next and previous tabs.
+- Tables become stacked cards on narrow screens.
+
 ## Accessibility and performance
 
 - Meet **WCAG 2.2 AA**.

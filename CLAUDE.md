@@ -3,6 +3,15 @@
 This project is built by one developer with AI assistance, so the rules below matter more than usual.
 Read [docs/README.md](docs/README.md) for the doc map before starting non-trivial work.
 
+## Tenets (from the owner; these don't change)
+
+1. **Correct and nonbiased.**
+2. **Concise and digestible**, designed for a phone first.
+3. **Informative and actionable.**
+
+The methods and rules below are working practice from the trials. Change them when a trial shows a better
+way, and prefer fixing or retiring a rule to adding a new one.
+
 ## Current status
 
 Planning plus manual trials. **There is no application code yet.** Do not scaffold the application, or

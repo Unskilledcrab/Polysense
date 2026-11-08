@@ -26,9 +26,10 @@ except ImportError:  # pragma: no cover
 MARKER = re.compile(r"\[(P-\d{3}(?:\s*,\s*P-\d{3})*)\]|\{(analysis|editorial)(?::\s*([^}]*))?\}|\{computed:\s*([^}]*)\}")
 SECTION_IDS = {"30-second": "summary", "layer 1": "overview", "layer 2": "decision", "layer 3": "options",
                "layer 4": "arguments", "layer 5": "evidence"}
-SHORT = {"S01": "Bill text", "S02": "Bill record", "S03": "Senate amendment", "S09": "Governor's release",
-         "S10c": "Fiscal-note list", "S12": "Emory parent survey", "S13a": "Florida study", "S13b": "England study",
-         "S16": "Atlanta News First, Mar 12", "S16b": "Atlanta News First, Mar 17", "S19": "Cairo High School"}
+# Chip labels: one or two words, so a chip fits at the end of a line on a phone. The drawer shows full details.
+SHORT = {"S01": "Law", "S02": "Bill record", "S03": "Amendment", "S09": "Governor",
+         "S10c": "Fiscal notes", "S12": "Survey", "S13a": "Florida study", "S13b": "England study",
+         "S16": "News, Mar 12", "S16b": "News, Mar 17", "S19": "Cairo High"}
 TYPE_LABEL = {"primary-government": "Primary · government", "secondary-research": "Research", "news": "News",
               "local-government": "Local government", "advocacy": "Advocacy"}
 BILL_LINES = [("p2", 22), ("p2", 23), ("p2", 28), ("p3", 42), ("p3", 43), ("p3", 44), ("p3", 45), ("p3", 46), ("p3", 47), ("p3", 48)]

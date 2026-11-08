@@ -21,6 +21,19 @@ framed to persuade. That makes it hard for an ordinary person to know:
 We don't ask people to trust us, a politician, a newsroom or a fact-checker. We give them what they need
 to check things for themselves: the original evidence, how we reasoned, and every change we have made.
 
+### Tenets
+
+Set by the project owner on 2026-11-08, after reviewing the first prototype. Every feature, layer and
+process change should hold to all three:
+
+1. **Correct and nonbiased.** Every claim matches its source. Each side gets its strongest case, under
+   the same rules.
+2. **Concise and digestible.** Answer first, plain words, no more than a reader needs. Designed for a phone
+   first.
+3. **Informative and actionable.** Readers learn what matters and what they can do about it.
+
+We are still experimenting. Methods and rules can change as we learn; these tenets don't.
+
 ### Three commitments
 
 1. **Make participation accessible.** People should know what they can influence and when.

@@ -34,3 +34,18 @@ https://claude.ai/artifact/EsSncywuhPXB2XKCAHE1p9 (private to you until you shar
 ## Anything else
 
 -
+
+## Owner feedback, 2026-11-08 (revision 4, reviewed on a phone)
+
+- **Bias:** "it seemed like I wasn't reading anything with bias."
+- **Content:** very informative; it hit the main points.
+- **Presentation and navigation:** could be easier to understand and to move around in.
+- **Mobile first** should be the default. The owner reviewed on a phone.
+- **Next direction:** think about how this ties into politics and helps people make informed decisions
+  when voting.
+- **Tenets to keep:** correct and nonbiased; concise and digestible; informative and actionable.
+- **Process:** keep improving it in ways that apply to every trial, but don't be overly prescriptive. We
+  are still trying things out and will add features and layers over time.
+
+What changed in response: see the trial [log](log.md) (entries after 06:15).
+

@@ -4,7 +4,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap">
 <style>
-/* Layout: one calm reading column (~46rem) under a sticky bar; the bill page adds layer tabs and an evidence drawer. */
+/* Layout, phone first: one reading column; the site menu sits in a bottom bar on phones and in the top bar on
+   wide screens; the bill page pins one scrollable row of tabs at the top. */
 :root {
   --bg: #f5f7f4; --surface: #ffffff; --sunk: #eef2ee; --ink: #16201c; --muted: #56625c; --line: #d6ddd7;
   --accent: #1d5a45; --accent-ink: #ffffff; --accent-soft: #e2efe8; --gold: #8a5a00; --gold-soft: #f6ead2;
@@ -14,6 +15,7 @@
   --font-body: "Atkinson Hyperlegible", "Segoe UI", system-ui, -apple-system, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
   --radius: 10px; --shadow: 0 1px 2px rgba(22, 32, 28, .06), 0 6px 18px rgba(22, 32, 28, .06);
+  --bottom-nav: 60px;
 }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
   --bg: #0e1412; --surface: #151d1a; --sunk: #111816; --ink: #e5ece8; --muted: #9eaba5; --line: #2a3531;
@@ -34,29 +36,46 @@ a { color: var(--accent) }
 :focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 4px }
 .wrap { max-width: 46rem; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)) }
 
-/* Top bar */
-.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--surface); border-bottom: 1px solid var(--line) }
-.bar .wrap { display: flex; align-items: center; gap: 12px; padding-block: 10px; flex-wrap: wrap }
+/* Top bar: brand only on phones (it scrolls away); brand + menu, pinned, on wide screens */
+.bar { background: var(--surface); border-bottom: 1px solid var(--line) }
+.bar .wrap { display: flex; align-items: center; gap: 12px; padding-block: 10px; min-height: 52px }
 .brand { font: 600 1.15rem/1 var(--font-display); letter-spacing: .01em; color: var(--ink); text-decoration: none; display: flex; align-items: baseline; gap: 8px }
 .brand small { font: 500 .7rem/1 var(--font-mono); color: var(--muted); letter-spacing: .06em; text-transform: uppercase }
-.nav { display: flex; gap: 4px; margin-left: auto; flex-wrap: wrap }
-.nav a { font-size: .9rem; text-decoration: none; color: var(--muted); padding: 8px 10px; border-radius: 8px; min-height: 40px; display: inline-flex; align-items: center }
+.nav { display: none; gap: 4px; margin-left: auto }
+.nav a { font-size: .95rem; text-decoration: none; color: var(--muted); padding: 8px 10px; border-radius: 8px; min-height: 40px; display: inline-flex; align-items: center }
 .nav a[aria-current="page"] { color: var(--ink); background: var(--sunk); font-weight: 700 }
 
-main { padding-block: 22px 72px }
+/* Bottom menu on phones, within thumb reach */
+.bottom { position: fixed; left: 0; right: 0; bottom: 0; z-index: 6; background: var(--surface); border-top: 1px solid var(--line);
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  padding: 0 max(8px, env(safe-area-inset-right, 0px)) env(safe-area-inset-bottom, 0px) max(8px, env(safe-area-inset-left, 0px)) }
+.bottom a { min-height: var(--bottom-nav); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px;
+  text-decoration: none; color: var(--muted); font-size: .82rem; line-height: 1.15; text-align: center; padding: 6px 4px }
+.bottom a::before { content: ""; width: 22px; height: 3px; border-radius: 3px; background: transparent }
+.bottom a[aria-current="page"] { color: var(--ink); font-weight: 700 }
+.bottom a[aria-current="page"]::before { background: var(--accent) }
+main { padding-block: 18px calc(var(--bottom-nav) + 48px + env(safe-area-inset-bottom, 0px)) }
+
+@media (min-width: 720px) {
+  .bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5 }
+  .nav { display: flex }
+  .bottom { display: none }
+  main { padding-block: 24px 72px }
+}
+
 h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.2; text-wrap: balance; margin: 0 }
-h1 { font-size: clamp(1.7rem, 4.6vw, 2.3rem) }
+h1 { font-size: clamp(1.65rem, 4.6vw, 2.3rem) }
 h2 { font-size: 1.35rem }
 h3 { font-size: 1.12rem }
 p { margin: 0 }
 .eyebrow { font: 500 .75rem/1.2 var(--font-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted) }
 .lede { color: var(--muted); max-width: 40rem }
 .stack { display: flex; flex-direction: column; gap: 14px }
-.stack-lg { display: flex; flex-direction: column; gap: 28px }
+.stack-lg { display: flex; flex-direction: column; gap: 26px }
 .notice { font-size: .92rem; color: var(--muted); border-left: 3px solid var(--line); padding: 2px 0 2px 12px }
 
 /* Chips and badges */
-.chips { display: flex; flex-wrap: wrap; gap: 6px }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; align-items: center }
 .chip { font-size: .78rem; line-height: 1.2; padding: 4px 9px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--muted); white-space: nowrap }
 .chip.law { background: var(--accent-soft); border-color: var(--accent); color: var(--accent) }
 .chip.ok { background: var(--ok-soft); border-color: var(--ok); color: var(--ok) }
@@ -68,15 +87,22 @@ p { margin: 0 }
 .power.input { color: var(--gold); background: var(--gold-soft) } .power.input::before { border-radius: 50% }
 .power.observe { color: var(--muted); background: var(--sunk) } .power.observe::before { border-radius: 50%; background: transparent }
 
-/* Source chips inside sentences */
-.u { }
-.src { font: 500 .72rem/1 var(--font-body); vertical-align: .12em; margin-left: 4px; padding: 3px 7px; border-radius: 999px; border: 1px solid var(--line); background: var(--sunk); color: var(--accent); cursor: pointer; min-height: 24px }
+/* Source chips: small, at the end of each sentence; tap for the exact passage */
+.src { font: 500 .7rem/1 var(--font-body); vertical-align: .14em; margin-left: 5px; padding: 3px 7px; border-radius: 999px; border: 1px solid var(--line);
+  background: var(--sunk); color: var(--accent); cursor: pointer; min-height: 24px; white-space: nowrap }
 .src:hover { border-color: var(--accent) }
 .src.tag { color: var(--muted); border-style: dashed; background: transparent }
 .src.tag.editorial { color: var(--gold) }
 
+/* Labeled fields: the label on its own line, then one sentence per line */
+.field { display: flex; flex-direction: column; gap: 4px }
+.flabel { font: 700 .78rem/1.3 var(--font-body); letter-spacing: .04em; text-transform: uppercase; color: var(--muted) }
+.lines { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 6px }
+.lines li { padding-left: 14px; position: relative }
+.lines li::before { content: ""; position: absolute; left: 1px; top: .72em; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); opacity: .6 }
+
 /* Cards */
-.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px 18px; box-shadow: var(--shadow) }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px; box-shadow: var(--shadow) }
 .home-sec { display: flex; flex-direction: column; gap: 12px }
 .home-sec > h2 { display: flex; align-items: baseline; gap: 10px }
 .home-sec > h2 .count { font: 500 .8rem var(--font-mono); color: var(--muted) }
@@ -84,22 +110,27 @@ p { margin: 0 }
 .item .when { font: 500 .85rem/1.2 var(--font-mono); color: var(--ink) }
 .item .go { font-weight: 700; text-decoration: none; justify-self: start; padding: 6px 0; min-height: 40px; display: inline-flex; align-items: center }
 .address { display: flex; gap: 8px; flex-wrap: wrap; align-items: center }
-.address input { flex: 1 1 14rem; min-width: 0; font: inherit; padding: 10px 12px; border-radius: 8px; border: 1px solid var(--line); background: var(--sunk); color: var(--muted) }
+.address input { flex: 1 1 12rem; min-width: 0; font: inherit; padding: 10px 12px; border-radius: 8px; border: 1px solid var(--line); background: var(--sunk); color: var(--muted) }
 .address button { font: inherit; padding: 10px 14px; border-radius: 8px; border: 1px solid var(--line); background: var(--sunk); color: var(--muted) }
 
-/* Bill header and 30-second box */
-.billcode { font: 500 .85rem/1 var(--font-mono); color: var(--accent); letter-spacing: .04em }
-.thirty { background: var(--surface); border: 2px solid var(--accent); border-radius: var(--radius); padding: 16px 18px }
-.thirty h2 { font-size: 1.05rem; margin-bottom: 8px; font-family: var(--font-body); font-weight: 700; letter-spacing: .01em }
-.thirty ul { margin: 0; padding-left: 1.1rem; display: flex; flex-direction: column; gap: 8px }
+/* Bill header and the 30-second box */
+.billcode { font: 500 .82rem/1 var(--font-mono); color: var(--accent); letter-spacing: .04em }
+.billhead { display: flex; flex-direction: column; gap: 10px }
+.thirty { background: var(--surface); border: 2px solid var(--accent); border-radius: var(--radius); padding: 16px; display: flex; flex-direction: column; gap: 14px }
+.thirty h2 { font-size: 1.05rem; font-family: var(--font-body); font-weight: 700; letter-spacing: .01em }
+.cta { display: flex; align-items: center; justify-content: center; min-height: 48px; border-radius: 10px; background: var(--accent); color: var(--accent-ink);
+  font-weight: 700; text-decoration: none; padding: 10px 14px }
 .disclose { font-size: .86rem; color: var(--muted); display: flex; gap: 8px; align-items: flex-start }
 .disclose::before { content: "i"; font: 700 .75rem/1.35rem var(--font-mono); flex: 0 0 1.35rem; text-align: center; border-radius: 50%; border: 1px solid var(--muted) }
 
-/* Layer tabs */
-.tabs { display: flex; flex-wrap: wrap; gap: 6px; padding: 6px; background: var(--sunk); border-radius: 12px; position: sticky; top: calc(env(safe-area-inset-top, 0px) + 62px); z-index: 4 }
-.tabs a { text-decoration: none; color: var(--muted); font-size: .92rem; padding: 8px 12px; border-radius: 8px; min-height: 40px; display: inline-flex; align-items: center; gap: 6px }
-.tabs a .n { font: 500 .7rem var(--font-mono); opacity: .8 }
+/* Bill tabs: one scrollable row, pinned at the top while you read */
+.tabs { display: flex; gap: 4px; padding: 6px; background: var(--sunk); border-radius: 12px; overflow-x: auto; scrollbar-width: none;
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 4; scroll-snap-type: x proximity; box-shadow: 0 0 0 6px var(--bg) }
+.tabs::-webkit-scrollbar { display: none }
+.tabs a { flex: 0 0 auto; scroll-snap-align: center; text-decoration: none; color: var(--muted); font-size: .95rem; padding: 8px 12px; border-radius: 8px;
+  min-height: 44px; display: inline-flex; align-items: center; white-space: nowrap }
 .tabs a[aria-selected="true"] { background: var(--surface); color: var(--ink); font-weight: 700; box-shadow: var(--shadow) }
+@media (min-width: 720px) { .tabs { top: calc(env(safe-area-inset-top, 0px) + 53px) } }
 
 /* Workspace content */
 .layer { display: flex; flex-direction: column; gap: 18px }
@@ -110,26 +141,45 @@ p { margin: 0 }
 .blocks.num { counter-reset: n } .blocks.num li { counter-increment: n; padding-left: 26px }
 .blocks.num li::before { content: counter(n); width: auto; height: auto; background: none; top: 0; font: 700 .85rem/1.6 var(--font-mono); color: var(--accent) }
 .label { font-weight: 700 }
-.timeline li .label { font: 500 .85rem var(--font-mono); color: var(--ink); margin-right: 4px }
+.timeline { display: flex; flex-direction: column; gap: 0; margin: 0; padding: 0; list-style: none; border-left: 2px solid var(--line); margin-left: 6px }
+.timeline li { padding: 0 0 12px 16px; position: relative }
+.timeline li::before { content: ""; position: absolute; left: -7px; top: .45em; width: 12px; height: 12px; border-radius: 50%; background: var(--surface); border: 2px solid var(--accent) }
+.timeline .when { display: block; font: 500 .82rem/1.4 var(--font-mono); color: var(--muted) }
 .sub { display: flex; flex-direction: column; gap: 10px }
-.options { display: grid; gap: 14px }
+#act { scroll-margin-top: 76px }
+.options { display: grid; gap: 12px }
 .opt-head { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; flex-wrap: wrap }
-details.arg { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow) }
-details.arg > summary { list-style: none; cursor: pointer; padding: 14px 16px; display: grid; gap: 8px }
-details.arg > summary::-webkit-details-marker { display: none }
-details.arg > summary h3 { display: flex; gap: 10px; align-items: baseline }
-details.arg > summary h3::after { content: "+"; margin-left: auto; font: 500 1.1rem var(--font-mono); color: var(--muted) }
-details.arg[open] > summary h3::after { content: "−" }
-details.arg .body { padding: 0 16px 16px; display: flex; flex-direction: column; gap: 10px; border-top: 1px dashed var(--line); padding-top: 12px }
-.ev { font: 700 .74rem/1 var(--font-mono); letter-spacing: .03em; padding: 5px 8px; border-radius: 6px; border: 1px solid currentColor }
+
+/* Expandable cards (options and arguments) */
+details.fold { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow) }
+details.fold > summary { list-style: none; cursor: pointer; padding: 14px 16px; display: grid; gap: 8px }
+details.fold > summary::-webkit-details-marker { display: none }
+details.fold > summary h3 { display: flex; gap: 10px; align-items: baseline }
+details.fold > summary h3::after { content: "+"; margin-left: auto; font: 500 1.2rem var(--font-mono); color: var(--muted) }
+details.fold[open] > summary h3::after { content: "\2212" }
+details.fold .hint { font-size: .86rem; color: var(--accent); font-weight: 700 }
+details.fold[open] .hint { display: none }
+details.fold .body { padding: 12px 16px 16px; display: flex; flex-direction: column; gap: 12px; border-top: 1px dashed var(--line) }
+.meta-line { font-size: .84rem; color: var(--muted) }
+.ev { font: 700 .74rem/1.3 var(--font-mono); letter-spacing: .02em; padding: 5px 8px; border-radius: 6px; border: 1px solid currentColor; display: inline-block }
 .ev.supported { color: var(--ok) } .ev.mixed, .ev.uncertain { color: var(--warn) } .ev.values { color: var(--muted) }
 
+/* Collapsible notes */
+details.more { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line) }
+details.more > summary { cursor: pointer; font-weight: 700; color: var(--accent); min-height: 48px; display: flex; align-items: center }
+details.more[open] { padding-bottom: 14px }
+
 /* Bill markup */
-.markup { font: .9rem/1.7 var(--font-mono); background: var(--sunk); border: 1px solid var(--line); border-radius: var(--radius); padding: 12px 14px; overflow-x: auto }
+.markup { font: .88rem/1.7 var(--font-mono); background: var(--sunk); border: 1px solid var(--line); border-radius: var(--radius); padding: 12px 14px; overflow-x: auto }
 .markup .ln { color: var(--muted); display: inline-block; width: 2.4em; user-select: none }
 .markup del { color: var(--del); background: var(--del-bg); text-decoration: line-through; text-decoration-thickness: 2px }
 .markup ins { color: var(--ins); background: var(--ins-bg); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px }
-details.more > summary { cursor: pointer; font-weight: 700; color: var(--accent); min-height: 40px; display: flex; align-items: center }
+
+/* Next and previous tab */
+.pager { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; border-top: 1px solid var(--line); padding-top: 16px }
+.pager a { min-height: 48px; display: inline-flex; align-items: center; padding: 8px 14px; border-radius: 10px; border: 1px solid var(--line);
+  background: var(--surface); text-decoration: none; font-weight: 700 }
+.pager a.next { margin-left: auto; background: var(--accent); color: var(--accent-ink); border-color: var(--accent) }
 
 /* Evidence list */
 .sources { display: flex; flex-direction: column; gap: 10px }
@@ -139,27 +189,31 @@ details.more > summary { cursor: pointer; font-weight: 700; color: var(--accent)
 .type { font: 700 .7rem/1 var(--font-mono); letter-spacing: .05em; text-transform: uppercase; padding: 4px 7px; border-radius: 5px; background: var(--sunk); color: var(--muted); justify-self: start }
 .type.primary { background: var(--accent-soft); color: var(--accent) }
 
-/* Checks view */
-.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); gap: 10px }
-.stat { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 12px 14px; display: grid; gap: 2px }
+/* Checks view: each table row becomes a small card */
+.stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px }
+@media (min-width: 720px) { .stats { grid-template-columns: repeat(4, minmax(0, 1fr)) } }
+.stat { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 12px 14px; display: flex; flex-direction: column; gap: 4px; justify-content: flex-start }
 .stat b { font: 600 1.5rem/1.1 var(--font-display); font-variant-numeric: tabular-nums }
 .stat span { font-size: .85rem; color: var(--muted) }
-table.t { width: 100%; border-collapse: collapse; font-size: .9rem }
-table.t th, table.t td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--line); vertical-align: top }
-.tablebox { overflow-x: auto }
+.rowcards { display: flex; flex-direction: column; gap: 10px }
+.rowcard { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 12px 14px; display: flex; flex-direction: column; gap: 6px }
+.rowcard h3 { font-size: 1.02rem }
+.rowcard dl { margin: 0; display: grid; grid-template-columns: minmax(0, 9.5rem) minmax(0, 1fr); gap: 4px 12px; font-size: .92rem }
+.rowcard dt { color: var(--muted) } .rowcard dd { margin: 0; min-width: 0 }
+@media (max-width: 420px) { .rowcard dl { grid-template-columns: 1fr } .rowcard dd { margin-bottom: 4px } }
 
 /* Drawer */
 .scrim { position: fixed; inset: 0; background: rgba(0, 0, 0, .35); z-index: 20 }
 .drawer { position: fixed; z-index: 21; background: var(--surface); color: var(--ink); border: 1px solid var(--line); box-shadow: 0 10px 40px rgba(0, 0, 0, .25);
-  left: 0; right: 0; bottom: 0; max-height: 78vh; overflow-y: auto; border-radius: 16px 16px 0 0;
+  left: 0; right: 0; bottom: 0; max-height: 82vh; overflow-y: auto; border-radius: 16px 16px 0 0;
   padding: 18px max(16px, env(safe-area-inset-right, 0px)) calc(18px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)) }
 @media (min-width: 900px) { .drawer { left: auto; top: 0; bottom: 0; width: 30rem; max-height: none; border-radius: 0; padding-top: calc(18px + env(safe-area-inset-top, 0px)) } }
-.drawer .close { float: right; font: inherit; border: 1px solid var(--line); background: var(--sunk); color: var(--ink); border-radius: 8px; padding: 6px 12px; min-height: 40px }
+.drawer .close { float: right; font: inherit; border: 1px solid var(--line); background: var(--sunk); color: var(--ink); border-radius: 8px; padding: 6px 14px; min-height: 44px }
 .drawer blockquote { margin: 10px 0; padding: 12px 14px; border-left: 3px solid var(--accent); background: var(--sunk); border-radius: 0 8px 8px 0; font-size: .95rem }
 .drawer dl { display: grid; grid-template-columns: max-content 1fr; gap: 4px 12px; font-size: .85rem; margin: 10px 0 }
 .drawer dt { color: var(--muted) } .drawer dd { margin: 0; min-width: 0; overflow-wrap: anywhere }
 
-footer { margin-top: 40px; font-size: .82rem; color: var(--muted) }
+footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
 @media (prefers-reduced-motion: no-preference) { .drawer { animation: up .18s ease-out } @keyframes up { from { transform: translateY(12px); opacity: .6 } } }
 </style>
 
@@ -173,6 +227,12 @@ footer { margin-top: 40px; font-size: .82rem; color: var(--muted) }
 </div></header>
 
 <main class="wrap" id="app" tabindex="-1"></main>
+
+<nav class="bottom" aria-label="Main">
+  <a href="#home" data-nav="home">Home</a>
+  <a href="#hb1009" data-nav="hb1009">HB 1009</a>
+  <a href="#checks" data-nav="checks">How we checked</a>
+</nav>
 <div id="drawer-root"></div>
 
 <script type="application/json" id="data">/*__DATA__*/</script>
@@ -181,12 +241,13 @@ footer { margin-top: 40px; font-size: .82rem; color: var(--muted) }
   "use strict";
   var D = JSON.parse(document.getElementById("data").textContent);
   var app = document.getElementById("app");
+  // Tab ids stay stable (they are in links); the labels are plain words.
   var LAYERS = [
-    { id: "overview", tab: "Participate", n: "1" },
-    { id: "decision", tab: "Decision", n: "2" },
-    { id: "options", tab: "Options", n: "3" },
-    { id: "arguments", tab: "Arguments", n: "4" },
-    { id: "evidence", tab: "Evidence", n: "5" }
+    { id: "overview", tab: "Summary" },
+    { id: "decision", tab: "What it does" },
+    { id: "options", tab: "Options" },
+    { id: "arguments", tab: "Arguments" },
+    { id: "evidence", tab: "Sources" }
   ];
   var TAG_LABEL = { analysis: "Our analysis", editorial: "Our framing", computed: "Our math" };
 
@@ -229,34 +290,34 @@ footer { margin-top: 40px; font-size: .82rem; color: var(--muted) }
     return frag;
   }
 
-  function block(b) {
-    var li = el("li");
-    if (b.label) { li.appendChild(el("span", { class: "label", text: b.label + (b.kind === "timeline" ? "" : ": ") })); li.appendChild(document.createTextNode(" ")); }
-    li.appendChild(units(b.units));
-    return li;
+  // A labeled field ("Who pays", "In short"...): label on its own line, then one sentence per line.
+  function field(b) {
+    var f = el("div", { class: "field" });
+    if (b.label) f.appendChild(el("p", { class: "flabel", text: b.label }));
+    if (b.units.length > 1) {
+      var ul = el("ul", { class: "lines" });
+      b.units.forEach(function (u) { var li = el("li"); li.appendChild(units([u])); ul.appendChild(li); });
+      f.appendChild(ul);
+    } else {
+      f.appendChild(el("p", null, [units(b.units)]));
+    }
+    return f;
   }
-  function blockList(blocks, cls) {
-    var ul = el(cls && cls.indexOf("num") >= 0 ? "ol" : "ul", { class: "blocks " + (cls || "") });
-    blocks.forEach(function (b) { ul.appendChild(block(b)); });
+  function blockList(blocks, num) {
+    var ul = el(num ? "ol" : "ul", { class: "blocks" + (num ? " num" : "") });
+    blocks.forEach(function (b) { var li = el("li"); li.appendChild(units(b.units)); ul.appendChild(li); });
     return ul;
-  }
-  function paras(blocks) {
-    var wrap = el("div", { class: "stack" });
-    blocks.forEach(function (b) {
-      var p = el("p");
-      if (b.label) { p.appendChild(el("span", { class: "label", text: b.label + ": " })); }
-      p.appendChild(units(b.units)); wrap.appendChild(p);
-    });
-    return wrap;
   }
   function renderBlocks(blocks) {
     var out = el("div", { class: "stack" }), run = [], kind = null;
-    function flush() {
-      if (!run.length) return;
-      out.appendChild(kind === "para" ? paras(run) : blockList(run, kind === "num" ? "num" : ""));
-      run = [];
-    }
-    blocks.forEach(function (b) { var k = b.kind === "num" ? "num" : (b.kind === "para" ? "para" : "bullet"); if (k !== kind) { flush(); kind = k; } run.push(b); });
+    function flush() { if (run.length) out.appendChild(blockList(run, kind === "num")); run = []; kind = null; }
+    blocks.forEach(function (b) {
+      if (b.label && b.kind !== "num") { flush(); out.appendChild(field(b)); return; }
+      if (b.kind === "para") { flush(); out.appendChild(el("p", null, [units(b.units)])); return; }
+      var k = b.kind === "num" ? "num" : "bullet";
+      if (k !== kind) { flush(); kind = k; }
+      run.push(b);
+    });
     flush();
     return out;
   }
@@ -317,10 +378,10 @@ footer { margin-top: 40px; font-size: .82rem; color: var(--muted) }
       el("h1", { text: "What can I influence?" }),
       el("p", { class: "lede", text: "Decisions you can act on, what's coming up, and what just happened. Every line links to its source." }),
       el("div", { class: "address" }, [
-        el("input", { id: "addr", type: "text", disabled: "", placeholder: "Your address (district lookup comes in Trial C)", "aria-label": "Address (not available yet)" }),
+        el("input", { id: "addr", type: "text", disabled: "", placeholder: "Your address", "aria-label": "Your address (not available yet)" }),
         el("button", { type: "button", disabled: "", text: "Find my districts" })
       ]),
-      el("p", { class: "notice", text: "Prototype: this page is built only from Trial 001 (HB 1009, 2026). A real dashboard would list hearings, votes and deadlines across your districts." })
+      el("p", { class: "notice", text: "Prototype: district lookup isn't built yet, and this page shows only Trial 001 (HB 1009, 2026). A real dashboard would list hearings, votes and deadlines for your districts." })
     ]));
     h.sections.forEach(function (sec) {
       var s = el("section", { class: "home-sec", "aria-labelledby": "h-" + sec.id });
@@ -339,86 +400,106 @@ footer { margin-top: 40px; font-size: .82rem; color: var(--muted) }
   }
 
   function sectionById(id) { return D.workspace.sections.filter(function (s) { return s.id === id; })[0]; }
+  function layerIndex(id) { for (var i = 0; i < LAYERS.length; i++) if (LAYERS[i].id === id) return i; return 0; }
 
-  function layerHead(n, title, sub) {
-    return el("div", { class: "layer-head" }, [el("p", { class: "eyebrow", text: "Layer " + n }), el("h2", { text: title }), sub ? el("p", { class: "lede", text: sub }) : null]);
+  function layerHead(title, sub) {
+    return el("div", { class: "layer-head" }, [el("h2", { text: title }), sub ? el("p", { class: "lede", text: sub }) : null]);
+  }
+
+  function pager(layer) {
+    var i = layerIndex(layer), nav = el("nav", { class: "pager", "aria-label": "Next and previous tab" });
+    if (i > 0) nav.appendChild(el("a", { href: "#hb1009-" + LAYERS[i - 1].id, text: "← " + LAYERS[i - 1].tab }));
+    if (i < LAYERS.length - 1) nav.appendChild(el("a", { class: "next", href: "#hb1009-" + LAYERS[i + 1].id, text: LAYERS[i + 1].tab + " →" }));
+    return nav;
   }
 
   function viewBill(layer) {
-    var W = D.workspace, root = el("div", { class: "stack-lg" });
-    var m = D.meta;
-    root.appendChild(el("div", { class: "stack" }, [
+    var root = el("div", { class: "stack-lg" }), m = D.meta;
+    var head = el("div", { class: "billhead" }, [
       el("p", { class: "billcode", text: "HB 1009 · 2026 · ACT 395" }),
       el("h1", { text: "Phones in Georgia high schools" }),
       el("div", { class: "chips" }, [
         el("span", { class: "chip law", text: "Law · signed May 5, 2026" }),
         el("span", { class: "chip", text: "Takes effect Dec 31, 2026" }),
         el("a", { class: "chip " + (m.verified ? "ok" : "warn"), href: "#checks", text: m.statusText })
-      ]),
-      el("p", { class: "disclose", text: m.disclosure })
-    ]));
-    var sum = sectionById("summary");
-    var box = el("section", { class: "thirty", "aria-labelledby": "h-30" }, [el("h2", { id: "h-30", text: "The 30-second version" })]);
-    var ul = el("ul");
-    sum.blocks.forEach(function (b) { ul.appendChild(block(b)); });
-    box.appendChild(ul); root.appendChild(box);
-
-    var tabs = el("nav", { class: "tabs", "aria-label": "Layers" });
+      ])
+    ]);
+    if (layer === "overview") head.appendChild(el("p", { class: "disclose", text: m.disclosure }));
+    root.appendChild(head);
+    var tabs = el("nav", { class: "tabs", "aria-label": "Parts of this page" });
     LAYERS.forEach(function (L) {
-      tabs.appendChild(el("a", { href: "#hb1009-" + L.id, "aria-selected": String(L.id === layer) }, [el("span", { class: "n", text: L.n }), L.tab]));
+      tabs.appendChild(el("a", { href: "#hb1009-" + L.id, "aria-selected": String(L.id === layer) }, [L.tab]));
     });
     root.appendChild(tabs);
     root.appendChild(({ overview: layerOverview, decision: layerDecision, options: layerOptions, arguments: layerArguments, evidence: layerEvidence })[layer]());
+    root.appendChild(pager(layer));
     return root;
   }
 
   function subs(sec) { var o = {}; sec.subs.forEach(function (s) { o[s.title] = s; }); return o; }
 
+  // Summary: the 30-second version, then what you can do, what's coming, and what happened.
   function layerOverview() {
-    var s = sectionById("overview"), S = subs(s), L = el("section", { class: "layer" });
-    L.appendChild(layerHead(1, "Participate", "What happened, what's coming, and what you can still do."));
-    var t = el("div", { class: "sub" }, [el("h3", { text: "What happened" })]);
-    var ul = el("ul", { class: "blocks timeline" });
-    S["What happened"].blocks.forEach(function (b) { var c = Object.assign({}, b, { kind: "timeline" }); ul.appendChild(block(c)); });
-    t.appendChild(ul); L.appendChild(t);
-    L.appendChild(el("div", { class: "sub" }, [el("h3", { text: "Coming up" }), renderBlocks(S["Coming up"].blocks)]));
-    var act = el("div", { class: "sub" }, [el("h3", { text: "What you can do" })]);
+    var L = el("section", { class: "layer" });
+    var sum = sectionById("summary");
+    var box = el("section", { class: "thirty", "aria-labelledby": "h-30" }, [el("h2", { id: "h-30", text: "The 30-second version" })]);
+    sum.blocks.forEach(function (b) { box.appendChild(field(b)); });
+    box.appendChild(el("a", { class: "cta", href: "#act", onclick: function (e) { e.preventDefault(); var t = document.getElementById("act"); if (t) t.scrollIntoView({ behavior: "smooth", block: "start" }); } , text: "What you can do ↓" }));
+    L.appendChild(box);
+
+    var s = sectionById("overview"), S = subs(s);
+    var act = el("div", { class: "sub", id: "act" }, [el("h2", { text: "What you can do" })]);
     S["What you can do"].blocks.forEach(function (b) {
       act.appendChild(el("div", { class: "card item" }, [el("div", { class: "chips" }, [el("span", { class: "power " + b.label.toLowerCase(), text: b.label })]), el("p", null, [units(b.units)])]));
     });
     L.appendChild(act);
+    L.appendChild(el("div", { class: "sub" }, [el("h2", { text: "Coming up" }), renderBlocks(S["Coming up"].blocks)]));
+    var t = el("div", { class: "sub" }, [el("h2", { text: "What happened" })]);
+    var ul = el("ul", { class: "timeline" });
+    S["What happened"].blocks.forEach(function (b) {
+      var li = el("li"); li.appendChild(el("span", { class: "when", text: b.label })); li.appendChild(units(b.units)); ul.appendChild(li);
+    });
+    t.appendChild(ul); L.appendChild(t);
     return L;
   }
 
   function layerDecision() {
     var s = sectionById("decision"), L = el("section", { class: "layer" });
-    L.appendChild(layerHead(2, "The decision"));
+    L.appendChild(layerHead("What the law does"));
     L.appendChild(renderBlocks(s.blocks));
+    var more = el("div", null);
     s.subs.forEach(function (sub) {
       var d = el("details", { class: "more" }, [el("summary", { text: sub.title })]);
       d.appendChild(renderBlocks(sub.blocks));
-      L.appendChild(d);
+      more.appendChild(d);
     });
-    var more = el("details", { class: "more" }, [el("summary", { text: "See the exact changes in the bill text" })]);
     var mk = el("div", { class: "markup", role: "region", "aria-label": "Bill text with deletions struck through and additions underlined" });
     D.billChanges.forEach(function (line) {
       var row = el("div"); row.appendChild(el("span", { class: "ln", text: String(line.n) }));
       line.segs.forEach(function (sg) { row.appendChild(sg.k === "txt" ? document.createTextNode(sg.t) : el(sg.k, { text: sg.t })); });
       mk.appendChild(row);
     });
-    more.appendChild(el("div", { class: "stack" }, [
-      el("p", { class: "notice", text: "From the bill as passed (pages 2-3). Georgia bills strike out removed words and underline new ones." }), mk]));
+    var bill = el("details", { class: "more" }, [el("summary", { text: "See the exact changes in the bill text" }), el("div", { class: "stack" }, [
+      el("p", { class: "notice", text: "From the bill as passed (pages 2-3). Georgia bills strike out removed words and underline new ones." }), mk])]);
+    more.appendChild(bill);
     L.appendChild(more);
     return L;
   }
 
+  // Options: every option folds the same way; "What it does" stays visible.
   function layerOptions() {
     var s = sectionById("options"), L = el("section", { class: "layer" });
-    L.appendChild(layerHead(3, "Options and tradeoffs", "What lawmakers could have done, and who gains or gives up what."));
+    L.appendChild(layerHead("Options and tradeoffs", "What lawmakers could have done, and who gains or gives up what. Tap an option for the details."));
     var grid = el("div", { class: "options" });
     s.subs.forEach(function (o) {
       var chip = /as passed/i.test(o.title) ? el("span", { class: "chip law", text: "Now law" }) : /failed/i.test(o.title) ? el("span", { class: "chip bad", text: "Voted down 13-38" }) : el("span", { class: "chip", text: "Before HB 1009" });
-      grid.appendChild(el("article", { class: "card stack" }, [el("div", { class: "opt-head" }, [el("h3", { text: o.title.replace(/^Option [A-C]: /, "") }), chip]), renderBlocks(o.blocks)]));
+      var does = o.blocks.filter(function (b) { return b.label === "What it does"; })[0];
+      var rest = o.blocks.filter(function (b) { return b !== does; });
+      var d = el("details", { class: "fold" });
+      d.appendChild(el("summary", null, [el("h3", { text: o.title.replace(/^Option [A-C]: /, "") }), el("div", { class: "chips" }, [chip]),
+        does ? el("p", null, [units(does.units)]) : null, el("span", { class: "hint", text: "What happened · who benefits · who pays · what's uncertain" })]));
+      d.appendChild(el("div", { class: "body" }, [renderBlocks(rest)]));
+      grid.appendChild(d);
     });
     L.appendChild(grid);
     return L;
@@ -426,42 +507,43 @@ footer { margin-top: 40px; font-size: .82rem; color: var(--muted) }
 
   function evClass(label) { return /^support/i.test(label) ? "supported" : /^mixed/i.test(label) ? "mixed" : /^uncertain/i.test(label) ? "uncertain" : "values"; }
 
+  // Arguments: all cards start closed, so both sides' claims are visible at a glance.
   function layerArguments() {
     var s = sectionById("arguments"), L = el("section", { class: "layer" });
-    L.appendChild(layerHead(4, "Arguments you'll hear", "Each card shows who makes the argument, what backs it up, who disagrees, and what cuts against it. Tap a card to open it."));
+    L.appendChild(layerHead("Arguments you'll hear", "Tap a card to see who makes the argument, what backs it up, who disagrees and what's missing."));
     if (s.blocks.length) L.appendChild(el("div", { class: "card stack" }, [renderBlocks(s.blocks)]));
-    var firstCard = true;
     s.subs.forEach(function (a) {
-      if (!a.cardMeta) {  // a non-card subsection, such as "How to read these cards": collapsed by default
+      if (!a.cardMeta) {  // a non-card subsection, such as "How to read these cards"
         var m = el("details", { class: "more" }, [el("summary", { text: a.title })]);
         m.appendChild(renderBlocks(a.blocks));
         L.appendChild(m);
         return;
       }
       var meta = a.cardMeta;
-      var d = el("details", { class: "arg" });
-      if (firstCard) { d.setAttribute("open", ""); firstCard = false; }
-      var chips = el("div", { class: "chips" }, [
-        el("span", { class: "chip", text: meta.side ? (meta.side.charAt(0).toUpperCase() + meta.side.slice(1)) : "" }),
-        el("span", { class: "chip" + (meta.kind === "Anticipated" ? " warn" : ""), text: meta.kind === "Anticipated" ? "Anticipated · not said by a named person" : "Said on the record" }),
-        el("span", { class: "chip", text: "Type: " + (meta.claimType || "") })
-      ]);
+      var side = meta.side ? (meta.side.charAt(0).toUpperCase() + meta.side.slice(1)) : "";
       var shortB = a.blocks.filter(function (b) { return b.label === "In short"; })[0];
       var rest = a.blocks.filter(function (b) { return b !== shortB; });
-      var head = [el("h3", { text: a.title.replace(/^\d+\.\s*/, "") }), chips];
-      if (shortB) head.push(el("p", null, [units(shortB.units)]));
-      head.push(el("div", null, [el("span", { class: "ev " + evClass(meta.evidence || ""), text: "Evidence: " + (meta.evidence || "") })]));
-      d.appendChild(el("summary", null, head));
-      d.appendChild(el("div", { class: "body" }, [renderBlocks(rest)]));
+      var d = el("details", { class: "fold" });
+      d.appendChild(el("summary", null, [
+        el("h3", { text: a.title.replace(/^\d+\.\s*/, "") }),
+        el("div", { class: "chips" }, [el("span", { class: "chip", text: side })]),
+        shortB ? el("p", null, [units(shortB.units)]) : null,
+        el("div", null, [el("span", { class: "ev " + evClass(meta.evidence || ""), text: "Evidence: " + (meta.evidence || "") })])
+      ]));
+      var body = el("div", { class: "body" }, [
+        el("p", { class: "meta-line", text: (meta.kind === "Anticipated" ? "Anticipated: not said by a named person" : "Documented: said on the record") + " · " + (meta.claimType || "") + " claim" }),
+        renderBlocks(rest)
+      ]);
+      d.appendChild(body);
       L.appendChild(d);
     });
-    L.appendChild(el("p", { class: "notice", text: "Every card uses the same fields for both sides, and one rule sets every evidence label (see \u201cHow to read these cards\u201d). Disagreements about values are not treated as misinformation." }));
+    L.appendChild(el("p", { class: "notice", text: "Every card uses the same fields for both sides, and one rule sets every evidence label (see “How to read these cards”). Disagreements about values are not treated as misinformation." }));
     return L;
   }
 
   function layerEvidence() {
     var L = el("section", { class: "layer" });
-    L.appendChild(layerHead(5, "Evidence", "Every source we cite, archived on the date shown. Anyone can download the original and compare its SHA-256 fingerprint."));
+    L.appendChild(layerHead("Sources", "Every source we cite, saved on the date shown. Anyone can download the original and compare its SHA-256 fingerprint."));
     var list = el("div", { class: "sources" });
     D.sourceOrder.forEach(function (sid) {
       var s = D.sources[sid];
@@ -470,7 +552,7 @@ footer { margin-top: 40px; font-size: .82rem; color: var(--muted) }
         el("span", { class: "type" + (s.type === "primary-government" ? " primary" : ""), text: s.typeLabel }),
         el("h3", { text: s.title }),
         el("p", { class: "lede", text: s.why || "" }),
-        el("div", { class: "meta" }, [el("span", { text: "Captured " + (s.retrieved_at || "") }), el("span", { class: "hash", text: "sha256 " + (s.sha256 || "").slice(0, 12) + "…" }), el("span", { text: pids.length + " passages cited" })])
+        el("div", { class: "meta" }, [el("span", { text: "Captured " + (s.retrieved_at || "").slice(0, 10) }), el("span", { class: "hash", text: "sha256 " + (s.sha256 || "").slice(0, 12) + "…" }), el("span", { text: pids.length + " passages" })])
       ]);
       var row = el("div", { class: "chips" });
       if (pids.length) { var b = el("button", { class: "src", type: "button", text: "Read the passages" }); b.addEventListener("click", function () { openPassages(pids, b); }); row.appendChild(b); }
@@ -491,14 +573,21 @@ footer { margin-top: 40px; font-size: .82rem; color: var(--muted) }
     root.appendChild(stats);
     V.sections.forEach(function (sec) {
       var s = el("section", { class: "stack" }, [el("h2", { text: sec.title })]);
-      sec.paras.forEach(function (p) { s.appendChild(el("p", { text: p })); });
+      (sec.paras || []).forEach(function (p) { s.appendChild(el("p", { text: p })); });
+      if (sec.items) {
+        var ul = el("ul", { class: "lines" });
+        sec.items.forEach(function (t) { ul.appendChild(el("li", { text: t })); });
+        s.appendChild(ul);
+      }
       if (sec.rows) {
-        var tb = el("table", { class: "t" }), thead = el("tr");
-        sec.head.forEach(function (h) { thead.appendChild(el("th", { text: h })); });
-        tb.appendChild(el("thead", null, [thead]));
-        var tbody = el("tbody");
-        sec.rows.forEach(function (r) { var tr = el("tr"); r.forEach(function (c) { tr.appendChild(el("td", { text: c })); }); tbody.appendChild(tr); });
-        tb.appendChild(tbody); s.appendChild(el("div", { class: "tablebox" }, [tb]));
+        var list = el("div", { class: "rowcards" });
+        sec.rows.forEach(function (r) {
+          var title = (sec.head[0] === "Round" ? "Round " : "") + r[0];
+          var dl = el("dl");
+          for (var i = 1; i < r.length; i++) { dl.appendChild(el("dt", { text: sec.head[i] })); dl.appendChild(el("dd", { text: r[i] })); }
+          list.appendChild(el("div", { class: "rowcard" }, [el("h3", { text: title }), dl]));
+        });
+        s.appendChild(list);
       }
       root.appendChild(s);
     });
@@ -506,16 +595,31 @@ footer { margin-top: 40px; font-size: .82rem; color: var(--muted) }
   }
 
   // ---------- Router ----------
+  var prevView = null;
   function route() {
     var h = (location.hash || "#home").slice(1), view = "home", layer = "overview";
     if (h === "hb1009") view = "hb1009";
     else if (h.indexOf("hb1009-") === 0) { view = "hb1009"; layer = h.slice(7); if (!LAYERS.some(function (L) { return L.id === layer; })) layer = "overview"; }
     else if (h === "checks") view = "checks";
+    var stayInBill = view === "hb1009" && prevView === "hb1009";
     app.innerHTML = "";
     app.appendChild(view === "home" ? viewHome() : view === "checks" ? viewChecks() : viewBill(layer));
     app.appendChild(el("footer", { text: D.meta.footer }));
     document.querySelectorAll("[data-nav]").forEach(function (a) { if (a.getAttribute("data-nav") === view) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
-    if (view !== "hb1009" || h === "hb1009") window.scrollTo(0, 0);
+    var tabs = document.querySelector(".tabs");
+    if (stayInBill && tabs) {
+      // Switching tabs: keep the tab row where it is and start the new tab at its top.
+      var stick = parseFloat(getComputedStyle(tabs).top) || 0;
+      var tabsTop = tabs.getBoundingClientRect().top + window.scrollY - stick;
+      if (window.scrollY > tabsTop) window.scrollTo(0, tabsTop);
+    } else {
+      window.scrollTo(0, 0);
+    }
+    if (tabs) {
+      var cur = tabs.querySelector('[aria-selected="true"]');
+      if (cur) tabs.scrollLeft = cur.offsetLeft - (tabs.clientWidth - cur.clientWidth) / 2;
+    }
+    prevView = view;
   }
   window.addEventListener("hashchange", function () { closeDrawer(); route(); });
   route();
