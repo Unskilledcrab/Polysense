@@ -1,0 +1,40 @@
+# How this trial's workspace appears in the prototype (display settings only; all content comes from
+# workspace.md, home.md, passages.md and sources.yaml). Read by trials/tools/render_prototype.py.
+slug: psc-57171                    # used in page links: #psc-57171, #psc-57171-options, #psc-57171-checks
+kind: regulatory-case                    # law | regulatory-case | budget: sets the decision and options headings
+code: "PSC Docket 57171 · 2026"
+title: "Business customers' real-time payments and your power bill"
+link_text: "PSC 57171: real-time payments and fuel costs"
+status:                            # chips under the title
+  - {text: "Open case · Public Service Commission"}
+  - {text: "Decision scheduled Dec 15, 2026"}
+option_chips:                      # one chip per option, matched by the start of the option's heading; all unstyled on purpose
+  "Plan A": {text: "Today's method"}
+  "Plan B": {text: "Georgia Power's plan"}
+  "Plan C": {text: "PIA Staff's plan"}
+  "Plan D": {text: "GIPL's plan"}
+short_labels:                      # source chip labels: one or two words, so a chip fits on a phone line
+  S01: Docket
+  S01b: Filing list
+  S02: Schedule order
+  S04: PSC calendar
+  S05: Legal notice
+  S06: GP testimony
+  S06b: GP data
+  S07: Staff testimony
+  S07b: Staff fixes
+  S08: GIPL testimony
+  S09: GAM testimony
+  S10: Clarkson filing
+  S11: GP rebuttal
+  S12: Motion
+  S13: GIPL reply
+  S14: Public witness
+  S15: Comments
+  S17: Wise bio
+  S17b: Shaw bio
+  S17c: McDonald bio
+  S17d: Hubbard bio
+  S17e: Johnson bio
+  S19: PSC FAQ
+  S21: Fuel order

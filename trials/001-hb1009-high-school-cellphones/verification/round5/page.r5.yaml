@@ -1,0 +1,30 @@
+# How this trial's workspace appears in the prototype (display settings only; all content comes from
+# workspace.md, home.md, passages.md and sources.yaml). Read by trials/tools/render_prototype.py.
+slug: hb1009                       # used in page links: #hb1009, #hb1009-options, #hb1009-checks
+kind: law                    # law | regulatory-case | budget: sets the decision and options headings
+code: "HB 1009 · 2026 · Act 395"
+title: "Phones in Georgia high schools"
+link_text: "HB 1009: phones in high schools"
+status:                            # chips under the title
+  - {text: "Law · signed May 5, 2026", kind: law}
+  - {text: "Takes effect Dec 31, 2026"}
+option_chips:                      # one chip per option, matched by the start of the option's heading
+  "Option A": {text: "Before HB 1009"}
+  "Option B": {text: "Now law", kind: law}
+  "Option C": {text: "Voted down 13-38", kind: bad}
+short_labels:                      # source chip labels: one or two words, so a chip fits on a phone line
+  S01: Law
+  S02: Bill record
+  S03: Amendment
+  S09: Governor
+  S10c: Fiscal notes
+  S12: Survey
+  S13a: Florida study
+  S13b: England study
+  S16: "News, Mar 12"
+  S16b: "News, Mar 17"
+  S19: Cairo High
+markup:                            # optional "see the exact changes" view, from pdf_markup.py output
+  file: _raw/hb1009-247117.markup.txt
+  lines: [[p2, 22], [p2, 23], [p2, 28], [p3, 42], [p3, 43], [p3, 44], [p3, 45], [p3, 46], [p3, 47], [p3, 48]]
+  note: "From the bill as passed (pages 2-3). Georgia bills strike out removed words and underline new ones."
