@@ -1,0 +1,26 @@
+{
+  "checker": "independent-source-verifier (targeted)",
+  "document": "/home/user/Polysense/trials/002-psc-57171-fuel-credit/home.md",
+  "units": [
+    {
+      "line": 15,
+      "sentence": "Either option would make fuel charges for customers on standard rates lower than under today's method, and the same ...",
+      "marker": "[P-058, P-115, P-144, P-061]",
+      "verdict": "supports",
+      "evidence_span": "Either of these changes would increase the amount of RTP revenues that are credited to fuel. However, I would note that any increase in the amount of RTP revenues credited to the fuel account will necessarily reduce",
+      "correct_passage": "",
+      "reason": "P-058 and P-115: both options increase the RTP revenue credited to fuel. P-144: FCR customers pay all fuel costs net of the credit, so a bigger credit lowers their fuel charges relative to today's method. P-061: the remainder of RTP revenue goes to base, and P-115 says any increase to fuel 'will necessarily reduce' the RTP revenue offsetting base revenue requirements, so the same dollars leave the base side. 'The rest of the bill' is a gloss consistent with P-061's two separate rates.",
+      "problem": "",
+      "suggested_fix": ""
+    }
+  ],
+  "framing_issues": [],
+  "summary": {
+    "units_checked": 1,
+    "supports": 1,
+    "partial": 0,
+    "does_not_support": 0,
+    "wrong_span": 0,
+    "questionable_or_invalid_tags": 0
+  }
+}

@@ -1,0 +1,12 @@
+L9	Each proposed plan we could read would raise the credit through its take-or-pay option, by amounts partly blacked out. [P-128, P-073, P-058, P-115, P-139, P-140, P-078]
+L24	As more large customers were served on real-time prices, PIA Staff and intervenors sought the review "to ensure such customers pay their share of costs," Georgia Power's testimony says. [P-053]
+L76	GIPL says a change it recommends would not change the rates real-time customers pay, "just the RTP fuel revenue credit," and Georgia Power said the same of its 2010 change to the method. [P-105, P-046]
+L76	GIPL also says the real-time price is set "too low during peak hours," and, though it says rate design is outside this case, recommends that Georgia Power propose new real-time pricing. [P-094, P-107]
+L110	Still, it recommended that Georgia Power propose real-time pricing for PSC review and approval "as quickly as possible." [P-107]
+L110	The words after "RTP pricing that utilizes" in that sentence are blacked out in the public version. [P-107]
+L138	It said that had its plan been in place in 2023–2025, a home using 1,000 kWh would now pay about $1.35 a month less in fuel charges; that figure is also on page 7, as first filed. [P-066, P-067, P-039]
+L138	That is a look back, not an estimate of savings from adopting the plan now. {analysis: P-066 asks what the effect on the current FCR-27 fuel rate would have been}
+L174	Its page-7 figures are flagged in Plan C, and its page-20 text on pipeline fees could not be checked against the correction. {analysis: P-039 compared with the locations of P-066 and P-157}
+L174	No Staff figure on this page is taken from those tables, but Staff's profit-rate estimates in Layer 2 and card 9 may rest on the corrected Table 2 totals, so they too could have changed. {analysis: P-039 compared with the locations of P-076 to P-079, P-091, P-147 and P-150; P-150 says Staff's credited amounts are shown in Tables 2, 5 and 7, and P-090 bases the estimates on the added revenue credited to fuel}
+L195	**Who disagrees:** Georgia Power said real-time customers cannot avoid take-or-pay costs by cutting their use, and that the contracts' fixed-price benefits go to customers on standard rates "when the fixed price is below the marginal fuel cost." [P-130]
+L254	GIPL said coal-related costs "vary with sustained increases in demand," though they are "fixed" based on Georgia Power's coal orders, and that if coal use rose or fell by 250%, there would be "some increase or decrease" in them. [P-156]

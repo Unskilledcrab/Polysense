@@ -1,0 +1,160 @@
+{
+  "checker": "independent-source-verifier (targeted)",
+  "document": "/home/user/Polysense/trials/002-psc-57171-fuel-credit/workspace.md",
+  "units": [
+    {
+      "line": 9,
+      "sentence": "Each proposed plan we could read would raise the credit through its take-or-pay option, by amounts partly blacked out.",
+      "marker": "[P-128, P-073, P-058, P-115, P-139, P-140, P-078]",
+      "verdict": "supports",
+      "evidence_span": "Either of these changes would increase the amount of RTP revenues that are credited to fuel.",
+      "correct_passage": "",
+      "reason": "P-128 (Georgia Power and GIPL recommend Option 1) and P-073 (PIA Staff recommends Option 2) tie each readable plan to its take-or-pay option; P-058, P-115 and P-128 say both options raise the RTP revenue credited to fuel. Georgia Power's estimates are fully REDACTED (P-139 for Option 1, P-140 for Option 2); Staff's Option 2 table (P-078) has dotted yearly columns but a public delta.",
+      "problem": "Minor precision: 'partly blacked out' is true only across the set. For Option 1, used by Plans B and D, the only estimate (Georgia Power's, P-139) is fully blacked out, so nothing about its size is public; only Option 2 has a public figure (Staff's delta, P-078).",
+      "suggested_fix": "Each proposed plan we could read would raise the credit through its take-or-pay option; the only public estimate is PIA Staff's for Option 2, and the others are blacked out."
+    },
+    {
+      "line": 24,
+      "sentence": "As more large customers were served on real-time prices, PIA Staff and intervenors sought the review \"to ensure such ...",
+      "marker": "[P-053]",
+      "verdict": "supports",
+      "evidence_span": "in light of the increase in large load customers served on Georgia Power’s RTP offerings and to ensure such customers pay their share of costs, PIA Staff and intervenors questioned",
+      "correct_passage": "",
+      "reason": "P-053 (Georgia Power direct testimony, S06): in FCR-27, in light of the increase in large load RTP customers and to ensure they pay their share of costs, PIA Staff and intervenors recommended an additional review. Quote verbatim; attribution to Georgia Power's testimony and the scope ('PIA Staff and intervenors', not all parties) match.",
+      "problem": "",
+      "suggested_fix": ""
+    },
+    {
+      "line": 76,
+      "sentence": "GIPL says a change it recommends would not change the rates real-time customers pay, \"just the RTP fuel revenue ...",
+      "marker": "[P-105, P-046]",
+      "verdict": "supports",
+      "evidence_span": "This will not result in double-recovery, as the rates charged to RTP customers will not change, just the RTP fuel revenue credit.",
+      "correct_passage": "",
+      "reason": "P-105 (GIPL): the rates charged to RTP customers will not change, 'just the RTP fuel revenue credit' (verbatim). P-046 (Georgia Power): the 2010 revised accounting method 'did not affect the RTP prices paid by customers' and only changed how revenue is recorded between fuel and base, so 'said the same' is fair. 'A change it recommends' is suitably general, since P-105 does not name which recommendation 'This' refers to.",
+      "problem": "",
+      "suggested_fix": ""
+    },
+    {
+      "line": 76,
+      "sentence": "GIPL also says the real-time price is set \"too low during peak hours,\" and, though it says rate design is outside this ...",
+      "marker": "[P-094, P-107]",
+      "verdict": "supports",
+      "evidence_span": "ARE CHANGES TO RTP RATE DESIGN WITHIN THE SCOPE OF THIS PROCEEDING? A: No. Nonetheless, I recommend that Georgia Power propose for Commission review and approval RTP pricing that utilizes",
+      "correct_passage": "",
+      "reason": "P-094: Georgia Power 'has set its RTP price too low during peak hours' (quote verbatim). P-107: changes to RTP rate design are not within the scope of this proceeding ('A: No'), yet GIPL recommends that Georgia Power propose RTP pricing for Commission review and approval. 'New' is a fair reading of proposing pricing for approval, and the sentence does not characterize the blacked-out words.",
+      "problem": "",
+      "suggested_fix": ""
+    },
+    {
+      "line": 110,
+      "sentence": "Still, it recommended that Georgia Power propose real-time pricing for PSC review and approval \"as quickly as possible.\"",
+      "marker": "[P-107]",
+      "verdict": "supports",
+      "evidence_span": "Nonetheless, I recommend that Georgia Power propose for Commission review and approval RTP pricing that utilizes [blacked out in the public version] as quickly as possible.",
+      "correct_passage": "",
+      "reason": "'Still' renders 'Nonetheless'; the paraphrase and the quote 'as quickly as possible' are faithful. In the source the quote follows the redacted words; taking it to modify 'propose' is the natural reading, and the next sentence discloses the gap.",
+      "problem": "",
+      "suggested_fix": ""
+    },
+    {
+      "line": 110,
+      "sentence": "The words after \"RTP pricing that utilizes\" in that sentence are blacked out in the public version.",
+      "marker": "[P-107]",
+      "verdict": "supports",
+      "evidence_span": "RTP pricing that utilizes [blacked out in the public version] as quickly as possible.",
+      "correct_passage": "",
+      "reason": "'RTP pricing that utilizes' is verbatim; P-107 marks the redaction and its note confirms black bars on the public PDF. The hidden words are described only as blacked out.",
+      "problem": "Minor precision: the redaction sits between 'utilizes' and 'as quickly as possible', which is visible and is quoted in the previous sentence; 'The words after' could be read as everything after 'utilizes'.",
+      "suggested_fix": "The words between \"RTP pricing that utilizes\" and \"as quickly as possible\" are blacked out in the public version."
+    },
+    {
+      "line": 138,
+      "sentence": "It said that had its plan been in place in 2023–2025, a home using 1,000 kWh would now pay about $1.35 a month less in ...",
+      "marker": "[P-066, P-067, P-039]",
+      "verdict": "supports",
+      "evidence_span": "The current FCR-27 rate would have been lower resulting in a decrease in customer bills of approximately $1.35 per month.",
+      "correct_passage": "",
+      "reason": "P-066 (p.7, as filed) asks what the impact on current FCR-27 fuel rates would have been had Staff's recommendations been in place during 2023-2025, and answers a bill decrease of approximately $1.35 per month from a lower FCR-27 rate; P-067 sets it for a residential customer using 1,000 kWh per month; P-039 lists a correction on p.7. The counterfactual wording and 'as first filed' are kept.",
+      "problem": "Minor: P-067 says 1,000 kWh per month; 'a home using 1,000 kWh' drops the period (the 'a month' that follows belongs to the $1.35).",
+      "suggested_fix": "...a home using 1,000 kWh a month would now pay about $1.35 less a month in fuel charges; that figure is also on page 7, as first filed."
+    },
+    {
+      "line": 138,
+      "sentence": "That is a look back, not an estimate of savings from adopting the plan now.",
+      "marker": "{analysis: P-066 asks what the effect on the current FCR-27 fuel rate would have been}",
+      "verdict": "valid",
+      "evidence_span": "",
+      "correct_passage": "",
+      "reason": "P-066's question is retrospective and counterfactual ('IF STAFF'S RECOMMENDATIONS HAD BEEN IN PLACE DURING 2023 - 2025 WHAT WOULD HAVE BEEN THE IMPACT ON CURRENT (FCR-27) FUEL RATES?'), and no passage gives a forward estimate for adopting the plan now. The tag describes P-066 accurately.",
+      "problem": "",
+      "suggested_fix": ""
+    },
+    {
+      "line": 174,
+      "sentence": "Its page-7 figures are flagged in Plan C, and its page-20 text on pipeline fees could not be checked against the ...",
+      "marker": "{analysis: P-039 compared with the locations of P-066 and P-157}",
+      "verdict": "valid",
+      "evidence_span": "",
+      "correct_passage": "",
+      "reason": "P-039 lists corrections on p.7 line 9 and p.20 line 15. P-066 is on p.7, and Plan C (L138) labels its $329 million, $322 million and $1.35 figures as first filed. P-157, Staff's pipeline and storage summary, is on p.20; since the correction could not be read, 'could not be checked' is accurate and claims neither a change nor no change.",
+      "problem": "",
+      "suggested_fix": ""
+    },
+    {
+      "line": 174,
+      "sentence": "No Staff figure on this page is taken from those tables, but Staff's profit-rate estimates in Layer 2 and card 9 may ...",
+      "marker": "{analysis: P-039 compared with the locations of P-076 to P-079, P-091, P-147 and P-150; P-150 says Staff's credited amounts are shown in Tables 2, 5 and 7, and P-090 bases the estimates on the added revenue credited to fuel}",
+      "verdict": "questionable",
+      "evidence_span": "",
+      "correct_passage": "",
+      "reason": "The first clause holds: every Staff number on the page traces to text, footnotes or Tables 5, 6, 8 and 9 (P-066, P-068, P-076 to P-079, P-084, P-091, P-147, P-150); none is from Tables 2, 3, 4 or 7. The second clause has two weak links.",
+      "problem": "(1) 'the corrected Table 2 totals' is narrower than the tag's own basis: P-150 says credited amounts are shown in Tables 2, 5 and 7, and both Table 2 and Table 7 were corrected (P-039); no passage says Table 2 holds totals or that the ROE estimates use it. (2) 'so they too could have changed' suggests the estimates themselves may have been revised, but P-039 lists every correction (Tables 2, 3, 4 and 7; p.7 line 9; p.20 line 15), and the ROE figures sit in footnote 45 (P-091), which is not a table and explains P-090 on p.27 ('each of these three years'). The errata did not change the estimates; at most they may not reflect the corrected inputs.",
+      "suggested_fix": "No Staff figure on this page is taken from those tables. Staff's profit-rate estimates in Layer 2 and card 9 were not corrected, but they may rest on credited amounts in Tables 2 and 7, which were, so they may not reflect the corrections."
+    },
+    {
+      "line": 195,
+      "sentence": "**Who disagrees:** Georgia Power said real-time customers cannot avoid take-or-pay costs by cutting their use, and that ...",
+      "marker": "[P-130]",
+      "verdict": "supports",
+      "evidence_span": "the benefits of non-dispatchable PPAs, which deliver energy at a fixed price, accrue to FCR customers by reducing average fuel costs when the fixed price is below the marginal fuel cost",
+      "correct_passage": "",
+      "reason": "P-130 (rebuttal): when RTP load responds to the price signal, 'the non-dispatchable PPA cost is unable to be avoided by that response', and the PPAs' fixed-price benefits accrue to FCR customers 'when the fixed price is below the marginal fuel cost' (verbatim). The condition is kept.",
+      "problem": "Framing (low): the sentence gives Georgia Power's premise but not its conclusion ('thus, it should not be included in the credit given for demand response or the cost for taking service'). On its own, 'real-time customers cannot avoid take-or-pay costs' can read as if they are stuck paying those costs, the opposite of Georgia Power's point.",
+      "suggested_fix": "Georgia Power said take-or-pay costs do not go away when real-time customers cut their use, so they should not count against those customers, and that the contracts' fixed-price benefits go to customers on standard rates \"when the fixed price is below the marginal fuel cost.\""
+    },
+    {
+      "line": 254,
+      "sentence": "GIPL said coal-related costs \"vary with sustained increases in demand,\" though they are \"fixed\" based on Georgia ...",
+      "marker": "[P-156]",
+      "verdict": "supports",
+      "evidence_span": "While these costs are “fixed” based on Georgia Power’s orders for coal deliveries, it is clearly the case that if coal use increased or decreased by 250%, then there would be some increase or decrease",
+      "correct_passage": "",
+      "reason": "P-156 (GIPL): all three quotes are verbatim; 'Georgia Power's coal orders' condenses 'orders for coal deliveries'; the 250% condition is kept.",
+      "problem": "Very minor: 'rose or fell by 250%' puts GIPL's figure into paraphrase, and a fall of 250% is not possible; quoting GIPL's words ('increased or decreased by 250%') makes clear the figure is theirs. 'In them' also drops the source's 'each of these costs'.",
+      "suggested_fix": "...and that if coal use \"increased or decreased by 250%,\" there would be \"some increase or decrease in each of these costs.\""
+    }
+  ],
+  "framing_issues": [
+    {
+      "line": 9,
+      "text": "by amounts partly blacked out",
+      "issue": "True across the set, but for Option 1 (Plans B and D) no amount is public at all (P-139 is fully REDACTED); a phone reader may assume every plan has a partly public figure. Only PIA Staff's Option 2 delta is public (P-078).",
+      "severity": "low"
+    },
+    {
+      "line": 195,
+      "text": "real-time customers cannot avoid take-or-pay costs by cutting their use",
+      "issue": "Gives Georgia Power's premise without its conclusion (P-130: the cost 'should not be included in the credit given for demand response or the cost for taking service'); in a 'Who disagrees' slot it can read as saying real-time customers are stuck with these costs.",
+      "severity": "low"
+    }
+  ],
+  "summary": {
+    "units_checked": 12,
+    "supports": 9,
+    "partial": 0,
+    "does_not_support": 0,
+    "wrong_span": 0,
+    "questionable_or_invalid_tags": 1
+  }
+}
