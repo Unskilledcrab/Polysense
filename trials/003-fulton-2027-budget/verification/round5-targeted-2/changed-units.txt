@@ -1,0 +1,45 @@
+Trial 003, revision 5.2 (correction; last fixes after the targeted re-check): changed or new units
+Line numbers are in trials/003-fulton-2027-budget/workspace.md (revision 5.2). The baseline is revision 5.1
+(committed in 2820274; workspace sha256 04cb4524cbc2…). "Unit" = one sentence and its citation or tag.
+Kinds: [VALUES] values-guide line, [IF-YOU] "If you..." line, [IN-SHORT] card "In short" line,
+[NOCHECK] status lines (not checked). Item numbers refer to the revision 5.2 brief.
+
+workspace.md
+L3   [NOCHECK] Status line: "revision 5.2: last fixes after the targeted re-check; re-check pending".
+L4   [NOCHECK] "How this page was made" line: adds the last fixes after the targeted re-check.
+L16  [IF-YOU] First sentence: "2027 funding for the jail, courts, prosecutors and public defender's office isn't known as of Nov 8, 2026." {analysis} (item 8: "public defense" became "public defender's office"; reworded to keep the line at 45 words).
+L51  "The public defender's office defends people charged with crimes who can't afford a lawyer." {analysis: plain-language definition} (item 8).
+L78  "The solicitor-general's office prosecutes less serious crimes, called misdemeanors." {analysis} (item 8).
+L92  "2. A FOX 5 report says a directive asked departments to limit 2027 requests for extra money to "5% above current allocations."" [P-077, P-080] (item 2).
+L92  New: "Commissioner Barrett's resolution says the commission restricted requests to 5% of each department's "base budget."" [P-029, P-032] (item 2).
+L121 "The Board set the resolution aside (filed it) on Nov 4." {analysis: P-024, P-025} (item 1; was a cited sentence with an untagged gloss).
+L128 Layer 3 intro: "Option C, a proposal to change how drafts are built, was set aside (filed) on Nov 4." {analysis: P-024, P-025} (item 1; intro still 60 words).
+L132 [VALUES] Today's process: names both sponsors; the quote is now "earlier and ongoing input" (item 4). 34 words; quotes 4 + 2.
+L133 [VALUES] New line (justice officials, their primary objection): "If you care most about the justice system's voice: Chief Probate Judge Kenya Johnson, for six justice officials, said they decline to join "a process that unnecessarily limits the voices of the justice system."" [P-078, P-076] (item 4). 34 words; quote 11.
+L134 [VALUES] Option C, rewritten in L132's form: "If you care most about informed decision-making: Resolution 26-0729 (Option C), which Commissioner Dana Barrett sponsored, says listing requests in the proposed budget has let the Board "get a true picture of the departments' needs."" [P-024, P-028, P-032] (item 4). 35 words; quote 8. REMOVED from the guide: Gammage's court-funding line (court funding stays on card 6).
+L135 [VALUES] Shared note: "Two sides claim transparency: ..." (was "Both sides", now that the guide has three lines); tag cites the title as P-024 and P-027 (items 4 and 8).
+L136 [VALUES] Closing line: the January-vote sentence replaced by "Each side gets one line, so the justice officials' requests for more money and a January vote are on cards 6 and 5." {editorial} (item 4). The other three sentences are unchanged.
+L142 "The 2026 plan leaves savings about $2.8 million above the least the county must keep." {computed: ... P-054's "Fund Balance Minimum Reserve" row} (item 8: "leaves"; unbroken row name).
+L143 "FOX 5 says that limit holds requests for extra money to "5% above current allocations."" [P-077, P-080] (item 2).
+L143 New: "Resolution 26-0729 puts it at 5% of each department's "base budget."" [P-029, P-024] (item 2).
+L143 "The public defender's office defends people charged with crimes who can't afford a lawyer." {analysis} (item 8).
+L143 New: "The probate judge heads the court that handles estates, guardianships, marriage licenses and weapons carry licenses, among other services." [P-087, P-076] (item 8).
+L166 "FOX 5 says the 5% limit holds departments' requests for extra money to "5% above current allocations."" [P-077, P-080] (item 2).
+L166 New: "Resolution 26-0729 puts it at 5% of each department's "base budget."" [P-029, P-024] (item 2).
+L166 "The public defender's office defends people charged with crimes who can't afford a lawyer." {analysis} (item 8).
+L166 New: "The probate judge heads the court that handles estates, guardianships, marriage licenses and weapons carry licenses, among other services." [P-087, P-076] (item 8).
+L166 "No 2027 source we archived argued against more money for the six offices." {analysis} (item 8: "the six offices").
+L172 "...and Resolution 26-0729 (Barrett; its motion to approve failed Oct 21, and it was filed Nov 4)." [P-016, P-017, P-024, P-032] (item 1: gloss removed from the cited sentence).
+L172 New: "Filing set Resolution 26-0729 aside without approving it." {analysis: P-024, P-025} (item 1).
+L202 [IN-SHORT] Card 3: "Resolution 26-0729 says the 5% limit effectively makes the code's rule on requests "impossible."" [P-029, P-024] and "The code's rule and 2026 practice are on record; the conflict isn't settled." {analysis} (item 6). 39 words.
+L214 [IN-SHORT] Card 4: "If the claim is right, all commissioners and staff can hear departments' requests." {analysis} / "Commissioner Ellis called the commission's meetings "open meetings" and the process "more transparent and open" than in recent years." [P-073] / "Records back the announced hearings, not the comparison." {analysis} (item 5). 40 words; 6 quoted.
+L238 [IN-SHORT] Card 6: "Funding decisions could affect court delays, jail conditions and public safety, justice officials said, Atlanta News First reported." [P-069] / "The officials asked for more money." [P-070] / "County records back added jail-agreement costs, not most other needs." {analysis} (item 7). 34 words.
+L242 "When the 2026 proposal was written, consent decree costs were "still being vetted and have not been determined," though the county expected them to grow." [P-050, P-046] (item 8: "the 2026 proposal"; P-046 added, which shows the message came with the 2026 proposal).
+L242 "That leaves savings about $2.8 million above the least the county must keep." {computed: ... P-054's "Fund Balance Minimum Reserve" row} (item 8: unbroken row name).
+
+home.md
+L5   "Speak at the Fulton County commissioners' public comment, in person or by Zoom, before the Board adopts the budget." [P-036, P-039, P-067, P-005, P-014] (item 3). 24 words with the next sentence.
+L14  "Fulton's Board of Commissioners voted to set aside (file) a resolution to end a limit holding departments' requests to 5% above current funding." {analysis: P-024, P-025; the limit's terms are FOX 5's, P-077} (item 1). 23 words.
+
+page.yaml
+No strings changed.
