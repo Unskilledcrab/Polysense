@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| **Process** | A. Bill workspace ([runbook v0.2](../../docs/process/runbooks/bill-workspace.md)) |
+| **Process** | A. Bill workspace ([runbook v0.3](../../docs/process/runbooks/bill-workspace.md)) |
 | **Bill** | HB 1009, 2025–2026 session, Georgia General Assembly. Signed 2026-05-05 as Act 395; takes effect 2026-12-31 |
 | **Done by** | AI agent (Claude Code), by hand |
 | **Verified by** | The AI-only [verification protocol](../../docs/process/verification-protocol.md); no human in the loop ([ADR 0014](../../docs/adr/0014-ai-only-verification.md)) |

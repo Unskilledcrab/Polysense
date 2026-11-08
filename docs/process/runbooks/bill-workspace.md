@@ -1,4 +1,4 @@
-# Runbook: bill decision workspace (manual), v0.2
+# Runbook: bill decision workspace (manual), v0.3
 
 **Purpose:** turn one bill into a clear, fully cited decision workspace (the 30-second version plus
 Layers 1–5) by hand. **Output:** `trials/NNN-<bill>/`.
@@ -42,6 +42,11 @@ Rules added after Trial 001:
   law, explain the difference (for example, a district starting early) rather than picking one.
 - **Produce a "hosts needed" list** for retrieval. A bill's evidence usually spans the legislature, the
   governor's office, agencies, universities, news sites and journals.
+- **Count documented voices on each side before drafting.** Trial 001's sources quoted four officials and
+  a student for the law but only one named critic, so every concern was raised by an ordinary person and
+  answered by officials. If one side is thin, search for more before drafting: members who voted no,
+  amendment sponsors, organizations, and teacher, parent or student groups. If none can be found, say so
+  on the page.
 
 ## Step 2: Snapshot
 
@@ -86,8 +91,10 @@ Follow the [content-style-guide](../../product/content-style-guide.md) and the
 4. **Layer 3: Options.** Include the status quo. For each option: who benefits, who pays, what's
    uncertain.
 5. **Layer 4: Arguments.** Documented arguments first, with speaker, venue, date and a verbatim quote.
-   Anticipated arguments are labeled and unattributed. Each card has the claim, what supports it, what's
-   missing, what challenges it and what's uncertain. Mark the claim type.
+   Anticipated arguments are labeled and unattributed. Every card uses the same fields in the same order
+   (In short · Who says it · What supports it · Who disagrees · What challenges it · What's missing ·
+   What's uncertain) and follows the one-bar rules in the style guide, section 8. Mark the claim type
+   and the evidence label, and print the labeling rule above the cards.
 6. **Layer 5: Evidence.** Every source with a type badge, capture date, hash prefix and "why this source".
 
 Every sentence ends with a passage citation `[P-###]` or a tag (`{analysis}`, `{editorial}`,
@@ -148,3 +155,4 @@ on this workspace.
 | v0 | 2026-11-08 | Created from research | — |
 | v0.1 | 2026-11-08 | Step 1: search summaries are discovery-only; discrepancy list; "hosts needed" list | [001](../../../trials/001-hb1009-high-school-cellphones/log.md) (steps 0–1) |
 | v0.2 | 2026-11-08 | Step 2: snapshot tool, legis.ga.gov browser method, bot-check fallback, strike/underline extraction. Step 3: passage spec + builder. Step 6: AI-only verification protocol replaces human review | [001](../../../trials/001-hb1009-high-school-cellphones/log.md) (steps 2–6) |
+| v0.3 | 2026-11-08 | Step 1: count documented voices per side before drafting. Step 4: follow the argument-card rules in the [style guide](../../product/content-style-guide.md) (section 8) | [001](../../../trials/001-hb1009-high-school-cellphones/verification.md) (verification rounds 1–3) |
