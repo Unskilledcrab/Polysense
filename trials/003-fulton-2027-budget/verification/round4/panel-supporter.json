@@ -1,0 +1,136 @@
+{
+  "role": "supporter-advocate",
+  "rating": 3,
+  "missing_arguments": [
+    {
+      "argument": "The code requires the draft to include 'the budget requests of all of the county's departments' (each department's requests), not 'all budget requests' of any size. Resolution 26-0729 would have struck 'the', inserted 'all' and added 'No limits or caps shall be placed on what a department ... can request', so today's text says neither. Layer 2 (line 121) reports the resolution's 'clarify' claim but never shows this wording change. Add it there and to card 3's What challenges it so readers see both readings.",
+      "passages": ["P-005", "P-030", "P-083"]
+    },
+    {
+      "argument": "A limit on requests does not limit what the Board can fund. The county's 2026 budget resolution says state law lets the Board adopt sums 'greater or less than the sums presented in the proposed budget'. In 2026 the Board funded above the draft: consent decree $31,843,000 to $50,000,000, Solicitor-General $14,605,358 to $16,149,063. This answers the resolution's 'necessary funding is denied' and belongs in card 3's What challenges it. Today it appears under Option B, Option C and card 6, not on card 3.",
+      "passages": ["P-047", "P-054"]
+    },
+    {
+      "argument": "Fiscal context for card 3's 'sound budgeting' values question, from the same 2026 budget message card 3 already quotes for the critics. It says 'The volume of requests coupled with known budget pressures and financial resources resulted in many unmet requests', and that there were 'no additional resources available to fund program enhancements'. Beyond the enhancements already considered, almost $158 million in operating requests and over $64 million in capital requests came in. The 2026 plan leaves savings about $2.8 million above the minimum reserve. Present this as context, not as the reason for the limit, since no record gives one.",
+      "passages": ["P-049", "P-051", "P-054"]
+    },
+    {
+      "argument": "The 2026 proposal, drafted by the county manager alone, itself used 'a 1% decrease across all agencies and departments'. That is the kind of across-the-board measure the resolution's Pew and GFOA citations address. It bears on the resolution's 'unprecedented restriction' wording on card 3. Line 124 has the fact, but uses it only to distinguish the 1% cut from the 5% limit.",
+      "passages": ["P-003", "P-047", "P-050", "P-028", "P-029"]
+    },
+    {
+      "argument": "The full Board approved the 2027 members at its Aug 19 regular meeting. The code requires selection at a duly noticed Board meeting, with the result entered in the minutes. Card 2 says 'Neither needed a nominating vote' but never says the Board approved them.",
+      "passages": ["P-009", "P-021", "P-022", "P-039"]
+    },
+    {
+      "argument": "The eligibility rules are general. Every commissioner needs a year's service and must not have a term ending in the drafting year; the vice-chair seat goes with the office; members are re-selected each cycle. Card 2 has only the re-selection point. The rule text answers the 'rules they sponsored / only they qualify' framing without claiming anything about anyone's intent.",
+      "passages": ["P-009", "P-010", "P-011"]
+    },
+    {
+      "argument": "For the values guide, the sponsors' own stated values: combining staff expertise 'with earlier and ongoing input from members of the Board, structured to ensure balanced representation from both the northern and southern portions of Fulton County', 'while preserving the full Board's exclusive authority to adopt the County's annual budget'. Ellis also claims transparency for the process: 'more transparent and open than anything we've had in recent years'.",
+      "passages": ["P-004", "P-016", "P-073"]
+    },
+    {
+      "argument": "Card 1 lists Barrett's claim that the commission failed its duty to consult all commissioners. It omits that the vice chair brought budget-process updates to the full Board on Oct 21 and Nov 4, in line with the code's duty to report periodically to the full Board. Say plainly that this shows reporting, not that priorities were sought. Among the cards, only card 4 has it now.",
+      "passages": ["P-013", "P-089", "P-093"]
+    }
+  ],
+  "unfair_wording": [
+    {
+      "line": 190,
+      "text": "FOX 5 reported that Ellis said the commission alone drafts the recommendations, and that the full Board will review and vote on the final budget. [P-079, P-080]",
+      "why": "P-079 says Ellis 'addressed the coalition's concerns, noting that the Budget Commission is solely responsible for drafting recommendations'. In context, and beside FOX 5's own line that the panel 'does not possess final voting power' (P-076), the natural reading is that the commission's role is only to draft recommendations. 'Alone drafts' picks the reading that sounds like a concession to the critics, and it does so in the slot meant for his rebuttal. Quote FOX 5's words verbatim instead.",
+      "severity": "medium"
+    },
+    {
+      "line": 189,
+      "text": "Neither needed a nominating vote. [P-021]",
+      "why": "This is offered as support for the critics, but line 161 says the cards don't use votes as evidence. It also suggests the two seated themselves with no Board action. In fact the full Board approved the 2027 members at its Aug 19 regular meeting (P-021 'APPROVED', P-022, P-039), as P-009(3) requires. Add that fact to What challenges it, or drop the sentence.",
+      "severity": "medium"
+    },
+    {
+      "line": 211,
+      "text": "Other commissioners and their staff could follow the commission's work.",
+      "why": "This narrows Ellis's claim ('Those meetings are open meetings', P-073) to insiders. The hearings were posted on the Public Notices page, which exists 'to inform citizens' of special meetings (P-042). Suggest: 'The commission's hearings were publicly noticed, and Ellis called them open meetings that all commissioners and their staff could attend.'",
+      "severity": "low"
+    },
+    {
+      "line": 175,
+      "text": "North and south Fulton would each have a commissioner shaping the draft, and the full Board still votes.",
+      "why": "The conditional 'would' describes an arrangement already in place (P-021), while card 2's In short uses the plain present ('must present'). Use 'North and south Fulton each have a commissioner helping shape the draft'.",
+      "severity": "low"
+    },
+    {
+      "line": 203,
+      "text": "The resolution says departments may describe broader needs, but only \"in narrative form.\" [P-029]",
+      "why": "In card 3's What challenges it slot, the point is that needs above 5% can still be described to the commission. 'But only' turns it into one more restriction. Neutral: 'The resolution says departments can still describe broader needs \"in narrative form.\"' On card 4 (line 215), where the same fact challenges my side, 'only' fits.",
+      "severity": "low"
+    },
+    {
+      "line": 187,
+      "text": "Department heads must present their needs to two commissioners, not the full Board, critics say. [P-076]",
+      "why": "The most-read line repeats the 'two-commissioner panel' description, but the panel has four members, two of them county staff (P-008). The line is attributed, but the correction comes three bullets later. Suggest '...to the four-member commission, which includes two commissioners, rather than the full Board, critics say.'",
+      "severity": "low"
+    },
+    {
+      "line": 183,
+      "text": "### 2. Two commissioners, seated under rules they sponsored, have too much say",
+      "why": "This card heading, in the page's own voice, adds a self-dealing frame. The Board adopted the rules on Aug 5 (P-017, P-020). Keep the sponsorship fact in What supports it, and title the card by the claim itself, e.g. 'Two commissioners have too much say in the draft'.",
+      "severity": "low"
+    }
+  ],
+  "imbalance": [
+    {
+      "issue": "Values guide (lines 130-133): the only line is Commissioner Barrett's. It ties 'transparency and informed decision-making' to Option C, a resolution the Board filed. The current process gets no line, even though its sponsors' purpose is documented (P-004, P-016) and Ellis claims transparency for it too (P-073). Line 133 is accurate about Options A and B, but next to the lone Option C line it suggests only the critics have documented values.",
+      "severity": "high"
+    },
+    {
+      "issue": "Evidence labels: the critics' card 3 gets 'Supported' for a contested reading of the code ('Code requires all requests'). My side's card 4 is the only card whose label includes a rebuttal ('2026 also had hearings'). See label_disagreements.",
+      "severity": "medium"
+    },
+    {
+      "issue": "Card 3's What challenges it (line 203) leaves out the two strongest supported rebuttals. First, the Board may adopt more than the draft (P-047), and did in 2026 (P-054). Second, the P-049 passage card 3 quotes for the critics ('All submissions were received...') goes on to say the volume of requests and budget pressures 'resulted in many unmet requests', with 'no additional resources available' for enhancements. Card 3 uses the critic-friendly half; the fiscal half appears only on card 6.",
+      "severity": "medium"
+    },
+    {
+      "issue": "Space: card 1's What challenges it (line 179) runs about 130 words, about double card 2's (about 70), mostly 2026 amendment arithmetic. Those figures also show the full Board changed the draft by millions (consent decree +$18,157,000). That supports card 1's 'the full Board still decides', yet the figures appear only as a challenge. Move the Board's 2026 changes to What supports it, and keep 'the total stayed within about 0.4%' as the challenge.",
+      "severity": "medium"
+    },
+    {
+      "issue": "Inconsistent distinction: line 124 stresses that the 2026 1% across-the-board decrease 'was a cut to spending, not a limit on requests'. Card 3 (line 200) relays the resolution's GFOA and Pew criticism of across-the-board 'cuts' and 'spending caps', aimed at a request limit, without making the same distinction. It also doesn't note that the county manager's own 2026 proposal used an across-the-board cut (P-050).",
+      "severity": "low"
+    },
+    {
+      "issue": "Scope notes are asymmetric. Card 4 says 'We did not check Ellis's comparison against older records'. Card 3 says only that the resolution's figures weren't checked. It doesn't say that the GFOA and Pew quotes reach the page secondhand through the resolution (P-028) and weren't checked against the originals.",
+      "severity": "low"
+    },
+    {
+      "issue": "The 30-second version (line 8) explains 'disputed' by naming only the objectors: Barrett, the six officials and Resolution 26-0729. The defenders (Ellis, P-073 and P-079; Resolution 26-0460, P-004) aren't named. Option A's What's uncertain (line 141) likewise cites the officials' request for a January vote (P-070), but not Ellis's statement that there is 'no talk of an early vote' (P-073).",
+      "severity": "low"
+    }
+  ],
+  "label_disagreements": [
+    {
+      "argument": "Card 3: The 5% limit keeps departments' full requests out of the draft",
+      "label": "Code requires all requests, and the 2026 draft listed extras: Supported (code text; budget book)",
+      "proposed": "Code requires the draft to include each department's budget requests, and the 2026 draft listed extras: Supported (code text; budget book)",
+      "why": "P-005 says 'the budget requests of all of the county's departments', not 'all budget requests'. Resolution 26-0729 would have struck 'the', inserted 'all' and added a no-caps sentence (P-030), so 'requires all requests' is the critics' contested reading. Under the page's rule, a claim about a rule is Supported only when the rule's own text settles it, and here it doesn't. The card's own 'Conflict with the code: Uncertain' already concedes this. The paraphrase also contradicts Option C (line 153), which says the resolution 'would have required the proposal to include all requests'."
+    },
+    {
+      "argument": "Card 4: The new process is open",
+      "label": "More open than past years: Uncertain (his statement; 2026 also had hearings)",
+      "proposed": "More open than past years: Uncertain (his statement alone; no record compares the two years)",
+      "why": "Uncertain is right under the rule, since only the claimant's statement backs it. But the parenthetical should give the rule's reason, not a rebuttal; no other card's label includes a counterargument. 'Also had hearings' doesn't settle the comparison either. P-049 doesn't say the 2026 hearings were publicly noticed, while the 2027 ones were (P-042), and in 2026 the requests were listed in an appendix (P-049). Keep both points in the card's body."
+    },
+    {
+      "argument": "Card 1: The commission adds early input, and the full Board still decides",
+      "label": "Whether all commissioners were asked for priorities: Uncertain (no record settles it)",
+      "proposed": "Whether all commissioners were asked for priorities: Uncertain (only Resolution 26-0729 says they were not; no record settles it)",
+      "why": "Minor. The label is correct under the rule, but the doubt comes only from an opponent's unchecked statement (P-029). Naming the source keeps a skimmer from reading the label as independent evidence that the duty was skipped. It also matches card 3's 'claimants' figures' style."
+    }
+  ],
+  "questions_to_weigh": "Mostly neutral, and my side would accept them. Q1 lists the drafting models evenly and describes the current one fairly ('one from each group of districts'). Q4 weighs justice requests against other services and the county's savings, which is my side's concern. Two small fixes. Q2 gives only the no-limit choice an active, positive verb ('list them'). A neutral version: 'Should requests for extra money be limited to a set share of current funding, with larger needs described separately (P-029), or listed in full?' Q3 presents December versus January as a live choice, but no record sets a December vote, and Ellis said there is 'no talk of an early vote' (P-073). Add 'no December vote has been scheduled' so the question doesn't imply one is planned.",
+  "values_guide": "No. My side has no line. The only line is Barrett's for Option C, followed by a note that Options A and B have no documented argument. My side's strongest documented value, in its own words, is Resolution 26-0460's stated purpose (P-004; sponsors Ellis and Abdur-Rahman, P-016): staff expertise 'with earlier and ongoing input from members of the Board, structured to ensure balanced representation from both the northern and southern portions of Fulton County', 'while preserving the full Board's exclusive authority to adopt the County's annual budget'. A parallel line of similar length: 'If you care most about early Board input and north-south balance: Commissioner Bob Ellis and Vice Chair Khadijah Abdur-Rahman sponsored the current commission, \"structured to ensure balanced representation from both the northern and southern portions of Fulton County,\" with \"earlier and ongoing input from members of the Board.\" [P-004, P-016]'. Barrett's line quotes her stated purpose accurately, so it doesn't go beyond its text. But headlining it 'transparency' gives a value both sides claim to one side: Ellis calls the current process 'more transparent and open than anything we've had in recent years' (P-073), and the hearings were publicly noticed with slides posted (P-042, P-055 to P-058). Either add my side's line, or retitle Barrett's line by its specific aim (every request listed in the draft). The line also doesn't mention that Option C was filed; only the Layer 3 intro says so.",
+  "if_you_lines": "The lines for residents and property owners are neutral. The courts-and-jail line (line 16) adds the six offices' case for more money ('staffing shortages, court delays and jail overcrowding'), which is one side's hoped-for gain, with no cost side. More money would come from property tax, other services or savings, and the 2026 plan already drew $73,637,614 from savings, leaving about $2.8 million above the minimum reserve (P-054). The line doesn't frame the commission or the cap directly, and the savings draw appears a few lines later under 'Where the money comes from', so the tilt is mild. Fix: end the line at 'isn't known yet', or add one clause on the cost (P-054; P-049, 'no additional resources available').",
+  "verdict_summary": "Fair in structure and sourcing, but my side is not fully represented. To its credit, the page uses one template for every card and labels my side's rule claims Supported from the code's own text. The critics' cards carry real rebuttals: four members, two of them staff; the county manager decides when there's no consensus; members are re-selected each cycle; offices had hearing slots and sent written requests; the resolution never says the meetings were closed. The page invents no reason for the 5% limit, and it says its card count reflects whom the sources quoted. Main problems: (1) the values guide has a line only for the critics' filed Option C, and gives it 'transparency', which both sides claim. (2) Card 3 labels 'Code requires all requests' Supported, although the code says 'the budget requests of all ... departments' and the resolution itself tried to change 'the' to 'all'. (3) Ellis's FOX 5 rebuttal is rendered as 'the commission alone drafts', which reads as a concession. (4) Card 2 says 'Neither needed a nominating vote' without the Board's Aug 19 approval. (5) Card 3 omits the Board's power to fund above the draft and the fiscal half of P-049. (6) Card 1 carries about twice card 2's challenge text. All of these can be fixed from the archived passages without new sources."
+}

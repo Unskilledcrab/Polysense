@@ -1,0 +1,122 @@
+{
+  "role": "critic-advocate",
+  "rating": 4,
+  "missing_arguments": [
+    {
+      "argument": "Card 3 leaves out the resolution's core reasoning about informed decisions: the county 'has traditionally included departmental budget \"enhancement requests\" in its publicly available Proposed Budget, which has allowed the Board of Commissioners to get a true picture of the departments' needs and to make adjustments to the budget based on these requests.' Only a fragment appears, and only under Option C. Card 3 also cuts two outside sources to fragments: the GFOA's stated reason (caps are 'a symptom of a budget process that does not provide a means for precisely targeted reductions') and Pew's alternative ('use data and evidence to make strategic decisions').",
+      "passages": ["P-028", "P-049"]
+    },
+    {
+      "argument": "Card 3 leaves out the resolution's process charge: the commission imposed the cap without doing its code-required duty to 'solicit budget priorities, requests, and concerns from all members of the board.' That charge appears only among card 1's challenges, not on the card about the cap.",
+      "passages": ["P-029", "P-013"]
+    },
+    {
+      "argument": "Card 3 could cite a non-claimant record: the budget book shows the full Board funded a justice office more than 5% above its draft in 2026. The solicitor-general went from $14,605,358 proposed to $16,149,063 adopted, +$1,543,705 or about 10.6%, and about 22% above its 2025 actual spending of $13,204,950. This bears on whether a 5% limit fits the Board's own recent decisions. Caveat: 2025 actual spending is not the 'base budget' the limit is measured against.",
+      "passages": ["P-054"]
+    },
+    {
+      "argument": "Card 6 leaves out the sheriff's own documented case, which ties his requests to the jail agreement. His slides propose a staffing strategy 'to stabilize staffing and strengthen compliance'. They report 'Salary Attrition of $1,628,224' and ask to 'Restore 100% funding for all sworn and professional vacancies and discontinue attrition-based reductions'. They seek overtime funding 'to align with operational realities and Consent Decree mandates'. Consent Decree Compliance and Court Ordered Contract are among his top-ranked 2027 requests. The attrition point also tempers card 3's use of the county's 'Base Budget' definition as a challenge.",
+      "passages": ["P-060", "P-061", "P-055", "P-059", "P-086"]
+    },
+    {
+      "argument": "Card 6 leaves out the solicitor-general's posted reasons, which rest on outside standards and legal duties: 'Compliance with ABA processing benchmarks for misdemeanor prosecution'; the ABA's advice that prosecutors 'should not carry workloads so large/complex that they endanger fairness, accuracy or the timely processing of charges'; 'Limit ASGs to 400 cases per year'; and 'statutory compliance with Marsy's Law'. These are the office's own account, so they would be labeled Uncertain, but they are its strongest documented reasoning.",
+      "passages": ["P-062", "P-056"]
+    },
+    {
+      "argument": "Fiscal context that answers the 'no money' challenge in Option A and cards 3 and 6: the same General Fund table shows actual revenue exceeded actual spending in 2023, 2024 and 2025 (+$2,978,328, +$12,316,301, +$12,980,636), and fund balance grew from $224,363,249 to $252,638,514. The page cites only the 2026 planned draw on savings and the $2.8M cushion.",
+      "passages": ["P-054"]
+    }
+  ],
+  "unfair_wording": [
+    {
+      "line": 199,
+      "text": "Records back part; the rest is unsettled or rests on the resolution's figures and values.",
+      "why": "Card 1's In short (line 175) leads with 'The county code confirms these rules' and never says its case rests on values, even though card 1 also has two Uncertain parts and a values part. Card 3 carries our central argument, and its In short is the line phone readers see. Use parallel wording, such as: 'The code's text and the 2026 budget book back the rule and past practice; the effect waits on the draft.'",
+      "severity": "medium"
+    },
+    {
+      "line": 214,
+      "text": "The resolution does not say the meetings were closed.",
+      "why": "This is the only 'Who disagrees' field where the page adds its own note to shrink the disagreement, and it is used against our side alone. For example, card 2's 'Who disagrees' gets no note saying Ellis doesn't claim anyone else could serve. Reword it to say what the resolution is about: 'The resolution's transparency concern is what the proposed budget discloses, not whether meetings are open.'",
+      "severity": "medium"
+    },
+    {
+      "line": 156,
+      "text": "Departments and budget staff would have had less than four weeks to prepare and add every omitted request.",
+      "why": "This is the only cost listed for our option. No source argued it, and it overstates. P-031 gives departments 'the opportunity to submit' omitted requests, not a duty. The six offices had already sent written 2027 requests (P-080). The public defender's slides listing $4,720,447 were posted Oct 9 (P-057, P-064). Suggested wording: 'Budget staff would have had 25 days to add any omitted requests departments chose to submit.'",
+      "severity": "medium"
+    },
+    {
+      "line": 80,
+      "text": "The motion got 1 yes vote among the Board's 6 members.",
+      "why": "The full roll call is already given: 1 yes, 1 no, 2 not voting, 2 absent. This added computed line stresses Barrett's isolation and hints at why the motion failed, which the next sentence says the sources don't state. The Nov 4 filing gets no matching 'of 6 members' framing. Drop the line or make it parallel.",
+      "severity": "low"
+    },
+    {
+      "line": 187,
+      "text": "Department heads must present their needs to two commissioners, not the full Board, critics say.",
+      "why": "The card's own label rates 'Hearings held by the commission' as Supported (P-042, P-043), yet the In short credits it only to 'critics'. Card 1's In short states its supported part as fact. A matching version: 'Departments' budget hearings were held by the commission, whose Board members are two commissioners, not by the full Board.'",
+      "severity": "low"
+    },
+    {
+      "line": 235,
+      "text": "Funding could affect court delays, jail conditions and public safety, said justice officials seeking more money, Atlanta News First reported.",
+      "why": "'Seeking more money' describes the speakers by their self-interest. Card 4's In short gives Ellis no matching description, though he sits on the commission he defends. The evidence labels already account for claimants' interest, so 'said six justice officials' is enough.",
+      "severity": "low"
+    },
+    {
+      "line": 237,
+      "text": "The county says its jail agreement requires reforms, including \"improving staffing and supervision.\"",
+      "why": "The funding card leaves out the county's own words, which are the strongest non-claimant support for jail needs: the agreement was 'to address constitutional violations at the Fulton County Jail' and 'mandated the County implement specific reforms' (P-048). Line 205 likewise softens this to 'to address conditions at the county jail.' Layer 2 (line 112) quotes it correctly, and the cards should match.",
+      "severity": "low"
+    }
+  ],
+  "imbalance": [
+    {
+      "issue": "The page builds the case for spending restraint itself and repeats it. The 2026 planned draw of $73,637,614 and the cushion of about $2.8M above the minimum reserve appear at lines 24, 108, 139, 179 and 239, yet no archived source argued for restraint or gave a reason for the 5% limit. The same table (P-054) shows actual General Fund surpluses in 2023 to 2025 (+$2,978,328, +$12,316,301, +$12,980,636) and savings rising to $252,638,514. The page never mentions them. Add that context once, for example in the Layer 2 section 'The 2026 budget, for scale', or cut the repetitions.",
+      "severity": "medium"
+    },
+    {
+      "issue": "In Option A (lines 139-140), 'Who benefits' carries a county-record dollar figure for restraint (the $2.8M cushion), while 'Who pays' rests only on officials' claims as reported in the news. County records back the 'Who pays' side too. The 2026 budget message says 'additional resources will be needed for consent decree compliance', that costs 'could exceed a range from $30 - $60 million', and that they are 'expected to grow' (P-049, P-050).",
+      "severity": "low"
+    },
+    {
+      "issue": "Card 4 (lines 213-215) counts the Oct 21 and Nov 4 budget updates as support for openness. But the Oct 21 item was added to the agenda at the meeting itself (P-089), and the minutes record neither update's content (P-089, P-093). 'What challenges it' also leaves out the page's own finding that the 5% instruction has no public written record or stated reason (lines 120 and 163). That finding bears directly on whether the process is open, yet it appears only under 'What's missing'.",
+      "severity": "low"
+    },
+    {
+      "issue": "In card 2 (line 191), the challenge 'The rules choose the two commissioners again before each budget cycle' implies the seats rotate. But an eligible vice chair serves automatically every cycle (P-011), so one seat is not chosen at all while the vice chair stays eligible. Add that clause.",
+      "severity": "low"
+    }
+  ],
+  "label_disagreements": [
+    {
+      "argument": "Card 3: The 5% limit keeps departments' full requests out of the draft",
+      "label": "Conflict with the code: Uncertain (the code mentions no cap)",
+      "proposed": "Conflict with the code: Uncertain (the code neither allows nor forbids a cap, and no ruling settles it)",
+      "why": "Uncertain is the right label. But the printed reason reads as if the code's silence favors the cap. Layer 2 already puts it both ways ('either to allow one or to forbid one'). The conflict claim rests on the code's 'shall include the budget requests of all' (P-005), not on whether the code names a cap."
+    },
+    {
+      "argument": "Card 3: The 5% limit keeps departments' full requests out of the draft",
+      "label": "Needs above 5%: Uncertain (claimants' figures)",
+      "proposed": "Board went above 5% for a justice office in 2026: Supported (budget book: the solicitor-general's $14,605,358 proposed became $16,149,063 adopted, about +10.6%). 2027 needs above 5%: Uncertain (claimants' figures)",
+      "why": "The printed rule says a non-claimant county record, such as the budget book, settles points about money. P-054 shows the full Board itself funded a justice office more than 5% above its draft. That is a 2026 decision, not proof of 2027 needs, so the 2027 part stays Uncertain. Splitting the label follows the page's own rule that each part gets its own label."
+    },
+    {
+      "argument": "Card 4: The new process is open",
+      "label": "Hearings announced, slides posted: Supported (county records)",
+      "proposed": "October hearings announced, some offices' slides posted: Supported (county records). Other commission meetings open: Uncertain (no notice found; staff set the schedule, P-015)",
+      "why": "The records cover only the October hearings (P-042) and four offices' slides (P-055 to P-058). The card's own 'What's uncertain' says other meetings' openness is unknown, but the label says 'Supported' without that limit. Card 3's labels are scoped part by part, and card 4's should be too."
+    },
+    {
+      "argument": "Card 6: Justice offices need more money",
+      "label": "Courts' and prosecutors' 2027 needs: Uncertain (mainly their own accounts)",
+      "proposed": "Keep it, and add: Board added $1,543,705 to the solicitor-general's 2026 draft: Supported (budget book)",
+      "why": "The card already cites this Board action (P-054) as support, and it comes from a non-claimant county record. Under the printed rule it should get its own Supported label rather than being folded into 'mainly their own accounts'. The other labels (cards 1, 2 and 5, and card 6's jail-cost part) are fair."
+    }
+  ],
+  "questions_to_weigh": "Neutral, and critics would accept all four. Q1's list of choices and its follow-up, 'how should they be chosen?', capture the dispute over the commission's makeup fairly. There are two small gaps. (a) The officials' main objection was having to present their needs to the panel rather than the full Board (P-076). That is about who hears requests, not only who drafts, so Q1 could add 'and who should hear departments' requests'. (b) Q4 weighs justice requests 'against other county services and the county's savings' but not against costs the county says its jail agreement requires and expects to grow (P-048, P-050). Adding 'including costs the jail agreement requires' would keep it balanced.",
+  "values_guide": "Our side's line is there, in the resolution's own words ('to ensure transparency and informed decision-making'). It is the only line, because no archived source argues for Option A or B. So no other side's line goes beyond its evidence, and if anything the guide is generous to us, since Ellis also claims transparency (P-073). One gap: the justice officials' documented values have no line, because they don't map to Options A to C. Those values are not limiting 'the voices of the justice system' (P-078), fairness to 'county agencies and taxpayers' (P-078), and effects on 'court delays, jail conditions and public safety' (P-069). The gap is acceptable, but a one-line pointer to cards 2 and 6 would help readers who care most about those things.",
+  "if_you_lines": "Fair. All three lines say what isn't known yet, and none pairs one side's gains with hidden costs. The property-owner line notes that property tax is the main source of money but doesn't cast justice requests as a threat to tax bills. The courts-and-jail line states the officials' concerns in their own terms. An optional addition: the courts-and-jail line could note that it is unknown whether the 5% limit covers jail-agreement and court-ordered costs (card 3's own point, P-061).",
+  "verdict_summary": "Largely fair to critics. Our strongest words, from Johnson, Labat, Barrett and Gammage, are quoted verbatim. Four of the six cards carry our case, and card 2 earns two Supported labels. The page stresses that no record gives a reason for the 5% limit or for filing Resolution 26-0729, and the only line in the values guide is ours. The tilts that remain can be fixed. Card 3's In short plays down our central argument more than card 1's does theirs. Card 4 adds a one-sided note that narrows our disagreement. The only cost listed for Option C overstates a burden that P-031 and P-080 contradict. The funding card leaves out the sheriff's requests tied to the jail agreement, the solicitor-general's ABA reasons, and the county's own 'constitutional violations' wording. A planned 2026 deficit is repeated five times without the 2023 to 2025 actual surpluses from the same table. On labels, card 4's 'Supported' should be limited to the October hearings, and the budget book's 2026 record (the Board added about 10.6% to the solicitor-general's draft) should get its own Supported part."
+}

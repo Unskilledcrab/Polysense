@@ -1,0 +1,138 @@
+[
+ {
+  "id": "M01",
+  "type": "reversed-direction",
+  "line": 24,
+  "original": "In 2026, the plan spends $73,637,614 more than it expects to take in, using savings.",
+  "mutated": "In 2026, the plan takes in $73,637,614 more than it expects to spend, adding to savings.",
+  "keywords": [
+   "more than",
+   "savings",
+   "spend",
+   "take in",
+   "reversed",
+   "adding"
+  ]
+ },
+ {
+  "id": "M02",
+  "type": "number",
+  "line": 21,
+  "original": "Property tax is the General Fund's biggest source of money: $834,032,152 in 2026.",
+  "mutated": "Property tax is the General Fund's biggest source of money: $843,032,152 in 2026.",
+  "keywords": [
+   "843",
+   "834",
+   "number",
+   "amount"
+  ]
+ },
+ {
+  "id": "M03",
+  "type": "order-reversed",
+  "line": 29,
+  "original": "In 2026, the Board adopted the budget on Jan 21 and held a hearing on the proposed tax rate on Sept 30.",
+  "mutated": "In 2026, the Board held a hearing on the proposed tax rate on Sept 30 and adopted the budget on Jan 21, after the rate was set.",
+  "keywords": [
+   "after the rate",
+   "order",
+   "before",
+   "sept 30",
+   "jan 21",
+   "after"
+  ]
+ },
+ {
+  "id": "M04",
+  "type": "dropped-reason",
+  "line": 36,
+  "original": "- **Whether your property tax bill will change:** not known as of Nov 8, 2026, because the 2027 tax rate isn't set and t",
+  "mutated": "- **Whether your property tax bill will change:** it will stay the same in 2027.",
+  "keywords": [
+   "stay the same",
+   "not known",
+   "tax bill",
+   "unsupported",
+   "no source"
+  ]
+ },
+ {
+  "id": "M05",
+  "type": "wrong-person",
+  "line": 59,
+  "original": "- **District 2:** Commissioner Bob Ellis, also on the Budget Commission.",
+  "mutated": "- **District 2:** Commissioner Dana Barrett, also on the Budget Commission.",
+  "keywords": [
+   "barrett",
+   "ellis",
+   "district 2",
+   "wrong"
+  ]
+ },
+ {
+  "id": "M06",
+  "type": "wrong-seat",
+  "line": 61,
+  "original": "- **District 4:** vacant on the Nov 4 agenda.",
+  "mutated": "- **District 5:** vacant on the Nov 4 agenda.",
+  "keywords": [
+   "district 5",
+   "district 4",
+   "vacant"
+  ]
+ },
+ {
+  "id": "M07",
+  "type": "values-wrong-side",
+  "line": 132,
+  "original": "Commissioner Dana Barrett, who sponsored Option C, proposed it",
+  "mutated": "Commissioner Bob Ellis, who sponsored Option C, proposed it",
+  "keywords": [
+   "ellis",
+   "barrett",
+   "sponsor",
+   "option c"
+  ]
+ },
+ {
+  "id": "M08",
+  "type": "recommendation-word",
+  "line": 133,
+  "original": "This guide doesn't recommend an option. {editorial}",
+  "mutated": "If transparency matters most to you, Option C is the best choice. {editorial}",
+  "keywords": [
+   "best",
+   "recommend",
+   "choice",
+   "endorse",
+   "recommendation"
+  ]
+ },
+ {
+  "id": "M09",
+  "type": "widened-audience",
+  "line": 16,
+  "original": "- **If you use or work in the county courts or jail:** How much the justice offices get for 2027 isn't known yet, as of ",
+  "mutated": "- **If you use or work in the county courts or jail:** The justice offices will get the extra money they asked for in 2027.",
+  "keywords": [
+   "will get",
+   "not known",
+   "asked",
+   "unsupported",
+   "justice"
+  ]
+ },
+ {
+  "id": "M10",
+  "type": "deadline",
+  "line": 8,
+  "original": "A Budget Commission of two commissioners and two staff must propose the budget by Nov 15.",
+  "mutated": "A Budget Commission of two commissioners and two staff must propose the budget by Nov 1.",
+  "keywords": [
+   "nov 1",
+   "nov 15",
+   "deadline",
+   "date"
+  ]
+ }
+]

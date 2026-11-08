@@ -1,0 +1,284 @@
+{
+  "role": "standards-editor",
+  "rating_neutrality": 3,
+  "rating_clarity": 3,
+  "issues": [
+    {
+      "line": 132,
+      "text": "If you care most about transparency and informed decision-making: Commissioner Dana Barrett, who sponsored Option C, proposed it \"to ensure transparency and informed decision-making in the development of the Fulton County budget.\"",
+      "rule": 14,
+      "problem": "The values guide has a line for Option C only (line 133 says A and B have none), which breaks \"one line per option in the same form.\" It also gives a value both sides claim to one side: Commissioner Ellis says the current process \"is more transparent and open than anything we’ve had in recent years\" (P-073). A reader who cares most about transparency is pointed only to the resolution the Board filed. The flip test fails: a guide that offered \"transparency\" only to the commission's side would be rejected for the same reason. No recommendation word is used; the tilt comes from the structure.",
+      "fix": "Don't tie a shared value to one option. Either (a) show both documented transparency claims as parallel lines in the same form, each 35 words or fewer: 'If you care most about transparency (Option C): Resolution 26-0729 sought \"to ensure transparency and informed decision-making in the development of the Fulton County budget.\"' (25 words) and 'If you care most about transparency (current process): Commissioner Bob Ellis said the process \"is more transparent and open than anything we’ve had in recent years.\" [P-073]' (about 27 words), keeping line 133's no-recommendation note; or (b) drop the guide on this page and say that only one option has a stated purpose in our sources.",
+      "severity": "high"
+    },
+    {
+      "line": 200,
+      "text": "Commissioner Barrett's Resolution 26-0729 calls the cap an \"unprecedented restriction.\"",
+      "rule": 2,
+      "problem": "Flip test on historical claims. Ellis's claim that the process is more open \"than anything we’ve had in recent years\" gets its own Uncertain label (line 209), \"is his statement alone\" (line 211) and \"We did not check Ellis's comparison\" (line 216). The resolution's matching claim that the cap is \"unprecedented\" gets no label and no \"not checked\" note. One side's comparison is treated as more settled than the record justifies.",
+      "fix": "Add to card 3's evidence line: \"Unprecedented: Uncertain (the resolution's statement; we didn't check past years).\" Add to its What's missing: \"We did not check past budget instructions for earlier request limits.\" Line 124 shows only that the 2026 proposal cut spending by 1%, which neither confirms nor refutes the claim.",
+      "severity": "medium"
+    },
+    {
+      "line": 203,
+      "text": "What challenges it: The resolution and FOX 5 describe the limit as applying to requests for extra money.",
+      "rule": 1,
+      "problem": "Card 3's case against isn't at full strength. Who says it carries GFOA and Pew authority against caps, but What challenges it leaves out two documented points that bear on the card's \"Sound budgeting\" values question. (a) As the resolution quotes them (P-028), GFOA and Pew speak of across-the-board spending cuts or caps, not limits on what departments may request; the page makes this same distinction for the 2026 1% cut at line 124. (b) The county's documented money position: the 2026 plan draws $73,637,614 from savings, leaving about $2.8 million above the minimum reserve (P-054), and the 2026 budget message said there were \"no additional resources available\" for program enhancements (P-049).",
+      "fix": "Add: 'The GFOA and Pew passages the resolution quotes are about across-the-board spending cuts or caps; they don't mention limits on requests. [P-028] The 2026 plan left savings about $2.8 million above the minimum reserve, and its budget message said there were \"no additional resources available\" for new programs. [P-054, P-049] No source we found ties these figures to the 5% limit. {analysis}' ",
+      "severity": "medium"
+    },
+    {
+      "line": 199,
+      "text": "Readers of the draft wouldn't see departments' full requests.",
+      "rule": 8,
+      "problem": "Cards 3 and 4 open \"In short\" by stating the claim's effect as fact in our voice: \"Readers of the draft wouldn't see departments' full requests.\" and, at line 211, \"Other commissioners and their staff could follow the commission's work.\" The \"if right\" hedge is only inside the tag, and card 3's own label rates \"Effect on the draft: Uncertain (not out yet)\". Cards 2, 5 and 6 attribute the claim in their first sentence, so the template is uneven as well.",
+      "fix": "Put the hedge or the speaker in the visible sentence, for example \"If the claim is right, the draft won't show departments' full requests.\" and \"Ellis's claim: other commissioners and staff can follow the commission's work.\" Both lines are at the 40-word cap, so trim elsewhere (for example, \"Records back part; the rest is unsettled.\").",
+      "severity": "medium"
+    },
+    {
+      "line": 15,
+      "text": "Whether your 2027 county property tax changes isn't known yet, as of Nov 8, 2026, because the proposal isn't public.",
+      "rule": 13,
+      "problem": "The first sentence gives only part of the reason. The tax rate is a separate decision made after the budget (lines 29 and 36; in 2026 the rate hearing was on Sept 30), so the proposal's release won't answer this reader's question. Line 36 gives both reasons; this line leaves one out.",
+      "fix": "\"Whether your 2027 county property tax changes isn't known as of Nov 8, 2026; the proposal isn't public and the tax rate comes later.\" (24 words)",
+      "severity": "medium"
+    },
+    {
+      "line": 16,
+      "text": "Six of the offices have asked for more money, citing staffing shortages, court delays and jail overcrowding, Atlanta News First reported.",
+      "rule": 13,
+      "problem": "This audience line has no \"when\" field, which lines 14 and 15 both have (adoption by the second regular January meeting, expected Jan 20, 2027). It is also the only audience line that carries one side's request, and it says nothing about what isn't known about that request.",
+      "fix": "Add \"The Board must adopt a budget by its second regular January meeting, expected Jan 20, 2027. [P-005, P-041]\". Then either move the officials' request to card 6 or follow it with \"How much of those requests the draft funds isn't known.\"",
+      "severity": "medium"
+    },
+    {
+      "line": 189,
+      "text": "Under those rules, Ellis was the only eligible member from the north for the 2027 budget.",
+      "rule": 8,
+      "problem": "Our sources don't say why Commissioners Thorne and Barrett were ineligible: P-021 gives no reason, and P-010 lists only the possible grounds. That gap matters to Barrett's claim that the two are \"creating a budget commission that only they qualify to be on,\" yet card 2's What's missing doesn't flag it. The label \"Who serves in 2027, and how chosen: Supported\" can read as if the reason were known.",
+      "fix": "Add to What's missing: \"Our sources don't say why the other district 1 to 3 commissioners were ineligible; the rules exclude anyone who has served less than a year or whose term ends in 2026. [P-010, P-021]\" Consider narrowing the label to \"Who serves in 2027: Supported (county records).\"",
+      "severity": "medium"
+    },
+    {
+      "line": 161,
+      "text": "The Fulton County Board of Commissioners' votes are listed under What happened, on the Summary tab.",
+      "rule": 10,
+      "problem": "Too dense for phone-first readers at a grade 6-8 level. Layer 4 has about 600 words of preamble (lines 161-169) before card 1. A rough Flesch-Kincaid estimate puts the 30-second version and \"What it means\" near grade 6.6, Layers 2-3 near grade 9-10, and the cards near grade 10.4. The densest passages are Option B's \"Where it stands\" (line 146, four computed sentences of line-item arithmetic) and card 1's What challenges it (line 179, 134 words, including \"net General Fund spending changes ... adding $20,597,446, and Jan 21, taking out $16,648,868\").",
+      "fix": "Cut the Layer 4 preamble to the voice-count disclosure and the labeling rule, and move the minutes, ratification and video notes to Layer 5. In lines 146 and 179, keep one rounded takeaway (for example, \"The adopted General Fund ended about 0.4% above the proposal, though some lines moved by millions of dollars.\") and move the line-item arithmetic to the evidence layer.",
+      "severity": "medium"
+    },
+    {
+      "line": 146,
+      "text": "The adopted budget raised consent decree spending by $18,157,000.",
+      "rule": 10,
+      "problem": "Several terms aren't defined at first mention on their tab. \"Consent decree\" is undefined on Layer 3 (line 146) and on Layer 4 (line 179); card 3 later defines only \"the jail agreement.\" \"Budget Commission\" appears on Layer 2 at line 87, before its definition at line 91. \"County manager\" and \"chief financial officer\" get no definition at first mention on the Summary tab (line 64) or on Layer 2 (line 91). \"Solicitor-general\" is undefined on Layer 4 (lines 161 and 169). GFOA and The Pew Charitable Trusts aren't described (line 200). Card 4's label says \"his statement\" before Ellis is named (line 209).",
+      "fix": "Add a short definition, drawn from the sources, at first mention on each tab. For example: \"consent decree costs (the cost of meeting the jail agreement)\"; \"the county manager and chief financial officer, the county staff who prepare the budget documents [P-012]\". Name Ellis in card 4's label.",
+      "severity": "medium"
+    },
+    {
+      "line": 141,
+      "text": "When the Board will vote; the county code sets only a latest date, and the justice officials asked for January.",
+      "rule": 2,
+      "problem": "This gives the justice officials' request for a January vote but not Commissioner Ellis's documented reply that \"there is no talk of an early vote\" (P-073), which card 5 includes. Option A shows only one side's view of the timing.",
+      "fix": "Add \"Commissioner Ellis said there is no talk of an early vote, Atlanta News First reported. [P-073]\", or drop the officials' request here and point to card 5.",
+      "severity": "low"
+    },
+    {
+      "line": 167,
+      "text": "Cards are paired by topic: who drafts (1 and 2), requests and openness (3 and 4), then timing (5) and funding (6).",
+      "rule": 2,
+      "problem": "Cards 3 (the 5% limit) and 4 (open meetings) are called a pair, but card 4 doesn't answer card 3, and no archived source argues for the limit. Calling them a pair suggests a balance on the limit that the evidence doesn't have.",
+      "fix": "Say \"who drafts (1 and 2), then the 5% limit (3), openness (4), timing (5) and funding (6).\" Keep line 163's note that no archived source gives a reason for the limit.",
+      "severity": "low"
+    },
+    {
+      "line": 247,
+      "text": "Should the Board adopt the budget in December, or wait until January?",
+      "rule": 12,
+      "problem": "\"Wait\" frames January as a delay. But the record calls a January vote \"normal protocol\" (P-070), the 2026 budget was adopted on Jan 21, and no source shows a plan for a December vote. People who favor January could fairly object to this framing.",
+      "fix": "\"Should the Board adopt the budget at a December meeting or a January meeting?\"",
+      "severity": "low"
+    },
+    {
+      "line": 246,
+      "text": "Should departments' requests for extra money have a set limit, or should the draft list them without one?",
+      "rule": 12,
+      "problem": "Two separate questions are bundled into one either/or that matches Option C's package. A limit on requests and listing every request in the draft can each be chosen without the other; in 2026, extra requests were listed in an appendix (P-049).",
+      "fix": "Split it: \"Should there be a limit on how much extra money departments can request? Should the draft list every request in full?\"",
+      "severity": "low"
+    },
+    {
+      "line": 205,
+      "text": "Whether a cap fits the code's rule on requests; the code mentions no cap, and no source we reviewed settles it.",
+      "rule": 14,
+      "problem": "\"Fits\" is on the recommendation-word list. Here it means legal fit, not advice, and it is outside the values guide, but a word check will flag it. Separately, \"Records fit this\" (line 211) uses a weaker evidence verb than the \"back\" used for the same Supported label in cards 3 and 6.",
+      "fix": "\"Whether the code allows a cap\" and \"Records back this.\"",
+      "severity": "low"
+    },
+    {
+      "line": 205,
+      "text": "such as the sheriff's \"Consent Decree Compliance\" and \"Court Ordered Contract\" requests.",
+      "rule": 8,
+      "problem": "Both quoted phrases appear word for word in P-061, but P-061 is cited only inside the {analysis} tag. The line's only bracket citation is [P-048], which doesn't contain \"Court Ordered Contract\", so a quote check that reads bracket citations will fail this sentence.",
+      "fix": "Add [P-061] as a bracket citation on that sentence.",
+      "severity": "low"
+    },
+    {
+      "line": 76,
+      "text": "Commissioner Arrington abstained, and Commissioner Barrett is listed as not voting.",
+      "rule": 3,
+      "problem": "Only Barrett gets the hedge \"is listed as not voting\"; Pitts and Arrington \"did not vote\" (lines 80-81). The hedge reflects a news report that differs from the roll call (Layer 5, S22; README D1), but the reader isn't told that.",
+      "fix": "\"The roll call shows Barrett did not vote; one news report said she was absent.\" Or use the same wording for every member.",
+      "severity": "low"
+    },
+    {
+      "line": 8,
+      "text": "The commission's makeup and a 5% cap on requests for extra money are disputed.",
+      "rule": 10,
+      "problem": "The page switches between \"cap\" (lines 8, 118, 153, 179, 197, 199, 200, 205) and \"limit\" (lines 38, 49, 78, 80, 119, 120, 140, 151, 163, 195 and others) for the same thing, sometimes within one card (card 3's title says \"limit\"; its label and \"In short\" say \"cap\"). A new reader may think these are two different rules.",
+      "fix": "Use \"5% limit\" everywhere outside quotes, or define it once: \"a 5% limit, which the resolution calls a cap.\"",
+      "severity": "low"
+    },
+    {
+      "line": 70,
+      "text": "Nov 18, Dec 2 and Dec 16, 10 a.m.: The Board holds regular meetings in the Assembly Hall of the Fulton County Government Center, 141 Pryor Street SW, Atlanta.",
+      "rule": 8,
+      "problem": "Some dates that can still change aren't marked: the remaining regular meetings (the 2026 schedule shows a postponed meeting, P-039) and the minutes vote \"set for Nov 18\" (line 163).",
+      "fix": "Mark them as scheduled: \"Scheduled: Nov 18, Dec 2 and Dec 16, 10 a.m.\" and \"a vote scheduled for Nov 18.\"",
+      "severity": "low"
+    },
+    {
+      "line": 52,
+      "text": "If you need a disability accommodation to take part, call the Clerk to the Commission at 404.612.8200.",
+      "rule": 15,
+      "problem": "This is the only action without an Input or Observe label, and its phone format (404.612.8200) differs from the 404-612-8200 used everywhere else.",
+      "fix": "Give it a label (for example, \"Input:\") and write the number as 404-612-8200.",
+      "severity": "low"
+    },
+    {
+      "line": 156,
+      "text": "Departments and budget staff would have had less than four weeks to prepare and add every omitted request.",
+      "rule": 1,
+      "problem": "Option C's case against is one computed timing cost (20 words), while its Who benefits has three points (47 words), including the sponsor's quote. Documented limits on its benefit appear only in card 3: departments could already describe broader needs \"in narrative form\" (P-029), and at least one office's requests above 5% were public anyway (P-057, P-064).",
+      "fix": "Add to Option C's What's uncertain: 'Departments could already describe broader needs \"in narrative form,\" and the public defender's requests above 5% were posted publicly. [P-029, P-057, P-064]' ",
+      "severity": "low"
+    },
+    {
+      "line": 227,
+      "text": "The deadline is \"no later than the second regular meeting in January,\" so an earlier vote is allowed.",
+      "rule": 1,
+      "problem": "Card 5 leaves out the documented effect of waiting. The code says the proposal \"will serve, as presented, as the operating budget until a final budget is adopted\" (P-005), so with a January vote the unadopted draft governs early-2027 spending until then. The page says this at line 100, but not on the timing card.",
+      "fix": "Add to What challenges it (or What's uncertain): 'Until the Board adopts a budget, the code says the proposal \"will serve, as presented, as the operating budget.\" [P-005]' ",
+      "severity": "low"
+    },
+    {
+      "line": 112,
+      "text": "Its aim was \"to address constitutional violations at the Fulton County Jail.\"",
+      "rule": 3,
+      "problem": "This sentence gives the agreement's aim in our voice, in the county's words, while the next sentence attributes (\"The county says ...\"). A serious legal description like this should be attributed the same way.",
+      "fix": "Write: The county says its aim was \"to address constitutional violations at the Fulton County Jail.\" [P-048]",
+      "severity": "low"
+    },
+    {
+      "line": 167,
+      "text": "\"A values question\" means that part of the claim is about what is fair or right, not mainly about facts.",
+      "rule": 16,
+      "problem": "This doesn't contradict the site legend, but its wording (\"not mainly about facts\") is the legend's text for a different label, \"Not mainly factual.\" The legend defines \"Values question\" as \"About what's fair or right; facts alone can't settle it.\" A reader comparing the two may think the page's values label means \"Not mainly factual.\" The other labels the page uses (Supported, Uncertain) are consistent with the legend.",
+      "fix": "Reuse the legend's wording: '\"A values question\" means that part is about what's fair or right; facts alone can't settle it.' ",
+      "severity": "low"
+    }
+  ],
+  "flip_test": [
+    {
+      "line": 132,
+      "text": "If you care most about transparency and informed decision-making: Commissioner Dana Barrett, who sponsored Option C, proposed it \"to ensure transparency...\"",
+      "asymmetry": "Only Option C gets a values line, so \"transparency\" is credited to Barrett's resolution, although Ellis claims it for the current process (P-073). Options A and B get no line.",
+      "fix": "See issue 1: show both transparency claims in the same form, or drop the guide."
+    },
+    {
+      "line": 200,
+      "text": "calls the cap an \"unprecedented restriction.\"",
+      "asymmetry": "Barrett's resolution makes a historical claim (\"unprecedented\") with no evidence label and no \"not checked\" note. Ellis's matching claim (\"more transparent and open than anything we’ve had in recent years\") gets an Uncertain label, \"his statement alone,\" and \"We did not check.\"",
+      "fix": "Label and caveat both claims the same way (issue 2)."
+    },
+    {
+      "line": 211,
+      "text": "Records fit this; his comparison with \"recent years\" is his statement alone.",
+      "asymmetry": "\"Is his statement alone\" is sharper than the wording used for the other side's unchecked material: card 3 says it \"rests on the resolution's figures and values,\" and card 6 says needs \"rest mainly on the offices' own accounts.\"",
+      "fix": "\"Records back this; his \"recent years\" comparison rests on his statement.\" (fits the 40-word cap)"
+    },
+    {
+      "line": 214,
+      "text": "The resolution does not say the meetings were closed.",
+      "asymmetry": "Card 4's Who disagrees adds a limiting caveat about the critics. Card 2's Who disagrees (line 190) adds no matching caveat about Ellis, whose archived statements don't address the eligibility rules or why only the two qualify.",
+      "fix": "Add to card 2: \"Ellis's archived statements don't address the eligibility rules. {analysis: P-073, P-079}\" Or drop card 4's caveat."
+    },
+    {
+      "line": 189,
+      "text": "Ellis and Abdur-Rahman, the commission's two commissioners, sponsored the rules that decide who serves.",
+      "asymmetry": "Card 2 says who sponsored the rules but not that the full Board adopted them, which the page itself says at line 169 (\"adopted Aug 5, 2026\"). The fact that supports the critics (sponsorship) is shown; the fact that cuts the other way (adoption by the full Board) is left out.",
+      "fix": "\"...sponsored the rules that decide who serves, which the full Board adopted on Aug 5, 2026. [P-016, P-017]\" This states the outcome only, with no vote counts or reasons, so it stays within the line 161 evidence rule."
+    },
+    {
+      "line": 76,
+      "text": "Commissioner Barrett is listed as not voting.",
+      "asymmetry": "Only Barrett gets this hedged verb; Pitts and Arrington \"did not vote\" (lines 80-81).",
+      "fix": "See issue on line 76."
+    },
+    {
+      "line": 141,
+      "text": "When the Board will vote; the county code sets only a latest date, and the justice officials asked for January.",
+      "asymmetry": "Option A's What's uncertain carries one side's timing request and leaves out Ellis's documented reply (P-073).",
+      "fix": "See issue on line 141."
+    },
+    {
+      "line": 16,
+      "text": "Six of the offices have asked for more money, citing staffing shortages, court delays and jail overcrowding, Atlanta News First reported.",
+      "asymmetry": "Only the courts-and-jail audience line carries one side's request. The resident and property-owner lines carry no claims from any side.",
+      "fix": "See issue on line 16."
+    },
+    {
+      "line": 187,
+      "text": "Department heads must present their needs to two commissioners, not the full Board, critics say.",
+      "asymmetry": "Card 2's \"In short\" credits an unnamed group (\"critics\"), while card 1's names its source (Resolution 26-0460). P-076 describes the six justice officials' objection, not that of critics in general.",
+      "fix": "\"...not the full Board, justice officials say.\" Trim elsewhere to stay within 40 words."
+    },
+    {
+      "line": 214,
+      "text": "Judge Johnson, speaking for the justice officials, objected to \"a process that unnecessarily limits the voices of the justice system.\"",
+      "asymmetry": "Every other quoted speaker gets \"said.\" Johnson gets \"objected to,\" which isn't in her words (\"We respectfully decline to participate in ...\", P-078).",
+      "fix": "Write: Judge Johnson, speaking for the justice officials, said, \"We respectfully decline to participate in a process that unnecessarily limits the voices of the justice system.\" [P-078]"
+    },
+    {
+      "line": 51,
+      "text": "Several offices' own 2027 budget presentations are on the county's data website, data.fultoncountyga.gov, including the sheriff's and public defender's.",
+      "asymmetry": "Every \"Observe\" link to advocates' own material goes to the justice offices: all four archived decks (Sheriff, Solicitor General, Public Defender, Probate Court; P-055 to P-058) come from the six offices that objected. Nothing points to the Oct 21 and Nov 4 meeting videos, the one place Board members' reasons for the limit and for the filing may be heard (line 163).",
+      "fix": "Add \"Observe: Watch the Oct 21 and Nov 4 Board meetings; the county's record for Resolution 26-0729 links the videos. [P-025]\""
+    },
+    {
+      "line": 192,
+      "text": "We did not find the justice officials' letter, so their statements come from news reports.",
+      "asymmetry": "Card 2 notes that the officials' statements come only from news reports, and card 4 notes the same for Ellis (line 216). No card notes it for Barrett, whose quotes also come from a news report (P-072, Atlanta News First).",
+      "fix": "\"...so their statements, like Commissioner Barrett's, come from news reports. [P-072]\""
+    },
+    {
+      "line": 161,
+      "text": "Our archived sources quote one commissioner, Bob Ellis, backing the commission process.",
+      "asymmetry": "Named voices: on the current process's side, 1 commissioner and 1 resolution; on the critical side, 3 officials, 1 commissioner and 1 resolution. Every voice on both sides is an official; no ordinary residents are quoted. The page discloses this (\"That reflects whom the sources quoted\") and notes the vice chair wasn't reached (line 163).",
+      "fix": "None needed. Keep the disclosure, and don't pad the supporting side to even the count."
+    },
+    {
+      "line": 179,
+      "text": "In the 2026 cycle, the budget book lists net General Fund spending changes to the county manager's proposal dated Jan 7, adding $20,597,446, and Jan 21, taking out $16,648,868.",
+      "asymmetry": "Space: card 1 (the supporting side) has the longest author-built challenge: 134 words, against 72 for card 2, 73 for card 3 and 42 for card 4. The extra length is 2026 arithmetic that no critic made.",
+      "fix": "Trim it to one rounded takeaway (see issue on line 161). That also evens the space."
+    },
+    {
+      "line": 155,
+      "text": "Who benefits: Board members and the public would see every request in the draft.",
+      "asymmetry": "Option C's Who benefits is 47 words, including the sponsor's own quote. Its Who pays is 20 words. Options A and B are close to even (42/47 and 28/27).",
+      "fix": "See issue on line 156: add the documented limits on Option C's benefit."
+    }
+  ],
+  "verdict_summary": "Careful, well-sourced page. Every quote is verbatim in its passage, the arithmetic and weekdays are correct, and every length budget is met: five \"In short\" lines and the Layer 3 intro sit exactly at their caps, which leaves no room for fixes without trimming. There are no party labels, no minors, no private addresses and no voting logistics, and the evidence labels follow the printed rule without contradicting the site legend. Not ready to pass, because of one HIGH issue: the values guide gives \"transparency\" to Option C alone, although Commissioner Ellis claims it for the current process, and only one option gets a line. Medium fixes: (1) label Barrett's \"unprecedented\" claim the same way as Ellis's comparison; (2) give card 3 its documented case against: the county's money position, and that GFOA and Pew speak of spending cuts, not limits on requests; (3) put the hedge for the card 3 and 4 \"In short\" openers in visible text; (4) fix the property-tax and courts audience lines; (5) say that why the other north commissioners were ineligible isn't known; (6) define terms at first mention on each tab; (7) cut the density, since Layers 2-4 read near grade 9-10 and there are about 600 words before card 1."
+}

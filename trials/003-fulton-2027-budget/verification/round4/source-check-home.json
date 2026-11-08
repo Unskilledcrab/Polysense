@@ -1,0 +1,94 @@
+{
+ "checker": "independent-source-verifier",
+ "document": "/home/user/Polysense/trials/003-fulton-2027-budget/home.md",
+ "units": [
+  {
+   "line": 5,
+   "sentence": "Input · Nov 18, 2026, 10 a.m.: Speak about the county budget at the Fulton County Board of Commissioners' public comment, in person or by...",
+   "marker": "[P-036, P-039, P-067]",
+   "verdict": "supports",
+   "evidence_span": "Residents have two options to participate in public comment: in person and virtually via Zoom.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 5,
+   "sentence": "Submit requests before 10 a.m.",
+   "marker": "[P-067]",
+   "verdict": "supports",
+   "evidence_span": "All virtual public comments and requests to speak in person must be submitted before the clerk sounds the start of the 10 a.m. meeting.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 9,
+   "sentence": "By Nov 15, 2026: The Budget Commission, two commissioners and two county staff, must propose Fulton County's 2027 budget to the Board of ...",
+   "marker": "{analysis: the county code sets \"no later than November 15\" for the following year's budget (P-005); P-008 lists the members}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Valid: P-005 sets \"by no later than November 15\" for \"the following year\"; P-008 lists two commissioners plus the county manager and chief financial officer.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 10,
+   "sentence": "Expected by Jan 20, 2027: The Fulton County Board of Commissioners must adopt the 2027 budget by its second regular January meeting, whic...",
+   "marker": "[P-005, P-041]",
+   "verdict": "supports",
+   "evidence_span": "First Regular Meetings Second Regular Meetings Wednesday, January 6, 2027 Wednesday, January 20, 2027",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 14,
+   "sentence": "Nov 4, 2026: Fulton's Board of Commissioners voted to file a resolution to remove a 5% cap on departments' requests for more money.",
+   "marker": "[P-024, P-025, P-029]",
+   "verdict": "supports",
+   "evidence_span": "b. A substitute motion was made by Vice Chair Abdur-Rahman and seconded by Commissioner Thorne, to file. The motion passed by the following vote:",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 14,
+   "sentence": "Filing set the resolution aside.",
+   "marker": "{analysis: plain-language meaning; its status is \"Filed\" (P-024), and its history (P-025) shows no later action}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Valid: status \"Filed\" (P-024), and the full history (P-025) shows no action after the Nov 4 filing.",
+   "suggested_fix": ""
+  }
+ ],
+ "framing_issues": [
+  {
+   "line": 5,
+   "text": "Submit requests before 10 a.m.",
+   "issue": "Vague when read alone: it doesn't say which requests (to speak in person, or Zoom comments) or where to send them (the sources don't say; the explainer suggests calling 404-612-8200). It also leaves out that speaking isn't guaranteed: Fulton residents go first, and comment time is capped at 60 minutes (P-036).",
+   "severity": "low"
+  },
+  {
+   "line": 9,
+   "text": "The Budget Commission, two commissioners and two county staff",
+   "issue": "\"Two county staff\" is vague on its own; name them (the county manager and the chief financial officer, P-008).",
+   "severity": "low"
+  },
+  {
+   "line": 14,
+   "text": "voted to file a resolution",
+   "issue": "Read alone, \"file\" can mean \"submit\". The next sentence explains it, but the line also leaves out that the vote was 4 to 1 and that a motion to approve had failed on Oct 21 (P-024, P-034).",
+   "severity": "low"
+  }
+ ],
+ "summary": {
+  "units_checked": 6,
+  "supports": 4,
+  "partial": 0,
+  "does_not_support": 0,
+  "wrong_span": 0,
+  "questionable_or_invalid_tags": 0
+ }
+}

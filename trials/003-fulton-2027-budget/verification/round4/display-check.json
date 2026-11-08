@@ -1,0 +1,104 @@
+{
+ "checker": "independent-source-verifier",
+ "document": "/home/user/Polysense/trials/003-fulton-2027-budget/page.yaml",
+ "units": [
+  {
+   "line": 6,
+   "sentence": "title: Fulton County commissioners adopt the 2027 budget by their second January meeting",
+   "marker": "[P-005, P-014, P-041]",
+   "verdict": "partial",
+   "evidence_span": "The budget shall then be adopted by the board of commissioners by no later than the second regular meeting in January",
+   "correct_passage": "",
+   "problem": "A present-tense headline (\"commissioners adopt ... by\") reads as a done deal or a certainty. P-005 sets only a deadline (\"no later than\"), and nothing had been adopted as of Nov 8. It also drops \"regular\" from \"second regular meeting in January\".",
+   "suggested_fix": "Fulton County commissioners must adopt the 2027 budget by their second regular January meeting"
+  },
+  {
+   "line": 7,
+   "sentence": "link_text: Fulton County's 2027 budget",
+   "marker": "[P-005, P-042]",
+   "verdict": "supports",
+   "evidence_span": "for the purpose of holding budget hearings for Fulton County’s 2027 General Fund Budget",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 9,
+   "sentence": "status chip: Budget Commission draft due by Nov 15, 2026",
+   "marker": "[P-005]",
+   "verdict": "supports",
+   "evidence_span": "by no later than November 15, a proposed budget governing expenditures of all county funds",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 10,
+   "sentence": "status chip: Board vote due by its 2nd January meeting, expected Jan 20",
+   "marker": "[P-005, P-041]",
+   "verdict": "supports",
+   "evidence_span": "by no later than the second regular meeting in January of the year to which it applies",
+   "correct_passage": "",
+   "problem": "Minor: drops \"regular\" (the deadline is the second regular meeting in January); \"expected Jan 20\" is properly hedged (P-041 is a proposed schedule).",
+   "suggested_fix": "Board vote due by its 2nd regular January meeting, expected Jan 20"
+  },
+  {
+   "line": 12,
+   "sentence": "option chip A: Draft due Nov 15",
+   "marker": "[P-005]",
+   "verdict": "supports",
+   "evidence_span": "by no later than November 15",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 13,
+   "sentence": "option chip B: Board can add or cut money",
+   "marker": "[P-047]",
+   "verdict": "supports",
+   "evidence_span": "whether greater or less than the sums presented in the proposed budget",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 14,
+   "sentence": "option chip C: Set aside (filed) Nov 4",
+   "marker": "[P-024, P-025]",
+   "verdict": "supports",
+   "evidence_span": "b. A substitute motion was made by Vice Chair Abdur-Rahman and seconded by Commissioner Thorne, to file. The motion passed",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  }
+ ],
+ "framing_issues": [
+  {
+   "line": 6,
+   "text": "Fulton County commissioners adopt the 2027 budget by their second January meeting",
+   "issue": "As a present-tense headline, it reads as if the budget has been or certainly will be adopted. P-005 sets a deadline (\"no later than\"), and nothing had been adopted as of Nov 8. It also drops \"regular\" from \"second regular meeting in January\".",
+   "severity": "medium"
+  },
+  {
+   "line": 10,
+   "text": "Board vote due by its 2nd January meeting, expected Jan 20",
+   "issue": "Drops \"regular\"; the deadline is the second regular meeting in January (P-005). A special called meeting would not count.",
+   "severity": "low"
+  },
+  {
+   "line": 14,
+   "text": "Set aside (filed) Nov 4 (kind: bad)",
+   "issue": "Only Option C's chip is styled \"bad\". The negative styling can read as a judgment on the option rather than its procedural status. A neutral status style would be more even.",
+   "severity": "low"
+  }
+ ],
+ "summary": {
+  "units_checked": 7,
+  "supports": 6,
+  "partial": 1,
+  "does_not_support": 0,
+  "wrong_span": 0,
+  "questionable_or_invalid_tags": 0
+ }
+}
