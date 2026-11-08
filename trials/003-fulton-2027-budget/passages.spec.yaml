@@ -5,7 +5,8 @@
 #                                         so build_passages.py strips page tags and printed line numbers
 #   S01.clean.txt, S04d.clean.txt         trials/tools/pdf_markup.py --clean (struck words dropped); used only for the
 #                                         code sections that carry strike-through/underline markup
-#   S05.txt, S06.txt, S07b.txt, S08b.txt, S09b.txt  pdfplumber text (scripts/pdf_text.py, no prefix)
+#   S05.txt, S05b.txt, S05c.txt, S06.txt, S07b.txt, S08b.txt, S09b.txt  pdfplumber text (scripts/pdf_text.py,
+#                                         no prefix)
 #   S10b.txt ... S10e.txt                 slide text from the .pptx decks (scripts/pptx_text.py, stdlib only)
 #   S08.txt, S09.txt, S11.txt, S20.txt, S21.txt, S22.txt  visible text written by trials/tools/snapshot.py
 # JSON and HTML snapshots are read directly.
@@ -118,6 +119,20 @@ passages:
      start: "26-0729 Board of Commissioners", end: "(Barrett) (MOTION TO APPROVE FAILED ON 10/21/26)"}
   - {id: P-038, source: S05, file: S05.txt, locator: "p.10, item 26-0766",
      start: "26-0766 Board of Commissioners", end: "(Abdur-Rahman)"}
+  # --- S05b, S05c: the Clerk's post agenda minutes, 2026-10-21 and 2026-11-04 (revision 3 minutes search) ----------
+  - {id: P-088, source: S05b, file: S05b.txt, locator: "p.15, item 26-0729 (motion to approve, 2026-10-21; whole entry)",
+     start: "26-0729 Board of Commissioners", end: "Did Not Vote: Pitts, and Arrington"}
+  - {id: P-089, source: S05b, file: S05b.txt, locator: "p.17, added item 26-0735 (budget update, 2026-10-21; whole entry)",
+     start: "26-0735 Board of Commissioners", end: "Absent: Thorne",
+     note: "The whole entry: it ends with the vote to add the item, and the next line is 'ADJOURNMENT'. It records no summary of the discussion."}
+  - {id: P-090, source: S05c, file: S05c.txt, locator: "p.1, document status",
+     start: "POST AGENDA MINUTES", end: "Scheduled date for ratification: November 18, 2026"}
+  - {id: P-091, source: S05c, file: S05c.txt, locator: "p.4, item 26-0746 (ratification of minutes; whole entry)",
+     start: "26-0746 Clerk to the Commission", end: "Absent: Arrington"}
+  - {id: P-092, source: S05c, file: S05c.txt, locator: "p.11, item 26-0729 (motions to approve and to file, 2026-11-04; whole entry)",
+     start: "26-0729 Board of Commissioners", end: "Did Not Vote: Arrington"}
+  - {id: P-093, source: S05c, file: S05c.txt, locator: "p.12, item 26-0766 (budget update, 2026-11-04; whole entry)",
+     start: "26-0766 Board of Commissioners", end: "(Abdur-Rahman) (DISCUSSED)"}
   # --- S06, S07, S07b: meeting schedules -----------------------------------------------------------------------
   - {id: P-039, source: S06, file: S06.txt, locator: "2026 meeting schedule (whole document)",
      start: "FULTON COUNTY BOARD OF COMMISSIONERS", end: "or visit Fulton County’s website at https://www.fultoncountyga.gov/"}
