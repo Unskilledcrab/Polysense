@@ -46,6 +46,7 @@ If something doesn't fit, it moves to a deeper layer. It is not crammed in.
 - Convert to **human terms** where possible (per household, per student, per month). Mark the conversion
   `{computed}` and show the arithmetic in Layer 5.
 - Use ranges when sources give ranges. Never invent precision.
+- A blacked-out (redacted) number is unknown, not zero. Say so when only one side's numbers are public.
 - When something is uncertain, **say why** ("depends on how many districts opt in").
 
 ## 5. Neutral wording
@@ -124,3 +125,4 @@ overcorrecting, against critics.
 | 2026-11-08 | v0.2: argument-card rules (one bar for every side) | Trial 001 verification rounds 1–2 |
 | 2026-11-08 | v0.3: pronouns need a source; absence claims need the whole text | Trial 001 verification round 3 |
 | 2026-11-08 | v0.4: keep political parties out of it (replaces "party labels for every speaker or none") | Owner direction after Trial 001 |
+| 2026-11-08 | v0.4: redacted numbers are unknown, not zero | Trial 002 (PSC Docket 57171) |

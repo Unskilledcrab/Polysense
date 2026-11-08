@@ -28,7 +28,7 @@ The project is in **planning and manual trials**. These documents are the plan. 
 |---|---|
 | [process/prove-then-automate.md](process/prove-then-automate.md) | Trials, the automation gate, shadow mode |
 | [process/verification-protocol.md](process/verification-protocol.md) | AI-only fact and bias checking: source check, bias panel, planted-error calibration |
-| [process/runbooks/bill-workspace.md](process/runbooks/bill-workspace.md) | Step-by-step manual runbook for a bill workspace |
+| [process/runbooks/bill-workspace.md](process/runbooks/bill-workspace.md) | Step-by-step manual runbook for a decision workspace: bills, regulatory cases and local budgets |
 | [process/runbooks/_template.md](process/runbooks/_template.md) | Template for new runbooks |
 | [ops/review-desk-handbook.md](ops/review-desk-handbook.md) | What a reviewer checks, and what "supports the claim" means |
 

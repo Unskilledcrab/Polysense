@@ -1,7 +1,8 @@
-# Runbook: bill decision workspace (manual), v0.3
+# Runbook: decision workspace (manual), v0.4
 
-**Purpose:** turn one bill into a clear, fully cited decision workspace (the 30-second version plus
-Layers 1–5) by hand. **Output:** `trials/NNN-<bill>/`.
+**Purpose:** turn one public decision into a clear, fully cited decision workspace (the 30-second version
+plus Layers 1–5) by hand. **Output:** `trials/NNN-<slug>/`. Written for bills (Trial 001), then adapted for
+a regulatory case (Trial 002) and a county budget (Trial 003); see "Other kinds of decisions" below.
 
 **Automation gate:** not passed (0 of 3 runs). See
 [prove-then-automate.md](../prove-then-automate.md).
@@ -32,7 +33,7 @@ Find each of these, in priority order:
    for a fact.
 
 For each source, record the id, title, publisher, **type** (`primary-government`, `secondary-research`,
-`advocacy`, `news`, `local-government`), URL, status and why it's needed.
+`advocacy`, `news`, `local-government`, `party-filing` for any party's filing in a contested case), URL, status and why it's needed.
 
 Rules added after Trial 001:
 
@@ -56,12 +57,18 @@ Rules added after Trial 001:
    = id 1033; "Doc. Number" field). Load `legislation/<id>` and save the JSON the page itself requests
    (`api/legislation/detail/<id>`). Version PDFs download directly from
    `api/legislation/document/<session>/<versionId>`. Don't copy the site's hidden API key into our code.
-3. If a site returns a bot check instead of content, re-load it in a headless browser and hash the
-   rendered text. Record the `method`.
+3. If a page needs JavaScript to show its content, load it in a headless browser and hash the rendered
+   text; record the `method`. An anti-bot challenge, a 403 or a paywall is a **block**: record it and move
+   on, never work around it. Retry once, after a pause, for a 404 or 5xx error, and keep both responses.
 4. Record everything in `sources.yaml`, then run `verify_hashes.py`.
-5. Request an Internet Archive capture where allowed, and record the archive URL.
+5. Request an Internet Archive capture where the session allows it, and record the archive URL. If the
+   request is denied, record that.
 6. If a source can't be fetched, mark it `not-retrieved` or `rejected` with the reason. **Never
    substitute another document.**
+
+**Other file types.** Word, Excel, PowerPoint, zip and PDF filings: extract their text with
+`trials/tools/extract/`. A scanned page with no text layer can't become a passage (no OCR tool is approved);
+read it by eye only if needed, record that, and don't state its contents as facts.
 
 **Bill PDFs: strike-through and underline matter.** Plain text extraction merges deleted and inserted
 words ("restricted prohibited"). Run `pdf_markup.py`, which writes the default markup, `--clean` (as
@@ -78,6 +85,7 @@ Choose passages in `passages.spec.yaml` (source, file, locator, exact start and 
 4. Government records may be copied in full. For copyrighted analyses, copy only the passages you will
    cite, keeping each excerpt short.
 5. Do not edit passage text. Fix extraction glitches only, and note the fix.
+6. Official pages can carry party labels or family details. Choose spans that leave them out.
 
 ## Step 4: Draft
 
@@ -99,6 +107,31 @@ Follow the [content-style-guide](../../product/content-style-guide.md) and the
 
 Every sentence ends with a passage citation `[P-###]` or a tag (`{analysis}`, `{editorial}`,
 `{computed: …}`).
+
+### Other kinds of decisions
+
+The steps above hold for every decision; the records and some labels change. Trials 002 and 003 used:
+
+| | Bill | Regulatory case (PSC) | Local budget (county) |
+|---|---|---|---|
+| **Core record** | Bill versions, status, votes | Opening order, scheduling order, filing list, sworn testimony, corrections, motions, transcripts, briefs | Code sections and amending resolutions, agenda items, roll calls, budget books, notices |
+| **Who decides** | Legislature, governor | The commissioners, at a set session | The board, by a set deadline |
+| **How people take part** | Hearings, contacting members | Public witness, written comment before the vote | Public comment at meetings, the budget hearing |
+| **Common formats** | PDF with strike/underline | Word, zip, Excel, scans | PDF, PowerPoint, meeting video |
+
+What carried over from those trials, to use with judgment:
+- **Decisions still ahead.** Say what isn't published yet as what each page showed on a date, and keep a
+  dated status table in the README. Set re-check dates before each scheduled step. Before quoting a number
+  from testimony, look for later corrections.
+- **Who decides** goes in Layer 1 when the decision is still ahead. Options still ahead use "Where it
+  stands" in place of "What happened".
+- **More than two sides.** Label each card by the position it favors, count voices per question, and name
+  alliances that cross.
+- **Parties' own numbers.** Attribute every estimate, give every party's figures the same caveats, and
+  treat a blacked-out number as unknown, not zero. Say so when only one option has public numbers. Every
+  party's filing has the same source type (`party-filing`), including a regulator's own advocacy staff.
+- **Votes and reasons.** Roll calls show how members voted, not why. If reasons may be in meeting video you
+  didn't review, say that rather than "no reasons were given".
 
 ## Step 5: Verify (deterministic checklist → `verification.md`)
 
@@ -157,4 +190,5 @@ on this workspace.
 | v0 | 2026-11-08 | Created from research | — |
 | v0.1 | 2026-11-08 | Step 1: search summaries are discovery-only; discrepancy list; "hosts needed" list | [001](../../../trials/001-hb1009-high-school-cellphones/log.md) (steps 0–1) |
 | v0.2 | 2026-11-08 | Step 2: snapshot tool, legis.ga.gov browser method, bot-check fallback, strike/underline extraction. Step 3: passage spec + builder. Step 6: AI-only verification protocol replaces human review | [001](../../../trials/001-hb1009-high-school-cellphones/log.md) (steps 2–6) |
+| v0.4 | 2026-11-08 | Generalized from bills to decisions: blocks vs. pages that need JavaScript, one retry for 404/5xx, text extractors for other file types, passages that leave out party labels, and "Other kinds of decisions" (records by kind, decisions still ahead, more than two sides, parties' own numbers, votes and reasons) | [002](../../../trials/002-psc-57171-fuel-credit/log.md), [003](../../../trials/003-fulton-2027-budget/log.md) |
 | v0.3 | 2026-11-08 | Step 1: count documented voices per side before drafting. Step 4: follow the argument-card rules in the [style guide](../../product/content-style-guide.md) (section 8) | [001](../../../trials/001-hb1009-high-school-cellphones/verification.md) (verification rounds 1–3) |
