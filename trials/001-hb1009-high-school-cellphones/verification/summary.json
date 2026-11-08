@@ -1,0 +1,120 @@
+{
+ "verified": false,
+ "statusText": "Final checks running",
+ "intro": "An AI agent wrote this page from saved copies of its sources. Separate AI checkers, which never saw the drafting, then checked it in rounds. In this trial, no person checked the facts. Here is what the checkers did and what they found.",
+ "stats": [
+  {
+   "value": "180",
+   "label": "sentences, each tied to a source or labeled as our own analysis"
+  },
+  {
+   "value": "0",
+   "label": "claims found unsupported by their sources, in 3 rounds of fact-checks"
+  },
+  {
+   "value": "13 of 13",
+   "label": "hidden test errors the fact-checker caught"
+  },
+  {
+   "value": "4 of 5",
+   "label": "fairness rating from both the supporters' and the critics' reviewer in round 3"
+  }
+ ],
+ "sections": [
+  {
+   "title": "What we checked",
+   "paras": [
+    "Each round runs the same checks. A page passes only when every check passes, and any fix starts a new round."
+   ],
+   "head": [
+    "Check",
+    "What it does",
+    "Pass mark"
+   ],
+   "rows": [
+    [
+     "Automatic checks",
+     "Code confirms that every sentence cites a source passage or is labeled as our analysis, that quotes match word for word, that saved files match their fingerprints, and that the reading level is about grade 8 or lower.",
+     "No errors"
+    ],
+    [
+     "Blind fact-check",
+     "A separate AI checker sees only this page and the source passages. For each sentence it must copy the exact words that support it, and code confirms those words are really there.",
+     "Every flag fixed or answered"
+    ],
+    [
+     "Fairness panel",
+     "Three more AI checkers. One speaks up for the law's supporters, one for its critics, and a neutral editor checks the rules. The editor also asks of each sentence: would we write it the same way about the other side?",
+     "Both side reviewers give at least 4 of 5, and no serious problem is left"
+    ],
+    [
+     "Testing the fact-checker",
+     "We hid 13 errors in a copy of the page, such as a wrong date, a misquote and one group's figure shown as everyone's. The fact-checker had to find them without knowing they were there.",
+     "At least 9 of every 10 caught"
+    ]
+   ]
+  },
+  {
+   "title": "What each round found",
+   "paras": [
+    "Every round found something to fix. No fact-check found a claim that its sources didn't support, only sentences that said more than the sources did. The fairness panel failed twice before both side reviewers gave the page 4 of 5."
+   ],
+   "head": [
+    "Round",
+    "Fact-check",
+    "Supporters' reviewer",
+    "Critics' reviewer",
+    "Editor (neutral, clear)",
+    "Result"
+   ],
+   "rows": [
+    [
+     "1",
+     "58 supported, 9 partly, 0 unsupported",
+     "3 of 5",
+     "3 of 5",
+     "3, 4",
+     "Failed. Critics had 4 argument cards to supporters' 2, and some quotes were cut"
+    ],
+    [
+     "2",
+     "89 supported, 10 partly, 0 unsupported",
+     "3 of 5",
+     "4 of 5",
+     "4, 4",
+     "Failed. Our fixes went too far the other way"
+    ],
+    [
+     "3",
+     "100 supported, 7 partly, 0 unsupported",
+     "4 of 5",
+     "4 of 5",
+     "4, 4",
+     "Not yet. The editor found 2 serious problems, now fixed"
+    ],
+    [
+     "4",
+     "Running",
+     "Running",
+     "Running",
+     "Running",
+     "Running"
+    ]
+   ]
+  },
+  {
+   "title": "What this can't do",
+   "paras": [
+    "All the checkers are AI, like the writer, so they may share blind spots. Hiding test errors measures only the kinds of errors we thought to hide.",
+    "The checkers compare this page with the sources we saved. They can't tell what is missing from those sources. Ours quote four officials and a student for the law, but only one named critic.",
+    "The two side reviewers stand in for real people's views. They are not real people."
+   ]
+  },
+  {
+   "title": "See every report",
+   "paras": [
+    "Every check, report and fix is public in the project's repository, in trials/001-hb1009-high-school-cellphones/verification.md."
+   ]
+  }
+ ]
+}

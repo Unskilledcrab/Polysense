@@ -4,8 +4,9 @@ Facts and fairness are checked by the [verification protocol](verification.md), 
 loop. **This form is only about the experience:** is it easy to use, easy to find things, and above all
 easy to understand?
 
-Open the prototype (`prototypes/hb1009/index.html`, or the published link) on your phone if you can. You
-can also leave comments directly on the published page.
+Open the prototype on your phone if you can: the published link is
+https://claude.ai/artifact/EsSncywuhPXB2XKCAHE1p9 (private to you until you share it), or open
+`prototypes/hb1009/index.html` locally. You can also leave comments directly on the published page.
 
 ## Quick reactions (one line each is plenty)
 
