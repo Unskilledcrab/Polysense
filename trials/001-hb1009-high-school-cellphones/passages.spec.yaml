@@ -179,3 +179,11 @@ passages:
   # --- S19: Cairo High School (Grady County Schools) page, 2026-06-01 ------------------------
   - {id: P-054, source: S19, file: S19-rendered.txt, locator: "school news page (browser-rendered)",
      start: "Cairo High School June 1, 2026", end: "in the 2026-2027 school year."}
+  # --- Added in revision 6 (reader-first update): who runs the survey, both sides in a reporter's
+  #     words, and the high school start in school-year terms. Same snapshots as before. ----------
+  - {id: P-070, source: S12, file: S12.txt, locator: "release, about the survey (before the methods paragraph)",
+     start: "Each year, the Emory Center for Child Health Policy", end: "their concerns about their children."}
+  - {id: P-071, source: S16b, file: S16b.txt, locator: "article, opening paragraph (both sides)",
+     start: "Supporters argued the move would cut distractions", end: "reach their children during emergencies."}
+  - {id: P-072, source: S16b, file: S16b.txt, locator: "article, start dates",
+     start: "Under the new measure, restrictions for high school students", end: "in the 2027-28 school year."}

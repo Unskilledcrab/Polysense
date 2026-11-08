@@ -231,3 +231,12 @@ text (struck words removed, underlined words kept), recovered with `trials/tools
 
 ### P-054 · S19 · school news page (browser-rendered)
 > Cairo High School June 1, 2026 Georgia House Bill 1009 is a law signed by Governor Brian Kemp that enacts a "bell-to-bell" ban on personal electronic devices for public high school students. The legislation requires high schools to restrict the use of devices like smartphones, smartwatches, tablets, and headphones during the instructional school day. Cairo High School will begin implementation of this law in the 2026-2027 school year.
+
+### P-070 · S12 · release, about the survey (before the methods paragraph)
+> Each year, the Emory Center for Child Health Policy, based in the Rollins School of Public Health, surveys Georgia parents to understand their concerns about their children.
+
+### P-071 · S16b · article, opening paragraph (both sides)
+> Supporters argued the move would cut distractions and ease anxiety, while opponents warned it could spark conflict for school staff and leave parents with fewer ways to reach their children during emergencies.
+
+### P-072 · S16b · article, start dates
+> Under the new measure, restrictions for high school students would begin in the 2027-28 school year.
