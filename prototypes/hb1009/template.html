@@ -1,4 +1,4 @@
-<title>HB 1009 Civic Prototype</title>
+<title>Georgia Decisions Explained</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -10,7 +10,7 @@
   --bg: #f5f7f4; --surface: #ffffff; --sunk: #eef2ee; --ink: #16201c; --muted: #56625c; --line: #d6ddd7;
   --accent: #1d5a45; --accent-ink: #ffffff; --accent-soft: #e2efe8; --gold: #8a5a00; --gold-soft: #f6ead2;
   --ok: #2b7046; --ok-soft: #e1f0e6; --warn: #8a5a00; --warn-soft: #f6ead2; --bad: #a33a3a; --bad-soft: #f6e2e2;
-  --ins: #1d5a45; --ins-bg: #dcefe4; --del: #a33a3a; --del-bg: #f6e2e2;
+  --ins: #1d5a45; --ins-bg: #dcefe4; --del: #a33a3a; --del-bg: #f6e2e2; --unc: #3d5486; --unc-soft: #e6ebf6;
   --font-display: "Newsreader", Georgia, "Times New Roman", serif;
   --font-body: "Atkinson Hyperlegible", "Segoe UI", system-ui, -apple-system, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
@@ -21,12 +21,12 @@
   --bg: #0e1412; --surface: #151d1a; --sunk: #111816; --ink: #e5ece8; --muted: #9eaba5; --line: #2a3531;
   --accent: #7cc9a6; --accent-ink: #0e1412; --accent-soft: #193027; --gold: #e2b65c; --gold-soft: #2c2412;
   --ok: #7cc9a6; --ok-soft: #16291f; --warn: #e2b65c; --warn-soft: #2c2412; --bad: #ee8b8b; --bad-soft: #321a1a;
-  --ins: #8fdab6; --ins-bg: #173326; --del: #f09a9a; --del-bg: #3a1d1d; --shadow: none; color-scheme: dark } }
+  --ins: #8fdab6; --ins-bg: #173326; --del: #f09a9a; --del-bg: #3a1d1d; --unc: #a9bcea; --unc-soft: #1c2438; --shadow: none; color-scheme: dark } }
 :root[data-theme="dark"] {
   --bg: #0e1412; --surface: #151d1a; --sunk: #111816; --ink: #e5ece8; --muted: #9eaba5; --line: #2a3531;
   --accent: #7cc9a6; --accent-ink: #0e1412; --accent-soft: #193027; --gold: #e2b65c; --gold-soft: #2c2412;
   --ok: #7cc9a6; --ok-soft: #16291f; --warn: #e2b65c; --warn-soft: #2c2412; --bad: #ee8b8b; --bad-soft: #321a1a;
-  --ins: #8fdab6; --ins-bg: #173326; --del: #f09a9a; --del-bg: #3a1d1d; --shadow: none; color-scheme: dark }
+  --ins: #8fdab6; --ins-bg: #173326; --del: #f09a9a; --del-bg: #3a1d1d; --unc: #a9bcea; --unc-soft: #1c2438; --shadow: none; color-scheme: dark }
 
 * { box-sizing: border-box }
 html { -webkit-text-size-adjust: 100% }
@@ -110,9 +110,6 @@ p { margin: 0 }
 .item { display: grid; gap: 8px }
 .item .when { font: 500 .85rem/1.2 var(--font-mono); color: var(--ink) }
 .item .go { font-weight: 700; text-decoration: none; justify-self: start; padding: 6px 0; min-height: 40px; display: inline-flex; align-items: center }
-.address { display: flex; gap: 8px; flex-wrap: wrap; align-items: center }
-.address input { flex: 1 1 12rem; min-width: 0; font: inherit; padding: 10px 12px; border-radius: 8px; border: 1px solid var(--line); background: var(--sunk); color: var(--muted) }
-.address button { font: inherit; padding: 10px 14px; border-radius: 8px; border: 1px solid var(--line); background: var(--sunk); color: var(--muted) }
 
 /* Bill header and the 30-second box */
 .billcode { font: 500 .82rem/1 var(--font-mono); color: var(--accent); letter-spacing: .04em }
@@ -163,7 +160,23 @@ details.fold[open] .hint { display: none }
 details.fold .body { padding: 12px 16px 16px; display: flex; flex-direction: column; gap: 12px; border-top: 1px dashed var(--line) }
 .meta-line { font-size: .84rem; color: var(--muted) }
 .ev { font: 700 .74rem/1.3 var(--font-mono); letter-spacing: .02em; padding: 5px 8px; border-radius: 6px; border: 1px solid currentColor; display: inline-block }
-.ev.supported { color: var(--ok) } .ev.mixed, .ev.uncertain { color: var(--warn) } .ev.values { color: var(--muted) }
+.ev.supported { color: var(--ok) } .ev.mixed { color: var(--warn) }
+.ev.uncertain { color: var(--unc); border-style: dashed } .ev.values { color: var(--muted); border-style: dotted }
+.evbtn { font: 700 .78rem/1.2 var(--font-body); color: var(--accent); background: none; border: 0; padding: 6px 2px; min-height: 32px; cursor: pointer; text-decoration: underline }
+.legend { display: grid; gap: 8px }
+.legend .row { display: grid; grid-template-columns: auto 1fr; gap: 10px; align-items: baseline }
+.legend .row p { margin: 0 }
+/* "What it means for you" and the values guide */
+.you { border-left: 4px solid var(--accent) }
+.you h2, .vguide h3 { margin: 0 }
+.ifyou { padding-top: 10px; border-top: 1px solid var(--line) }
+.ifyou:first-of-type { border-top: 0; padding-top: 0 }
+.ifyou strong.lead, .vguide strong.lead { color: var(--ink) }
+.vguide .vline { padding-top: 10px; border-top: 1px solid var(--line) }
+.vguide .vline:first-of-type { border-top: 0 }
+.chip.past { background: var(--sunk); color: var(--muted); border-style: dashed }
+.mayline { margin: 0; font-size: .95rem }
+.qcard ul { margin: 0; padding-left: 1.2em }
 
 /* Collapsible notes */
 details.more { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line) }
@@ -252,6 +265,27 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
     { id: "evidence", tab: "Sources" }
   ];
   var TAG_LABEL = { analysis: "Our analysis", editorial: "Our framing", computed: "Our math" };
+  // Headings follow the kind of decision (page.yaml `kind`), so a utility case never says "What the law does".
+  var KIND = {
+    "law": { tab: "What it does", decision: "What the law does", options: "The choices lawmakers had, and who gains or gives up what. Tap an option for the details." },
+    "regulatory-case": { tab: "What's decided", decision: "What's being decided", options: "The choices on the table, and who gains or gives up what. Tap an option for the details." },
+    "budget": { tab: "What's decided", decision: "What's being decided", options: "The choices on the table, and who gains or gives up what. Tap an option for the details." }
+  };
+  function K() { return KIND[W.kind] || KIND.law; }
+  function tabLabel(L) { return L.id === "decision" ? K().tab : L.tab; }
+  // Plain words for the evidence labels (usability feedback: "Supported · Mixed" meant nothing without a frame).
+  // Each page also prints its exact rule; checkers confirm the two don't contradict.
+  var LEGEND = [
+    ["Supported", "supported", "The records or studies we found back this up."],
+    ["Supported, with limits", "supported", "Backed up, with limits named on the card."],
+    ["Mixed", "mixed", "The sources give conflicting accounts."],
+    ["Contested", "mixed", "The sources dispute it."],
+    ["Uncertain", "uncertain", "Nothing we found settles it yet."],
+    ["Values question", "values", "About what's fair or right; facts alone can't settle it."],
+    ["Not mainly factual", "values", "Mostly about what's fair or right, not about facts."]
+  ];
+  var SYM = { supported: "●", mixed: "◐", uncertain: "○", values: "◇" };
+  function todayISO() { var d = new Date(); return d.getFullYear() + "-" + ("0" + (d.getMonth() + 1)).slice(-2) + "-" + ("0" + d.getDate()).slice(-2); }
 
   function el(tag, attrs, kids) {
     var n = document.createElement(tag);
@@ -270,7 +304,10 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
     var frag = document.createDocumentFragment(), ws = W;  // chips remember which decision they belong to
     list.forEach(function (u, i) {
       if (i > 0) frag.appendChild(document.createTextNode(" "));
-      frag.appendChild(el("span", { class: "u", text: u.t }));
+      var span = el("span", { class: "u" });
+      if (u.segs) u.segs.forEach(function (sg) { span.appendChild(sg.b ? el("strong", { text: sg.t }) : document.createTextNode(sg.t)); });
+      else span.textContent = u.t;
+      frag.appendChild(span);
       if (u.cite) {
         var seen = {};
         u.cite.forEach(function (pid) {
@@ -307,7 +344,7 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
   }
   function blockList(blocks, num) {
     var ul = el(num ? "ol" : "ul", { class: "blocks" + (num ? " num" : "") });
-    blocks.forEach(function (b) { var li = el("li"); li.appendChild(units(b.units)); ul.appendChild(li); });
+    blocks.forEach(function (b) { var li = el("li"); if (b.label) li.appendChild(el("strong", { text: b.label + ": " })); li.appendChild(units(b.units)); ul.appendChild(li); });
     return ul;
   }
   function renderBlocks(blocks) {
@@ -373,25 +410,61 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
   }
 
   // ---------- Views ----------
+  // Home starts with what is being decided, not with tasks (usability feedback: actions shown before the
+  // reader knows what a decision is about feel like pressure). No setup step and nothing is stored.
+  var HOME_TITLE = { "act-now": "If you want to weigh in" };
+  function nextDate(slug) {
+    var t = todayISO(), best = null;
+    D.home.sections.forEach(function (sec) { sec.items.forEach(function (it) {
+      if (it.slug === slug && it.date && it.date >= t && (!best || it.date < best)) best = it.date;
+    }); });
+    return best;
+  }
+  function firstUnit(b) { return b && b.units.length ? units(b.units.slice(0, 1)) : null; }
+  // A decision card: plain title, what's being decided, and "May matter to you if…" lines.
+  function decisionCard(w, link) {
+    W = w;
+    var sum = sectionById("summary"), you = sectionById("you");
+    var lines = you ? you.blocks.filter(function (b) { return b.label && /^if (you|your)\b/i.test(b.label); }) : [];
+    var card = el("article", { class: "card stack" }, [el("p", { class: "billcode", text: w.code }), el("h2", { text: w.title }), headerChips(w),
+      sum && sum.blocks[0] ? el("p", null, [firstUnit(sum.blocks[0])]) : null]);
+    if (lines.length) {
+      card.appendChild(el("p", { class: "meta-line", text: "May matter to you:" }));
+      var ul = el("ul", { class: "lines" });
+      lines.forEach(function (b) { ul.appendChild(el("li", null, [el("p", { class: "mayline" }, [el("strong", { class: "lead", text: b.label + ": " }), firstUnit(b)])])); });
+      card.appendChild(ul);
+    } else if (sum) {
+      var who = sum.blocks.filter(function (b) { return b.label === "Who it affects"; })[0];
+      if (who) card.appendChild(el("p", null, [el("strong", { class: "lead", text: "Who it affects: " }), firstUnit(who)]));
+    }
+    card.appendChild(el("a", { class: "go", href: "#" + w.slug, text: link || "Read more →" }));
+    return card;
+  }
   function viewHome() {
-    var h = D.home, root = el("div", { class: "stack-lg" });
+    var h = D.home, root = el("div", { class: "stack-lg" }), today = todayISO();
     root.appendChild(el("div", { class: "stack" }, [
-      el("p", { class: "eyebrow", text: "Georgia · your civic dashboard" }),
-      el("h1", { text: "What can I influence?" }),
-      el("p", { class: "lede", text: "Decisions you can act on, what's coming up, and what just happened. Every line links to its source." }),
-      el("div", { class: "address" }, [
-        el("input", { id: "addr", type: "text", disabled: "", placeholder: "Your address", "aria-label": "Your address (not available yet)" }),
-        el("button", { type: "button", disabled: "", text: "Find my districts" })
-      ]),
-      el("p", { class: "notice", text: "Prototype: district lookup isn't built yet, and this page shows only the decisions from our manual trials. A real dashboard would list hearings, votes and deadlines for your districts." })
+      el("p", { class: "eyebrow", text: "Georgia · decisions explained" }),
+      el("h1", { text: "What's being decided" }),
+      el("p", { class: "lede", text: "Start with what each decision is and who it may affect. If you want to weigh in, the dates and ways to do it are further down. Every line links to its source." }),
+      el("p", { class: "notice", text: "Prototype: it shows only the three decisions we've explained so far. Nothing you do here is saved." })
     ]));
+    var dec = el("section", { class: "home-sec", "aria-labelledby": "h-decisions" }, [el("h2", { id: "h-decisions" }, ["Decisions", el("span", { class: "count", text: String(D.workspaces.length) })])]);
+    D.workspaces.slice().sort(function (a, b) { var x = nextDate(a.slug), y = nextDate(b.slug); return x && y ? (x < y ? -1 : x > y ? 1 : 0) : x ? -1 : y ? 1 : 0; })
+      .forEach(function (w) { dec.appendChild(decisionCard(w)); });
+    root.appendChild(dec);
     h.sections.forEach(function (sec) {
+      var items = sec.items.slice().sort(function (a, b) {
+        var x = a.date || "9999", y = b.date || "9999";
+        return sec.id === "what-happened" ? (x < y ? 1 : x > y ? -1 : 0) : (x < y ? -1 : x > y ? 1 : 0);
+      });
+      var title = HOME_TITLE[sec.id] || sec.title;
       var s = el("section", { class: "home-sec", "aria-labelledby": "h-" + sec.id });
-      s.appendChild(el("h2", { id: "h-" + sec.id }, [sec.title, el("span", { class: "count", text: String(sec.items.length) })]));
-      sec.items.forEach(function (it) {
+      s.appendChild(el("h2", { id: "h-" + sec.id }, [title, el("span", { class: "count", text: String(items.length) })]));
+      items.forEach(function (it) {
         var top = el("div", { class: "chips" });
         if (it.power) top.appendChild(el("span", { class: "power " + it.power.toLowerCase(), text: it.power }));
         top.appendChild(el("span", { class: "when", text: it.when }));
+        if (sec.id !== "what-happened" && it.date && it.date < today) top.appendChild(el("span", { class: "chip past", text: "Date passed" }));
         W = wsBySlug(it.slug) || W;
         var card = el("article", { class: "card item" }, [top, el("p", null, [units(it.units)]),
           el("a", { class: "go", href: "#" + it.slug, text: it.linkText + " →" })]);
@@ -399,6 +472,7 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
       });
       root.appendChild(s);
     });
+    root.appendChild(el("p", { class: "notice", text: "Order: decisions with the soonest upcoming date come first; each list is sorted by date, and past dates are marked." }));
     return root;
   }
 
@@ -416,17 +490,9 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
   function viewDecisions() {
     var root = el("div", { class: "stack-lg" });
     root.appendChild(el("div", { class: "stack" }, [el("p", { class: "eyebrow", text: "Georgia · decisions we've explained" }), el("h1", { text: "Decisions" }),
-      el("p", { class: "lede", text: "Each one is explained the same way: a 30-second version, what it does, the options, the arguments on each side, and every source." })]));
+      el("p", { class: "lede", text: "Each one is explained the same way: a 30-second version, what it means for you, what's decided, the options, the arguments on each side, and every source." })]));
     var list = el("div", { class: "stack" });
-    D.workspaces.forEach(function (w) {
-      W = w;
-      var sum = sectionById("summary"), first = sum && sum.blocks[0];
-      list.appendChild(el("article", { class: "card stack" }, [
-        el("p", { class: "billcode", text: w.code }), el("h2", { text: w.title }), headerChips(w),
-        first ? el("p", null, [units(first.units.slice(0, 1))]) : null,
-        el("a", { class: "go", href: "#" + w.slug, text: "Open →" })
-      ]));
-    });
+    D.workspaces.forEach(function (w) { list.appendChild(decisionCard(w, "Open →")); });
     root.appendChild(list);
     return root;
   }
@@ -435,7 +501,7 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
   function viewMethod() {
     var root = el("div", { class: "stack-lg" });
     root.appendChild(el("div", { class: "stack" }, [el("p", { class: "eyebrow", text: "Our checks" }), el("h1", { text: "How we check" }),
-      el("p", { class: "lede", text: "An AI agent drafts each page from saved copies of its sources. Separate AI checkers then test it: automatic checks, a blind fact-check, a fairness panel with a reviewer for each side, and a test of the fact-checker itself with hidden errors. In these trials, no person checks the facts." })]));
+      el("p", { class: "lede", text: "An AI agent drafts each page from saved copies of its sources. Separate AI checkers then test it: automatic checks, a blind fact-check, a fairness panel with a reviewer for each side, and a test of the fact-checker itself with hidden errors. In this test, no person checks the facts." })]));
     D.workspaces.forEach(function (w) {
       var stats = el("div", { class: "stats" });
       (w.verification.stats || []).forEach(function (st) { stats.appendChild(el("div", { class: "stat" }, [el("b", { text: st.value }), el("span", { text: st.label })])); });
@@ -452,8 +518,8 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
 
   function pager(layer) {
     var i = layerIndex(layer), nav = el("nav", { class: "pager", "aria-label": "Next and previous tab" });
-    if (i > 0) nav.appendChild(el("a", { href: "#" + W.slug + "-" + LAYERS[i - 1].id, text: "← " + LAYERS[i - 1].tab }));
-    if (i < LAYERS.length - 1) nav.appendChild(el("a", { class: "next", href: "#" + W.slug + "-" + LAYERS[i + 1].id, text: LAYERS[i + 1].tab + " →" }));
+    if (i > 0) nav.appendChild(el("a", { href: "#" + W.slug + "-" + LAYERS[i - 1].id, text: "← " + tabLabel(LAYERS[i - 1]) }));
+    if (i < LAYERS.length - 1) nav.appendChild(el("a", { class: "next", href: "#" + W.slug + "-" + LAYERS[i + 1].id, text: tabLabel(LAYERS[i + 1]) + " →" }));
     return nav;
   }
 
@@ -464,7 +530,7 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
     root.appendChild(head);
     var tabs = el("nav", { class: "tabs", "aria-label": "Parts of this page" });
     LAYERS.forEach(function (L) {
-      tabs.appendChild(el("a", { href: "#" + W.slug + "-" + L.id, "aria-selected": String(L.id === layer) }, [L.tab]));
+      tabs.appendChild(el("a", { href: "#" + W.slug + "-" + L.id, "aria-selected": String(L.id === layer) }, [tabLabel(L)]));
     });
     root.appendChild(tabs);
     root.appendChild(({ overview: layerOverview, decision: layerDecision, options: layerOptions, arguments: layerArguments, evidence: layerEvidence })[layer]());
@@ -482,10 +548,14 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
     sum.blocks.forEach(function (b) { box.appendChild(field(b)); });
     box.appendChild(el("a", { class: "cta", href: "#act", onclick: function (e) { e.preventDefault(); var t = document.getElementById("act"); if (t) t.scrollIntoView({ behavior: "smooth", block: "start" }); } , text: "What you can do ↓" }));
     L.appendChild(box);
+    var you = layerYou();
+    if (you) L.appendChild(you);
 
     var s = sectionById("overview"), S = subs(s);
-    // Actions first, then what's coming, then any other parts (such as "Who decides"), then what happened.
-    var order = ["What you can do", "Coming up"];
+    // Actions first, then who decides (and how to reach them), then what's coming, other parts, what happened.
+    var order = ["What you can do"];
+    s.subs.forEach(function (x) { if (/^who decides/i.test(x.title)) order.push(x.title); });
+    order.push("Coming up");
     s.subs.forEach(function (x) { if (order.indexOf(x.title) < 0 && x.title !== "What happened") order.push(x.title); });
     if (S["What happened"]) order.push("What happened");
     order.forEach(function (title) {
@@ -493,10 +563,14 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
       var box = el("div", { class: "sub" }, [el("h2", { text: sub.title })]);
       if (title === "What you can do") {
         box.id = "act";
+        var lastCard = null;
         sub.blocks.forEach(function (b) {
           var power = b.label && /^(decide|input|observe)$/i.test(b.label) ? b.label : null;
-          box.appendChild(el("div", { class: "card item" }, [power ? el("div", { class: "chips" }, [el("span", { class: "power " + power.toLowerCase(), text: power })]) : null,
-            el("p", null, [b.label && !power ? el("span", { class: "label", text: b.label + ": " }) : null, units(b.units)])]));
+          // An unlabeled line right after an action (arrive early, ask for help…) belongs to that action.
+          if (!b.label && lastCard) { lastCard.appendChild(el("p", { class: "meta-line" }, [units(b.units)])); return; }
+          lastCard = el("div", { class: "card item" }, [power ? el("div", { class: "chips" }, [el("span", { class: "power " + power.toLowerCase(), text: power })]) : null,
+            el("p", null, [b.label && !power ? el("span", { class: "label", text: b.label + ": " }) : null, units(b.units)])]);
+          box.appendChild(lastCard);
         });
       } else if (title === "What happened") {
         var ul = el("ul", { class: "timeline" });
@@ -512,9 +586,24 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
     return L;
   }
 
+  // "What it means for you": "If you…" lines in the reader's terms, then folds for the money, timing and unknowns.
+  function layerYou() {
+    var s = sectionById("you"); if (!s) return null;
+    var box = el("section", { class: "card stack you", "aria-labelledby": "h-you" }, [el("h2", { id: "h-you", text: "What it means for you" })]);
+    s.blocks.forEach(function (b) {
+      box.appendChild(el("div", { class: "ifyou" }, [el("p", null, [b.label ? el("strong", { class: "lead", text: b.label + ": " }) : null, units(b.units)])]));
+    });
+    s.subs.forEach(function (sub) {
+      var d = el("details", { class: "more" }, [el("summary", { text: sub.title })]);
+      d.appendChild(renderBlocks(sub.blocks));
+      box.appendChild(d);
+    });
+    return box;
+  }
+
   function layerDecision() {
     var s = sectionById("decision"), L = el("section", { class: "layer" });
-    L.appendChild(layerHead("What the law does"));
+    L.appendChild(layerHead(K().decision));
     L.appendChild(renderBlocks(s.blocks));
     var more = el("div", null);
     s.subs.forEach(function (sub) {
@@ -539,16 +628,27 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
   // Options: every option folds the same way; "What it does" stays visible.
   function layerOptions() {
     var s = sectionById("options"), L = el("section", { class: "layer" });
-    L.appendChild(layerHead("Options and tradeoffs", "What lawmakers could have done, and who gains or gives up what. Tap an option for the details."));
+    L.appendChild(layerHead("Options and tradeoffs", K().options));
+    if (s.blocks.length) L.appendChild(renderBlocks(s.blocks));
     var grid = el("div", { class: "options" });
     s.subs.forEach(function (o) {
+      if (/^if you care most about/i.test(o.title)) {  // the values guide: what each side says it protects
+        var g = el("section", { class: "card stack vguide", "aria-labelledby": "h-values" }, [el("h3", { id: "h-values", text: "What each side says it protects" }),
+          el("p", { class: "meta-line", text: "In each side's own words, from the record. We don't recommend an option." })]);
+        o.blocks.forEach(function (b) {
+          g.appendChild(el("div", { class: "vline" }, [el("p", null, [b.label ? el("strong", { class: "lead", text: b.label + ": " }) : null, units(b.units)])]));
+        });
+        L.appendChild(g);
+        return;
+      }
       var chip = null;
       Object.keys(W.optionChips).forEach(function (k) { if (o.title.indexOf(k) === 0) { var c = W.optionChips[k]; chip = el("span", { class: "chip" + (c.kind ? " " + c.kind : ""), text: c.text }); } });
       var does = o.blocks.filter(function (b) { return b.label === "What it does"; })[0];
       var rest = o.blocks.filter(function (b) { return b !== does; });
       var d = el("details", { class: "fold" });
       d.appendChild(el("summary", null, [el("h3", { text: o.title.replace(/^Option [A-Z]: /, "") }), chip ? el("div", { class: "chips" }, [chip]) : null,
-        does ? el("p", null, [units(does.units)]) : null, el("span", { class: "hint", text: "What happened · who benefits · who pays · what's uncertain" })]));
+        does ? el("p", null, [units(does.units)]) : null,
+        el("span", { class: "hint", text: rest.filter(function (b) { return b.label; }).map(function (b) { return b.label.toLowerCase(); }).join(" · ") || "Details" })]));
       d.appendChild(el("div", { class: "body" }, [renderBlocks(rest)]));
       grid.appendChild(d);
     });
@@ -556,7 +656,21 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
     return L;
   }
 
-  function evClass(label) { return /^support/i.test(label) ? "supported" : /^mixed/i.test(label) ? "mixed" : /^uncertain/i.test(label) ? "uncertain" : "values"; }
+  function evClass(label) { return /^support/i.test(label) ? "supported" : /^(mixed|contested)/i.test(label) ? "mixed" : /^uncertain/i.test(label) ? "uncertain" : "values"; }
+  function evChip(g) { var c = evClass(g); return el("span", { class: "ev " + c }, [el("span", { "aria-hidden": "true", text: SYM[c] + " " }), g]); }
+  function legendBox(used, rule) {
+    var box = el("div", { class: "legend" });
+    LEGEND.forEach(function (row) {
+      if (used.indexOf(row[0]) < 0) return;
+      box.appendChild(el("div", { class: "row" }, [evChip(row[0]), el("p", { text: row[2] })]));
+    });
+    if (rule) {
+      var b = el("button", { class: "evbtn", type: "button", text: "This page's exact rule" });
+      b.addEventListener("click", function () { drawer("How to read these cards", renderBlocks(rule.blocks), b); });
+      box.appendChild(b);
+    }
+    return box;
+  }
 
   // The grades an evidence label names, in order ("Supported", "Uncertain", "Values question"...). A folded
   // card shows only these, so it stays scannable on a phone; the full label is inside the card.
@@ -576,9 +690,17 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
   function layerArguments() {
     var s = sectionById("arguments"), L = el("section", { class: "layer" });
     L.appendChild(layerHead("Arguments you'll hear", "Tap a card to see who makes the argument, what backs it up, who disagrees and what's missing."));
+    var used = [], rule = null, questions = null;
+    s.subs.forEach(function (a) { if (a.cardMeta) evGrades(a.cardMeta.evidence).forEach(function (g) { if (used.indexOf(g) < 0) used.push(g); }); });
+    s.subs.forEach(function (a) { if (/^how to read/i.test(a.title)) rule = a; if (/^questions to weigh/i.test(a.title)) questions = a; });
+    var opts = sectionById("options");
+    if (opts && opts.subs.some(function (o) { return /^if you care most about/i.test(o.title); }))
+      L.appendChild(el("p", { class: "meta-line" }, ["What each side says it protects, in its own words, is at the top of the ", el("a", { href: "#" + W.slug + "-options", text: "Options tab" }), "."]));
+    if (used.length) L.appendChild(el("section", { class: "card stack", "aria-labelledby": "h-legend" }, [el("h3", { id: "h-legend", text: "What the evidence labels mean" }), legendBox(used, rule)]));
     if (s.blocks.length) L.appendChild(el("div", { class: "card stack" }, [renderBlocks(s.blocks)]));
     s.subs.forEach(function (a) {
-      if (!a.cardMeta) {  // a non-card subsection, such as "How to read these cards"
+      if (!a.cardMeta) {  // a non-card subsection: the rule opens from the legend; questions show after the cards
+        if (a === questions) return;
         var m = el("details", { class: "more" }, [el("summary", { text: a.title })]);
         m.appendChild(renderBlocks(a.blocks));
         L.appendChild(m);
@@ -594,8 +716,8 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
         el("div", { class: "chips" }, [el("span", { class: "chip wrap", text: side })]),
         shortB ? el("p", null, [units(shortB.units)]) : null,
         grades.length
-          ? el("div", { class: "chips" }, [el("span", { class: "meta-line", text: grades.length > 1 ? "Evidence, by part:" : "Evidence:" })]
-              .concat(grades.map(function (g) { return el("span", { class: "ev " + evClass(g), text: g }); })))
+          ? el("div", { class: "chips" }, [el("span", { class: "meta-line", text: "Evidence:" })]
+              .concat(grades.map(evChip)).concat([legendButton(used, rule)]))
           : el("div", null, [el("span", { class: "ev " + evClass(meta.evidence || ""), text: "Evidence: " + (meta.evidence || "") })])
       ]));
       var body = el("div", { class: "body" }, [
@@ -606,8 +728,15 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
       d.appendChild(body);
       L.appendChild(d);
     });
-    L.appendChild(el("p", { class: "notice", text: "Every card uses the same fields for both sides, and one rule sets every evidence label (see “How to read these cards”). Disagreements about values are not treated as misinformation." }));
+    if (questions) L.appendChild(el("section", { class: "card stack qcard", "aria-labelledby": "h-questions" }, [el("h3", { id: "h-questions", text: questions.title }), renderBlocks(questions.blocks)]));
+    L.appendChild(el("p", { class: "notice", text: "Every card uses the same fields for both sides, and one rule sets every evidence label. Disagreements about values are not treated as misinformation." }));
     return L;
+  }
+  // "What these mean" on a folded card opens the legend without unfolding the card.
+  function legendButton(used, rule) {
+    var b = el("button", { class: "evbtn", type: "button", text: "What these mean" });
+    b.addEventListener("click", function (e) { e.preventDefault(); e.stopPropagation(); drawer("What the evidence labels mean", legendBox(used, rule), b); });
+    return b;
   }
 
   function layerEvidence() {
@@ -621,7 +750,7 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
         el("span", { class: "type" + (s.type === "primary-government" ? " primary" : ""), text: s.typeLabel }),
         el("h3", { text: s.title }),
         el("p", { class: "lede", text: s.why || "" }),
-        el("div", { class: "meta" }, [el("span", { text: "Captured " + (s.retrieved_at || "").slice(0, 10) }), el("span", { class: "hash", text: "sha256 " + (s.sha256 || "").slice(0, 12) + "…" }), el("span", { text: pids.length + " passages" })])
+        el("div", { class: "meta" }, [el("span", { text: "Captured " + (s.retrieved_at || "").slice(0, 10) }), el("span", { class: "hash", text: "fingerprint " + (s.sha256 || "").slice(0, 12) + "…" }), el("span", { text: pids.length + " passages" })])
       ]);
       var row = el("div", { class: "chips" });
       if (pids.length) { var b = el("button", { class: "src", type: "button", text: "Read the passages" }); b.addEventListener("click", function () { openPassages(pids, b); }); row.appendChild(b); }
@@ -635,7 +764,7 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
 
   function viewChecks() {
     var V = W.verification, root = el("div", { class: "stack-lg" });
-    root.appendChild(el("div", { class: "stack" }, [el("p", { class: "eyebrow", text: "Trial " + W.trial + " · how this page was checked" }), el("h1", { text: "How we checked " + W.code.split(" · ")[0] }),
+    root.appendChild(el("div", { class: "stack" }, [el("p", { class: "eyebrow", text: "Test page " + W.trial + " · how this page was checked" }), el("h1", { text: "How we checked " + W.code.split(" · ")[0] }),
       el("div", { class: "chips" }, [statusChip(W)]), el("p", { class: "lede", text: V.intro }), el("a", { class: "go", href: "#" + W.slug, text: "← Back to " + W.linkText })]));
     var stats = el("div", { class: "stats" });
     V.stats.forEach(function (st) { stats.appendChild(el("div", { class: "stat" }, [el("b", { text: st.value }), el("span", { text: st.label })])); });
@@ -684,7 +813,7 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
     var stayInBill = prev === key;
     app.innerHTML = "";
     app.appendChild(view === "home" ? viewHome() : view === "decisions" ? viewDecisions() : view === "method" ? viewMethod() : view === "checks" ? viewChecks() : viewBill(layer));
-    app.appendChild(el("footer", { text: D.meta.footer + ((view === "bill" || view === "checks") ? " · Trial " + W.trial + " · " + W.revisionLabel : "") }));
+    app.appendChild(el("footer", { text: D.meta.footer + ((view === "bill" || view === "checks") ? " · Test page " + W.trial + " · " + W.revisionLabel : "") }));
     document.querySelectorAll("[data-nav]").forEach(function (a) { if (a.getAttribute("data-nav") === nav) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
     var tabs = document.querySelector(".tabs");
     if (stayInBill && tabs) {

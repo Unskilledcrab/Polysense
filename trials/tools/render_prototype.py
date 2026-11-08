@@ -263,8 +263,8 @@ def build_workspace(trial: Path) -> dict:
                        "labeled as our analysis. "
                        + ("Checked by automated tests and independent AI reviewers. " if verification.get("verified") else
                           "This draft has not passed our checks yet; see how we checked it. ")
-                       + "In this trial, no person reviewed it."),
-        "revisionLabel": (f"revision {rev_no.group(1)}" if rev_no else "revision ?") + f" (sha256 {rev[:12]})",
+                       + "This is a test page; no person reviewed it."),
+        "revisionLabel": (f"version {rev_no.group(1)}" if rev_no else "version ?") + f" · fingerprint {rev[:12]}",
         "workspace": workspace, "passages": passages, "sources": sources, "sourceOrder": used,
         "billChanges": changes, "markupNote": markup.get("note"), "verification": verification,
     }
