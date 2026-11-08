@@ -25,6 +25,11 @@ every lead was re-checked on a primary page and re-snapshotted here.
 | Revision 2: gate | 08:58 → 09:05 | `check_citations.py`: one number warning ("Option 1" cited only to P-100; added P-128), then PASS 357 units. `readability.py`: Layer 3 9.0 → 7.9 after splitting long sentences; Layer 4 13.1 → 11.9 after shortening labels and splitting each speaker sentence from its quote. Dropped four passages no longer cited (P-002, P-057, P-069, P-122): 163 passages, all cited | **`readability.py` doesn't count a sentence that ends inside a closing quote** (`."`), so quote-heavy sections score high (Layer 4: 11.9 by the tool, about 10.2 counting those) |
 | Revision 2: sources, home, page | 09:00 → 09:08 | S10 now cites its document page (listed first, `S10.txt` derived) and its notes say the scan is still uncited. `home.md` and `page.yaml` follow the new title, plan names and public-witness wording. Removed this trial's `extract/` folder after confirming its four scripts are byte-identical to `trials/tools/extract/` (adopted in commit bbf81fc); references now point there. `verify_hashes.py` PASS, 66 files (revision 1 reported 65, a miscount) | — |
 | Revision 2: write-up | 09:10 → 09:16 | verification.md (round 1 results, 58 dispositions, 10 contradictions, revision 2 checklist, "where I'm least sure"), this log, README status | — |
+| Round 2 (independent checkers) | (coordinator) | Fresh blind source check and bias panel on revision 2; calibration carried over | Source check: 289 supports, 7 partial, 0 unsupported, 357/357 spans grounded: the accuracy part of the pass rule is met. Bias panel **failed** again (advocates 3/5 and 3/5, the utility side "close to 4"; editor 3/5 and 3/5, 1 high). Each side named different gaps of its own; the editor saw a mild lean toward PIA Staff's framing |
+| Read round 2 | 09:55 → 10:03 | Saved revision 2's page, home and passages and the four reports in `verification/round2/` (originals untouched); read all four reports in full. Added `end_occurrence: 1` to P-068 after the builder's new end-repeat check (span unchanged) | The highest-weight items were shared: GAM's card was graded on a narrower premise than its own summary; nothing said both take-or-pay options raise the credit; the cost-model exchange ran out of date order; Plan C's "What's uncertain" held an unanswered attack |
+| Revision 3: draft | 10:08 → 10:10 | Rewrote `workspace.md` from the dispositions: two-part labels that grade each card's stated main claim; the take-or-pay mismatch stated in Layer 2, Plan A and card 1; a new card 7 for Georgia Power's case on other fuel costs (GAM's card is now 8); "large-load customers" for the filings' term; reasons added inside cards; repeats cut (the profit estimate to one place, Georgia Power's account of GIPL's switch to card 5, one errata note); five neutral questions | — |
+| Revision 3: gate and accuracy pass | 10:10 → 10:15 | First gate run: PASS, 0 warnings, but Layer 2 read 8.5 and Layer 3 8.4 after the new glossary entries; split long sentences until 7.6 and 7.7. Shortened labels from up to 81 words to 68. Re-read each changed sentence against its passages. Re-cited P-047 and P-072, which the draft had left uncited | Caught in my own pass: card 3's label didn't credit GIPL's peak tie; card 7's "all costs" for Georgia Power's "all embedded costs"; a Markdown link that the prototype would show raw (the template sets text, not HTML), so the docket URL stays in the source drawer |
+| Revision 3: write-up | 10:15 → 10:18 | verification.md (round 2 results, 39 dispositions, 10 contradictions, revision 3 checklist), this log, README status. `verify_hashes.py` PASS; test render: revision 3, 8 cards and 4 plans parse | — |
 
 ## Where the runbook did not fit (and what I did)
 
@@ -76,13 +81,15 @@ every lead was re-checked on a primary page and re-snapshotted here.
   the header lines of `passages.md` after the final build (no passage text touched). → Take the title and intro from the spec. **Adopted** before revision 2 (spec `title` and `header` keys).
 - `build_passages.py`: the end string is matched at its first occurrence after the start, which silently cut P-058 short.
   → Warn when the end string occurs again within the next few hundred characters, or allow an occurrence index.
+  **Adopted** before revision 3 (a CHECK warning and an `end_occurrence` key; P-068 now carries `end_occurrence: 1`).
 - `snapshot.py`: (a) map `.docx`, `.xlsx` and `.zip` content types to real extensions; (b) fail on an empty body; (c) print
   the content-disposition filename; (d) optionally write text for `.docx` and PDF. The four extractors (`docx2txt.py`,
-  `pdf2txt.py`, `xlsx2txt.py`, `safe_unzip.py`) were **adopted** into `trials/tools/extract/`; (a)–(c) are still open.
+  `pdf2txt.py`, `xlsx2txt.py`, `safe_unzip.py`) were **adopted** into `trials/tools/extract/`; (a)–(c) were **adopted**
+  before revision 3 (real extensions, exit 1 on an empty body, the Content-Disposition file name).
 - `check_citations.py`: treat single capital initials ("M.") and "a.m."/"p.m." as abbreviations. **Adopted.**
 - `render_prototype.py`: add a `party-filing` label ("Party filing") to `TYPE_LABEL`; the Layer 5 parser only finds IDs
   written out in full (no ranges such as "S17b–S17e"). The label was **adopted**.
-- `readability.py` (new, revision 2): the sentence counter `[.!?]+(?:\s|$)` misses sentences that end inside a closing quote
+- `readability.py` (new, revision 2; **adopted** before revision 3, which also leaves card labels out of the grade): the sentence counter `[.!?]+(?:\s|$)` misses sentences that end inside a closing quote
   or bracket (`."`, `.)`), so pages that quote testimony score 1–2.5 grades too high. → Allow closing quotes and brackets
   before the whitespace. Revision 2's target sections were measured both ways and pass either way.
 - An **approved OCR tool** (with a dependencies.md entry) is needed for scanned filings.
@@ -112,6 +119,18 @@ From round 1 (revision 2):
 13. **Keep the page's own voice out of predictions.** Report what each party says and what the order leaves to a later case.
 14. **Put a caveat where the figure is used**, not only in a general note (Staff's page-7 figures).
 15. **Speaker, filing and date for every documented card's lead voice.**
+
+From round 2 (revision 3):
+
+16. **Grade the claim the card's summary makes, and grade every card that way.** A narrower, undisputed premise in one
+    card's label against contested ones elsewhere gives that side the only "Supported" on the page.
+17. **State the agreed facts plainly and early**, in the page's own Layer 2 (both take-or-pay options raise the credit).
+    Leaving them to one plan's fields made a shared finding look like one party's claim.
+18. **Run each exchange in date order.** A claim filed before its challenge must not read as the reply to it.
+19. **A blacked-out number is not evidence against another party's public figure.** Label the public estimate as public.
+20. **Use each party's own term**, and say when the passages give no threshold, instead of merging terms.
+21. **One description template for every party**, with no mission statements, and witness titles in the same form.
+22. **Count repeats**: a point stated four times (a profit estimate, an unverified account) weighs more than one stated once.
 
 ## Automation notes (not eligible: 0 of 3 runs for this kind of decision)
 
