@@ -16,6 +16,8 @@
 | 9 | **Low adoption** | High / Medium | Search-indexable bill and hearing pages; ICS feeds; cross-spectrum partners; CC BY content others can reuse |
 | 10 | **Redistricting before 2028** | Medium / Medium | Boundaries versioned by date and purpose; manual district picker as fallback |
 | 11 | **Funding concentration or loss** | Medium / High | Cap any single funder at about 20%; diverse funders; low operating costs |
+| 12 | **A reader-first line misleads**: an "If you…" line gets the direction or condition wrong, or the values guide reads as a recommendation | Medium / High | "If you…" first sentences must stand alone (they appear on the home page); values lines come only from verbatim quotes or survey wording, one line per side, and a value two sides share is never given to one; a recommendation word in our voice is high severity. Planted-error checks include reversed effects, dropped conditions and recommendation words (caught 10 of 10 or 11 of 11 in every reader-first round) |
+| 13 | **Fairness checks never converge after a pass** (each re-check finds something new) | Medium / Medium | Stop rule in the [verification protocol](process/verification-protocol.md): stop when a source re-check finds nothing that misstates a passage and the flip test finds no high-severity issue; other notes become open items, and contradicting suggestions are logged side by side. In the reader-first cycle, Trial 002's re-checks found 9, then 3 partial verdicts |
 
 ## Open questions (decisions still needed)
 

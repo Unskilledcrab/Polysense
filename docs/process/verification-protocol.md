@@ -68,7 +68,8 @@ asked to add). So "done" is defined in advance:
    without changing its grade ("Hearings held: Supported" to "Hearings scheduled: Supported" when the
    source is a notice) is an accuracy fix, not a label change. If a fix changes a values-guide line or an "In short" line, the targeted re-check
    also runs the editor's flip test on just those lines, since a source check can't judge balance. If a
-   targeted re-check flags something, fix it and re-check only those units again.
+   targeted re-check flags something, fix it and re-check only those units again. A flip test blocks only on a
+   high-severity issue; its medium notes may be fixed in the same pass or become open items.
    Stop when a re-check finds nothing that misstates a passage; its style notes become open items. (Trial 003
    took three passes, whose findings went 6, 3, 0.)
 3. **Remaining medium and low panel suggestions become open items.** They are listed in `verification.md`
