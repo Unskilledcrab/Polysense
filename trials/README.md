@@ -8,6 +8,8 @@ owner reviews it. Reviewed trials become the **gold data** that automation must 
 | Trial | Process | Subject | Status |
 |---|---|---|---|
 | [001](001-hb1009-high-school-cellphones/) | A. Bill workspace (#1) | HB 1009 (2026), high school "bell-to-bell" personal device ban | **Passed checks (round 4)**, revision 5. Planted-error catch rate 13/13. Owner reviewed the experience. Prototype in [prototypes/hb1009/](../prototypes/hb1009/) |
+| 002 | A. Decision workspace (adapted to a regulatory case) | PSC Docket 57171: how Georgia Power credits data-center-heavy Real-Time Pricing revenue against fuel costs (vote 2026-12-15) | In progress (drafting by a fresh agent from the runbook) |
+| 003 | A. Decision workspace (adapted to a county budget) | Fulton County 2027 budget, and the dispute over how it is being prepared (proposal due 2026-11-15) | In progress (drafting by a fresh agent from the runbook) |
 
 ## Folder layout
 

@@ -17,6 +17,7 @@ The project is in **planning and manual trials**. These documents are the plan. 
 |---|---|
 | [product/experience.md](product/experience.md) | Homepage, the 5 layers, participation power, item statuses, argument explorer, evidence vocabulary |
 | [product/voting-connection.md](product/voting-connection.md) | Exploratory: how this work could help people make informed decisions when voting |
+| [research/upcoming-decisions-2026-11.md](research/upcoming-decisions-2026-11.md) | Scout report: nine upcoming Georgia decisions scored for trials (2026-11-08) |
 | [product/content-style-guide.md](product/content-style-guide.md) | How we write: answer first, length budgets, plain language, numbers |
 | [product/usability-testing.md](product/usability-testing.md) | Comprehension testing with real people |
 | [product/naming.md](product/naming.md) | Choosing a public name (Civic Lens is taken) |
