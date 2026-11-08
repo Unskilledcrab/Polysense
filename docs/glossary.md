@@ -6,7 +6,7 @@
 |---|---|
 | **Act now / Coming up / What happened** | The three homepage sections, in that order: opportunities open now, upcoming ones, and recent outcomes |
 | **Opportunity** | One thing a person can do: vote, testify, send written comment, contact an official, attend or watch. It has a time window and an audience |
-| **Participation power** | How much influence an opportunity carries. *Decide*: you vote directly. *Input*: formal testimony, comment or contact. *Observe*: watch or attend |
+| **Participation power** | How much influence an opportunity carries **for the reader**. *Decide*: you vote directly. *Input*: formal testimony, comment or contact. *Observe*: watch or attend. Officials who make a decision are listed under "Who decides, and how to reach them", never labeled *Decide* |
 | **Decision workspace** | The in-depth page for one decision (for example, a bill). It is organized in 5 layers |
 | **Layers 1–5** | 1. What can I participate in? 2. What decision is being made? 3. What are the options and tradeoffs? 4. What arguments will I hear? 5. What does the evidence show? |
 | **30-second version** | The three lines at the top of every workspace: what it does, who it affects, and what happens next |

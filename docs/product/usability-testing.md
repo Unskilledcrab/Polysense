@@ -30,8 +30,10 @@ comprehension rounds below start once there are enough pages to test.
 | 5 | "Where did this number come from?" | Reaches the source passage |
 | 6 | "Did this seem to favor one side? Which parts?" | Recorded (not pass/fail); feeds the fairness review |
 | 7 | "What was confusing?" | Recorded; every confusion becomes an issue |
+| 8 | "How does this affect you?" | Gives the direction for their own situation (raises, lowers, no change), or says it isn't known and why |
+| 9 | "What does this label mean?" (pointing at an evidence label) | Explains it within one tap |
 
-**A round passes when at least 4 of 5 participants pass tasks 1–5.** A failed task changes the template or
+**A round passes when at least 4 of 5 participants pass tasks 1–5, 8 and 9.** A failed task changes the template or
 the style guide, not just that one page.
 
 ## Logging

@@ -1,4 +1,4 @@
-# Runbook: decision workspace (manual), v0.5
+# Runbook: decision workspace (manual), v0.6
 
 **Purpose:** turn one public decision into a clear, fully cited decision workspace (the 30-second version
 plus Layers 1–5) by hand. **Output:** `trials/NNN-<slug>/`. Written for bills (Trial 001), then adapted for
@@ -95,21 +95,28 @@ Choose passages in `passages.spec.yaml` (source, file, locator, exact start and 
 Follow the [content-style-guide](../../product/content-style-guide.md) and the
 [experience template](../../product/experience.md):
 
-1. **30-second version** (3 lines).
-2. **Layer 1: Participate.** What opportunities existed or exist, with dates. For a past session, this is
-   written as "what happened".
-3. **Layer 2: Decision.** At most 80 words, plus at most 5 "what would change" bullets.
-4. **Layer 3: Options.** Include the status quo. For each option: who benefits, who pays, what's
-   uncertain.
-5. **Layer 4: Arguments.** Documented arguments first, with speaker, venue, date and a verbatim quote.
+1. **30-second version** (3 lines, ≤ 90 words). Name who decides and say in a few words what that body is.
+2. **What it means for you.** 2–4 lines that start "If you …" (style guide, section 9). For a decision
+   that moves money, add `### Where the money comes from` (≤ 5 numbered steps), and for every decision
+   `### Decided now, and decided later` and `### Not known yet` (each item says why, dated if it can change).
+3. **Layer 1: Participate.** `### What you can do` (the reader's own powers: Decide only for a direct vote),
+   `### Who decides, and how to reach them` (every decider listed the same way, with public contact routes
+   from the sources), `### Coming up`, `### What happened`. For a past session, the last is "what happened".
+4. **Layer 2: Decision.** At most 80 words, plus at most 5 "what would change" bullets.
+5. **Layer 3: Options.** An intro of ≤ 60 words, then `### If you care most about…`: one values line per
+   option in card order, built only from a documented, verbatim quote (style guide, section 9). Then the
+   options, including the status quo. For each option: who benefits, who pays, what's uncertain.
+6. **Layer 4: Arguments.** Documented arguments first, with speaker, venue, date and a verbatim quote.
    Anticipated arguments are labeled and unattributed. Every card uses the same fields in the same order
    (In short · Who says it · What supports it · Who disagrees · What challenges it · What's missing ·
-   What's uncertain) and follows the one-bar rules in the style guide, section 8. Mark the claim type
+   What's uncertain) and follows the one-bar rules in the style guide, section 8. "In short" leads with
+   what the argument would mean for people (≤ 40 words). Mark the claim type
    and the evidence label, and print the labeling rule above the cards.
-6. **Layer 5: Evidence.** Every source with a type badge, capture date, hash prefix and "why this source".
+7. **Layer 5: Evidence.** Every source with a type badge, capture date, hash prefix and "why this source".
 
 Every sentence ends with a passage citation `[P-###]` or a tag (`{analysis}`, `{editorial}`,
-`{computed: …}`).
+`{computed: …}`). Reader-facing strings in `page.yaml` (title, link text, chips) are content too: keep
+them plain, and put the supporting passages in a comment (`title: "…"  # [P-013, P-144]`).
 
 ### Other kinds of decisions
 
@@ -194,5 +201,6 @@ on this workspace.
 | v0.1 | 2026-11-08 | Step 1: search summaries are discovery-only; discrepancy list; "hosts needed" list | [001](../../../trials/001-hb1009-high-school-cellphones/log.md) (steps 0–1) |
 | v0.2 | 2026-11-08 | Step 2: snapshot tool, legis.ga.gov browser method, bot-check fallback, strike/underline extraction. Step 3: passage spec + builder. Step 6: AI-only verification protocol replaces human review | [001](../../../trials/001-hb1009-high-school-cellphones/log.md) (steps 2–6) |
 | v0.4 | 2026-11-08 | Generalized from bills to decisions: blocks vs. pages that need JavaScript, one retry for 404/5xx, text extractors for other file types, passages that leave out party labels, and "Other kinds of decisions" (records by kind, decisions still ahead, more than two sides, parties' own numbers, votes and reasons) | [002](../../../trials/002-psc-57171-fuel-credit/log.md), [003](../../../trials/003-fulton-2027-budget/log.md) |
+| v0.6 | 2026-11-08 | Step 4: reader-first content contract (What it means for you; Who decides, and how to reach them; values guide; plain page.yaml strings) | Usability feedback |
 | v0.5 | 2026-11-08 | Redactions: the text layer drops blacked-out words; check a rendered page and mark them | [002](../../../trials/002-psc-57171-fuel-credit/verification.md) (round 5) |
 | v0.3 | 2026-11-08 | Step 1: count documented voices per side before drafting. Step 4: follow the argument-card rules in the [style guide](../../product/content-style-guide.md) (section 8) | [001](../../../trials/001-hb1009-high-school-cellphones/verification.md) (verification rounds 1–3) |

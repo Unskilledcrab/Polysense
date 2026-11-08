@@ -3,7 +3,7 @@
 **Goal:** a reader who gives us 30 seconds leaves knowing what's being decided, who it affects, and what
 they can do. Someone who gives us 30 minutes can check every claim.
 
-This guide is **v0.5**: working rules from three trials, not settled policy. Each manual trial and
+This guide is **v0.6**: working rules from three trials and usability feedback, not settled policy. Each manual trial and
 comprehension round updates it, and changes are recorded at the bottom. After each trial, review the rules
 against the [tenets](vision.md#tenets): keep the ones that helped, simplify the ones that didn't, and
 retire any that a later trial makes unnecessary.
@@ -12,9 +12,12 @@ retire any that a later trial makes unnecessary.
 
 Every workspace starts with a **30-second version** of three lines:
 
-1. **What it does:** one sentence, with no bill jargon.
+1. **What it does** (or **What's being decided**): one sentence, with no bill jargon. Name who decides, and say in a
+   few words what that body is ("the Public Service Commission, five elected officials who …").
 2. **Who it affects:** concrete groups ("people who rent", "K-12 students").
 3. **What happens next / what you can do:** a date and an action.
+
+Right after it comes **What it means for you** (section 9): who is affected, in the reader's terms.
 
 People often read only these lines, so each must be right **read on its own**. A sentence that is accurate
 in context can mislead here. Give every party's view the same way, or give none and state the facts.
@@ -23,9 +26,14 @@ in context can mislead here. Give every party's view the same way, or give none 
 
 | Element | Budget |
 |---|---|
+| 30-second version | ≤ 90 words in all |
+| "What it means for you" line | First sentence ≤ 25 words; whole line ≤ 45 words |
 | Homepage card | ≤ 25 words + date + one action |
 | Layer 2 "What's being decided" | ≤ 80 words + ≤ 5 "What would change" bullets |
+| Layer 3 intro | ≤ 60 words |
 | Layer 3, per option | ≤ 3 bullets each for *who benefits*, *who pays*, *what's uncertain* |
+| Values-guide line ("If you care most about…") | ≤ 35 words |
+| Argument card "In short" | ≤ 40 words |
 | Layer 4 argument card (collapsed) | ≤ 60 words |
 | Sentence | Aim for ≤ 20 words; one idea per sentence |
 | Layer 5 source note | One line: "why this source" |
@@ -107,8 +115,9 @@ overcorrecting, against critics.
 
 - **One template, same order:** In short · Who says it · What supports it · Who disagrees · What
   challenges it · What's missing · What's uncertain.
-- **In short:** the claim in its side's own terms, then its evidence status, in the same form on every
-  card. Don't end one side's summaries with a rebuttal unless every card gets one.
+- **In short:** what it would mean for people first, then the claim in its side's own terms, then its
+  evidence status, in the same form on every card. Don't end one side's summaries with a rebuttal unless
+  every card gets one.
 - **Who disagrees:** only a statement that answers *this card's* claim. A general remark doesn't count.
   If no source disputes the claim, write "No one in the sources we reviewed disputed this directly".
 - **Evidence label:** a vocabulary word, then its basis in parentheses ("Supported, with limits (one
@@ -122,6 +131,31 @@ overcorrecting, against critics.
   the sources quoted, not how many people hold each view.
 - **Base rates first.** Give the overall split before any figure from one group.
 
+## 9. Reader first
+
+Learned from the first usability feedback: a reader new to the subject couldn't tell what the PSC is, whether
+a decision raises or lowers their bill, or what "Mixed" means, and found the cards written for insiders.
+
+- **Write for the person reading.** After the 30-second version, a **What it means for you** section gives
+  2–4 lines that start "If you …" ("If you pay a Georgia Power bill at home: …"). The first sentence of
+  each line must be right read on its own. Use the condition the source gives ("if the PSC adopts …").
+- **Lead with the effect on people**, then who argues it. Attribute any effect a party disputes.
+- **Money: direction, size, when, then what isn't known.** "Your fuel charge would likely go down; by how
+  much isn't public, because …". Never present an example (such as a per-$100 million figure) as one plan's
+  effect.
+- **Name things.** No bare "them", "both", "neither", "this" or "it" unless the noun is in the same sentence.
+- **Define every institution and party** in plain, cited words at first mention on each tab, including who
+  they are ("GAM, a group of manufacturers").
+- **Titles say who decides, what changes and when.** A title like "real-time payments and fuel costs"
+  doesn't tell a reader what is up for debate.
+- **"Decide" is the reader's power.** Use the Decide label only when the reader votes directly. Officials who
+  decide go under **Who decides, and how to reach them**.
+- **What each side says it protects.** Layer 3 opens with a values guide: one line per option in the same
+  form, "If you care most about <value>: <speaker, role>, who backs <option>, said "<verbatim quote>"." The
+  value must be faithful to the quote. An option with no documented argument gets no line, and the page
+  says so. No recommendation words ("fits", "best", "should", "choose"). The reader's own values are never
+  asked for or stored.
+
 ## Change log
 
 | Date | Change | Learned from |
@@ -133,3 +167,4 @@ overcorrecting, against critics.
 | 2026-11-08 | v0.4: keep political parties out of it (replaces "party labels for every speaker or none") | Owner direction after Trial 001 |
 | 2026-11-08 | v0.4: redacted numbers are unknown, not zero | Trial 002 (PSC Docket 57171) |
 | 2026-11-08 | v0.5: the 30-second version must stand alone; blacked-out words; show both sides of a money shift | Trial 002 rounds 3–6 and re-checks |
+| 2026-11-08 | v0.6: reader first (section 9): "What it means for you", effect before party, direction-first money, named references, defined institutions, plain titles, "Decide" only for the reader, the values guide; new length budgets | Usability feedback |

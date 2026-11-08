@@ -26,6 +26,23 @@ Three ideas make it trustworthy without a human:
 | 4 | **Seeded-error calibration** | A second blind source verifier on a copy with hidden planted errors (numbers, dates, scope, attribution, reversed findings, wrong spans, dropped qualifiers, subgroup stats, arithmetic, loaded words) | Measures the verifier itself | Catch rate **≥ 90%** with 0 ungrounded spans; misses analyzed and the prompt or tools improved |
 | 5 | **Re-verify after fixes** | Layers 1–3 re-run on the revised text with fresh agents. The **whole** bias panel re-rates, not only the side that complained | Errors introduced while fixing; overcorrection toward the other side (Trial 001's round 2 failed this way) | Same pass conditions as layers 1–3 |
 
+**Reader-first pages (style guide v0.6) add three checks to the same rounds:**
+
+- **Display strings are content.** The title, link text and chips in `page.yaml` go to the blind source
+  check with the page and home items, and the first sentence of each "What it means for you" line is
+  checked as if read alone. Conditions ("if the PSC adopts …") and direction words must survive.
+- **The values guide** ("If you care most about…") is checked by every panelist. The source check confirms
+  each value is faithful to its verbatim quote and speaker. Each advocate checks that its side's line is its
+  strongest documented value, at equal length and appeal. The editor runs the flip test on the lines, and a
+  recommendation word ("fits", "best", "should", "choose") is high severity.
+- **A lay-reader check (experimental, not a pass condition).** A fresh agent with no background, playing an
+  ordinary resident, reads only what a phone shows on the Summary, Options and Arguments tabs and answers:
+  what is decided and by whom; does it raise or lower my costs, by how much and when (or why that isn't
+  known); where the money goes; what I can do by when; what the evidence labels mean; one argument each way;
+  which terms I couldn't place; whether anything seemed to favor a side. It is graded against a key written
+  before the run. Terms it can't place get wording fixes. It stands in for people between usability rounds;
+  it never replaces them.
+
 Home-page items are the most-read lines, so they get the same source check as the page. They were added in
 round 3 of Trials 002 and 003, and the first check found a public-comment deadline shown without its time.
 

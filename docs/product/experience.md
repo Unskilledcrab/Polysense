@@ -5,11 +5,18 @@ go deeper only if they want to. How we write is in [content-style-guide.md](cont
 
 ## Homepage: "What can I influence?"
 
-It is a personal civic dashboard, not a news feed. It has three sections, always in this order:
+It is a personal civic dashboard, not a news feed. It starts with **what is being decided**, not with tasks:
+usability feedback showed that a list of actions shown before the reader knows what a decision is about
+feels like pressure. In the prototype (no setup step, by the owner's choice) the order is:
+
+1. **Decisions:** each in plain words, with the first line of "What it means for you" ("May matter to you
+   if …"), so readers can see whether it touches them.
+2. **If you want to weigh in** (stored as "Act now" in the trial files), **Coming up**, **What happened**,
+   each sorted by date, with past dates marked.
 
 | Section | Contains | Example |
 |---|---|---|
-| **Act now** | Opportunities open now | "Senate Education Committee hears SB 12 Tuesday 2 pm. Watch live, or send written testimony." |
+| **If you want to weigh in** | Opportunities open now | "Senate Education Committee hears SB 12 Tuesday 2 pm. Watch live, or send written testimony." |
 | **Coming up** | Things you can prepare for | "HB 45 is on the House Rules calendar. Your representative sits on Rules." |
 | **What happened** | Recent outcomes and what comes next | "HB 30 passed the House 120–54. Next stop: Senate committee." |
 
@@ -25,6 +32,7 @@ It is a personal civic dashboard, not a news feed. It has three sections, always
 
 ```
 30-second version   what it does · who it affects · what happens next / what you can do
+What it means for you  "If you …" lines; where the money comes from; decided now vs. later; not known yet
 Layer 1  Participate  dates, how to watch, testify, comment, contact; your members' roles
 Layer 2  Decision     what is being decided, in ≤ 80 words + ≤ 5 "what would change" bullets
 Layer 3  Options      each option (incl. status quo): who benefits · who pays · what's uncertain
@@ -129,3 +137,20 @@ them like any other text. Keep the idea only if readers find it useful.
 - Borrow accessible patterns from the USWDS and GOV.UK design systems, but keep a **distinct identity**
   and an **"Independent — not a government website"** notice.
 - Pages are built ready for translation. Spanish comes after the pilot, with human-reviewed translation.
+
+## Reader-first parts (from usability feedback, 2026-11-08)
+
+- **What it means for you** sits right under the 30-second version. Each line starts "If you …" and says, in
+  the reader's terms and with citations, which way things move for them, by how much if known, and what
+  isn't known yet. Readers find their own line; nothing is asked or stored.
+- **Who decides, and how to reach them** (Layer 1) lists every decider the same way, with the public contact
+  routes the sources give. The Decide label is kept for the reader's own vote.
+- **What each side says it protects** (top of Layer 3) is the values guide: one line per option, from a
+  documented, verbatim quote. It answers "why should I care?" without recommending an option.
+- **Evidence labels come with a plain legend** on the Arguments tab and a "What these mean" button on each
+  folded card. Mixed and Uncertain look different (color, symbol and border), so meaning doesn't rely on
+  color alone.
+- **Headings follow the kind of decision** (a law, a regulatory case, a budget), so a utility case never says
+  "What the law does".
+- **Deferred:** a setup step or saved preferences (owner's choice), address-based district lookup and
+  "Applies to you".
