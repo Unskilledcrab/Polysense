@@ -1,0 +1,216 @@
+{
+  "role": "advocate: Georgia Power and GAM positions",
+  "rating": 3,
+  "missing_arguments": [
+    {
+      "argument": "Georgia Power's cost-causation case. Take-or-pay contracts 'and their associated costs are not driven by large load growth', and neither are existing pipeline fees, while large-load growth is 'a primary driver of new FT costs'. This is why Georgia Power treats new and existing pipeline fees differently, and it answers PIA Staff's 'partial solution' critique, which card 3 shows at line 174 with no reply. Add it to card 3, and the PPA half to card 1.",
+      "passages": ["P-050", "P-051"]
+    },
+    {
+      "argument": "Georgia Power's main objection to PIA Staff's energy split is missing from card 4. Georgia Power says an energy-based split 'does not provide this level of customer protection' if large projects don't materialize. It also says pipeline fees 'should be treated similarly to other large infrastructure expenses (generation, transmission, distribution) and allocated on a demand basis'. GIPL's testimony makes the same transmission analogy. Card 4's 'Who disagrees' has only Georgia Power's double-recovery reply and GAM, and line 171 cuts the P-126 quote before the analogy.",
+      "passages": ["P-127", "P-126", "P-104"]
+    },
+    {
+      "argument": "Georgia Power's peak-based plan builds on PIA Staff's own fuel-case 1-CP showing: 'The Company agrees with this approach but proposes using a winter CP'. Georgia Power says Staff's new energy-based recommendation 'cannot be reconciled' with that showing. Line 186 keeps only a softened version, then quotes Staff's reply.",
+      "passages": ["P-056", "P-125"]
+    },
+    {
+      "argument": "Georgia Power's case for the real-time rate itself. Real-time customers take on price risk in exchange for possible savings and are 'not similarly situated' to standard-rate customers. Georgia Power says the marginal-cost design 'does not mean that RTP customers do not pay their fair share of system costs or cost to serve', and that making their allocations like everyone else's 'would undermine the effectiveness and competitive value of RTP'. It also calls RTP 'a driver of new economic activity' and says 'the expected revenues more than cover the incremental costs to serve new load'. Card 5 (line 197) quotes the sentence just before the fair-share disclaimer and leaves the disclaimer out.",
+      "passages": ["P-042", "P-121", "P-045"]
+    },
+    {
+      "argument": "GAM's full pipeline point. Real-time sales already help recover fixed pipeline costs 'when the system lambda charge ... exceeds GPC's average fuel costs', and 'other components of RTP contribute to the recovery of fixed production operation and maintenance (O&M) expenses'. The page shows only the first half of P-110. Lines 104 and 188 then present 'the base-side money already helps pay' as Georgia Power's claim alone and end on GIPL's reply, although GAM makes the same point.",
+      "passages": ["P-110", "P-052", "P-124"]
+    },
+    {
+      "argument": "GAM's public figures. Real-time revenue cut non-RTP base revenues by $214 million in Georgia Power's 2022 rate case, and GAM calls the 2025 total, which includes $264 million from system lambda, 'a significant increase'. Card 6 says only that GAM's figures are blacked out (line 211).",
+      "passages": ["P-114", "P-052"]
+    },
+    {
+      "argument": "Georgia Power's quantified large-load benefit, for card 6, with a clear scope note. Georgia Power says large-load benefits 'enabled the Company to freeze base rates through 2028' and provide 'downward pressure of at least $102 per year for the typical residential customer' in 2029-2031. It also states a commitment 'to protect existing customers from bearing any of the costs of adding these large customers'. Label it as covering all large-load revenue, not just the base-side share of real-time revenue. Right now the page cites P-054 only for the freeze, and uses that against GAM.",
+      "passages": ["P-054"]
+    },
+    {
+      "argument": "GIPL partly agrees with Georgia Power and GAM, and the page omits it. GIPL says 'I agree with this concept' that real-time revenue booked to base lowers other customers' base revenue requirement. It also says removing new large-load pipeline fees from the fuel clause 'addresses one problem'. On these points the page shows GIPL only disagreeing (lines 104, 170, 209).",
+      "passages": ["P-099", "P-101"]
+    },
+    {
+      "argument": "Better answers to the absorption challenge on card 6. PIA Staff itself says 'The direction and magnitude of any future impact would need to be determined in a base rate case'. The PSC's order books the base-side change as a regulatory asset or liability for that case. Both answer the 'could have absorbed it' point better than the author's added inference does.",
+      "passages": ["P-090", "P-016"]
+    },
+    {
+      "argument": "Georgia Power's full critique of Staff's guidelines. It says they are 'not based on or consistent with cost-allocation best practices, previous Commission policy decisions, or any widely accepted principles' and 'should be given no weight'. Line 120 reduces this to 'new policy recommendations', and card 5 cuts the quote before 'previous Commission policy decisions'.",
+      "passages": ["P-120", "P-118"]
+    },
+    {
+      "argument": "The last step of Georgia Power's take-or-pay argument: 'RTP load pays the marginal fuel cost and does not directly benefit from the fixed price feature of the non-dispatchable PPA'. Card 2 (line 162) stops just before it.",
+      "passages": ["P-130"]
+    },
+    {
+      "argument": "Minor items. On reports, Georgia Power also said some are 'not feasible in the requested timeframe' (line 78). Georgia Power 'supported and agreed to' this review, and GAM joined the stipulation that started it, but line 55 credits only PIA Staff and other parties.",
+      "passages": ["P-132", "P-053", "P-017"]
+    }
+  ],
+  "unfair_wording": [
+    {
+      "line": 210,
+      "text": "PIA Staff found Georgia Power could have absorbed the larger fuel credit in 2023–2025 while staying within the profit range the PSC allows. [P-090, P-091] So base rates would not necessarily rise. {analysis: follows from P-090 and P-091}",
+      "why": "'Found' presents Staff's estimate as an established fact, while line 86 says 'says' for the same claim. The {analysis} sentence is the only place on any card where the author's own voice argues against a card's proponent. It also rebuts a claim GAM never made: GAM said 'upward pressure', not that base rates must rise. And it ignores the PSC order's regulatory-asset mechanism (P-016) and Staff's own statement that direction and size will be set in a base rate case (P-090). Fix: say 'PIA Staff estimated', delete the analysis sentence, and add the P-090 qualifier.",
+      "severity": "high"
+    },
+    {
+      "line": 212,
+      "text": "Georgia Power says base rates are frozen through 2028. [P-054]",
+      "why": "This partial use of P-054 turns support into rebuttal. The same passage credits the freeze to large-load benefits ('These benefits enabled the Company to freeze base rates through 2028') and claims at least $102 a year of downward pressure. Placed alone in GAM's 'uncertain' field, it suggests GAM's base-rate concern is moot. Line 84 has the same problem.",
+      "severity": "medium"
+    },
+    {
+      "line": 211,
+      "text": "GAM's figures for how much real-time revenue lowered base costs in 2025 are blacked out in the public version. [P-112, P-114]",
+      "why": "This is true of the 2025 total, but it implies GAM has no public number. P-114 publicly gives $214 million (2022 rate case) and $264 million (2025 system lambda contribution). The page cites the opposing parties' public numbers repeatedly but leaves these out.",
+      "severity": "medium"
+    },
+    {
+      "line": 197,
+      "text": "It said \"the RTP rate is by design a marginal cost-based rate that is not intended to recover all embedded costs.\" [P-121]",
+      "why": "The quote stops one sentence before Georgia Power's disclaimer: 'This does not mean that RTP customers do not pay their fair share of system costs or cost to serve.' Without it, the quote reads like Georgia Power admitting that real-time customers underpay, which it explicitly denies.",
+      "severity": "medium"
+    },
+    {
+      "line": 120,
+      "text": "Georgia Power calls Staff's three guidelines \"new policy recommendations.\" [P-120, P-118]",
+      "why": "This takes the mildest words from Georgia Power's critique. The same passages say the guidelines are 'not based on or consistent with cost-allocation best practices, previous Commission policy decisions, or any widely accepted principles' and 'should be given no weight'. By contrast, the critique of Georgia Power in the parallel field (line 112) is given at full strength.",
+      "severity": "medium"
+    },
+    {
+      "line": 170,
+      "text": "PIA Staff and GIPL disagree with this way of splitting the fees. [P-085, P-101]",
+      "why": "This groups GIPL with Staff on a card framed as 'winter peak growth, not by energy use'. GIPL's filed testimony says pipeline fees are needed to meet peak demand (P-104) and proposes a demand-type (transmission) split. It also agrees that removing new large-load fees from the fuel clause 'addresses one problem' (P-101). GIPL disputes only the specific winter-peak factor. Georgia Power says GIPL later moved to an energy split (P-154, P-155). The card should say all of this.",
+      "severity": "medium"
+    },
+    {
+      "line": 118,
+      "text": "PIA Staff said that if its plan had applied in 2023–2025, the added money would have wiped out a $322 million shortfall in the fuel account. [P-066] It said today's fuel rate would then be lower by about $1.35 a month for a home using 1,000 kWh. [P-066, P-067]",
+      "why": "This is the page's most reader-salient household number, and it favors Staff. First, it gets no note that it covers the fuel charge only and leaves out the base-side effect (P-016, P-090). Second, it is not flagged as coming from page 7, which Staff's Oct 7 errata corrected at line 9 (P-039; the passage file marks P-066 'as filed; see S07b'), so the figure may have changed. Line 120 mentions corrections only to 'tables'.",
+      "severity": "medium"
+    },
+    {
+      "line": 164,
+      "text": "How big the gap really is, since Staff said its results \"may actually under-estimate the total impact.\" [P-078]",
+      "why": "The uncertainty runs in one direction only, and the wording takes Staff's premise that a 'gap' exists as given. This is the third time the page repeats Staff's 'may be too low' caveat (lines 120, 158). Georgia Power disputes that take-or-pay costs belong in a marginal-cost credit at all, and its own estimates are blacked out. Neutral version: 'How much the credit would change: Staff's figure is its own estimate from data it calls incomplete, and Georgia Power's estimates are blacked out.'",
+      "severity": "medium"
+    },
+    {
+      "line": 171,
+      "text": "GAM witness Jonathan Ly said no part of real-time revenue should be credited against these fees \"because FT costs are fully fixed costs that affect GPC’s average cost of service.\" [P-108, P-110]",
+      "why": "This is only half of GAM's point. As cut, GAM appears to back a plan that credits real-time revenue against new fees while saying no credit is due. The missing half (P-110) is that real-time sales already help pay these costs when system lambda is above average fuel cost, and that other RTP components cover fixed O&M. Present GAM's view as its own position, next to its P-113 support for Georgia Power's new-fee plan.",
+      "severity": "low"
+    },
+    {
+      "line": 186,
+      "text": "Georgia Power said Staff's own fuel-case testimony five months earlier used a peak-based method. [P-125] PIA Staff said it used that method \"simply for illustration purposes.\" [P-145]",
+      "why": "Georgia Power's charge ('cannot be reconciled') is paraphrased away, while Staff's reply is quoted and gets the last word. On card 3, Georgia Power gets no reply to its critics, so the two pipeline cards are handled differently.",
+      "severity": "low"
+    },
+    {
+      "line": 188,
+      "text": "Whether real-time money on the base side already helps pay these fees, as Georgia Power says. [P-124] GIPL called that \"questionable.\" [P-148]",
+      "why": "Two parties make this argument (Georgia Power in P-124, GAM in P-110), but the page gives it to Georgia Power alone and lets GIPL have the last word. Line 104 (Option A) and line 209 (card 6) do the same with P-098, although GIPL says 'I agree with this concept' in P-099.",
+      "severity": "low"
+    },
+    {
+      "line": 207,
+      "text": "GAM witness Jonathan Ly, for the Georgia Association of Manufacturers, whose members use large amounts of power. [P-108, P-109]",
+      "why": "GAM is the only party introduced by its members' stake, and the description drops 'under a variety of rate schedules' (P-109), which tells readers GAM's members are not only real-time customers. The description also takes the place of a GAM quote, which every other card's 'Who says it' has. Use P-111 instead, or describe every party's stake.",
+      "severity": "low"
+    },
+    {
+      "line": 87,
+      "text": "Homes pay 58.07% of base revenues but 55.36% of fuel revenues, by a cost study GAM cited. [P-116]",
+      "why": "This understates the source's authority. It is Georgia Power's own cost-of-service study (test year ending July 31, 2023) filed at the PSC. Say 'by Georgia Power's cost-of-service study, as cited by GAM'.",
+      "severity": "low"
+    },
+    {
+      "line": 119,
+      "text": "PIA Staff estimated Georgia Power's return on equity would have been an average of 0.49 percent lower in 2023–2025, still within the range the PSC allows. [P-091]",
+      "why": "Under 'Who pays', this suggests the company would absorb the change and that the cost is trivial. At a grade 6-8 reading level, '0.49 percent' reads as half of one percent of profit, but it is about half a percentage point on returns of roughly 10 to 11 percent (P-091). The line also leaves out that the PSC order books the base-side change for the next base rate case (P-016). Say 'percentage points' and add the P-016 mechanism.",
+      "severity": "low"
+    },
+    {
+      "line": 128,
+      "text": "Georgia Power's rebuttal says GIPL's witness switched to an energy-based split at a hearing. [P-154, P-155] We could not check this: the transcript of the Oct 15 hearing on the other parties' testimony is listed without a file. [P-003, P-009]",
+      "why": "The caveat is defensible, but the page applies it only to a Georgia Power claim that cites specific transcript pages (Tr. 421, 458-59; P-155). Staff claims the page also cannot check, such as the absorption analysis from surveillance filings (P-090) and 'simply for illustration' (P-145), carry no such caveat, and one of them is upgraded to 'found'. Mention the cited transcript pages, or caveat both sides the same way.",
+      "severity": "low"
+    },
+    {
+      "line": 1,
+      "text": "# PSC Docket 57171 (2026): Big customers' real-time payments and your fuel charge",
+      "why": "The title names only the part of the bill that a bigger credit helps. GAM's whole point is that base rates move the other way. 'your power bill' would be neutral.",
+      "severity": "low"
+    }
+  ],
+  "imbalance": [
+    {
+      "issue": "Replies to challenges are handled unevenly across cards. On Staff's pipeline card (4), the Georgia Power points under 'What challenges it' and 'What's uncertain' are each followed by a reply (Staff's 'simply for illustration', P-145; GIPL's 'questionable', P-148), and Option A's uncertain field also ends on GIPL's reply (P-098). On Georgia Power's pipeline card (3), the Staff and GIPL challenges get no reply, even though P-051 answers the 'partial solution' point. On GAM's card (6), the challenge is extended by the author's own analysis. Pick one rule: either include the proponent's reply on every card or on none.",
+      "severity": "medium"
+    },
+    {
+      "issue": "Staff's estimates are treated as more authoritative. Staff's figures recur on the page, with a {computed} rounding and 'Supported' labels, and one Staff conclusion is upgraded to 'found'. Card 2's label says Staff's estimate is 'from Georgia Power data', which lends Georgia Power's authority to a calculation Georgia Power has not endorsed. The public GP and GAM figures are omitted ($102 a year, P-054; $214 million, P-114), and GAM's source, Georgia Power's own cost-of-service study, is reduced to 'a cost study GAM cited'. Redactions explain some of the gap, but not leaving out numbers that are public.",
+      "severity": "medium"
+    },
+    {
+      "issue": "GIPL's pipeline position is shown only where it lines up with Staff: as an opponent on card 3 and as support on card 4 (P-102). Its filed agreement with Georgia Power is left out: pipeline fees are tied to peak demand (P-104), a demand-type split, and removing new large-load fees from the fuel clause (P-101). Because GIPL is the swing party on this question, the omission makes Georgia Power's plan look more isolated than the record shows.",
+      "severity": "medium"
+    },
+    {
+      "issue": "Card 4 (Staff's pipeline plan) gets a lighter opposing case than card 3 (Georgia Power's). Card 4 leaves out Georgia Power's main substantive objections to an energy split: the infrastructure analogy (P-126) and the customer-protection point if projects don't materialize (P-127). Card 3 carries Staff's full 'necessary for all hours' objection, and its label adds a 'not public' clause.",
+      "severity": "medium"
+    },
+    {
+      "issue": "Staff's 'estimates may be too low' caveat appears three times (lines 120, 158, 164) with nothing on the other side, so uncertainty about Staff's numbers only ever points upward. Meanwhile, the $1.35 figure comes from a page Staff later corrected (P-039, P-066), and the page doesn't flag that where the figure is used.",
+      "severity": "medium"
+    },
+    {
+      "issue": "Several Georgia Power passages are excerpted in ways that blunt or flip their meaning: P-054 (the freeze cited without its cause), P-121 (the fair-share disclaimer cut), P-120 (the critique shortened), P-126 (the infrastructure analogy cut), and P-130 (the last sentence cut). Staff's key quotes are mostly given as whole sentences (P-074, P-080, P-085).",
+      "severity": "medium"
+    },
+    {
+      "issue": "In fairness, some choices favor Georgia Power. Q3 uses Georgia Power's new-versus-existing framing. 'Only one party backs Option 2' appears twice. The $486 million caveat (P-077) is included. Staff's claim that Option 2 matches the 2010 proposal (P-073) is left out, while Georgia Power's 'departure from ... 2010' is quoted. Loaded opposing language is also left out ('unreasonably suppressed', 'apparent contravention', 'consistently refused'). So the net tilt against Georgia Power and GAM is moderate, not one-sided.",
+      "severity": "low"
+    }
+  ],
+  "label_disagreements": [
+    {
+      "argument": "Card 1: Leave take-or-pay contracts out entirely (Option 1)",
+      "label": "Claim type: mostly values (how a real-time rate should work)",
+      "proposed": "Claim type: factual and values",
+      "why": "Georgia Power's case rests on factual claims that nobody contests in the passages: real-time load cannot avoid take-or-pay costs, the fixed-price benefits go to standard-rate customers, and the contracts are not driven by large-load growth (P-130, P-050, GIPL's P-100). Card 2 rests on a values premise ('should be included') yet is labeled 'factual and values'. Tagging only Georgia Power's side 'mostly values' suggests Staff's side has more factual grounding. Make the two claim types the same."
+    },
+    {
+      "argument": "Card 2: Count the costs of take-or-pay contracts too (Option 2)",
+      "label": "Evidence: Supported, with limits (PIA Staff's estimate from Georgia Power data, which Staff calls incomplete; Georgia Power's own estimates are blacked out)",
+      "proposed": "Evidence: Supported that Option 2 raises the credit (Georgia Power agrees); the dollar size is PIA Staff's estimate alone, built on data Staff calls incomplete and not confirmed by any other party's public figures",
+      "why": "Card 1's 'Supported' covers only the undisputed direction. Card 2's lets one party's own estimate count as 'Supported', and 'from Georgia Power data' implies Georgia Power stands behind Staff's calculation. Limit both labels the same way."
+    },
+    {
+      "argument": "Card 3: Tie new pipeline fees to peak demand (Georgia Power's pipeline plan)",
+      "label": "Evidence: Mixed (Georgia Power, GAM and PIA Staff call the fees fixed but split them differently; the cost model behind Georgia Power's split is not public)",
+      "proposed": "Evidence: Mixed (Georgia Power, and GIPL's filed testimony, say pipeline fees are tied to peak demand; PIA Staff says they are needed in every hour; how to split them is partly a values question; the dollar amounts are blacked out)",
+      "why": "Agreeing the fees are fixed and then splitting them differently is not 'conflicting accounts'. The real factual conflict is peak-driven versus needed every hour. The model clause has three problems. It states GIPL's unrebutted allegation (P-103) as fact in the label. It overstates the model's role: Georgia Power says its split is 'consistent with' the model (P-056). And card 4's label has no matching note, though Staff's pipeline estimates are also blacked out (P-147)."
+    },
+    {
+      "argument": "Card 4: Share all pipeline and storage fees by energy use (PIA Staff's pipeline plan)",
+      "label": "Evidence: Mixed (Staff and Georgia Power disagree on whether the company could collect some costs twice; how to split fixed costs is partly a values question)",
+      "proposed": "Evidence: Mixed (Staff and Georgia Power disagree on double recovery and on whether an energy split protects other customers if large projects fall through; how to split fixed costs is partly a values question; Staff's own yearly estimates are blacked out)",
+      "why": "This puts card 4 on the same footing as card 3. Georgia Power's customer-protection objection (P-127) is a central factual dispute, and Staff's estimates are redacted (P-147) just as Georgia Power's are."
+    },
+    {
+      "argument": "Card 6: A bigger fuel credit means less help with base costs (GAM)",
+      "label": "Evidence: Supported, with limits (the PSC's order and three parties' testimony say base rates may be affected; the size is unknown and GAM's figures are blacked out)",
+      "proposed": "Evidence: Supported, with limits (the PSC's order and three parties' testimony say base rates may be affected, and PIA Staff agrees the direction and size would be set in a base rate case; the 2025 total is blacked out, but GAM's 2022 figure of $214 million and the $264 million 2025 lambda contribution are public)",
+      "why": "'GAM's figures are blacked out' is too broad (P-114), and Staff's own concession in P-090 strengthens the 'Supported' rating. Otherwise the label is fair. Labels on card 1 (evidence) and card 5 are fair as written."
+    }
+  ],
+  "questions_to_weigh": "Mostly neutral. Georgia Power and GAM would accept Q2 and Q3. Q3 even adopts Georgia Power's new-versus-existing framing, which PIA Staff might contest, since its plan covers all pipeline and storage fees. Q1 ('Should big customers on hourly prices help pay fuel costs that don't change with how much power they use?') is not fully neutral. 'Help pay' assumes real-time customers do not already contribute, which Georgia Power (P-049, P-052, P-124) and GAM (P-110, P-111) dispute: they say the base-side money already helps pay fixed costs. The real disagreement is where that contribution is counted. Suggested Q1: 'Should part of big real-time customers' payments be counted against fuel costs they can't change by using more or less power, or is it enough that the money lowers base costs?' Q2 states GAM's trade-off and is fair. 'Now' versus 'possibly ... later' is slightly uneven, though, since the PSC decides when a credit takes effect (P-016), so 'a lower fuel charge' alone is cleaner. Missing: GAM's question about who wins and who loses. Suggested addition: 'Who gains and who loses among homes and businesses, given that homes pay a larger share of base costs than of fuel costs?' (P-116, P-142, P-143).",
+  "verdict_summary": "The page is careful and mostly fair in tone. It represents GAM's core trade-off at full strength: card 6, Georgia Power's own per-$100 million bill figures, and the cost-of-service split. It quotes Georgia Power's Option 1 rationale directly, and it frames PIA Staff correctly as a party. But the positions are not fully represented, and the gaps lean one way. (1) Card 6 upgrades Staff to 'found' and adds the author's own inference against GAM. (2) Georgia Power's cost-causation case for treating new and existing pipeline fees differently (P-050, P-051) and its customer-protection objection to an energy split (P-127) are missing, while Staff's card replies to each Georgia Power challenge it lists. (3) GIPL's pipeline position appears only where it aligns with Staff. (4) Public Georgia Power and GAM figures ($102 a year, P-054; $214 million, P-114) are left out, while Staff's figures recur with an upward-only uncertainty framing, including the $1.35 from a page Staff later corrected. (5) Key Georgia Power quotes are cut in ways that blunt them (P-121, P-120, P-054). Some choices favor Georgia Power (the Q3 framing, the $486 million caveat, leaving out Staff's 2010 claim in P-073), so the tilt is moderate. Every fix is a small edit within the existing template."
+}

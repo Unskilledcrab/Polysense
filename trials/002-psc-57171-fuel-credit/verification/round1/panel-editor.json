@@ -1,0 +1,430 @@
+{
+  "role": "standards-editor",
+  "rating_neutrality": 3,
+  "rating_clarity": 3,
+  "issues": [
+    {
+      "line": 138,
+      "text": "\"Supported\" means the case record or a party's own figures back the claim. ... \"Uncertain\" means the needed numbers are missing or not yet known. (applied in the card headers on lines 144, 156, 168, 180, 192, 204)",
+      "rule": 2,
+      "problem": "The evidence labels do not follow the one rubric the page states. (a) Opposing cards get matched labels: cards 1 and 2 are both \"Supported, with limits\" and cards 3 and 4 are both \"Mixed\". Each label grades a different side fact, not the card's claim. Card 1 is graded on \"it raises the credit\", card 2 on Staff's dollar estimate, card 3 on \"all call the fees fixed\" (a dispute over method, not conflicting accounts of fact) and card 4 on the side issue of double recovery. (b) \"Uncertain\" is never used, though the numbers that would settle the question are blacked out for cards 1 (P-139), 3 (P-146), 4 (P-147) and 6 (P-112, P-114). (c) Neither \"with limits\" nor card 5's compound label is defined in the rubric. (d) Counting \"a party's own figures\" as support lets a party's own estimate prove its own claim.",
+      "fix": "Grade the same thing on every card: the card's main factual premise, named in the label. Apply the rubric literally. Use \"Uncertain\" wherever the deciding numbers are blacked out, and add the values marker to every card whose core is a values choice, as card 5 does. Define \"with limits\" or drop it. Require the case record, or a party other than the one making the claim, before a claim is \"Supported\". Let the labels on opposing cards differ when their evidence differs.",
+      "severity": "high"
+    },
+    {
+      "line": 156,
+      "text": "Card 1: \"Claim type: mostly values\" ... \"this is mainly a question of values\" (lines 144, 152). Card 2: \"Claim type: factual and values\" ... \"**What's uncertain:** How big the gap really is\" (lines 156, 164)",
+      "rule": 2,
+      "problem": "The two take-or-pay cards rest on parallel premises: keep real-time pricing tied to marginal cost (Option 1), or count every cost that serves all customers (Option 2). Both cards also make factual side claims. Yet card 1 is typed \"mostly values\" and ends on \"mainly a question of values\", while card 2 is typed \"factual and values\" and ends on \"How big the gap really is\". That \"gap\", like \"under-counted\" on lines 103 and 158, is measured against Option 2's own premise: Staff's Option 2 result minus today's method (P-078). So Staff's side reads as measurable fact and the Georgia Power and GIPL side reads as opinion.",
+      "fix": "Give both cards the same claim type, \"factual and values\". Add to card 2's \"What's uncertain\" the mirror of card 1's values sentence: \"Whether counting every cost that serves all customers matters more than keeping real-time pricing tied to marginal cost; this is mainly a question of values. {editorial}\" Describe Staff's $220 million as \"the difference between today's method and Option 2\", not as a \"gap\" or an \"under-count\".",
+      "severity": "high"
+    },
+    {
+      "line": 118,
+      "text": "the added money would have wiped out a $322 million shortfall in the fuel account. [P-066] It said today's fuel rate would then be lower by about $1.35 a month for a home using 1,000 kWh. [P-066, P-067]",
+      "rule": 8,
+      "problem": "P-066 is page 7 of Staff's testimony as first filed, and the passage itself is marked \"as filed; see S07b\". Staff's Oct 7 corrections (P-039) changed \"page 7, line 9\", and the page says the corrected pages could not be read. Yet it shows its most noticeable bill figures, $322 million and $1.35 a month, with no warning that they may be out of date. Line 120 also understates the corrections as \"figures in several of its tables\". They also changed text on pages 7 and 20, and page 20 holds P-157, which the page uses for Staff's pipeline plan. Finally, $1.35 covers the fuel charge only. It leaves out any later change in base rates (P-090).",
+      "fix": "After the figures, add: \"These are Staff's figures as first filed. Its Oct 7 corrections changed page 7, where they appear, and we could not read the corrected page. [P-039] {editorial: process note}\" On line 120, list what was corrected: Tables 2, 3, 4 and 7, plus text on pages 7 and 20. Also add: \"This counts only the fuel charge, not any later change in base rates. {analysis: P-066 concerns FCR-27 fuel rates; P-090 leaves base-rate effects to a rate case}\"",
+      "severity": "high"
+    },
+    {
+      "line": 183,
+      "text": "\"Documented\" means a named witness made the argument in a filing (line 138). Card 4: \"PIA Staff said its approach is ...\" (line 183). Card 5: \"PIA Staff said ...\" and \"GIPL's witness said ...\" (line 195)",
+      "rule": 1,
+      "problem": "The \"Documented\" label promises a named witness, and project rules require a speaker, a date, a venue and a verbatim passage for every documented argument. Only two attributions give all four: Georgia Power on card 1 (three named witnesses, rebuttal testimony, Oct 27, 2026) and PIA Staff on card 2 (three named witnesses, testimony filed Sep 23, 2026). GIPL on card 1 (line 147) has no date or filing. Cards 3 and 6 (lines 171 and 207) give no dates and name no Georgia Power witness. Cards 4 and 5 name no witness at all, yet both are labeled \"Documented\".",
+      "fix": "Use one pattern in every \"Who says it\" field: witness names, party, filing, date and a verbatim quote. Examples: \"GIPL witness John D. Wilson, direct testimony filed Sep 23, 2026 [P-092, P-152]\"; \"GAM witness Jonathan Ly, testimony filed Sep 23, 2026 [P-108, P-153]\"; \"PIA Staff witnesses Tom Newsome, Philip Hayet and Leah Wellborn, testimony filed Sep 23, 2026 [P-059, P-060, P-160, P-161]\"; \"Georgia Power witnesses Ross Beppler, Lee Evans and Brandon Looney, rebuttal testimony filed Oct 27, 2026 [P-117]\" (or direct testimony filed Aug 14, 2026 [P-041]).",
+      "severity": "high"
+    },
+    {
+      "line": 9,
+      "text": "The big customers' own prices would not change. [P-105] (also line 79: \"The real-time customers' own prices would not change, only how their payments are counted. [P-105, P-046]\", and line 127)",
+      "rule": 8,
+      "problem": "P-105 is GIPL describing its own recommendation. P-046 is Georgia Power describing the 2010 accounting change, not the options in this case. The page turns them into a promise, in its own voice, that covers every option. But real-time customers also pay standard rates, base rates included, on their baseline power (P-043, P-052), so a later base-rate change would reach them. P-105 also does not cover the fallback plans that would move pipeline fees into base rates or charge them to real-time customers (P-086, P-096).",
+      "fix": "Narrow the claim and attribute it: \"The hourly real-time prices would not change; only how the money is counted would, GIPL says [P-105]. Georgia Power said the same of the 2010 method change [P-046].\" Add: \"Real-time customers pay standard rates on their baseline power, so a later base-rate change would reach that part of their bills. [P-043]\" Use the same wording on lines 9, 79 and 127.",
+      "severity": "medium"
+    },
+    {
+      "line": 28,
+      "text": "Resource Supply Management (RSM) filed testimony. [P-059, P-152, P-153, P-002] (also line 132: \"Resource Supply Management also filed testimony, on Sep 22. [P-002]\")",
+      "rule": 8,
+      "problem": "P-002 shows only \"Jim Clarkson Direct Testimony\", filed 2026-09-22, with no party named. No passage ties Clarkson to RSM, and the name \"Resource Supply Management\" appears in no passage. P-017 uses only the initials \"RSM\", and that is from the earlier fuel case. The count \"Five parties filed testimony\" (line 132) depends on this link.",
+      "fix": "Add a passage that ties the filing to its party, such as the company field in the filing list or the testimony's cover page. Until then, write: \"Jim Clarkson filed direct testimony on Sep 22 [P-002]; we could not confirm which party he testifies for. **[unverified]**\" Update the party count to match.",
+      "severity": "medium"
+    },
+    {
+      "line": 96,
+      "text": "These are the four plans in the record. {editorial}",
+      "rule": 8,
+      "problem": "The page could not read RSM's filing (line 132), so it cannot know that the record holds only four plans. The sentence is also a factual claim, tagged {editorial}.",
+      "fix": "\"These are the four plans in the testimony we could read. RSM's filing is a scanned image we could not review. {editorial: process note}\"",
+      "severity": "medium"
+    },
+    {
+      "line": 204,
+      "text": "Side: accepts either of Georgia Power's options (GAM) (line 204). Also line 101: \"None of the four parties whose testimony we archived asks to keep it unchanged.\"",
+      "rule": 1,
+      "problem": "The rubric says a Side label \"names the plan or option a card argues for\". Card 6 argues against raising the fuel credit, because doing so \"would put upward pressure on base rates\" (P-115). GAM accepts Georgia Power's options only \"Should the Commission find\" that a change is needed (P-111). So the label misstates what the card argues for. Option A's \"Who supports it\" line also hides GAM's documented lean toward today's method.",
+      "fix": "Write the label from GAM's own words: \"Side: against raising the fuel credit; accepts either Georgia Power option if the PSC finds a change is needed (GAM) [P-111, P-115]\". In Option A's \"Who supports it\", add: \"GAM argues a bigger credit would put upward pressure on base rates [P-115], and accepts Georgia Power's options only if the PSC finds a change is needed [P-111].\"",
+      "severity": "medium"
+    },
+    {
+      "line": 190,
+      "text": "### 5. Other fuel costs left out of the credit fall on other customers (PIA Staff and GIPL) / ### 6. A bigger fuel credit means less help with base costs (GAM) (line 202)",
+      "rule": 3,
+      "problem": "Titles 1 to 4 each name a proposal. Titles 5 and 6 instead state a disputed argument as fact, in the page's own heading voice. Georgia Power disputes that these costs \"fall on other customers\" (P-124), and GIPL disputes that the base-side money is \"help\" (P-098). The labels in parentheses also mix kinds: options, plans and party names.",
+      "fix": "Make every title a proposal: \"5. Count more fuel-related costs in the credit (PIA Staff and GIPL)\" and \"6. Keep more real-time money on the base side (GAM)\". Move the argument into \"In short\", with attribution.",
+      "severity": "medium"
+    },
+    {
+      "line": 171,
+      "text": "GAM witness Jonathan Ly said no part of real-time revenue should be credited against these fees \"because FT costs are fully fixed costs that affect GPC’s average cost of service.\" [P-108, P-110]",
+      "rule": 8,
+      "problem": "Card 3 argues for Georgia Power's winter-peak split. Under that plan, \"the RTP revenues booked to fuel will cover the large load causation of the FT cost\" (P-127). In other words, some real-time revenue would be credited against new pipeline fees, which is exactly what P-110 says should not happen. So the quote does not support the card's claim. The page also reuses it on card 4 as opposition to Staff.",
+      "fix": "Remove P-110 from card 3's \"Who says it\" and keep GAM's P-113 under \"What supports it\". Leave P-110 in card 4's \"Who disagrees\", where it fits. Or present it in Option A as GAM's view that pipeline fees should stay out of the credit.",
+      "severity": "medium"
+    },
+    {
+      "line": 132,
+      "text": "Only one party, PIA Staff, backs Option 2. {analysis: P-128 and P-111} (also line 117: \"No other party's testimony we read backs Option 2.\" and line 109: \"GAM says either of Georgia Power's options would work. [P-111]\")",
+      "rule": 2,
+      "problem": "GAM accepts \"either\" of Georgia Power's options (P-111), and that includes Option 2. The page counts this as support only under Option B, then twice stresses that Staff stands alone. The \"Only one party\" sentence repeats the sentence before it and adds nothing but emphasis. That cuts against the page's own note that the count \"reflects who filed testimony, not how many people hold each view\" (line 134). Option B also lists GIPL's partial support, but Option C leaves out GIPL's support for its other-cost and pipeline-credit parts (P-096, P-102).",
+      "fix": "Delete \"Only one party, PIA Staff, backs Option 2.\" Put the GAM sentence under B, C and D alike, or under none of them. List partial support the same way for every plan. For C: \"GIPL also backs counting coal-related costs, corporate overhead and a direct pipeline share [P-096].\" For D: \"Georgia Power backs Option 1 [P-128]; PIA Staff backs counting other costs [P-087, P-088].\"",
+      "severity": "medium"
+    },
+    {
+      "line": 127,
+      "text": "**Who pays:** GIPL says the change \"may increase base rates for those same customers, depending on how other cost allocation questions are handled.\" [P-105] Real-time customers' prices would not change. [P-105]",
+      "rule": 2,
+      "problem": "Plans B, C and D all raise the fuel credit and move money off the base side. For B and C (lines 111 and 119), the page describes that cost with GAM's firmer words, \"upward pressure on base rates\" (P-115), which GAM applies to \"either of these changes\". Only D gets its own sponsor's hedged wording, plus a reassurance about prices that the other plans lack. D also leaves out that very large new customers would pay the new pipeline fees, which B states (line 111).",
+      "fix": "Use one base-rate sentence for B, C and D: \"Less real-time money goes toward base costs. GAM says this puts 'upward pressure on base rates' [P-115], and GIPL says it 'may increase base rates' [P-105].\" Remove the price sentence from D, or add it to all four plans. Add to D: \"Very large new customers' payments would cover the new pipeline fees tied to their growth. [P-096]\"",
+      "severity": "medium"
+    },
+    {
+      "line": 207,
+      "text": "GAM witness Jonathan Ly, for the Georgia Association of Manufacturers, whose members use large amounts of power. [P-108, P-109]",
+      "rule": 2,
+      "problem": "GAM is the only party whose members or stake are described in an argument card. GIPL's members, Georgia Power's stake in its earnings (P-091) and PIA Staff's public-interest role (P-006) get no matching description. Naming one side's stake alone reads as a reason to discount that side.",
+      "fix": "Give every party a matching one-line role, with a source, once at the top of Layer 4. Georgia Power: the utility that proposed the options [P-041]. PIA Staff: PSC staff taking part as a party for the public interest [P-006]. GIPL: filing with three member congregations [P-093]. GAM: a manufacturers' group whose members use large amounts of power [P-109]. Then drop the description from card 6, or give every card a matching one.",
+      "severity": "medium"
+    },
+    {
+      "line": 91,
+      "text": "GIPL said changes to real-time rate design are not within the scope of this case. [P-107] Georgia Power asked the PSC to strike that part of GIPL's testimony, along with other parts. [P-134, P-158] Georgia Power said this case is limited to how real-time revenue is split between base and fuel. [P-133]",
+      "rule": 2,
+      "problem": "The paragraph puts GIPL's concession next to two Georgia Power statements about scope, so GIPL seems to undercut its own testimony. It leaves out GIPL's answer to the motion: \"the entirety of Mr. Wilson's testimony falls well within the scope of this proceeding and is relevant\" (P-136). It also leaves out that P-107 goes on to recommend that Georgia Power propose pricing changes for later review.",
+      "fix": "Add: \"GIPL says all of its testimony is within the scope of the case and relevant to the issues the PSC listed. [P-136]\" Rephrase the P-107 sentence: \"GIPL said rate-design changes are outside this case and recommended that Georgia Power propose them for later review. [P-107]\"",
+      "severity": "medium"
+    },
+    {
+      "line": 124,
+      "text": "New pipeline fees caused by very large new customers would be recovered from them, split the way transmission costs are split instead of by winter peak. [P-096, P-104]",
+      "rule": 1,
+      "problem": "GIPL's pipeline plan is what makes Option D different, yet it has no argument card. Its reasoning never appears: pipeline space \"is similar to transmission, in that it is required to meet peak demand conditions\", and the choice \"could be made explicitly provisional until the next rate case\" (P-104). The case against it sits only in Option D. The reporting question (line 78) has no card either. There, Georgia Power's reason is cut short: P-132 adds that some reports are \"not feasible in the requested timeframe\".",
+      "fix": "Add a card with the same fields: \"Split new pipeline fees the way transmission costs are split (GIPL's pipeline plan)\". Cite P-104, P-096, P-101, P-102 and P-148 in support, and P-126, P-154 and P-155 against. Add a short reports card, or explain why there is none. On line 78, add Georgia Power's feasibility objection [P-132].",
+      "severity": "medium"
+    },
+    {
+      "line": 185,
+      "text": "**Who disagrees:** Georgia Power said it would only collect twice \"if it was charging customers for FT costs in both fuel and base rates,\" and that pipeline fees are not in base rates. [P-123]",
+      "rule": 1,
+      "problem": "Card 4 answers Staff's plan only with Georgia Power's narrow reply on double recovery. It leaves out Georgia Power's main case against sharing the fees by energy use: the fees are \"fixed, driven by peak demand\" (P-126), and Staff's energy-based split \"does not provide this level of customer protection\" (P-127). Card 3, by contrast, gives Staff's main argument against Georgia Power. Card 4's \"In short\" (line 182) also never names who opposes it, while card 3's does (line 170).",
+      "fix": "In card 4's \"Who disagrees\", add: \"Georgia Power said Staff's energy-based split 'does not provide this level of customer protection.' [P-127]\" End card 4's \"In short\" the way card 3's ends: \"Georgia Power and GAM disagree with sharing the fees by energy use. [P-126, P-110]\"",
+      "severity": "medium"
+    },
+    {
+      "line": 102,
+      "text": "where Georgia Power counted $264 million in 2025 toward fixed costs (line 102); PIA Staff found Georgia Power could have absorbed (line 210); PIA Staff wants new monthly reports (line 78)",
+      "rule": 3,
+      "problem": "The attribution verbs vary in strength from party to party. Georgia Power \"counted\" a figure that came from its own analysis (P-052: \"The Company performed an analysis\"), which makes it sound audited, while PIA Staff only \"estimates\". \"PIA Staff found\" (line 210) presents a claim as an established finding, though line 86 reports the same claim as \"PIA Staff says\". And \"wants\" (line 78) is more casual than Georgia Power's \"says\".",
+      "fix": "Use the same neutral verbs for every party: \"Georgia Power estimates real-time money paid $264 million toward fixed costs in 2025 [P-052]\"; \"PIA Staff estimated Georgia Power could have absorbed ...\"; \"PIA Staff recommends new monthly reports ...\"",
+      "severity": "medium"
+    },
+    {
+      "line": 216,
+      "text": "Should big customers on hourly prices help pay fuel costs that don't change with how much power they use? {editorial}",
+      "rule": 12,
+      "problem": "The question assumes real-time customers do not help pay these costs now. Georgia Power disputes that: it says they pay \"their share of fixed costs\" through the base side (P-124). The question also describes the costs only in Georgia Power's terms, as costs that don't change with use (P-130), and not in Staff's, as costs that \"serve all customers at all times\" (P-080). Neither side would accept the question as fair.",
+      "fix": "\"Should part of real-time customers' payments count toward fixed fuel costs that serve all customers but don't change with their use, or is the share now counted on the base side enough?\"",
+      "severity": "medium"
+    },
+    {
+      "line": 218,
+      "text": "How should the cost of new gas pipeline space be shared between very large new customers and everyone else? {editorial}",
+      "rule": 12,
+      "problem": "The question takes on Georgia Power's scope: new fees only, and very large new customers only. PIA Staff's plan covers all pipeline and gas storage fees, old and new, shared by real-time and other customers alike (P-157). Staff calls an approach limited to new fees \"only a partial solution\" (P-082), so Staff would not accept this framing.",
+      "fix": "\"How should pipeline and gas storage fees, old and new, be shared among real-time customers, very large new customers and everyone else, and should they be split by peak demand or by energy use?\"",
+      "severity": "medium"
+    },
+    {
+      "line": 55,
+      "text": "**What's being decided:** Big businesses on real-time pricing pay one hourly price for their extra power. [P-043, P-061] ... (followed by \"How real-time pricing works\", \"Terms in the quotes\" and \"What would change\")",
+      "rule": 9,
+      "problem": "The \"What's being decided\" paragraph alone is about 77 words. Adding the next block, \"How real-time pricing works\" (about 115 words), brings it to about 192. Counting through the five numbered \"What would change\" items, it is about 442 words, against a budget of about 80. The glossary and the real-time pricing explainer sit between the decision and its numbered list, instead of in secondary subsections.",
+      "fix": "Cut \"What's being decided\" to about 45 words. Follow it directly with \"What would change\" as five numbered items of one line each (about 35 words). Move \"How real-time pricing works\" and \"Terms in the quotes\" into ### subsections below.",
+      "severity": "medium"
+    },
+    {
+      "line": 170,
+      "text": "The \"In short\" lines on lines 146, 158, 170, 182, 194 and 206. Example, line 170: \"Georgia Power says pipeline fees are fixed years ahead and driven by peak demand, so new fees caused by very large customers should be split by winter peak growth, not by energy use.\"",
+      "rule": 9,
+      "problem": "Each \"In short\" runs 39 to 48 words in two sentences. Their first sentences run up to 35 words (line 170), at a reading grade of roughly 8 to 11.5, so the card claims are hard to scan. Measured with a rough Flesch-Kincaid estimate, Layer 4 reads at about grade 10.4 and Layer 3 at about 8.6. Layers 1 and 2 read at about 6.6 to 7.4.",
+      "fix": "Limit each \"In short\" to one claim sentence of 20 to 25 words, plus at most one short counterpoint. Split long attribution sentences, such as line 147 (34 words). Paraphrase dense quotes, or follow each with a plain-words gloss.",
+      "severity": "medium"
+    },
+    {
+      "line": 9,
+      "text": "But less would then go toward the company's other costs, so base rates could rise later. (line 9); \"its fuel account and its base account\" (line 55)",
+      "rule": 10,
+      "problem": "\"Base rates\" is half of the trade-off and appears throughout, but the page never says what base rates pay for. Only \"base rate case\" is defined (line 83). Readers cannot weigh a lower fuel charge against higher base rates without knowing what base rates cover.",
+      "fix": "Define the term once in Layer 2: \"Base rates are the part of the bill that pays for power plants, power lines and other non-fuel costs, including the company's profit. {analysis: plain-language definition, not from the cited sources}\" In the 30-second version, add a short gloss: \"base rates (the non-fuel part of the bill)\".",
+      "severity": "medium"
+    },
+    {
+      "line": 108,
+      "text": "using each group's share of winter peak growth to split the fees (line 108); \"a peak-based split\" (line 116); \"split the way transmission costs are split\" (line 124); \"capacity prices\" (line 128)",
+      "rule": 10,
+      "problem": "The pipeline dispute turns on peak demand versus energy use, but the page defines neither term. \"Winter peak growth\", \"split the way transmission costs are split\" and \"capacity prices\" will mean little to an ordinary power customer.",
+      "fix": "Define the terms once: \"Peak demand is the most power customers use at one time, such as on the coldest winter morning. Energy use is the total power used over a month. {analysis: plain-language definitions}\" Explain GIPL's split as \"by each group's share of peak demand, the way power-line costs are shared [P-104]\".",
+      "severity": "medium"
+    },
+    {
+      "line": 106,
+      "text": "### Option B: Georgia Power's plan ... Uses Option 1 (also \"Option C ... Uses Option 2\" and \"Option D ... Uses Option 1\")",
+      "rule": 10,
+      "problem": "Two naming schemes overlap, with Options 1 and 2 nested inside Options A to D. That produces lines like \"Option B ... Uses Option 1\", which an ordinary reader will struggle to follow even with the note on line 96.",
+      "fix": "Rename the four plans \"Plan A\" to \"Plan D\", or name them, such as \"Today's method\" and \"Georgia Power's plan\". Keep \"Option 1\" and \"Option 2\" only for the two take-or-pay choices, as the record names them.",
+      "severity": "medium"
+    },
+    {
+      "line": 85,
+      "text": "If fuel charges had to collect $100 million less, a typical home's bill would drop by about $1.48 a month, Georgia Power estimates. [P-141, P-142] If base rates had to collect $100 million more, that bill would rise by about $1.65 a month, it estimates.",
+      "rule": 10,
+      "problem": "The page never tells readers plainly that no filing gives any plan's net effect on a typical home's total bill. The only per-home figure for a plan is Staff's $1.35, which covers the fuel charge only (line 118). Georgia Power's per-$100 million figures are examples, not forecasts, so readers may net them against each other themselves.",
+      "fix": "Add to \"Fuel side versus base side\": \"No filing we read gives the net effect of any plan on a typical home's total bill. Fuel and base effects would come at different times. {analysis: P-066 is fuel-only; P-016 and P-090 leave base effects to a rate case; P-142 and P-143 are per-$100 million examples}\"",
+      "severity": "medium"
+    },
+    {
+      "line": 8,
+      "text": "Some big businesses, including data centers, buy power from Georgia Power at hourly real-time prices. [P-042, P-044, P-097]",
+      "rule": 8,
+      "problem": "The only passage about data centers is GIPL's testimony (P-097). Line 62 attributes the point to GIPL, but the lead states it in the page's own voice. The record does not say how many of the roughly 2,470 real-time customers (P-044) are data centers, so leading with them frames the case around one type of customer.",
+      "fix": "Attribute it as line 62 does, or name the whole customer group first: \"About 2,470 business customers buy power at hourly real-time prices [P-044]; GIPL says the method has been applied to data centers [P-097].\"",
+      "severity": "low"
+    },
+    {
+      "line": 8,
+      "text": "30-second version (lines 8 to 10)",
+      "rule": 9,
+      "problem": "The section has the right three items, but they total about 131 words. The items run 48, 47 and 36 words, with three or four sentences each, so they are not \"short\".",
+      "fix": "Keep each item to one or two sentences of 25 words or fewer. Move \"Homes and small businesses pay fuel costs through a separate charge on their bills\" to Layer 2, and fold the sentence about prices into item 2.",
+      "severity": "low"
+    },
+    {
+      "line": 10,
+      "text": "The PSC holds a hearing on Nov 12 and plans to decide on Dec 15, 2026. (line 10); \"For the Dec 15 vote, send yours no later than Dec 14 at 9:30 a.m.\" (line 48)",
+      "rule": 8,
+      "problem": "The note that dates can change appears only on line 42. The dates in the 30-second version and the computed comment deadline carry no such warning. The deadline would also move if the PSC moved the session.",
+      "fix": "On line 10, add \"(as of Nov 8, 2026; dates can change)\". On line 48, add \"If the PSC moves the vote, this deadline moves too; check the PSC calendar.\"",
+      "severity": "low"
+    },
+    {
+      "line": 16,
+      "text": "Commissioners are elected. [P-031]",
+      "rule": 8,
+      "problem": "The next bullet says Stan Wise was appointed (P-033, P-034), so this flat statement is wrong for one of the five who will vote.",
+      "fix": "\"Commissioners are normally elected; one current commissioner was appointed to finish a term. [P-031, P-033, P-034]\"",
+      "severity": "low"
+    },
+    {
+      "line": 46,
+      "text": "You can ask to speak at the Nov 12 hearing as a public witness. [P-010, P-025, P-159] ... You can also ask to have your written comments entered into the record. [P-027]",
+      "rule": 8,
+      "problem": "No passage says the PSC will hear public witnesses on Nov 12 in particular; P-025 and P-159 are general. P-027 also lets you make the written-comments request \"during the hearing\", and the page drops that condition.",
+      "fix": "\"The PSC's public witness page says the public can testify at its hearings [P-025, P-159]. Call the PSC to confirm for Nov 12 [P-021]. At the hearing, you can ask to have written comments entered into the record [P-027].\"",
+      "severity": "low"
+    },
+    {
+      "line": 87,
+      "text": "Homes pay 58.07% of base revenues but 55.36% of fuel revenues, by a cost study GAM cited. [P-116]",
+      "rule": 8,
+      "problem": "The study is Georgia Power's cost-of-service study for the year ending Jul 31, 2023 (P-116). The page gives neither its age nor its author, and today's shares may differ.",
+      "fix": "\"... by a Georgia Power cost study for the year ending Jul 31, 2023, which GAM cited. [P-116]\"",
+      "severity": "low"
+    },
+    {
+      "line": 112,
+      "text": "GIPL says Georgia Power has not let other parties review the cost model behind its winter peak split. [P-103] (also line 174)",
+      "rule": 8,
+      "problem": "P-103 says \"intervenors\", which excludes PIA Staff. The passages do not show whether Staff saw the model, so \"other parties\" claims more than GIPL did.",
+      "fix": "\"... has not let intervenors (outside parties such as GIPL) review ...\"",
+      "severity": "low"
+    },
+    {
+      "line": 119,
+      "text": "PIA Staff estimated Georgia Power's return on equity would have been an average of 0.49 percent lower in 2023–2025",
+      "rule": 10,
+      "problem": "The source means percentage points: the revised returns are 10.3, 10.9 and 10.9 percent (P-091). \"0.49 percent lower\" can be read as a cut of less than half of one percent of the return.",
+      "fix": "\"... about half a percentage point lower each year, at 10.3, 10.9 and 10.9 percent, still inside the 9.5 to 11.9 percent range the PSC allows. [P-091]\"",
+      "severity": "low"
+    },
+    {
+      "line": 118,
+      "text": "the added money would have wiped out a $322 million shortfall in the fuel account",
+      "rule": 3,
+      "problem": "\"Wiped out\" is vivid wording in the page's own voice. The source says \"eliminated\" (P-066).",
+      "fix": "\"... would have covered a $322 million shortfall in the fuel account (Staff's word: 'eliminated').\"",
+      "severity": "low"
+    },
+    {
+      "line": 194,
+      "text": "Georgia Power agrees these costs are not in the credit but says they should stay out. [P-049, P-131] (header line 192: \"Supported that the costs are left out (the parties agree)\")",
+      "rule": 8,
+      "problem": "P-049 says fixed fuel costs are left out of the credit, but its examples are take-or-pay contracts and pipeline fees, not coal rail car leases or corporate overhead. P-131 only rejects Staff's Table 1. No passage shows Georgia Power agreeing to the specific list.",
+      "fix": "\"Georgia Power's testimony says fixed fuel costs are not in the credit [P-049], and it asks the PSC not to add Staff's list [P-131].\" In the label, replace \"the parties agree\" with \"not disputed in the passages we have\".",
+      "severity": "low"
+    },
+    {
+      "line": 208,
+      "text": "The PSC's order sends any matching base-side change to the next base rate case. [P-016] (under card 6's \"What supports it\"; the header on line 204 cites \"the PSC's order and three parties' testimony\")",
+      "rule": 2,
+      "problem": "The order records any base-side change as \"a regulatory asset or liability\" (P-016), so it takes no side on which way base rates move. Listing it under \"What supports it\" lends the regulator's authority to GAM's argument. PIA Staff also accepts that base rates may be affected (P-090), so four parties agree, not three.",
+      "fix": "Keep the order only under \"What's uncertain\", or word it neutrally: \"The PSC's order says any base-side change will be settled in the next base rate case; it does not say which way.\" Change the count in the label to \"all four parties\".",
+      "severity": "low"
+    },
+    {
+      "line": 209,
+      "text": "GIPL said the base-side money \"does not provide further surplus to represent downward pressure on rates.\" [P-098]",
+      "rule": 1,
+      "problem": "The card leaves out GIPL's fuller answer to the base-side argument (P-099). There GIPL says \"I agree with this concept\", meaning that base-side revenue lowers other customers' base costs. But it says the concept ignores two things: fuel and base costs are split among customer groups differently, and fuel over- or under-collections carry forward. That is GIPL's strongest documented case on this card.",
+      "fix": "Add: \"GIPL said it agrees with the idea in concept, but that fuel and base costs are shared among customers differently and that fuel balances carry forward. [P-099]\"",
+      "severity": "low"
+    },
+    {
+      "line": 103,
+      "text": "PIA Staff estimates that leaving out take-or-pay costs under-counted the fuel credit by $70 million, $74 million and $76 million in 2023, 2024 and 2025. [P-078] (also line 158: \"an estimate based on data Staff calls incomplete\")",
+      "rule": 2,
+      "problem": "The caveats on Staff's figures are uneven. Option A gives the figures with no caveat. Card 2's \"In short\" warns that the data were incomplete but not which way that cuts. Staff says its figures \"may actually under-estimate\" the effect (P-078), so readers may wrongly take \"incomplete\" to mean \"unreliable\". \"Under-counted\" also treats Option 2 as the correct baseline. Measured against Option 1, the difference is a different number, and that number is blacked out.",
+      "fix": "Use one caveat everywhere: \"PIA Staff estimates that counting take-or-pay costs (Option 2) would have added $70 million, $74 million and $76 million to the credit in 2023, 2024 and 2025. Staff says its data were incomplete, so these figures may be too low. [P-078]\"",
+      "severity": "low"
+    },
+    {
+      "line": 150,
+      "text": "\"associated interchange energy rate\" (line 150); \"replacement fuel cost\" (line 100); \"embedded costs\" (line 197); \"strike\" (lines 30, 91); \"day-ahead version\" and \"hour-ahead version\" (line 59); \"use at least 250 kilowatts\" (line 59)",
+      "rule": 10,
+      "problem": "These terms are never explained. Line 59 also says customers \"use at least 250 kilowatts\", but kilowatts measure demand at one moment, not use, and only kWh is defined.",
+      "fix": "Gloss each term in a few words outside the quotes. Use a passage where one supports the gloss; otherwise tag it {analysis}. Examples: \"strike\" becomes \"remove from the record\" [P-134], and \"250 kilowatts\" becomes \"a peak demand of 250 kilowatts or more\" [P-044]. For the \"associated interchange energy rate\", say only that Staff named a different way to measure marginal cost [P-075], unless a passage defines it.",
+      "severity": "low"
+    }
+  ],
+  "flip_test": [
+    {
+      "line": 132,
+      "text": "Only one party, PIA Staff, backs Option 2.",
+      "asymmetry": "Staff's isolation is stated twice (here and on line 117). No such line appears for other positions with a single backer, such as GIPL's transmission-style pipeline split or Georgia Power's opposition to Staff's reports. GAM's acceptance of \"either\" option counts as support under Option B (line 109) but not under Option C.",
+      "fix": "Delete the sentence. List full and partial support the same way under Plans B, C and D."
+    },
+    {
+      "line": 102,
+      "text": "where Georgia Power counted $264 million in 2025 toward fixed costs",
+      "asymmetry": "Georgia Power's figure, from its own analysis (P-052), is reported as something it \"counted\", which sounds authoritative. PIA Staff's figures on lines 103 and 118 are reported as things it \"estimates\".",
+      "fix": "\"where Georgia Power estimates real-time money paid $264 million toward fixed costs in 2025 [P-052]\""
+    },
+    {
+      "line": 210,
+      "text": "PIA Staff found Georgia Power could have absorbed the larger fuel credit",
+      "asymmetry": "\"Found\" is a verb for an established fact. Line 86 reports the same claim as \"PIA Staff says\", and every other party \"says\" or \"said\".",
+      "fix": "\"PIA Staff estimated Georgia Power could have absorbed ...\""
+    },
+    {
+      "line": 78,
+      "text": "PIA Staff wants new monthly reports ... Georgia Power says the reports aren't needed.",
+      "asymmetry": "Staff gets a casual verb of wanting. Georgia Power's reason is cut short: P-132 also says some reports are \"not feasible in the requested timeframe\".",
+      "fix": "\"PIA Staff recommends new monthly reports ... [P-068] Georgia Power says they aren't needed and some aren't feasible in that time. [P-132]\""
+    },
+    {
+      "line": 127,
+      "text": "**Who pays:** GIPL says the change \"may increase base rates ... depending on how other cost allocation questions are handled.\"",
+      "asymmetry": "Plan D's cost is described in its sponsor's own hedged words, plus a reassurance about prices. Plans B and C get GAM's firmer \"upward pressure on base rates\" and no reassurance. Plan D also leaves out that very large new customers would pay the new pipeline fees, which Plan B states.",
+      "fix": "Use the same base-rate sentence, citing both P-115 and P-105, for Plans B, C and D. Add a matching sentence on new pipeline fees to Plan D."
+    },
+    {
+      "line": 207,
+      "text": "for the Georgia Association of Manufacturers, whose members use large amounts of power",
+      "asymmetry": "Only GAM's stake or membership is described in an argument card. Georgia Power's stake in its earnings (P-091), GIPL's members (P-093) and Staff's public-interest role (P-006) get nothing comparable.",
+      "fix": "Put one matching, sourced role line for every party at the top of Layer 4. Then remove the description from card 6, or add a matching one to every card."
+    },
+    {
+      "line": 147,
+      "text": "Georgia Power witnesses Ross Beppler, Lee Evans and Brandon Looney said in rebuttal testimony on Oct 27, 2026 ... / GIPL witness John D. Wilson said ...",
+      "asymmetry": "The formal markers of authority are uneven. Only Georgia Power (card 1) and Staff (card 2) get named witnesses plus a date and a filing. GIPL and GAM never get a date. Named voices per card: card 1 has four, card 2 three, card 3 one (GAM's, while Georgia Power's witnesses go unnamed), cards 4 and 5 none, and card 6 one.",
+      "fix": "Use the same pattern of witness, party, filing and date in every \"Who says it\" field."
+    },
+    {
+      "line": 144,
+      "text": "Claim type: mostly values (how a real-time rate should work) [card 1, line 144] vs. Claim type: factual and values [card 2, line 156]",
+      "asymmetry": "Option 1 is framed as a matter of values and Option 2 as one of measurable fact. Card 2's \"What's uncertain\" asks about a \"gap\" that is defined by Option 2's own premise.",
+      "fix": "Give both cards the same claim type. Add the matching values sentence to card 2. Call the $220 million \"the difference between today's method and Option 2\"."
+    },
+    {
+      "line": 182,
+      "text": "Staff and Georgia Power disagree on whether the company could otherwise collect some of these costs twice.",
+      "asymmetry": "Card 3's \"In short\" ends by naming who opposes it (\"PIA Staff and GIPL disagree\"). Card 4's never names who opposes Staff (Georgia Power and GAM). Instead it ends on a narrower dispute between two parties.",
+      "fix": "End both \"In short\" lines the same way, naming the parties who disagree."
+    },
+    {
+      "line": 185,
+      "text": "**Who disagrees:** Georgia Power said it would only collect twice \"if it was charging customers for FT costs in both fuel and base rates,\"",
+      "asymmetry": "Card 3's \"Who disagrees\" gives Staff's main argument against Georgia Power. Card 4's gives only Georgia Power's narrow double-recovery reply, not its main argument (P-126, P-127).",
+      "fix": "Add P-127 (\"does not provide this level of customer protection\") to card 4's \"Who disagrees\"."
+    },
+    {
+      "line": 91,
+      "text": "GIPL said changes to real-time rate design are not within the scope of this case. [P-107] ... Georgia Power said this case is limited to ... [P-133]",
+      "asymmetry": "Georgia Power's view of the case's scope appears twice (its motion and P-133), alongside GIPL's concession. GIPL's own answer to the motion (P-136) is left out.",
+      "fix": "Add GIPL's answer: all of its testimony \"falls well within the scope\" and is relevant [P-136]."
+    },
+    {
+      "line": 190,
+      "text": "5. Other fuel costs left out of the credit fall on other customers / 6. A bigger fuel credit means less help with base costs",
+      "asymmetry": "Cards 1 to 4 have neutral titles that name a proposal. Cards 5 and 6 have titles that state one party's disputed argument as fact.",
+      "fix": "Retitle cards 5 and 6 as proposals."
+    },
+    {
+      "line": 118,
+      "text": "It said today's fuel rate would then be lower by about $1.35 a month for a home using 1,000 kWh.",
+      "asymmetry": "Staff's per-home benefit figure is shown, but no other party's per-home or headline benefit figure appears. Georgia Power's claim of at least $102 a year of downward pressure on a typical home's bill from large-load revenue in 2029 to 2031 is missing (P-054). So is GAM's visible baseline: real-time revenue lowered base revenues by $214 million in the 2022 rate case, and GAM calls the 2025 figure \"a significant increase\" (P-114).",
+      "fix": "Add both, attributed and with their scope noted (all large-load revenue; the 2022 baseline). Or drop per-home benefit claims for every party."
+    },
+    {
+      "line": 125,
+      "text": "GIPL, with Park Avenue Baptist Church, Temple Sinai and Unitarian Universalist Church of Savannah. [P-093]",
+      "asymmetry": "For one filing, Plan D lists four named backers. That adds a religious-identity cue that the other plans' support lists lack. Those lists name parties only.",
+      "fix": "\"GIPL (filing with three of its member congregations) [P-093]\""
+    },
+    {
+      "line": 102,
+      "text": "**Who benefits:** More real-time money stays on the base side ...",
+      "asymmetry": "Plan A's \"Who benefits\" names no group of customers, while Plans B to D all begin \"Customers on standard rates ...\".",
+      "fix": "\"Customers on standard rates, through base rates, Georgia Power and GAM say [P-124, P-111]: more real-time money stays on the base side ...\""
+    },
+    {
+      "line": 55,
+      "text": "PIA Staff and other parties asked for the review as more large customers joined real-time pricing. [P-053, P-069]",
+      "asymmetry": "The review is credited to Staff and \"other parties\". Georgia Power's support, shown in the same passage, is left out (P-053: \"the Company supported and agreed to this subsequent review\").",
+      "fix": "Add: \"and Georgia Power agreed to it. [P-053]\""
+    },
+    {
+      "line": 76,
+      "text": "Pipeline fees: ... Georgia Power would recover the new fees ... PIA Staff would share all pipeline and gas storage fees ...",
+      "asymmetry": "The Layer 2 pipeline item gives only Georgia Power's and Staff's approaches. It leaves out GIPL's (a transmission-style split plus a direct pipeline share, P-096) and GAM's (no specific part of real-time revenue credited against pipeline fees, P-110). The very next item does name GIPL.",
+      "fix": "Add one clause each for GIPL and GAM, or point readers to Layer 3 for the other positions."
+    },
+    {
+      "line": 128,
+      "text": "**What's uncertain:** GIPL's pipeline advice assumes ...",
+      "asymmetry": "Plan B's \"What's uncertain\" (line 112) says the size of Option 1's effect is blacked out. Plan D also uses Option 1 but does not say so.",
+      "fix": "Add to Plan D: \"Georgia Power's estimate of what Option 1 adds is blacked out. [P-139]\""
+    }
+  ],
+  "verdict_summary": "Not ready to publish. The structure is sound: options and argument cards use the same fields, quotes are verbatim and attributed, values questions are flagged on cards 1 and 5, blacked-out figures are treated as unknown rather than zero, and 'What you can do' is neutral. The page also has no party labels, minors, private addresses or anticipated arguments, so rules 4, 5, 6, 7 and 11 pass. Four high issues block publication. First, the evidence labels do not follow the stated rubric: opposing cards get matched labels that grade side facts, and 'Uncertain' is never used. Second, Option 1 is framed as a values claim and Option 2 as a factual one. Third, Staff's $322 million and $1.35-a-month figures come from page 7, which its Oct 7 corrections changed, and the page does not flag this. Fourth, speaker, date and filing appear only on Georgia Power's and Staff's lead cards. The flip test found asymmetries in several directions: GAM's acceptance counts as support for Plan B but not Plan C, the 'Only one party' line, Plan D's softer 'Who pays', GAM's stake singled out, and the verbs 'counted', 'found' and 'wants'. Questions 1 and 3 adopt Georgia Power's framing, and the RSM attribution has no source. On clarity, Layers 1 and 2 read at about grade 7, but Layers 3 and 4 run about grade 9 to 10. The Layer 2 opening runs 2 to 5 times its 80-word budget, 'base rates' and the peak-versus-energy terms are never defined, the two option-naming schemes collide, and no plain statement says that no filing gives any plan's net effect on a typical home's bill."
+}

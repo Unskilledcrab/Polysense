@@ -1,0 +1,2826 @@
+{
+ "checker": "independent-source-verifier",
+ "document": "/tmp/claude-0/-home-user-Polysense/4b35850c-ec47-54a0-9fd6-ae740d1b4ece/scratchpad/verify-t002/cal/workspace.md",
+ "units": [
+  {
+   "line": 8,
+   "sentence": "Some big businesses, including data centers",
+   "marker": "[P-042, P-044, P-097]",
+   "verdict": "supports",
+   "evidence_span": "The Company provides participating customers an hourly price that reflects its expectation of the marginal cost of electricity.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 8,
+   "sentence": "The Public Service Commission (PSC) will decide",
+   "marker": "[P-013, P-016]",
+   "verdict": "supports",
+   "evidence_span": "the Commission shall further review the methodology by which the Company credits Real-Time Pricing (“RTP”) revenue to the FCR revenues",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 8,
+   "sentence": "Homes and small businesses pay fuel costs",
+   "marker": "[P-061, P-144]",
+   "verdict": "supports",
+   "evidence_span": "Non-RTP customers, like residential and small commercial customers, are subject to separate rates to collect base revenues and fuel revenues.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 9,
+   "sentence": "Homes and businesses on Georgia Power's standard rates",
+   "marker": "[P-061]",
+   "verdict": "supports",
+   "evidence_span": "Non-RTP customers, like residential and small commercial customers",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 9,
+   "sentence": "Counting more of the money toward fuel would raise",
+   "marker": "[P-066, P-105]",
+   "verdict": "does_not_support",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Direction is reversed. P-105 says shifting revenue credit to fuel 'will assist in reducing FCR rates for FCR customers'. P-066 says Staff's plan would have made the current FCR-27 rate lower. No passage says a bigger fuel credit raises the fuel charge.",
+   "suggested_fix": "Counting more of the money toward fuel would lower their fuel charge."
+  },
+  {
+   "line": 9,
+   "sentence": "But less would then go toward the company's other costs",
+   "marker": "[P-016, P-105, P-115]",
+   "verdict": "supports",
+   "evidence_span": "Thus, increasing the RTP fuel credit would put upward pressure on base rates.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 9,
+   "sentence": "The big customers' own prices would not change",
+   "marker": "[P-105]",
+   "verdict": "supports",
+   "evidence_span": "the rates charged to RTP customers will not change, just the RTP fuel revenue credit",
+   "correct_passage": "",
+   "problem": "Minor: stated as fact, but the source is GIPL testimony. It is consistent with Georgia Power on the 2010 change (P-046).",
+   "suggested_fix": ""
+  },
+  {
+   "line": 10,
+   "sentence": "The PSC holds a hearing on Nov 12",
+   "marker": "[P-010, P-013]",
+   "verdict": "supports",
+   "evidence_span": "A Final Decision on this proceeding will be made by the Commission on December 15, 2026 at the regularly scheduled Administrative Session.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 10,
+   "sentence": "You can speak at the hearing as a public witness",
+   "marker": "[P-025, P-159, P-030]",
+   "verdict": "supports",
+   "evidence_span": "Testimony is given by witnesses on behalf of staff, intervenors and the company, as well as by public witnesses.",
+   "correct_passage": "",
+   "problem": "Minor: the public witness pages are general. None names the Nov 12 hearing.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 16,
+   "sentence": "The PSC's Energy Committee makes the decision",
+   "marker": "[P-013, P-031]",
+   "verdict": "does_not_support",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Wrong decision-maker. P-013 says the Final Decision 'will be made by the Commission on December 15, 2026 at the regularly scheduled Administrative Session'. The Energy Committee only considers the matter on Dec 10 (P-012). P-031 says the five Commissioners make decisions. This contradicts line 40.",
+   "suggested_fix": "Decide: The five-member Commission makes the final decision at its Dec 15 Administrative Session; its Energy Committee takes up the case first on Dec 10."
+  },
+  {
+   "line": 16,
+   "sentence": "Commissioners are elected.",
+   "marker": "[P-031]",
+   "verdict": "supports",
+   "evidence_span": "five elected Commissioners",
+   "correct_passage": "",
+   "problem": "Literally supported, but one sitting commissioner, Stan Wise, holds his seat by appointment (P-033, P-034). Consider 'Commissioners are normally elected.'",
+   "suggested_fix": ""
+  },
+  {
+   "line": 16,
+   "sentence": "They are Chairman Jason Shaw",
+   "marker": "[P-035, P-036, P-037, P-038, P-033]",
+   "verdict": "supports",
+   "evidence_span": "Commissioner Jason Shaw PSC Chairman Commissioner Since: January 3, 2019",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 17,
+   "sentence": "Stan Wise joined the PSC on Sep 5, 2026",
+   "marker": "[P-033]",
+   "verdict": "supports",
+   "evidence_span": "Commissioner Stan Wise Commissioner Since: September 5, 2026",
+   "correct_passage": "",
+   "problem": "The date is right, but 'joined' implies he is new. P-033 and P-034 show he was first elected in 1994 and stepped down in 2018.",
+   "suggested_fix": "Stan Wise returned to the PSC on Sep 5, 2026."
+  },
+  {
+   "line": 17,
+   "sentence": "Gov. Brian Kemp appointed him",
+   "marker": "[P-034]",
+   "verdict": "supports",
+   "evidence_span": "Gov. Brian Kemp appointed Wise to serve the remainder of her term",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 17,
+   "sentence": "The July 7 scheduling order still lists Pridemore",
+   "marker": "[P-015, P-014]",
+   "verdict": "supports",
+   "evidence_span": "DR. ALICIA M. JOHNSON TRICIA PRIDEMORE",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 17,
+   "sentence": "The PSC letterhead on PIA Staff's Oct 7 letter",
+   "marker": "[P-039, P-040]",
+   "verdict": "supports",
+   "evidence_span": "DR. ALICIA M. JOHNSON STAN WISE",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 18,
+   "sentence": "Each commissioner's term runs through Dec 31, 2026, or later",
+   "marker": "[P-033, P-035, P-036, P-037, P-038]",
+   "verdict": "supports",
+   "evidence_span": "Serves Through: December 31, 2026",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 18,
+   "sentence": "So the same five are set to vote on Dec 15",
+   "marker": "{analysis: every term in P-033 and P-035 to P-038 runs past the Dec 15 decision date in P-013}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Valid: all five terms (P-033, P-035 to P-038) run to Dec 31, 2026 or later, past Dec 15 (P-013). Assumes no vacancy or recusal.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 18,
+   "sentence": "Two of the terms, Hubbard's and Johnson's",
+   "marker": "[P-033, P-037]",
+   "verdict": "partial",
+   "evidence_span": "Commissioner Peter Hubbard Commissioner Since: January 1, 2026 Year Elected: 2025 Serves Through: December 31, 2026",
+   "correct_passage": "",
+   "problem": "Johnson's term runs through December 31, 2030 (P-038). The two terms that end Dec 31, 2026 belong to Hubbard (P-037) and Wise (P-033). The cited P-033 is Wise's bio, not Johnson's.",
+   "suggested_fix": "Two of the terms, Hubbard's and Wise's, end on Dec 31, 2026."
+  },
+  {
+   "line": 19,
+   "sentence": "The PSC's Public Interest Advocacy Staff (PIA Staff) takes part",
+   "marker": "[P-006]",
+   "verdict": "supports",
+   "evidence_span": "The PIA Staff is considered a party to the case",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 19,
+   "sentence": "A separate advisory staff helps the commissioners",
+   "marker": "[P-007]",
+   "verdict": "supports",
+   "evidence_span": "The Commissioner Advisory Staff shall not be a party to this case, but shall act as a technical advisor to the Commissioners",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 23,
+   "sentence": "The PSC rejected a settlement",
+   "marker": "[P-017, P-018, P-019]",
+   "verdict": "does_not_support",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Reversed. P-018 says the Commission 'approved the Advisory Staff recommendation and adopted the proposed Stipulation'. P-019 found the stipulated FCR-27 rates just and reasonable. This review comes from the adopted stipulation (P-005, P-016).",
+   "suggested_fix": "May 28, 2026: The PSC approved a settlement (stipulation) of Georgia Power's fuel-rate case."
+  },
+  {
+   "line": 23,
+   "sentence": "That order started this review",
+   "marker": "[P-016, P-005]",
+   "verdict": "supports",
+   "evidence_span": "This proceeding shall be concluded by December 31, 2026, and the Commission may make modifications if appropriate.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 24,
+   "sentence": "The PSC adopted the schedule for this case",
+   "marker": "[P-014]",
+   "verdict": "supports",
+   "evidence_span": "the procedures and schedules contained within this Procedural and Scheduling Order are hereby adopted by this Commission",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 25,
+   "sentence": "Georgia Power filed testimony with two options",
+   "marker": "[P-041, P-058]",
+   "verdict": "supports",
+   "evidence_span": "There are two potential options to address their concern.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 26,
+   "sentence": "Georgia Power first published a legal notice",
+   "marker": "[P-020]",
+   "verdict": "supports",
+   "evidence_span": "was first published on August 24, 2026",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 27,
+   "sentence": "The PSC held a hearing on Georgia Power's testimony",
+   "marker": "[P-008, P-151]",
+   "verdict": "supports",
+   "evidence_span": "Docket No. 57171 (RTP Investigation) Transcript, Tuesday, September 1, 2026",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 28,
+   "sentence": "PIA Staff, Georgia Interfaith Power & Light (GIPL)",
+   "marker": "[P-059, P-152, P-153, P-002]",
+   "verdict": "partial",
+   "evidence_span": "ON BEHALF OF THE GEORGIA PUBLIC SERVICE COMMISSION PUBLIC INTEREST ADVOCACY STAFF PUBLIC DISCLOSURE VERSION September 23, 2026",
+   "correct_passage": "",
+   "problem": "Filings by PIA Staff (P-059), GIPL (P-152) and GAM (P-153) are supported. P-002 shows only 'Jim Clarkson Direct Testimony' filed Sep 22. No passage names the party he testifies for, or expands 'RSM' to 'Resource Supply Management'. P-017 mentions RSM only as a party to the fuel-case stipulation.",
+   "suggested_fix": "Sep 22-23: PIA Staff, GIPL and GAM filed testimony, and Jim Clarkson filed direct testimony (the filing list does not name his party)."
+  },
+  {
+   "line": 29,
+   "sentence": "PIA Staff filed corrections to some of its numbers",
+   "marker": "[P-039]",
+   "verdict": "supports",
+   "evidence_span": "Please find enclosed the First Errata to that Direct Testimony and Exhibits, including corrections to Tables 2, 3, 4, and 7",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 30,
+   "sentence": "Georgia Power tried to silence parts",
+   "marker": "[P-134, P-135]",
+   "verdict": "partial",
+   "evidence_span": "moves to strike portions of the Direct Testimony of John D. Wilson on behalf of Georgia Interfaith Power and Light",
+   "correct_passage": "",
+   "problem": "The date and the action are supported, but 'tried to silence' is a loaded characterization. The source is a motion to strike portions as irrelevant and outside the case's scope (P-134). GIPL's filing on line 31 gets the neutral verb 'asked'.",
+   "suggested_fix": "Oct 8: Georgia Power asked the PSC to strike parts of GIPL's testimony from the record as outside the case's scope."
+  },
+  {
+   "line": 31,
+   "sentence": "GIPL asked the PSC to deny that request",
+   "marker": "[P-136, P-137]",
+   "verdict": "supports",
+   "evidence_span": "The Commission should deny Georgia Power’s motion.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 32,
+   "sentence": "The PSC held a hearing on the testimony of PIA Staff",
+   "marker": "[P-009, P-003]",
+   "verdict": "supports",
+   "evidence_span": "Transcript from hearing held on October 15, 2026",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 33,
+   "sentence": "Georgia Power filed its rebuttal testimony",
+   "marker": "[P-117]",
+   "verdict": "does_not_support",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Wrong date. P-117 dates the rebuttal testimony OCTOBER 27, 2026, and the schedule set Oct 27 as the filing date (P-009). Line 147 of this page also says Oct 27.",
+   "suggested_fix": "Oct 27: Georgia Power filed its rebuttal testimony."
+  },
+  {
+   "line": 37,
+   "sentence": "The PSC holds a hearing on Georgia Power's rebuttal",
+   "marker": "[P-010]",
+   "verdict": "supports",
+   "evidence_span": "Following these motions, the Commission will conduct hearings on Georgia Power’s rebuttal testimony.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 37,
+   "sentence": "It starts after the PSC's committee meetings",
+   "marker": "[P-010, P-023]",
+   "verdict": "supports",
+   "evidence_span": "Beginning after the regularly scheduled Committee Meetings",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 37,
+   "sentence": "The PSC calendar lists the hearing at 9:35 a.m.",
+   "marker": "[P-023]",
+   "verdict": "supports",
+   "evidence_span": "Nov 12 9:35 am Docket No. 57171 RTP Revenue Credit and Allocation Methodology Hearing",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 38,
+   "sentence": "Deadline for the parties to file briefs",
+   "marker": "[P-011]",
+   "verdict": "partial",
+   "evidence_span": "All briefs and/or proposed orders shall be filed with the Commission by 4:00 p.m.",
+   "correct_passage": "",
+   "problem": "The date is right but the time is wrong: P-011 sets the deadline at 4:00 p.m., not 5 p.m.",
+   "suggested_fix": "Dec 2, 4 p.m.: Deadline for the parties to file briefs and proposed orders."
+  },
+  {
+   "line": 38,
+   "sentence": "Briefs are the parties' final written arguments",
+   "marker": "{analysis: plain-language definition, not from the cited sources}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Reasonable plain-language definition.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 39,
+   "sentence": "The PSC's Energy Committee takes up the case",
+   "marker": "[P-012]",
+   "verdict": "supports",
+   "evidence_span": "This matter shall be considered at the scheduled Energy Committee Meeting, which begins at 9:30 a.m. and shall be held in the Commission’s hearing room.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 39,
+   "sentence": "The meeting starts at 9:30 a.m.",
+   "marker": "[P-012, P-024]",
+   "verdict": "supports",
+   "evidence_span": "which begins at 9:30 a.m.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 40,
+   "sentence": "The PSC is scheduled to make its final decision",
+   "marker": "[P-013]",
+   "verdict": "supports",
+   "evidence_span": "A Final Decision on this proceeding will be made by the Commission on December 15, 2026 at the regularly scheduled Administrative Session.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 40,
+   "sentence": "The calendar lists that session at 9:30 a.m.",
+   "marker": "[P-024]",
+   "verdict": "supports",
+   "evidence_span": "Dec 15 9:30 am Administrative Session",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 40,
+   "sentence": "The PSC says commissioners decide at that session",
+   "marker": "[P-029]",
+   "verdict": "supports",
+   "evidence_span": "At the scheduled Administrative Session, the Commissioners make a decision based upon the evidence that was presented during the hearing.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 41,
+   "sentence": "The case must be finished by this date",
+   "marker": "[P-016]",
+   "verdict": "supports",
+   "evidence_span": "This proceeding shall be concluded by December 31, 2026",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 42,
+   "sentence": "We copied these dates from PSC pages",
+   "marker": "{editorial: process note}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Process note; fine.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 46,
+   "sentence": "You can ask to speak at the Nov 12 hearing",
+   "marker": "[P-010, P-025, P-159]",
+   "verdict": "supports",
+   "evidence_span": "Testimony is given by witnesses on behalf of staff, intervenors and the company, as well as by public witnesses.",
+   "correct_passage": "",
+   "problem": "Minor: this is inferred from the PSC's general public witness page. The Nov 12 schedule entry (P-010) does not mention public witnesses.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 46,
+   "sentence": "A public witness is not a formal party",
+   "marker": "[P-025]",
+   "verdict": "supports",
+   "evidence_span": "wishes to make comments that become a part of the official transcript of the case",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 46,
+   "sentence": "The PSC suggests arriving about 30 minutes early",
+   "marker": "[P-028]",
+   "verdict": "supports",
+   "evidence_span": "Arrive about 30 minutes before the hearing begins to give yourself time to settle down, sign-in to speak",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 46,
+   "sentence": "Speaking time may be limited",
+   "marker": "[P-026]",
+   "verdict": "supports",
+   "evidence_span": "the amount of time allotted for individual comments may be limited",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 46,
+   "sentence": "You can also ask to have your written comments entered",
+   "marker": "[P-027]",
+   "verdict": "supports",
+   "evidence_span": "If you prefer to have your written comments entered into the record as though read, you may make the request during the hearing",
+   "correct_passage": "",
+   "problem": "Minor: the source says the request is made during the hearing; the page leaves that out.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 47,
+   "sentence": "Call the PSC at 404-656-4501",
+   "marker": "[P-021]",
+   "verdict": "supports",
+   "evidence_span": "(404) 656-4501 or 1-800-282-5813 (inside Georgia only) to confirm the location of the hearing",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 47,
+   "sentence": "If you have a disability and need help",
+   "marker": "[P-022]",
+   "verdict": "supports",
+   "evidence_span": "If you have a disability and will need assistance or accommodation to participate",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 48,
+   "sentence": "Send a written comment through the PSC's Public Comments page",
+   "marker": "[P-030]",
+   "verdict": "supports",
+   "evidence_span": "The public comment is a comment to the Georgia Public Service Commission providing relevant feedback on any issue before the Commission.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 48,
+   "sentence": "Comments must be sent 24 hours before a Commission vote",
+   "marker": "[P-030]",
+   "verdict": "supports",
+   "evidence_span": "Comments must be submitted 24 hours before a Commission vote.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 48,
+   "sentence": "For the Dec 15 vote, send yours no later than Dec 13",
+   "marker": "{computed: the Dec 15 Administrative Session starts at 9:30 a.m. (P-024); 24 hours earlier (P-030) is 9:30 a.m. on Dec 13}",
+   "verdict": "invalid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Arithmetic error. 24 hours before 9:30 a.m. on Dec 15 (P-024, P-030) is 9:30 a.m. on Dec 14, not Dec 13. Dec 13 is 48 hours before.",
+   "suggested_fix": "For the Dec 15 vote, send yours no later than Dec 14 at 9:30 a.m."
+  },
+  {
+   "line": 49,
+   "sentence": "The Dec 15 decision comes at a session that is open",
+   "marker": "[P-013, P-032]",
+   "verdict": "supports",
+   "evidence_span": "Administrative sessions of the Georgia Public Service Commission are held the first and third Tuesday of each month in hearing room number 110 at 244 Washington St. in Atlanta.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 50,
+   "sentence": "The Dec 10 committee meeting is also in the PSC hearing room",
+   "marker": "[P-012]",
+   "verdict": "supports",
+   "evidence_span": "shall be held in the Commission’s hearing room.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 50,
+   "sentence": "We found no PSC page that says whether the public may speak",
+   "marker": "{editorial: process note; the PSC's public witness, public comment and FAQ pages (S14, S15, S19) do not say}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Process note. Consistent with P-025 to P-032, none of which addresses committee meetings.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 51,
+   "sentence": "Read the case filings on the PSC's web page",
+   "marker": "[P-001]",
+   "verdict": "supports",
+   "evidence_span": "Docket #57171 Title: RTP Revenue Credit and Allocation Methodology",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 55,
+   "sentence": "Big businesses on real-time pricing pay one hourly price",
+   "marker": "[P-043, P-061]",
+   "verdict": "supports",
+   "evidence_span": "the RTP rate is assessed to incremental load and reflects hourly marginal costs",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 55,
+   "sentence": "Georgia Power must split that money",
+   "marker": "[P-061]",
+   "verdict": "supports",
+   "evidence_span": "RTP revenues must be allocated between base revenues and fuel revenues.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 55,
+   "sentence": "The part counted toward fuel, called the fuel credit",
+   "marker": "[P-144]",
+   "verdict": "supports",
+   "evidence_span": "FCR customers pay all fuel costs net of the RTP Fuel Credit.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 55,
+   "sentence": "The rest goes toward base costs",
+   "marker": "[P-061]",
+   "verdict": "supports",
+   "evidence_span": "The remainder of RTP revenues are allocated to base revenues.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 55,
+   "sentence": "The PSC is reviewing how this split is figured",
+   "marker": "[P-016]",
+   "verdict": "supports",
+   "evidence_span": "the Commission shall further review the methodology by which the Company credits Real-Time Pricing (“RTP”) revenue to the FCR revenues",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 55,
+   "sentence": "PIA Staff and other parties asked for the review",
+   "marker": "[P-053, P-069]",
+   "verdict": "supports",
+   "evidence_span": "PIA Staff and intervenors questioned whether the RTP revenues were appropriately allocated between fuel and base rates and recommended the Commission undertake an additional review",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 59,
+   "sentence": "Any business customer can choose it",
+   "marker": "[P-044]",
+   "verdict": "partial",
+   "evidence_span": "available to commercial and industrial customers with a minimum demand of 250 kilowatts",
+   "correct_passage": "",
+   "problem": "Too broad. P-044 limits RTP to commercial and industrial customers with a minimum demand of 250 kW (RTP-DA) or 5 MW (RTP-HA).",
+   "suggested_fix": "Business customers with demand of at least 250 kW can choose it."
+  },
+  {
+   "line": 59,
+   "sentence": "About 2,300 customers use the day-ahead version",
+   "marker": "[P-044]",
+   "verdict": "partial",
+   "evidence_span": "Currently, there are approximately 2,300 customers on RTP-DA",
+   "correct_passage": "",
+   "problem": "Wrong number: P-044 says 170 customers are on RTP-HA, not 710. Also, no passage spells out DA and HA as 'day-ahead' and 'hour-ahead'.",
+   "suggested_fix": "About 2,300 customers use RTP-DA and about 170 use RTP-HA."
+  },
+  {
+   "line": 60,
+   "sentence": "They pay standard rates for a set baseline amount",
+   "marker": "[P-043]",
+   "verdict": "supports",
+   "evidence_span": "The standard embedded rate is applied to the Customer Baseline Load",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 61,
+   "sentence": "The hourly price reflects what Georgia Power expects",
+   "marker": "[P-042]",
+   "verdict": "supports",
+   "evidence_span": "an hourly price that reflects its expectation of the marginal cost of electricity",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 61,
+   "sentence": "Marginal cost is the cost of making one more unit",
+   "marker": "{analysis: plain-language definition, not from the cited sources}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Standard plain-language definition, consistent with P-043 ('costs that change alongside variations in load').",
+   "suggested_fix": ""
+  },
+  {
+   "line": 62,
+   "sentence": "Very large new customers pay real-time prices on all their power",
+   "marker": "[P-071]",
+   "verdict": "supports",
+   "evidence_span": "New Large Load customers under the TOU-SC tariff have no CBL, pay RTP rates, and have a Monthly Access Charge",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 62,
+   "sentence": "GIPL says the method under review",
+   "marker": "[P-097]",
+   "verdict": "supports",
+   "evidence_span": "which has been applied to data center customers",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 63,
+   "sentence": "Georgia Power expects most new business growth",
+   "marker": "[P-070]",
+   "verdict": "supports",
+   "evidence_span": "The Company acknowledged the growth in new economic development load will mainly be based on RTP pricing.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 67,
+   "sentence": "RTP means real-time pricing, and FCR means",
+   "marker": "[P-021]",
+   "verdict": "supports",
+   "evidence_span": "credits real time pricing (“RTP”) revenue to the Fuel Cost Recovery",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 68,
+   "sentence": "FT means firm transportation",
+   "marker": "[P-051, P-096]",
+   "verdict": "supports",
+   "evidence_span": "Firm Transportation costs are monthly pipeline capacity reservation payments",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 69,
+   "sentence": "Non-dispatchable PPAs, or power purchase agreements",
+   "marker": "[P-050, P-119]",
+   "verdict": "supports",
+   "evidence_span": "These have also been referred to as take-or-pay contracts.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 70,
+   "sentence": "Incremental load is the power billed at real-time prices",
+   "marker": "[P-043]",
+   "verdict": "supports",
+   "evidence_span": "the RTP rate is assessed to incremental load",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 70,
+   "sentence": "GPC means Georgia Power Company",
+   "marker": "[P-109]",
+   "verdict": "supports",
+   "evidence_span": "The members of GAM are customers of Georgia Power Company (GPC).",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 71,
+   "sentence": "A kilowatt-hour (kWh) is the unit on a power bill",
+   "marker": "{analysis: plain-language definition, not from the cited sources}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Correct: 1 MWh = 1,000 kWh.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 75,
+   "sentence": "Georgia Power must pay for power from these contracts",
+   "marker": "[P-050]",
+   "verdict": "supports",
+   "evidence_span": "the Company has an obligation to pay for the output of the resource when energy is produced",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 75,
+   "sentence": "Today their energy counts in the fuel credit math",
+   "marker": "[P-057, P-076]",
+   "verdict": "supports",
+   "evidence_span": "the output of those units is included in the denominator of the RTP fuel credit rate calculation",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 75,
+   "sentence": "Option 1\" would leave out both",
+   "marker": "[P-072, P-128]",
+   "verdict": "supports",
+   "evidence_span": "Option 1 - exclude both the costs and the output (MWh) from non-dispatchable PPAs in the RTP fuel credit calculation. Option 2 - include both the costs and the output (MWh)",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 75,
+   "sentence": "Either one would raise the fuel credit",
+   "marker": "[P-115, P-128]",
+   "verdict": "supports",
+   "evidence_span": "Either of these changes would increase the amount of RTP revenues that are credited to fuel.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 76,
+   "sentence": "Georgia Power pays fixed monthly fees to reserve space",
+   "marker": "[P-049, P-051]",
+   "verdict": "supports",
+   "evidence_span": "Firm Transportation costs are monthly pipeline capacity reservation payments that ensure gas pipeline transportation availability to existing Georgia Power units during all periods.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 76,
+   "sentence": "Georgia Power would recover the new fees tied to very large",
+   "marker": "[P-055]",
+   "verdict": "supports",
+   "evidence_span": "the costs of new FT attributable to large load customers be fully recovered from those customers and not borne by non-large load customers in the FCR clause",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 76,
+   "sentence": "PIA Staff would share all pipeline and gas storage fees",
+   "marker": "[P-157]",
+   "verdict": "supports",
+   "evidence_span": "all FT costs be allocated on an energy basis to all customers (both RTP and non-RTP)",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 77,
+   "sentence": "PIA Staff and GIPL would also count costs",
+   "marker": "[P-087, P-088, P-096]",
+   "verdict": "supports",
+   "evidence_span": "Revise the RTP fuel revenue credit to include coal-related costs and corporate overhead and labor.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 77,
+   "sentence": "Georgia Power would not.",
+   "marker": "[P-131]",
+   "verdict": "supports",
+   "evidence_span": "the Commission should decline to adopt PIA Staff’s recommendations presented in Table 1",
+   "correct_passage": "",
+   "problem": "Minor: P-131 rejects PIA Staff's Table 1 recommendations; no passage shows Georgia Power answering GIPL's similar list item by item.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 78,
+   "sentence": "PIA Staff wants new monthly reports",
+   "marker": "[P-068]",
+   "verdict": "supports",
+   "evidence_span": "The Company should file a corresponding separate report to show the calculation of RTP revenues credited to fuel revenues, starting no later than January 1, 2027.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 78,
+   "sentence": "Georgia Power says the reports aren't needed",
+   "marker": "[P-132]",
+   "verdict": "supports",
+   "evidence_span": "The Company does not believe that PIA Staff’s recommended monthly reporting and MFR modifications are needed",
+   "correct_passage": "",
+   "problem": "Minor: leaves out Georgia Power's added point that some changes are 'not feasible in the requested timeframe'.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 79,
+   "sentence": "The real-time customers' own prices would not change, only how",
+   "marker": "[P-105, P-046]",
+   "verdict": "supports",
+   "evidence_span": "the rates charged to RTP customers will not change, just the RTP fuel revenue credit",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 83,
+   "sentence": "Under the PSC's order, any change is credited to fuel",
+   "marker": "[P-016]",
+   "verdict": "supports",
+   "evidence_span": "The implementation of such modifications, if any, shall be credited to fuel revenues as determined by the Commission",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 83,
+   "sentence": "The matching change on the base side goes into a special account",
+   "marker": "[P-016]",
+   "verdict": "supports",
+   "evidence_span": "any corresponding change to base revenues shall be recorded in a regulatory asset or liability and addressed in the next base rate case",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 83,
+   "sentence": "A base rate case is the PSC's full review",
+   "marker": "{analysis: plain-language definition, not from the cited sources}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Reasonable plain-language definition.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 84,
+   "sentence": "Georgia Power says its base rates are frozen through 2028",
+   "marker": "[P-054]",
+   "verdict": "supports",
+   "evidence_span": "These benefits enabled the Company to freeze base rates through 2028",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 85,
+   "sentence": "If fuel charges had to collect $100 million less",
+   "marker": "[P-141, P-142]",
+   "verdict": "does_not_support",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Wrong figure. P-142 gives -$1.4806 a month per -$100 million of fuel revenue requirement, about $1.48, not $1.84. Line 208 of this page uses $1.48. With $1.84 a reader would wrongly conclude that the fuel-side drop is larger than the base-side rise ($1.65).",
+   "suggested_fix": "If fuel charges had to collect $100 million less, a typical home's bill would drop by about $1.48 a month, Georgia Power estimates."
+  },
+  {
+   "line": 85,
+   "sentence": "If base rates had to collect $100 million more",
+   "marker": "{computed: P-143 gives +$1.6484 a month per +$100 million of base revenue requirement, rounded to the cent}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Correct: P-143 gives 1.6484419845741718, which rounds to $1.65.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 85,
+   "sentence": "Its typical home uses 1,000 kWh a month",
+   "marker": "[P-141]",
+   "verdict": "supports",
+   "evidence_span": "a typical residential customer using an average of 1,000 kWh a month",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 86,
+   "sentence": "So moving money from the base side to the fuel side does not simply cut bills",
+   "marker": "{analysis: P-016 sends the base-side change to the next base rate case; GIPL (P-105) and GAM (P-115) say base rates may rise}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Follows from P-016, P-105 and P-115. Georgia Power's per-$100 million figures (P-142, P-143) also show a larger base-side effect per dollar for homes.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 86,
+   "sentence": "PIA Staff says Georgia Power could have absorbed the change",
+   "marker": "[P-090, P-091]",
+   "verdict": "supports",
+   "evidence_span": "concluded the Company would have had the financial capability to absorb additional RTP revenues credited to fuel revenues while maintaining its targeted Return on Equity",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 87,
+   "sentence": "Homes pay 58.07% of base revenues",
+   "marker": "[P-116]",
+   "verdict": "supports",
+   "evidence_span": "Domestic 58.07% 55.36%",
+   "correct_passage": "",
+   "problem": "Minor missing context: the shares come from a cost study for the test year ending July 31, 2023 (P-116).",
+   "suggested_fix": ""
+  },
+  {
+   "line": 87,
+   "sentence": "GAM says that is why a bigger fuel credit would help",
+   "marker": "[P-116]",
+   "verdict": "supports",
+   "evidence_span": "crediting additional RTP revenues to the fuel account would provide a greater benefit to Medium Business, Large Business, Agricultural, and Government/Institution customers than to Domestic, Small Business, and Lighting customers",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 91,
+   "sentence": "GIPL also said Georgia Power set its real-time price too low",
+   "marker": "[P-094]",
+   "verdict": "supports",
+   "evidence_span": "Georgia Power has set its RTP price too low during peak hours",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 91,
+   "sentence": "GIPL said changes to real-time rate design are not within",
+   "marker": "[P-107]",
+   "verdict": "supports",
+   "evidence_span": "ARE CHANGES TO RTP RATE DESIGN WITHIN THE SCOPE OF THIS PROCEEDING? A: No.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 91,
+   "sentence": "Georgia Power asked the PSC to strike that part",
+   "marker": "[P-134, P-158]",
+   "verdict": "supports",
+   "evidence_span": "moves to strike portions of the Direct Testimony of John D. Wilson",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 91,
+   "sentence": "Georgia Power said this case is limited",
+   "marker": "[P-133]",
+   "verdict": "supports",
+   "evidence_span": "The current proceeding is appropriately limited to the accounting treatment of the RTP customer revenues between base and fuel.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 92,
+   "sentence": "We found no ruling on that request",
+   "marker": "{editorial: process note; the filing list (S01b) shows no order on the motion}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Process note. The passages include only two filing-list entries, so it cannot be checked here.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 92,
+   "sentence": "The Oct 15 hearing transcript is listed without a file",
+   "marker": "[P-003]",
+   "verdict": "supports",
+   "evidence_span": "October 15, 2026\",\"filedDate\":\"2026-10-26T00:00:00\",\"receivedDate\":\"2026-10-26T00:00:00\",\"companyDetailsVm\":[{\"companyName\":\"Hearing Transcript\",\"companyId\":3901,\"companyIndustryVm\":[],\"selectedIndustries\":[],\"contactVm\":[],\"companyContactVm\":[],\"slug\":\"hearing-transcript-1\",\"addresses\":[],\"userId\":0,\"isGeneralError\":false,\"isUserBlocked\":false,\"createdOn\":\"2026-11-08T02:00:39.0357437-05:00\",\"modifiedOn\":\"2026-11-08T02:00:39.0357451-05:00\",\"isActive\":true}],\"isCurrentUserHasSubscribed\":false,\"hasAttachment\":false",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 96,
+   "sentence": "These are the four plans in the record",
+   "marker": "{editorial}",
+   "verdict": "questionable",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Questionable. Jim Clarkson's testimony (P-002) is in the record but not summarized (line 132), so the record may hold another plan. Option A, today's method, is not proposed by any party (line 101), so calling it one of the plans in the record is loose.",
+   "suggested_fix": "These are the three party plans we could read, plus today's method for comparison."
+  },
+  {
+   "line": 96,
+   "sentence": "The PSC can also mix parts of them",
+   "marker": "{analysis: the order says the PSC \"may make modifications if appropriate\" (P-016)}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Reasonable reading of 'may make modifications if appropriate' (P-016).",
+   "suggested_fix": ""
+  },
+  {
+   "line": 96,
+   "sentence": "Georgia Power's names for its two take-or-pay choices",
+   "marker": "{editorial}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Editorial naming note; fine.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 100,
+   "sentence": "Counts real-time money toward fuel using an hourly average",
+   "marker": "[P-048]",
+   "verdict": "partial",
+   "evidence_span": "the revenues based on an average hourly marginal replacement fuel cost are recorded to the fuel account",
+   "correct_passage": "",
+   "problem": "Drops 'marginal' and the pool sales or purchases. P-048 describes an average hourly MARGINAL replacement fuel cost, based on all units running plus Georgia Power's share of pool sales or purchases. Without 'marginal', readers may take it for the average running cost, which P-052 says is usually lower.",
+   "suggested_fix": "Counts real-time money toward fuel using the average hourly marginal replacement fuel cost of all Georgia Power units running in each hour, plus its share of pool sales or purchases."
+  },
+  {
+   "line": 100,
+   "sentence": "Fixed fuel costs, such as take-or-pay contracts",
+   "marker": "[P-049]",
+   "verdict": "supports",
+   "evidence_span": "This does not incorporate fixed fuel costs, which do not vary with changes in demand.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 101,
+   "sentence": "None of the four parties whose testimony we archived",
+   "marker": "{analysis: Georgia Power (P-055, P-058), PIA Staff (P-073, P-084), GIPL (P-095, P-096) and GAM (P-111) each propose or accept changes}",
+   "verdict": "questionable",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Literally true but incomplete. GAM accepts change only conditionally ('Should the Commission find...', P-111) and says no RTP revenue should be credited against FT (P-110), which keeps today's FT treatment. GIPL reports that Georgia Power 'argues that the current method is fair' (P-099). 'Who supports it: None' understates support for parts of today's method.",
+   "suggested_fix": "No party asks to keep today's method exactly as is, but GAM accepts change only if the PSC finds it needed and opposes crediting real-time revenue to pipeline fees."
+  },
+  {
+   "line": 101,
+   "sentence": "GAM said that if the PSC finds a change is needed",
+   "marker": "[P-111]",
+   "verdict": "supports",
+   "evidence_span": "Should the Commission find that GPC’s RTP fuel credit calculation methodology should be modified, either of GPC’s proposed changes would adequately address PIA Staff and intervenors’ concerns.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 102,
+   "sentence": "More real-time money stays on the base side",
+   "marker": "[P-052]",
+   "verdict": "supports",
+   "evidence_span": "the capital substitution contribution for 2025 was $264 million",
+   "correct_passage": "",
+   "problem": "Minor: $264 million is Georgia Power's own analysis of one component, capital substitution (P-052). GAM says the total base-side contribution is larger but blacked out (P-114).",
+   "suggested_fix": ""
+  },
+  {
+   "line": 102,
+   "sentence": "GAM says real-time revenues",
+   "marker": "[P-111]",
+   "verdict": "supports",
+   "evidence_span": "The revenues derived from RTP sales place downward price pressure on non-RTP rates.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 103,
+   "sentence": "Customers on standard rates keep paying the fixed fuel costs",
+   "marker": "[P-063]",
+   "verdict": "supports",
+   "evidence_span": "results in non-RTP customers absorbing all these costs",
+   "correct_passage": "",
+   "problem": "Stated in the page's own voice, but P-063 is PIA Staff's claim. Georgia Power argues that base-side revenue offsets it (P-124). Consider attributing it.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 103,
+   "sentence": "PIA Staff estimates that leaving out take-or-pay costs",
+   "marker": "[P-078]",
+   "verdict": "supports",
+   "evidence_span": "resulted in an under-allocation of $70 million, $74 million and $76 million of RTP revenues to fuel revenues for the years 2023, 2024 and 2025, respectively",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 104,
+   "sentence": "Whether the real-time money on the base side makes up",
+   "marker": "{editorial}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Fair statement of the open question.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 104,
+   "sentence": "Georgia Power says it does",
+   "marker": "[P-124]",
+   "verdict": "supports",
+   "evidence_span": "does not mean that RTP customers are not effectively paying their share of fixed costs with the portion of RTP revenue that is allocated to base",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 104,
+   "sentence": "GIPL says that money pays for more efficient power plants",
+   "marker": "[P-098]",
+   "verdict": "supports",
+   "evidence_span": "This is a necessary cost of service, and from an economics perspective does not provide further surplus to represent downward pressure on rates.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 108,
+   "sentence": "Uses Option 1, which takes both the cost and the energy",
+   "marker": "[P-058, P-128]",
+   "verdict": "supports",
+   "evidence_span": "Option 1 - exclude both the costs and the output (MWh) from non-dispatchable PPAs in the RTP fuel credit calculation.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 108,
+   "sentence": "New pipeline fees caused by very large new customers would be recovered from them, using",
+   "marker": "[P-055, P-056]",
+   "verdict": "supports",
+   "evidence_span": "proposes using a winter CP and basing the allocation on the share of organic versus large load demand growth",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 108,
+   "sentence": "Other left-out costs stay out",
+   "marker": "[P-131]",
+   "verdict": "supports",
+   "evidence_span": "the Commission should decline to adopt PIA Staff’s recommendations presented in Table 1",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 109,
+   "sentence": "Georgia Power and GIPL back Option 1",
+   "marker": "[P-128]",
+   "verdict": "supports",
+   "evidence_span": "The Company and GIPL recommend the Commission approve Option 1.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 109,
+   "sentence": "GIPL backs the new pipeline idea only with changes",
+   "marker": "[P-101]",
+   "verdict": "supports",
+   "evidence_span": "Yes, but with modifications.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 109,
+   "sentence": "GAM says either of Georgia Power's options would work",
+   "marker": "[P-111]",
+   "verdict": "partial",
+   "evidence_span": "either of GPC’s proposed changes would adequately address PIA Staff and intervenors’ concerns.",
+   "correct_passage": "",
+   "problem": "Drops GAM's condition. P-111 says either option would 'adequately address' the concerns only 'Should the Commission find' that a change is needed. Line 101 states the condition correctly.",
+   "suggested_fix": "GAM says that if a change is needed, either of Georgia Power's options would adequately address the concerns."
+  },
+  {
+   "line": 110,
+   "sentence": "Customers on standard rates get a bigger fuel credit than today",
+   "marker": "[P-058, P-115]",
+   "verdict": "supports",
+   "evidence_span": "Removing non-dispatchable PPA output (MWh) from the denominator of the RTP fuel credit calculation will increase the RTP fuel credit rate",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 110,
+   "sentence": "Georgia Power says Option 1 keeps real-time pricing",
+   "marker": "[P-129]",
+   "verdict": "supports",
+   "evidence_span": "Option 1 preserves the integrity of RTP as a marginal cost-based rate",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 110,
+   "sentence": "It says its pipeline plan protects other customers",
+   "marker": "[P-127]",
+   "verdict": "supports",
+   "evidence_span": "will cover the large load causation of the FT cost independent of project materialization",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 111,
+   "sentence": "Less real-time money goes toward base costs",
+   "marker": "[P-115]",
+   "verdict": "supports",
+   "evidence_span": "Thus, increasing the RTP fuel credit would put upward pressure on base rates.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 111,
+   "sentence": "Very large new customers' payments would cover",
+   "marker": "[P-055]",
+   "verdict": "supports",
+   "evidence_span": "the costs of new FT attributable to large load customers be fully recovered from those customers",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 112,
+   "sentence": "How much Option 1 would add",
+   "marker": "[P-138, P-139, P-140]",
+   "verdict": "supports",
+   "evidence_span": "A=Annual Total | B=REDACTED | C=REDACTED | D=REDACTED",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 112,
+   "sentence": "GIPL says Georgia Power has not let other parties review",
+   "marker": "[P-103]",
+   "verdict": "partial",
+   "evidence_span": "Georgia Power has consistently refused to allow intervenors any opportunity whatsoever to review the large load cost model it refers to",
+   "correct_passage": "",
+   "problem": "Scope word: GIPL says 'intervenors' were refused. PIA Staff is a party but not an intervenor, and no passage says whether Staff saw the model.",
+   "suggested_fix": "GIPL says Georgia Power has not let intervenors review the cost model behind its winter peak split."
+  },
+  {
+   "line": 116,
+   "sentence": "Uses Option 2, which counts both the cost and the energy",
+   "marker": "[P-073]",
+   "verdict": "supports",
+   "evidence_span": "Staff recommends Option 2, which includes both the energy (MWhs) and costs (dollars) associated with all non-dispatchable PPAs in the Fuel Credit Methodology.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 116,
+   "sentence": "Shares all pipeline and gas storage fees, old and new",
+   "marker": "[P-157]",
+   "verdict": "supports",
+   "evidence_span": "allocate all natural gas FT and storage costs on a monthly basis, without distinguishing between existing and new fixed FT costs",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 116,
+   "sentence": "If the PSC prefers a peak-based split",
+   "marker": "[P-086]",
+   "verdict": "supports",
+   "evidence_span": "Staff recommends that all FT costs no longer be recovered through the FCR mechanism. Instead, these costs should be recovered through base rates",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 116,
+   "sentence": "Counts other fuel-related costs too",
+   "marker": "[P-087, P-088]",
+   "verdict": "supports",
+   "evidence_span": "Staff recommends that Corporate Overhead costs be included in RTP Fuel Credit calculation, as it is a fuel-related cost and follows procurement.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 116,
+   "sentence": "Staff makes no recommendation on three costs",
+   "marker": "[P-089]",
+   "verdict": "supports",
+   "evidence_span": "These categories include over/under balance carrying costs, income qualified discount programs, and natural gas hedging gains and losses.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 116,
+   "sentence": "Adds monthly reports starting no later than Jan 1, 2027",
+   "marker": "[P-068]",
+   "verdict": "supports",
+   "evidence_span": "starting no later than January 1, 2027",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 117,
+   "sentence": "PIA Staff.",
+   "marker": "[P-073]",
+   "verdict": "supports",
+   "evidence_span": "Staff recommends Option 2",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 117,
+   "sentence": "No other party's testimony we read backs Option 2",
+   "marker": "{analysis: Georgia Power and GIPL back Option 1 (P-128); GAM accepts either option (P-111)}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Valid if 'backs' means 'prefers': Georgia Power and GIPL prefer Option 1 (P-128) and GAM accepts either (P-111). Note that Staff's Table 1 lists the Company's position as 'Option 1 or 2; Option 1 preferred' (P-065).",
+   "suggested_fix": ""
+  },
+  {
+   "line": 118,
+   "sentence": "Customers on standard rates get a bigger fuel credit than today",
+   "marker": "[P-079, P-080]",
+   "verdict": "supports",
+   "evidence_span": "the under-allocation of RTP revenues to fuel revenues is expected to grow over time compared to the historical period, if the current RTP Fuel Credit methodology is not modified as recommended by Staff",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 118,
+   "sentence": "PIA Staff estimates Option 2 alone would add about $126 million",
+   "marker": "{computed: Table 6 \"Delta\" column (P-079): $125,870,149 for 2026 and $399,271,411 for 2031, rounded to the nearest million}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Correct: $125,870,149 rounds to $126 million and $399,271,411 to $399 million (P-079). These are Staff's estimates from data it calls incomplete (P-078); Table 6 is not among the tables the Oct 7 errata corrected (P-039).",
+   "suggested_fix": ""
+  },
+  {
+   "line": 118,
+   "sentence": "PIA Staff said that if its plan had applied in 2023",
+   "marker": "[P-066]",
+   "verdict": "supports",
+   "evidence_span": "The additional $329 million of RTP revenues allocated to fuel revenues would have eliminated a $322 million under collected fuel balance.",
+   "correct_passage": "",
+   "problem": "Accurate as filed, but P-066 is labeled 'as filed; see S07b', and the Oct 7 errata corrected 'page 7, line 9' (P-039), the page this answer is on. The figure may have changed; the page should say so.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 118,
+   "sentence": "It said today's fuel rate would then be lower by about $1.35",
+   "marker": "[P-066, P-067]",
+   "verdict": "supports",
+   "evidence_span": "The current FCR-27 rate would have been lower resulting in a decrease in customer bills of approximately $1.35 per month.",
+   "correct_passage": "",
+   "problem": "Same errata caveat: page 7 was corrected on Oct 7 (P-039), and the corrected text is not in the passages.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 119,
+   "sentence": "Less real-time money goes toward base costs",
+   "marker": "[P-115]",
+   "verdict": "supports",
+   "evidence_span": "Thus, increasing the RTP fuel credit would put upward pressure on base rates.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 119,
+   "sentence": "Part of the pipeline and storage fees would be counted against real-time",
+   "marker": "[P-157]",
+   "verdict": "supports",
+   "evidence_span": "all FT costs be allocated on an energy basis to all customers (both RTP and non-RTP)",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 119,
+   "sentence": "PIA Staff estimated Georgia Power's return on equity",
+   "marker": "[P-091]",
+   "verdict": "supports",
+   "evidence_span": "Staff estimated the Company’s earned ROE would have decreased an average of 0.49 percent during each of these three years.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 119,
+   "sentence": "Return on equity is a measure of the company's profit",
+   "marker": "{analysis: plain-language definition, not from the cited sources}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Reasonable plain-language definition (profit relative to shareholders' equity).",
+   "suggested_fix": ""
+  },
+  {
+   "line": 120,
+   "sentence": "Georgia Power calls Staff's three guidelines",
+   "marker": "[P-120, P-118]",
+   "verdict": "supports",
+   "evidence_span": "PIA Staff’s guidelines are new policy recommendations for the Commission’s consideration",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 120,
+   "sentence": "PIA Staff says its data were incomplete",
+   "marker": "[P-078]",
+   "verdict": "supports",
+   "evidence_span": "review was limited to the data the Company provided, which Staff found to be incomplete, and therefore, these results may actually under-estimate the total impact.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 120,
+   "sentence": "Many of the figures behind Staff's tables are blacked out",
+   "marker": "[P-079]",
+   "verdict": "supports",
+   "evidence_span": "Shortfall 2026 | ……………. | ……………. | $125,870,149",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 120,
+   "sentence": "Staff's Oct 7 corrections changed figures",
+   "marker": "[P-039]",
+   "verdict": "supports",
+   "evidence_span": "including corrections to Tables 2, 3, 4, and 7",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 124,
+   "sentence": "Uses Option 1 for take-or-pay contracts",
+   "marker": "[P-095, P-128]",
+   "verdict": "supports",
+   "evidence_span": "The Company and GIPL recommend the Commission approve Option 1.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 124,
+   "sentence": "New pipeline fees caused by very large new customers would be recovered from them, split",
+   "marker": "[P-096, P-104]",
+   "verdict": "supports",
+   "evidence_span": "I recommend that new FT costs be allocated between large load customers and other growth using the same allocation factor as transmission costs",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 124,
+   "sentence": "The credit would also include a direct share of pipeline fees",
+   "marker": "[P-096]",
+   "verdict": "supports",
+   "evidence_span": "Revise the RTP fuel credit calculation to include direct contributions to FT cost",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 125,
+   "sentence": "GIPL, with Park Avenue Baptist Church",
+   "marker": "[P-093]",
+   "verdict": "supports",
+   "evidence_span": "Georgia Interfaith Power and Light (GIPL), and its member congregations Park Avenue Baptist Church, Temple Sinai, and Unitarian Universalist Church of Savannah.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 126,
+   "sentence": "Customers on standard rates get a bigger fuel credit than today",
+   "marker": "[P-105]",
+   "verdict": "supports",
+   "evidence_span": "But it will shift revenue credit from base rates to FCR.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 126,
+   "sentence": "GIPL says this",
+   "marker": "[P-105]",
+   "verdict": "supports",
+   "evidence_span": "This will assist in reducing FCR rates for FCR customers",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 127,
+   "sentence": "GIPL says the change",
+   "marker": "[P-105]",
+   "verdict": "supports",
+   "evidence_span": "may increase base rates for those same customers, depending on how other cost allocation questions are handled",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 127,
+   "sentence": "Real-time customers' prices would not change",
+   "marker": "[P-105]",
+   "verdict": "supports",
+   "evidence_span": "the rates charged to RTP customers will not change",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 128,
+   "sentence": "GIPL's pipeline advice assumes",
+   "marker": "[P-096]",
+   "verdict": "supports",
+   "evidence_span": "assuming fixed fuel delivery costs are not included in the marginal value of generation capacity. If that is not the case, then I provide two alternate recommendations",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 128,
+   "sentence": "Georgia Power's rebuttal says GIPL's witness switched",
+   "marker": "[P-154, P-155]",
+   "verdict": "supports",
+   "evidence_span": "he changed his recommendation from transmission allocation to an energy allocation",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 128,
+   "sentence": "We could not check this",
+   "marker": "[P-003, P-009]",
+   "verdict": "supports",
+   "evidence_span": "October 15, 2026\",\"filedDate\":\"2026-10-26T00:00:00\",\"receivedDate\":\"2026-10-26T00:00:00\",\"companyDetailsVm\":[{\"companyName\":\"Hearing Transcript\",\"companyId\":3901,\"companyIndustryVm\":[],\"selectedIndustries\":[],\"contactVm\":[],\"companyContactVm\":[],\"slug\":\"hearing-transcript-1\",\"addresses\":[],\"userId\":0,\"isGeneralError\":false,\"isUserBlocked\":false,\"createdOn\":\"2026-11-08T02:00:39.0357437-05:00\",\"modifiedOn\":\"2026-11-08T02:00:39.0357451-05:00\",\"isActive\":true}],\"isCurrentUserHasSubscribed\":false,\"hasAttachment\":false",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 132,
+   "sentence": "Five parties filed testimony",
+   "marker": "[P-041, P-059, P-152, P-153, P-002]",
+   "verdict": "supports",
+   "evidence_span": "Testimony of Jonathan Ly On Behalf of Georgia Association of Manufacturers September 23, 2026",
+   "correct_passage": "",
+   "problem": "The count of five filings is supported (P-041, P-059, P-152, P-153, P-002), but P-002 does not name the party Jim Clarkson testifies for.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 132,
+   "sentence": "On take-or-pay contracts, Georgia Power and GIPL back Option 1",
+   "marker": "[P-128, P-065, P-073, P-111]",
+   "verdict": "supports",
+   "evidence_span": "The Company and GIPL recommend the Commission approve Option 1.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 132,
+   "sentence": "Only one party, PIA Staff, backs Option 2",
+   "marker": "{analysis: P-128 and P-111}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Valid if 'backs' means 'prefers' (P-128, P-111). P-065 lists the Company's position as 'Option 1 or 2; Option 1 preferred'.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 132,
+   "sentence": "Resource Supply Management also filed testimony",
+   "marker": "[P-002]",
+   "verdict": "partial",
+   "evidence_span": "Clarkson Direct Testimony \",\"filedDate\":\"2026-09-22T00:00:00\"",
+   "correct_passage": "",
+   "problem": "P-002 supports only a Sep 22 filing of 'Jim Clarkson Direct Testimony'. No passage says Clarkson testifies for RSM, or that RSM stands for Resource Supply Management.",
+   "suggested_fix": "Jim Clarkson also filed direct testimony, on Sep 22; the filing list does not say which party he represents."
+  },
+  {
+   "line": 132,
+   "sentence": "Its filing is a scanned image",
+   "marker": "{editorial: process note}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Process note; fine.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 134,
+   "sentence": "Every named speaker below is an expert witness",
+   "marker": "{analysis: witnesses named in P-060, P-160, P-161, P-092, P-108 and P-117}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Valid: every named speaker is a party's witness (P-060, P-160, P-161, P-092, P-108, P-117). Tom Newsome is a PSC staff employee (P-060), not an outside expert.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 134,
+   "sentence": "That reflects who filed testimony",
+   "marker": "{editorial}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Fair caveat.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 134,
+   "sentence": "PIA Staff argues its own position as a party",
+   "marker": "[P-006, P-007]",
+   "verdict": "supports",
+   "evidence_span": "The PIA Staff is considered a party to the case",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 138,
+   "sentence": "Every card uses the same fields",
+   "marker": "{editorial: labeling rule}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Labeling rule; fine.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 138,
+   "sentence": "means the case record or a party's own figures back the claim",
+   "marker": "{editorial: labeling rule}",
+   "verdict": "questionable",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "A party's own estimate backing its own claim is not independent support. Readers may take 'Supported' to mean confirmed; cards 1, 2 and 6 rely on this label.",
+   "suggested_fix": "Use a separate label, such as 'Supported by the party's own figures', or keep 'Supported' for claims the record backs."
+  },
+  {
+   "line": 138,
+   "sentence": "means parties give credible but conflicting accounts",
+   "marker": "{editorial: labeling rule}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Fine, though 'credible' is an unexamined judgment.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 138,
+   "sentence": "means the needed numbers are missing",
+   "marker": "{editorial: labeling rule}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Labeling rule; fine.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 138,
+   "sentence": "Values questions are marked as not mainly factual",
+   "marker": "{editorial: labeling rule}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Labeling rule; fine.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 138,
+   "sentence": "means a named witness made the argument in a filing",
+   "marker": "{editorial: labeling rule}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Fine as a rule, but cards 3 to 5 do not always name the witness (see framing issues).",
+   "suggested_fix": ""
+  },
+  {
+   "line": 138,
+   "sentence": "label names the plan or option a card argues for",
+   "marker": "{editorial: labeling rule}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Labeling rule; fine.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 138,
+   "sentence": "Cards follow the order of the questions in Layer 2",
+   "marker": "{editorial: ordering rule}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Matches the card order: take-or-pay, pipeline, other costs, base trade-off; proposals in filing order.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 140,
+   "sentence": "Dollar figures are each party's own estimates",
+   "marker": "{analysis: blacked-out cells appear in P-079, P-112, P-114, P-139, P-140, P-146 and P-147}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Valid: blacked-out cells appear in P-079, P-112, P-114, P-139, P-140, P-146 and P-147.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 140,
+   "sentence": "A blacked-out number exists but is hidden",
+   "marker": "{editorial: labeling rule}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Correct handling of redactions.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 140,
+   "sentence": "PIA Staff corrected some of its figures on Oct 7",
+   "marker": "[P-039]",
+   "verdict": "supports",
+   "evidence_span": "Please find enclosed the First Errata to that Direct Testimony and Exhibits",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 140,
+   "sentence": "The corrected pages are a scanned image",
+   "marker": "{editorial: process note}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Process note; cannot be checked against passages.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 146,
+   "sentence": "Georgia Power and GIPL say real-time customers should carry only costs",
+   "marker": "[P-130, P-100]",
+   "verdict": "partial",
+   "evidence_span": "incremental RTP load should be assigned the cost of resources that may be dispatched in response to price-sensitive demand",
+   "correct_passage": "",
+   "problem": "Overgeneralizes GIPL. GIPL's reasoning (P-100) is specific to take-or-pay contracts. Elsewhere GIPL wants real-time load to carry fixed costs that do not change with use: pipeline (FT) costs (P-101 rejects 'excuse incremental RTP load from an explicit allocation of FT cost'), plus coal-related costs and corporate overhead (P-096). 'Only' fits Georgia Power (P-130) but not GIPL.",
+   "suggested_fix": "Georgia Power and GIPL say real-time customers should not carry take-or-pay contract costs, because using more or less power does not change them, so the contracts should be left out of the math entirely."
+  },
+  {
+   "line": 146,
+   "sentence": "This raises the fuel credit, but by how much is not public",
+   "marker": "[P-128, P-139]",
+   "verdict": "supports",
+   "evidence_span": "agree that Option 1 will increase the amount of RTP revenues credited to fuel",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 147,
+   "sentence": "Georgia Power witnesses Ross Beppler, Lee Evans and Brandon Looney",
+   "marker": "[P-117, P-129]",
+   "verdict": "supports",
+   "evidence_span": "Option 1 preserves the integrity of RTP as a marginal cost-based rate",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 147,
+   "sentence": "GIPL witness John D. Wilson said Option 1",
+   "marker": "[P-092, P-100, P-128]",
+   "verdict": "supports",
+   "evidence_span": "This resolves this problem with the current RTP fuel credit calculation.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 148,
+   "sentence": "Georgia Power's direct testimony said removing the contracts' energy",
+   "marker": "[P-058]",
+   "verdict": "supports",
+   "evidence_span": "Removing non-dispatchable PPA output (MWh) from the denominator of the RTP fuel credit calculation will increase the RTP fuel credit rate",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 148,
+   "sentence": "Georgia Power said GAM and PIA Staff agree",
+   "marker": "[P-128]",
+   "verdict": "supports",
+   "evidence_span": "agree that Option 1 will increase the amount of RTP revenues credited to fuel",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 148,
+   "sentence": "GIPL said that while the contracts' output stays below",
+   "marker": "[P-100, P-128]",
+   "verdict": "supports",
+   "evidence_span": "as long as the output from non-dispatchable PPAs remains less than the load from FCR customers, then the net effect of this approach is to assign both the costs and the benefits of non-dispatchable resources to FCR customers",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 149,
+   "sentence": "PIA Staff said Option 1",
+   "marker": "[P-074]",
+   "verdict": "supports",
+   "evidence_span": "Option 1 omits non-dispatchable costs from the calculation when the energy from these non-dispatchable resources serve all customers.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 150,
+   "sentence": "Georgia Power's own direct testimony said Option 1",
+   "marker": "[P-058, P-128]",
+   "verdict": "supports",
+   "evidence_span": "this approach is not based on all Georgia Power generating units running, as originally approved",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 150,
+   "sentence": "PIA Staff said that if Georgia Power wanted a true marginal cost",
+   "marker": "[P-075]",
+   "verdict": "supports",
+   "evidence_span": "the Company should have proposed the associated interchange energy rate",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 151,
+   "sentence": "The public copies we found have no dollar figure for what Option 1",
+   "marker": "[P-138, P-139]",
+   "verdict": "supports",
+   "evidence_span": "A=Annual Total | B=REDACTED | C=REDACTED | D=REDACTED",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 152,
+   "sentence": "Whether keeping real-time pricing tied to marginal cost",
+   "marker": "{editorial}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Fair framing of the values question.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 158,
+   "sentence": "PIA Staff says take-or-pay contracts serve all customers",
+   "marker": "[P-080]",
+   "verdict": "supports",
+   "evidence_span": "These costs are incurred to serve all customers at all times and should be included when the Company calculates the amount of RTP revenues credited to fuel revenues.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 158,
+   "sentence": "Staff estimates that leaving the costs out under-counted the credit by $220 million",
+   "marker": "[P-078]",
+   "verdict": "supports",
+   "evidence_span": "Total | $1,085,720,026 | $1,306,174,298 | $220,454,272",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 159,
+   "sentence": "PIA Staff witnesses Tom Newsome, Philip Hayet and Leah Wellborn",
+   "marker": "[P-060, P-160, P-161, P-059]",
+   "verdict": "supports",
+   "evidence_span": "PUBLIC INTEREST ADVOCACY STAFF PUBLIC DISCLOSURE VERSION September 23, 2026",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 159,
+   "sentence": "They said:",
+   "marker": "[P-080]",
+   "verdict": "supports",
+   "evidence_span": "These costs are incurred to serve all customers at all times and should be included when the Company calculates the amount of RTP revenues credited to fuel revenues.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 160,
+   "sentence": "In 2025, about 9.8 million MWh of take-or-pay energy",
+   "marker": "[P-076]",
+   "verdict": "supports",
+   "evidence_span": "approximately 9.8 million MWh of non-dispatchable generation was included in the RTP fuel credit calculation",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 160,
+   "sentence": "That $486 million is the contracts' total cost",
+   "marker": "[P-077]",
+   "verdict": "supports",
+   "evidence_span": "$486 million is the total amount of non-dispatchable costs on the system in the year, not an RTP allocation of cost responsibility.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 160,
+   "sentence": "Georgia Power's own direct testimony said Option 2 would",
+   "marker": "[P-058, P-128]",
+   "verdict": "supports",
+   "evidence_span": "result in a larger allocation of RTP revenues to the fuel clause",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 161,
+   "sentence": "Georgia Power said Option 2",
+   "marker": "[P-129]",
+   "verdict": "supports",
+   "evidence_span": "would be a departure from the marginal fuel cost-based approach approved by the Commission and in place since 2010",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 161,
+   "sentence": "GIPL said leaving the contracts out is",
+   "marker": "[P-100]",
+   "verdict": "supports",
+   "evidence_span": "This is appropriate, as incremental RTP load should be assigned the cost of resources that may be dispatched in response to price-sensitive demand.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 162,
+   "sentence": "Georgia Power said real-time customers cannot avoid take-or-pay costs",
+   "marker": "[P-130]",
+   "verdict": "supports",
+   "evidence_span": "when RTP load does respond to the price signal, the non-dispatchable PPA cost is unable to be avoided by that response",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 162,
+   "sentence": "It said the contracts' fixed prices lower average fuel costs",
+   "marker": "[P-130]",
+   "verdict": "supports",
+   "evidence_span": "the benefits of non-dispatchable PPAs, which deliver energy at a fixed price, accrue to FCR customers by reducing average fuel costs when the fixed price is below the marginal fuel cost",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 163,
+   "sentence": "Georgia Power's own estimates for Option 1 and Option 2 are blacked out",
+   "marker": "[P-138, P-139, P-140]",
+   "verdict": "supports",
+   "evidence_span": "A=Annual Total | B=REDACTED | C=REDACTED | D=REDACTED",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 163,
+   "sentence": "So the public copies we found have no dollar figure for Option 1",
+   "marker": "{analysis: P-139 is fully blacked out; Staff's figures (P-078, P-079) cover Option 2 only}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Valid: P-139 is fully redacted, and Staff's figures (P-078, P-079) cover Option 2 only.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 164,
+   "sentence": "How big the gap really is",
+   "marker": "[P-078]",
+   "verdict": "supports",
+   "evidence_span": "these results may actually under-estimate the total impact",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 170,
+   "sentence": "Georgia Power says pipeline fees are fixed years ahead",
+   "marker": "[P-122, P-126, P-055, P-056]",
+   "verdict": "supports",
+   "evidence_span": "FT costs are established and fixed years in advance of operation and do not vary based on how much energy is produced by a facility",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 170,
+   "sentence": "PIA Staff and GIPL disagree with this way of splitting",
+   "marker": "[P-085, P-101]",
+   "verdict": "supports",
+   "evidence_span": "nor do I agree with the proposed cost allocation factor for FT attributable to large load customers",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 171,
+   "sentence": "Georgia Power's witnesses said energy use",
+   "marker": "[P-126]",
+   "verdict": "supports",
+   "evidence_span": "energy is not an appropriate allocation factor for FT because FT is fixed, driven by peak demand",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 171,
+   "sentence": "GAM witness Jonathan Ly said no part of real-time revenue",
+   "marker": "[P-108, P-110]",
+   "verdict": "supports",
+   "evidence_span": "No specific portion of RTP revenues should be credited against FT costs because FT costs are fully fixed costs that affect GPC’s average cost of service.",
+   "correct_passage": "",
+   "problem": "The quote and speaker are accurate, but the card favors Georgia Power's pipeline plan, and that plan books real-time revenue to fuel to cover new FT (P-127). GAM's statement does not support that. GAM's support for the plan is P-113, already under 'What supports it'. Also, the witness name is in P-153, not the cited P-108.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 172,
+   "sentence": "Georgia Power said its split is fixed in advance",
+   "marker": "[P-127]",
+   "verdict": "supports",
+   "evidence_span": "ensures that the RTP revenues booked to fuel will cover the large load causation of the FT cost independent of project materialization since the allocation will be fixed based on the planning assumptions that drove the need",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 172,
+   "sentence": "GAM said the plan",
+   "marker": "[P-113]",
+   "verdict": "supports",
+   "evidence_span": "would ensure that incremental FT costs attributable to new very large load customers are fully recovered from these customers",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 173,
+   "sentence": "GAM said:",
+   "marker": "[P-085]",
+   "verdict": "does_not_support",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Misattributed. P-085 comes from PIA Staff's testimony (S07, p.19), not GAM's. Line 182 of this page attributes the same passage to PIA Staff. GAM takes the opposite view of FT costs (P-110).",
+   "suggested_fix": "Who disagrees: PIA Staff said: \"FT is necessary for all hours across each month in order to reliably serve customers.\" [P-085]"
+  },
+  {
+   "line": 173,
+   "sentence": "GIPL said it does not agree",
+   "marker": "[P-101]",
+   "verdict": "supports",
+   "evidence_span": "I do not agree that it is reasonable to excuse incremental RTP load from an explicit allocation of FT cost",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 174,
+   "sentence": "GIPL said Georgia Power has not let other parties review",
+   "marker": "[P-103]",
+   "verdict": "partial",
+   "evidence_span": "Georgia Power has consistently refused to allow intervenors any opportunity whatsoever to review the large load cost model it refers to – not even on a trade secret basis.",
+   "correct_passage": "",
+   "problem": "Scope word: GIPL says 'intervenors'. PIA Staff is a party but not an intervenor. The quoted words are verbatim.",
+   "suggested_fix": "GIPL said Georgia Power has not let intervenors review the large-load cost model behind the split, \"not even on a trade secret basis.\""
+  },
+  {
+   "line": 174,
+   "sentence": "PIA Staff said the plan leaves out existing pipeline fees",
+   "marker": "[P-082]",
+   "verdict": "supports",
+   "evidence_span": "is only a partial solution and adds undue complexity to the RTP fuel credit methodology",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 175,
+   "sentence": "The dollar amounts in Georgia Power's forecast",
+   "marker": "[P-146]",
+   "verdict": "supports",
+   "evidence_span": "A=Total | D=REDACTED | E=REDACTED | F=REDACTED",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 176,
+   "sentence": "How much new pipeline cost very large customers will cause",
+   "marker": "{analysis: P-146}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Valid: P-146 is fully redacted.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 182,
+   "sentence": "PIA Staff says pipeline and storage fees are needed in every hour",
+   "marker": "[P-085, P-157]",
+   "verdict": "supports",
+   "evidence_span": "FT is necessary for all hours across each month in order to reliably serve customers.",
+   "correct_passage": "",
+   "problem": "Minor: P-085 covers FT (pipeline) only; storage comes from P-157.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 182,
+   "sentence": "Staff and Georgia Power disagree on whether the company could otherwise collect",
+   "marker": "[P-083, P-123]",
+   "verdict": "supports",
+   "evidence_span": "This raises the possibility of double recovery because all FT costs are indisputably charged to and recovered from fuel revenues.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 183,
+   "sentence": "PIA Staff said its approach is",
+   "marker": "[P-084]",
+   "verdict": "supports",
+   "evidence_span": "This is also consistent with how FT costs have been recovered from non-RTP customers over the past 15 years.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 184,
+   "sentence": "PIA Staff said real-time customers use power",
+   "marker": "[P-081]",
+   "verdict": "supports",
+   "evidence_span": "RTP customer load occurs in both high and low load hours",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 184,
+   "sentence": "GIPL said splitting by energy or by peak demand",
+   "marker": "[P-102]",
+   "verdict": "supports",
+   "evidence_span": "cost allocation outcomes differ depending on whether FT costs are allocated on the basis of energy or demand",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 185,
+   "sentence": "Georgia Power said it would only collect twice",
+   "marker": "[P-123]",
+   "verdict": "supports",
+   "evidence_span": "The Company would only be double recovering if it was charging customers for FT costs in both fuel and base rates; however, FT costs are charged to fuel and are not included in base revenue requirements.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 185,
+   "sentence": "GAM said no specific part of real-time revenue",
+   "marker": "[P-110]",
+   "verdict": "supports",
+   "evidence_span": "No specific portion of RTP revenues should be credited against FT costs",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 186,
+   "sentence": "Georgia Power said Staff's own fuel-case testimony",
+   "marker": "[P-125]",
+   "verdict": "supports",
+   "evidence_span": "own FCR-27 testimony filed just five months ago, in which it allocated FT using a 1-CP allocator, a demand-based method.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 186,
+   "sentence": "PIA Staff said it used that method",
+   "marker": "[P-145]",
+   "verdict": "supports",
+   "evidence_span": "Staff relied on the summer peak 1-CP allocation simply for illustration purposes",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 187,
+   "sentence": "PIA Staff's yearly estimates for its pipeline plan",
+   "marker": "[P-147]",
+   "verdict": "supports",
+   "evidence_span": "Calendar Year | RTP Allocation on MWh 2026 | …………… 2027 | …………… 2028 | …………… Total | ……………",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 188,
+   "sentence": "Whether real-time money on the base side already helps pay",
+   "marker": "[P-124]",
+   "verdict": "supports",
+   "evidence_span": "RTP revenue allocated to base for fixed costs (like FT) through capital substitution or other mechanisms indicates that such RTP revenue is reducing other costs recovered through base rates",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 188,
+   "sentence": "GIPL called that",
+   "marker": "[P-148]",
+   "verdict": "supports",
+   "evidence_span": "SO DOES THE RTP RATE RECOVER FT COSTS? A: This is questionable.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 194,
+   "sentence": "PIA Staff and GIPL say fuel costs such as coal rail car leases",
+   "marker": "[P-063, P-099]",
+   "verdict": "supports",
+   "evidence_span": "Omitting these costs decreases the RTP revenues allocated to fuel revenues and results in non-RTP customers absorbing all these costs.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 194,
+   "sentence": "Georgia Power agrees these costs are not in the credit",
+   "marker": "[P-049, P-131]",
+   "verdict": "supports",
+   "evidence_span": "This does not incorporate fixed fuel costs, which do not vary with changes in demand.",
+   "correct_passage": "",
+   "problem": "Minor: Georgia Power's examples of excluded fixed fuel costs (P-049) are take-or-pay contracts and FT. No passage shows it naming rail car leases or corporate overhead.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 195,
+   "sentence": "PIA Staff said leaving out these costs",
+   "marker": "[P-063]",
+   "verdict": "supports",
+   "evidence_span": "results in non-RTP customers absorbing all these costs",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 195,
+   "sentence": "Staff based its view on three guidelines",
+   "marker": "[P-062]",
+   "verdict": "supports",
+   "evidence_span": "The second is that costs recovered through the fuel clause should be recovered from all customers, and the third is that costs recovered from fuel revenues should be allocated based on energy usage (MWhs).",
+   "correct_passage": "",
+   "problem": "Minor: merges Staff's second and third guidelines into one.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 195,
+   "sentence": "GIPL's witness said the credit is",
+   "marker": "[P-099]",
+   "verdict": "supports",
+   "evidence_span": "is therefore an underestimate of the fuel costs that should be allocated to the incremental load priced at RTP",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 196,
+   "sentence": "PIA Staff said costs like rail car leases depend",
+   "marker": "[P-149]",
+   "verdict": "supports",
+   "evidence_span": "The costs are influenced either by the amount of fuel procured or the type of fuel procured and therefore are appropriately assigned to all customers.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 196,
+   "sentence": "GIPL said coal-related costs rise and fall",
+   "marker": "[P-156]",
+   "verdict": "supports",
+   "evidence_span": "Coal-related costs are one type of fixed fuel costs that vary with sustained increases in demand",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 197,
+   "sentence": "Georgia Power said the PSC",
+   "marker": "[P-131]",
+   "verdict": "supports",
+   "evidence_span": "the Commission should decline to adopt PIA Staff’s recommendations presented in Table 1",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 197,
+   "sentence": "It said Staff's guidelines are",
+   "marker": "[P-120]",
+   "verdict": "supports",
+   "evidence_span": "are not based on or consistent with cost-allocation best practices",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 197,
+   "sentence": "the RTP rate is by design",
+   "marker": "[P-121]",
+   "verdict": "supports",
+   "evidence_span": "the RTP rate is by design a marginal cost-based rate that is not intended to recover all embedded costs",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 198,
+   "sentence": "The two supporters split on some items",
+   "marker": "[P-106, P-087]",
+   "verdict": "supports",
+   "evidence_span": "This includes gas hedging gains/losses, gas gains/losses on resales, FCR carrying costs, and net renewable program revenues/expenses.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 198,
+   "sentence": "PIA Staff itself said it does not necessarily expect",
+   "marker": "[P-064]",
+   "verdict": "supports",
+   "evidence_span": "Staff does not necessarily expect that all these costs be included in the RTP Fuel Credit Methodology calculation",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 199,
+   "sentence": "In PIA Staff's public table of the costs left out",
+   "marker": "[P-150]",
+   "verdict": "supports",
+   "evidence_span": "Natural gas firm transportation | …………… | …………… | …………… Natural gas storage",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 200,
+   "sentence": "Which costs should count as fuel costs at all",
+   "marker": "{editorial}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Fair framing of the definitional question.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 206,
+   "sentence": "GAM says real-time revenue already lowers",
+   "marker": "[P-111, P-115]",
+   "verdict": "supports",
+   "evidence_span": "Thus, increasing the RTP fuel credit would put upward pressure on base rates.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 206,
+   "sentence": "How much base rates might change would be settled",
+   "marker": "[P-016]",
+   "verdict": "supports",
+   "evidence_span": "any corresponding change to base revenues shall be recorded in a regulatory asset or liability and addressed in the next base rate case",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 207,
+   "sentence": "GAM witness Jonathan Ly, for the Georgia Association",
+   "marker": "[P-108, P-109]",
+   "verdict": "supports",
+   "evidence_span": "They consume large quantities of electricity, primarily for manufacturing, under a variety of rate schedules.",
+   "correct_passage": "",
+   "problem": "Minor: the witness name is in P-153, not the cited P-108 or P-109.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 207,
+   "sentence": "Georgia Power said real-time revenue above added costs",
+   "marker": "[P-045]",
+   "verdict": "supports",
+   "evidence_span": "Revenues in excess of the incremental cost put downward pressure on rates for all customers.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 208,
+   "sentence": "Georgia Power's direct testimony said changing the method",
+   "marker": "[P-047]",
+   "verdict": "supports",
+   "evidence_span": "WOULD CHANGING THE METHODOLOGY FOLLOWING THIS INVESTIGATION CHANGE BASE RATE REVENUE? A. Yes.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 208,
+   "sentence": "The PSC's order sends any matching base-side change",
+   "marker": "[P-016]",
+   "verdict": "supports",
+   "evidence_span": "any corresponding change to base revenues shall be recorded in a regulatory asset or liability and addressed in the next base rate case",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 208,
+   "sentence": "GIPL agrees the shift",
+   "marker": "[P-105]",
+   "verdict": "supports",
+   "evidence_span": "may increase base rates for those same customers, depending on how other cost allocation questions are handled",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 208,
+   "sentence": "A cost study GAM cited shows homes pay a bigger share",
+   "marker": "[P-116]",
+   "verdict": "supports",
+   "evidence_span": "Domestic 58.07% 55.36%",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 208,
+   "sentence": "Georgia Power estimates $100 million more in base rates",
+   "marker": "{computed: about $1.65 versus $1.48 a month per $100 million (P-142, P-143)}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Correct: $1.6484 (P-143) versus $1.4806 (P-142) per $100 million. The comparison is the page's own arithmetic on Georgia Power's figures, not a statement by Georgia Power. It contradicts the $1.84 on line 85.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 209,
+   "sentence": "PIA Staff said any base-rate impact",
+   "marker": "[P-090]",
+   "verdict": "supports",
+   "evidence_span": "Any impact to base rates would be a natural consequence of revising the methodology to accurately match costs and cost recovery in the same mechanism.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 209,
+   "sentence": "GIPL said the base-side money",
+   "marker": "[P-098]",
+   "verdict": "supports",
+   "evidence_span": "does not provide further surplus to represent downward pressure on rates",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 210,
+   "sentence": "PIA Staff found Georgia Power could have absorbed",
+   "marker": "[P-090, P-091]",
+   "verdict": "supports",
+   "evidence_span": "concluded the Company would have had the financial capability to absorb additional RTP revenues credited to fuel revenues while maintaining its targeted Return on Equity",
+   "correct_passage": "",
+   "problem": "Content is supported, but the verb 'found' presents Staff's conclusion as an established finding. Elsewhere the page uses 'said' or 'says' for parties' claims.",
+   "suggested_fix": "PIA Staff said Georgia Power could have absorbed the larger fuel credit in 2023-2025 while staying within the profit range the PSC allows."
+  },
+  {
+   "line": 210,
+   "sentence": "So base rates would not necessarily rise",
+   "marker": "{analysis: follows from P-090 and P-091}",
+   "verdict": "questionable",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Questionable. Staff's analysis (P-090, P-091) asks whether past earnings could have absorbed the shift. The order sends the base-side change to a regulatory asset or liability for the next base rate case (P-016), and Staff itself says 'the direction and magnitude of any future impact would need to be determined in a base rate case' (P-090). The inference sides with Staff.",
+   "suggested_fix": "PIA Staff says the direction and size of any base-rate change would be decided in a base rate case (P-090)."
+  },
+  {
+   "line": 211,
+   "sentence": "GAM's figures for how much real-time revenue lowered base costs",
+   "marker": "[P-112, P-114]",
+   "verdict": "supports",
+   "evidence_span": "RTP revenues reduced GPC’s system revenue requirements by $ in 2025.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 212,
+   "sentence": "How base rates will change",
+   "marker": "[P-016]",
+   "verdict": "supports",
+   "evidence_span": "addressed in the next base rate case",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 212,
+   "sentence": "Georgia Power says base rates are frozen through 2028",
+   "marker": "[P-054]",
+   "verdict": "supports",
+   "evidence_span": "These benefits enabled the Company to freeze base rates through 2028",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 216,
+   "sentence": "Should big customers on hourly prices help pay",
+   "marker": "{editorial}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Neutral question.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 217,
+   "sentence": "How should the PSC weigh a lower fuel charge",
+   "marker": "{editorial}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Neutral question.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 218,
+   "sentence": "How should the cost of new gas pipeline space be shared",
+   "marker": "{editorial}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Neutral question.",
+   "suggested_fix": ""
+  }
+ ],
+ "framing_issues": [
+  {
+   "line": 9,
+   "text": "Counting more of the money toward fuel would raise their fuel charge",
+   "issue": "In the 30-second version, which most readers see, the effect is reversed. The record (P-066, P-105) says a bigger fuel credit lowers the fuel charge, so this makes the change look harmful to the readers it would help.",
+   "severity": "high"
+  },
+  {
+   "line": 30,
+   "text": "Georgia Power tried to silence parts of GIPL's testimony",
+   "issue": "Loaded, unequal verb. 'Silence' casts a routine motion to strike (P-134) as suppression, while GIPL's reply on line 31 gets the neutral 'asked'. Use 'asked the PSC to strike'.",
+   "severity": "high"
+  },
+  {
+   "line": 85,
+   "text": "a typical home's bill would drop by about $1.84 a month",
+   "issue": "Beyond being wrong, $1.84 flips the comparison. Next to $1.65 on the base side it suggests a fuel-side shift helps homes on net. Georgia Power's figures ($1.48 vs $1.65, P-142/P-143; line 208) imply the opposite.",
+   "severity": "high"
+  },
+  {
+   "line": 173,
+   "text": "GAM said:",
+   "issue": "Misattributing PIA Staff's words to GAM makes GAM look like an opponent of Georgia Power's pipeline plan. It also contradicts line 182, which gives the same quote to PIA Staff.",
+   "severity": "medium"
+  },
+  {
+   "line": 171,
+   "text": "GAM witness Jonathan Ly said no part of real-time revenue should be credited against these fees",
+   "issue": "Placed under 'Who says it' on the card for Georgia Power's pipeline plan. GAM's point (no real-time revenue credited against FT) conflicts with that plan, which books real-time revenue to fuel to cover new FT (P-127). This overstates GAM's alignment with Georgia Power.",
+   "severity": "medium"
+  },
+  {
+   "line": 210,
+   "text": "PIA Staff found Georgia Power could have absorbed the larger fuel credit",
+   "issue": "Unequal verbs: Staff 'found' (a finding), while other parties 'say' or 'said'. The next sentence, 'So base rates would not necessarily rise', then adopts Staff's conclusion in the page's own voice.",
+   "severity": "medium"
+  },
+  {
+   "line": 101,
+   "text": "None of the four parties whose testimony we archived asks to keep it unchanged",
+   "issue": "Missing context. Georgia Power 'argues that the current method is fair' (P-099, per GIPL). GAM accepts change only conditionally and opposes crediting real-time revenue to FT (P-110, P-111). 'Who supports it: None' understates support for parts of today's method.",
+   "severity": "medium"
+  },
+  {
+   "line": 146,
+   "text": "Georgia Power and GIPL say real-time customers should carry only costs they can change",
+   "issue": "Puts a general principle in GIPL's mouth that GIPL rejects for pipeline, coal-related and overhead costs (P-096, P-101, P-156). This misrepresents GIPL's overall position.",
+   "severity": "medium"
+  },
+  {
+   "line": 118,
+   "text": "PIA Staff estimates Option 2 alone would add about $126 million to the credit in 2026",
+   "issue": "Uneven caveats. Option C's benefits carry Staff's dollar figures, with no note here that Staff calls its data incomplete (P-078) or that the page-7 figures ($329M, $322M, $1.35; P-066) were open to the Oct 7 errata ('page 7, line 9', P-039). Options B and D show no numbers because Georgia Power's are blacked out, so Option C can look bigger by comparison.",
+   "severity": "medium"
+  },
+  {
+   "line": 138,
+   "text": "\"Supported\" means the case record or a party's own figures back the claim",
+   "issue": "Labeling a claim 'Supported' when only the proponent's own figures back it can read as independent confirmation (cards 1, 2 and 6).",
+   "severity": "medium"
+  },
+  {
+   "line": 103,
+   "text": "Customers on standard rates keep paying the fixed fuel costs left out of the credit",
+   "issue": "The page's own voice adopts PIA Staff's framing (P-063, 'absorbing all these costs'). Georgia Power's counterpoint that base-side revenue offsets these costs (P-124) appears only under 'What's uncertain'.",
+   "severity": "low"
+  },
+  {
+   "line": 138,
+   "text": "\"Mixed\" means parties give credible but conflicting accounts",
+   "issue": "'Credible' is an unexamined judgment applied to every party.",
+   "severity": "low"
+  },
+  {
+   "line": 183,
+   "text": "PIA Staff said its approach is",
+   "issue": "Uneven naming. Card 2 names all three Staff witnesses and a date. Cards 3 to 5 often say only 'Georgia Power's witnesses' (line 171), 'PIA Staff said' (lines 183-186) or 'GIPL's witness' (line 195), with no date, though all are labeled 'Documented' (named-witness rule, line 138).",
+   "severity": "low"
+  },
+  {
+   "line": 55,
+   "text": "Big businesses on real-time pricing pay one hourly price for their extra power",
+   "issue": "'Big' overstates. RTP-DA is open to commercial and industrial customers from 250 kW of demand, about 2,300 customers (P-044). It also clashes with line 59's 'Any business customer can choose it'.",
+   "severity": "low"
+  },
+  {
+   "line": 17,
+   "text": "Stan Wise joined the PSC on Sep 5, 2026",
+   "issue": "Missing context: Wise was first elected to the PSC in 1994 and stepped down in 2018 (P-033, P-034). 'Joined' suggests he is new.",
+   "severity": "low"
+  },
+  {
+   "line": 87,
+   "text": "Homes pay 58.07% of base revenues but 55.36% of fuel revenues, by a cost study GAM cited",
+   "issue": "Missing context: the shares come from a cost study for a test year ending July 31, 2023 (P-116), cited by GAM, an interested party.",
+   "severity": "low"
+  },
+  {
+   "line": 150,
+   "text": "it should have used the \"associated interchange energy rate\" instead",
+   "issue": "Technical term left unexplained.",
+   "severity": "low"
+  },
+  {
+   "line": 91,
+   "text": "Georgia Power asked the PSC to strike that part of GIPL's testimony",
+   "issue": "'Strike' (remove from the record) is not explained.",
+   "severity": "low"
+  },
+  {
+   "line": 108,
+   "text": "using each group's share of winter peak growth to split the fees",
+   "issue": "Allocation terms are unexplained: 'winter peak growth' and 'peak-based split' (lines 108, 116, 170), and 'split the way transmission costs are split' (line 124).",
+   "severity": "low"
+  },
+  {
+   "line": 116,
+   "text": "such as gas hedging gains and losses",
+   "issue": "Unexplained jargon. Similar terms: 'monthly access charge' (line 62), 'Administrative Session' (line 40) and 'proposed orders' (line 38).",
+   "severity": "low"
+  }
+ ],
+ "summary": {
+  "units_checked": 269,
+  "supports": 208,
+  "partial": 12,
+  "does_not_support": 6,
+  "wrong_span": 0,
+  "questionable_or_invalid_tags": 5
+ }
+}
