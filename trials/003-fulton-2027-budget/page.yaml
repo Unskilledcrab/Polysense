@@ -8,7 +8,7 @@ status:                            # chips under the title
   - {text: "Draft due by Nov 15, 2026"}
   - {text: "Vote due by the 2nd January meeting"}
 option_chips:                      # one chip per option, matched by the start of the option's heading
-  "Option A": {text: "In force once submitted"}
+  "Option A": {text: "Due by Nov 15"}
   "Option B": {text: "Board may change it"}
   "Option C": {text: "Filed Nov 4", kind: bad}
 short_labels:                      # source chip labels: one or two words, so a chip fits on a phone line
@@ -27,6 +27,8 @@ short_labels:                      # source chip labels: one or two words, so a 
   S04e: "Roll call"
   S04f: "Roll call"
   S05: "Nov 4 agenda"
+  S05b: "Oct 21 minutes"
+  S05c: "Nov 4 minutes"
   S06: "2026 schedule"
   S07: "2027 calendar"
   S07b: "2027 schedule"
@@ -35,10 +37,10 @@ short_labels:                      # source chip labels: one or two words, so a 
   S09: "Budget page"
   S09b: "2026 budget"
   S10: "Open data"
-  S10b: "Sheriff deck"
-  S10c: "Solicitor deck"
-  S10d: "Defender deck"
-  S10e: "Probate deck"
+  S10b: "Sheriff slides"
+  S10c: "Solicitor slides"
+  S10d: "Defender slides"
+  S10e: "Probate slides"
   S11: Clerk
   S20: "News, Oct 7"
   S21: "FOX 5, Oct 7"

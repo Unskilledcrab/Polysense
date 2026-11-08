@@ -15,6 +15,8 @@ would need. Steps overlapped: retrieval and discovery ran together, and the gate
 | Records | 07:36 → 07:47 | `sources.yaml`, README (status table, D-list, hosts), `verification.md`, `review.md`, this log; derivation scripts copied to `scripts/` and re-run to confirm the derived files reproduce exactly | — |
 | *Round 1 (independent checks)* | by 08:14 | Run by the coordinating session, not the drafter: a blind source check (128 supports, 23 partial, 0 unsupported, 0 wrong span; 10 questionable tags; 19 framing issues; 234/234 spans grounded), a calibration checker (12/12 planted errors caught, plus 3 real issues in the true text) and the bias panel. **The panel failed:** supporter's advocate 3/5, critic's advocate 3/5, editor neutrality 3/5 and clarity 3/5 (3 high, 14 medium, 19 low; 20 flip-test asymmetries). Reports copied unchanged to `verification/round1/` | No factual errors were found. The failures were about balance and precision: labels not set by one visible rule, card 6 missing the county's own jail evidence, "no reasons" claims that didn't disclose the unreviewed meeting video, and "failed" used for a resolution whose motion failed |
 | Revision 2 | 08:15 → 08:40 | Read all four reports and the three calibration flags; saved revision 1 as `verification/round1/workspace.r1.md`. Rewrote the page against a 77-row disposition table (`verification.md`): one printed evidence-label rule applied to all six cards; card 6 given the county's consent-decree evidence; one note on the unreviewed video; precise procedural terms; both sides' missing documented points added (the 1953-2018 history, non-member votes, Ellis's full committee sentence, the hearing slots and written requests, the panel objection, Resolution 26-0729's policy case); cards paired by topic; questions reworded. Added P-086 and P-087, widened P-046, rebuilt with the updated tool (86 passages). Gate: 311 units, **0 errors, 0 warnings**; grades 7.4 / 8.0 / 7.9 / 7.4; Layer 4 10.6 → 8.6; hashes 33/33 | The advocates' suggestions conflicted in two places (the "narrative form" point in card 4; whether to keep the timing question); both views and the choice are in `verification.md` (rows 29 and 45). The first rewrite raised Layers 1 and 2 above the grade limit (8.7, 8.6) and Layer 4 to 10.6; splitting sentences and trimming quotes to exact key phrases fixed it. The coordinator had already added `title` and `header` keys to the passage spec and changed one page.yaml chip; both kept, and `scripts/retitle_passages.py` was deleted as no longer needed |
+| *Round 2 (independent checks)* | by 09:16 | Run by the coordinating session on revision 2: the blind source check (189 supports, 13 partial, 0 unsupported, 0 wrong span; 9 questionable tags; 15 framing issues; 202/202 spans grounded) and the bias panel. **The panel failed again:** supporter's advocate 3/5 (no high items), critic's advocate 3/5, editor neutrality 3/5 and clarity 3/5 (1 high, 9 medium, 24 low; 16 flip-test items). No calibration run this round. Reports copied unchanged to `verification/round2/` | Again no factual errors. The editor and critic found that the framing around the cards leaned mildly toward the current process: unexplained votes used as rebuttals against critics only, a page-supplied "tight finances" motive, "neither allows nor forbids", and card 4 dropping P-029's "14 of them" clause. The supporter found card 1 weak: no sponsors' reason, and a net 0.4% that hid larger changes |
+| Revision 3 | 09:16 → 09:50 | Read all four reports in full; saved revision 2 as `verification/round2/workspace.r2.md` and `home.r2.md`. **Minutes search, 09:19 to 09:22 UTC:** Legistar's meeting pages showed "Published minutes: Not available" for Oct 21 and Nov 4, and the API listed no minutes file (archived as S05d). Each page linked the Clerk's "post agenda minutes"; both archived in full with `snapshot.py` (S05b, S05c). They record motions, seconds and votes but **no reasons**, and list the budget updates only as "DISCUSSED". The Oct 21 minutes were ratified Nov 4; the Nov 4 minutes are tentative until Nov 18. Per-item minutes notes were empty. No video transcribed. Then rewrote against a 73-row disposition table (`verification.md`): votes taken out of the cards; the motive, the legal conclusion, the rent example and "no exceptions" removed; "as presented" stated once with its 2027 time frame; the Oct 7 entry, 30-second version, card 1, card 4's labels, Q1 and the timing question redone; per-part labels on every card; cards 3 and 4 swapped; "justice officials" for the coalition's self-name; Layer 2 opening cut to about 90 words. Added P-088 to P-096 (95 passages). Gate: 329 units, **0 errors, 0 warnings**; grades 7.9 / 8.2 / 8.3 / 7.2; Layer 4 8.9; hashes 36/36 | Three new number warnings (minutes entries carry no dates) were fixed by adding each minutes document's heading as a passage (P-090 widened, P-096). The renderer splits card meta lines on "·", so my first per-part labels would have shown only their first part; a test render caught it, and the parts are now separated by periods. While fixing card 1, the budget book's memos showed the Jan 7, 2026 changes were the CFO's recommendations, approved Jan 21, so the page no longer calls them the Board's changes |
 
 ## Where the runbook didn't fit (v0.3 was written for bills)
 
@@ -76,6 +78,12 @@ Other places it didn't fit or needed a choice:
     instead. The project needs one archived population/household table per county.
 13. **Election-adjacent timing.** The leaders' "wait until January" ask is about who votes on the budget (incoming
     board members). The page reports their reason and describes no election, but there is no rule for this case.
+14. **Multi-part evidence labels.** The card template has one evidence field, but the printed rule (round 1) gives
+    each part of a claim its own label. Revision 3 writes one short "Part: Label (basis)." sentence per part. The
+    runbook should give a format, because the prototype splits the meta line on "·" (see tool changes).
+15. **Correction to item 4 (revision 3).** "The code makes the proposal the operating budget until adoption"
+    overstated P-005. The proposal governs spending "for the following year", so it can serve as the operating
+    budget only in 2027 before adoption. Option A is still the path if the Board makes no changes.
 
 ## Shared tool changes needed (described, not made)
 
@@ -87,6 +95,13 @@ Other places it didn't fit or needed a choice:
 - `check_citations.py`: add single capital initials, "Jr.", "U.S." and "a.m./p.m." to the abbreviation list; consider
   a `{captured: date}` tag for dated "as of" sentences.
 - `prototypes/hb1009/template.html`: the header says "TRIAL 001" for every trial.
+- `render_prototype.py`: `parse_card_meta` splits the whole meta line on "·" and keeps only the part that starts
+  with "Evidence:", so an evidence label that uses "·" between its parts loses every part after the first, without
+  warning. Either parse "Evidence:" to the end of the line, or document the separator in the runbook.
+- `readability.py`: card meta lines (`<!-- nocheck -->`) are scored as prose, so a long per-part evidence label raises
+  Layer 4's grade. Consider scoring them separately.
+- `check_citations.py`: the number check is a substring match, so a short date number such as "4" in "Nov 4" can
+  pass on an unrelated digit in a cited passage. A date-aware check would be stricter.
 - Dependencies: no new project dependency. pdfplumber (listed) and the standard library did all extraction. The
   system tools `pdftoppm` (page images for visual checks), `pdftotext` (exploration only) and headless Chrome (a
   screenshot of the local test render) were used outside the project's code, and fetched no source.
@@ -124,6 +139,25 @@ Other places it didn't fit or needed a choice:
 13. **Short sentences beat dropped facts.** The first rewrite added both sides' missing points and pushed card text to
     grade 10.6; splitting sentences and quoting only exact key phrases brought it to 8.6 without losing any.
 
+### Rules learned from round 2
+
+14. **A vote is not evidence for either side.** Unexplained votes, used only against one side, read as rebuttals. List
+    votes once under What happened, keep them out of the cards, and say why.
+15. **Never supply a motive.** When no one states a reason, say so and stop. Facts placed next to the gap ("county
+    records show tight finances") work as an unlabeled anticipated argument.
+16. **Check the other half of a cited sentence.** Card 4 quoted "27 of 41" and dropped "14 of them received budget
+    increases that exceeded 5%", the critics' strongest figure, from the same clause.
+17. **Say what the text shows, not what it means legally.** "Mentions no cap" is checkable; "neither allows nor
+    forbids" decides the question the two sides dispute.
+18. **Read a rule's time frame.** "Serves as the operating budget until adoption" applies to "the following year"; a
+    2027 proposal cannot operate in 2026.
+19. **Check who made a change before naming them.** The budget book's change columns don't say who proposed a
+    change; its memos do (the Jan 7 changes were the CFO's recommendations).
+20. **Open every document link on a meeting page.** Legistar said "Published minutes: Not available", yet the Clerk's
+    "post agenda minutes", which the Board later ratifies, were posted under "Post Agenda".
+21. **Use each record in both directions.** The hearing notice, the net and gross budget changes, and the news-report
+    caveat had each been used for one side only.
+
 ## Automation notes (not yet eligible: 0 of 3 runs)
 
 - **Legistar Web API pulls** (events → agenda items → roll calls → attachments) were deterministic and fast; a good
@@ -131,4 +165,7 @@ Other places it didn't fit or needed a choice:
   events and item 26-0686's status would catch the proposal, the hearing notice and the final schedule.
 - **Open-data discovery** (Socrata catalog for "Budget Presentation_2027") is easy to automate; reading the decks
   needs the PowerPoint extractor.
+- **Minutes checks** are scriptable: the Legistar API's `EventMinutesStatusName` and `EventMinutesFile`, the meeting
+  page's "Post Agenda" link, and the next meeting's "Ratification of Minutes" item, which shows when tentative minutes
+  become final.
 - **Manual for now:** deciding which records matter, settling discrepancies, choosing passages, and writing the cards.

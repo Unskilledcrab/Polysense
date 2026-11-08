@@ -11,4 +11,4 @@
 
 ## What happened
 
-- **Nov 4, 2026:** The Board voted to file a resolution that would have removed a 5% limit on departments' requests for extra money. [P-024, P-025] The vote was 4 to 1. {computed: the roll call (P-034) lists 4 "Yea", 1 "Nay" and 1 "Did Not Vote"}
+- **Nov 4, 2026:** The Board voted to file a resolution that would have removed a 5% limit on departments' requests for extra money. [P-024, P-025, P-029] The vote was 4 to 1. {computed: the roll call (P-034) lists 4 "Yea", 1 "Nay" and 1 "Did Not Vote"}
