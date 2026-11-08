@@ -13,7 +13,7 @@ tool does one mechanical job. Judgment stays with the runbook and the verificati
 | `verify_hashes.py SOURCES.yaml [--print]` | Every retrieved file in `_raw/` matches its recorded SHA-256 | PyYAML |
 | `readability.py PAGE` | Flesch–Kincaid grade per section; flags the 30-second version and Layers 1–3 above 8.5 | stdlib |
 | `check_verifier.py REPORT PASSAGES [KEY]` | Machine-check an independent verifier's evidence spans; list flags; score its catch rate against planted errors | stdlib |
-| `render_prototype.py TRIAL TEMPLATE OUT` | Build the self-contained, clickable prototype page from the verified trial files | PyYAML |
+| `render_prototype.py TEMPLATE OUT TRIAL [TRIAL ...]` | Build the self-contained, clickable prototype from one or more trials. Each trial needs a `page.yaml` (slug, title, header chips, short source labels, optional bill-markup view) | PyYAML |
 
 Run Python tools with `uv run --with <deps> python3 trials/tools/<tool>.py …`. The JavaScript in
 `prototypes/` needs no build step.

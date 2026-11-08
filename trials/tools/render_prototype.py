@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
-"""Render the UX prototype page from a trial's verified files.
+"""Render the UX prototype page from one or more trials' checked files.
 
 Usage:
-    uv run --with pyyaml python3 trials/tools/render_prototype.py TRIAL_DIR TEMPLATE.html OUT.html
+    uv run --with pyyaml python3 trials/tools/render_prototype.py TEMPLATE.html OUT.html TRIAL_DIR [TRIAL_DIR ...]
 
-Reads TRIAL_DIR/{workspace.md, home.md, passages.md, sources.yaml, verification/summary.json}
-and TRIAL_DIR/_raw/hb1009-247117.markup.txt (from pdf_markup.py), embeds them as JSON in the
-template, and writes a single self-contained HTML page. Nothing is typed by hand into the page:
-every sentence, chip and source comes from the checked trial files.
+For each TRIAL_DIR, reads page.yaml (display settings: slug, title, header chips, short source labels,
+optional bill-markup view), workspace.md, home.md, passages.md, sources.yaml and, if present,
+verification/summary.json. Embeds them as JSON in the template and writes one self-contained HTML page.
+Nothing is typed by hand into the page: every sentence, chip and source comes from the trial files.
 """
 from __future__ import annotations
 
@@ -26,13 +26,8 @@ except ImportError:  # pragma: no cover
 MARKER = re.compile(r"\[(P-\d{3}(?:\s*,\s*P-\d{3})*)\]|\{(analysis|editorial)(?::\s*([^}]*))?\}|\{computed:\s*([^}]*)\}")
 SECTION_IDS = {"30-second": "summary", "layer 1": "overview", "layer 2": "decision", "layer 3": "options",
                "layer 4": "arguments", "layer 5": "evidence"}
-# Chip labels: one or two words, so a chip fits at the end of a line on a phone. The drawer shows full details.
-SHORT = {"S01": "Law", "S02": "Bill record", "S03": "Amendment", "S09": "Governor",
-         "S10c": "Fiscal notes", "S12": "Survey", "S13a": "Florida study", "S13b": "England study",
-         "S16": "News, Mar 12", "S16b": "News, Mar 17", "S19": "Cairo High"}
 TYPE_LABEL = {"primary-government": "Primary · government", "secondary-research": "Research", "news": "News",
               "local-government": "Local government", "advocacy": "Advocacy"}
-BILL_LINES = [("p2", 22), ("p2", 23), ("p2", 28), ("p3", 42), ("p3", 43), ("p3", 44), ("p3", 45), ("p3", 46), ("p3", 47), ("p3", 48)]
 
 
 def split_units(text: str) -> list[dict]:
@@ -144,14 +139,14 @@ def parse_passages(path: Path) -> dict:
     return out
 
 
-def bill_changes(markup_path: Path) -> list[dict]:
+def bill_changes(markup_path: Path, wanted: list[tuple[str, int]]) -> list[dict]:
     lines = {}
     for line in markup_path.read_text(encoding="utf-8").splitlines():
         m = re.match(r"^(p\d+):\s+(\d+)\s+(.*)$", line)
         if m:
             lines[(m.group(1), int(m.group(2)))] = m.group(3)
     out = []
-    for key in BILL_LINES:
+    for key in wanted:
         text = lines.get(key, "")
         segs = []
         for tok in text.split(" "):
@@ -177,11 +172,14 @@ def bill_changes(markup_path: Path) -> list[dict]:
     return out
 
 
-def main(trial: Path, template: Path, out_path: Path) -> int:
+def build_workspace(trial: Path) -> dict:
+    cfg = yaml.safe_load((trial / "page.yaml").read_text(encoding="utf-8"))
+    short = cfg.get("short_labels") or {}
     workspace, why = parse_workspace(trial / "workspace.md")
     passages = parse_passages(trial / "passages.md")
     srcs = yaml.safe_load((trial / "sources.yaml").read_text(encoding="utf-8"))["sources"]
-    used = sorted({p["source"] for p in passages.values()}, key=lambda s: [x["id"] for x in srcs].index(s))
+    order = [x["id"] for x in srcs]
+    used = sorted({p["source"] for p in passages.values()}, key=order.index)
     sources = {}
     for s in srcs:
         if s["id"] not in used:
@@ -190,41 +188,62 @@ def main(trial: Path, template: Path, out_path: Path) -> int:
         sources[s["id"]] = {"title": s.get("title"), "publisher": s.get("publisher"), "type": s.get("type"),
                             "typeLabel": TYPE_LABEL.get(s.get("type"), s.get("type")), "url": s.get("url"),
                             "retrieved_at": s.get("retrieved_at"), "sha256": sha, "method": s.get("method"),
-                            "short": SHORT.get(s["id"], s["id"]), "why": why.get(s["id"])}
+                            "short": short.get(s["id"], s["id"]), "why": why.get(s["id"])}
     summary_path = trial / "verification" / "summary.json"
     verification = json.loads(summary_path.read_text(encoding="utf-8")) if summary_path.exists() else {
-        "intro": "Verification has not run yet.", "stats": [], "sections": [], "verified": False}
-    rev = hashlib.sha256((trial / "workspace.md").read_bytes()).hexdigest()
-    rev_no = re.search(r"revision (\d+)", (trial / "workspace.md").read_text(encoding="utf-8"))
-    rev_label = f"revision {rev_no.group(1)}" if rev_no else "revision ?"
+        "intro": "Checks have not run yet.", "stats": [], "sections": [], "verified": False}
+    text = (trial / "workspace.md").read_text(encoding="utf-8")
+    rev = hashlib.sha256(text.encode("utf-8")).hexdigest()
+    rev_no = re.search(r"revision (\d+)", text)
+    markup = cfg.get("markup") or {}
+    changes = bill_changes(trial / markup["file"], [tuple(x) for x in markup["lines"]]) if markup else []
+    return {
+        "slug": cfg["slug"], "code": cfg["code"], "title": cfg["title"], "linkText": cfg["link_text"],
+        "trial": trial.name.split("-")[0],
+        "status": cfg.get("status") or [], "optionChips": cfg.get("option_chips") or {},
+        "verified": bool(verification.get("verified")),
+        "statusText": verification.get("statusText", "Checks pending"),
+        "disclosure": ("Drafted with AI help from the archived sources below. Every sentence links to its source or is "
+                       "labeled as our analysis. Checked by automated tests and independent AI reviewers. In this trial, "
+                       "no person reviewed it."),
+        "revisionLabel": (f"revision {rev_no.group(1)}" if rev_no else "revision ?") + f" (sha256 {rev[:12]})",
+        "workspace": workspace, "passages": passages, "sources": sources, "sourceOrder": used,
+        "billChanges": changes, "markupNote": markup.get("note"), "verification": verification,
+    }
+
+
+def merge_home(trials: list[Path], workspaces: list[dict]) -> dict:
+    """One home page from every trial's home.md, in section order; each item links to its workspace."""
+    merged: dict[str, dict] = {}
+    for trial, ws in zip(trials, workspaces):
+        for sec in parse_home(trial / "home.md")["sections"]:
+            tgt = merged.setdefault(sec["id"], {"id": sec["id"], "title": sec["title"], "items": []})
+            for it in sec["items"]:
+                tgt["items"].append(dict(it, slug=ws["slug"], linkText=ws["linkText"]))
+    return {"sections": list(merged.values())}
+
+
+def main(template: Path, out_path: Path, trials: list[Path]) -> int:
+    workspaces = [build_workspace(t) for t in trials]
+    slugs = [w["slug"] for w in workspaces]
+    if len(set(slugs)) != len(slugs):
+        sys.exit(f"duplicate slugs: {slugs}")
     data = {
-        "meta": {
-            "verified": bool(verification.get("verified")),
-            "statusText": verification.get("statusText", "Verification pending"),
-            "disclosure": ("Drafted with AI help from the archived sources below. Every sentence links to its source or is "
-                           "labeled as our analysis. Checked by automated tests and independent AI reviewers. In this trial, "
-                           "no person reviewed it."),
-            "footer": (f"Prototype · Trial 001 · {rev_label} (sha256 {rev[:12]}) · built {dt.date.today().isoformat()} · "
-                       "Independent project, not a government website."),
-            "revision": rev,
-        },
-        "home": parse_home(trial / "home.md"),
-        "workspace": workspace,
-        "passages": passages,
-        "sources": sources,
-        "sourceOrder": used,
-        "billChanges": bill_changes(trial / "_raw" / "hb1009-247117.markup.txt"),
-        "verification": verification,
+        "meta": {"footer": f"Prototype · built {dt.date.today().isoformat()} · Independent project, not a government website."},
+        "workspaces": workspaces,
+        "home": merge_home(trials, workspaces),
     }
     blob = json.dumps(data, ensure_ascii=False).replace("</", "<\\/")
     html = template.read_text(encoding="utf-8").replace("/*__DATA__*/", blob)
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(html, encoding="utf-8")
-    print(f"wrote {out_path} ({len(html) // 1024} KB): {len(passages)} passages, {len(sources)} sources, revision {rev[:12]}")
+    for w in workspaces:
+        print(f"  {w['slug']}: {w['revisionLabel']}, {len(w['passages'])} passages, {len(w['sources'])} sources")
+    print(f"wrote {out_path} ({len(html) // 1024} KB): {len(workspaces)} workspace(s)")
     return 0
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 4:
+    if len(sys.argv) < 4:
         sys.exit(__doc__)
-    sys.exit(main(Path(sys.argv[1]), Path(sys.argv[2]), Path(sys.argv[3])))
+    sys.exit(main(Path(sys.argv[1]), Path(sys.argv[2]), [Path(a) for a in sys.argv[3:]]))

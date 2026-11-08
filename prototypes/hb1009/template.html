@@ -221,8 +221,8 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
   <a class="brand" href="#home">civic <small>prototype · trial 001</small></a>
   <nav class="nav" aria-label="Main">
     <a href="#home" data-nav="home">Home</a>
-    <a href="#hb1009" data-nav="hb1009">HB 1009</a>
-    <a href="#checks" data-nav="checks">How we checked</a>
+    <a href="#decisions" data-nav="decisions">Decisions</a>
+    <a href="#checks" data-nav="checks">How we check</a>
   </nav>
 </div></header>
 
@@ -230,8 +230,8 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
 
 <nav class="bottom" aria-label="Main">
   <a href="#home" data-nav="home">Home</a>
-  <a href="#hb1009" data-nav="hb1009">HB 1009</a>
-  <a href="#checks" data-nav="checks">How we checked</a>
+  <a href="#decisions" data-nav="decisions">Decisions</a>
+  <a href="#checks" data-nav="checks">How we check</a>
 </nav>
 <div id="drawer-root"></div>
 
@@ -241,6 +241,7 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
   "use strict";
   var D = JSON.parse(document.getElementById("data").textContent);
   var app = document.getElementById("app");
+  var W = D.workspaces[0];  // the decision being viewed; set by the router
   // Tab ids stay stable (they are in links); the labels are plain words.
   var LAYERS = [
     { id: "overview", tab: "Summary" },
@@ -265,19 +266,19 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
 
   // A sentence unit: text + source chips (one per source) or a tag chip.
   function units(list) {
-    var frag = document.createDocumentFragment();
+    var frag = document.createDocumentFragment(), ws = W;  // chips remember which decision they belong to
     list.forEach(function (u, i) {
       if (i > 0) frag.appendChild(document.createTextNode(" "));
       frag.appendChild(el("span", { class: "u", text: u.t }));
       if (u.cite) {
         var seen = {};
         u.cite.forEach(function (pid) {
-          var p = D.passages[pid]; if (!p) return;
+          var p = W.passages[pid]; if (!p) return;
           var sid = p.source; if (seen[sid]) { seen[sid].push(pid); return; }
           seen[sid] = [pid];
-          var b = el("button", { class: "src", type: "button", text: (D.sources[sid] || {}).short || sid,
-            "aria-label": "Show source: " + ((D.sources[sid] || {}).title || sid) });
-          b.addEventListener("click", function () { openPassages(seen[sid], b); });
+          var b = el("button", { class: "src", type: "button", text: (W.sources[sid] || {}).short || sid,
+            "aria-label": "Show source: " + ((W.sources[sid] || {}).title || sid) });
+          b.addEventListener("click", function () { W = ws; openPassages(seen[sid], b); });
           frag.appendChild(b);
         });
       } else if (u.tag) {
@@ -341,12 +342,12 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
     close.focus();
   }
   function openPassages(pids, opener) {
-    var p0 = D.passages[pids[0]], s = D.sources[p0.source] || {};
+    var p0 = W.passages[pids[0]], s = W.sources[p0.source] || {};
     var c = el("div", { class: "stack" });
     c.appendChild(el("h3", { text: s.title || p0.source }));
     c.appendChild(el("span", { class: "type" + (s.type === "primary-government" ? " primary" : ""), text: s.typeLabel || s.type || "" }));
     pids.forEach(function (pid) {
-      var p = D.passages[pid];
+      var p = W.passages[pid];
       c.appendChild(el("p", { class: "eyebrow", text: pid + " · " + p.locator }));
       c.appendChild(el("blockquote", { text: p.text }));
       if (p.note) c.appendChild(el("p", { class: "notice", text: "Note: " + p.note }));
@@ -381,7 +382,7 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
         el("input", { id: "addr", type: "text", disabled: "", placeholder: "Your address", "aria-label": "Your address (not available yet)" }),
         el("button", { type: "button", disabled: "", text: "Find my districts" })
       ]),
-      el("p", { class: "notice", text: "Prototype: district lookup isn't built yet, and this page shows only Trial 001 (HB 1009, 2026). A real dashboard would list hearings, votes and deadlines for your districts." })
+      el("p", { class: "notice", text: "Prototype: district lookup isn't built yet, and this page shows only the decisions from our manual trials. A real dashboard would list hearings, votes and deadlines for your districts." })
     ]));
     h.sections.forEach(function (sec) {
       var s = el("section", { class: "home-sec", "aria-labelledby": "h-" + sec.id });
@@ -390,8 +391,9 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
         var top = el("div", { class: "chips" });
         if (it.power) top.appendChild(el("span", { class: "power " + it.power.toLowerCase(), text: it.power }));
         top.appendChild(el("span", { class: "when", text: it.when }));
+        W = wsBySlug(it.slug) || W;
         var card = el("article", { class: "card item" }, [top, el("p", null, [units(it.units)]),
-          el("a", { class: "go", href: "#hb1009", text: "HB 1009: phones in high schools →" })]);
+          el("a", { class: "go", href: "#" + it.slug, text: it.linkText + " →" })]);
         s.appendChild(card);
       });
       root.appendChild(s);
@@ -399,7 +401,48 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
     return root;
   }
 
-  function sectionById(id) { return D.workspace.sections.filter(function (s) { return s.id === id; })[0]; }
+  function wsBySlug(slug) { return D.workspaces.filter(function (w) { return w.slug === slug; })[0]; }
+  function sectionById(id) { return W.workspace.sections.filter(function (s) { return s.id === id; })[0]; }
+  function statusChip(w) { return el("a", { class: "chip " + (w.verified ? "ok" : "warn"), href: "#" + w.slug + "-checks", text: w.statusText }); }
+  function headerChips(w) {
+    var row = el("div", { class: "chips" });
+    w.status.forEach(function (c) { row.appendChild(el("span", { class: "chip" + (c.kind ? " " + c.kind : ""), text: c.text })); });
+    row.appendChild(statusChip(w));
+    return row;
+  }
+
+  // Decisions: every workspace, newest trial first would come later; for now in trial order.
+  function viewDecisions() {
+    var root = el("div", { class: "stack-lg" });
+    root.appendChild(el("div", { class: "stack" }, [el("p", { class: "eyebrow", text: "Georgia · decisions we've explained" }), el("h1", { text: "Decisions" }),
+      el("p", { class: "lede", text: "Each one is explained the same way: a 30-second version, what it does, the options, the arguments on each side, and every source." })]));
+    var list = el("div", { class: "stack" });
+    D.workspaces.forEach(function (w) {
+      W = w;
+      var sum = sectionById("summary"), first = sum && sum.blocks[0];
+      list.appendChild(el("article", { class: "card stack" }, [
+        el("p", { class: "billcode", text: w.code }), el("h2", { text: w.title }), headerChips(w),
+        first ? el("p", null, [units(first.units.slice(0, 1))]) : null,
+        el("a", { class: "go", href: "#" + w.slug, text: "Open →" })
+      ]));
+    });
+    root.appendChild(list);
+    return root;
+  }
+
+  // How we check: the method in brief, then each decision's results.
+  function viewMethod() {
+    var root = el("div", { class: "stack-lg" });
+    root.appendChild(el("div", { class: "stack" }, [el("p", { class: "eyebrow", text: "Our checks" }), el("h1", { text: "How we check" }),
+      el("p", { class: "lede", text: "An AI agent drafts each page from saved copies of its sources. Separate AI checkers then test it: automatic checks, a blind fact-check, a fairness panel with a reviewer for each side, and a test of the fact-checker itself with hidden errors. In these trials, no person checks the facts." })]));
+    D.workspaces.forEach(function (w) {
+      var stats = el("div", { class: "stats" });
+      (w.verification.stats || []).forEach(function (st) { stats.appendChild(el("div", { class: "stat" }, [el("b", { text: st.value }), el("span", { text: st.label })])); });
+      root.appendChild(el("section", { class: "stack" }, [el("p", { class: "billcode", text: w.code }), el("h2", { text: w.title }),
+        el("div", { class: "chips" }, [statusChip(w)]), stats, el("a", { class: "go", href: "#" + w.slug + "-checks", text: "Full results →" })]));
+    });
+    return root;
+  }
   function layerIndex(id) { for (var i = 0; i < LAYERS.length; i++) if (LAYERS[i].id === id) return i; return 0; }
 
   function layerHead(title, sub) {
@@ -408,27 +451,19 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
 
   function pager(layer) {
     var i = layerIndex(layer), nav = el("nav", { class: "pager", "aria-label": "Next and previous tab" });
-    if (i > 0) nav.appendChild(el("a", { href: "#hb1009-" + LAYERS[i - 1].id, text: "← " + LAYERS[i - 1].tab }));
-    if (i < LAYERS.length - 1) nav.appendChild(el("a", { class: "next", href: "#hb1009-" + LAYERS[i + 1].id, text: LAYERS[i + 1].tab + " →" }));
+    if (i > 0) nav.appendChild(el("a", { href: "#" + W.slug + "-" + LAYERS[i - 1].id, text: "← " + LAYERS[i - 1].tab }));
+    if (i < LAYERS.length - 1) nav.appendChild(el("a", { class: "next", href: "#" + W.slug + "-" + LAYERS[i + 1].id, text: LAYERS[i + 1].tab + " →" }));
     return nav;
   }
 
   function viewBill(layer) {
-    var root = el("div", { class: "stack-lg" }), m = D.meta;
-    var head = el("div", { class: "billhead" }, [
-      el("p", { class: "billcode", text: "HB 1009 · 2026 · ACT 395" }),
-      el("h1", { text: "Phones in Georgia high schools" }),
-      el("div", { class: "chips" }, [
-        el("span", { class: "chip law", text: "Law · signed May 5, 2026" }),
-        el("span", { class: "chip", text: "Takes effect Dec 31, 2026" }),
-        el("a", { class: "chip " + (m.verified ? "ok" : "warn"), href: "#checks", text: m.statusText })
-      ])
-    ]);
-    if (layer === "overview") head.appendChild(el("p", { class: "disclose", text: m.disclosure }));
+    var root = el("div", { class: "stack-lg" });
+    var head = el("div", { class: "billhead" }, [el("p", { class: "billcode", text: W.code }), el("h1", { text: W.title }), headerChips(W)]);
+    if (layer === "overview") head.appendChild(el("p", { class: "disclose", text: W.disclosure }));
     root.appendChild(head);
     var tabs = el("nav", { class: "tabs", "aria-label": "Parts of this page" });
     LAYERS.forEach(function (L) {
-      tabs.appendChild(el("a", { href: "#hb1009-" + L.id, "aria-selected": String(L.id === layer) }, [L.tab]));
+      tabs.appendChild(el("a", { href: "#" + W.slug + "-" + L.id, "aria-selected": String(L.id === layer) }, [L.tab]));
     });
     root.appendChild(tabs);
     root.appendChild(({ overview: layerOverview, decision: layerDecision, options: layerOptions, arguments: layerArguments, evidence: layerEvidence })[layer]());
@@ -473,14 +508,15 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
       d.appendChild(renderBlocks(sub.blocks));
       more.appendChild(d);
     });
+    if (!W.billChanges.length) { L.appendChild(more); return L; }
     var mk = el("div", { class: "markup", role: "region", "aria-label": "Bill text with deletions struck through and additions underlined" });
-    D.billChanges.forEach(function (line) {
+    W.billChanges.forEach(function (line) {
       var row = el("div"); row.appendChild(el("span", { class: "ln", text: String(line.n) }));
       line.segs.forEach(function (sg) { row.appendChild(sg.k === "txt" ? document.createTextNode(sg.t) : el(sg.k, { text: sg.t })); });
       mk.appendChild(row);
     });
     var bill = el("details", { class: "more" }, [el("summary", { text: "See the exact changes in the bill text" }), el("div", { class: "stack" }, [
-      el("p", { class: "notice", text: "From the bill as passed (pages 2-3). Georgia bills strike out removed words and underline new ones." }), mk])]);
+      el("p", { class: "notice", text: W.markupNote || "" }), mk])]);
     more.appendChild(bill);
     L.appendChild(more);
     return L;
@@ -492,11 +528,12 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
     L.appendChild(layerHead("Options and tradeoffs", "What lawmakers could have done, and who gains or gives up what. Tap an option for the details."));
     var grid = el("div", { class: "options" });
     s.subs.forEach(function (o) {
-      var chip = /as passed/i.test(o.title) ? el("span", { class: "chip law", text: "Now law" }) : /failed/i.test(o.title) ? el("span", { class: "chip bad", text: "Voted down 13-38" }) : el("span", { class: "chip", text: "Before HB 1009" });
+      var chip = null;
+      Object.keys(W.optionChips).forEach(function (k) { if (o.title.indexOf(k) === 0) { var c = W.optionChips[k]; chip = el("span", { class: "chip" + (c.kind ? " " + c.kind : ""), text: c.text }); } });
       var does = o.blocks.filter(function (b) { return b.label === "What it does"; })[0];
       var rest = o.blocks.filter(function (b) { return b !== does; });
       var d = el("details", { class: "fold" });
-      d.appendChild(el("summary", null, [el("h3", { text: o.title.replace(/^Option [A-C]: /, "") }), el("div", { class: "chips" }, [chip]),
+      d.appendChild(el("summary", null, [el("h3", { text: o.title.replace(/^Option [A-Z]: /, "") }), chip ? el("div", { class: "chips" }, [chip]) : null,
         does ? el("p", null, [units(does.units)]) : null, el("span", { class: "hint", text: "What happened · who benefits · who pays · what's uncertain" })]));
       d.appendChild(el("div", { class: "body" }, [renderBlocks(rest)]));
       grid.appendChild(d);
@@ -545,9 +582,9 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
     var L = el("section", { class: "layer" });
     L.appendChild(layerHead("Sources", "Every source we cite, saved on the date shown. Anyone can download the original and compare its SHA-256 fingerprint."));
     var list = el("div", { class: "sources" });
-    D.sourceOrder.forEach(function (sid) {
-      var s = D.sources[sid];
-      var pids = Object.keys(D.passages).filter(function (k) { return D.passages[k].source === sid; });
+    W.sourceOrder.forEach(function (sid) {
+      var s = W.sources[sid];
+      var pids = Object.keys(W.passages).filter(function (k) { return W.passages[k].source === sid; });
       var card = el("article", { class: "card source" }, [
         el("span", { class: "type" + (s.type === "primary-government" ? " primary" : ""), text: s.typeLabel }),
         el("h3", { text: s.title }),
@@ -565,9 +602,9 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
   }
 
   function viewChecks() {
-    var V = D.verification, root = el("div", { class: "stack-lg" });
-    root.appendChild(el("div", { class: "stack" }, [el("p", { class: "eyebrow", text: "Trial 001 · how this page was checked" }), el("h1", { text: "How we checked HB 1009" }),
-      el("p", { class: "lede", text: V.intro })]));
+    var V = W.verification, root = el("div", { class: "stack-lg" });
+    root.appendChild(el("div", { class: "stack" }, [el("p", { class: "eyebrow", text: "Trial " + W.trial + " · how this page was checked" }), el("h1", { text: "How we checked " + W.code.split(" · ")[0] }),
+      el("div", { class: "chips" }, [statusChip(W)]), el("p", { class: "lede", text: V.intro }), el("a", { class: "go", href: "#" + W.slug, text: "← Back to " + W.linkText })]));
     var stats = el("div", { class: "stats" });
     V.stats.forEach(function (st) { stats.appendChild(el("div", { class: "stat" }, [el("b", { text: st.value }), el("span", { text: st.label })])); });
     root.appendChild(stats);
@@ -595,17 +632,28 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
   }
 
   // ---------- Router ----------
-  var prevView = null;
+  // #home · #decisions · #checks · #<slug> · #<slug>-<tab> · #<slug>-checks
+  var prev = null;
   function route() {
-    var h = (location.hash || "#home").slice(1), view = "home", layer = "overview";
-    if (h === "hb1009") view = "hb1009";
-    else if (h.indexOf("hb1009-") === 0) { view = "hb1009"; layer = h.slice(7); if (!LAYERS.some(function (L) { return L.id === layer; })) layer = "overview"; }
-    else if (h === "checks") view = "checks";
-    var stayInBill = view === "hb1009" && prevView === "hb1009";
+    var h = (location.hash || "#home").slice(1), view = "home", layer = "overview", nav = "home";
+    if (h === "decisions") { view = "decisions"; nav = "decisions"; }
+    else if (h === "checks") { view = "method"; nav = "checks"; }
+    else if (h !== "home" && h !== "") {
+      var match = null;
+      D.workspaces.forEach(function (w) { if (h === w.slug || h.indexOf(w.slug + "-") === 0) match = w; });
+      if (match) {
+        W = match; nav = "decisions"; view = "bill";
+        var rest = h.slice(match.slug.length + 1);
+        if (rest === "checks") { view = "checks"; nav = "checks"; }
+        else if (rest && LAYERS.some(function (L) { return L.id === rest; })) layer = rest;
+      }
+    }
+    var key = view === "bill" ? "bill:" + W.slug : view;
+    var stayInBill = prev === key;
     app.innerHTML = "";
-    app.appendChild(view === "home" ? viewHome() : view === "checks" ? viewChecks() : viewBill(layer));
-    app.appendChild(el("footer", { text: D.meta.footer }));
-    document.querySelectorAll("[data-nav]").forEach(function (a) { if (a.getAttribute("data-nav") === view) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
+    app.appendChild(view === "home" ? viewHome() : view === "decisions" ? viewDecisions() : view === "method" ? viewMethod() : view === "checks" ? viewChecks() : viewBill(layer));
+    app.appendChild(el("footer", { text: D.meta.footer + ((view === "bill" || view === "checks") ? " · Trial " + W.trial + " · " + W.revisionLabel : "") }));
+    document.querySelectorAll("[data-nav]").forEach(function (a) { if (a.getAttribute("data-nav") === nav) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
     var tabs = document.querySelector(".tabs");
     if (stayInBill && tabs) {
       // Switching tabs: keep the tab row where it is and start the new tab at its top.
@@ -619,7 +667,7 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
       var cur = tabs.querySelector('[aria-selected="true"]');
       if (cur) tabs.scrollLeft = cur.offsetLeft - (tabs.clientWidth - cur.clientWidth) / 2;
     }
-    prevView = view;
+    prev = key;
   }
   window.addEventListener("hashchange", function () { closeDrawer(); route(); });
   route();
