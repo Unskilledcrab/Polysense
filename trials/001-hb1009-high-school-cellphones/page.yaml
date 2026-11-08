@@ -12,8 +12,8 @@ status:                            # chips under the title
   - {text: "High school ban starts by July 1, 2027"}    # [P-007]
 option_chips:                      # one chip per option, matched by the start of the option's heading
   "Option A": {text: "Before House Bill 1009"}          # [P-006, P-066, P-054]
-  "Option B": {text: "Signed into law", kind: law}      # [P-024]
-  "Option C": {text: "Voted down, 13 to 38", kind: bad}  # [P-026, P-027]
+  "Option B": {text: "Signed into law"}      # [P-024]
+  "Option C": {text: "Voted down, 13 to 38"}  # [P-026, P-027]
 short_labels:                      # source chip labels: short enough for one phone line, naming the outlet or office
   S01: Law
   S02: General Assembly bill page

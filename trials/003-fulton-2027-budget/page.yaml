@@ -11,7 +11,7 @@ status:                            # chips under the title
 option_chips:                      # one chip per option, matched by the start of the option's heading
   "Option A": {text: "Draft due Nov 15"}   # [P-005]
   "Option B": {text: "Board can add or cut money"}   # [P-047]
-  "Option C": {text: "Set aside (filed) Nov 4", kind: bad}   # [P-024, P-025]
+  "Option C": {text: "Set aside (filed) Nov 4"}   # [P-024, P-025]
 short_labels:                      # source chip labels: one or two words, so a chip fits on a phone line
   S01: "Resolution 26-0460"
   S02: "Board record"

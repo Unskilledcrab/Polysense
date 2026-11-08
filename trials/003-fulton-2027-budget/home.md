@@ -2,7 +2,7 @@
 
 ## Act now
 
-- **Input · Nov 18, 2026, 10 a.m.:** Speak at the Fulton County Board of Commissioners' public comment, in person or by Zoom; the Board adopts the budget. [P-036, P-039, P-067, P-014] Submit requests before 10 a.m. [P-067]
+- **Input · Nov 18, 2026, 10 a.m.:** Speak at the Fulton County Board of Commissioners' public comment, in person or by Zoom, before it adopts the budget. [P-036, P-039, P-067, P-014] Submit requests before 10 a.m. [P-067]
 
 ## Coming up
 
