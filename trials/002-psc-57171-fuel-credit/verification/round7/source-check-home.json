@@ -1,0 +1,109 @@
+{
+ "checker": "independent-source-verifier",
+ "document": "/home/user/Polysense/trials/002-psc-57171-fuel-credit/home.md",
+ "units": [
+  {
+   "line": 5,
+   "sentence": "Input · Dec 14, 2026, 9:30 a.m.: The Public Service Commission (PSC), Georgia's utility regulator, takes pu...",
+   "marker": "{computed: the PSC decides utility rates (P-169); comments must be submitted 24 hours before a vote (P-030); the final decision is scheduled for the Dec 15 Administrative Session (P-013), which starts at 9:30 a.m. (P-024), so a comment submitted by 9:30 a.m. on Dec 14 is on time even if this case is the session's first vote}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "Recomputed: the Dec 15 session starts 9:30 a.m. (P-013, P-024); 24 hours earlier (P-030) is 9:30 a.m. on Dec 14, the earliest possible cutoff, so the date shown is safe. 'Georgia's utility regulator' fits P-169."
+  },
+  {
+   "line": 5,
+   "sentence": "To ask how to submit one, call 404-656-4501 (local) or 1-800-282-5813 (outside metro-Atlanta) and press 2.",
+   "marker": "[P-163]",
+   "verdict": "supports",
+   "evidence_span": "1-800-282-5813 (outside metro-Atlanta), press 2 404-656-4501 (local), press 2",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 9,
+   "sentence": "Nov 12, 2026: The Public Service Commission (PSC) holds a hearing on counting business customers' real-time...",
+   "marker": "[P-010, P-016, P-023]",
+   "verdict": "supports",
+   "evidence_span": "Nov 12 9:35 am Docket No. 57171 RTP Revenue Credit and Allocation Methodology Hearing",
+   "correct_passage": "",
+   "problem": "Minor: the Nov 12 hearing is specifically on Georgia Power's rebuttal testimony and starts after the committee meetings (P-010); 9:35 a.m. is the calendar listing.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 9,
+   "sentence": "To ask whether the public may speak, call 404-656-4501 (local) or 1-800-282-5813 (outside metro-Atlanta) an...",
+   "marker": "[P-163]",
+   "verdict": "supports",
+   "evidence_span": "1-800-282-5813 (outside metro-Atlanta), press 2 404-656-4501 (local), press 2",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 10,
+   "sentence": "Dec 10, 2026: The Public Service Commission's Energy Committee, a committee of its commissioners, takes up...",
+   "marker": "[P-012, P-024, P-171]",
+   "verdict": "supports",
+   "evidence_span": "This matter shall be considered at the scheduled Energy Committee Meeting, which begins at 9:30 a.m.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 11,
+   "sentence": "Dec 15, 2026: The Public Service Commission's five commissioners are scheduled to decide how much of busine...",
+   "marker": "[P-013, P-016, P-031]",
+   "verdict": "supports",
+   "evidence_span": "A Final Decision on this proceeding will be made by the Commission on December 15, 2026 at the regularly scheduled Administrative Session.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 15,
+   "sentence": "Oct 27, 2026: Georgia Power filed the last scheduled testimony.",
+   "marker": "[P-117, P-009, P-010, P-011]",
+   "verdict": "supports",
+   "evidence_span": "October 27, 2026 Georgia Power may file any pre-filed rebuttal testimony in Docket 57171 by 4:00 p.m.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 15,
+   "sentence": "Each plan we could read would likely lower fuel charges for homes, but base rates could rise later.",
+   "marker": "[P-058, P-115, P-144, P-061, P-105]",
+   "verdict": "supports",
+   "evidence_span": "This will assist in reducing FCR rates for FCR customers, but may increase base rates for those same customers",
+   "correct_passage": "",
+   "problem": "Direction and hedges are right, but 'Each plan we could read' is vague on the home page (which plans, whose?) and sits under the Oct 27 item although the plans were filed Aug 14 to Sep 23.",
+   "suggested_fix": "'Every change proposed in the case would likely lower fuel charges for homes, but base rates could rise later.'"
+  }
+ ],
+ "framing_issues": [
+  {
+   "line": 5,
+   "text": "Input · Dec 14, 2026, 9:30 a.m.",
+   "issue": "Shown as a firm deadline; the page does not say here that the vote is only scheduled and that 9:30 a.m. is the earliest possible cutoff (the workspace says both, lines 10 and 48).",
+   "severity": "low"
+  },
+  {
+   "line": 15,
+   "text": "Each plan we could read would likely lower fuel charges for homes",
+   "issue": "Vague on the home page: the reader can't tell which plans or whose, and the line sits under the Oct 27 filing date though the plans were filed Aug 14 to Sep 23.",
+   "severity": "low"
+  }
+ ],
+ "summary": {
+  "units_checked": 8,
+  "supports": 7,
+  "partial": 0,
+  "does_not_support": 0,
+  "wrong_span": 0,
+  "questionable_or_invalid_tags": 0
+ }
+}

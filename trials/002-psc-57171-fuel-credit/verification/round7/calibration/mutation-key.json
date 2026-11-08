@@ -1,0 +1,136 @@
+[
+ {
+  "id": "M01",
+  "type": "reversed-direction",
+  "line": 14,
+  "original": "**If you pay a Georgia Power bill at home:** If the PSC adopts any proposed plan, your fuel charge would likely drop, bu",
+  "mutated": "**If you pay a Georgia Power bill at home:** If the PSC adopts any proposed plan, your fuel charge would likely rise, but base rates could later drop to return the same money.",
+  "keywords": [
+   "rise",
+   "drop",
+   "reversed",
+   "direction",
+   "lower"
+  ]
+ },
+ {
+  "id": "M02",
+  "type": "dropped-condition",
+  "line": 15,
+  "original": "**If you run a business on Georgia Power's standard rates:** If the PSC adopts any proposed plan, your fuel charge would",
+  "mutated": "**If you run a business on Georgia Power's standard rates:** Your fuel charge will drop,",
+  "keywords": [
+   "will drop",
+   "condition",
+   "if the psc",
+   "certain",
+   "hedge"
+  ]
+ },
+ {
+  "id": "M03",
+  "type": "example-as-plan-effect",
+  "line": 36,
+  "original": "are examples, not any plan's effect.",
+  "mutated": "are what PIA Staff's plan would do for a typical home.",
+  "keywords": [
+   "example",
+   "plan's effect",
+   "per $100 million",
+   "pia staff's plan",
+   "100 million"
+  ]
+ },
+ {
+  "id": "M04",
+  "type": "widened-scope",
+  "line": 17,
+  "original": "it doesn't set your power company's rates.",
+  "mutated": "it also sets your power company's rates.",
+  "keywords": [
+   "also sets",
+   "emc",
+   "territory",
+   "doesn't set",
+   "city-owned"
+  ]
+ },
+ {
+  "id": "M05",
+  "type": "number",
+  "line": 35,
+  "original": "estimates its own take-or-pay change at about $126 million in 2026",
+  "mutated": "estimates its own take-or-pay change at about $162 million in 2026",
+  "keywords": [
+   "162",
+   "126",
+   "number"
+  ]
+ },
+ {
+  "id": "M06",
+  "type": "contact-detail",
+  "line": 62,
+  "original": "or call 404-656-4501 (local)",
+  "mutated": "or call 404-656-4510 (local)",
+  "keywords": [
+   "4510",
+   "4501",
+   "phone",
+   "number"
+  ]
+ },
+ {
+  "id": "M07",
+  "type": "term-date",
+  "line": 58,
+  "original": "**Peter Hubbard:** commissioner; serves through Dec 31, 2026.",
+  "mutated": "**Peter Hubbard:** commissioner; serves through Dec 31, 2028.",
+  "keywords": [
+   "2028",
+   "hubbard",
+   "term",
+   "2026"
+  ]
+ },
+ {
+  "id": "M08",
+  "type": "values-wrong-side",
+  "line": 163,
+  "original": "Georgia Power's witness panel, which backs Plan B, said it proposes",
+  "mutated": "PIA Staff's witness panel, which backs Plan B, said it proposes",
+  "keywords": [
+   "pia staff",
+   "georgia power",
+   "plan b",
+   "witness",
+   "wrong"
+  ]
+ },
+ {
+  "id": "M09",
+  "type": "recommendation-word",
+  "line": 166,
+  "original": "the guide doesn't recommend an option,",
+  "mutated": "Plan C is the best choice for most homes,",
+  "keywords": [
+   "best",
+   "recommend",
+   "choice",
+   "endorse"
+  ]
+ },
+ {
+  "id": "M10",
+  "type": "schedule",
+  "line": 63,
+  "original": "administrative sessions on the first and third Tuesday of each month",
+  "mutated": "administrative sessions on the second and fourth Tuesday of each month",
+  "keywords": [
+   "second and fourth",
+   "first and third",
+   "tuesday",
+   "schedule"
+  ]
+ }
+]

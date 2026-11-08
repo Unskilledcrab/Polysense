@@ -1,0 +1,120 @@
+{
+ "checker": "independent-source-verifier",
+ "document": "/home/user/Polysense/trials/002-psc-57171-fuel-credit/page.yaml",
+ "units": [
+  {
+   "line": 6,
+   "sentence": "Georgia regulators decide Dec 15 how much business real-time payments lower others' fuel charges",
+   "marker": "[P-013, P-016, P-144, P-169]",
+   "verdict": "supports",
+   "evidence_span": "A Final Decision on this proceeding will be made by the Commission on December 15, 2026",
+   "correct_passage": "",
+   "problem": "Minor: 'decide Dec 15' drops 'scheduled' (the status chip keeps it); P-016 covers the subject and P-144 the effect on others' fuel costs.",
+   "suggested_fix": "'Georgia regulators set to decide Dec 15 ...'"
+  },
+  {
+   "line": 7,
+   "sentence": "Business power payments and your fuel charge",
+   "marker": "[P-016, P-144]",
+   "verdict": "partial",
+   "evidence_span": "FCR customers pay all fuel costs net of the RTP Fuel Credit",
+   "correct_passage": "",
+   "problem": "'Business power payments' is broader than the subject: only real-time (RTP) payments are at issue (P-016), and RTP is open only to commercial and industrial customers of 250 kW or more (P-044), so most businesses' payments are not involved.",
+   "suggested_fix": "'Big businesses' real-time power payments and your fuel charge'"
+  },
+  {
+   "line": 9,
+   "sentence": "Open case at the Georgia Public Service Commission",
+   "marker": "[P-001, P-016]",
+   "verdict": "supports",
+   "evidence_span": "Docket #57171 Title: RTP Revenue Credit and Allocation Methodology Industry: Electric Date: 06/02/2026 Status: Open",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 10,
+   "sentence": "Decision scheduled Dec 15, 2026",
+   "marker": "[P-013]",
+   "verdict": "supports",
+   "evidence_span": "A Final Decision on this proceeding will be made by the Commission on December 15, 2026 at the regularly scheduled Administrative Session.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 12,
+   "sentence": "Keep today's method",
+   "marker": "[P-048]",
+   "verdict": "supports",
+   "evidence_span": "For the incremental load priced at RTP, the revenues based on an average hourly marginal replacement fuel cost are recorded to the fuel account.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 13,
+   "sentence": "Georgia Power's plan",
+   "marker": "[P-119, P-128]",
+   "verdict": "supports",
+   "evidence_span": "The Company and GIPL recommend the Commission approve Option 1.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 14,
+   "sentence": "Advocacy staff's plan",
+   "marker": "[P-006, P-073]",
+   "verdict": "partial",
+   "evidence_span": "The PIA Staff shall be responsible for performing an independent evaluation of the filed case from the standpoint of promoting the public interest and just and reasonable rates and advocating for that position.",
+   "correct_passage": "",
+   "problem": "P-073 supports that the plan is PIA Staff's, but the cited passages call it 'PIA Staff'; the name 'Public Interest Advocacy Staff' is in P-059, which isn't cited. 'Advocacy staff' also drops that this is the PSC's own staff acting as a party, so a reader can take it for an outside advocacy group; the page heading says 'PIA Staff's plan'.",
+   "suggested_fix": "'PSC staff's plan' (or 'PSC advocacy staff's plan'), citing P-006, P-059, P-073"
+  },
+  {
+   "line": 15,
+   "sentence": "Interfaith group's plan",
+   "marker": "[P-093, P-095]",
+   "verdict": "supports",
+   "evidence_span": "Georgia Interfaith Power and Light (GIPL), and its member congregations",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  }
+ ],
+ "framing_issues": [
+  {
+   "line": 14,
+   "text": "Advocacy staff's plan",
+   "issue": "Can be read as an outside advocacy group's plan rather than the PSC's own staff acting as a party (P-006); the page body calls it 'PIA Staff'.",
+   "severity": "medium"
+  },
+  {
+   "line": 13,
+   "text": "Georgia Power's plan",
+   "issue": "Uneven naming across option chips: Georgia Power by proper name, the other two ('Advocacy staff's plan', 'Interfaith group's plan') by generic descriptors.",
+   "severity": "low"
+  },
+  {
+   "line": 6,
+   "text": "Georgia regulators decide Dec 15",
+   "issue": "Title states the date as certain; the decision is scheduled (P-013) and could move (the order allows until Dec 31, P-016).",
+   "severity": "low"
+  },
+  {
+   "line": 7,
+   "text": "Business power payments and your fuel charge",
+   "issue": "Vague: suggests ordinary business bills; the case is about real-time payments from larger businesses.",
+   "severity": "low"
+  }
+ ],
+ "summary": {
+  "units_checked": 8,
+  "supports": 6,
+  "partial": 2,
+  "does_not_support": 0,
+  "wrong_span": 0,
+  "questionable_or_invalid_tags": 0
+ }
+}
