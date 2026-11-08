@@ -1,0 +1,173 @@
+{
+  "checker": "standards editor (targeted flip test)",
+  "neutrality": 4,
+  "issues": [
+    {
+      "file": "workspace.md",
+      "line": 165,
+      "text": "If you care most about keeping costs from shifting to fuel-charge payers: GIPL's witness, who backs Plan D, said of today's credit, \"This shifts costs to FCR customers,\"",
+      "issue": "Shared value given to one side. PIA Staff states the same value almost word for word (leaving costs out \"results in non-RTP customers absorbing all these costs\", P-063), and Georgia Power claims it for new pipeline fees (\"not borne by non-large load customers in the FCR clause\", P-055). Flipped to PIA Staff, the line reads the same and is just as true. Line 167's shared statement helps, but this header still assigns the value to GIPL alone. Line 164 mirrors the problem: GIPL also says real-time load should carry a share of fuel costs (P-099, P-101).",
+      "severity": "medium",
+      "suggested_fix": "Name the shared cost-shift concern once for both, e.g. in line 167: 'PIA Staff and GIPL both say today's credit shifts costs to fuel-charge payers. [P-063, P-099]' Then give lines 164 and 165 a value only that party states (e.g. PIA Staff: sharing fuel costs by energy use, P-062; GIPL: that where the money is credited changes what each customer group pays, P-102). Or keep this header and say in the line that PIA Staff makes the same point, trimming elsewhere to stay within 35 words."
+    },
+    {
+      "file": "workspace.md",
+      "line": 294,
+      "text": "In short: Fuel charges keep paying pipeline fees; GAM says base costs stay lower.",
+      "issue": "Caveat asymmetry. This is the only In short whose effect for people is attributed to the side. Every other card states the base-side effect in our voice: 'base rates could rise later' on cards 1-5 and 7 (itself sourced partly to GAM, P-115), 'real-time money keeps helping cover base costs' on card 8, and 'less chance of base rates rising later' on card 9. The dollar-for-dollar base effect is undisputed (card 9's label; P-061, P-111), so the attribution casts doubt only on the effect that favors this side.",
+      "severity": "medium",
+      "suggested_fix": "State it in our voice with the same hedge as the cost side, and cite the split: 'Fuel charges keep paying pipeline fees; base costs could stay lower. [P-083, P-144, P-061, P-111, P-112]' (39 words in all)."
+    },
+    {
+      "file": "workspace.md",
+      "line": 163,
+      "text": "Georgia Power's witnesses, who back Plan B, asked the PSC to \"preserve the integrity and structure of the RTP rate design.\"",
+      "issue": "Verb and appeal asymmetry. Only Georgia Power's line uses 'asked the PSC to'; lines 164-166 use 'said'. Its header is also the only one about a rate's structure rather than an outcome for customers, so it reads as the least relevant to a home reader, although Georgia Power gives outcome reasons in its own words.",
+      "severity": "low",
+      "suggested_fix": "Use 'said' as the other lines do, e.g. 'said Option 1 \"preserves the integrity of RTP as a marginal cost-based rate.\"' (P-129; 31 words in all), or keep P-131 inside a 'said' frame. Consider a header naming the outcome Georgia Power ties to that design in its own words, such as the rate's \"effectiveness and competitive value\" (P-121) or protection \"independent of project materialization\" (P-127)."
+    },
+    {
+      "file": "workspace.md",
+      "line": 168,
+      "text": "GAM accepts either of Georgia Power's proposed changes only if the PSC finds a change is needed. [P-111]",
+      "issue": "'Accepts ... only if' is stronger than P-111, which states a condition ('Should the Commission find ... either ... would adequately address') but no 'only'. It also differs from the five other places the page renders P-111, and 'proposed changes' could be read to include Georgia Power's pipeline plan, which the sentence before says GAM opposes in principle.",
+      "severity": "low",
+      "suggested_fix": "Use the page's standard wording: 'GAM says that if the PSC finds a change is needed, either take-or-pay choice would \"adequately address\" the concerns of PIA Staff and intervenors. [P-111]'"
+    },
+    {
+      "file": "workspace.md",
+      "line": 234,
+      "text": "Georgia Power says real-time customers can't avoid take-or-pay costs; GIPL says real-time load should bear costs of plants run in response to it.",
+      "issue": "Specificity asymmetry between the opposing take-or-pay cards. Card 2 gives its premise and its conclusion ('so the contracts' costs should count in the credit too'); card 1 gives two premises and leaves the reader to infer that the credit should leave these contracts out, so the choice backed by two parties reads as the less complete argument.",
+      "severity": "low",
+      "suggested_fix": "Add the conclusion as card 2 does (that the credit should leave these contracts out), trimming the premises to stay within 40 words."
+    },
+    {
+      "file": "workspace.md",
+      "line": 270,
+      "text": "PIA Staff says the fees serve every hour and its split avoids collecting them twice.",
+      "issue": "Dropped hedge. Staff said today's method 'raises the possibility of double recovery' and a 'risk that the Company may recover a portion of its FT costs twice' (P-083, P-084). 'Avoids collecting them twice' states it as fact and for all fees, a stronger accusation than Staff made; Georgia Power denies double recovery (P-123). The 'Mixed on double recovery' status softens this.",
+      "severity": "low",
+      "suggested_fix": "Keep Staff's hedge: 'PIA Staff says the fees serve every hour and its split removes a risk of collecting some twice.' (37 words in all)."
+    },
+    {
+      "file": "workspace.md",
+      "line": 282,
+      "text": "Evidence: Mixed on two main points.",
+      "issue": "Specificity asymmetry. Every other card names what is disputed ('Mixed on the split', 'Mixed on whom contracts serve'); GIPL's card is the only one where the reader learns the evidence is mixed but not on what.",
+      "severity": "low",
+      "suggested_fix": "Name the two points briefly (e.g. 'Mixed on the split and on whether crediting matters'), trimming elsewhere to stay within 40 words."
+    },
+    {
+      "file": "workspace.md",
+      "line": 330,
+      "text": "Limiting the shift would mean smaller fuel-charge cuts and less chance of base rates rising later.",
+      "issue": "Order asymmetry. Because every card puts the fuel effect first, the bigger-credit cards (1-5, 7) open with their side's gain ('Fuel charges would likely fall'), while the keep-out and limit cards (6, 8, 9) open with their side's cost ('Fuel charges keep paying...', 'smaller fuel-charge cuts').",
+      "severity": "low",
+      "suggested_fix": "Lead every card with the effect its side claims, then the matching cost (e.g. card 9: 'Limiting the shift would mean less chance of base rates rising later, but smaller fuel-charge cuts.'; likewise cards 6 and 8), or keep fuel-first and state that order as a rule under 'How to read these cards'."
+    }
+  ],
+  "flip_test": [
+    {
+      "line": 1,
+      "flipped": "Reversing the split ('between base and fuel costs') reads the same. The title says who decides (Georgia regulators), when (Dec 15) and what (the split) in 14 words, with no direction or winner; page.yaml line 6 is identical.",
+      "asymmetry": "none"
+    },
+    {
+      "line": 14,
+      "flipped": "From the other side: 'If the PSC keeps today's method, your base rates would be less likely to rise later, but your fuel charge would not drop.' The actual line already gives both effects in one sentence.",
+      "asymmetry": "Minor and evidence-based: the fuel gain comes first and is firmer ('would likely') than the base cost ('could'), which tracks the record (P-058, P-144 vs P-016, P-090). The closing frozen-rates sentence is Georgia Power's, attributed, and adds timing only."
+    },
+    {
+      "line": 15,
+      "flipped": "Same wording as the home line, with 'a business's net'.",
+      "asymmetry": "none"
+    },
+    {
+      "line": 16,
+      "flipped": "A scope line that describes no side's position; it cites both a Georgia Power and a GIPL passage for the scope point (P-133, P-107).",
+      "asymmetry": "none"
+    },
+    {
+      "line": 17,
+      "flipped": "Jurisdiction line; no side's position to flip.",
+      "asymmetry": "none"
+    },
+    {
+      "line": 163,
+      "flipped": "In the other lines' form: 'Georgia Power's witnesses, who back Plan B, said Option 1 \"preserves the integrity of RTP as a marginal cost-based rate.\"' Georgia Power also has outcome-framed values in its own words (P-121, P-127).",
+      "asymmetry": "Verb: 'asked the PSC to' here vs 'said' in lines 164-166. Appeal: the only header about a rate's structure rather than an outcome for customers."
+    },
+    {
+      "line": 164,
+      "flipped": "About GIPL: 'If you care most about every customer, including real-time users, sharing fuel costs: GIPL's witness, who backs Plan D, said the credit is \"an underestimate of the fuel costs that should be allocated to the incremental load priced at RTP.\"' Reads the same and is equally true (P-099).",
+      "asymmetry": "Value shared with GIPL but placed on PIA Staff's line only (mirror of line 165)."
+    },
+    {
+      "line": 165,
+      "flipped": "About PIA Staff: 'If you care most about keeping costs from shifting to fuel-charge payers: PIA Staff's witnesses, who back Plan C, said leaving costs out \"results in non-RTP customers absorbing all these costs.\"' Reads the same and is equally true (P-063); Georgia Power claims the same for new pipeline fees (P-055).",
+      "asymmetry": "Shared value given to GIPL's line only; line 167 softens it. Longest line (35 words, at the cap) with an added gloss, which is acceptable."
+    },
+    {
+      "line": 166,
+      "flipped": "About Georgia Power: 'If you care most about keeping base rates down: Georgia Power's witnesses said base-side real-time money \"is reducing other costs recovered through base rates\"' (P-124). Partly true, but Georgia Power's own Plan B moves money off the base side, so here the value is distinctively GAM's.",
+      "asymmetry": "'whose view comes closest to Plan A' vs 'who back(s) Plan X' is a caveat the record supports (line 168); otherwise none."
+    },
+    {
+      "line": 167,
+      "flipped": "Same verb ('says') and the same claim for all four parties, each with its own quote.",
+      "asymmetry": "none"
+    },
+    {
+      "line": 168,
+      "flipped": "The same wording about another party, e.g. 'PIA Staff accepts Option 1 only if...', would read as grudging.",
+      "asymmetry": "'accepts ... only if' is stronger than P-111's conditional and differs from the page's five other renderings of P-111."
+    },
+    {
+      "line": 234,
+      "flipped": "In card 2's form: 'Georgia Power says real-time customers can't avoid take-or-pay costs, so the credit should leave them out.'",
+      "asymmetry": "Effect sentence matches card 2, but the claim stops at the premises while card 2 states its conclusion."
+    },
+    {
+      "line": 246,
+      "flipped": "Card 1's position in this form reads the same: same effect sentence, same evidence wording.",
+      "asymmetry": "none beyond card 1's missing conclusion"
+    },
+    {
+      "line": 258,
+      "flipped": "In card 5's form: 'Fuel charges would likely fall and exclude new large-load pipeline fees; base rates could rise later.'",
+      "asymmetry": "No 'fuel charges would likely fall', unlike cards 4 and 5. This looks justified: Georgia Power's plan covers only new fees (amounts start in 2027, P-146), while GIPL's adds a direct share of pipeline fees (P-096). 'stay off' vs card 5's 'exclude' for the same effect is harmless."
+    },
+    {
+      "line": 270,
+      "flipped": "A Georgia Power line that dropped its hedge the same way, e.g. 'Georgia Power says Staff's split removes customer protection' (P-127 says 'does not provide this level of customer protection'), would be flagged.",
+      "asymmetry": "'avoids collecting them twice' drops Staff's own hedges ('possibility', 'risk', 'a portion'; P-083, P-084)."
+    },
+    {
+      "line": 282,
+      "flipped": "Other cards name the disputed point ('Mixed on the split'); this one would read the same only if it did too.",
+      "asymmetry": "Vaguest evidence part ('two main points'). The subject 'GIPL's testimony says', unlike '[Party] says' elsewhere, is supported by the hearing change Georgia Power reports (P-154, P-155) and is acceptable."
+    },
+    {
+      "line": 294,
+      "flipped": "Card 3 written the same way: 'New large-load pipeline fees would stay off fuel charges; GAM says base rates could rise later.' That would read as doubting the base cost.",
+      "asymmetry": "Only card whose effect for people is attributed; base effects are in our voice on every other card. Also opens with its side's cost (see line 330)."
+    },
+    {
+      "line": 306,
+      "flipped": "Card 8's opposing position uses the same verbs and the same 'Mixed' wording.",
+      "asymmetry": "none (opens with its side's gain, as every bigger-credit card does)"
+    },
+    {
+      "line": 318,
+      "flipped": "Gain first, as the bigger-credit cards read: 'Real-time money keeps helping cover base costs; fuel charges keep paying most left-out costs.'",
+      "asymmetry": "Opens with its side's cost. Its base benefit is in our voice, unlike card 6. 'Mixed on ... peak prices' rests on GIPL testimony Georgia Power has moved to strike, with no ruling found (P-134, P-158); acceptable."
+    },
+    {
+      "line": 330,
+      "flipped": "Gain first: 'Limiting the shift would mean less chance of base rates rising later, but smaller fuel-charge cuts.'",
+      "asymmetry": "Opens with its side's cost while cards 1-5 and 7 open with their gain; the hedges ('would mean' vs 'less chance') track the evidence."
+    }
+  ],
+  "summary": "The reviewed lines are largely balanced: the title is neutral, every In short gives both the fuel and base effects with hedges that track the evidence, the values guide has one same-form line per side within the limits, and no recommendation words, party labels or loaded terms appear in our voice. Two medium asymmetries remain (GIPL's values-guide header names a cost-shift value PIA Staff states almost word for word, and card 6 alone attributes its base-side effect to GAM), plus low-level gaps in verbs, order and specificity."
+}
