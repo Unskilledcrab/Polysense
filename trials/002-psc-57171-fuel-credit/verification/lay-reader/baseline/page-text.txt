@@ -1,0 +1,384 @@
+===== Home page =====
+GEORGIA · YOUR CIVIC DASHBOARD
+
+What can I influence?
+
+Decisions you can act on, what's coming up, and what just happened. Every line links to its source.
+
+Find my districts
+
+Prototype: district lookup isn't built yet, and this page shows only the decisions from our manual trials. A real dashboard would list hearings, votes and deadlines for your districts.
+
+Act now
+3
+INPUT
+Before Jan 1, 2027
+
+Ask your school district how it will store phones and reach families in an emergency.Our framing Districts must adopt or update their device policies by January 1 each year.Law
+
+HB 1009: phones in high schools →
+INPUT
+Dec 14, 2026, 9:30 a.m.
+
+Submit any public comment to the PSC by this time, 24 hours before the Dec 15 session where it is scheduled to vote.Our math To ask how to submit one, call the PSC at 404-656-4501 and press 2.Public witness
+
+PSC 57171: real-time payments and fuel costs →
+INPUT
+Nov 18, 2026, 10 a.m.
+
+Speak about the county budget during public comment at the Board's meeting, in person or by Zoom.Nov 4 agenda2026 scheduleClerk Send your request before it starts.Clerk
+
+Fulton County 2027 budget →
+Coming up
+8
+Dec 31, 2026
+
+HB 1009 takes effect.LawGovernor
+
+HB 1009: phones in high schools →
+Jan 1, 2027
+
+First yearly deadline for district device policies covering kindergarten through 12th grade.Our analysis
+
+HB 1009: phones in high schools →
+No later than Jul 1, 2027
+
+Public high schools must keep students off personal devices during the school day.Law
+
+HB 1009: phones in high schools →
+Nov 12, 2026
+
+The PSC holds a hearing on how business customers' real-time payments count toward fuel costs; its calendar lists the hearing at 9:35 a.m.Schedule orderFuel orderPSC calendar To ask whether the public may speak, call the PSC at 404-656-4501 and press 2.Public witness
+
+PSC 57171: real-time payments and fuel costs →
+Dec 10, 2026
+
+The PSC's Energy Committee takes up the case at its meeting, which begins at 9:30 a.m.Schedule orderPSC calendar
+
+PSC 57171: real-time payments and fuel costs →
+Dec 15, 2026
+
+The PSC is scheduled to decide how much of business customers' real-time payments counts toward fuel costs.Schedule orderFuel order
+
+PSC 57171: real-time payments and fuel costs →
+By Nov 15, 2026
+
+The Budget Commission's proposal for 2027 is due to the Board.Our analysis
+
+Fulton County 2027 budget →
+Expected by Jan 20, 2027
+
+The Board must adopt the 2027 budget by its second regular January meeting, which the proposed schedule sets for Jan 20.Res. 26-04602027 schedule
+
+Fulton County 2027 budget →
+What happened
+3
+May 5, 2026
+
+HB 1009 became law, extending Georgia's school-day device ban to high schools.Bill recordGovernor
+
+HB 1009: phones in high schools →
+Oct 27, 2026
+
+Georgia Power filed the last written testimony on the schedule.GP rebuttalSchedule order The fuel credit is the part of business customers' real-time payments counted toward fuel costs.GIPL testimonyFuel order Georgia Power and Georgia Interfaith Power & Light want its math to leave out both the cost and the power of contracts such as solar and wind; PIA Staff, a party in the case, wants both counted.GP rebuttalGP testimonyGIPL testimonySchedule order Either option would make fuel charges for customers on standard rates lower than under today's method, and the same dollars would stop helping pay base costs, the rest of the bill.GP testimonyGAM testimonyGIPL testimonyStaff testimony
+
+PSC 57171: real-time payments and fuel costs →
+Nov 4, 2026
+
+The Board voted to file a resolution that would have removed a 5% limit on departments' requests for extra money.Res. 26-0729Vote recordCap resolution Filing set the resolution aside without approving it.Our analysis The vote was 4 to 1.Our math
+
+Fulton County 2027 budget →
+Prototype · built 2026-11-08 · Independent project, not a government website.
+
+===== Summary tab (what shows before tapping anything) =====
+PSC Docket 57171 · 2026
+
+Business customers' real-time payments and your power bill
+Open case · Public Service Commission
+Decision scheduled Dec 15, 2026
+Passed checks (round 6)
+
+Drafted with AI help from the archived sources below. Every sentence links to its source or is labeled as our analysis. Checked by automated tests and independent AI reviewers. In this trial, no person reviewed it.
+
+Summary
+What it does
+Options
+Arguments
+Sources
+The 30-second version
+
+WHAT'S BEING DECIDED
+
+Larger businesses can pay Georgia Power hourly real-time prices, and more large customers now do.GP testimony
+The Public Service Commission (PSC) will decide how much of those payments counts toward fuel costs (the fuel credit).Schedule orderFuel orderGIPL testimony
+
+WHO IT AFFECTS
+
+Homes and businesses on standard rates.Staff testimony
+A bigger fuel credit lowers their fuel charge, and the same dollars stop helping pay base costs, the rest of the bill.GIPL testimonyStaff testimonyGAM testimony
+Each proposed plan we could read would raise the credit through its take-or-pay option; PIA Staff's take-or-pay estimates are public, and Georgia Power's are blacked out.GP rebuttalStaff testimonyGP testimonyGAM testimonyGP data
+Georgia Power estimates each $100 million cuts a typical home's fuel charge by about $1.48 a month, and adds about $1.65 if base rates rise by that much.GP data
+Parties disagree on whether, and how much, base rates would rise later; the next base rate case decides.GAM testimonyGIPL testimonyStaff testimonyFuel order
+
+WHAT'S NEXT
+
+A hearing on Nov 12 and a decision set for Dec 15, 2026; public comments are due 24 hours before the vote.Schedule orderComments
+Dates can change.Our framing
+What you can do ↓
+What you can do
+INPUT
+
+The PSC's public witness page says members of the public can testify at its hearings, and their comments become part of the official transcript.Public witness No filing we read says whether public witnesses will be heard on Nov 12.Our framing To ask, call the PSC at 404-656-4501, or 1-800-282-5813 from outside metro Atlanta, and press 2, or email gapsc@psc.state.ga.us.Public witness
+
+If you go, the PSC suggests arriving about 30 minutes early to sign in to speak.Public witness Speaking time may be limited if many people sign up.Public witness If you can't finish speaking, or would rather not speak, you can ask during the hearing to have your written comments entered into the record.Public witness
+
+If you have a disability and need help to take part, call the PSC's Executive Secretary's Office; the case's legal notice for the Sep 1 hearing asked for at least one day's notice.Legal notice
+
+INPUT
+
+The PSC's Public Comments page says a public comment gives the PSC "relevant feedback on any issue before the Commission."Comments It says: "Comments must be submitted 24 hours before a Commission vote."Comments For the Dec 15 vote, that means by 9:30 a.m. on Dec 14.Our math If the PSC moves the vote, the deadline moves too.Our analysis The page does not say how to send a comment, so ask the PSC at the numbers above.Our framing
+
+OBSERVE
+
+The Dec 15 decision comes at a session that is open to the public, in hearing room 110 at 244 Washington St. in Atlanta.Schedule orderPSC FAQ
+
+The Dec 10 committee meeting is in the PSC hearing room.Schedule order The PSC's FAQ says "Proceedings are open to the public" in its answer on administrative sessions.PSC FAQ We found no PSC page that says whether the public may attend or speak at committee meetings, so ask the PSC at the numbers above.Our framing
+
+OBSERVE
+
+Read the case filings on the PSC's web page for Docket 57171.DocketFiling list A docket is the PSC's case file.Our analysis
+
+Coming up
+
+NOV 12, 2026
+
+Hearing on Georgia Power's rebuttal testimony.Schedule order
+It starts after the PSC's committee meetings, which begin at 9:30 a.m.Schedule orderPSC calendar
+The PSC calendar lists the hearing at 9:35 a.m.PSC calendar
+
+DEC 2, 4 P.M.
+
+Deadline for parties to file briefs and proposed orders.Schedule order
+Briefs are the parties' final written arguments, and proposed orders are the decisions they ask the PSC to adopt.Our analysis
+
+DEC 10
+
+The PSC's Energy Committee takes up the case at its meeting in the PSC hearing room, which begins at 9:30 a.m.Schedule orderPSC calendar
+
+DEC 15, 9:30 A.M.
+
+The PSC is scheduled to make its final decision at its Administrative Session, a regular meeting where commissioners vote.Schedule orderPSC calendarPublic witnessPSC FAQ
+The PSC says commissioners decide at that session based on the evidence presented at the hearings.Public witness
+
+DEC 31
+
+The case must be finished by this date.Fuel order
+
+We copied these dates from PSC pages on Nov 8, 2026; they can change, so check the PSC calendar before you go.Our framing
+Who decides
+
+DECIDE
+
+The PSC's five commissioners make the decision.Schedule orderPSC FAQ
+The PSC describes its commissioners as elected.PSC FAQ
+The five are Chairman Jason Shaw, Vice Chairman Lauren "Bubba" McDonald, Peter Hubbard, Alicia M. Johnson and Stan Wise.Shaw bioMcDonald bioHubbard bioJohnson bioWise bio
+Two were appointed: Jason Shaw in 2019, before he was elected in 2020, and Stan Wise in 2026, to finish Tricia Pridemore's term; Wise has served since Sep 5, 2026.Shaw bioWise bioSchedule orderStaff fixes
+Each commissioner's term runs through Dec 31, 2026, or later.Wise bioShaw bioMcDonald bioHubbard bioJohnson bio So the same five are set to vote on Dec 15.Our analysis
+The PSC's Public Interest Advocacy Staff (PIA Staff) takes part in this case as a party.Schedule order A separate advisory staff advises the commissioners and is not a party.Schedule order
+Outside groups that join the case as parties are called intervenors.Our analysis
+What happened
+May 28, 2026
+The PSC approved a settlement of Georgia Power's fuel-rate case, and its order started this review.Fuel order As more large customers were served on real-time prices, PIA Staff and intervenors sought the review "to ensure such customers pay their share of costs," Georgia Power's testimony says.GP testimony GIPL says parties in that case raised concerns that the method had raised other customers' fuel costs.GIPL testimony The order said the review "shall be concluded by December 31, 2026."Fuel orderSchedule order
+Jul 7
+The PSC adopted the schedule for this case.Schedule order
+Aug 14
+Georgia Power filed testimony with two options for some of its power contracts.GP testimony
+Aug 24
+A legal notice of the case was first published.Legal notice
+Sep 1
+The PSC held a hearing on Georgia Power's testimony.Schedule orderStaff testimony
+Sep 22–23
+PIA Staff, Georgia Interfaith Power & Light (GIPL), the Georgia Association of Manufacturers (GAM) and Resource Supply Management filed testimony.Staff testimonyGIPL testimonyGAM testimonyClarkson filing Resource Supply Management's testimony is a scanned image we could not read, so this page does not cover its view.Our framing
+Oct 7
+PIA Staff filed corrections to its testimony.Staff fixes
+Oct 8
+Georgia Power asked the PSC to strike, or remove from the record, parts of GIPL's testimony.Motion
+Oct 14
+GIPL asked the PSC to deny that request.GIPL reply
+Oct 15
+The PSC held a hearing on the testimony of PIA Staff and the intervenors.Schedule orderFiling list
+Oct 27
+Georgia Power filed rebuttal testimony, the last written testimony on the schedule.GP rebuttalSchedule order
+What it does →
+Prototype · built 2026-11-08 · Independent project, not a government website. · Trial 002 · revision 6.3 (sha256 fdbb7fb1ff4a)
+
+===== Options tab (what shows before tapping anything) =====
+PSC Docket 57171 · 2026
+
+Business customers' real-time payments and your power bill
+Open case · Public Service Commission
+Decision scheduled Dec 15, 2026
+Passed checks (round 6)
+Summary
+What it does
+Options
+Arguments
+Sources
+Options and tradeoffs
+
+What lawmakers could have done, and who gains or gives up what. Tap an option for the details.
+
+Plan A: Keep today's method
+Today's method
+
+Counts real-time money toward fuel at the "average hourly marginal replacement fuel cost" of Georgia Power's running plants, plus its share of "pool sales or purchases."GP testimony It counts take-or-pay contracts' energy but not their cost, and leaves pipeline fees out.GP testimonyStaff testimony
+
+What happened · who benefits · who pays · what's uncertain
+Plan B: Georgia Power's plan
+Georgia Power's plan
+
+Uses Option 1, removing both the cost and the energy of take-or-pay contracts.GP testimonyGP rebuttal New pipeline fees tied to large-load customers would be recovered from them, based on their share of growth in winter peak demand.GP testimony Existing pipeline fees and the other costs now left out would stay out of the credit.Staff testimonyGP rebuttal
+
+What happened · who benefits · who pays · what's uncertain
+Plan C: PIA Staff's plan
+PIA Staff's plan
+
+Uses Option 2, counting both the cost and the energy of take-or-pay contracts.Staff testimony Shares all pipeline and gas storage fees, old and new, among all customers by monthly energy use.Staff testimony Staff's backup: if the PSC prefers a demand-based split, or treats old and new fees differently, move all pipeline fees to base rates.Staff testimony Counts some other fuel-related costs, such as coal rail car leases and corporate overhead.Staff testimony Makes no recommendation for now on three costs it calls policy-related, though it says counting them by energy use may be reasonable.Staff testimony Adds monthly reports starting no later than Jan 1, 2027.Staff testimony
+
+What happened · who benefits · who pays · what's uncertain
+Plan D: GIPL's plan
+GIPL's plan
+
+Uses Option 1 for take-or-pay contracts.GIPL testimonyGP rebuttal New pipeline fees tied to large-load customers would be recovered from them.GIPL testimony They would be split the way power-line costs are, until the next rate case reviews the issue.GIPL testimony The credit would also include a direct share of pipeline fees, plus coal-related costs and corporate overhead.GIPL testimony If the PSC relies on Georgia Power's large-load cost model, GIPL asks that intervenors get a working copy.GIPL testimony
+
+What happened · who benefits · who pays · what's uncertain
+← What it does
+Arguments →
+Prototype · built 2026-11-08 · Independent project, not a government website. · Trial 002 · revision 6.3 (sha256 fdbb7fb1ff4a)
+
+===== Arguments tab (what shows before tapping anything) =====
+PSC Docket 57171 · 2026
+
+Business customers' real-time payments and your power bill
+Open case · Public Service Commission
+Decision scheduled Dec 15, 2026
+Passed checks (round 6)
+Summary
+What it does
+Options
+Arguments
+Sources
+Arguments you'll hear
+
+Tap a card to see who makes the argument, what backs it up, who disagrees and what's missing.
+
+Georgia Power, PIA Staff, GIPL, GAM and Resource Supply Management filed testimony.GP testimonyStaff testimonyGIPL testimonyGAM testimonyClarkson filing
+
+THE PARTIES AND THEIR WITNESSES
+
+GEORGIA POWER
+
+the utility whose method is under review.Fuel order
+Its witnesses: its director of pricing and rates, its vice president of pricing and revenue strategy, and a director of demand planning and analysis at Southern Company Services.GP rebuttal
+
+PIA STAFF
+
+PSC staff that takes part in this case as a party.Schedule order
+Its witnesses: the PSC's director of utility finance and two principals of J. Kennedy and Associates.Staff testimony
+
+GIPL
+
+Georgia Interfaith Power & Light, filing with three of its member congregations.GIPL testimony
+Its witness: the vice president of Grid Strategies LLC.GIPL testimony
+
+GAM
+
+the Georgia Association of Manufacturers, whose members are Georgia Power customers that use large amounts of power, mainly for manufacturing, under "a variety of rate schedules."GAM testimony
+Its witness: an associate consultant at J. Pollock, Incorporated.GAM testimony
+
+RESOURCE SUPPLY MANAGEMENT
+
+its witness is Jim Clarkson, and its filing page gives no role.Clarkson filing
+Its testimony is a scanned image we could not read, so this page does not summarize it.Our framing
+
+The named voices below are the parties' witnesses, not members of the public, so they reflect who filed testimony, not how many people hold each view.Our framing The cards cover the first three questions in Layer 2, not the fourth, on reports.Our framing On reports, PIA Staff proposes a monthly report on the credit, and Georgia Power says the reports are not needed and, in some cases, "not feasible in the requested timeframe."Staff testimonyGP rebuttal
+
+How to read these cards
+Remove take-or-pay contracts' cost and energy from the credit (Option 1)
+Favors Option 1
+
+Georgia Power and GIPL say both the contracts' cost and their energy should come out, which raises the credit; PIA Staff prefers counting both.GP testimonyGP rebuttalStaff testimony
+
+Evidence, by part:
+Supported
+Mixed
+Count the costs of take-or-pay contracts too (Option 2)
+Favors Option 2
+
+PIA Staff says the contracts serve all customers, so their costs should count in the credit; Georgia Power offered this option too but prefers Option 1, as GIPL does.Staff testimonyGP testimonyGP rebuttal
+
+Evidence, by part:
+Supported
+Mixed
+Recover new pipeline fees from large-load customers, split by winter peak (Georgia Power's pipeline plan)
+Favors Georgia Power's pipeline plan
+
+Georgia Power says large-load growth is a primary driver of new pipeline fees, so those customers should pay their share, set by winter peak demand; PIA Staff and GIPL oppose this split, and GAM opposes crediting real-time money to pipeline fees.GP testimonyStaff testimonyGIPL testimonyGAM testimony
+
+Evidence, by part:
+Supported
+Mixed
+Share all pipeline and storage fees by energy use (PIA Staff's pipeline plan)
+Favors PIA Staff's pipeline plan
+
+PIA Staff says all pipeline and storage fees should be shared by energy use, because the fees serve every hour and to avoid a risk of double recovery; Georgia Power and GAM oppose this.Staff testimonyGP rebuttalGAM testimony
+
+Evidence, by part:
+Supported
+Mixed
+Split new pipeline fees the way power-line costs are split (GIPL's pipeline plan)
+Favors GIPL's pipeline plan
+
+GIPL says new pipeline fees should be split like power-line costs, with a direct pipeline share in the credit; Georgia Power and PIA Staff prefer their own splits, and GAM opposes any share.GIPL testimonyGP testimonyStaff testimonyGAM testimony
+
+Evidence:
+Mixed
+Credit no real-time money against pipeline fees (GAM)
+Favors keeping pipeline fees out of the credit (GAM)
+
+GAM says pipeline fees are fixed costs while the real-time price is a marginal-cost rate, so no specific real-time money should be credited against them; Georgia Power, PIA Staff and GIPL each propose crediting some.GAM testimonyStaff testimonyGIPL testimony
+
+Evidence, by part:
+Supported
+Mixed
+Count more fuel-related costs in the credit (PIA Staff and GIPL)
+Favors counting more costs (PIA Staff and GIPL)
+
+PIA Staff and GIPL say fuel-related costs left out of the credit, such as coal rail car leases, fall on customers on the fuel charge; Georgia Power says real-time customers pay their share through the base side.Staff testimonyGIPL testimonyGP rebuttal
+
+Evidence, by part:
+Supported
+Mixed
+Keep other fuel-related costs out of the credit (Georgia Power)
+Favors keeping other costs out (Georgia Power)
+
+Georgia Power says a marginal-cost rate isn't meant to cover all embedded costs, and real-time customers already pay their share through the base side; PIA Staff and GIPL say customers on the fuel charge carry these costs.GP rebuttalStaff testimonyGIPL testimony
+
+Evidence, by part:
+Supported
+Mixed
+Limit the shift of real-time money to fuel (GAM)
+Favors limiting the shift to fuel (GAM)
+
+GAM says a bigger fuel credit "would put upward pressure on base rates," because real-time money now lowers other customers' base costs.GAM testimony GIPL and PIA Staff accept a base-side effect, but GIPL calls part of that money a "surplus" that "is needed" and "does not provide further surplus" to lower rates, and Staff says a later base rate case would set its direction and size.GIPL testimonyStaff testimony
+
+Evidence, by part:
+Supported
+Uncertain
+Questions to weigh
+
+Every card uses the same fields for both sides, and one rule sets every evidence label (see “How to read these cards”). Disagreements about values are not treated as misinformation.
+
+← Options
+Sources →
+Prototype · built 2026-11-08 · Independent project, not a government website. · Trial 002 · revision 6.3 (sha256 fdbb7fb1ff4a)

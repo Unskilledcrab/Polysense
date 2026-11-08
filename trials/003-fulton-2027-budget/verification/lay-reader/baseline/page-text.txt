@@ -1,0 +1,327 @@
+===== Home page =====
+GEORGIA · YOUR CIVIC DASHBOARD
+
+What can I influence?
+
+Decisions you can act on, what's coming up, and what just happened. Every line links to its source.
+
+Find my districts
+
+Prototype: district lookup isn't built yet, and this page shows only the decisions from our manual trials. A real dashboard would list hearings, votes and deadlines for your districts.
+
+Act now
+3
+INPUT
+Before Jan 1, 2027
+
+Ask your school district how it will store phones and reach families in an emergency.Our framing Districts must adopt or update their device policies by January 1 each year.Law
+
+HB 1009: phones in high schools →
+INPUT
+Dec 14, 2026, 9:30 a.m.
+
+Submit any public comment to the PSC by this time, 24 hours before the Dec 15 session where it is scheduled to vote.Our math To ask how to submit one, call the PSC at 404-656-4501 and press 2.Public witness
+
+PSC 57171: real-time payments and fuel costs →
+INPUT
+Nov 18, 2026, 10 a.m.
+
+Speak about the county budget during public comment at the Board's meeting, in person or by Zoom.Nov 4 agenda2026 scheduleClerk Send your request before it starts.Clerk
+
+Fulton County 2027 budget →
+Coming up
+8
+Dec 31, 2026
+
+HB 1009 takes effect.LawGovernor
+
+HB 1009: phones in high schools →
+Jan 1, 2027
+
+First yearly deadline for district device policies covering kindergarten through 12th grade.Our analysis
+
+HB 1009: phones in high schools →
+No later than Jul 1, 2027
+
+Public high schools must keep students off personal devices during the school day.Law
+
+HB 1009: phones in high schools →
+Nov 12, 2026
+
+The PSC holds a hearing on how business customers' real-time payments count toward fuel costs; its calendar lists the hearing at 9:35 a.m.Schedule orderFuel orderPSC calendar To ask whether the public may speak, call the PSC at 404-656-4501 and press 2.Public witness
+
+PSC 57171: real-time payments and fuel costs →
+Dec 10, 2026
+
+The PSC's Energy Committee takes up the case at its meeting, which begins at 9:30 a.m.Schedule orderPSC calendar
+
+PSC 57171: real-time payments and fuel costs →
+Dec 15, 2026
+
+The PSC is scheduled to decide how much of business customers' real-time payments counts toward fuel costs.Schedule orderFuel order
+
+PSC 57171: real-time payments and fuel costs →
+By Nov 15, 2026
+
+The Budget Commission's proposal for 2027 is due to the Board.Our analysis
+
+Fulton County 2027 budget →
+Expected by Jan 20, 2027
+
+The Board must adopt the 2027 budget by its second regular January meeting, which the proposed schedule sets for Jan 20.Res. 26-04602027 schedule
+
+Fulton County 2027 budget →
+What happened
+3
+May 5, 2026
+
+HB 1009 became law, extending Georgia's school-day device ban to high schools.Bill recordGovernor
+
+HB 1009: phones in high schools →
+Oct 27, 2026
+
+Georgia Power filed the last written testimony on the schedule.GP rebuttalSchedule order The fuel credit is the part of business customers' real-time payments counted toward fuel costs.GIPL testimonyFuel order Georgia Power and Georgia Interfaith Power & Light want its math to leave out both the cost and the power of contracts such as solar and wind; PIA Staff, a party in the case, wants both counted.GP rebuttalGP testimonyGIPL testimonySchedule order Either option would make fuel charges for customers on standard rates lower than under today's method, and the same dollars would stop helping pay base costs, the rest of the bill.GP testimonyGAM testimonyGIPL testimonyStaff testimony
+
+PSC 57171: real-time payments and fuel costs →
+Nov 4, 2026
+
+The Board voted to file a resolution that would have removed a 5% limit on departments' requests for extra money.Res. 26-0729Vote recordCap resolution Filing set the resolution aside without approving it.Our analysis The vote was 4 to 1.Our math
+
+Fulton County 2027 budget →
+Prototype · built 2026-11-08 · Independent project, not a government website.
+
+===== Summary tab (what shows before tapping anything) =====
+Fulton County · 2027 budget
+
+Fulton County's 2027 budget
+Draft due by Nov 15, 2026
+Vote due by the 2nd January meeting
+Passed checks (round 3)
+
+Drafted with AI help from the archived sources below. Every sentence links to its source or is labeled as our analysis. Checked by automated tests and independent AI reviewers. In this trial, no person reviewed it.
+
+Summary
+What it does
+Options
+Arguments
+Sources
+The 30-second version
+
+WHAT IT DOES
+
+The 2027 budget sets what Fulton County will spend in 2027.Res. 26-0460Notices
+A Budget Commission that includes two commissioners is helping draft it, and the full Board decides.Res. 26-0460
+Supporters say it gives one commissioner from each half of the county an early role; critics say it lets those two take control of the process.Res. 26-0460News, Oct 7FOX 5, Oct 7
+Critics also object to a 5% limit on departments' requests for extra money.Cap resolutionFOX 5, Oct 7
+
+WHO IT AFFECTS
+
+Residents and property owners, and county services from the jail and courts to libraries.Our analysis
+
+WHAT'S NEXT
+
+The proposal is due by Nov 15, and the vote by the Board's second regular January meeting.Res. 26-0460
+You can speak at Board meetings, starting Nov 18.Nov 4 agenda2026 schedule
+What you can do ↓
+What you can do
+INPUT
+
+Speak during public comment at a Board meeting, in person or by Zoom.Clerk Send a Zoom comment, or a request to speak in person, before the clerk starts the meeting at 10 a.m.Clerk Each speaker gets up to two minutes, and people from Fulton County and its businesses and groups go first.Nov 4 agenda To arrange a speaking date, call the Clerk's Office at 404-612-8200.Nov 4 agenda2026 schedule
+
+INPUT
+
+The meeting rules also mention comments sent by email or by phone, but the Clerk's page lists only in person and Zoom.Nov 4 agendaClerk Call the Clerk's Office to ask how to send a written comment.Our framing
+
+INPUT
+
+Watch the Public Notices page for the budget hearing, and take part.Our framing
+
+INPUT
+
+Tell your district commissioner and the chairman what the budget should fund, cut or keep the same.Our framing You can also say what you think of how it is being prepared.Our framing If you live in District 4, whose seat is vacant, contact the chairman, who represents the whole county.Our analysis
+
+OBSERVE
+
+Read the proposal when it comes out; a copy goes to the Clerk to the Commission the day it is submitted.Res. 26-0460
+
+OBSERVE
+
+Read the two resolutions behind the dispute.Res. 26-0460Cap resolution Resolution 26-0460 set up the commission, and Resolution 26-0729 sought to remove the 5% limit.Res. 26-0460LegistarRes. 26-0729Cap resolution
+
+OBSERVE
+
+Read the 2026 adopted budget on the county's budget page, including its budget message and General Fund schedule.Budget page2026 budget
+
+OBSERVE
+
+Several offices' own 2027 budget presentations are on the county's data website, data.fultoncountyga.gov, including the sheriff's and public defender's.Open data
+
+If you need a disability accommodation to take part, call the Clerk to the Commission at 404.612.8200.Clerk
+
+Coming up
+
+BY NOV 15
+
+The Budget Commission must submit its proposed budget to the Board.Res. 26-0460
+Nov 15, 2026 falls on a Sunday.Our math
+The 2026 cycle's deadline also fell on a weekend: that proposal was provided on Saturday, Nov 15, 2025, and presented on Nov 19.Our math
+Section 2-261 doesn't say what happens when the deadline falls on a weekend.Our analysis
+A copy goes to the Clerk to the Commission the day it is submitted.Res. 26-0460
+
+NOV 18, DEC 2 AND DEC 16, 10 A.M.
+
+The Board holds regular meetings in the Assembly Hall of the Fulton County Government Center, 141 Pryor Street SW, Atlanta.2026 schedule
+
+PUBLIC HEARING (NO DATE ON THE COUNTY'S NOTICES PAGE YET)
+
+The county's 2026 budget resolution says state law required a public hearing before that budget was adopted.2026 budget
+The 2026 cycle's hearing was held at a meeting on Dec 3, 2025.2026 budget
+On Nov 8, the newest notice on the county's Public Notices page was for the commission's October hearings.Our analysis
+Notices also appear in the county's legal newspaper and are posted at the Government Center.Notices
+We did not check those.Our framing
+
+EXPECTED BY JAN 20, 2027 (DEADLINE: THE SECOND REGULAR MEETING IN JANUARY)
+
+The Board must adopt the budget "no later than the second regular meeting in January."Res. 26-04602027 schedule
+The proposed 2027 schedule puts that meeting on Jan 20, 2027, after a first meeting on Jan 6.2027 schedule
+The county's records say the 2027 calendar was approved with the consent agenda.2027 calendar
+But the calendar's status still reads "Agenda Ready," and the posted schedule is labeled "Proposed."2027 calendar2027 schedule
+So treat Jan 20 as the expected date until the Clerk posts a final schedule.Our framing
+The Board may vote earlier, since the deadline is "no later than."Res. 26-0460
+In the 2026 cycle, the Board adopted its budget on Jan 21, 2026.2026 budget
+What happened
+Aug 5, 2026
+The Board voted to bring back a Budget Commission to help develop the county's budget, as one did until 2018.LegistarVote recordRes. 26-0460 Yes: Chairman Pitts, Commissioners Thorne and Ellis, and Vice Chair Abdur-Rahman.Roll callNov 4 agenda Commissioner Arrington abstained, and Commissioner Barrett is listed as not voting.Roll callNov 4 agenda To abstain is to choose formally not to vote yes or no.Our analysis
+Aug 19
+The Board approved the commission's members: Commissioner Bob Ellis for the north and Vice Chair Khadijah Abdur-Rahman for the south.Members itemVote record Barrett had the item taken off the consent agenda for a separate vote, and voted no.Members itemRoll call A consent agenda is a group of routine items passed in one vote.Nov 4 agenda Pitts, Thorne, Ellis and Abdur-Rahman voted yes, and Arrington was absent.Roll call
+Oct 7
+The sheriff, district attorney, solicitor-general, court clerk, probate judge and public defender held a news conference and sent the Board a letter.News, Oct 7 They objected to presenting their needs to a two-commissioner panel rather than the full Board, FOX 5 reported.FOX 5, Oct 7 They also raised concerns about the 5% limit.FOX 5, Oct 7 They said they would not present in person at the commission's hearings, but had sent their 2027 requests in writing.FOX 5, Oct 7 In Atlanta News First's report, Commissioner Barrett said some current board members were trying to take control of the budget process.News, Oct 7 In the same report, Commissioner Ellis responded that the commission's meetings are open meetings.News, Oct 7 FOX 5 reported that, in response to the officials, Ellis said the full Board will review and vote on the final budget.FOX 5, Oct 7 The solicitor-general's office prosecutes misdemeanors.Our analysis The probate court handles estates, guardianships, marriage licenses and weapons carry licenses, among other services.Probate slides
+Oct 12 to 22
+The Budget Commission scheduled six days of hearings with county departments.NoticesHearing agenda The six offices had hour-long slots on Oct 13, Oct 14 and Oct 22.Hearing agenda
+Oct 21
+A motion to approve Resolution 26-0729 failed.Res. 26-0729Vote record That resolution would have removed a 5% limit on departments' requests for extra money.Res. 26-0729Cap resolution Barrett, its sponsor, made the motion, and Arrington seconded it.Vote recordCap resolution Barrett voted yes, and Ellis voted no.Roll call Pitts and Arrington did not vote, and Thorne and Abdur-Rahman were absent.Roll call
+Nov 4
+Barrett moved again to approve it, and Arrington seconded, but no vote was taken on that motion.Vote record Instead, on a substitute motion by Abdur-Rahman, seconded by Thorne, the Board voted to file it.Vote record A substitute motion is one offered in place of the motion being considered.Our analysis Pitts, Thorne, Ellis and Abdur-Rahman voted yes; Barrett voted no; Arrington did not vote.Roll call Filing set the resolution aside without approving it, and its record shows no later action.Our analysis The Board also discussed an item under the vice chair's name: "Update on the Budget Committee and the budget approval process."Nov 4 minutesNov 4 agenda
+What it does →
+Prototype · built 2026-11-08 · Independent project, not a government website. · Trial 003 · revision 3.3 (sha256 886a6ffd2b51)
+
+===== Options tab (what shows before tapping anything) =====
+Fulton County · 2027 budget
+
+Fulton County's 2027 budget
+Draft due by Nov 15, 2026
+Vote due by the 2nd January meeting
+Passed checks (round 3)
+Summary
+What it does
+Options
+Arguments
+Sources
+Options and tradeoffs
+
+What lawmakers could have done, and who gains or gives up what. Tap an option for the details.
+
+Adopt the proposal as presented
+Due by Nov 15
+
+The Board adopts the Budget Commission's plan without changes.Our analysis
+
+What happened · who benefits · who pays · what's uncertain
+Change the proposal before adopting it
+Board may change it
+
+The Board adds, cuts or moves money before it votes.Our analysis The county's 2026 budget resolution says state law lets the Board adopt amounts "greater or less than the sums presented in the proposed budget."2026 budget
+
+What happened · who benefits · who pays · what's uncertain
+Remove the 5% limit and list every request (Resolution 26-0729, filed Nov 4)
+Filed Nov 4
+
+It would have barred any cap on what a department, agency, elected official or authority can request.Cap resolution It would have required the proposal to include all requests, including ones left out because of the 5% cap.Cap resolution The resolution itself spent no money; it would have changed what is asked for and shown.Our analysis
+
+What happened · who benefits · who pays · what's uncertain
+← What it does
+Arguments →
+Prototype · built 2026-11-08 · Independent project, not a government website. · Trial 003 · revision 3.3 (sha256 886a6ffd2b51)
+
+===== Arguments tab (what shows before tapping anything) =====
+Fulton County · 2027 budget
+
+Fulton County's 2027 budget
+Draft due by Nov 15, 2026
+Vote due by the 2nd January meeting
+Passed checks (round 3)
+Summary
+What it does
+Options
+Arguments
+Sources
+Arguments you'll hear
+
+Tap a card to see who makes the argument, what backs it up, who disagrees and what's missing.
+
+The Board's votes are listed under What happened.Our analysis The cards don't use them as evidence for either side, because the records don't give each member's reasons.Our framing Our archived sources quote one commissioner backing the process, and they include its sponsors' resolution, which states their reasons.Our analysis They quote two justice officials and one commissioner criticizing it, plus a third justice official on funding.Our analysis They also include Resolution 26-0729, which states its sponsor's reasons.Our analysis That reflects whom the sources quoted, not how many people hold each view.Our framing
+
+No archived record or statement gives a reason for the 5% limit, or for filing the resolution to remove it.Our analysis The Clerk's minutes of the Oct 21 and Nov 4 meetings record the motions and votes on that resolution.Oct 21 minutesNov 4 minutes They give no reasons.Our analysis Both meetings also took up an "Update on the Budget Committee and the budget approval process," which the minutes list only as discussed.Oct 21 minutesNov 4 minutes The Board ratified the Oct 21 minutes on Nov 4; the Nov 4 minutes are marked tentative until a vote set for Nov 18.Nov 4 minutes The county's records link video of both meetings.Vote record We did not review the video, so reasons may have been given there.Our framing Atlanta News First said it was still waiting to hear back from the vice chair, who serves on the commission.News, Oct 7Members item No 2027 source we archived argued against more money for justice offices.Our analysis
+
+How to read these cards
+The commission adds early input, and the full Board still decides
+Supports the current process
+
+Resolution 26-0460, which the Board adopted, says the commission adds "earlier and ongoing input" from Board members, balanced between north and south.Res. 26-0460Legistar The full Board alone still adopts the budget.Res. 26-0460 The code's text confirms these rules; results wait on the draft.Our analysis
+
+Evidence, by part:
+Supported
+Uncertain
+Values question
+Two commissioners, seated under rules they sponsored, have too much say
+Critical of the current process
+
+Critics say departments must present their needs to a two-commissioner panel, not the full Board.FOX 5, Oct 7 Commissioner Barrett said the rules let only those two serve.News, Oct 7 Who serves is on record; their effect on the draft isn't known yet.Our analysis
+
+Evidence, by part:
+Supported
+Uncertain
+Values question
+The 5% limit keeps departments' full requests out of the draft
+Critical of the current process
+
+Resolution 26-0729 says the 5% cap makes the code's rule on requests "effectively" impossible to meet.Cap resolutionRes. 26-0729 It says across-the-board spending caps are "not the best method for controlling costs in the long run."Cap resolution The code's text and the 2026 record support part of this; the rest depends on an unsettled reading of the code, the limit's exact terms, the claimants' own figures, values or the coming draft.Our analysis
+
+Evidence, by part:
+Supported
+Uncertain
+Values question
+The new process is open
+Supports the current process
+
+Commissioner Bob Ellis said the commission's meetings are open to all commissioners and their staff.News, Oct 7 A public notice and posted slides are consistent with that; his comparison with past years is his statement alone.Our analysis
+
+Evidence, by part:
+Supported
+Uncertain
+Values question
+The Board should wait until January to adopt the budget
+Asks for a January vote
+
+Justice officials asked commissioners to wait until January, which would give incoming board members a say, Atlanta News First reported.News, Oct 7 No one in our sources asked for a December vote; the choice is mainly about values.Our analysis
+
+Evidence, by part:
+Supported
+Uncertain
+Values question
+Justice offices need more money
+Asks for more justice funding
+
+Justice officials are asking for more money, citing staffing shortages, court delays and jail overcrowding.News, Oct 7 County records back added costs for the jail agreement; other needs rest mainly on the offices' own accounts.Our analysis
+
+Evidence, by part:
+Supported
+Uncertain
+Values question
+Questions to weigh
+
+Every card uses the same fields for both sides, and one rule sets every evidence label (see “How to read these cards”). Disagreements about values are not treated as misinformation.
+
+← Options
+Sources →
+Prototype · built 2026-11-08 · Independent project, not a government website. · Trial 003 · revision 3.3 (sha256 886a6ffd2b51)

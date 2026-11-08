@@ -1,0 +1,282 @@
+===== Home page =====
+GEORGIA · YOUR CIVIC DASHBOARD
+
+What can I influence?
+
+Decisions you can act on, what's coming up, and what just happened. Every line links to its source.
+
+Find my districts
+
+Prototype: district lookup isn't built yet, and this page shows only the decisions from our manual trials. A real dashboard would list hearings, votes and deadlines for your districts.
+
+Act now
+3
+INPUT
+Before Jan 1, 2027
+
+Ask your school district how it will store phones and reach families in an emergency.Our framing Districts must adopt or update their device policies by January 1 each year.Law
+
+HB 1009: phones in high schools →
+INPUT
+Dec 14, 2026, 9:30 a.m.
+
+Submit any public comment to the PSC by this time, 24 hours before the Dec 15 session where it is scheduled to vote.Our math To ask how to submit one, call the PSC at 404-656-4501 and press 2.Public witness
+
+PSC 57171: real-time payments and fuel costs →
+INPUT
+Nov 18, 2026, 10 a.m.
+
+Speak about the county budget during public comment at the Board's meeting, in person or by Zoom.Nov 4 agenda2026 scheduleClerk Send your request before it starts.Clerk
+
+Fulton County 2027 budget →
+Coming up
+8
+Dec 31, 2026
+
+HB 1009 takes effect.LawGovernor
+
+HB 1009: phones in high schools →
+Jan 1, 2027
+
+First yearly deadline for district device policies covering kindergarten through 12th grade.Our analysis
+
+HB 1009: phones in high schools →
+No later than Jul 1, 2027
+
+Public high schools must keep students off personal devices during the school day.Law
+
+HB 1009: phones in high schools →
+Nov 12, 2026
+
+The PSC holds a hearing on how business customers' real-time payments count toward fuel costs; its calendar lists the hearing at 9:35 a.m.Schedule orderFuel orderPSC calendar To ask whether the public may speak, call the PSC at 404-656-4501 and press 2.Public witness
+
+PSC 57171: real-time payments and fuel costs →
+Dec 10, 2026
+
+The PSC's Energy Committee takes up the case at its meeting, which begins at 9:30 a.m.Schedule orderPSC calendar
+
+PSC 57171: real-time payments and fuel costs →
+Dec 15, 2026
+
+The PSC is scheduled to decide how much of business customers' real-time payments counts toward fuel costs.Schedule orderFuel order
+
+PSC 57171: real-time payments and fuel costs →
+By Nov 15, 2026
+
+The Budget Commission's proposal for 2027 is due to the Board.Our analysis
+
+Fulton County 2027 budget →
+Expected by Jan 20, 2027
+
+The Board must adopt the 2027 budget by its second regular January meeting, which the proposed schedule sets for Jan 20.Res. 26-04602027 schedule
+
+Fulton County 2027 budget →
+What happened
+3
+May 5, 2026
+
+HB 1009 became law, extending Georgia's school-day device ban to high schools.Bill recordGovernor
+
+HB 1009: phones in high schools →
+Oct 27, 2026
+
+Georgia Power filed the last written testimony on the schedule.GP rebuttalSchedule order The fuel credit is the part of business customers' real-time payments counted toward fuel costs.GIPL testimonyFuel order Georgia Power and Georgia Interfaith Power & Light want its math to leave out both the cost and the power of contracts such as solar and wind; PIA Staff, a party in the case, wants both counted.GP rebuttalGP testimonyGIPL testimonySchedule order Either option would make fuel charges for customers on standard rates lower than under today's method, and the same dollars would stop helping pay base costs, the rest of the bill.GP testimonyGAM testimonyGIPL testimonyStaff testimony
+
+PSC 57171: real-time payments and fuel costs →
+Nov 4, 2026
+
+The Board voted to file a resolution that would have removed a 5% limit on departments' requests for extra money.Res. 26-0729Vote recordCap resolution Filing set the resolution aside without approving it.Our analysis The vote was 4 to 1.Our math
+
+Fulton County 2027 budget →
+Prototype · built 2026-11-08 · Independent project, not a government website.
+
+===== Summary tab (what shows before tapping anything) =====
+HB 1009 · 2026 · Act 395
+
+Phones in Georgia high schools
+Law · signed May 5, 2026
+Takes effect Dec 31, 2026
+Passed checks (round 4)
+
+Drafted with AI help from the archived sources below. Every sentence links to its source or is labeled as our analysis. Checked by automated tests and independent AI reviewers. In this trial, no person reviewed it.
+
+Summary
+What it does
+Options
+Arguments
+Sources
+The 30-second version
+
+WHAT IT DOES
+
+Public high school students won't be allowed to use phones or similar devices during the school day, including between classes.Law
+Schools must start no later than July 1, 2027.Law
+Students may use a device as their health or disability plan explicitly requires.Law
+
+WHO IT AFFECTS
+
+Public high school students, their families, and the school staff who carry out the rules.Law
+
+WHAT'S NEXT
+
+The law takes effect Dec 31, 2026.Law
+Each district sets details, like where phones are kept.Law
+You can tell your school district how you want the rules run, or tell your state lawmakers whether to keep or change the law.Our framing
+What you can do ↓
+What you can do
+INPUT
+
+Ask your school district or local school board how it will store phones, run off-campus activities, handle emergency communication and check whether the rules are working.Our framing
+
+INPUT
+
+Tell your state representative and senator what you think of the law, whether you want it kept or changed.Our framing
+
+OBSERVE
+
+Check your school's handbook or website, where districts must publish the rules.Law
+
+Coming up
+
+DEC 31, 2026
+
+The law takes effect.Law
+
+BY JAN 1 EACH YEAR
+
+Every district must adopt its device policy, revising it as needed, now covering kindergarten through 12th grade.Law
+The first such deadline under the new law is Jan 1, 2027.Our analysis
+
+BY JUL 1, 2027
+
+High schools must enforce the ban, at the latest.Law
+
+At least one school planned to start sooner: on June 1, 2026, Cairo High School said it would begin in the 2026-2027 school year.Cairo High
+The Georgia Department of Education must give schools guidance and technical support.Law
+What happened
+Jan 16, 2026
+The bill was filed in the House.Bill record
+Feb 6
+The House Education Committee recommended it.Bill record
+Feb 24
+The House passed it, 145 to 20.Bill record
+Mar 18
+The Senate Children and Families Committee recommended it.Bill record
+Mar 23
+Senators voted down, 13 to 38, a change that would have let districts allow high school students to use phones between classes.Bill recordAmendment
+Mar 23
+The Senate passed the bill, 52 to 0.Bill record
+May 5
+The governor signed it into law.Bill record Its official number is Act 395.Bill record
+What it does →
+Prototype · built 2026-11-08 · Independent project, not a government website. · Trial 001 · revision 5 (sha256 1aad7c3a868c)
+
+===== Options tab (what shows before tapping anything) =====
+HB 1009 · 2026 · Act 395
+
+Phones in Georgia high schools
+Law · signed May 5, 2026
+Takes effect Dec 31, 2026
+Passed checks (round 4)
+Summary
+What it does
+Options
+Arguments
+Sources
+Options and tradeoffs
+
+What lawmakers could have done, and who gains or gives up what. Tap an option for the details.
+
+Keep the old law (no state rule for high schools)
+Before HB 1009
+
+Sets a device ban for public school students in kindergarten through 8th grade only.Law
+
+What happened · who benefits · who pays · what's uncertain
+HB 1009 as passed (now law)
+Now law
+
+Bans device access for public high school students during the school day, from the first bell to the last, including breaks and time between classes.Law
+
+What happened · who benefits · who pays · what's uncertain
+The Senate amendment that failed
+Voted down 13-38
+
+This proposed change, called an amendment, would have let districts allow high school students to use phones in the brief time between classes.Amendment It also rewrote what "bell-to-bell" means and left out "breaks", which the passed law includes.AmendmentLaw
+
+What happened · who benefits · who pays · what's uncertain
+← What it does
+Arguments →
+Prototype · built 2026-11-08 · Independent project, not a government website. · Trial 001 · revision 5 (sha256 1aad7c3a868c)
+
+===== Arguments tab (what shows before tapping anything) =====
+HB 1009 · 2026 · Act 395
+
+Phones in Georgia high schools
+Law · signed May 5, 2026
+Takes effect Dec 31, 2026
+Passed checks (round 4)
+Summary
+What it does
+Options
+Arguments
+Sources
+Arguments you'll hear
+
+Tap a card to see who makes the argument, what backs it up, who disagrees and what's missing.
+
+In a survey of 1,002 Georgia parents in fall 2025, 70.8% supported a high school ban and 29.2% opposed it.Survey For this question, the margin of error, or how far off the result is likely to be, is about 4 points either way.Our math
+
+Our archived sources quote four officials and one student who spoke for the law, and one teacher who spoke against it.Our analysis They also quote a public health professor who called parents' emergency concerns valid and said good policies can address them.Our analysis That reflects whom those sources quoted, not how many people hold each view.Our framing The bill passed the House 145 to 20 and the Senate 52 to 0.Bill record In the Senate, 13 senators voted for an amendment to let districts allow high school students to use phones between classes.Bill recordAmendment It failed, and no senator voted against the final bill.Bill record
+
+How to read these cards
+The ban will help students learn
+Supports the law
+
+Supporters say fewer distractions mean more learning; a Florida study found phone bans led to better test scores in the second year.GovernorSurveyFlorida study We found no measured results from Georgia high schools yet.Our analysis
+
+Evidence:
+Supported, with limits
+The ban will help teens' mental health and friendships
+Supports the law
+
+Supporters expect better mental health and in-person connection.SurveyNews, Mar 17 The one study we found, of 12- to 15-year-olds in England, found no evidence of a well-being difference.England study
+
+Evidence:
+Uncertain
+Phone bans are already working in Georgia
+Supports the law
+
+Supporters point to the 2025 law for younger grades and to schools that already limit phones.GovernorNews, Mar 12 The evidence so far is statements, not measured results.Our analysis
+
+Evidence:
+Uncertain
+Families lose direct contact with students during the school day
+Opposes the law
+
+Students won't be allowed to use phones during the school day, so families will have to reach them through the school.Law Our sources have no data on how this affects safety in a crisis.Our analysis
+
+Evidence, by part:
+Supported
+Uncertain
+Enforcing the ban will burden school staff and can lead to conflict
+Opposes the law
+
+Teacher Darryl Adams said he worries that policing phones would burden teachers and administrators and can invite conflict; a Florida study found that enforcing phone bans led to more suspensions at first, especially among Black students.News, Mar 12Florida study No source we reviewed measured staff workload.Our analysis
+
+Evidence, by part:
+Supported
+Uncertain
+High school students should be allowed to keep phone access
+Opposes the law
+
+Teacher Darryl Adams said high school students should keep access to their phones, and 45.5% of parents who oppose a ban cited parental choice as a reason.News, Mar 12Survey This is mainly a question of values.Our framing
+
+Evidence:
+Not mainly factual
+
+Every card uses the same fields for both sides, and one rule sets every evidence label (see “How to read these cards”). Disagreements about values are not treated as misinformation.
+
+← Options
+Sources →
+Prototype · built 2026-11-08 · Independent project, not a government website. · Trial 001 · revision 5 (sha256 1aad7c3a868c)
