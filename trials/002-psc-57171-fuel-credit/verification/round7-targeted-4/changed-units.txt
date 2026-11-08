@@ -1,0 +1,51 @@
+# Trial 002, revision 7.4: units changed since revision 7.3 (2026-11-08)
+# workspace.md line numbers are revision 7.4's. Revision 7.3 is archived as
+# trials/002-psc-57171-fuel-credit/verification/round7-targeted-3/workspace.r7.3.md (with home.r7.3.md, page.r7.3.yaml).
+# Each unit is marked [VALUES GUIDE], [IF-YOU LINE], [IN SHORT] or [OTHER]. L3 is the status line, not reader text.
+# REMOVED units (revision 7.3 line numbers) need no verdict; they show what was taken out.
+
+## workspace.md: 18 changed or new units on 15 lines
+Lines: 3, 14, 15, 159, 165, 167, 168, 173, 181, 189, 197, 282, 294, 318, 331
+
+L3	[OTHER]	Status: Open case at the Georgia Public Service Commission · Final decision scheduled Dec 15, 2026 · Trial 002, revision 7.4: fixes from the third targeted re-check (last fix pass this cycle) <!-- nocheck -->
+L14	[IF-YOU LINE]	As of Nov 8, 2026, no filing we read gives a home's net (both changes together) or its timing. {editorial: scoped to the filings we read; Georgia Power's per-$100 million figures (P-142, P-143) are examples, not a plan's effect; the order leaves the fuel timing "as determined by the Commission" (P-016)}
+L15	[IF-YOU LINE]	As of Nov 8, 2026, no filing we read gives a business's net (both changes together) or its timing. {editorial: scoped to the filings we read; the order leaves the fuel timing "as determined by the Commission" (P-016)}
+L159	[OTHER]	Base rates, the rest of the bill, could rise later. [P-061, P-115, P-016]
+L159	[OTHER]	GAM, a manufacturers' group, also filed testimony. [P-109, P-153]
+L165	[VALUES GUIDE]	**If you care most about large users not shifting costs to others:** GIPL's witness, who backs Plan D, said the PSC has held large loads "to a higher standard when it comes to cost shifting." [P-152, P-097]
+L167	[VALUES GUIDE]	PIA Staff and GIPL both say today's credit shifts costs to fuel-charge payers; Georgia Power and GAM both say real-time money on the base side lowers other customers' base costs. [P-063, P-099, P-124, P-111, P-112]
+L168	[VALUES GUIDE]	GAM says that if the PSC finds a change is needed, either of Georgia Power's proposed changes would "adequately address" the concerns of PIA Staff and intervenors. [P-111]
+L173	[OTHER]	GAM says that if the PSC finds a change is needed, either of Georgia Power's proposed changes would "adequately address" the concerns of PIA Staff and intervenors. [P-111]
+L181	[OTHER]	GAM says that if the PSC finds a change is needed, either of Georgia Power's proposed changes would "adequately address" the concerns of PIA Staff and intervenors. [P-111]
+L189	[OTHER]	GAM says that if the PSC finds a change is needed, either of Georgia Power's proposed changes would "adequately address" the concerns of PIA Staff and intervenors. [P-111]
+L197	[OTHER]	GAM says that if the PSC finds a change is needed, either of Georgia Power's proposed changes would "adequately address" the concerns of PIA Staff and intervenors. [P-111]
+L282	[IN SHORT]	GIPL's testimony says pipelines, like power lines, must meet peaks whenever they occur, so new fees warrant that split until the next rate case. [P-104, P-096]
+L282	[IN SHORT]	Evidence: Mixed on group effects, peaks. {editorial: restates the label}
+L294	[IN SHORT]	**In short:** Fuel charges keep paying pipeline fees; base rates could stay lower. [P-083, P-144, P-061, P-111, P-112]
+L318	[IN SHORT]	**In short:** Fuel charges keep paying most left-out costs; base rates could stay lower. [P-144, P-063, P-065, P-061, P-124]
+L318	[IN SHORT]	Georgia Power says the real-time rate is "not intended to recover all embedded costs" but helps cover fixed costs. [P-121, P-052, P-124]
+L331	[OTHER]	GAM says that if the PSC finds a change is needed, either of Georgia Power's proposed changes would "adequately address" the concerns of PIA Staff and intervenors. [P-111]
+
+## workspace.md: 17 units removed or replaced (revision 7.3 line numbers)
+(r7 L3)	Status: Open case at the Georgia Public Service Commission · Final decision scheduled Dec 15, 2026 · Trial 002, revision 7.3: fixes after the second targeted re-check; third re-check pending <!-- nocheck -->
+(r7 L14)	As of Nov 8, 2026, no filing we read gives a home's net (both changes together). {editorial: scoped to the filings we read; Georgia Power's per-$100 million figures (P-142, P-143) are examples, not a plan's effect}
+(r7 L15)	As of Nov 8, 2026, no filing we read gives a business's net (both changes together). {editorial: scoped to the filings we read}
+(r7 L159)	GAM, a manufacturers' group, says base rates, the rest of the bill, would then see upward pressure. [P-109, P-115, P-061]
+(r7 L165)	**If you care most about every party seeing Georgia Power's cost model:** GIPL's witness, who backs Plan D, said a working copy for intervenors would allow "full stakeholder participation." [P-152, P-096]
+(r7 L167)	PIA Staff and GIPL both say today's credit shifts costs to fuel-charge payers. [P-063, P-099]
+(r7 L168)	GAM says that if the PSC finds a change is needed, either take-or-pay choice would "adequately address" the concerns of PIA Staff and intervenors. [P-111]
+(r7 L173)	GAM says that if the PSC finds a change is needed, either take-or-pay choice would "adequately address" the concerns of PIA Staff and intervenors. [P-111]
+(r7 L181)	GAM says that if the PSC finds a change is needed, either take-or-pay choice would "adequately address" the concerns of PIA Staff and intervenors. [P-111]
+(r7 L189)	GAM says that if the PSC finds a change is needed, either take-or-pay choice would "adequately address" the concerns of PIA Staff and intervenors. [P-111]
+(r7 L197)	GAM says that if the PSC finds a change is needed, either take-or-pay choice would "adequately address" the concerns of PIA Staff and intervenors. [P-111]
+(r7 L282)	GIPL's testimony says pipelines, like power lines, must meet peaks whenever they occur, so new fees warrant the same split until the next rate case. [P-104, P-096]
+(r7 L282)	Evidence: Mixed on two points. {editorial: restates the label}
+(r7 L294)	**In short:** Fuel charges keep paying pipeline fees; base costs could stay lower. [P-083, P-144, P-061, P-111, P-112]
+(r7 L318)	**In short:** Fuel charges keep paying most left-out costs; real-time money keeps helping cover base costs. [P-144, P-063, P-065, P-061, P-124]
+(r7 L318)	Georgia Power says skipping some embedded costs by design doesn't mean real-time customers don't pay their fair share. [P-121]
+(r7 L331)	GAM says that if the PSC finds a change is needed, either take-or-pay choice would "adequately address" the concerns of PIA Staff and intervenors. [P-111]
+
+## home.md: no change in revision 7.4
+
+## page.yaml: 1 changed display string (keeps its citation comment)
+"Plan D": {text: "GIPL's plan"}  # [P-093, P-095]

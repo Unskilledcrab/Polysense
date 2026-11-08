@@ -8,11 +8,11 @@ raw reports are in [verification/round1/](verification/round1/), [verification/r
 [verification/round5/](verification/round5/) and [verification/round6/](verification/round6/); revision 6.3, before the
 reader-first update, and revision 7 with its round 7 reports are in [verification/round7/](verification/round7/).
 
-**Status: revision 7.3 (fixes after the second targeted re-check); third re-check pending.** Round 7 checked revision 7,
-the reader-first update, and **passed**. Revision 7.1 made the listed accuracy and written-rule fixes; its first targeted
-re-check led to revision 7.2, and the second re-check (0 unsupported claims, 3 partial wordings, no high balance issue)
-led to revision 7.3. No card's claim, evidence label or side has changed since round 7. See "Round 7", "Revision 7.1",
-the two targeted re-checks and "Revision 7.3" at the end. (Revision 6.3 passed round 6 and its targeted re-checks.)
+**Status: revision 7.4 (fixes from the third targeted re-check; last fix pass this cycle).** Round 7 checked revision 7,
+the reader-first update, and **passed**. Revisions 7.1 to 7.4 made only the fixes the coordinator listed after round 7 and
+after each of three targeted re-checks; none found an unsupported claim, and the third found 2 partial wordings and no high
+balance issue. No card's claim, evidence label or side has changed since round 7. See "Round 7", "Revision 7.1", the three
+targeted re-checks and "Revision 7.4" at the end. (Revision 6.3 passed round 6 and its targeted re-checks.)
 
 ## Round 1 (revision 1, `verification/round1/workspace.r1.md`)
 
@@ -1040,3 +1040,55 @@ splitting the GAM note into shorter sentences brought it to 8.46.
 - [x] **Test render**: no warnings; the page shows "version 7.3".
 - [x] **Scope held**: the nine evidence labels are identical to revision 7.2's; no card claim or side changed.
 - [ ] **Third targeted re-check**: pending (run by the coordinator).
+
+## Targeted re-check 3 (revision 7.3, `verification/round7-targeted-3/`): results
+
+The coordinator's fresh checks of revision 7.3's changed units. Revision 7.3's page, home items and display settings are kept
+beside the reports (`workspace.r7.3.md`, `home.r7.3.md`, `page.r7.3.yaml`), with the unit list the checkers used.
+
+| Check | Result |
+|---|---|
+| Source re-check (`source-check.json`) | 28 units (24 page, 2 home, 3 `page.yaml`, less the skipped status line): **18 supports, 2 partial, 0 does not support, 0 wrong span**; 8 tags valid, 0 questionable; 14 framing notes (3 medium, 11 low) |
+| Flip test (`fliptest.json`) | Neutrality **4/5**, no high issue; 2 medium (the values note gave only PIA Staff's and GIPL's shared claim; card 8's claim read as a defensive double negative built on "skipping"), 5 low |
+
+The two partials: GIPL's new values line dropped the conditions on its cost-model request (P-096), and "either take-or-pay
+choice" narrowed P-111's "either of GPC's proposed changes" (also on five unchanged lines).
+
+### Revision 7.4: what changed
+
+Change class **correction**; reason: "fixes from the third targeted re-check". This is the last fix pass this cycle. **No card
+claim, evidence label or side changed**; the nine label texts are identical to revision 7.3's. Codes as before; line numbers
+are revision 7.4's. The changed units are in the coordinator's scratch folder as `t002-rev74/changed-units.txt` (18 changed or
+new units on 15 lines, 17 removed or replaced, 1 `page.yaml` string; `home.md` unchanged).
+
+| # | Finding (who raised it) | Change in revision 7.4 | Lines |
+|---|---|---|---|
+| 1a | GIPL's values line was a conditional, procedural request with its conditions dropped (SC L165 partial and medium; FT L165) | GIPL's substantive value in its own words: "If you care most about large users not shifting costs to others: GIPL's witness, who backs Plan D, said the PSC has held large loads "to a higher standard when it comes to cost shifting."" [P-152, P-097] (35 words; quote 10 words, verbatim from P-097's "holding them to a higher standard when it comes to cost shifting") | 165 |
+| 1b | The note gave only one pair's shared claim (FT L167 medium; SC framing L167 medium) | "PIA Staff and GIPL both say today's credit shifts costs to fuel-charge payers; Georgia Power and GAM both say real-time money on the base side lowers other customers' base costs." [P-063, P-099, P-124, P-111, P-112], each passage checked. GAM's line keeps "keeping base rates down" | 167 |
+| 2 | "Either take-or-pay choice" narrowed P-111 (SC L168 partial; also L173, L181, L189, L197, L331) | All six now say "either of Georgia Power's proposed changes would "adequately address" the concerns of PIA Staff and intervenors" (P-111's own scope) | 168, 173, 181, 189, 197, 331 |
+| 3 | Card 8's claim used "skipping" and a double negative (FT L318 medium; SC framing L318 medium) | "Fuel charges keep paying most left-out costs; base rates could stay lower. [P-144, P-063, P-065, P-061, P-124] Georgia Power says the real-time rate is "not intended to recover all embedded costs" but helps cover fixed costs. [P-121, P-052, P-124]" (39 words, with the evidence restatement unchanged) | 318 |
+| 4 | The options intro gave the base-side effect only as GAM's warning (SC framing L159) | "Base rates, the rest of the bill, could rise later" in our voice [P-061, P-115, P-016], as lines 9 and 24 do. GAM's warning is dropped from the intro (its values line carries it), and GAM is introduced as "a manufacturers' group, also filed testimony" [P-109, P-153] (60 words) | 159 |
+| 5 | Low items (SC and FT framing) | Card 6: "base rates could stay lower". Card 5: "Evidence: Mixed on group effects, peaks", with "so new fees warrant that split" to stay at 40 words. Lines 14 and 15: "net (both changes together) or its timing", as lines 16 and 17 have; to fit 45 words, both lines drop Georgia Power's "base rates are frozen through 2028" sentence, which gave timing for the cost side only (FT L14); the freeze is still in "Decided now, and decided later". Plan D chip: "GIPL's plan" [P-093, P-095] | 14, 15, 282, 294; `page.yaml` |
+
+### Open items (targeted re-check 3, not changed in revision 7.4)
+
+| # | Open item (who raised it) | Note |
+|---|---|---|
+| O32 | Line 159: "Each plan" could be read to include Plan A, and the appositive reads like a list (SC framing L159) | Next revision; see O19 |
+| O33 | The business "If you" line leaves out GAM's group comparison (P-116) (SC framing L15) | See C6 |
+| O34 | Line 16: "baseline" isn't explained before it is used, and "standard-rate changes" can read as rate-design changes (SC framing L16) | Next revision; see O30 |
+| O35 | Line 49 runs nine sentences and uses "Energy Committee" before line 72 explains it (SC framing L49) | Next revision |
+| O36 | Home line 5: "real-time payments vote" is vague, and its computed tag makes the Commission the one crediting (SC framing home L5) | Next revision |
+| O37 | Chips and labels: "PIA" may be opaque on a chip; S10 is three words and names the party, not the source type (SC framing `page.yaml` L14, L28) | Next revision |
+| O38 | "Net" as a noun is hard at grade 6–8, on lines 14–16 (SC framing L14) | Next revision |
+| O39 | Card 5: nothing in the line shows why it says "GIPL's testimony says" (FT L282) | Next revision |
+
+### Step 5 checklist (revision 7.4)
+
+- [x] **Every sentence is cited or tagged.** `check_citations.py` on `workspace.md`: PASS, 548 units (411 cited, 59 analysis,
+      66 editorial, 12 computed), 0 errors, 0 warnings. `home.md`: PASS, 8 units (7 cited, 1 computed), 0 errors, 0 warnings.
+- [x] **Passages unchanged**: 166, all cited; `verify_hashes.py`: PASS.
+- [x] **Reading grade** (`readability.py`): 30-second 7.3 (90 words), What it means for you 7.6, Layer 1 7.3, Layer 2 8.4,
+      Layer 3 8.4 (target ≤ 8.5). Not targeted: Layer 4 9.9. No budget WARN lines, no CHECK lines.
+- [x] **Test render**: no warnings; the page shows "version 7.4".
+- [x] **Scope held**: the nine evidence labels are identical to revision 7.3's; no card claim or side changed.

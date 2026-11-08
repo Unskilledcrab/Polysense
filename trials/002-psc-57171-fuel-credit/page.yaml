@@ -12,7 +12,7 @@ option_chips:                      # one chip per option, matched by the start o
   "Plan A": {text: "Keep today's method"}  # [P-048]
   "Plan B": {text: "Georgia Power's plan"}  # [P-119, P-128]
   "Plan C": {text: "PIA Staff's plan"}  # [P-006, P-059, P-073]
-  "Plan D": {text: "Interfaith group's plan"}  # [P-093, P-095]
+  "Plan D": {text: "GIPL's plan"}  # [P-093, P-095]
 short_labels:                      # source chip labels: one or two words, so a chip fits on a phone line
   S01: Docket
   S01b: Filing list
