@@ -1,0 +1,100 @@
+{
+ "checker": "independent-source-verifier",
+ "document": "/home/user/Polysense/trials/002-psc-57171-fuel-credit/home.md",
+ "units": [
+  {
+   "line": 5,
+   "sentence": "The PSC holds a hearing on how business customers' real-time payments count toward fuel costs; to ask wheth...",
+   "marker": "[P-010, P-016, P-025, P-163]",
+   "verdict": "supports",
+   "evidence_span": "November 12, 2026 Beginning after the regularly scheduled Committee Meetings, the Commission will hear applications to intervene",
+   "correct_passage": "",
+   "problem": "Facts are supported, but this \"Act now\" item gives no time (P-023 lists the hearing at 9:35 a.m., after committee meetings that start at 9:30 a.m.), no place and no phone number. The \"Observe\" label also implies the public may attend, which no cited passage states for this hearing (P-032 covers administrative sessions; P-025 and P-159 imply public witnesses at hearings).",
+   "suggested_fix": "Add \"after the 9:30 a.m. committee meetings (listed at 9:35 a.m.)\" and the PSC phone number from P-163 (404-656-4501, press 2)."
+  },
+  {
+   "line": 6,
+   "sentence": "Submit any public comment to the PSC by this time, 24 hours before the Dec 15 session where it is scheduled...",
+   "marker": "{computed: comments must be submitted 24 hours before a vote (P-030); the final decision is scheduled for the Dec 15 Administrative Sessi...",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Reason (valid): The arithmetic checks: the decision is set for the Dec 15 Administrative Session (P-013), which starts at 9:30 am (P-024), and 24 hours earlier (P-030) is 9:30 a.m. Dec 14. Using the session start is the earliest possible deadline, so the stated time is safe.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 10,
+   "sentence": "The PSC's Energy Committee takes up the case at its meeting, which begins at 9:30 a.m.",
+   "marker": "[P-012, P-024]",
+   "verdict": "supports",
+   "evidence_span": "This matter shall be considered at the scheduled Energy Committee Meeting, which begins at 9:30 a.m.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 11,
+   "sentence": "The PSC is scheduled to decide how much of business customers' real-time payments counts toward fuel costs.",
+   "marker": "[P-013, P-016]",
+   "verdict": "supports",
+   "evidence_span": "A Final Decision on this proceeding will be made by the Commission on December 15, 2026 at the regularly scheduled Administrative Session.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 15,
+   "sentence": "Georgia Power filed the last written testimony.",
+   "marker": "[P-117, P-009, P-010, P-011]",
+   "verdict": "supports",
+   "evidence_span": "October 27, 2026 Georgia Power may file any pre-filed rebuttal testimony in Docket 57171 by 4:00 p.m.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 15,
+   "sentence": "It and an interfaith group want solar, wind and biomass contracts taken out of the fuel credit entirely, wh...",
+   "marker": "[P-128, P-129, P-050, P-058]",
+   "verdict": "supports",
+   "evidence_span": "The Company and GIPL recommend the Commission approve Option 1.",
+   "correct_passage": "",
+   "problem": "Minor scope: the options cover all take-or-pay (non-dispatchable) contracts, which P-063 says also include Qualifying Facilities. \"Taken out of the fuel credit\" means taken out of the credit's calculation. Georgia Power offered both options and prefers Option 1 (P-065). The item says the credit grows but not that the same dollars come off the base side (P-061, P-115).",
+   "suggested_fix": ""
+  }
+ ],
+ "framing_issues": [
+  {
+   "line": 5,
+   "text": "Observe · Nov 12, 2026",
+   "issue": "An \"Act now\" item with no start time (P-023: 9:35 a.m., after the 9:30 a.m. committee meetings), no place and no phone number, though it tells readers to call. \"Observe\" implies the public may attend, which the cited passages don't state for this hearing.",
+   "severity": "medium"
+  },
+  {
+   "line": 6,
+   "text": "Submit any public comment to the PSC by this time",
+   "issue": "Tells readers to submit a comment but gives no way to do it. The PSC page (P-030) gives none, so the item should point to the PSC contacts (P-163). There is also no \"dates can change\" caveat on a computed deadline.",
+   "severity": "medium"
+  },
+  {
+   "line": 15,
+   "text": "either way the credit grows",
+   "issue": "Says only that the credit grows, which sounds like a plain benefit to customers. It leaves out that the same dollars come off the base side and base rates could rise later (P-061, P-115, P-105). GAM's view is also absent.",
+   "severity": "medium"
+  },
+  {
+   "line": 15,
+   "text": "It and an interfaith group",
+   "issue": "Georgia Power and PIA Staff are named by role, but GIPL is described only as \"an interfaith group.\" Use its name or role, as the workspace does.",
+   "severity": "low"
+  }
+ ],
+ "summary": {
+  "units_checked": 6,
+  "supports": 5,
+  "partial": 0,
+  "does_not_support": 0,
+  "wrong_span": 0,
+  "questionable_or_invalid_tags": 0
+ }
+}

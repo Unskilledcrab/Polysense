@@ -35,6 +35,10 @@ every lead was re-checked on a primary page and re-snapshotted here.
 | Revision 4: draft | 11:40 → 11:43 | Rewrote from the dispositions: the base-side half in Layer 2, the 30-second version and beside every Staff figure; a label rule that grades the undisputed premise apart from the dispute; one reply rule with "had said"; a new card 6 for GAM's pipeline position (later cards renumbered); parallel plan fields; claims paired with their counters in Layer 2; new glossary entries; questions rewritten | — |
 | Revision 4: gate and accuracy pass | 11:43 → 11:47 | First gate: number warnings for "cards 8 and 9" inside a cited sentence (moved to its own `{editorial}` sentence) and for a "Table 5" whose passage never prints the 5 (reworded). The 30-second version read 8.6, so long sentences were split (6.8); labels cut from 88 words to 71. Re-read each changed sentence against its passages | Caught in my own pass: "answered" for a rebuttal that only "says"; an unattributed "real-time customers' prices would not change" (now the case's scope, cited to P-133); a Markdown link the prototype would show as raw text |
 | Revision 4: final pass, home and write-up | 11:47 → 12:03 | Cut repeats (Plan A's uncertainty, a commissioner's background line), cut the two longest labels to 67 words, led card 7's "What's missing" with what is missing, quoted Georgia Power's motion at full strength, and added Georgia Power's footnote to Plan D. `home.md`: "Observe" for Nov 12, the Oct 27 item in plain words, Dec 10 under "Coming up". verification.md (round 3 results, 30 dispositions, 11 contradictions, revision 4 checklist), this log and README. Gate re-run: clean | The page grew to 415 units (402 before); the new card adds 12 |
+| Round 4 (independent checkers) | (coordinator) | Fresh blind source check and bias panel on revision 4; calibration carried over | Source check: 310 supports, 11 partial, 0 unsupported, 0 wrong span, 421/421 spans grounded; no wrong figure, date, quote or party name. Bias panel **failed** on one item: both advocates 4/5 (the utility side up from 3), editor 4/5 on neutrality with 1 high issue (the 30-second "Who it affects" line, flagged by all three), clarity 3/5 |
+| Read round 4 | 13:00 → 13:05 | Saved revision 4's page, home and passages and the five round 4 reports in `verification/round4/` (originals untouched); read all five in full. The coordinator asked for a narrow revision: line 9, the accuracy flags, six agreed wording fixes, and nothing that changes a card's claim, a grade, the card order or the plan structure | — |
+| Revision 5: narrow edits | 13:05 → 13:10 | Line 9 rewritten as facts (both halves of the shift, every plan raises the credit, the per-$100 million examples, the base-rate dispute left to the next base rate case); "fuel credit" glossed in line 8; 13 source-check flags fixed; six agreed wording fixes; home items moved or extended (Nov 12 to "Coming up" with the PSC's number, Dec 14 with how to ask, Oct 27 with the base side) | The first rewrite of the 30-second version ran 156 words; cut to 149 by folding the blacked-out note into the plans sentence and glossing "fuel credit" in parentheses |
+| Revision 5: gate and write-up | 13:10 → 13:14 | Gate clean: 420 units, 0 errors, 0 warnings; reading grades 6.6 to 8.2 in the targeted sections; hashes and passages unchanged; test render parses. verification.md (round 4 results, 9 changes, 20 open items, 9 contradictions, revision 5 checklist), this log and README | — |
 
 ## Where the runbook did not fit (and what I did)
 
@@ -152,6 +156,16 @@ From round 3 (revision 4):
 27. **Follow the page's own printed rules.** When the ordering rule promises a card, write the card or change the rule.
 28. **Borrowed support carries its source's own qualifier** (a showing made "simply for illustration", a party that
     rejects the plan), or it doesn't go in the support field.
+
+From round 4 (revision 5):
+
+29. **Keep a party's hedge.** Quote a double negative or a condition as filed ("does not mean that … do not pay";
+    "depending on how …"); a flat paraphrase makes the claim stronger than it was filed.
+30. **A summary states facts, not one party's argument and another's rebuttal.** Same verb, same kind of label for every
+    party, and no last word.
+31. **When the page computes, give every bound.** A net figure for one scenario only argues for that scenario.
+32. **When both advocates accept the balance, fix only the agreed accuracy items** and log the rest as open items, with
+    contradicting suggestions side by side (Trial 001's lesson, applied here).
 
 ## Automation notes (not eligible: 0 of 3 runs for this kind of decision)
 

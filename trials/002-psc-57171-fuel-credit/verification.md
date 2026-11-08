@@ -3,13 +3,14 @@
 Method: the AI-only [verification protocol](../../docs/process/verification-protocol.md). There is no
 human in the loop ([ADR 0014](../../docs/adr/0014-ai-only-verification.md)). The checkers were independent
 agents run by the coordinator; the drafter ran only the deterministic gate. Copies of each round's inputs and
-raw reports are in [verification/round1/](verification/round1/), [verification/round2/](verification/round2/) and
-[verification/round3/](verification/round3/).
+raw reports are in [verification/round1/](verification/round1/), [verification/round2/](verification/round2/),
+[verification/round3/](verification/round3/) and [verification/round4/](verification/round4/).
 
-**Status: not verified.** Rounds 1 to 3 (revisions 1 to 3) all failed the bias panel, though round 3 came closer
-(the more-credit advocate 4/5 and the editor 4/5 on neutrality; the utility-side advocate 3/5 with 1 high item). The
-blind source checks of rounds 2 and 3 met the accuracy part of the pass rule. Revision 4 answers every round 3 finding
-below and passes the deterministic gate; it has not been through round 4.
+**Status: not verified.** Rounds 1 to 4 (revisions 1 to 4) all failed the bias panel. Round 4 failed on one item:
+both advocates rated the page 4/5, and the editor rated neutrality 4/5 with one high issue, the 30-second "Who it
+affects" line. The blind source checks of rounds 2 to 4 met the accuracy part of the pass rule. Revision 5 is a narrow
+fix of that line, the round 4 accuracy flags and six agreed wording items; every other finding is an open item below.
+It passes the deterministic gate and has not been through round 5.
 
 ## Round 1 (revision 1, `verification/round1/workspace.r1.md`)
 
@@ -257,6 +258,102 @@ and 9.
 | C9 | The caveat on Georgia Power's account of GIPL's switch | M (IM8): add card 5's caveat to Plan D. U (UW9) and F10: a caveat on one party's account only is uneven | Facts, not caveats: card 5 says Georgia Power cites transcript pages and the Oct 15 transcript is listed without a file; Plan D adds Georgia Power's own footnote (the change followed its data responses) and points to card 5 |
 | C10 | Staff's "simply for illustration" in card 3 | U (UW2): move it under "What challenges it". M (IM4) and the brief (d): borrowed support only with each source's own qualifier; rebuttals under challenges | The brief's rule: Staff's words about its own showing ride with that showing in the support, as the source's qualifier. Staff's rebuttals of the plan (P-082, P-085) stay under "What challenges it" and "Who disagrees"; P-145 also answers Georgia Power's P-125 in card 4 |
 | C11 | Decision-block items | E3: each item ≤ 15 words. The style guide and round 2's checkers: define take-or-pay contracts and pipeline fees at first use | Positions moved out; the two glosses stay, so items 1 and 2 run 29 and 17 words |
+
+## Round 4 (revision 4, `verification/round4/workspace.r4.md`)
+
+| Layer | Check | Result |
+|---|---|---|
+| 1 | Deterministic gate | **Pass.** 415 units (321 cited, 43 analysis, 43 editorial, 8 computed), 0 errors, 0 warnings. 66/66 hashes match. Reading grade: 30-second 6.8, L1 6.8, L2 8.0, L3 8.1 (Layer 4 9.9) |
+| 2 | Blind source check (fresh agent, `source-check.json`, `source-check-home.json`) | **310 supports, 11 partial, 0 does not support, 0 wrong span.** 92 tags valid, 2 questionable, 0 invalid; 18 framing issues (2 medium, 16 low). `home.md`: 5 supports, 1 valid tag; 4 framing issues (3 medium, 1 low). **421/421 evidence spans grounded.** No wrong dollar figure, date, quote or party name; all arithmetic redone correctly |
+| 3 | Bias panel | **Fail, on one item.** Advocate for Georgia Power's and GAM's positions **4/5**, up from 3 in every earlier round (7 missing arguments; 13 wording items, 7 medium; 5 imbalance items, 2 medium; 6 label notes). Advocate for PIA Staff's and GIPL's positions 4/5 (10 missing arguments; 15 wording items, 7 medium; 8 imbalance items, 1 high, 4 medium; 8 label notes). Standards editor: neutrality 4/5, clarity 3/5; 28 issues (**1 high**, 10 medium, 17 low) and 19 flip-test items. The one high item is the 30-second "Who it affects" line, which all three flagged from different sides |
+| 4 | Calibration | Carried over from round 1 (same verifier prompt and method) |
+
+Both advocates now meet the bar, so the coordinator asked for a narrow revision 5, as in Trial 001's last round:
+line 9, the source check's accuracy flags, and six wording fixes the checkers agree on. Card claims, evidence
+grades, card order and plan structure are unchanged. Every other finding is logged below as an open item.
+
+### What revision 5 changed
+
+Codes as in round 3 (SC = blind source check, L = revision 4 line; U and M = the two advocates; E = editor issues,
+F = flip tests). Revision 5 keeps revision 4's line numbers in `workspace.md`.
+
+| # | Finding (who raised it) | Change in revision 5 | Lines (revision 5) |
+|---|---|---|---|
+| 1 | **High.** The 30-second "Who it affects": GAM "warns" (the page's only alarm verb); "The PSC's advocacy staff" lent the regulator's name to one party and answered GAM last; "could have absorbed it" dropped Staff's 2023–2025 look-back; GIPL was absent; no sense of each plan's size (E1 high, E2, E3, F1, U UW1, U IM2, M UW1, M IM1 high, SC L9 partial, SC framing L9) | Facts only, with no party argument or rebuttal: both halves of the shift; every plan we could read would raise the credit, by amounts partly blacked out; Georgia Power's per-$100 million examples; parties disagree on whether, and how much, base rates would rise later, and the next base rate case decides (P-115, P-105, P-090, P-016). "Fuel credit" is glossed at first use. The absorption claim stays in Layer 2, now "Looking back at 2023–2025", and in card 9. The 30-second version is 149 words, as before | 8, 9, 103 |
+| 2 | Source-check partials and questionable tags (SC L8, L27, L52 questionable, L53, L105, L110, L121 twice, L139, L146, L206 questionable, L268) | L8 cites P-042 and P-043 for "hourly". L27: "A legal notice of the case was first published". L52: the "Observe" label is gone; the FAQ's "Proceedings are open to the public" is quoted where it applies (administrative sessions), and we say we found nothing on committee meetings. L53 cites P-003. L105 keeps the two access-charge groups apart. L110: GIPL said rate design is outside this case "but still recommended" new pricing "as quickly as possible". L121: "GAM proposes no change of its own" (P-110, P-111, P-115), and Georgia Power's double negative is quoted with its hedge. L139: "If the PSC adopts a change, …". L146 keeps GIPL's condition from P-100. L206's tag says what P-082 and P-157 dispute. L268 quotes Georgia Power's double negative with its hedge | 8, 27, 52, 53, 105, 110, 121, 139, 146, 206, 268 |
+| 3 | Home: "Observe" implied the public may attend the Nov 12 hearing; no way to submit a comment; "either way the credit grows" left out the base side; GIPL named only as "an interfaith group" (SC home framing L5, L6, L15) | Nov 12 moved from "Act now" to "Coming up" with no power label; it gives the calendar time (9:35 a.m., P-023) and the PSC's number to ask whether the public may speak (P-163). The Dec 14 item adds the number to ask how to submit a comment (P-163). The Oct 27 item names Georgia Interfaith Power & Light, calls PIA Staff "a party in the case", and adds that the same dollars come off the base side (P-061, P-115) | home 5, 9, 15 |
+| 4 | "The record also shows" answered Staff in the page's own voice (E7, F2, M UW2, SC framing L105) | Each reply is attributed: Georgia Power on baseline power (P-043, P-048, P-052); PIA Staff (one tariff, P-071) and GAM (100 MW and up, P-168) on their access charges. Staff's "absorbing all these costs" is quoted | 105 |
+| 5 | The 17-cent net per $100 million was computed only for the case GAM argues (E6, F3, M IM3) | Both bounds in one `{computed}` sentence: about $1.48 a month less if base rates don't change, about 17 cents more if they later rise by the full amount; where the result falls is left to the next base rate case | 102 |
+| 6 | The Layer 3 intro gave GAM's reading without line 106's caveat (E8, F4, M IM2) | The caveat is added, as line 106 words it (C6) | 116 |
+| 7 | "The PSC's advocacy staff" (E1, F1, U UW1) | Gone from line 9; home line 15 says "PIA Staff, a party in the case". Line 19's formal introduction already says Staff takes part "as a party" | 9; home 15 |
+| 8 | GIPL quotes trimmed into concessions: P-098 (M UW3), P-105 (M UW7, E25, F9), P-099's "While I agree with this concept" (U UW5) | P-098 in full in Plan A and card 8; P-105 in full in card 9; card 8 quotes P-099 from "While I agree with this concept" | 122, 268, 278 |
+| 9 | "Staff corrected page 7" overstated the correction (M UW13) | "corrected one line on page 7" (P-039); "Our tools could not read the correction" | 138 |
+
+### Open items (round 4, not changed in revision 5)
+
+| # | Open item (who raised it) | Note |
+|---|---|---|
+| O1 | Every card header shows "Supported" and then "Mixed" or "Uncertain", and the "Supported" item is chosen differently from card to card; "predictive" is missing on cards 2 and 3 (E9) | A label-rule change; brief item 4 holds grades. See C1–C3 |
+| O2 | Label clauses the advocates propose: card 3 (U LA1; M LA3, an "Uncertain" part on the unreviewed cost model), card 4 (M LA1), card 5 (U LA5; M LA2), card 6 (U LA2; M LA4), card 7 (M LA7), card 8 (U LA3; M LA5), card 9 (U LA4; M LA6), cards 1 and 2 (U LA6; M LA8 says keep them) | Grade changes. See C1–C3 |
+| O3 | Card 9's "In short" runs 60 words and carries two rebuttals (E11, F8, U UW7); "accepts" and "prefers" frame Staff's arguments as concessions (M UW8) | Changes card summaries |
+| O4 | Reply rule: Georgia Power answers for GAM on card 9 (E26, F10, SC framing L280), and the order's sentence there acts as a reply (M UW9); card 7's Staff reply restates its guideline (E26); card 6 leaves Staff's double-recovery challenge unanswered though Georgia Power's P-123 is on record (U IM4); card 7's GIPL P-097 should read "had said" (U UW12) | See C4 |
+| O5 | Staff's estimate that absorbing its plan would have cut Georgia Power's profit rate by about 0.49 points a year (P-091) is missing from Layer 2 and card 9 (E16, U UW11, M MI5); Plan A's "Who benefits" could carry it (E19) | All three reviewers agree. First candidate for the next revision |
+| O6 | Card 3's borrowed support carries each source's qualifier and card 4's doesn't (U UW6, SC framing L218); GIPL's words don't belong in card 3's support (M UW14); P-145 is trimmed, and Staff's illustration used a summer peak (M UW15, SC framing L206) | See C5 |
+| O7 | Missing Georgia Power and GAM points: GAM's class shares in card 9 (U MI1); Georgia Power's guideline critique in cards 2 and 4 (U MI2); Georgia Power's support for card 6 (P-052, P-124, P-123) and GAM's "other components" (P-110) (U MI3); Georgia Power's baseline answer and "not similarly situated" in cards 7 and 8 (U MI4); Georgia Power "supported and agreed to" the review, and GAM joined the stipulation (U MI6); Georgia Power's economic-development reasons (P-045) (U MI7); GAM's cards are the thinnest on support (U IM1) | Content additions |
+| O8 | Missing PIA Staff and GIPL points: Staff's three guidelines and their grounding (M MI1); why the review exists, in the 30-second version (M MI2; it is in Layer 1's May 28 entry); the double-recovery premise in Georgia Power's own words (M MI3); "prices don't change" as a challenge in card 8 (M MI4); card 6's challenge from P-071 and P-055 (M MI6); the order's own scope text (M MI7, F15); GIPL's reported switch as support in card 4 (M MI8); the $322 million balance tied to GIPL's second factor (M MI9); Staff's mandate from P-006 (M MI10) | Content additions |
+| O9 | Monthly reports: Georgia Power's reasons against them (P-132) never appear, and no question covers reports (E5, F17, U MI5, M question note) | One sentence in Plan C and one question |
+| O10 | Layer 2: line 101 cites Georgia Power's scope statement (P-133) for the page's own sentence (E15, SC framing L101); "either an asset or a liability" makes the order look neutral on direction (U UW2); line 104 drops GIPL's "apparent" and lacks card 7's caveat, and only Georgia Power's $102 carries a single-source note (E17, F5, U UW4); the base-rate freeze reads as fact (SC framing L122); line 106's caveat overstates what GAM's comparison needs (U UW3) | See C6 and C7 |
+| O11 | Card 7's "not a finding by the PSC" caveat applies to GIPL only (M UW5) | See C7 |
+| O12 | Plans: one shared "Who pays" sentence for Plans B–D, and "By PIA Staff's estimates" on the base-side matches (E20, E22, F12); GAM's pipeline view in Plans B–D (E21); Plan A's "What's uncertain" leads with GIPL's concession and leaves out Staff's double-recovery point (M UW4); Plan A's "Who benefits" alone carries a rebuttal and the freeze (U UW10); Plan B's "Who pays" omits what stays on the fuel charge (M IM8); Plan C's Georgia Power critiques have no pointer to cards 4 and 7 (M IM7); only Plan B has a challenge in "What's uncertain" (F18); Plan D repeats GIPL's member congregations (F13); Georgia Power's account of GIPL's switch appears three times (F11); "unknown" should be "not public" (SC framing L130, L146); repeat "a hidden figure is not zero" in Plans B and D (M IM4) | Plan structure; brief item 4 |
+| O13 | Each side says the other's estimates get the stronger treatment (U IM3; M IM3, M IM4) | See C8 |
+| O14 | Card 2: "fixes" and "than today's method" (E23, F7, U UW8, M UW11, SC framing L194); shared points counted for Option 2 only (U IM5); card 2 alone carries the base-side match in its support (M UW10) | Card 2's support field |
+| O15 | Cards 7 and 8 answer the same question unevenly (M IM5); "already pay" in card 8's "In short" and in Q4 (M IM6) | Card claims; brief item 4 |
+| O16 | Decision block: "Count both, or neither?" leaves out keeping today's count (E4, SC framing L61); 113 words against about 80, and the RSM note (E14) | Next revision |
+| O17 | Questions: Q2's "now" against "possible" (E27; U question note); Q5's "homes compared with businesses" (E28); Q4's "already" (M); the order's scope text in Q6 (M); Q3 on projects that may not arrive and on access charges (U); Staff's guidelines as policy (U); a reports question (E5, M); hidden evidence (M); Q1's order of options (U) | Next revision |
+| O18 | Clarity: Layer 4 reads at about grade 11; terms left undefined (Return on Equity, interchange energy rate, hedging, carrying costs, cost causation, rate design, rebuttal); long rubric sentences (E10, SC framing L184, L280); Southern Company Services not tied to Georgia Power (SC framing L156); "Table 1" unexplained (SC framing L265); "Georgia Power's name for" in the capital substitution entry (U UW13, F16); P-103 in the passive (M UW12); Staff's $1.35 can read as a forecast (SC framing L138); the legal notice calls the 1-800 number "inside Georgia only" (SC framing L47) | Next revision |
+| O19 | One party's view is missing (Resource Supply Management; E12); no links (E13, SC L53); GIPL's stake isn't described (F14) | OCR needs an approved tool; the prototype shows Markdown links as raw text; P-093 says nothing about GIPL's stake |
+| O20 | Home: no "dates can change" note on the computed deadline (SC home framing L6); GAM's view is absent from the Oct 27 item (SC home framing L15) | Next revision |
+
+### Contradicting suggestions (round 4)
+
+| # | Point | Views, side by side | Choice now |
+|---|---|---|---|
+| C1 | Card 9's label | U (LA4): grade the direction "Mixed" (Georgia Power and GIPL point the same way as GAM; only Staff hedges), and keep "Uncertain" for size and timing. M (LA6): keep "Uncertain" on the base-rate effect, and add a "Mixed" part on whether the base-side money is a surplus | No change (brief item 4) |
+| C2 | Card 6's label | U (LA2): add the marginal-cost half to "Supported", name Georgia Power as agreeing in the "Mixed" part, and give the $264 million as size. M (LA4): take access charges out of "Supported" and add a "Mixed" part on whether access charges or the credit should cover new fees | No change |
+| C3 | Card 8's size part | Round 3's M (LA4) asked for Georgia Power's public $264 million, which revision 4 used. Round 4's M (LA5): that figure isn't tied to these costs, so say no public estimate. Round 4's U (LA2): card 6's size should match card 8's $264 million | No change; the advice conflicts across rounds and sides |
+| C4 | Who answers a challenge on GAM's cards | E (E26, F10) and SC (framing L280): never let a third party answer for a side; use GAM's own words (P-112) or end on the challenge. U (IM4): card 6 should carry Georgia Power's answer (P-123) to Staff's double-recovery challenge. M (UW9): the order's sentence belongs in "What's uncertain" | No change |
+| C5 | Borrowed support in cards 3 and 4 | U (UW6) and SC (framing L218): qualify card 4's borrowed support the way card 3's is, or move card 3's qualifiers to "What challenges it". M (UW14): GIPL's words don't belong in card 3's support at all. Round 3's brief: support carries each source's own qualifier | No change |
+| C6 | The caveat on GAM's class-share reading | E (E8, F4) and M (IM2): add line 106's caveat ("assumes base rates later absorb the full amount") to the Layer 3 intro. U (UW3): that caveat overstates; the comparison holds if any part reaches base rates, and homes pay more overall only if about 95% does (55.36 / 58.07) | The brief's choice: added to line 116 as line 106 words it. U's correction to both lines stays open (O10) |
+| C7 | The "not a finding by the PSC" caveat on GIPL's P-097 | E (E17, F5) and U (UW4): add it at line 104 too, and keep "apparent". M (UW5): drop it, or apply the same caveat to Georgia Power's outcome claims (P-055) | No change |
+| C8 | Which side's estimates get the stronger treatment | U (IM3): Georgia Power's $102 and $264 million carry caveats and rebuttals, while Staff's figures get no single-source note. M (IM3, IM4): Georgia Power's per-$100 million numbers are the page's base for calculation, Staff's figures carry stacked caveats, and the redactions leave Staff's plan as the only one with a visible base-side cost | No change, except that line 102 now gives both bounds (row 5 above) |
+| C9 | What the 30-second version holds | E (E1): the shortest fix is to drop party views. M (IM1, MI2): say three of the four parties we could read propose a bigger credit, and why the review exists. U (IM2): give each side's core claim a clause, or keep to facts | Facts only (row 1 above). Why the review exists stays in Layer 1 (O8) |
+
+## Step 5 checklist (revision 5)
+
+- [x] **Every sentence is cited or tagged.** `check_citations.py` on `workspace.md`: PASS, 420 units (325 cited,
+      44 analysis, 43 editorial, 8 computed), 0 errors, 0 warnings. `home.md`: PASS, 9 units (8 cited, 1 computed).
+- [x] **Quotes verbatim; numbers and dates in a cited passage or `{computed}`** (same run). The eight `{computed}` items are
+      revision 4's; the per-$100 million item now gives both bounds.
+- [x] **Every cited passage ID exists**; all 163 passages are cited. `build_passages.py`: 163 passages, 0 errors.
+- [x] **Hashes**: `verify_hashes.py` PASS, 66 files across 35 retrieved sources.
+- [x] **Reading grade** (`readability.py`): 30-second 6.6 (149 words), L1 6.8, L2 8.2, L3 8.2 (target ≤ 8.5). Not
+      targeted: Layer 4 10.0. Card labels 53–67 words, unchanged.
+- [x] **Scope held.** No card claim, evidence grade, card order or plan structure changed. The workspace keeps revision 4's
+      line numbers; 19 lines changed (the status line plus the lines in the table above).
+- [x] **Length.** 420 units (revision 4: 415). About 8,670 words outside labels (revision 4: about 8,470), mostly from the
+      GIPL and Georgia Power quotes restored in full.
+
+## Where I'm least sure (revision 5)
+
+1. **Line 116's caveat** repeats line 106's wording, which the utility-side advocate says overstates what GAM's comparison
+   needs (C6).
+2. **"Every plan we could read would raise the credit"** rests on each plan's take-or-pay part (P-058, P-115, P-128) and the
+   Layer 3 reading of the other parts; Resource Supply Management's testimony is unread.
+3. **The Nov 12 home item** now sits under "Coming up" with no power label. Whether the public may attend or speak is still
+   unconfirmed by any passage, so it only says how to ask.
+4. **Line 102's lower bound** assumes base rates don't change at all. The order records the base-side change as a regulatory
+   asset or liability (P-016), so that bound depends on how the next base rate case treats it.
+5. **O5 (Staff's 0.49-point estimate)** is agreed by all three reviewers but left out under the narrow brief.
 
 ## Step 5 checklist (revision 4)
 
