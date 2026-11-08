@@ -1,0 +1,105 @@
+{
+  "checker": "independent-source-verifier (targeted 2)",
+  "document": "/home/user/Polysense/trials/003-fulton-2027-budget/workspace.md",
+  "units": [
+    {
+      "line": 46,
+      "sentence": "**Not published yet:** On Nov 8, the county's budget page didn't show the 2027 proposal, and the newest notice on its Public Notices page was for the commission's October hearings.",
+      "marker": "{analysis: P-045 and P-042, captured Nov 8, 2026}",
+      "verdict": "valid",
+      "evidence_span": "",
+      "correct_passage": "",
+      "problem": "",
+      "suggested_fix": "",
+      "reason": "P-045 (budget page, captured 2026-11-08) shows the page's newest documents, all FY2026 (adopted, proposed, revised proposed, revised presentation), so no 2027 proposal was shown. P-042 (Public Notices page, captured 2026-11-08) lists the 'October 2026' notice of Budget Commission special called meetings, Oct 12-22, 'for the purpose of holding budget hearings for Fulton County's 2027 General Fund Budget', followed by 'September 2026', so it is the newest. A claim that something is absent from a page is an inference, so the analysis tag fits."
+    },
+    {
+      "line": 136,
+      "sentence": "In the 2026 cycle, the budget book lists net spending changes to the county manager's proposal dated Jan 7, adding $20,597,446, and Jan 21, taking out $16,648,868.",
+      "marker": "[P-054, P-047]",
+      "verdict": "partial",
+      "evidence_span": "Total of Expenditures $ 836,101,686 $ 866,772,399 $ 920,297,281 $ 1,053,152,000 $ 20,597,446 $ ( 16,648,868) $ 1,057,100,578",
+      "correct_passage": "",
+      "problem": "Scope: P-054 is the General Fund schedule only ('FY2026 Adopted Budget - General Fund'). The sentence presents the figures as net spending changes to the county manager's whole proposal, which covered all county funds (P-047 'a proposed budget'; P-052 puts the all-funds total at $1,441.3M against $1,057.1M for the General Fund). No passage shows whether other funds changed, so the whole-proposal reading is unsupported. 'General Fund' first appears two sentences later.",
+      "suggested_fix": "In the 2026 cycle, the budget book lists net General Fund spending changes to the county manager's proposal dated Jan 7, adding $20,597,446, and Jan 21, taking out $16,648,868. [P-054, P-047]",
+      "reason": "Numbers, dates and the measure are right: P-054's 'Changes to Proposed 1-7-26' and '1-21-26' columns give Total of Expenditures changes of $20,597,446 and $(16,648,868). Both columns mix increases and cuts (Non Agency 1-7: Consent Decree +21,213,868, Other -1,032,369, Inmate Services -1,700,000), so 'net' is right. 1,053,152,000 + 20,597,446 - 16,648,868 = 1,057,100,578, the adopted total. P-047 names the County Manager as the one who submitted the proposal (Nov 15, 2025)."
+    },
+    {
+      "line": 136,
+      "sentence": "The planned draw on savings grew from $57,102,996 to $73,637,614.",
+      "marker": "[P-054]",
+      "verdict": "supports",
+      "evidence_span": "Revenues > Expenditures $ 2,978,328 $ 12,316,301 $ 12,980,636 $ (57,102,996) $ ( 16,541,486) $ 6,868 $ (73,637,614)",
+      "correct_passage": "",
+      "problem": "",
+      "suggested_fix": "",
+      "reason": "'Revenues > Expenditures' is $(57,102,996) in the 2026 Proposed column and $(73,637,614) in the Adopted column. Fund balance falls from $252,638,514 to $195,535,519 (proposed) and $179,000,901 (adopted), the same draws to within $1 of source rounding. The increase is $16,534,618. The sentence before it sets the General Fund context."
+    },
+    {
+      "line": 136,
+      "sentence": "That means the proposal's spending total largely held, though some of its lines and its draw on savings changed by millions of dollars.",
+      "marker": "{analysis: what the figures above show (P-054)}",
+      "verdict": "valid",
+      "evidence_span": "",
+      "correct_passage": "",
+      "problem": "",
+      "suggested_fix": "Optional: 'the proposal's General Fund spending total', to match P-054's scope, if the first figure sentence on this line is changed to name the General Fund.",
+      "reason": "Redone from P-054: total spending went from $1,053,152,000 to $1,057,100,578 (+$3,948,578, 0.37%), so 'largely held' is fair. Several lines moved by millions: Consent Decree +$18,157,000, Pension -$4,712,674, Leases/Debt -$5,500,000, Other -$5,523,450, Inmate Services -$1,700,000, Solicitor General +$1,543,705, Grady Hospital Transfer +$1,002,369. The draw on savings rose by $73,637,614 - $57,102,996 = $16,534,618, because revenue fell by $12,586,040 ($996,049,005 to $983,462,965) while spending rose by $3,948,578. The sentence does not say who made the changes, which the passages don't establish for the Jan 7 column."
+    },
+    {
+      "line": 156,
+      "sentence": "The code's text and the 2026 record support part of this; the rest depends on an unsettled reading of the code, the limit's exact terms, the claimants' own figures, values or the coming draft.",
+      "marker": "{analysis: P-005 and P-049 for the supported part; the label above names the rest}",
+      "verdict": "valid",
+      "evidence_span": "",
+      "correct_passage": "",
+      "problem": "",
+      "suggested_fix": "",
+      "reason": "Each part matches the card's evidence label (L154). The supported part is 'Code requires all requests, and the 2026 draft listed extras: Supported'. P-005 says the proposal 'shall include the budget requests of all of the county's departments, agencies, elected officials and authorities', and P-049 says 'The enhancement submissions are included as an appendix'. 'unsettled reading of the code' = Conflict with the code: Uncertain. 'the limit's exact terms' = Exact terms: Uncertain. 'the claimants' own figures' = Needs above 5%: Uncertain (the resolution's figures in P-028/P-029 and the public defender's slides in P-064). 'values' = Sound budgeting. 'the coming draft' = Effect on the draft: Uncertain. The supported part is the claim's premise, not its conclusion, so 'part of this' is accurate."
+    },
+    {
+      "line": 160,
+      "sentence": "**What challenges it:** The resolution and FOX 5 describe the limit as applying to requests for extra money.",
+      "marker": "[P-029, P-077, P-080]",
+      "verdict": "supports",
+      "evidence_span": "a directive asking all county departments to limit any request for additional funding to 5% above current allocations",
+      "correct_passage": "",
+      "problem": "",
+      "suggested_fix": "",
+      "reason": "FOX 5 (P-077) describes a directive to limit any request for additional funding to 5% above current allocations. P-080 names the outlet ('as reported by FOX 5 Atlanta reporter Aungelique Proctor'). The resolution (P-029) speaks of 'by placing the 5% cap on departmental enhancement requests', measured against departments' 'base budget'. 'Requests for extra money' is a fair plain rendering of both."
+    },
+    {
+      "line": 160,
+      "sentence": "For the 2026 budget, the county described its \"Base Budget\" as the current funding needed for past spending patterns, including staff.",
+      "marker": "[P-086]",
+      "verdict": "supports",
+      "evidence_span": "we identified the County’s “Base Budget”. This represents the current funding needed to address historical spending patterns including personnel expenditures (filled and vacant)",
+      "correct_passage": "",
+      "problem": "",
+      "suggested_fix": "",
+      "reason": "P-086 (FY2026 budget message): 'As part of our FY2026 budget development process, we identified the County's “Base Budget”.' The quoted words 'Base Budget' match the passage, including capitalization (the passage uses curly quotes). 'past' = 'historical'; 'staff' = 'personnel expenditures (filled and vacant)'; 'including' leaves room for 'other operational spending'. The sentence is correctly limited to 2026, and the budget message's 'we ... the County's' identifies the county as the speaker."
+    }
+  ],
+  "framing_issues": [
+    {
+      "line": 46,
+      "text": "**Not published yet:**",
+      "issue": "The bold label says the proposal was not published at all, but the evidence is two county pages (budget page, Public Notices page) captured Nov 8. The sentence itself is correctly limited to those pages. Optional: 'Not posted yet:' or 'Not on the county's pages yet:'.",
+      "severity": "low"
+    },
+    {
+      "line": 160,
+      "text": "For the 2026 budget, the county described its \"Base Budget\" as the current funding needed for past spending patterns, including staff.",
+      "issue": "Coming right after the 2027 limit's description, the 2026 definition invites readers to assume the 2027 'base budget' in the resolution (P-029) means the same thing, so current staffing costs sit outside the cap. No archived source defines the 2027 base: FOX 5 says 'current allocations', and the commission's written instruction was not found. The sentence is accurately dated, so this is minor. Optional: add that the sources don't say whether 2027 uses the same definition.",
+      "severity": "low"
+    }
+  ],
+  "summary": {
+    "units_checked": 7,
+    "supports": 3,
+    "partial": 1,
+    "does_not_support": 0,
+    "wrong_span": 0,
+    "questionable_or_invalid_tags": 0
+  }
+}

@@ -3,7 +3,7 @@
 ## Act now
 
 - **Input · Nov 12, 2026:** The PSC holds a hearing on how business customers' real-time payments count toward fuel costs; ask the PSC whether public witnesses will be heard. [P-010, P-016, P-025, P-163]
-- **Input · Dec 14, 2026:** Last day to send the PSC a public comment, which is due 24 hours before its Dec 15 vote. {computed: comments are due 24 hours before a vote (P-030); the Dec 15 session starts at 9:30 a.m. (P-024), so the deadline is 9:30 a.m. on Dec 14}
+- **Input · Dec 14, 2026, 9:30 a.m.:** Send any public comment to the PSC by this time, 24 hours before the Dec 15 session where it is scheduled to vote. {computed: comments are due 24 hours before a vote (P-030); the Dec 15 session starts at 9:30 a.m. (P-024), so a comment sent by 9:30 a.m. on Dec 14 is on time even if the vote comes first}
 
 ## Coming up
 

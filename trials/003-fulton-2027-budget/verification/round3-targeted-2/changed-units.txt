@@ -1,0 +1,7 @@
+L46	**Not published yet:** On Nov 8, the county's budget page didn't show the 2027 proposal, and the newest notice on its Public Notices page was for the commission's October hearings. {analysis: P-045 and P-042, captured Nov 8, 2026}
+L136	In the 2026 cycle, the budget book lists net spending changes to the county manager's proposal dated Jan 7, adding $20,597,446, and Jan 21, taking out $16,648,868. [P-054, P-047]
+L136	The planned draw on savings grew from $57,102,996 to $73,637,614. [P-054]
+L136	That means the proposal's spending total largely held, though some of its lines and its draw on savings changed by millions of dollars. {analysis: what the figures above show (P-054)}
+L156	The code's text and the 2026 record support part of this; the rest depends on an unsettled reading of the code, the limit's exact terms, the claimants' own figures, values or the coming draft. {analysis: P-005 and P-049 for the supported part; the label above names the rest}
+L160	**What challenges it:** The resolution and FOX 5 describe the limit as applying to requests for extra money. [P-029, P-077, P-080]
+L160	For the 2026 budget, the county described its "Base Budget" as the current funding needed for past spending patterns, including staff. [P-086]
