@@ -1,0 +1,64 @@
+# Trial 002, revision 7.3: units changed since revision 7.2 (2026-11-08), for the third targeted re-check
+# workspace.md line numbers are revision 7.3's. Revision 7.2 is archived as
+# trials/002-psc-57171-fuel-credit/verification/round7-targeted-2/workspace.r7.2.md (with home.r7.2.md, page.r7.2.yaml).
+# Each unit is marked [VALUES GUIDE], [IF-YOU LINE], [IN SHORT], [HOME] or [OTHER]. L3 is the status line, not reader text.
+# REMOVED units (revision 7.2 line numbers) need no verdict; they show what was taken out.
+
+## workspace.md: 24 changed or new units on 15 lines
+Lines: 3, 14, 15, 16, 49, 159, 164, 165, 167, 168, 176, 189, 282, 294, 318
+
+L3	[OTHER]	Status: Open case at the Georgia Public Service Commission · Final decision scheduled Dec 15, 2026 · Trial 002, revision 7.3: fixes after the second targeted re-check; third re-check pending <!-- nocheck -->
+L14	[IF-YOU LINE]	As of Nov 8, 2026, no filing we read gives a home's net (both changes together). {editorial: scoped to the filings we read; Georgia Power's per-$100 million figures (P-142, P-143) are examples, not a plan's effect}
+L15	[IF-YOU LINE]	As of Nov 8, 2026, no filing we read gives a business's net (both changes together). {editorial: scoped to the filings we read}
+L16	[IF-YOU LINE]	Baseline power gets standard-rate changes, but some new large-load customers have no baseline. [P-043, P-048, P-071]
+L49	[OTHER]	Dec 14 at 9:30 a.m. is 24 hours before the Dec 15 session starts. {computed: the Dec 15 Administrative Session starts at 9:30 a.m. (P-024); 24 hours earlier is 9:30 a.m. on Dec 14}
+L49	[OTHER]	The time this case comes up in that session isn't posted as of Nov 8, 2026. {editorial: process note; P-024 gives only the session's start}
+L49	[OTHER]	The Energy Committee takes up the case on Dec 10. [P-012]
+L49	[OTHER]	No PSC page we found says whether the committee meeting counts as a Commission vote, so ask the PSC whether an earlier deadline applies. {editorial: process note; P-030 says only "a Commission vote"}
+L159	[OTHER]	Plans B to D come from Georgia Power, the utility; PIA Staff, the PSC's advocacy staff; and GIPL, a group of congregations. [P-006, P-059, P-093, P-119, P-073, P-095]
+L159	[OTHER]	Each plan would raise the fuel credit, the real-time pricing (RTP) money counted toward fuel, and likely lower the fuel charge. [P-058, P-115, P-144]
+L159	[OTHER]	GAM, a manufacturers' group, says base rates, the rest of the bill, would then see upward pressure. [P-109, P-115, P-061]
+L164	[VALUES GUIDE]	**If you care most about sharing fuel costs by energy use:** PIA Staff's witnesses, who back Plan C, said "costs recovered from fuel revenues should be allocated based on energy usage." [P-059, P-062]
+L165	[VALUES GUIDE]	**If you care most about every party seeing Georgia Power's cost model:** GIPL's witness, who backs Plan D, said a working copy for intervenors would allow "full stakeholder participation." [P-152, P-096]
+L167	[VALUES GUIDE]	PIA Staff and GIPL both say today's credit shifts costs to fuel-charge payers. [P-063, P-099]
+L168	[VALUES GUIDE]	GAM's view comes closest to Plan A. {analysis: GAM's statements in P-110 and P-111, next}
+L168	[VALUES GUIDE]	GAM says no specific part of real-time revenue should be credited against pipeline fees. [P-110]
+L168	[VALUES GUIDE]	GAM says that if the PSC finds a change is needed, either take-or-pay choice would "adequately address" the concerns of PIA Staff and intervenors. [P-111]
+L176	[OTHER]	GIPL says capital substitution is "a necessary cost of service" that "from an economics perspective" leaves no extra money to push rates down. [P-098]
+L189	[OTHER]	Georgia Power says take-or-pay choice 2 would depart from the "marginal fuel cost-based approach" in place since 2010. [P-129]
+L282	[IN SHORT]	**In short:** Fuel charges would likely fall; base rates could rise later. [P-096, P-102, P-144, P-061, P-115, P-016]
+L282	[IN SHORT]	GIPL's testimony says pipelines, like power lines, must meet peaks whenever they occur, so new fees warrant the same split until the next rate case. [P-104, P-096]
+L282	[IN SHORT]	Evidence: Mixed on two points. {editorial: restates the label}
+L294	[IN SHORT]	**In short:** Fuel charges keep paying pipeline fees; base costs could stay lower. [P-083, P-144, P-061, P-111, P-112]
+L318	[IN SHORT]	Georgia Power says skipping some embedded costs by design doesn't mean real-time customers don't pay their fair share. [P-121]
+
+## workspace.md: 20 units removed or replaced (revision 7.2 line numbers)
+(r7 L3)	Status: Open case at the Georgia Public Service Commission · Final decision scheduled Dec 15, 2026 · Trial 002, revision 7.2: fixes after the first targeted re-check; second re-check pending <!-- nocheck -->
+(r7 L14)	As of Nov 8, 2026, no filing we read gives a home's net (both changes together). {editorial: scoped to the filings we read; Georgia Power's per-$100 million figures (P-142, P-143) are examples, not a plan's effect, and the order leaves the fuel timing "as determined by the Commission" (P-016)}
+(r7 L15)	As of Nov 8, 2026, no filing we read gives a business's net (both changes together). {editorial: scoped to the filings we read; the order leaves the fuel timing "as determined by the Commission" (P-016)}
+(r7 L16)	Baseline power gets standard-rate changes, but some new large-load customers have none. [P-043, P-048, P-071]
+(r7 L49)	Dec 14 at 9:30 a.m. is 24 hours before the Dec 15 session starts; the time this case comes up isn't posted as of Nov 8, 2026. {editorial: process note; P-024 gives only the session's start}
+(r7 L49)	The Energy Committee takes up the case on Dec 10, and no PSC page we found says whether that counts as a Commission vote, so ask the PSC whether an earlier deadline applies. {editorial: process note; P-012 schedules the committee meeting, and P-030 says only "a Commission vote"}
+(r7 L159)	Plans B, C and D come from Georgia Power, the utility; PIA Staff, the PSC's advocacy staff; and GIPL, a group of congregations. [P-006, P-059, P-093, P-119, P-073, P-095]
+(r7 L159)	Each plan would raise the fuel credit, an accounting entry for real-time pricing (RTP) money toward fuel. [P-058, P-115, P-144]
+(r7 L159)	GAM, a manufacturers' group, says a bigger credit would put upward pressure on base rates, the non-fuel part of bills. [P-109, P-115, P-061]
+(r7 L164)	**If you care most about every customer, including real-time users, sharing fuel costs:** PIA Staff's witnesses, who back Plan C, said "costs recovered through the fuel clause should be recovered from all customers." [P-059, P-062, P-157]
+(r7 L165)	**If you care most about keeping costs from shifting to fuel-charge payers:** GIPL's witness, who backs Plan D, said of today's credit, "This shifts costs to FCR customers," meaning those who pay the fuel charge. [P-152, P-099, P-144]
+(r7 L168)	GAM's view comes closest: GAM opposes crediting real-time money against pipeline fees. [P-110]
+(r7 L168)	GAM accepts either of Georgia Power's proposed changes only if the PSC finds a change is needed. [P-111]
+(r7 L176)	GIPL says capital substitution is "a necessary cost of service" that, "from an economics perspective," leaves no extra money to push rates down. [P-098]
+(r7 L189)	Georgia Power says take-or-pay choice 2 would depart from the marginal-cost approach in place since 2010. [P-129]
+(r7 L282)	**In short:** Fuel charges would likely fall and exclude new large-load pipeline fees; base rates could rise later. [P-096, P-102, P-144, P-061, P-115, P-016]
+(r7 L282)	GIPL's testimony says pipelines, like power lines, must meet peaks whenever they occur, so warrant the same split. [P-104, P-096]
+(r7 L282)	Evidence: Mixed on two main points. {editorial: restates the label}
+(r7 L294)	**In short:** Fuel charges keep paying pipeline fees; GAM says base costs stay lower. [P-083, P-144, P-111, P-112]
+(r7 L318)	Georgia Power says its real-time rate isn't meant to cover all embedded costs, but users pay their share. [P-121]
+
+## home.md: 2 changed units on line 5 (the comment item now names the case)
+L5	[HOME]	**Input · Dec 14, 2026, 9:30 a.m.:** The Public Service Commission, Georgia's utility regulator, takes comments until 24 hours before a vote: by this time for its Dec 15 real-time payments vote. {computed: comments must be submitted 24 hours before a Commission vote (P-030); the final decision is scheduled for the Dec 15 Administrative Session (P-013), which starts at 9:30 a.m. (P-024), so 24 hours earlier is 9:30 a.m. on Dec 14, the time in the label; the Commission decides utility rates (P-169), and the Dec 15 decision is on how it credits real-time revenue (P-016)}
+L5	[HOME]	Ask the Commission whether its Dec 10 committee meeting makes the deadline earlier, and how to submit: call 404-656-4501 (local) or 1-800-282-5813 (outside metro-Atlanta) and press 2, or email gapsc@psc.state.ga.us. [P-012, P-163]
+
+## page.yaml: 3 changed display strings (each keeps or gains a citation comment)
+link_text: "Larger businesses' real-time power payments and your Georgia Power bill"  # [P-016, P-044, P-061, P-144]
+"Plan C": {text: "PIA Staff's plan"}  # [P-006, P-059, P-073]
+S10: Resource Supply Management  # [P-162]

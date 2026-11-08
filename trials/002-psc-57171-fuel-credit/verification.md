@@ -8,12 +8,11 @@ raw reports are in [verification/round1/](verification/round1/), [verification/r
 [verification/round5/](verification/round5/) and [verification/round6/](verification/round6/); revision 6.3, before the
 reader-first update, and revision 7 with its round 7 reports are in [verification/round7/](verification/round7/).
 
-**Status: revision 7.2 (fixes after the first targeted re-check); second re-check pending.** Round 7 checked revision 7,
+**Status: revision 7.3 (fixes after the second targeted re-check); third re-check pending.** Round 7 checked revision 7,
 the reader-first update, and **passed**. Revision 7.1 made the listed accuracy and written-rule fixes; its first targeted
-re-check found no unsupported claim but 9 partial verdicts, 3 questionable tags and one high flip-test issue (the values
-guide). Revision 7.2 fixes those, again with no change to any card's claim, evidence label or side. See "Round 7",
-"Revision 7.1", "Targeted re-check 1" and "Revision 7.2" at the end. (Revision 6.3 passed round 6 and its targeted
-re-checks.)
+re-check led to revision 7.2, and the second re-check (0 unsupported claims, 3 partial wordings, no high balance issue)
+led to revision 7.3. No card's claim, evidence label or side has changed since round 7. See "Round 7", "Revision 7.1",
+the two targeted re-checks and "Revision 7.3" at the end. (Revision 6.3 passed round 6 and its targeted re-checks.)
 
 ## Round 1 (revision 1, `verification/round1/workspace.r1.md`)
 
@@ -979,3 +978,65 @@ fuel-charge date" (the "Decided now, and decided later" list still says the PSC 
 4. **Line 16's "your baseline's net or timing"** and **lines 14–15's "net (both changes together)"** are terse; the
    45-word budget leaves little room.
 5. **Layer 3 is at 8.46**, just under the 8.5 target.
+
+## Targeted re-check 2 (revision 7.2, `verification/round7-targeted-2/`): results
+
+The coordinator's fresh checks of revision 7.2's changed units. Revision 7.2's page, home items and display settings are kept
+beside the reports (`workspace.r7.2.md`, `home.r7.2.md`, `page.r7.2.yaml`), with the unit list the checkers used
+(`changed-units.txt`).
+
+| Check | Result |
+|---|---|
+| Source re-check (`source-check.json`) | 42 units (38 page, 2 home, 3 `page.yaml`, less the skipped status line): **29 supports, 3 partial, 0 does not support, 0 wrong span**; 10 tags valid, **0 questionable**; 14 framing notes (3 medium, 11 low) |
+| Flip test (`fliptest.json`) | Neutrality **4/5**, no high issue; 2 medium (GIPL's values label named a value PIA Staff states almost word for word; card 6 alone credited its base-side effect to the side), 6 low |
+
+The three partials were wordings stronger or broader than their passages: GAM "accepts … only if" (P-111 states a condition,
+not an acceptance), card 5's split extended to all pipeline fees (P-104 covers new fees, until the next rate case), and card
+8's "users pay their share" (P-121 is a double negative). Revision 7.3 fixes them.
+
+### Revision 7.3: what changed
+
+Change class **correction**; reason: "fixes from the second targeted re-check". **No card claim, evidence label or side
+changed**; the nine label texts are identical to revision 7.2's. Codes: SC = source re-check, FT = flip test; line numbers are
+revision 7.3's. The changed units are in the coordinator's scratch folder as `t002-rev73/changed-units.txt` (24 changed or
+new units on 15 lines, 20 removed or replaced, 2 home units, 3 `page.yaml` strings; each unit marked by type).
+
+| # | Finding (who raised it) | Change in revision 7.3 | Lines |
+|---|---|---|---|
+| 1 | "GAM accepts … only if" reversed P-111's condition (SC L168 partial; SC framing L168; FT L168) | P-111 in the page's standard shape: "GAM says that if the PSC finds a change is needed, either take-or-pay choice would "adequately address" the concerns of PIA Staff and intervenors." P-110 restated with "specific", as lines 173 and 261 do. "GAM's view comes closest to Plan A" is now its own tagged sentence | 168 |
+| 2 | Card 5's split read as covering all pipeline fees, with no time limit (SC L282 partial; SC framing L282) | "… so new fees warrant the same split until the next rate case" (P-104, P-096). To stay at 40 words, the effect is now card 4's "Fuel charges would likely fall; base rates could rise later" (same citations), and the evidence restatement is "Mixed on two points" | 282 |
+| 3 | Card 8's "but users pay their share" turned P-121's double negative into a page-voice claim (SC L318 partial; SC framing L318) | "Georgia Power says skipping some embedded costs by design doesn't mean real-time customers don't pay their fair share." [P-121] | 318 |
+| 4 | A shared value given to one side in the values guide (FT L165 medium, L164) | The cost-shift concern is named once, for both: "PIA Staff and GIPL both say today's credit shifts costs to fuel-charge payers" [P-063, P-099]. PIA Staff's line now carries a value only PIA Staff states, sharing fuel costs "based on energy usage" (P-062, its third guideline). GIPL's carries one only GIPL states, a working copy of Georgia Power's cost model for intervenors that would allow "full stakeholder participation" (P-096). Each line is 29–31 words | 164, 165, 167 |
+| 5 | Card 6 alone credited its base-side effect to the side (FT L294 medium) | "Fuel charges keep paying pipeline fees; base costs could stay lower." [P-083, P-144, P-061, P-111, P-112]; each passage checked (P-083 fuel pays all pipeline fees; P-061 the rest goes to base; P-111 and P-112 that base-side money lowers others' costs) | 294 |
+| 6 | The options intro gave only GAM's base-rate warning (SC framing L159, medium) | "Each plan would raise the fuel credit, the real-time pricing (RTP) money counted toward fuel, and likely lower the fuel charge." [P-058, P-115, P-144]. To stay at 60 words: "Plans B to D", and GAM's sentence reads "says base rates, the rest of the bill, would then see upward pressure" (P-115) | 159 |
+| 7 | "PSC advocacy staff's plan" could still read as the regulator's own (SC framing page.yaml L14, medium) | Chip "PIA Staff's plan" [P-006, P-059, P-073], matching the heading; PIA Staff is defined on the Options tab | `page.yaml` |
+| 8 | Low notes (SC framing) | Line 49: the 24-hour sum is `{computed}`, the Energy Committee clause is its own sentence cited to P-012, and "the committee meeting" replaces "that". Line 176: no comma inside the quoted "from an economics perspective". Line 189: P-129's "marginal fuel cost-based approach" quoted. Lines 14 and 15: tags no longer mention the removed fuel-date clause. Line 16: "have no baseline". Home line 5 names the case ("its Dec 15 real-time payments vote") in 25 words, so it now says "the Commission" instead of introducing "PSC". `link_text`: "… and your Georgia Power bill". S10 label gains a citation comment, `# [P-162]` | 14, 15, 16, 49, 176, 189; home 5; `page.yaml` |
+
+Layer 3's reading grade reached 8.54 with the new values-guide quote; quoting only "full stakeholder participation" and
+splitting the GAM note into shorter sentences brought it to 8.46.
+
+### Open items (targeted re-check 2, not changed in revision 7.3)
+
+| # | Open item (who raised it) | Note |
+|---|---|---|
+| O22 | Georgia Power's values line uses "asked the PSC to" while the others use "said", and its value is about a rate's structure rather than an outcome for customers (FT L163) | Next revision; see C10 and O15 |
+| O23 | Card 1's "In short" gives two premises but not their conclusion, while card 2 gives one (FT L234) | Next revision; 40-word budget |
+| O24 | Card 4's "In short" drops PIA Staff's hedges on double recovery ("possibility", "risk", "a portion"; P-083, P-084) (FT L270) | Next revision |
+| O25 | Card 5's evidence restatement doesn't name the two mixed points (FT L282) | No room in 40 words; see O13 |
+| O26 | Cards 6, 8 and 9 open with their side's cost because every card puts the fuel effect first (FT L330) | Order rule; next revision |
+| O27 | "PIA Staff, the PSC's advocacy staff" in the options intro could read as speaking for the commission (SC framing L159, low) | Next revision; the 60-word budget |
+| O28 | "Says … protects" in the all-party note uses Georgia Power's word for every party; "argues its approach is better for" would be even (SC framing L167) | Next revision |
+| O29 | Line 79: "that case" and "the method" point back several sentences, and "raised … raised" repeats (SC framing L79) | Next revision |
+| O30 | Line 16: "large-load" isn't defined on the Summary tab, and "your baseline's net" is jargon (SC framing L16) | Next revision |
+| O31 | The S10 label is three words against `page.yaml`'s "one or two words" note (SC framing page.yaml L28) | As the 7.1 brief asked (party names) |
+
+### Step 5 checklist (revision 7.3)
+
+- [x] **Every sentence is cited or tagged.** `check_citations.py` on `workspace.md`: PASS, 549 units (412 cited, 59 analysis,
+      66 editorial, 12 computed), 0 errors, 0 warnings. `home.md`: PASS, 8 units (7 cited, 1 computed), 0 errors, 0 warnings.
+- [x] **Passages unchanged**: 166, all cited; `verify_hashes.py`: PASS.
+- [x] **Reading grade** (`readability.py`): 30-second 7.3 (90 words), What it means for you 7.4, Layer 1 7.3, Layer 2 8.4,
+      Layer 3 8.5 (8.46; target ≤ 8.5). Not targeted: Layer 4 9.9. No budget WARN lines, no CHECK lines.
+- [x] **Test render**: no warnings; the page shows "version 7.3".
+- [x] **Scope held**: the nine evidence labels are identical to revision 7.2's; no card claim or side changed.
+- [ ] **Third targeted re-check**: pending (run by the coordinator).
