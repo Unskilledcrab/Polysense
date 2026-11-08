@@ -1,0 +1,84 @@
+{
+ "checker": "independent-source-verifier",
+ "document": "/home/user/Polysense/trials/002-psc-57171-fuel-credit/home.md",
+ "units": [
+  {
+   "line": 5,
+   "sentence": "Input · Nov 12, 2026: The PSC holds a hearing on how business customers' real-time payments count toward fuel costs; ask the PSC whether public witnesses will be heard.",
+   "marker": "[P-010, P-016, P-025, P-163]",
+   "verdict": "supports",
+   "evidence_span": "the Commission will conduct hearings on Georgia Power’s rebuttal testimony",
+   "correct_passage": "",
+   "problem": "Supported and properly hedged. The hearing is on Georgia Power's rebuttal testimony and starts after the committee meetings (9:35 a.m. on the PSC calendar, P-023); no time is given.",
+   "suggested_fix": "Add 'after the 9:30 a.m. committee meetings' or the calendar time."
+  },
+  {
+   "line": 6,
+   "sentence": "Input · Dec 14, 2026: Last day to send the PSC a public comment, which is due 24 hours before its Dec 15 vote.",
+   "marker": "{computed}",
+   "verdict": "questionable",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "The computation in the tag is right (9:30 a.m. Dec 15 minus 24 hours = 9:30 a.m. Dec 14), but the displayed item drops the time. 'Last day ... Dec 14' tells a reader they have all of Dec 14, when the computed deadline is 9:30 a.m. that morning. A comment sent in the afternoon would miss it. This is a deadline in an 'Act now' slot, so the omission matters.",
+   "suggested_fix": "'Input · by 9:30 a.m. Dec 14, 2026: Deadline to send the PSC a public comment (24 hours before its Dec 15 vote).'"
+  },
+  {
+   "line": 10,
+   "sentence": "Dec 15, 2026: The PSC is scheduled to decide how much of business customers' real-time payments counts toward fuel costs.",
+   "marker": "[P-013, P-016]",
+   "verdict": "supports",
+   "evidence_span": "A Final Decision on this proceeding will be made by the Commission on December 15, 2026",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 14,
+   "sentence": "Oct 27, 2026: Georgia Power filed rebuttal testimony backing 'Option 1' for take-or-pay power contracts, as GIPL does; PIA Staff backs 'Option 2'.",
+   "marker": "[P-117, P-128, P-129]",
+   "verdict": "supports",
+   "evidence_span": "The Company and GIPL recommend the Commission approve Option 1.",
+   "correct_passage": "",
+   "problem": "Accurate, but 'Option 1', 'Option 2', 'take-or-pay', 'GIPL' and 'PIA Staff' are undefined on the home page, and the item does not say that both options raise the fuel credit.",
+   "suggested_fix": "'...backing Option 1 (remove these contracts' cost and energy from the credit), as GIPL does; PIA Staff backs Option 2 (count both). Either would raise the fuel credit.'"
+  },
+  {
+   "line": 14,
+   "sentence": "GAM accepts either option if the PSC finds a change is needed.",
+   "marker": "[P-111]",
+   "verdict": "supports",
+   "evidence_span": "either of GPC’s proposed changes would adequately address PIA Staff and intervenors’ concerns",
+   "correct_passage": "",
+   "problem": "'GAM' is undefined on the home page.",
+   "suggested_fix": "'The Georgia Association of Manufacturers (GAM) accepts either...'"
+  }
+ ],
+ "framing_issues": [
+  {
+   "line": 6,
+   "text": "Dec 14, 2026: Last day to send the PSC a public comment",
+   "issue": "A deadline is shown without its time. The computed deadline is 9:30 a.m. Dec 14, but 'Last day' implies the whole day. A reader acting on the home item alone could miss it.",
+   "severity": "high"
+  },
+  {
+   "line": 14,
+   "text": "backing 'Option 1' for take-or-pay power contracts, as GIPL does; PIA Staff backs 'Option 2'. GAM accepts either option...",
+   "issue": "Jargon and acronyms (Option 1/2, take-or-pay, GIPL, PIA Staff, GAM) are left unexplained on the home page, and the item gives positions without saying what the options do or that both raise the credit. That is not digestible on a phone.",
+   "severity": "medium"
+  },
+  {
+   "line": 5,
+   "text": "Input · Nov 12, 2026: ... ask the PSC whether public witnesses will be heard.",
+   "issue": "The 'Input' label (under 'Act now') suggests the public can give input on Nov 12, although no filing says public witnesses will be heard (workspace line 48). The hedge is in the text, but the label promises more than the sources show.",
+   "severity": "low"
+  }
+ ],
+ "summary": {
+  "units_checked": 5,
+  "supports": 4,
+  "partial": 0,
+  "does_not_support": 0,
+  "wrong_span": 0,
+  "questionable_or_invalid_tags": 1
+ }
+}
