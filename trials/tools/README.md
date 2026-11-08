@@ -76,3 +76,8 @@ Run Python tools with `uv run --with <deps> python3 trials/tools/<tool>.py …`.
 - **Snapshots:** `snapshot.py` saved Word, Excel, PowerPoint and zip files as `.bin`. It now takes the
   extension from the content type, or else from the served file name or URL. It prints the served file
   name and which `extract/` tool makes the text, and it exits 1 on an empty body.
+- **Absence claims:** `check_citations.py` now warns on an unscoped claim that no party (or no record,
+  filing or source) disputes, asks, says or proposes something. Such a claim covers sources we couldn't
+  read; the style guide asks for the whole text. Trial 002's round 5 source check flagged 10 of these, and
+  the warning finds the same lines. Scoped wording passes ("no party whose testimony we read …",
+  "no archived record …"). There were no false alarms on Trials 001 and 003.

@@ -32,6 +32,11 @@ PASSAGE_HEAD = re.compile(r"^###\s+(P-\d{3})\b")
 QUOTE = re.compile(r"[\"“]([^\"”]{3,})[\"”]")
 NUMBER = re.compile(r"(?<![\w-])\$?\d[\d,]*(?:\.\d+)?(?:-\d+)*%?")
 LABELED = re.compile(r"\b(?:layer|option|question|card|step)\s+$", re.I)   # our own labels, not facts
+# "No party disputes ..." claims something about every source, including ones we couldn't read. Style guide:
+# absence claims need the whole text, so scope them ("no party whose testimony we read"). Trial 002 had 10.
+ABSENCE = re.compile(r"\bno (?:party|parties|one|other party|source|filing|record|passage)\b[^.;]{0,40}?\b(?:disputes?|disagrees?|"
+                     r"asks?|argues?|says?|said|mentions?|objects?|opposes?|challenges?|proposes?|claims?|denies|contests?)\b", re.I)
+SCOPED = re.compile(r"\b(?:we (?:could )?(?:read|found|archived|checked|reviewed)|our (?:archived )?sources|archived|we could find)\b", re.I)
 SCALE = {"thousand": 3, "million": 6, "billion": 9}
 # Words that signal loaded framing when used outside a verbatim quote (style guide §5).
 LOADED = [
@@ -170,6 +175,9 @@ def main(workspace: Path, passages_path: Path) -> int:
             for word in LOADED:
                 if word in f" {unquoted} ":
                     warnings.append(f"L{no}: loaded word '{word.strip()}' outside a quote")
+            if ABSENCE.search(unquoted) and not SCOPED.search(unquoted):
+                warnings.append(f"L{no}: absence claim '{ABSENCE.search(unquoted).group(0)[:40]}' covers sources we "
+                                "didn't read; scope it (\"no party whose testimony we read …\")")
             for m_party in PARTY.finditer(unquoted):
                 warnings.append(f"L{no}: party or left-right label '{m_party.group(0)}' outside a quote; "
                                 "keep it only if the fact needs it")
