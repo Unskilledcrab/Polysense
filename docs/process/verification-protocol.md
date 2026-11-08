@@ -2,7 +2,8 @@
 
 **Decision ([ADR 0014](../adr/0014-ai-only-verification.md)):** during the proof of concept, no human sits
 in the verification loop. The project owner gives feedback on the **user experience** only. Fact-checking
-and bias-checking are done by this protocol. It must **prove itself with measurements**, never on trust.
+and bias-checking are done by this protocol. It must **prove itself with measurements**, never on trust. Like the other process docs, it is working
+practice from the trials and will change as they show what works.
 
 Three ideas make it trustworthy without a human:
 

@@ -13,6 +13,18 @@ match or beat.
 - **For a solo builder, a proven manual process is useful on day one.** Private alpha content can be hand
   made while automation catches up.
 
+## How rules change
+
+The runbooks, style guide and verification protocol are working practice, not fixed policy. Only the
+[tenets](../product/vision.md#tenets) and the invariants in [CLAUDE.md](../../CLAUDE.md) are fixed.
+
+- A rule comes from a trial, and its entry says which one.
+- Fix a problem in the work before writing a rule about it. Add a rule only when the same problem could
+  recur in other trials.
+- At each trial's retrospective, review the rules it touched: keep, simplify or retire them. Count rules
+  retired as progress, not only rules added.
+- Prefer one general principle to several narrow checks.
+
 ## Who does the manual work
 
 The **AI agent working in a session** (for example, Claude Code) does each step by hand, following the

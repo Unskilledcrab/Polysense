@@ -146,6 +146,8 @@ on this workspace.
 - Record the time per step, what was hard, and any failures.
 - Record the rules learned, then update this runbook, the style guide and the policies. Bump the runbook
   version.
+- Review the rules this trial touched against the tenets: keep, simplify or retire them
+  ([how rules change](../prove-then-automate.md#how-rules-change)).
 - List automation candidates and what would be needed for each to pass the gate.
 
 ## History

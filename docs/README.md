@@ -6,7 +6,7 @@ The project is in **planning and manual trials**. These documents are the plan. 
 
 | Doc | What it covers |
 |---|---|
-| [product/vision.md](product/vision.md) | The problem, the vision, how we differ from existing tools, and non-goals |
+| [product/vision.md](product/vision.md) | The problem, the vision, **the tenets**, how we differ from existing tools, and non-goals |
 | [product/pilot-2027-session.md](product/pilot-2027-session.md) | The first pilot: journeys, scope, what is cut, and metrics |
 | [product/roadmap.md](product/roadmap.md) | Phases and exit criteria through November 2028 |
 | [risks.md](risks.md) | Risk register and open questions |
@@ -16,6 +16,7 @@ The project is in **planning and manual trials**. These documents are the plan. 
 | Doc | What it covers |
 |---|---|
 | [product/experience.md](product/experience.md) | Homepage, the 5 layers, participation power, item statuses, argument explorer, evidence vocabulary |
+| [product/voting-connection.md](product/voting-connection.md) | Exploratory: how this work could help people make informed decisions when voting |
 | [product/content-style-guide.md](product/content-style-guide.md) | How we write: answer first, length budgets, plain language, numbers |
 | [product/usability-testing.md](product/usability-testing.md) | Comprehension testing with real people |
 | [product/naming.md](product/naming.md) | Choosing a public name (Civic Lens is taken) |

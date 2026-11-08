@@ -3,8 +3,10 @@
 **Goal:** a reader who gives us 30 seconds leaves knowing what's being decided, who it affects, and what
 they can do. Someone who gives us 30 minutes can check every claim.
 
-This guide is **v0**. Each manual trial and comprehension round updates it, and changes are recorded at
-the bottom.
+This guide is **v0.3**: working rules from one trial, not settled policy. Each manual trial and
+comprehension round updates it, and changes are recorded at the bottom. After each trial, review the rules
+against the [tenets](vision.md#tenets): keep the ones that helped, simplify the ones that didn't, and
+retire any that a later trial makes unnecessary.
 
 ## 1. Answer first
 
