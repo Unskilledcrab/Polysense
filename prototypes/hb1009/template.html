@@ -648,7 +648,7 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
     s.subs.forEach(function (o) {
       if (/^if you care most about/i.test(o.title)) {  // the values guide: what each side says it protects
         var g = el("section", { class: "card stack vguide", "aria-labelledby": "h-values" }, [el("h3", { id: "h-values", text: "What each side says it protects" }),
-          el("p", { class: "meta-line", text: "In each side's own words, from the record. We don't recommend an option." })]);
+          el("p", { class: "meta-line", text: "Quoted from the record: each side's own words, or the reasons it gave. We don't recommend an option." })]);
         o.blocks.forEach(function (b) {
           g.appendChild(el("div", { class: "vline" }, [el("p", null, [b.label ? el("strong", { class: "lead", text: b.label + ": " }) : null, units(b.units)])]));
         });
@@ -742,7 +742,7 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
     s.subs.forEach(function (a) { if (/^how to read/i.test(a.title)) rule = a; if (/^questions to weigh/i.test(a.title)) questions = a; });
     var opts = sectionById("options");
     if (opts && opts.subs.some(function (o) { return /^if you care most about/i.test(o.title); }))
-      L.appendChild(el("p", { class: "meta-line" }, ["What each side says it protects, in its own words, is at the top of the ", el("a", { href: "#" + W.slug + "-options", text: "Options tab" }), "."]));
+      L.appendChild(el("p", { class: "meta-line" }, ["What each side says it protects, quoted from the record, is at the top of the ", el("a", { href: "#" + W.slug + "-options", text: "Options tab" }), "."]));
     if (used.length) L.appendChild(el("section", { class: "card stack", "aria-labelledby": "h-legend" }, [el("h3", { id: "h-legend", text: "What the evidence labels mean" }), legendBox(used, rule)]));
     if (s.blocks.length) L.appendChild(el("div", { class: "card stack" }, [renderBlocks(s.blocks)]));
     s.subs.forEach(function (a) {
