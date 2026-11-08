@@ -38,10 +38,12 @@ asked to add). So "done" is defined in advance:
 1. **A round passes** when: the gate is clean; the blind source check finds 0 unsupported claims, 0 wrong
    spans and 0 ungrounded evidence spans; both advocates rate their side at least 4/5; and the editor
    finds no high-severity issue.
-2. **After a passing round, fix only accuracy flags:** "partial" verdicts, questionable tags, and wording
-   that misstates a passage. A **targeted re-check** confirms the fixes: a fresh blind agent checks only
-   the changed sentences against the passages. The whole panel re-runs only if a fix changes a card's
-   claim, its evidence label, or which side a point supports.
+2. **After a passing round, fix only accuracy flags and breaches of a written rule:** "partial" verdicts,
+   questionable tags, wording that misstates a passage, and anything that breaks the style guide or
+   CLAUDE.md (a loaded word, a subgroup figure before its base rate, undefined jargon). A **targeted
+   re-check** confirms the fixes: a fresh blind agent checks only the changed sentences against the
+   passages. The whole panel re-runs only if a fix changes a card's claim, its evidence label, or which
+   side a point supports.
 3. **Remaining medium and low panel suggestions become open items.** They are listed in `verification.md`
    and on the page's "How we checked" view, and they feed the next revision, which starts a new full
    round. Suggestions that contradict each other are logged side by side, not silently resolved.
