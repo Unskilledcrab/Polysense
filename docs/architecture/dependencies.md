@@ -43,7 +43,7 @@ Re-check maintenance status when adopting and at each quarterly review.
 | Playwright (Python) + axe-core | Accessibility smoke tests | Apache-2.0 / MPL-2.0 |
 | pip-audit | Vulnerability scan | Apache-2.0 |
 | just | Task runner | CC0 |
-| textstat | Readability scores (trials, then the gate) | MIT |
+| *(none: stdlib)* | Readability screen in `trials/tools/readability.py` (Flesch–Kincaid with a heuristic syllable counter) | n/a |
 
 ## Deliberately not used (for now)
 
@@ -54,3 +54,4 @@ Re-check maintenance status when adopting and at each quarterly review.
 | A separate JavaScript front-end framework | Server templates + htmx | Another toolchain and deploy for little benefit ([ADR 0002](../adr/0002-django-monolith.md)) |
 | Playwright for scraping | httpx | Heavy. Use it only if a source truly requires a browser |
 | Third-party analytics or ad scripts | Privacy-preserving aggregate analytics | Privacy and security |
+| textstat | A stdlib readability screen | Tried in Trial #1 on 2026-11-08: current releases download NLTK `cmudict` data from the network at runtime. That's a hidden network dependency, and it failed behind our proxy |

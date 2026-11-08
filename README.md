@@ -36,6 +36,8 @@ Blazor, Angular and React clients) still lives on the `Development` branch.
 
 Start at **[docs/README.md](docs/README.md)**. It lists every document and the order to read them in.
 
+Manual trials (each process done by hand before anything is automated) live in **[trials/](trials/)**.
+
 ## License
 
 Code is under the [Apache License 2.0](LICENSE). Published content is proposed to be under CC BY 4.0, and

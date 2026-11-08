@@ -1,4 +1,4 @@
-# Runbook: bill decision workspace (manual), v0
+# Runbook: bill decision workspace (manual), v0.1
 
 **Purpose:** turn one bill into a clear, fully cited decision workspace (the 30-second version plus
 Layers 1–5) by hand. **Output:** `trials/NNN-<bill>/`.
@@ -32,7 +32,16 @@ Find each of these, in priority order:
    for a fact.
 
 For each source, record the id, title, publisher, **type** (`primary-government`, `secondary-research`,
-`advocacy`, `news`), URL and why it's needed.
+`advocacy`, `news`, `local-government`), URL, status and why it's needed.
+
+Rules added after Trial 001:
+
+- **Search-engine summaries are for discovery only.** Never cite them, and never write a fact from them.
+- **Write a discrepancy list (D1, D2, …)** wherever reports disagree (dates, votes, committees,
+  exceptions). Settle each one from a primary source in step 2. If a local source conflicts with state
+  law, explain the difference (for example, a district starting early) rather than picking one.
+- **Produce a "hosts needed" list** for retrieval. A bill's evidence usually spans the legislature, the
+  governor's office, agencies, universities, news sites and journals.
 
 ## Step 2: Snapshot
 
@@ -105,3 +114,10 @@ on this workspace.
 - Record the rules learned, then update this runbook, the style guide and the policies. Bump the runbook
   version.
 - List automation candidates and what would be needed for each to pass the gate.
+
+## History
+
+| Version | Date | Change | Trial |
+|---|---|---|---|
+| v0 | 2026-11-08 | Created from research | — |
+| v0.1 | 2026-11-08 | Step 1: search summaries are discovery-only; discrepancy list; "hosts needed" list | [001](../../../trials/001-hb1009-high-school-cellphones/log.md) (steps 0–1) |
