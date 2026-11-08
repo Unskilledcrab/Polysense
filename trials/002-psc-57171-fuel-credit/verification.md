@@ -6,12 +6,12 @@ agents run by the coordinator; the drafter ran only the deterministic gate. Copi
 raw reports are in [verification/round1/](verification/round1/), [verification/round2/](verification/round2/),
 [verification/round3/](verification/round3/), [verification/round4/](verification/round4/),
 [verification/round5/](verification/round5/) and [verification/round6/](verification/round6/); revision 6.3, before the
-reader-first update, is in [verification/round7/](verification/round7/).
+reader-first update, and revision 7 with its round 7 reports are in [verification/round7/](verification/round7/).
 
-**Status: revision 7 (reader-first update); checks pending.** Revision 6.3 passed checks in round 6 (with the
-targeted re-checks at the end of this file). Revision 7 rewrites the page for readers after usability feedback, without
-changing any evidence label, card claim, card order or plan structure; it needs a new round of checks. See
-"Revision 7: reader-first update" at the end.
+**Status: revision 7.1 (fixes after passing round 7); targeted re-check pending.** Round 7 checked revision 7, the
+reader-first update, and **passed**. Revision 7.1 makes only the accuracy fixes and written-rule fixes the coordinator
+listed, with no change to any card's claim, evidence label or side; a targeted re-check of the changed units follows. See
+"Round 7" and "Revision 7.1" at the end. (Revision 6.3 passed round 6 and its targeted re-checks.)
 
 ## Round 1 (revision 1, `verification/round1/workspace.r1.md`)
 
