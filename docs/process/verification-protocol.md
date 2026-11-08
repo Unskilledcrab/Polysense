@@ -70,8 +70,9 @@ asked to add). So "done" is defined in advance:
 3. **Remaining medium and low panel suggestions become open items.** They are listed in `verification.md`
    and on the page's "How we checked" view, and they feed the next revision, which starts a new full
    round. Suggestions that contradict each other are logged side by side, not silently resolved.
-4. The page is then labeled **"Passed checks (round N)"**, never "verified" in general, and that label
-   links to the open items.
+4. The page is then labeled **"Passed our checks"**, never "verified" in general. The label links to the
+   page's "How we checked" view, which gives the round number and the open items. (Lay readers couldn't
+   place "Passed checks (round 6)", so the round moved off the label.)
 
 **When only the editor blocks a round.** If both advocates already rate their side 4 or more and the round
 fails only on the editor's high-severity issues, the next revision fixes only those issues and the accuracy

@@ -145,8 +145,8 @@ them like any other text. Keep the idea only if readers find it useful.
   isn't known yet. Readers find their own line; nothing is asked or stored.
 - **Who decides, and how to reach them** (Layer 1) lists every decider the same way, with the public contact
   routes the sources give. The Decide label is kept for the reader's own vote.
-- **What each side says it protects** (top of Layer 3) is the values guide: one line per option, from a
-  documented, verbatim quote. It answers "why should I care?" without recommending an option.
+- **What each side says it protects** (top of Layer 3) is the values guide: one line for each side with a
+  documented argument, from a verbatim quote. It answers "why should I care?" without recommending an option.
 - **Evidence labels come with a plain legend** on the Arguments tab and a "What these mean" button on each
   folded card. Mixed and Uncertain look different (color, symbol and border), so meaning doesn't rely on
   color alone.

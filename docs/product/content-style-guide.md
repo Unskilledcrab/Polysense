@@ -119,7 +119,7 @@ overcorrecting, against critics.
   evidence status, in the same form on every card. Don't end one side's summaries with a rebuttal unless
   every card gets one.
 - **Who disagrees:** only a statement that answers *this card's* claim. A general remark doesn't count.
-  If no source disputes the claim, write "No one in the sources we reviewed disputed this directly".
+  If no source disputes the claim, write "No one in the sources we reviewed disputed this claim directly".
 - **Evidence label:** a vocabulary word, then its basis in parentheses ("Supported, with limits (one
   Florida working paper; gains in year two)"). Labels follow the evidence and may differ between
   sides. Never equalize them.
@@ -150,11 +150,14 @@ a decision raises or lowers their bill, or what "Mixed" means, and found the car
   doesn't tell a reader what is up for debate.
 - **"Decide" is the reader's power.** Use the Decide label only when the reader votes directly. Officials who
   decide go under **Who decides, and how to reach them**.
-- **What each side says it protects.** Layer 3 opens with a values guide: one line per option in the same
-  form, "If you care most about <value>: <speaker, role>, who backs <option>, said "<verbatim quote>"." The
-  value must be faithful to the quote. An option with no documented argument gets no line, and the page
-  says so. No recommendation words ("fits", "best", "should", "choose"). The reader's own values are never
-  asked for or stored.
+- **What each side says it protects.** Layer 3 opens with a values guide: one line for each side with a
+  documented argument, in the same form, "If you care most about <value>: <speaker, role>, who backs
+  <option>, said "<verbatim quote>"." When a side's argument is about something the options share (the
+  process that produced a proposal, say), name what it defends or opposes instead of one option. Every side
+  with a documented argument gets a line; a guide that quotes only one side reads as a recommendation
+  (Trial 003, round 4). The value must be faithful to the quote. An option or side with no documented
+  argument gets no line, and the page says so. No recommendation words ("fits", "best", "should",
+  "choose"). The reader's own values are never asked for or stored.
 
 ## Change log
 

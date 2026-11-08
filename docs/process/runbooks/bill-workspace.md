@@ -103,8 +103,9 @@ Follow the [content-style-guide](../../product/content-style-guide.md) and the
    `### Who decides, and how to reach them` (every decider listed the same way, with public contact routes
    from the sources), `### Coming up`, `### What happened`. For a past session, the last is "what happened".
 4. **Layer 2: Decision.** At most 80 words, plus at most 5 "what would change" bullets.
-5. **Layer 3: Options.** An intro of ≤ 60 words, then `### If you care most about…`: one values line per
-   option in card order, built only from a documented, verbatim quote (style guide, section 9). Then the
+5. **Layer 3: Options.** An intro of ≤ 60 words, then `### If you care most about…`: one values line for
+   each side with a documented argument, in card order, built only from a verbatim quote (style guide,
+   section 9). Then the
    options, including the status quo. For each option: who benefits, who pays, what's uncertain.
 6. **Layer 4: Arguments.** Documented arguments first, with speaker, venue, date and a verbatim quote.
    Anticipated arguments are labeled and unattributed. Every card uses the same fields in the same order
