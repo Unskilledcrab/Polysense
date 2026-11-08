@@ -134,6 +134,21 @@ passages:
      note: "The student is a minor; our standards describe minors by role, not name. Only the name was replaced."}
   - {id: P-053, source: S16b, file: S16b.txt, locator: "article, State School Superintendent testimony",
      start: "State School Superintendent Richard Woods testified Tuesday.", end: "support from teachers across Georgia."}
+  # --- S01 again: remaining bill lines, so the full enacted text is in the passages ------------
+  # (Added after the bias panel noted that "the law does not say X" claims could not be checked
+  #  while some bill lines were missing. Together, P-001 to P-019 and P-056 to P-061 cover lines 1-106.)
+  - {id: P-056, source: S01, file: hb1009-247117.clean.txt, locator: "p.1, lines 8-14 (enacting clause, Section 1)",
+     start: "BE IT ENACTED BY THE GENERAL ASSEMBLY OF GEORGIA:", end: "(a) As used in this Code section, the term:"}
+  - {id: P-057, source: S01, file: hb1009-247117.clean.txt, locator: "p.2, lines 22-25, (a)(3)",
+     start: "(3) 'Distraction-free education' means", end: "focused learning experiences."}
+  - {id: P-058, source: S01, file: hb1009-247117.clean.txt, locator: "p.2, lines 34-38, (a)(6)",
+     start: "(6) 'School equipment' means", end: "accessing communications, data, or media."}
+  - {id: P-059, source: S01, file: hb1009-247117.clean.txt, locator: "p.3, lines 62-64, (c)(4)(C)",
+     start: "(C) Communicate rules for school personnel", end: "do not occur on school grounds; and"}
+  - {id: P-060, source: S01, file: hb1009-247117.clean.txt, locator: "p.4, lines 87-92, (e)(2)",
+     start: "(2) Each local school system and public school is encouraged", end: "device-free play and activities."}
+  - {id: P-061, source: S01, file: hb1009-247117.clean.txt, locator: "p.5, lines 105-106, Section 3",
+     start: "SECTION 3.", end: "conflict with this Act are repealed."}
   # --- S19: Cairo High School (Grady County Schools) page, 2026-06-01 ------------------------
   - {id: P-054, source: S19, file: S19-rendered.txt, locator: "school news page (browser-rendered)",
      start: "Cairo High School June 1, 2026", end: "in the 2026-2027 school year."}
