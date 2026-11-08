@@ -1,0 +1,82 @@
+{
+ "checker": "independent-source-verifier",
+ "document": "/home/user/Polysense/trials/001-hb1009-high-school-cellphones/home.md",
+ "units": [
+  {
+   "line": 5,
+   "sentence": "Ask your school district how it will store phones and handle emergency messages.",
+   "marker": "{editorial}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Suggested action; storage and emergency messaging are set in district policy (P-009, P-011).",
+   "suggested_fix": ""
+  },
+  {
+   "line": 5,
+   "sentence": "District policies are due by January 1 each year.",
+   "marker": "[P-008]",
+   "verdict": "supports",
+   "evidence_span": "By January 1 each year, each local school system and public school shall adopt, and revise as appropriate, policies and procedures",
+   "correct_passage": "",
+   "problem": "Minor: individual public schools also adopt policies.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 9,
+   "sentence": "House Bill 1009, Georgia",
+   "marker": "[P-019, P-054, P-028]",
+   "verdict": "supports",
+   "evidence_span": "This Act shall become effective December 31, 2026.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 10,
+   "sentence": "First yearly deadline for district device policies covering kindergarten through 12th grade.",
+   "marker": "{analysis}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Follows from P-008 (\"By January 1 each year\", K-12) and P-019 (effective Dec 31, 2026).",
+   "suggested_fix": ""
+  },
+  {
+   "line": 11,
+   "sentence": "Public high schools must start banning phones and similar devices during the school day.",
+   "marker": "[P-007, P-004]",
+   "verdict": "supports",
+   "evidence_span": "Beginning no later than July 1, 2027, no public school student in grades nine through 12 shall be permitted to access personal electronic devices during the school day",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 15,
+   "sentence": "House Bill 1009 became law, extending Georgia",
+   "marker": "[P-024, P-028, P-054]",
+   "verdict": "supports",
+   "evidence_span": "expands the prohibition of personal electronic devices in public schools to include high school grades nine through twelve",
+   "correct_passage": "",
+   "problem": "Supported; see framing on timing.",
+   "suggested_fix": ""
+  }
+ ],
+ "framing_issues": [
+  {
+   "line": 15,
+   "text": "House Bill 1009 became law, extending Georgia's school-day device ban to high schools.",
+   "issue": "Read alone, it can suggest the high school ban applied from May 5, 2026. The law takes effect Dec 31, 2026, and high schools must start by July 1, 2027 (P-019, P-007). Consider \"... to high schools, starting by July 1, 2027.\"",
+   "severity": "low"
+  }
+ ],
+ "summary": {
+  "units_checked": 6,
+  "supports": 4,
+  "partial": 0,
+  "does_not_support": 0,
+  "wrong_span": 0,
+  "questionable_or_invalid_tags": 0
+ }
+}

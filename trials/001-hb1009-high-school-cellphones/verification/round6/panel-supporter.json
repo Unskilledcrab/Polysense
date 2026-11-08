@@ -1,0 +1,118 @@
+{
+  "role": "supporter-advocate",
+  "rating": 4,
+  "missing_arguments": [
+    {
+      "argument": "Teachers can focus on teaching again, and educators back the ban. The page uses this only as a rebuttal on opposing card 5, with Harrell's line cut down to what legislators 'want to hear'. It appears on no supporter card and not in the staff 'If you...' line. It could go in card 1's 'Who says it': Harrell said lawmakers like to hear that the policy means teachers can focus on instruction again (P-045), and Woods told lawmakers he had heard nothing but support from teachers (P-053).",
+      "passages": ["P-045", "P-053"]
+    },
+    {
+      "argument": "The student's actual claim was that phones 'have become addictive for teens'. Card 2 (our card) keeps only the paraphrase 'compared social media to cigarettes'. Card 6 quotes the cigarette line verbatim, but only as a rebuttal. Card 2 should carry the addiction claim plus the verbatim quote.",
+      "passages": ["P-052"]
+    },
+    {
+      "argument": "Supporting parents' fourth reason, 'Improved physical health and safety' (60.3%), is the only one of the survey's nine reasons that appears on no argument card. All five opposing reasons do appear (74.8%, 45.5%, 41.9%, 26.6%, 19.8%). Add it to card 2's 'Who says it', or, in the survey's exact words, to card 4's 'Who disagrees', since parents on both sides cite safety.",
+      "passages": ["P-034"]
+    },
+    {
+      "argument": "The law's own answer to the emergency concern: every policy must route all emergency communication through school emergency systems, coordinated by school staff. On card 4 this is filed under 'What's missing' as the lead-in to a 'But'. It belongs under 'What challenges it', next to Gazmararian.",
+      "passages": ["P-011", "P-008"]
+    },
+    {
+      "argument": "Georgia's law requires 'progressive' consequences, with examples that start at verbal warnings. Card 5 cites P-012 only for confiscation. The archived Florida abstract (all of it) doesn't describe what consequences Florida's bans used. That gap belongs in card 5's 'What's missing', beside the existing note that the summary doesn't say how much of the school day the bans covered.",
+      "passages": ["P-012", "P-067", "P-038", "P-068", "P-039", "P-040"]
+    },
+    {
+      "argument": "The English study has a scope limit. Its 'restrictive' schools were defined by not permitting recreational phone use, while Georgia's law bars all access, including viewing, holding or wearing a device, from first bell to last. Card 2 quotes the authors' conclusion about policies 'in their current form' with no such note, although cards 1 and 5 both carry the matching Florida scope caveat.",
+      "passages": ["P-041", "P-043", "P-003", "P-002"]
+    }
+  ],
+  "unfair_wording": [
+    {
+      "line": 15,
+      "text": "By July 1, 2027, reaching your child during the school day means contacting the school, including in emergencies. [P-007, P-011] Not known as of Nov 8, 2026: who pays for phone storage; the law doesn't say or set aside money, and we didn't review the state budget.",
+      "why": "This first-screen line spotlights the opponents' top concern ('including in emergencies') but leaves out the school's duty to coordinate all emergency messages through its emergency systems (P-011(A)), which Layer 2 item 3 (line 78) states. 'Who pays for phone storage' assumes a cost that no source documents, and P-009's options include a locker or a set place in the classroom. Suggested wording: 'In an emergency, school staff coordinate messages through the school's emergency systems. [P-011]' and 'Not known: how your school will store phones, and whether that costs families anything. [P-009]' Line 29 already uses that 'whether' wording.",
+      "severity": "medium"
+    },
+    {
+      "line": 16,
+      "text": "By July 1, 2027, your school must enforce the phone ban, which may include assigning staff and checking phone storage. [P-007, P-014] Not known as of Nov 8, 2026: how much work enforcement takes; the law sets aside no money, and we didn't review the state budget.",
+      "why": "For teachers who backed the law, this line is all burden and no aim. It leaves out the law's stated purpose, fewer distractions and more focused learning (P-057), which is the hoped-for gain for staff, and it adds a funding point that no source raises. Suggest adding 'The law says its aim is fewer distractions and more focused learning. [P-057]' and changing the unknown to 'how much work enforcement takes, and whether class distractions change'.",
+      "severity": "medium"
+    },
+    {
+      "line": 192,
+      "text": "The law requires each district's and school's policy to send all emergency communication through school emergency messaging systems, coordinated by school staff. [P-008, P-011] But the law doesn't require the rapid parent alerts or guaranteed phone access Gazmararian described. ... Districts can add faster parent alerts, because the law sets minimum rules, but by our reading they can't allow students' own phones in an emergency unless a student's disability or medical plan, or another law, requires access.",
+      "why": "The emergency-messaging duty is the law's built-in answer to this card. Filing it under 'What's missing' with a 'But' makes it read as a gap. The page's own reading also narrows Gazmararian's 'guaranteed access to phones when needed' (P-037) to students' own phones. The ban covers portable personal electronic devices (P-004, P-007), and emergency communication runs through school systems coordinated by staff (P-011), so on the same reading nothing bars staff-coordinated use of a school phone. Move the first sentence to 'What challenges it'. Then say districts can add faster alerts and staff-coordinated phone access, though not students' own phones.",
+      "severity": "medium"
+    },
+    {
+      "line": 164,
+      "text": "Students testified in support at a legislative hearing; one, a 17-year-old, compared social media to cigarettes. [P-052]",
+      "why": "On our own card, the student's argument is softened to a paraphrase and its substance ('phones have become addictive for teens') is dropped. Card 6 quotes the same student verbatim, but only as a rebuttal. Suggest: 'one, a 17-year-old, told lawmakers that phones have become addictive for teens: \"Social media is the cigarette of our generation.\"'",
+      "severity": "low"
+    },
+    {
+      "line": 202,
+      "text": "Sen. Sally Harrell said legislators want to hear teachers say, \"I can just teach again.\" [P-045, P-044]",
+      "why": "Keeping only the 'want to hear' framing makes the point sound like wishful thinking. The passage's substantive claim is that the policy change 'means teachers can focus on instruction again' (P-045). Suggest: 'Sen. Sally Harrell said lawmakers like to hear that a policy change means teachers can focus on instruction again.' The quote can follow.",
+      "severity": "low"
+    },
+    {
+      "line": 153,
+      "text": "The study's summary says the bans' effects were larger in middle and high schools, where more students own smartphones. [P-040] That summary doesn't say whether the larger effects include suspensions.",
+      "why": "Our most Georgia-relevant finding (larger effects in high schools) is undercut inside its own 'What supports it' field. The caveat is accurate, but it belongs in 'What's missing', where the card's other scope notes already are.",
+      "severity": "low"
+    },
+    {
+      "line": 179,
+      "text": "The high school ban was signed on May 5, 2026, before the statewide K-8 start deadline of July 1, 2026. [P-024, P-006] ... So K-8 policies were due before the signing, but the latest date to start the K-8 ban had not yet passed.",
+      "why": "No source makes this challenge; the page built it from dates. It bears only on the 'success of HB 340' part of the claim. It doesn't touch Harrell's statement that high schools had already used limits with success (P-046), which happened without any state rule for high schools (HB 340 covered only kindergarten through 8th grade, P-006). Add: 'These dates don't bear on the high schools Harrell described.'",
+      "severity": "low"
+    }
+  ],
+  "imbalance": [
+    {
+      "issue": "A cost theme that no source raises appears in seven places: 'sets aside no money' or 'doesn't say who pays' (lines 15, 16, 29, 120, 201) and 'no official cost estimate' (lines 30, 121). No passage records anyone on either side arguing about cost or funding. The page itself says any funding would come through a state budget it didn't review, so the sentence tells readers little. Repeated on the first screen (parent and staff lines), twice in Option B (it is most of why 'Who pays', at about 157 words, runs about half again as long as 'Who benefits', at about 107) and as page analysis under opposing card 5's 'What supports it', it builds an unfunded-mandate argument that nobody made. Adams's documented concern was policing and confrontation (P-047), not money. State it once in 'Not known yet' (lines 29-30) and once in Option B's 'What's uncertain', and drop it from the 'If you...' lines and from card 5.",
+      "severity": "medium"
+    },
+    {
+      "issue": "Card 2 gives the weaker study more weight and authority than the stronger study gets on card 1. The English null result on well-being is stated three times on card 2 ('In short', 'Who disagrees', and 'What challenges it', where line 167 repeats line 166) plus the label. No other card states one counter-finding three times. The English authors are quoted verbatim as voices, including a general policy conclusion ('do not provide evidence to support ... in their current form'). The Florida study, the one designed to estimate cause and effect, is only paraphrased, and its authors (P-055) never appear as voices on card 1. Fix: cut the well-being half of line 167 and keep 'or of less phone use overall'. Add the scope note on the English policies. Then either paraphrase both studies' authors or quote P-040 on card 1.",
+      "severity": "medium"
+    },
+    {
+      "issue": "Survey coverage on the cards is uneven. All five opposing reasons appear on argument cards, but only three of the four supporting reasons do. 'Improved physical health and safety' (60.3%, P-034) appears only in Option B's list.",
+      "severity": "low"
+    },
+    {
+      "issue": "Card 5 uses the law's text selectively. Under 'What supports it', it cites P-012 only for 'taking students' devices' and presents P-015's effectiveness review only as a burden. Its 'What challenges it' leaves out that consequences must be 'progressive', with examples that start at verbal warnings (P-012). It also leaves out that the required review exists to keep the rules aligned with 'educational goals and student well-being' (P-015).",
+      "severity": "low"
+    },
+    {
+      "issue": "Card 6's 'What supports it' (line 213) is filled with survey reason shares (26.6% and 19.8%). Cards 1, 2 and 4 put survey shares under 'Who says it'. Placed under 'What supports it', they make the opposing values card look evidenced when they only show who holds the view. Move them to 'Who says it' and note that no source measures how often students need phones for health tools or schoolwork.",
+      "severity": "low"
+    },
+    {
+      "issue": "The English study sentence, with its null well-being result, appears in both option slots that favor supporters: Option A 'Who pays' (line 112) and Option B 'Who benefits' (line 119). Meanwhile, Option A 'Who benefits' (line 111) cites avoiding the 'short-term rise in suspensions' without the explicit note, given in Option B (line 120), that the rise began to fade after the first year.",
+      "severity": "low"
+    }
+  ],
+  "label_disagreements": [
+    {
+      "argument": "2. The ban will help teens' mental health and friendships",
+      "label": "Uncertain (one study of 12- to 15-year-olds in England found no evidence of a well-being difference; it couldn't test cause and effect)",
+      "proposed": "Uncertain (statements, and one English study of 12- to 15-year-olds that couldn't test cause and effect; it found less phone and social media time during school but no evidence of a well-being difference, and reported nothing on friendships)",
+      "why": "I accept 'Uncertain' under the printed rule ('only statements, or studies that show links but not causes'). But the parenthetical names only the null result, so a reader scanning labels sees evidence against our side. The same study's reduction in school-time phone use (P-042) and Hilton's statements (P-051) are on the card, and the friendships half of the claim has no study at all (P-064). The basis should be described evenly, the way card 3's '(statements only; no measured results)' is."
+    },
+    {
+      "argument": "5. Enforcing the ban will burden school staff and can lead to conflict",
+      "label": "Supported on new duties (the law's text); supported, with limits on early suspensions (one Florida working paper; no Georgia results yet); uncertain on staff workload (not measured)",
+      "proposed": "Uncertain on staff burden (workload not measured; the duties themselves are in the law's text); supported, with limits on early suspensions (one Florida working paper; the rise faded after year one; no Georgia results yet)",
+      "why": "The headline claim is predictive: that enforcement will burden staff and lead to conflict. That the law creates duties is undisputed and isn't the claim, so leading with 'Supported' lets a scanning reader take the whole card as supported. Card 1's label names its timing limit ('gains in year two'). For parity, card 5's label should name the matching limit: the suspension rise 'began to dissipate after the first year' (P-039)."
+    }
+  ],
+  "questions_to_weigh": "Neutral, and supporters would accept them. Q1 asks whether the ban 'helps or hurts' learning and well-being and how soon anyone could know. Q3 offers the state, each district or each family without favoring one. Q2 centers the opponents' emergency concern, but it asks how well school alert systems and students' own phones 'each' keep families informed, and how anyone could know, so it doesn't assume phones are safer. Optional: no question names the tradeoff both sides actually stated, protected class time against direct contact (P-044, P-049), but fairness doesn't require one.",
+  "values_guide": "Fair, with one small wording fix. Our line uses our side's top reason in the survey's own words ('Improved academic focus and learning', P-034). It matches the opposing line in source, structure and length: both draw on the same Emory survey (P-032, P-070). Our speakers' own words would be stronger, for example Woods's 'both an academic issue and a mental health issue' (P-036) or Harrell's 'education time needs to be protected' (P-044). But changing only our line would break the parity, so I accept using the survey for both. The opposing heading 'reaching your child in an emergency' names a value supporters share too. Next to the quoted label 'No way to reach child during emergency', it can read as if the law leaves families no way. Under the law, families still reach students through the school, and staff coordinate emergency messages (P-011). Suggest 'reaching your child directly in an emergency'. No line claims more than its evidence.",
+  "if_you_lines": "They tilt against my side. The three high school lines state only restrictions and duties. Their 'Not known' slots hold only possible costs (who pays for storage, how much enforcement work) and never a possible gain, and no line mentions the law's stated aim (P-057). The parent line spotlights emergencies but leaves out the school's duty to coordinate emergency messages (P-011(A)), which Layer 2 item 3 states. 'Who pays for phone storage' assumes a cost no source documents, while P-009 lists a locker or a set place in the classroom. Fixes: parent line, add 'In an emergency, school staff coordinate messages through the school's emergency systems [P-011]' and make the unknown 'how your school will store phones, and whether that costs families anything [P-009]'. Staff line, add 'The law says its aim is fewer distractions and more focused learning [P-057]' and make the unknown 'how much work enforcement takes, and whether class distractions change'. Student line, optionally add 'Not known: whether it will change your focus, learning or well-being.' Every line keeps its facts; the change only makes the unknowns run both ways.",
+  "verdict_summary": "Fair overall (4/5). All three of our arguments are present with real speakers, and their labels follow the printed rule. Card 1's 'Supported, with limits' and the 'Uncertain' on cards 2 and 3 are correct, and I wouldn't ask for stronger labels. The values guide and the questions are even-handed, and no supporter is described dismissively. The tilt is in framing and repetition, not in facts. (1) A 'no money / no fiscal note' theme that no source raises appears in seven places, including the first screen and the supports field of opposing card 5. (2) The 'If you...' lines list only restrictions and cost-type unknowns. (3) Card 4 files the law's emergency-messaging duty under 'What's missing' and reads Gazmararian's 'guaranteed access to phones' as students' own phones only. (4) Card 2 states the English null result three times, quotes its authors' policy conclusion verbatim with no note that their 'restrictive' schools only barred recreational use, and paraphrases away the student's addiction claim. (5) Card 5's label leads with 'Supported' for duties nobody disputes and omits that the suspension rise faded. Every fix uses passages already archived."
+}

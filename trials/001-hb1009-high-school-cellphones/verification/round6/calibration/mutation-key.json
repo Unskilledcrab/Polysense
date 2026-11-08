@@ -1,0 +1,143 @@
+[
+ {
+  "id": "M01",
+  "type": "wrong-deadline",
+  "line": 14,
+  "original": "By July 1, 2027, you can't access phones",
+  "mutated": "By Dec 31, 2026, you can't access phones",
+  "keywords": [
+   "dec 31",
+   "july 1",
+   "jul 1",
+   "takes effect",
+   "deadline",
+   "start"
+  ]
+ },
+ {
+  "id": "M02",
+  "type": "invented-exception",
+  "line": 14,
+  "original": "Access is allowed if your disability or medical plan explicitly requires it, or another law does.",
+  "mutated": "Access is allowed only if a parent signs a permission form.",
+  "keywords": [
+   "permission",
+   "parent signs",
+   "form",
+   "iep",
+   "504",
+   "medical plan",
+   "exception"
+  ]
+ },
+ {
+  "id": "M03",
+  "type": "invented-money",
+  "line": 15,
+  "original": "the law doesn't say or set aside money, and we didn't review",
+  "mutated": "the law sets aside $5 million for it, and we didn't review",
+  "keywords": [
+   "5 million",
+   "sets aside",
+   "funding",
+   "no money",
+   "fund"
+  ]
+ },
+ {
+  "id": "M04",
+  "type": "wrong-identifier",
+  "line": 17,
+  "original": "A 2025 law, House Bill 340,",
+  "mutated": "A 2025 law, House Bill 304,",
+  "keywords": [
+   "304",
+   "340",
+   "bill number",
+   "hb 340"
+  ]
+ },
+ {
+  "id": "M05",
+  "type": "contact-detail",
+  "line": 45,
+  "original": "call (404) 656-1776",
+  "mutated": "call (404) 656-1767",
+  "keywords": [
+   "1767",
+   "1776",
+   "phone",
+   "number"
+  ]
+ },
+ {
+  "id": "M06",
+  "type": "wrong-statistic",
+  "line": 104,
+  "original": "was \"No way to reach child during emergency.\"",
+  "mutated": "was \"Should be parental choice.\"",
+  "keywords": [
+   "parental choice",
+   "top reason",
+   "74.8",
+   "45.5",
+   "emergency",
+   "most"
+  ]
+ },
+ {
+  "id": "M07",
+  "type": "altered-quote",
+  "line": 103,
+  "original": "\"Improved academic focus and learning.\"",
+  "mutated": "\"Improved test scores and learning.\"",
+  "keywords": [
+   "test scores",
+   "verbatim",
+   "quote",
+   "academic focus",
+   "altered",
+   "misquot"
+  ]
+ },
+ {
+  "id": "M08",
+  "type": "recommendation-word",
+  "line": 105,
+  "original": "and this guide does not recommend any option.",
+  "mutated": "and Option B serves most families best.",
+  "keywords": [
+   "best",
+   "recommend",
+   "serves most",
+   "endorse"
+  ]
+ },
+ {
+  "id": "M09",
+  "type": "overstated-duty",
+  "line": 16,
+  "original": "which may include assigning staff and checking phone storage.",
+  "mutated": "which must include hiring a full-time phone monitor.",
+  "keywords": [
+   "hiring",
+   "full-time",
+   "monitor",
+   "must include",
+   "may include"
+  ]
+ },
+ {
+  "id": "M10",
+  "type": "number",
+  "line": 120,
+  "original": "Of the 29.2% who opposed a ban, 74.8% cited",
+  "mutated": "Of the 29.2% who opposed a ban, 84.7% cited",
+  "keywords": [
+   "84.7",
+   "74.8",
+   "number",
+   "percent"
+  ]
+ }
+]

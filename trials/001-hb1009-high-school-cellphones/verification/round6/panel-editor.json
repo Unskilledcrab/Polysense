@@ -1,0 +1,252 @@
+{
+  "role": "standards-editor",
+  "rating_neutrality": 4,
+  "rating_clarity": 3,
+  "issues": [
+    {
+      "line": 153,
+      "text": "The study's summary says the bans' effects were larger in middle and high schools, where more students own smartphones. [P-040] That summary doesn't say whether the larger effects include suspensions.",
+      "rule": 2,
+      "problem": "P-040 says only that \"The effects of cellphone bans are more pronounced in middle and high school settings\" and doesn't say which effects. The page uses that sentence as support on a pro card (card 1). It flags the ambiguity only for suspensions, the finding that would help the opposing card, here and again at line 145. The same ambiguity applies to test scores and absences, and card 5 never mentions the sentence. The same ambiguous evidence is read for one side and against the other.",
+      "fix": "At lines 145 and 153 write: \"That summary doesn't say which effects (test scores, absences or suspensions) were larger in middle and high schools. {analysis: P-040}\" Add the same sentence to card 5's \"What's missing\" (line 204).",
+      "severity": "medium"
+    },
+    {
+      "line": 139,
+      "text": "\"Uncertain\" means there are only statements, or studies that show links but not causes. {editorial: labeling rule} Values questions are marked as not mainly factual.",
+      "rule": 16,
+      "problem": "The printed rule defines only Supported, Supported with limits, Uncertain and 'not mainly factual'. The site legend also shows Mixed (\"The sources give conflicting accounts\"), Contested (\"The sources dispute it\") and Values question, and the page never says when those apply. Some cards hold openly conflicting accounts but are labeled Uncertain. In card 5, Woods \"had heard nothing but support from teachers\" while Adams says \"We have a lot of older teachers that do not want to have that confrontation.\" In card 2, Hilton's district reports sit against English study authors who report \"no evidence\". A reader checking the legend would expect Mixed or Contested there. The rule also says values questions are \"marked as not mainly factual\", but card 4 (\"factual, with a values question\") has no values label in its Evidence field.",
+      "fix": "Add to line 139: \"We use 'Mixed' or 'Contested' only when records or studies conflict. When only people's statements conflict, the label is 'Uncertain.' A mainly factual card with a values part labels that part 'Values question.' {editorial: labeling rule}\" Then append \"; values question (whether protected class time or direct contact matters more)\" to card 4's Evidence label (line 185).",
+      "severity": "medium"
+    },
+    {
+      "line": 180,
+      "text": "What's missing: No source we reviewed measured how the K-8 ban is working.",
+      "rule": 2,
+      "problem": "Card 3's \"What's missing\" covers only the K-8 half of the claim. Harrell's high school claim, \"It has been done in high schools already, it’s been very successful\" (line 176, also line 113), gets no specific caveat. Yet the one opposing anecdote gets one at line 192: \"Adams's lockdown account is one family's experience; the quoted passage doesn't say when it happened or what phone rules applied.\" Unmeasured statements should get the same treatment whichever side made them.",
+      "fix": "Add to line 180: \"Harrell's quoted passage doesn't name the high schools, say when their limits started or say how success was measured. {analysis: P-046}\" Keep the Adams caveat.",
+      "severity": "medium"
+    },
+    {
+      "line": 21,
+      "text": "Decided by the law: The law takes effect Dec 31, 2026. [P-019] From then on, each district's and school's device policy ... can't skip this one. [P-018]",
+      "rule": 10,
+      "problem": "This single summary-tab bullet runs to about 219 words (citations and tags removed), a wall of text on a phone. Rough Flesch-Kincaid estimates with verbatim quotes removed: about grade 9.5 on the summary tab (about 21 words a sentence), 9.8 in Layer 2, 9.5 in Layer 3 and 9.8 in the argument cards. Layer 1 is about grade 7.6. The target is grade 6-8. Lines 28, 29 and 31 are each one 33-47-word sentence with their labels, and line 192 has a 37-word sentence.",
+      "fix": "Break line 21 into short sub-bullets: takes effect; yearly policy; high school deadline; devices covered; what 'access' means; bell-to-bell; exceptions; consequences; no waivers. Split lines 28, 29, 31 and 192 into two sentences each. Aim for about 15 words a sentence on the summary tab.",
+      "severity": "medium"
+    },
+    {
+      "line": 209,
+      "text": "Evidence: Not mainly a factual question (who should decide; whether teens learn responsible use with or without a ban is untested)",
+      "rule": 16,
+      "problem": "The label wording doesn't match the legend's label, \"Not mainly factual\", so readers can't match it to the legend. \"Untested\" also says more than the sources show (rule 8): they are silent, and line 216 puts it correctly as \"Our sources don't measure ...\".",
+      "fix": "\"Evidence: Not mainly factual (who should decide; our sources don't measure whether teens learn responsible use with or without a ban)\"",
+      "severity": "low"
+    },
+    {
+      "line": 17,
+      "text": "A 2025 law, House Bill 340, already bars these students from accessing phones and similar devices during the school day.",
+      "rule": 13,
+      "problem": "The first sentence doesn't give this reader's direction (no change), which comes only in sentence two. \"These students\" can't be placed without the lead-in. Unlike the other audience lines, this one has no date: the yearly policy update has no 'when'.",
+      "fix": "First sentence: \"HB 1009 makes no change to your child's school-day phone ban, which a 2025 law, House Bill 340, already set.\" (20 words) Unknown: \"Not known as of Nov 8, 2026: what your district changes in its policy update due Jan 1, 2027.\"",
+      "severity": "low"
+    },
+    {
+      "line": 14,
+      "text": "By July 1, 2027, you can't access phones or similar devices during the school day, with some exceptions.",
+      "rule": 13,
+      "problem": "The size of the change is missing from the first sentence. \"During the school day\" can be read as class time only, but the ban also covers breaks and time between classes (P-002).",
+      "fix": "\"By July 1, 2027, you can't access phones or similar devices from the first bell to the last, including breaks, with some exceptions.\" (23 words)",
+      "severity": "low"
+    },
+    {
+      "line": 45,
+      "text": "The governor: Gov. Brian Kemp signed HB 1009 into law on May 5, 2026. [P-024, P-054] To reach the governor's office, call (404) 656-1776 or write to ...",
+      "rule": 15,
+      "problem": "The three deciders use different fields. The General Assembly and district entries say what they can still decide; the governor's entry doesn't. The governor's office is the only decider with contact details, but \"What you can do\" has no action for it. Meanwhile line 39 asks readers to contact lawmakers, and the page gives no way to reach them. The 'change the law' route is the least actionable.",
+      "fix": "Give each decider the same parts: \"Decided:\", \"Can still decide:\", \"How to reach:\". Governor: \"Can still decide: any change lawmakers pass would go to the governor to sign or veto. {editorial}\" Either add \"Input: Tell the governor's office what you think. [P-073, P-074]\" to What you can do, or drop the mismatch. Retry archiving an official General Assembly member directory. If it stays blocked, say so in line 39 too.",
+      "severity": "low"
+    },
+    {
+      "line": 38,
+      "text": "Input: If your district holds a family workshop, question-and-answer session or town hall, you can ask your questions there. {editorial: suggested action} The law encourages districts and schools to hold such events. [P-060]",
+      "rule": 4,
+      "problem": "P-060 says these events are \"designed to promote distraction-free education\". They are promotional events, not neutral forums. Presenting them as input venues without saying so overstates the source (rule 8), and the same omission is at line 46.",
+      "fix": "\"The law encourages districts and schools to hold such events to promote device-free learning. [P-060]\" Use the same wording at line 46.",
+      "severity": "low"
+    },
+    {
+      "line": 78,
+      "text": "Because the law says \"all,\" the rule covers messages from the school and between families and students.",
+      "rule": 8,
+      "problem": "This is a legal reading stated as fact on the neutral Decision tab. Card 4 hedges the same kind of reading (\"by our reading\", line 192).",
+      "fix": "\"By our reading, this covers messages between families and students too, because the law says 'all emergency communication' and requires parents to contact the school. {analysis: P-011}\"",
+      "severity": "low"
+    },
+    {
+      "line": 201,
+      "text": "The law itself sets aside no money for these duties; any state funding would come through the budget, which we didn't review.",
+      "rule": 8,
+      "problem": "The 'no money in the law' point appears four times (lines 15, 16, 120, 201), each time with the admission that the state budget wasn't checked. Readers may infer there is no state money, which the page can't support. In card 5 it is listed as support, though no quoted opponent raised funding and whether the budget pays is unknown.",
+      "fix": "Check the state budget, a public record. Otherwise keep \"The law itself sets aside no money for these duties\" and move the budget clause to card 5's \"What's missing\": \"We didn't check whether the state budget pays for these duties.\" Consider giving the funding unknown once in \"Not known yet\" and pointing to it from lines 15 and 16.",
+      "severity": "low"
+    },
+    {
+      "line": 54,
+      "text": "The Georgia Department of Education must give schools guidance and technical support. [P-016]",
+      "rule": 8,
+      "problem": "This \"Coming up\" item has no date. The law sets no deadline, and the page doesn't say so. The Department isn't defined on this tab either (rule 10).",
+      "fix": "\"No date set: The Georgia Department of Education, the state agency that oversees public schools, must give schools guidance and technical support. The law sets no deadline. [P-016] {analysis: plain-language definition; P-016 sets no date}\"",
+      "severity": "low"
+    },
+    {
+      "line": 30,
+      "text": "{analysis: the list's whole 2026 section (P-069) has no entry for HB 1009}",
+      "rule": 8,
+      "problem": "The last entry in P-069, \"LC 47 3887 (PDF, 293.99 KB)\", has no description. The claim that the list has no entry for HB 1009 therefore rests on that entry's drafting number differing from HB 1009's (LC 49 2527), and the note doesn't say so.",
+      "fix": "Extend the note: \"...; the one entry without a description, LC 47 3887, has a different drafting number from HB 1009 (LC 49 2527, P-027)\".",
+      "severity": "low"
+    },
+    {
+      "line": 121,
+      "text": "The same goes for suspensions and for reaching students in an emergency. {editorial}",
+      "rule": 8,
+      "problem": "The sentence calls the change in 'reaching students in an emergency' unknown. But the change is known: families must go through the school (P-011). What's unknown is how well school alerts will work. 'The same goes for' also makes the reader look back to find what it refers to (rule 10).",
+      "fix": "\"How suspensions will change is also unknown, and so is how well school alerts will keep families informed in an emergency. {editorial}\"",
+      "severity": "low"
+    },
+    {
+      "line": 200,
+      "text": "Teacher Darryl Adams said he worries the bill would put the burden on teachers and administrators to police phones, a task that can invite conflict.",
+      "rule": 3,
+      "problem": "'Police phones' is a loaded word from the reporter's paraphrase, not a quote from Adams, and it appears again at line 199. 'Worries' casts the only opposing voice as a feeling. Supporters get 'said', 'called for' and 'told lawmakers'.",
+      "fix": "\"Teacher Darryl Adams said the bill could put the burden on teachers and administrators to enforce phone rules, a task that can invite conflict. [P-047]\" Line 199: \"School staff would have to enforce phone rules, which can invite conflict, opponents say.\"",
+      "severity": "low"
+    },
+    {
+      "line": 222,
+      "text": "How well can school alert systems and students' own phones each keep families informed in an emergency, and how could anyone know?",
+      "rule": 12,
+      "problem": "This question measures emergencies only by whether families stay informed; supporters might frame the issue as student safety. And none of the three questions covers card 5's issues (staff workload, suspensions), so opponents could fairly say one of their main points is missing.",
+      "fix": "Change it to \"...each keep students safe and families informed in an emergency...\". Add: \"How much work will enforcing the ban add for school staff, and will it change how often students are suspended, and which students? {editorial}\"",
+      "severity": "low"
+    },
+    {
+      "line": 128,
+      "text": "Who pays: In those districts, part of the school day would no longer be phone-free.",
+      "rule": 1,
+      "problem": "Option C's case against is one sentence. It leaves out the mirror of its own listed benefit (\"Each district would decide for itself\"): rules could differ by district, a cost Option A's \"Who pays\" already lists (line 112).",
+      "fix": "Add: \"Rules for the time between classes could differ from one district to the next. {analysis: under P-027, each district would decide}\"",
+      "severity": "low"
+    },
+    {
+      "line": 213,
+      "text": "What supports it: Among parents who oppose a ban, 26.6% cited needing phones for health tools or apps and 19.8% cited needing them for schoolwork. [P-035]",
+      "rule": 1,
+      "problem": "Card 6's case for is thin. The sources document 13 senators voting to let districts allow high school phone use between classes, the only legislative support in the record for some high school phone access, and the card doesn't use it.",
+      "fix": "Add, with full context: \"In the Senate, 13 senators voted for a change that would have let districts allow phones between classes; it failed 13 to 38, and the Senate then passed the bill 52 to 0. [P-025, P-026, P-027]\"",
+      "severity": "low"
+    },
+    {
+      "line": 191,
+      "text": "Julie Gazmararian, a professor at the Rollins School of Public Health, said, ...",
+      "rule": 10,
+      "problem": "Several institutions aren't defined at first mention on their tab. Rollins is never tied to Emory (P-070: the Emory center is \"based in the Rollins School of Public Health\"). The \"Emory Center for Child Health Policy\" (lines 102, 141) isn't identified as a university research center. \"Cairo High School\" (line 53) isn't identified as a Georgia public high school. \"Districts\" (line 10) appears before \"school district\" on the summary tab. Line 201's \"school system\" adds a third term for a district.",
+      "fix": "\"a professor at Emory's Rollins School of Public Health [P-037, P-070]\"; \"the Emory Center for Child Health Policy, a research center in Emory's Rollins School of Public Health [P-070]\"; \"Cairo High School, a Georgia public high school, [P-054]\"; line 10: \"School districts set the details\"; line 201: \"Each district and public school must monitor ...\".",
+      "severity": "low"
+    },
+    {
+      "line": 203,
+      "text": "In that study, the rise in suspensions began to fade after the first year. [P-039]",
+      "rule": 10,
+      "problem": "The field opens with 'that study'. On a phone the fields may be read one at a time, so the reader may not know which study is meant.",
+      "fix": "\"In the Florida study, the rise in suspensions began to fade after the first year. [P-039]\"",
+      "severity": "low"
+    },
+    {
+      "line": 23,
+      "text": "Georgia's lawmakers, the General Assembly, can change the law in a later session. {editorial: the General Assembly can amend laws in later sessions}",
+      "rule": 8,
+      "problem": "A factual claim is tagged {editorial}, and the tag's note just repeats the claim. The same pattern is at lines 10, 39 and 44. The sources can support it.",
+      "fix": "Tag it {analysis: HB 1009 itself amended the 2025 law, HB 340, in a later session (P-056, P-028)} at lines 10, 23, 39 and 44.",
+      "severity": "low"
+    },
+    {
+      "line": 102,
+      "text": "- The two lines that follow use the same fall 2025 survey of 1,002 Georgia parents by the Emory Center for Child Health Policy ...",
+      "rule": 14,
+      "problem": "The guide's intro note and its Option C note (line 105) are bullets just like the two value lines. On a phone the guide reads as four parallel lines, only two of which are values. That weakens the 'same form' signal.",
+      "fix": "Make line 102 a plain lead-in sentence above the list and line 105 a plain note below it. Keep the two value lines as the only bullets.",
+      "severity": "low"
+    }
+  ],
+  "flip_test": [
+    {
+      "line": 153,
+      "text": "That summary doesn't say whether the larger effects include suspensions.",
+      "asymmetry": "The ambiguous 'larger effects in middle and high schools' sentence is treated as support on the pro card (card 1). Its ambiguity is flagged only for suspensions, the finding that would help the opposing card (also at line 145). Written about the other side, we'd say 'doesn't say whether the larger effects include test scores.' Card 5 never mentions the sentence.",
+      "fix": "Use \"doesn't say which effects (test scores, absences or suspensions) were larger\" at lines 145 and 153, and add the same sentence to card 5's \"What's missing\"."
+    },
+    {
+      "line": 192,
+      "text": "Adams's lockdown account is one family's experience; the quoted passage doesn't say when it happened or what phone rules applied.",
+      "asymmetry": "Caveats: the only opposing anecdote gets a specific one. The supporters' unmeasured claim (Harrell: \"It has been done in high schools already, it’s been very successful\", lines 113 and 176) gets none. Card 3's \"What's missing\" (line 180) addresses only K-8.",
+      "fix": "Add to line 180: \"Harrell's quoted passage doesn't name the high schools, say when their limits started or say how success was measured. {analysis: P-046}\""
+    },
+    {
+      "line": 200,
+      "text": "Teacher Darryl Adams said he worries the bill would put the burden on teachers and administrators to police phones",
+      "asymmetry": "Verbs: the only opposing voice 'worries' and talks of staff having to 'police'. Supporters 'said', 'called for' and 'told lawmakers'.",
+      "fix": "\"Teacher Darryl Adams said the bill could put the burden on teachers and administrators to enforce phone rules, a task that can invite conflict.\""
+    },
+    {
+      "line": 120,
+      "text": "Of the 29.2% who opposed a ban, 74.8% cited having no way to reach their child in an emergency as a reason.",
+      "asymmetry": "Space: in the Options tab the opponents' top survey reason appears twice (line 111, A's 'Who benefits'; line 120, B's 'Who pays'). The supporters' top reason (87.7%, focus and learning) appears once (line 119). Option A's 'Who pays' (line 112) has no survey line.",
+      "fix": "Add to line 112: \"Of the 70.8% who supported a ban, 87.7% cited better focus and learning as a reason. [P-033, P-034]\" Or delete the line-120 sentence."
+    },
+    {
+      "line": 103,
+      "text": "If you care most about students' focus and learning: ... / (line 104) If you care most about reaching your child in an emergency: ...",
+      "asymmetry": "Values-guide framing: the opposing value speaks to the reader's own child (second person). The supporting value is about students in general (third person), so one line is more personal. Both reasons came from parents about their own children's schools.",
+      "fix": "\"If you care most about your child's focus and learning:\" (the line becomes 32 words; the quote is unchanged)."
+    },
+    {
+      "line": 135,
+      "text": "Our archived sources quote five people who spoke for the law: ... The same sources quote one person who spoke against the law: teacher Darryl Adams.",
+      "asymmetry": "Official vs ordinary voices: four officials and a student for, one teacher against. The Arguments tab never says that 20 House members voted no (P-025), so readers may assume no official opposed the bill. In 'Who disagrees', every opposing card faces a named official or student (Harrell twice, Woods, a 17-year-old). No pro card faces a named person (card 1: no one; card 2: the study authors; card 3: no one).",
+      "fix": "After the count add: \"In the House, 20 members voted against the bill; our sources quote none of them. [P-025]\" In the next research pass, look for documented statements by members who voted no."
+    },
+    {
+      "line": 113,
+      "text": "State Sen. Sally Harrell said, \"It has been done in high schools already, it’s been very successful and we look forward to rolling that out statewide.\"",
+      "asymmetry": "Option A's 'What's uncertain' carries a supporter's unmeasured success claim. Option B's 'What's uncertain' (line 121) quotes no opponent. Only the 'already done in high schools' fact bears on A's uncertainty.",
+      "fix": "\"State Sen. Sally Harrell said some high schools had already limited phones; the quoted passage doesn't name them. [P-046, P-044]\""
+    },
+    {
+      "line": 197,
+      "text": "supported, with limits on early suspensions (one Florida working paper; no Georgia results yet)",
+      "asymmetry": "The same study is labeled differently by side. Card 1's label (line 149) gives its strength ('designed to estimate cause and effect'); card 5's label for the same paper doesn't.",
+      "fix": "\"supported, with limits on early suspensions (one Florida working paper designed to estimate cause and effect; rise faded after year one; no Georgia results yet)\""
+    },
+    {
+      "line": 128,
+      "text": "Who pays: In those districts, part of the school day would no longer be phone-free.",
+      "asymmetry": "Option C counts district choice as a benefit (line 127) but leaves out the mirror cost. Option A lists both (line 111 'districts keep deciding'; line 112 'rules could differ from one district to the next').",
+      "fix": "Add: \"Rules for the time between classes could differ from one district to the next. {analysis: P-027}\""
+    },
+    {
+      "line": 133,
+      "text": "Supporters said the ban would cut distractions and ease anxiety. [P-071] Opponents said the ban could spark conflict for school staff ...",
+      "asymmetry": "Modal verbs: supporters' claims get 'would', opponents' get 'could'. The wording is inherited from the reporter's paraphrase (P-071, not a quote), but the page states it in its own voice.",
+      "fix": "\"A news report summed up the debate: supporters said the ban would cut distractions and ease anxiety, and opponents said it could spark conflict for school staff and leave parents with fewer ways to reach their children in emergencies. [P-071]\""
+    },
+    {
+      "line": 15,
+      "text": "Not known as of Nov 8, 2026: who pays for phone storage; ... (line 16) Not known as of Nov 8, 2026: how much work enforcement takes; the law sets aside no money ...",
+      "asymmetry": "Every 'Not known' item in the audience lines is a cost or logistics question. None names the matching unknown benefit, though line 31 says effects on learning and well-being are unknown too.",
+      "fix": "Add to the parent line \"...and whether the ban changes your child's focus or grades\" and to the staff line \"...and whether fewer phones make teaching easier\". Both are unknown for the same reason, with no Georgia high school results yet (line 31)."
+    }
+  ],
+  "verdict_summary": "Careful, well-sourced revision with no high-severity problems. No party labels, no minors named, no private addresses, no anticipated arguments. All six cards have the same seven fields. The two value lines are parallel and verbatim, with no recommendation words. All length budgets are met, though three items sit exactly at the limit: the 30-second version at 90 words with labels, value line 104 at 35, the Layer 3 intro at 60. Four medium fixes: (1) the Florida 'larger effects' ambiguity is flagged only for suspensions, the finding that would help opponents; (2) the printed labeling rule is silent on the legend's Mixed, Contested and Values question labels, while cards 2 and 5 contain conflicting accounts labeled Uncertain; (3) Adams's anecdote gets a specific caveat that Harrell's 'very successful' claim doesn't; (4) most tabs read at about grade 9.5-10 (rough Flesch-Kincaid), and line 21 is a 219-word bullet. The rest are low-severity parity, plain-language and precision fixes, such as the verbs 'worries' and 'police', the opponents' survey figure repeated in Options, the values-guide wording, Option C's missing cost, the governor entry's format and the stated purpose of the P-060 events."
+}
