@@ -1,0 +1,262 @@
+{
+  "role": "standards-editor",
+  "rating_neutrality": 4,
+  "rating_clarity": 4,
+  "issues": [
+    {
+      "line": 157,
+      "text": "The code's text and the 2026 record support part of this; the draft will show the rest.",
+      "rule": 8,
+      "problem": "Overstates what the Nov 15 draft can settle. The card's own header leaves 'Conflict with the code' (no record settles it), 'Needs above 5%' (claimants' figures) and 'Sound budgeting' (values) as things the draft won't resolve. Cards 4 and 6 tell readers in their In short when support is only the claimant's own ('his statement alone'; 'the offices' own accounts'). Card 3 doesn't, so the critics' card reads stronger than its labels.",
+      "fix": "'The code's text and the 2026 record back part of this; the rest rests on the resolution's own figures, an unsettled reading of the code, or the coming draft.'",
+      "severity": "medium"
+    },
+    {
+      "line": 159,
+      "text": "It says 27 of the county's 41 General Fund departments and agencies asked for more than 5% for 2026, and 14 of them got increases above 5%.",
+      "rule": 1,
+      "problem": "The 'What supports it' field is used differently from card to card. Cards 3 and 6 list the claimants' own figures and requests there: the resolution's 4%-to-43% and 27-of-41 figures and the public defender's slides at line 159, and the probate court's statement and requests and the public defender's request at line 195. Cards 1, 2, 4 and 5 keep that field for records from other sources, and Card 4 leaves Ellis's own factual claim ('Those meetings are open meetings') under 'Who says it'. A reader scanning 'What supports it' sees longer support lists on the critics' and requesters' cards.",
+      "fix": "Use one rule on all six cards. Either keep 'What supports it' for records other than the claimant's own and move claimant figures to 'Who says it' ('The resolution cites...'; 'Their own slides ask for...'), or state in the rubric that claimant figures may follow the records there, marked '(their own figures)', and treat Ellis's open-meetings statement the same way in Card 4.",
+      "severity": "medium"
+    },
+    {
+      "line": 204,
+      "text": "Should departments' requests for extra money be held to a set limit, with larger needs described only in narrative form, or should every request be listed in the draft in full?",
+      "rule": 12,
+      "problem": "'Described only in narrative form' comes from the cap-removal resolution (P-029), and the page says it found no written instruction for the limit (line 83). With 'only' on one side and 'in full' on the other, the question casts the limit as the restrictive choice. Someone who backs the limit would not accept it as fair.",
+      "fix": "'Should departments' requests for extra money be held to a set limit, or should every request be listed in the draft?' If the narrative-form detail stays, attribute it ('the resolution says...').",
+      "severity": "medium"
+    },
+    {
+      "line": 194,
+      "text": "The officials said funding decisions \"could affect court delays, jail conditions and public safety,\" Atlanta News First reported.",
+      "rule": 3,
+      "problem": "The quoted words are the reporter's own narration (P-069: 'warning that funding decisions could affect...'), not the officials' speech. Putting them in quote marks after 'The officials said' presents them as the officials' words. Line 146 does the same: 'Labat called the arrangement unfair \"to county agencies and taxpayers\"' quotes FOX 5's narration (P-078). Ellis's reported paraphrase (P-079) appears without quote marks (lines 134, 148), so the critics' paraphrases look like direct quotes and his doesn't.",
+      "fix": "Drop the quote marks in both places: 'The officials warned that funding decisions could affect court delays, jail conditions and public safety, Atlanta News First reported.' and 'FOX 5 reported that Labat called the arrangement unfair to county agencies and taxpayers.'",
+      "severity": "medium"
+    },
+    {
+      "line": 51,
+      "text": "2. Only the full Board can adopt or change the budget.",
+      "rule": 8,
+      "problem": "This is listed under 'What's different this year', but it isn't new. The Board adopted the budget before 2026 too, and the resolution itself speaks of 'preserving' that authority (P-004). It repeats line 44, puts the sponsors' main reassurance into the top summary block, and pushes the block to about 98 words, over the ~80 budget.",
+      "fix": "Delete item 2, since line 44 already says the full Board decides. Or reword it as what is new: 'The new rules say the commission itself can't adopt or change the budget.'",
+      "severity": "medium"
+    },
+    {
+      "line": 197,
+      "text": "The 2026 plan spends $73,637,614 more than it takes in.",
+      "rule": 1,
+      "problem": "Card 6 has nine supporting sentences and three challenging ones, and it leaves out the strongest county-record fact against more spending: the 2026 plan left savings only about $2.8 million above its minimum reserve (P-054). The page already uses that fact in Layer 2 (line 72) and in Option A (line 97).",
+      "fix": "Add after this sentence: 'That left savings about $2.8 million above the plan's minimum reserve.' {computed: $179,000,901 - $176,218,666 = $2,782,235 (P-054)}",
+      "severity": "medium"
+    },
+    {
+      "line": 167,
+      "text": "Evidence: Hearings announced, slides posted: Supported (county records). More open than past years: Uncertain (his statement; 2026 also had hearings). Open enough: a values question",
+      "rule": 2,
+      "problem": "Ellis said the commission's meetings are open, but the records cover only the October hearings. The card's own 'What's uncertain' (line 175) says the other meetings are unknown, yet that part gets no label. Card 3 labels every uncertain part separately, and the rubric says 'each part gets its own label'. With fewer Uncertain labels, the supporters' card looks stronger than the evidence allows.",
+      "fix": "Add: 'Other commission meetings announced and open: Uncertain (only the October notice found).'",
+      "severity": "medium"
+    },
+    {
+      "line": 50,
+      "text": "A four-member Budget Commission, including two commissioners, helps draft the budget; since 2018, the county manager had done it alone.",
+      "rule": 10,
+      "problem": "A rough Flesch-Kincaid estimate (heuristic syllable count, citations and tags removed) puts the page body near grade 9.6 and the card bodies near grade 10, against a grade 6-8 target. The 'What's different this year' list (~grade 12, 19 words a sentence) and 'Questions to weigh' (~20 words a sentence) run hardest. Much of this comes from unavoidable titles, but long exact figures ($1,057,100,578; $73,637,614) and clauses joined by semicolons add to it. Jargon itself is well defined.",
+      "fix": "Split sentences joined by semicolons, keep key-block sentences to about 15 words, and round dollar figures in body text ($1.06 billion, $73.6 million) while keeping exact values in the {computed} tags.",
+      "severity": "low"
+    },
+    {
+      "line": 8,
+      "text": "Supporters say it gives one commissioner from each half of the county an early role; critics say it lets those two take control of the process.",
+      "rule": 9,
+      "problem": "The first 30-second item is 69 words in four sentences, and the whole version is about 116 words, so it isn't 'about 3 short items'. The paraphrases also differ in strength: supporters get the page's mild words ('an early role') and critics get their own strong ones ('take control').",
+      "fix": "Trim to about 45 words: 'Sets Fulton's 2027 spending. A Budget Commission with two commissioners drafts it; the full Board decides. Supporters say it adds early input from both halves of the county; critics say it gives those two too much say, and object to a 5% limit on requests for extra money.'",
+      "severity": "low"
+    },
+    {
+      "line": 125,
+      "text": "\"Not mainly a factual question\" means the claim is about what is fair or right.",
+      "rule": 2,
+      "problem": "The printed rubric defines 'Not mainly a factual question', but no card uses that label. The cards say 'a values question', and Card 5's claim type is 'values, about timing' (line 179). Readers can't match the labels to the printed rule.",
+      "fix": "Define the label the cards actually use ('\"A values question\" means the part is about what is fair or right'), and make Card 5's claim type 'a values question, about timing'.",
+      "severity": "low"
+    },
+    {
+      "line": 137,
+      "text": "So the adopted General Fund ended within about 0.4% of the proposal, which the county manager had drafted alone.",
+      "rule": 8,
+      "problem": "The card never says what this shows, and the fact can be read several ways: the draft largely set the result, the old process worked, or late changes are hard to make. The net 0.4% also hides gross changes on the two dates ($20.6 million added and $16.6 million taken out), including an $18.2 million rise in consent decree money.",
+      "fix": "State the intended inference as {analysis} (for example, 'so the draft largely set the final budget') and mention the gross changes. If that is the point, it also belongs in Card 2's 'What supports it'.",
+      "severity": "low"
+    },
+    {
+      "line": 150,
+      "text": "We did not find the justice officials' letter, so their statements come from news reports.",
+      "rule": 8,
+      "problem": "Card 2 relies on Ellis being 'the only eligible member from the north', but never says that the records don't explain why the other two northern commissioners were ineligible. Under P-010, each must have served less than a year or had a term ending in 2026. Readers need this to weigh Barrett's 'only they qualify' against the reply that the rules apply to everyone.",
+      "fix": "Add to 'What's missing': 'Our sources don't say why Commissioners Thorne and Barrett were ineligible; under the rules, each had served less than a year or had a term ending in 2026.' {analysis: P-010, P-021}",
+      "severity": "low"
+    },
+    {
+      "line": 18,
+      "text": "FOX 5 reported that Ellis addressed the officials' concerns.",
+      "rule": 3,
+      "problem": "'Addressed' is FOX 5's verb, used outside quote marks, and it can read as 'resolved'. The same bullet uses the neutral 'responded' for Ellis and 'criticized' for Barrett.",
+      "fix": "'FOX 5 reported Ellis's response to the officials.'",
+      "severity": "low"
+    },
+    {
+      "line": 97,
+      "text": "The 2026 plan left savings about $2.8 million above the minimum reserve.",
+      "rule": 1,
+      "problem": "The thin-reserve fact appears only as a benefit of Option A. It applies just as much to Option B ('if the Board adds money, taxpayers, other programs or savings pay', line 106), so putting it under A alone frames A as the prudent choice.",
+      "fix": "Move it to the Layer 3 intro (line 91), or add it to Option B's 'Who pays' as well.",
+      "severity": "low"
+    },
+    {
+      "line": 114,
+      "text": "Departments and budget staff would have had less than four weeks to prepare and add every omitted request.",
+      "rule": 1,
+      "problem": "Option C lists three benefits and one cost, and the cost is only about timing. It also sits beside A and B as though it were still possible, though it was filed Nov 4 and can't shape the Nov 15 draft.",
+      "fix": "Add a cost from the record, such as the 2026 budget message's point that the volume of requests 'resulted in many unmet requests' (P-049); listing a request doesn't fund it. Also mark C as no longer pending in its heading or in the Layer 3 intro.",
+      "severity": "low"
+    },
+    {
+      "line": 161,
+      "text": "Requests above 5% can still be seen: the public defender's full request is in its posted slides.",
+      "rule": 8,
+      "problem": "'Full request' isn't established. The slides list six ranked requests, and nothing shows that these are everything the office asked for.",
+      "fix": "'Requests above 5% can still be seen: the public defender's posted slides list requests well above 5%.'",
+      "severity": "low"
+    },
+    {
+      "line": 107,
+      "text": "How much room 2027 revenue leaves, which the proposal should show.",
+      "rule": 8,
+      "problem": "'Should show' reads as either a rule or a prediction, and no source is cited for it.",
+      "fix": "'How much room 2027 revenue leaves; the proposal isn't out yet.' If the basis is the code's report requirement, cite P-006.",
+      "severity": "low"
+    },
+    {
+      "line": 205,
+      "text": "Should the Board adopt the budget in December, or wait until January?",
+      "rule": 12,
+      "problem": "'Wait' casts January as the delay, though January adoption was the 2026 practice and is the code's deadline. There is also no question on openness, so Card 4 is the only card without a matching question.",
+      "fix": "'Should the Board adopt the budget in December or in January?' Add: 'How open should the commission's work be to the public and to other commissioners?'",
+      "severity": "low"
+    },
+    {
+      "line": 203,
+      "text": "staff alone, staff with the chairman (the setup until 2018), staff with two commissioners (one from each group of districts), or the whole Board?",
+      "rule": 12,
+      "problem": "Only one choice carries a history tag. 'Staff alone' was the setup from 2018 to 2026, and the two-commissioner model is the current one, but neither is tagged. That gives the pre-2018 model extra standing.",
+      "fix": "Tag all of them or none: 'staff alone (2018 to 2026), staff with the chairman (until 2018), staff with two commissioners (now), or the whole Board?'",
+      "severity": "low"
+    },
+    {
+      "line": 161,
+      "text": "The limit covers only requests for extra money above the base budget.",
+      "rule": 1,
+      "problem": "Card 3's challenges never answer its values claim that across-the-board caps are poor budgeting. County records the page uses elsewhere bear on it: in 2026 the county drew $73.6 million from savings and was left about $2.8 million above the minimum reserve, and the budget message said 'no additional resources available' for enhancements (P-049, P-054). Also, the Pew advice as quoted is about across-the-board cuts, not limits on requests, a line the page itself draws at line 87.",
+      "fix": "Add these as {analysis}, with a note that no source gives them as the reason for the limit, and add: 'The Pew advice the resolution quotes is about across-the-board cuts.' {analysis: P-028}",
+      "severity": "low"
+    },
+    {
+      "line": 155,
+      "text": "Evidence: Code requires all requests, and the 2026 draft listed extras: Supported (code text; budget book). Conflict with the code: Uncertain (the code mentions no cap). ... Sound budgeting: a values question",
+      "rule": 9,
+      "problem": "Card 3's evidence header is 71 words with six labels and can't be scanned on a phone. Readers also meet about 500 words of method notes (lines 119-127) before the first card.",
+      "fix": "Show the labels as a short list grouped by label, for example 'Supported: code text; 2026 record · Uncertain: conflict with code, exact terms, needs, effect · Values: sound budgeting'. Keep one sentence of the method visible and put the rest in an expandable 'How we label' box.",
+      "severity": "low"
+    }
+  ],
+  "flip_test": [
+    {
+      "line": 8,
+      "text": "Supporters say it gives one commissioner from each half of the county an early role; critics say it lets those two take control of the process. ... Critics also object to a 5% limit on departments' requests for extra money.",
+      "asymmetry": "Supporters' claim is in the page's mild words, while critics' claim is in their own strong words ('take control'). Critics get two points to the supporters' one. That reflects the record, since no source defends the limit, but the summary doesn't say so, so the silence can read as a concession.",
+      "fix": "Match the strength: 'adds early input from both halves of the county' / 'gives those two too much say'. If space allows, add 'no record we found gives the limit's reason'."
+    },
+    {
+      "line": 157,
+      "text": "The code's text and the 2026 record support part of this; the draft will show the rest.",
+      "asymmetry": "Card 4's In short says Ellis's comparison is 'his statement alone', and Card 6's says needs rest on 'the offices' own accounts'. Card 3's In short leaves out that its figures are the resolution's own and promises the draft will settle the rest. The critics' card gets the softer caveat.",
+      "fix": "Use the same caveat pattern on every In short (see issue at line 157)."
+    },
+    {
+      "line": 195,
+      "text": "The probate court says \"Insufficient staffing and rising caseloads cause backlogs and delays.\" ... It asks for 6 court clerks and 1 associate judge. ... The public defender asks for $3,793,366 for attorney positions.",
+      "asymmetry": "The claimants' own statements and requests sit under 'What supports it' in Cards 6 and 3 (line 159). The supporters' own statements, such as Ellis's 'Those meetings are open meetings', stay under 'Who says it' in Card 4 (line 170), and Card 4's 'What supports it' holds only county records.",
+      "fix": "Apply one field rule across cards (see issue at line 159)."
+    },
+    {
+      "line": 172,
+      "text": "The resolution does not say the meetings were closed.",
+      "asymmetry": "Card 4 adds a note limiting the critics' disagreement. Card 2's 'Who disagrees' (line 148) gives Ellis's reply with no parallel note, although his quoted remarks address open meetings and the final vote, not how the two were chosen, which is Card 2's claim.",
+      "fix": "Add to Card 2: 'His quoted remarks don't address the eligibility rules.' Or drop the Card 4 sentence."
+    },
+    {
+      "line": 146,
+      "text": "Sheriff Patrick Labat called the arrangement unfair \"to county agencies and taxpayers,\" FOX 5 reported.",
+      "asymmetry": "The reporters' narration of the critics (here, and 'could affect court delays...' at line 194) is put in quote marks, which makes it look like the critics' own words. The reporter's paraphrase of Ellis (P-079, lines 134 and 148) has no quote marks.",
+      "fix": "Drop the quote marks around reporter narration for every speaker."
+    },
+    {
+      "line": 18,
+      "text": "Commissioner Barrett criticized how the commission was set up, and Commissioner Ellis responded. ... FOX 5 reported that Ellis addressed the officials' concerns.",
+      "asymmetry": "Barrett 'criticized' and Ellis 'responded' are neutral. But Ellis then 'addressed the officials' concerns', a verb that can suggest the concerns were resolved; no critic gets a comparably favorable verb.",
+      "fix": "'FOX 5 reported Ellis's response to the officials.'"
+    },
+    {
+      "line": 51,
+      "text": "2. Only the full Board can adopt or change the budget.",
+      "asymmetry": "The sponsors' central reassurance (P-004 'preserving the full Board's exclusive authority'; Ellis, P-079) is placed in the 'What's different' summary list although it isn't a change. The critics' issue (item 3) is in the same list, but it is attributed.",
+      "fix": "Delete item 2 or reword it as the new limit on the commission (see issue at line 51)."
+    },
+    {
+      "line": 167,
+      "text": "Hearings announced, slides posted: Supported (county records). More open than past years: Uncertain (his statement; 2026 also had hearings). Open enough: a values question",
+      "asymmetry": "Card 3 (critics) splits its claims into six labels, five of which are Uncertain or values. Card 4 (supporters) leaves an uncertain part unlabeled (whether the other commission meetings are open, line 175), so it shows fewer Uncertain labels.",
+      "fix": "Add 'Other commission meetings announced and open: Uncertain (only the October notice found).'"
+    },
+    {
+      "line": 97,
+      "text": "The 2026 plan left savings about $2.8 million above the minimum reserve.",
+      "asymmetry": "The fiscal-restraint fact appears only as a benefit of Option A, not as a cost under Option B's 'if the Board adds money' (line 106) or in Card 6's challenges.",
+      "fix": "Put it in the Layer 3 intro, or in every place it applies."
+    },
+    {
+      "line": 60,
+      "text": "From 1953 until 2018, a budget commission drafted Fulton's budget. [P-002, P-003]",
+      "asymmetry": "The history in the adopted Resolution 26-0460 (its sponsors' WHEREAS clauses) is stated in the page's own voice here and at line 16 ('as one did until 2018'). Factual claims in Resolution 26-0729 are always attributed ('The resolution says...'). The difference, an adopted Board finding versus a filed draft, is defensible but not stated in the rubric.",
+      "fix": "Add one rubric line, such as 'Findings in an adopted Board resolution count as Board records; claims in drafts that weren't adopted stay attributed.' Or attribute the history once ('Resolution 26-0460 recounts...')."
+    },
+    {
+      "line": 149,
+      "text": "The commission can't adopt or change the budget. [P-014]",
+      "asymmetry": "Card 2's challenges include the code fact that limits the commission. They leave out the code fact already on the page (line 64) that cuts the other way: the proposal 'will serve, as presented, as the operating budget until a final budget is adopted' (P-005). That bears on how much say the drafters have, and on Card 5's January timing.",
+      "fix": "Add to Card 2's 'What supports it': 'Until the Board adopts a budget, the proposal serves as the operating budget. [P-005]' Optionally note it in Card 5 as well."
+    },
+    {
+      "line": 87,
+      "text": "That was a cut to spending, not a limit on requests.",
+      "asymmetry": "The page separates the 2026 1% across-the-board decrease from the 5% request limit, which helps the critics' 'unprecedented' framing. It doesn't draw the same line where it would temper the critics: the Pew advice the resolution cites (line 158) is about across-the-board cuts, not limits on requests.",
+      "fix": "In Card 3's 'What challenges it', add: 'The Pew advice the resolution quotes is about across-the-board cuts.' {analysis: P-028}"
+    },
+    {
+      "line": 119,
+      "text": "Our archived sources quote one commissioner backing the process ... They quote two justice officials and one commissioner criticizing it, plus a third justice official on funding.",
+      "asymmetry": "Space and voices: the critics' Cards 2 and 3 run about 830 words, against about 655 for the supporters' Cards 1 and 4. Four critics are quoted by name (Barrett, Johnson, Labat, Gammage) against one supporter (Ellis), and the critics' quotes include 'hijack' and 'shenanigans' while Ellis's are measured. Every voice on both sides is an official, and there are no ordinary residents on either side. The gap follows the sources and is disclosed here.",
+      "fix": "No change needed; keep this disclosure."
+    },
+    {
+      "line": 203,
+      "text": "staff with the chairman (the setup until 2018)",
+      "asymmetry": "Only the pre-2018 model carries a history tag. The 2018-2026 'staff alone' model and the current two-commissioner model are untagged.",
+      "fix": "Tag all choices or none."
+    }
+  ],
+  "verdict_summary": "Revision 3 is careful and close to publishable on neutrality. All six cards and all three options use one template. The printed evidence rubric is mostly applied consistently, quotes are verbatim, and verbs are mostly neutral. There are no party labels, no minors or private addresses, and no anticipated arguments. 'What you can do' is neutral, and line 119 discloses that critics outnumber supporters because of whom the sources quoted. There are no high-severity problems. The seven medium fixes are mostly asymmetries in how caveats and fields are applied: (1) Card 3's In short promises 'the draft will show the rest', while Cards 4 and 6 flag claimant-only support. (2) Claimants' own figures sit under 'What supports it' in Cards 3 and 6, but supporters' own statements stay under 'Who says it'. (3) Q2 adopts the cap-removal resolution's 'only in narrative form' framing. (4) Reporters' narration is put in quote marks as the officials' words (lines 146, 194), while Ellis's reported paraphrase is not. (5) 'What's different' item 2 isn't a change and repeats the sponsors' reassurance. (6) Card 6 leaves the thin-reserve fact out of its challenges. (7) Card 4's header leaves an uncertain part unlabeled. Clarity is good in structure and in defining jargon. But the text runs about grade 9-10 by a rough estimate, the first 30-second item is 69 words, and Card 3's 71-word header plus about 500 words of method notes before the first card are hard to scan on a phone."
+}

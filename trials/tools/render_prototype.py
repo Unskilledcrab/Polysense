@@ -201,7 +201,7 @@ def build_workspace(trial: Path) -> dict:
         "intro": "Checks have not run yet.", "stats": [], "sections": [], "verified": False}
     text = (trial / "workspace.md").read_text(encoding="utf-8")
     rev = hashlib.sha256(text.encode("utf-8")).hexdigest()
-    rev_no = re.search(r"revision (\d+)", text)
+    rev_no = re.search(r"revision (\d+(?:\.\d+)?)", text)   # "3.1" for an accuracy-fix revision
     markup = cfg.get("markup") or {}
     changes = bill_changes(trial / markup["file"], [tuple(x) for x in markup["lines"]]) if markup else []
     return {

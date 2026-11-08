@@ -3,7 +3,8 @@
 Method: the AI-only [verification protocol](../../docs/process/verification-protocol.md). There is no human in
 the loop ([ADR 0014](../../docs/adr/0014-ai-only-verification.md)). The independent checkers were run by the
 coordinating session, not by the drafting agent. Their reports are copied unchanged into
-[verification/round1/](verification/round1/) and [verification/round2/](verification/round2/) (sha256 below). The planted-error copy and its answer key stay with the
+[verification/round1/](verification/round1/), [verification/round2/](verification/round2/) and
+[verification/round3/](verification/round3/) (sha256 below). The planted-error copy and its answer key stay with the
 coordinating session. Nothing on this page may be called "verified" until a full round passes.
 
 ## Round 1 (revision 1, `verification/round1/workspace.r1.md`)
@@ -310,3 +311,143 @@ numbers below are revision 2's unless marked "r3".
   its own label. See whether the panel finds them clearer or harder to scan.
 - Layer 4 reads at grade 8.9, mostly because of long verbatim quotes, which the checkers asked to keep whole.
 - When the proposal is published (due Nov 15), re-test the "uncertain" labels on cards 1 to 4 against it.
+
+## Round 3 (revision 3, `verification/round3/workspace.r3.md`)
+
+| Layer | Check | Result |
+|---|---|---|
+| 1 | Deterministic gate on revision 3 (run by the coordinating session, with the tools as updated after revision 3) | **0 errors.** 4 warnings from the new whole-number check: lines 84, 137, 157 and 158 name "Resolution 26-0729" but cite only the resolution's text, which doesn't carry the number |
+| 2 | Blind source check, workspace.md | **205 supports, 6 partial, 0 does not support, 0 wrong span.** 115 valid and 3 questionable tags; 12 framing issues (5 medium, 7 low). **329/329 evidence spans machine-checked as grounded** |
+| 2 | Blind source check, home.md | **3 supports, 1 partial**; 2 valid tags; 3 framing issues. 6/6 grounded |
+| 3 | Bias panel | **Pass.** Supporter's advocate 4/5. Critic's advocate 4/5. Standards editor: neutrality 4/5, clarity 4/5 (21 issues: 0 high, 7 medium, 14 low; 14 flip-test items) |
+| 4 | Planted-error calibration | Not part of round 3's reports |
+
+**Round 3 passes** under rule 1 of "When a page is done" ([verification protocol](../../docs/process/verification-protocol.md)):
+0 unsupported claims, 0 wrong spans and 0 ungrounded spans; both advocates at 4/5; no high-severity editor issue;
+0 gate errors (the 4 warnings came from a check added after revision 3, and are fixed below). Under rule 2, revision
+3.1 fixes only accuracy flags and breaches of a written rule, as the coordinator listed them. Everything else is an
+open item. Nothing on this page is called "verified".
+
+Reports (copied unchanged into `verification/round3/`): `source-check.json` (829b84f9fbb6d7c5…),
+`source-check-home.json` (9d3527e2d8f3a28d…), `panel-supporter.json` (2153ae20bb85a23d…), `panel-critic.json`
+(ad2c3f01908d77c2…), `panel-editor.json` (df486ebb20dddd6b…). The coordinator's note mentioned six reports; the folder
+held these five when checked (10:58 and 11:05 UTC).
+
+### Accuracy fixes in revision 3.1
+
+Line numbers: "r3" is revision 3 as checked; "r3.1" is this revision. One deletion (item 2 of "What's different this
+year") moves every later line up by one.
+
+| # | Flag (who raised it) | r3 line | r3.1 line | Fix |
+|---|---|---|---|---|
+| 1 | A reporter's paraphrase inside quote marks, read as the speaker's words (SC 136, 146, 194 partial; SC F136, F146, F194; ED 194; FT 146; coordinator) | 136, 146, 194 | 135, 145, 193 | Quote marks removed, and each sentence now opens "[Outlet] reported that ...". Line 145 gives FOX 5's own wording: Labat "criticized the two-commissioner arrangement as unfair to county agencies and taxpayers" |
+| 2 | The net 0.4% hid the gross changes, and "So ..." drew an inference (SC 137 questionable; SC F137; ED 137; SUP I1; coordinator) | 137 | 136 | The changes to the county manager's proposal dated Jan 7 (+$20,597,446) and Jan 21 (−$16,648,868); "Those changes included $18,157,000 more for consent decree costs" (computed); "Together, they left the adopted General Fund $3,948,578, or about 0.4%, above the proposal" (computed); and what that shows, tagged `{analysis}`: "the proposal's total largely held, though some of its lines changed by millions of dollars". The point stays in card 1's "What challenges it" |
+| 3 | Card 3's challenges went beyond P-029, P-077 and P-086, and generalized from one office's slides (SC 161 partial x2 and questionable; SC F161; CRIT U161 x2; ED 161; coordinator) | 161 | 160 | "The resolution and FOX 5 describe the limit as applying to requests for extra money." "For the 2026 budget, the county described its 'base budget' as the current funding needed for past spending patterns, including staff." "Outside the draft, at least one office's requests above 5% are public: the public defender's posted slides list $4,720,447 in requests." The tag says "above 5%" is measured against the 2026 budget |
+| 4 | P-004 is the Board's adopted determination ("WHEREAS, the Board determines"), not the sponsors' words (SC 133 partial; coordinator) | 133 | 132 | "Resolution 26-0460, which the Board adopted, says ..." [P-004, P-017]. "Who says it" still names the sponsors |
+| 5 | "The county had posted neither ..." was broader than the two pages checked (SC 46 questionable; SC F46; coordinator) | 46 | 46 | "On Nov 8, neither the county's budget page nor its Public Notices page showed the 2027 proposal or a hearing date." |
+| 6 | "Only the full Board can adopt or change the budget" was listed as new (SC F51; ED 51; CRIT U51; SUP verdict; FT 51; coordinator) | 51 | deleted | Deleted; line 44 already says the full Board decides. The old item 3 is now item 2 (line 51, text unchanged) |
+| 7 | "Raised the regular property tax line" could read as a tax increase (SC F104; coordinator) | 104 | 103 | Added: "Taken together, total property-tax revenue ended $13,634,040 below the proposal." {computed: $815,496,192 + $32,170,000 = $847,666,192 proposed; $834,032,152 adopted; difference $13,634,040 (P-054)} |
+| 8 | "The draft will show the rest" overstated what the draft can settle (ED 157; FT 157; SUP U157; coordinator) | 157 | 156 | "... the rest depends on an unsettled reading of the code, the claimants' own figures, values or the coming draft." |
+| 9 | Line 18: "addressed" is FOX 5's verb, and neither Barrett's allegation nor Ellis's response had its substance (ED 18; FT 18; SC F18; SUP U18; CRIT U18; coordinator) | 18 | 18 | "In Atlanta News First's report, Commissioner Barrett said some current board members were trying to take control of the budget process. [P-072] In the same report, Commissioner Ellis responded that the commission's meetings are open meetings. [P-073] FOX 5 reported that, in response to the officials, Ellis said the full Board will review and vote on the final budget. [P-079, P-080]" |
+| 10 | "Which the proposal should show" was uncited (ED 107; coordinator) | 107 | 106 | "How much room 2027 revenue leaves, because the proposal isn't public yet." (Option A's pattern) |
+| 11 | The rubric defined "Not mainly a factual question", a label no card uses (ED 125; coordinator) | 125 | 124 | "'A values question' means that part of the claim is about what is fair or right, not mainly about facts." |
+| 12 | Q1 tagged one choice with a period; Q2 gave the limit restrictive words and the other choice expansive ones (ED 203, 204; FT 203; SUP U204 and Q; coordinator) | 203, 204 | 202, 203 | Q1 tags no choice with a period ("staff alone, staff with the chairman, staff with two commissioners (one from each group of districts), or the whole Board?"); the whole Board has no period to tag. Q2: "Should departments' requests for extra money have a set limit, or should the draft list them without one?" The three views are in contradiction C6 |
+| 13 | New whole-number check: "26-0729" not in the cited passages (gate warnings; coordinator) | 84, 137, 157, 158 | 83, 136, 156, 157 | P-024 (the Legistar matter record, which carries the number and the sponsor) added to each citation |
+| 14 | home.md: line 5 cited the October hearing notice; line 14 left "file" undefined (SC home 5 partial; SC home F5, F14; coordinator) | home 5, 14 | home 5, 14 | Line 5 cites P-036 (the public comment rules) instead of P-042. That left no cited passage carrying "2027", so the gate warned; "the 2027 budget" became "the county budget", which P-036's "County related opinions" covers. Line 14 adds "Filing set the resolution aside without approving it." `{analysis}` |
+
+Also changed: the status lines (3 and 4, not checked) now say revision 3.1, accuracy fixes after round 3, targeted
+re-check pending, and three rounds of checks.
+
+### Revision 3.1: deterministic gate (run by the drafter)
+
+| Check | Result |
+|---|---|
+| `check_citations.py` on workspace.md (with the new whole-number check) | **Pass**: 332 units (211 cited, 70 analysis, 33 editorial, 18 computed), 0 errors, 0 warnings |
+| `check_citations.py` on home.md | **Pass**: 7 units (4 cited, 2 analysis, 1 computed), 0 errors, 0 warnings |
+| `readability.py` | **Pass**: 30-second version 7.9, Layer 1 8.0, Layer 2 7.9, Layer 3 7.3; 0 sections over target. Layer 4 is 8.1. Card labels are no longer scored (6; longest 74 words, line 154) |
+| `verify_hashes.py` | **Pass**: 36/36 |
+| Passages | 95, unchanged |
+| Prototype render (test, to scratch) | Renders. It reads the status as "revision 3", taking the first number of "3.1" |
+
+### For the targeted re-check
+
+Changed sentences, by line in revision 3.1. workspace.md: 18 (three sentences), 46, 103 (the new last-but-one
+sentence), 106, 124 (one sentence), 132 (first sentence), 135 (first sentence), 136 (all but the first and last
+sentences), 145 (third sentence), 156 (both cited sentences: a citation added to the first, the last rewritten), 160
+(first, second and fourth sentences), 193 (last sentence), 202 (first sentence) and 203. Citation added only: 83
+(first sentence), 136 (last sentence) and 157 (first sentence). Deleted: revision 3's line 51. home.md: 5 (first
+sentence) and 14 (new middle sentence).
+
+### Open items (feed the next revision; not changed in 3.1)
+
+Codes are as before. A code's number is the line in that report, so revision 3's line (for example, ED 159 or
+SUP U169); a line named in the text is revision 3.1's.
+
+- **Source check:** "filed" can read as "submitted" in Layer 3 (lines 90, 108) and Layer 4 (line 126) (SC F91).
+  Card 3's 3.3x comparison should say in the sentence that the 2026 budget stands in for the "base budget" (SC F159).
+  The public comment rules leave out the residency check and the 60-minute cap (SC F32; SC home F5). home.md's Nov 4
+  item doesn't say one member did not vote or that the Oct 21 motion failed (SC home F14), and its line 9 could cite
+  P-005 directly (SC home 9). Not flagged but the same point as fix 3: Layer 2's "base budget" bullet (line 84) uses
+  the 2026 definition in the present tense.
+- **Supporter's advocate:**
+  - Card 2 leaves out the code's checks: the duty to seek every commissioner's priorities and report to the full Board,
+    the general eligibility rules, selection at a noticed meeting entered in the minutes, and the Board's adoption of
+    the rules and approval of the members (M5, M6, I1).
+  - Card 3's challenges leave out 2026 record facts: unmet requests and a thin reserve without any limit; the Board's
+    power to add money; the old process's 1% across-the-board cut; and the resolution's proposed "all budget
+    requests" wording (M1 to M4, I3). Present none of them as anyone's reason for the limit.
+  - Card 1 could use the Oct 21 and Nov 4 updates as the reporting duty in action (M7, optional label L1). Card 4
+    could add the noticed-meeting selection rule (M8).
+  - Card 4's In short narrows "Those meetings are open meetings", and "his statement alone" is sharper than card 6's
+    "rest mainly on" (U169). Card 5 could put Ellis's "no talk of an early vote" in its In short (I7).
+  - Card 2's label could add "Whether the rules were written to seat the two: Uncertain" (L2).
+- **Critic's advocate:**
+  - Card 2 shortens P-013's role for the two commissioners (revenue and expenditure assumptions, other elected
+    officials' requests, preparing the recommended budget); its label could add "Their role under the code:
+    Supported" (M1, L card 2).
+  - In 2026 the Board raised four of the six protesting offices and consent decree funding above the proposal, in a
+    year when all extra requests were printed; this fits P-028's "make adjustments" reason (M2). The scale of the 2026
+    requests ($158 million, $64 million) could go in card 3's support (M3). The sheriff's 2027 slides tie staffing
+    and overtime to the consent decree (P-060, P-061), for card 6 (M4).
+  - Single hedge words quoted alone ("clarify", line 83; "effectively", line 156) and the shortened Pew advice
+    (line 157) make the critics read as more tentative (U84, U157, U158, I3).
+  - Layer 4's count should say "six justice officials, through two quoted speakers" (I2).
+  - A question on whether departments should present to the commission or the full Board (Q).
+- **Standards editor:**
+  - One rule for "What supports it": claimants' own figures sit there on cards 3 and 6, while Ellis's statements stay
+    under "Who says it" (159, FT 195). The supporter's I5 agrees.
+  - Card 4's label leaves an uncertain part unlabeled: "Other commission meetings announced and open" (167, FT 167).
+    The critic's L card 4 agrees.
+  - Card 2's "What's missing": the sources don't say why the other northern commissioners were ineligible (150).
+  - Q3's "wait" casts January as the delay; an openness question is missing (205).
+  - Card 3's challenges don't answer its values claim, and the Pew advice as quoted is about cuts (161, FT 87).
+  - Card 3's 74-word header, and about 500 words of method notes before the first card (155).
+  - The rubric should say adopted Board findings count as Board records (FT 60). Card 2 could note the operating-budget
+    rule, limited to 2027 before adoption (FT 149). Card 5's claim type could read "a values question, about timing"
+    (125).
+  - Readability by the editor's own estimate is near grade 9-10; round dollar figures and split semicolons (50). The
+    project tool gives 7.3 to 8.1.
+
+### Contradicting suggestions, logged side by side (not resolved)
+
+| # | Topic | One view | The other view(s) |
+|---|---|---|---|
+| C1 | How to describe the commission's drafting role | **CRIT** (U8, I1): "is helping draft" (line 8), "helps draft" (line 50) and "help prepare" (line 146) follow the sponsors' "assist" framing; under the code the commission "shall submit" the proposal (P-005, P-006, P-015), and Ellis called it "solely responsible for drafting recommendations" (P-079). State both | **SUP** (U148): line 147's "the commission alone drafts" turns Ellis's statement into exclusive power, a concession in the rebuttal field; quote P-079's own words |
+| C2 | Card 3's first label part, "Code requires all requests" | **SUP** (L card 3): narrow it to the code's words, "the budget requests of all of the county's departments"; "all budget requests" is the filed resolution's proposed wording (P-030) | **CRIT** (L card 3): keep the conflict Uncertain, but give its reason as the code's "shall include ... all" requirement beside its silence on caps |
+| C3 | The 30-second version (line 8) | **SUP** (U8): the supporters' case is below full strength; "brings Board members' input in earlier, balanced between north and south, while the full Board keeps the final say" | **ED** (8, FT 8): match strength by softening the critics' paraphrase ("gives those two too much say") and trim to about 45 words. **CRIT** (U8): add the critics' reason for objecting to the limit, and that no source gives the limit's reason |
+| C4 | Card 4's "More open than past years" label | **SUP** (L card 4): drop the rebuttal; "Uncertain (his statement only; no record compares the years)" | **CRIT** (L card 4): add to it; "(his statement; the 2026 cycle also had formal hearings and printed all extra requests in an appendix, P-049)" |
+| C5 | "But only 'in narrative form'" in card 3's challenges (line 160) | **SUP** (U161): use "Departments may still describe broader needs in narrative form" there | **CRIT** (U161): the sentence turns the critics' grievance into a rebuttal; if it stays, say no source shows whether the narratives will be in the draft |
+| C6 | Q2 wording (changed in 3.1 under fix 12) | **ED** (204): drop "only in narrative form", or attribute it; "held to a set limit, or ... every request listed" | **SUP** (U204, Q): restrictive words for one choice, expansive for the other; suggested "limited to a set share of current funding, with larger needs described in narrative form, or should the draft list every request, whatever its size? How should either choice account for the money available?" **CRIT** (Q): accepted as written ("describes the limit in the critics' own terms"). Revision 3.1 gives both choices neutral verbs and drops the narrative-form detail |
+| C7 | "The resolution does not say the meetings were closed" (card 4, line 171) | **CRIT** (U172): it argues against the critics in their own field; restate the dispute neutrally or move it to "What challenges it" | **ED** (FT 172): keep the parallel by adding to card 2 "His quoted remarks don't address the eligibility rules", or drop card 4's sentence |
+| C8 | Option C's "Who pays" (line 113) | **CRIT** (U114): the time cost is overstated; "Budget staff would have had 25 days to add any omitted requests that departments chose to submit" | **ED** (114): Option C has only one cost; add one from the record (listing a request doesn't fund it; "many unmet requests") and mark C as no longer pending |
+| C9 | Where the 2026 reserve margin ($2.8 million) goes | **ED** (97, 197): it appears only as a benefit of Option A; add it to Option B or the Layer 3 intro, and to card 6's challenges | **SUP** (M1): add the 2026 fiscal facts, the thin reserve among them, to card 3's challenges, without presenting them as anyone's reason for the limit. Round 2 took the margin out of card 3 because it sat next to a supplied motive (CRIT U172, ED 172) |
+| C10 | What card 1's 0.4% shows (line 136) | **SUP** (I1): it cuts both ways (it also supports "earlier and ongoing input"); explain it both ways or move it to neutral context | **CRIT** (verdict): it is evidence that whoever drafts largely sets the budget. **ED** (137): state the inference as `{analysis}`; if that is the point, it also belongs in card 2's support. Revision 3.1 keeps it in card 1, as the coordinator directed, with the gross changes and an `{analysis}` of what the figures show |
+
+### Where I'm least sure (revision 3.1)
+
+1. **Line 136's `{analysis}`** ("the proposal's total largely held, though some of its lines changed by millions of
+   dollars") is a reading of P-054, and the panel disagrees about what the figure shows (C10).
+2. **Line 18 gives one half of Ellis's FOX 5 statement** (the full Board will review and vote). The other half,
+   "solely responsible for drafting recommendations", stays on card 2, because its wording is contested (C1).
+3. **home.md line 5** now says "the county budget", not "the 2027 budget", because no public comment passage names
+   the 2027 budget.

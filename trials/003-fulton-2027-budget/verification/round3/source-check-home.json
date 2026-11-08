@@ -1,0 +1,94 @@
+{
+ "checker": "independent-source-verifier",
+ "document": "/home/user/Polysense/trials/003-fulton-2027-budget/home.md",
+ "units": [
+  {
+   "line": 5,
+   "sentence": "Input · Nov 18, 2026, 10 a.m.: Speak about the 2027 budget during public comment at the Board's meeting, in person or by Zoom.",
+   "marker": "[P-039, P-042, P-067]",
+   "verdict": "partial",
+   "evidence_span": "Residents have two options to participate in public comment: in person and virtually via Zoom.",
+   "correct_passage": "",
+   "problem": "Date, time and the in-person/Zoom options are supported (P-039, P-067). P-042 is the notice for the Budget Commission's October hearings and says nothing about public comment at the Nov 18 Board meeting. That the budget is an allowed topic is supported by P-036 ('Citizens are allowed to voice County related opinions, concerns, requests'), which is not cited.",
+   "suggested_fix": "Cite P-036 instead of P-042: [P-036, P-039, P-067]."
+  },
+  {
+   "line": 5,
+   "sentence": "Send your request before it starts.",
+   "marker": "[P-067]",
+   "verdict": "supports",
+   "evidence_span": "All virtual public comments and requests to speak in person must be submitted before the clerk sounds the start of the 10 a.m. meeting.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 9,
+   "sentence": "By Nov 15, 2026: The Budget Commission's proposal for 2027 is due to the Board.",
+   "marker": "{analysis: the county code sets \"no later than November 15\" for the following year's budget (P-005)}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "P-005: 'by no later than November 15, a proposed budget ... for the following year'. The quoted words are verbatim. This is a direct fact and could take a [P-005] citation instead of an analysis tag.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 10,
+   "sentence": "Expected by Jan 20, 2027: The Board must adopt the 2027 budget by its second regular January meeting, which the proposed schedule sets for Jan 20.",
+   "marker": "[P-005, P-041]",
+   "verdict": "supports",
+   "evidence_span": "by no later than the second regular meeting in January of the year to which it applies",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 14,
+   "sentence": "Nov 4, 2026: The Board voted to file a resolution that would have removed a 5% limit on departments' requests for extra money.",
+   "marker": "[P-024, P-025, P-029]",
+   "verdict": "supports",
+   "evidence_span": "b. A substitute motion was made by Vice Chair Abdur-Rahman and seconded by Commissioner Thorne, to file.",
+   "correct_passage": "",
+   "problem": "Clarity: 'file' is not defined on the home page, and in everyday use it means submit, so a reader may think the Board advanced the resolution. 'Would have removed' only partly offsets this.",
+   "suggested_fix": "Write 'voted 4 to 1 to set aside (file) a resolution that would have removed...'"
+  },
+  {
+   "line": 14,
+   "sentence": "The vote was 4 to 1.",
+   "marker": "{computed: the roll call (P-034) lists 4 \"Yea\", 1 \"Nay\" and 1 \"Did Not Vote\"}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "P-034: Pitts, Thorne, Ellis, Abdur-Rahman Yea; Barrett Nay; Arrington Did Not Vote. Correct.",
+   "suggested_fix": ""
+  }
+ ],
+ "framing_issues": [
+  {
+   "line": 14,
+   "text": "Nov 4, 2026: The Board voted to file a resolution that would have removed a 5% limit...",
+   "issue": "'File' is undefined jargon on the home page and usually means 'submit', so readers may think the Board advanced the resolution. The style guide asks for jargon to be defined.",
+   "severity": "medium"
+  },
+  {
+   "line": 5,
+   "text": "Speak about the 2027 budget during public comment at the Board's meeting... [P-039, P-042, P-067]",
+   "issue": "Cites P-042 (Budget Commission hearing notice), which has nothing to do with Board public comment. It also leaves out P-036's rules: Fulton residents first, residency verified, two-minute limit.",
+   "severity": "low"
+  },
+  {
+   "line": 14,
+   "text": "The vote was 4 to 1.",
+   "issue": "Doesn't say that one member did not vote, that the District 4 seat is vacant, or that a motion to approve had failed on Oct 21. Minor missing context.",
+   "severity": "low"
+  }
+ ],
+ "summary": {
+  "units_checked": 6,
+  "supports": 3,
+  "partial": 1,
+  "does_not_support": 0,
+  "wrong_span": 0,
+  "questionable_or_invalid_tags": 0
+ }
+}
