@@ -7,7 +7,7 @@
 | **Done by** | AI agent (Claude Code), by hand |
 | **Verified by** | The AI-only [verification protocol](../../docs/process/verification-protocol.md); no human in the loop ([ADR 0014](../../docs/adr/0014-ai-only-verification.md)) |
 | **Owner's role** | Feedback on the user experience ([review.md](review.md)) |
-| **Status** | Steps 0–5 done. Verification rounds 1–3 done (see [verification.md](verification.md)): rounds 1 and 2 failed the bias panel; in round 3 both advocates passed, and the editor's two high-severity issues are fixed in revision 4, now in round-4 verification. Prototype: [prototypes/hb1009/](../../prototypes/hb1009/) |
+| **Status** | **Passed checks (round 4)**; revision 5 published. Rounds 1 and 2 failed the bias panel; rounds 3 and 4 passed it; targeted re-checks confirmed the accuracy fixes. Open items for the next full round are in [verification.md](verification.md). Owner reviewed the experience on 2026-11-08 ([review.md](review.md)). Prototype: [prototypes/hb1009/](../../prototypes/hb1009/) |
 
 ## Why this bill (step 0)
 

@@ -28,7 +28,7 @@ a person would need. Human review time is recorded separately in `review.md`.
 | *Owner reply* | ~06:15 | Owner reviewed revision 4 on a phone: no bias noticed, informative, hit the main points; presentation and navigation should be easier; **phone first by default**; think about voting decisions; keep the tenets; improve the process without being over-prescriptive. Later: add and test more upcoming decisions, without blocking other work | — |
 | Phone-first prototype | 06:15 → 06:25 | Bottom menu, one pinned row of plain tabs, 30-second version on Summary only, one sentence per line, folded cards, next/previous links, stacked tables. Tab content now starts about 340px down instead of 1,214px | — |
 | Revision 5 | 06:08 → 06:31 | Accuracy and written-rule fixes from round 4 only (no card claim, label or side changes). P-045 and P-046 widened to name the speaker; P-069 archives the fiscal-note list's 2026 section. 188 units; gate 0 errors, 0 warnings | — |
-| Targeted re-check | 06:31 → … | Fresh blind agent checks the 53 changed or new units | — |
+| Targeted re-checks | 06:31 → 07:05 | Check 1: 53 changed units, 0 unsupported, 1 partial, 3 questionable tags, 53/53 grounded. 17 units fixed. Check 2: 17 units, 0 partial, 0 unsupported, 0 questionable, 17/17 grounded. **Status: passed checks (round 4)**; 8 low notes added to open items | Each check still finds something smaller. The "when a page is done" rule is what ended the loop |
 
 ## Rules learned (fed back into the runbook)
 

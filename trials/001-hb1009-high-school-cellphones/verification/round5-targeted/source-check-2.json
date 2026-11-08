@@ -1,0 +1,252 @@
+{
+  "checker": "independent-source-verifier (targeted 2)",
+  "document": "/home/user/Polysense/trials/001-hb1009-high-school-cellphones/workspace.md",
+  "units": [
+    {
+      "line": 8,
+      "sentence": "Public high school students won't be allowed to use phones or similar devices during the school day, including between classes.",
+      "marker": "[P-007, P-003, P-004, P-005, P-002]",
+      "verdict": "supports",
+      "evidence_span": "no public school student in grades nine through 12 shall be permitted to access personal electronic devices during the school day",
+      "correct_passage": "",
+      "problem": "",
+      "suggested_fix": "",
+      "reason": "P-007 bars public school students in grades 9-12 from accessing personal electronic devices during the school day. P-003 defines access as viewing, holding, wearing or otherwise using a device; P-004 lists smartphones, smartwatches, tablets and headphones; P-005 makes the school day the on-campus bell-to-bell period; P-002 includes breaks and transitions, so 'including between classes' holds. P-007's exceptions are partly covered by the next sentence (P-013)."
+    },
+    {
+      "line": 27,
+      "sentence": "Every district must adopt its device policy, revising it as needed, now covering kindergarten through 12th grade.",
+      "marker": "[P-008]",
+      "verdict": "supports",
+      "evidence_span": "shall adopt, and revise as appropriate, policies and procedures that, at a minimum: (1) Prohibit bell-to-bell access to personal electronic devices by students in kindergarten through grade twelve",
+      "correct_passage": "",
+      "problem": "Minor, does not change verdict: P-008 applies to 'each local school system and public school', so 'Every district' leaves out individual public schools (such as charter schools). 'now' describes a law that takes effect 2026-12-31.",
+      "suggested_fix": "Optional: 'Every district and public school must adopt its device policy, revising it as needed; under the new law it covers kindergarten through 12th grade.'",
+      "reason": "P-008: 'By January 1 each year' each system 'shall adopt, and revise as appropriate, policies and procedures' that prohibit bell-to-bell access 'by students in kindergarten through grade twelve'. 'Revising it as needed' matches 'revise as appropriate'."
+    },
+    {
+      "line": 42,
+      "sentence": "It defines it as a learning environment where student devices are banned \"to minimize distractions, improve academic outcomes, and increase meaningful interactions and focused learning experiences.\"",
+      "marker": "[P-057]",
+      "verdict": "supports",
+      "evidence_span": "a learning environment where student access to personal electronic devices is prohibited to minimize distractions, improve academic outcomes, and increase meaningful interactions and focused learning experiences",
+      "correct_passage": "",
+      "problem": "Minor, does not change verdict: P-057 prohibits student access to devices, not the devices themselves; the law expects devices to be stored at school (P-009).",
+      "suggested_fix": "Optional: 'It defines it as a learning environment where students' access to devices is prohibited \"to minimize distractions, ...\"'",
+      "reason": "The quoted words appear verbatim in P-057, the law's definition of 'distraction-free education'."
+    },
+    {
+      "line": 56,
+      "sentence": "By January 1 each year, districts must now adopt their policies and revise them as needed.",
+      "marker": "[P-008]",
+      "verdict": "supports",
+      "evidence_span": "By January 1 each year, each local school system and public school shall adopt, and revise as appropriate, policies and procedures",
+      "correct_passage": "",
+      "problem": "",
+      "suggested_fix": "",
+      "reason": "P-008 sets 'By January 1 each year' and 'shall adopt, and revise as appropriate, policies and procedures'. 'Now' is backed by the next sentence (P-020: prior law's one-time January 1, 2026 deadline). Same 'districts' shorthand as L27 (P-008 also covers each public school)."
+    },
+    {
+      "line": 75,
+      "sentence": "In districts without limits, students can use phones in class, which the new law bans to reduce distractions.",
+      "marker": "{analysis: the K-8-only rule (P-006) left grades 9-12 to districts; the law defines distraction-free education as banning access \"to minimize distractions\" (P-057)}",
+      "verdict": "valid",
+      "evidence_span": "",
+      "correct_passage": "",
+      "problem": "",
+      "suggested_fix": "",
+      "reason": "Under the old law the state ban covered only K-8 (P-006), so in a district with no high school limits nothing in state law barred phone use in class. The new law bars access during the school day (P-007), and P-057 says access is prohibited 'to minimize distractions' (quote is verbatim). 'In districts without limits' keeps the claim conditional, and the tag names its basis. It names one of P-057's three stated purposes, which is accurate."
+    },
+    {
+      "line": 75,
+      "sentence": "If Florida's results apply here, students would miss the test-score gains found there in year two, and the drop in unexcused absences the study suggests.",
+      "marker": "{analysis: based on P-040}",
+      "verdict": "valid",
+      "evidence_span": "",
+      "correct_passage": "",
+      "problem": "Minor, does not change verdict: under Option A districts could still limit phones on their own (L76), so only students in districts without limits would miss these effects; the sentence says 'students' generally.",
+      "suggested_fix": "Optional: 'If Florida's results apply here, students in those districts would miss ...'; if changed, keep the parallel L74 suspensions sentence worded the same way.",
+      "reason": "P-040: 'significant improvements in student test scores in the second year of the ban' and 'the findings suggest that cellphone bans in schools significantly reduce student unexcused absences'. The sentence is conditional, keeps 'year two', and keeps the study's hedge ('suggests') for absences. P-040 says effects are larger in high school settings, so applying it to high schools is reasonable."
+    },
+    {
+      "line": 83,
+      "sentence": "The Florida study found that enforcing phone bans led to more suspensions in the short term, especially among Black students; the rise began to fade after the first year.",
+      "marker": "[P-039]",
+      "verdict": "supports",
+      "evidence_span": "the enforcement of cellphone bans in schools led to a significant increase in student suspensions in the short-term, especially among Black students, but disciplinary actions began to dissipate after the first year",
+      "correct_passage": "",
+      "problem": "",
+      "suggested_fix": "",
+      "reason": "P-039 matches each part: enforcement 'led to a significant increase in student suspensions in the short-term, especially among Black students', and 'disciplinary actions began to dissipate after the first year'. 'Led to' mirrors the study's own causal wording."
+    },
+    {
+      "line": 88,
+      "sentence": "It also rewrote what \"bell-to-bell\" means and left out \"breaks\", which the passed law includes.",
+      "marker": "[P-027, P-002]",
+      "verdict": "supports",
+      "evidence_span": "shall include all scheduled instructional time, assemblies, and other school",
+      "correct_passage": "",
+      "problem": "",
+      "suggested_fix": "",
+      "reason": "P-027 replaces lines 18-21 (the bell-to-bell definition, P-002) with a list of 'all scheduled instructional time, assemblies, and other school related activities', with no 'breaks'. The enacted P-002 includes 'breaks, transitions'."
+    },
+    {
+      "line": 96,
+      "sentence": "For this question, the margin of error, or how far off the result is likely to be, is about 4 points either way.",
+      "marker": "{computed: 1.96 × 2.1 standard error (P-033) ≈ 4.1 percentage points}",
+      "verdict": "valid",
+      "evidence_span": "",
+      "correct_passage": "",
+      "problem": "Minor wording, does not change verdict: a 95% margin of error is how far off the result could plausibly be, not how far off it is likely to be; the typical error is smaller.",
+      "suggested_fix": "Optional: 'For this question, the margin of error is about 4 points either way, meaning the true share is likely within 4 points of the result.'",
+      "reason": "P-033 gives a standard error of 2.1 for both Yes (70.8) and No (29.2). 1.96 x 2.1 = 4.116, about 4.1, so 'about 4 points either way' is correct."
+    },
+    {
+      "line": 98,
+      "sentence": "It failed, and no senator voted against the final bill.",
+      "marker": "[P-026, P-025, P-024]",
+      "verdict": "supports",
+      "evidence_span": "Yea Nay NV Exc 02/24/2026 House Vote #545 145 20 8 7 03/23/2026 Senate Vote #783 13 38 4 1 03/23/2026 Senate Vote #784 52 0 3 1",
+      "correct_passage": "",
+      "problem": "",
+      "suggested_fix": "",
+      "reason": "P-026: amendment vote #783 had 13 yea and 38 nay, so it failed. P-025: Senate Vote #784 was 52 yea and 0 nay (3 not voting, 1 excused). P-024 shows 'Senate Passed/Adopted' on 03/23/2026 and no later change before 'House Sent to Governor', so that vote was on the final bill. Not voting or excused is not voting against."
+    },
+    {
+      "line": 112,
+      "sentence": "We found no measured results from Georgia high schools yet.",
+      "marker": "{analysis: none in the sources reviewed; Georgia's rule isn't required until July 1, 2027 (P-007)}",
+      "verdict": "valid",
+      "evidence_span": "",
+      "correct_passage": "",
+      "problem": "",
+      "suggested_fix": "",
+      "reason": "No passage reports measured results from Georgia high schools: P-046 (Harrell) and P-051 (Hilton) are claims without data, and P-051 is about younger students; P-054 is a plan to start in 2026-2027; the survey (P-031 to P-035) measures parents' opinions. P-007 says 'Beginning no later than July 1, 2027', so 'yet' and the date are right."
+    },
+    {
+      "line": 124,
+      "sentence": "Supporters expect better mental health and in-person connection.",
+      "marker": "[P-036, P-051, P-034]",
+      "verdict": "supports",
+      "evidence_span": "Asked among parents who support a ban. Reason Overall % (SE) Improved academic focus and learning 87.7 (1.8) Improved in-person social interactions 71.2 (2.6) Improved mental health and wellbeing 69.1 (2.6)",
+      "correct_passage": "",
+      "problem": "",
+      "suggested_fix": "",
+      "reason": "P-034 (asked among parents who support a ban): 71.2% cited improved in-person social interactions and 69.1% improved mental health and wellbeing. P-036: Woods calls learning without distractions 'a mental health issue' and wants the extension 'to end the harm'. P-051: Hilton cites 'less isolation' and says technology 'makes us feel further apart'. Each speaker is named in the passage."
+    },
+    {
+      "line": 124,
+      "sentence": "The one study we found, of 12- to 15-year-olds in England, found no evidence of a well-being difference.",
+      "marker": "[P-041, P-042, P-064]",
+      "verdict": "supports",
+      "evidence_span": "We recruited 1227 participants (age 12–15) across 30 schools. Mean WEMWBS score was 47 (SD = 9) with no evidence of a difference between groups",
+      "correct_passage": "",
+      "problem": "Minor, does not change verdict: 'The one study we found' can read as the only study overall, but L106 presents two (the Florida summary reports no well-being results). 'A well-being difference' doesn't say between which groups.",
+      "suggested_fix": "Optional: 'The one well-being study we found, of 12- to 15-year-olds in England, found no evidence that well-being differed between schools with strict and permissive phone rules.'",
+      "reason": "P-042: 1,227 participants aged 12-15, with 'no evidence of a difference between groups' on the WEMWBS well-being scale; P-041: 30 English secondary schools, restrictive vs permissive; P-064: the main outcome was mental wellbeing. 'No evidence of' matches the study's wording."
+    },
+    {
+      "line": 125,
+      "sentence": "Students testified in support at a legislative hearing; one, a 17-year-old, compared social media to cigarettes.",
+      "marker": "[P-052]",
+      "verdict": "supports",
+      "evidence_span": "Students testified in support during the hearing. [name withheld: minor], 17, a Milton High School student, told lawmakers that phones have become addictive for teens. “Social media is the cigarette of our generation,”",
+      "correct_passage": "",
+      "problem": "",
+      "suggested_fix": "",
+      "reason": "P-052: 'Students testified in support during the hearing'; a 17-year-old 'told lawmakers' (a legislative hearing) 'Social media is the cigarette of our generation'. The sentence describes the minor by age, not name."
+    },
+    {
+      "line": 130,
+      "sentence": "Whether, and how, Georgia teens' well-being and friendships will change.",
+      "marker": "{editorial}",
+      "verdict": "valid",
+      "evidence_span": "",
+      "correct_passage": "",
+      "problem": "Minor, does not change verdict: 'Georgia teens'' is broader than the students the law covers (public school students in grades 9-12, P-007).",
+      "suggested_fix": "Optional: 'Whether, and how, Georgia high school students' well-being and friendships will change.'",
+      "reason": "A statement of open uncertainty about future effects. 'Whether, and how' allows for no change, a gain or a loss, so it leans neither way. Editorial is the right tag for this framing line."
+    },
+    {
+      "line": 140,
+      "sentence": "So schools weren't yet required to enforce the K-8 rule statewide when the high school ban was signed.",
+      "marker": "{analysis: follows from the two dates}",
+      "verdict": "valid",
+      "evidence_span": "",
+      "correct_passage": "",
+      "problem": "Minor context, does not change verdict: prior law also required districts to adopt K-8 policies by January 1, 2026 (P-020, P-066), so some may already have been enforcing them before July 1, 2026. Leaving this out makes the challenge read a little stronger than the dates alone support.",
+      "suggested_fix": "Optional: add 'Districts had to adopt K-8 policies by Jan 1, 2026 [P-020], but the ban itself had to start only by July 1, 2026 [P-006].'",
+      "reason": "P-024: signed 05/05/2026; P-006: the K-8 ban begins 'no later than July 1, 2026'. May 5 comes before July 1, so the statewide requirement had not started. The sentence is limited to what was 'required' 'statewide', so it stays true even if some districts started early."
+    },
+    {
+      "line": 172,
+      "sentence": "Teacher Darryl Adams said high school students should keep access to their phones, and 45.5% of parents who oppose a ban cited parental choice as a reason.",
+      "marker": "[P-047, P-048, P-035]",
+      "verdict": "supports",
+      "evidence_span": "Asked among parents who oppose a ban. Reason Overall % (SE) Should be parental choice 45.5 (4.2)",
+      "correct_passage": "",
+      "problem": "Minor, does not change verdict: P-048's wording is 'should be allowed to keep access'; 'should keep access' drops the permission framing that L173 and the card title keep.",
+      "suggested_fix": "Optional: 'Teacher Darryl Adams said high school students should be allowed to keep access to their phones, and 45.5% of parents ...'",
+      "reason": "P-047 names 'Darryl Adams, a teacher'; P-048: Adams 'argues that high school students ... should be allowed to keep access to their phones'. P-035 (asked among parents who oppose a ban): 'Should be parental choice 45.5 (4.2)'. The figure is correctly given as a share of opposing parents, and the two claims are kept separate."
+    }
+  ],
+  "framing_issues": [
+    {
+      "line": 27,
+      "text": "Every district must adopt its device policy, revising it as needed, now covering kindergarten through 12th grade.",
+      "issue": "Scope and timing: P-008 covers 'each local school system and public school', not only districts, and 'now' describes a law that takes effect 2026-12-31. L56 uses the same 'districts ... now' wording.",
+      "severity": "low"
+    },
+    {
+      "line": 42,
+      "text": "a learning environment where student devices are banned",
+      "issue": "The law's definition (P-057) prohibits student access to devices, not the devices; P-009 expects devices to be stored at school.",
+      "severity": "low"
+    },
+    {
+      "line": 75,
+      "text": "If Florida's results apply here, students would miss the test-score gains found there in year two",
+      "issue": "Under Option A districts could still ban phones on their own (L76), so only students in districts without limits would miss these effects. If reworded, keep the parallel L74 suspensions sentence worded the same way for symmetry.",
+      "severity": "low"
+    },
+    {
+      "line": 96,
+      "text": "the margin of error, or how far off the result is likely to be",
+      "issue": "A 95% margin of error is how far off the result could plausibly be, not the error to expect; the typical error is smaller.",
+      "severity": "low"
+    },
+    {
+      "line": 124,
+      "text": "The one study we found, of 12- to 15-year-olds in England, found no evidence of a well-being difference.",
+      "issue": "'The one study' can read as the only study, though L106 presents two; 'a well-being difference' names no comparison groups (strict vs permissive schools).",
+      "severity": "low"
+    },
+    {
+      "line": 130,
+      "text": "Whether, and how, Georgia teens' well-being and friendships will change.",
+      "issue": "'Georgia teens' is broader than the public high school students the law covers (P-007).",
+      "severity": "low"
+    },
+    {
+      "line": 140,
+      "text": "So schools weren't yet required to enforce the K-8 rule statewide when the high school ban was signed.",
+      "issue": "Accurate, but leaves out that districts had to adopt K-8 policies by Jan 1, 2026 (P-020), which can make the challenge read stronger than the dates alone support.",
+      "severity": "low"
+    },
+    {
+      "line": 172,
+      "text": "should keep access to their phones",
+      "issue": "P-048 says 'should be allowed to keep access'; the short form drops the permission framing.",
+      "severity": "low"
+    }
+  ],
+  "summary": {
+    "units_checked": 17,
+    "supports": 11,
+    "partial": 0,
+    "does_not_support": 0,
+    "wrong_span": 0,
+    "questionable_or_invalid_tags": 0,
+    "valid_tags": 6
+  }
+}

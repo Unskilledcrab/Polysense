@@ -1,15 +1,15 @@
 {
- "verified": false,
- "statusText": "Final checks running",
- "intro": "An AI agent wrote this page from saved copies of its sources. Separate AI checkers, which never saw the drafting, then checked it in rounds. In this trial, no person checked the facts. Here is what the checkers did and what they found.",
+ "verified": true,
+ "statusText": "Passed checks (round 4)",
+ "intro": "An AI agent wrote this page from saved copies of its sources. Separate AI checkers, which never saw the drafting, then checked it in rounds. In this trial, no person checked the facts. Here is what the checkers did, what they found, and what is still open.",
  "stats": [
   {
-   "value": "180",
+   "value": "189",
    "label": "sentences, each tied to a source or labeled as our own analysis"
   },
   {
    "value": "0",
-   "label": "claims found unsupported by their sources, in 3 rounds of fact-checks"
+   "label": "claims found unsupported by their sources, in 4 rounds and 2 follow-up checks"
   },
   {
    "value": "13 of 13",
@@ -17,14 +17,14 @@
   },
   {
    "value": "4 of 5",
-   "label": "fairness rating from both the supporters' and the critics' reviewer in round 3"
+   "label": "fairness rating from both the supporters' and the critics' reviewer, rounds 3 and 4"
   }
  ],
  "sections": [
   {
    "title": "What we checked",
    "paras": [
-    "Each round runs the same checks. A page passes only when every check passes, and any fix starts a new round."
+    "Each round runs the same checks. A page passes a round only when every check passes. After that, we fix only sentences that misstate a source or break our writing rules, and a fresh checker looks again at just those sentences. Other suggestions wait for the next full round."
    ],
    "head": [
     "Check",
@@ -40,12 +40,12 @@
     [
      "Blind fact-check",
      "A separate AI checker sees only this page and the source passages. For each sentence it must copy the exact words that support it, and code confirms those words are really there.",
-     "Every flag fixed or answered"
+     "No unsupported claims"
     ],
     [
      "Fairness panel",
      "Three more AI checkers. One speaks up for the law's supporters, one for its critics, and a neutral editor checks the rules. The editor also asks of each sentence: would we write it the same way about the other side?",
-     "Both side reviewers give at least 4 of 5, and no serious problem is left"
+     "Both side reviewers give at least 4 of 5, and no serious problem"
     ],
     [
      "Testing the fact-checker",
@@ -57,7 +57,7 @@
   {
    "title": "What each round found",
    "paras": [
-    "Every round found something to fix. No fact-check found a claim that its sources didn't support, only sentences that said more than the sources did. The fairness panel failed twice before both side reviewers gave the page 4 of 5."
+    "No fact-check found a claim that its sources didn't support, only sentences that said more than the sources did. The fairness panel failed twice before both side reviewers gave the page 4 of 5."
    ],
    "head": [
     "Round",
@@ -90,23 +90,44 @@
      "4 of 5",
      "4 of 5",
      "4, 4",
-     "Not yet. The editor found 2 serious problems, now fixed"
+     "Not yet. The editor found 2 serious problems, which we fixed"
     ],
     [
      "4",
-     "Running",
-     "Running",
-     "Running",
-     "Running",
-     "Running"
+     "108 supported, 6 partly, 0 unsupported",
+     "4 of 5",
+     "4 of 5",
+     "4, 3",
+     "Passed. We then fixed every sentence that said more than its source"
+    ],
+    [
+     "Follow-up",
+     "53 changed sentences, then 17: none unsupported",
+     "",
+     "",
+     "",
+     "Passed. The page you see is this version"
     ]
+   ]
+  },
+  {
+   "title": "What's still open",
+   "paras": [
+    "These suggestions change a card, a label or the balance between sides, so they wait for the next full round. Some contradict each other; we list both views rather than pick one quietly."
+   ],
+   "items": [
+    "Card 5's evidence label should use the same \"with limits\" wording as card 1, because both rest on the same Florida study.",
+    "Reviewers disagree on whether to quote Sen. Harrell in full in Option A, and on what card 4's label should say about emergency safety.",
+    "Option B's list of costs is longer than its list of benefits; reviewers suggested ways to even them out without changing the evidence.",
+    "Officials answer the one named critic on several cards, because our sources quote few critics. The next trials will look harder for more voices.",
+    "Several lines can be plainer, and the argument cards could say when and where each person spoke."
    ]
   },
   {
    "title": "What this can't do",
    "paras": [
     "All the checkers are AI, like the writer, so they may share blind spots. Hiding test errors measures only the kinds of errors we thought to hide.",
-    "The checkers compare this page with the sources we saved. They can't tell what is missing from those sources. Ours quote four officials and a student for the law, but only one named critic.",
+    "The checkers compare this page with the sources we saved. They can't tell what is missing from those sources.",
     "The two side reviewers stand in for real people's views. They are not real people."
    ]
   },

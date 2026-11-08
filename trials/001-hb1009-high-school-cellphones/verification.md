@@ -192,6 +192,30 @@ reviewers disagreed, both views are listed.
 8. **Documented arguments** show speaker and source, but not the date and venue on the card; dates
    are in the source drawer (E).
 
-## Targeted re-check (revision 5, current `workspace.md`)
+## Targeted re-checks (revision 5, current `workspace.md`)
 
-*Running: a fresh blind agent checks the 53 changed or new units.*
+Fresh blind agents checked only the changed units (protocol: "When a page is done", step 2). Inputs and
+reports are in [verification/round5-targeted/](verification/round5-targeted/).
+
+| Check | Units | Result |
+|---|---|---|
+| Targeted re-check 1 (revision 5 draft) | 53 changed or new | 33 supports, 1 partial, 0 does not support, 0 wrong span; 3 tags questionable; 53/53 spans grounded |
+| Fixes | 17 units | Card 2's summary no longer credits "supporters" with parents' figures, and cites the passages for England and well-being. "Students can use phones in class" (the law bans access, not phones in the room). "No measured results from Georgia high schools yet". The K-8 date was a "no later than" deadline. The amendment rewrote what "bell-to-bell" means. The student's point is paraphrased without quote marks. "Adopt, and revise as needed". Missing citations added |
+| Targeted re-check 2 (the 17 fixed units) | 17 | **11 supports, 0 partial, 0 does not support, 0 wrong span; 6 tags valid; 17/17 spans grounded** |
+
+**Status: passed checks (round 4).** Revision 5 is published as checked.
+
+### Open items for the next full round (added by the targeted re-checks; all low severity)
+
+9. "District" for "each local school system and public school"; "now" for a law that takes effect
+   2026-12-31 (lines 27, 56).
+10. "Student devices are banned" is looser than the law, which bans student *access* (line 42).
+11. Option A's Florida sentences say "students" where only students in districts without limits would
+    be affected; keep the two sentences parallel (lines 74-75).
+12. "How far off the result is likely to be" can read as the typical error; a 95% margin is how far off
+    it could plausibly be (line 96).
+13. "The one study we found" can read as the only study (two appear); name the comparison groups
+    (line 124).
+14. "Georgia teens" is broader than the public high school students the law covers (line 130).
+15. Card 3's challenge could note that districts had to adopt K-8 policies by 2026-01-01 (line 140).
+16. Card 6's summary drops "allowed" from "should be allowed to keep access" (line 172).

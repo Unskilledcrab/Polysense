@@ -621,7 +621,7 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
         sec.rows.forEach(function (r) {
           var title = (sec.head[0] === "Round" ? "Round " : "") + r[0];
           var dl = el("dl");
-          for (var i = 1; i < r.length; i++) { dl.appendChild(el("dt", { text: sec.head[i] })); dl.appendChild(el("dd", { text: r[i] })); }
+          for (var i = 1; i < r.length; i++) { if (!r[i]) continue; dl.appendChild(el("dt", { text: sec.head[i] })); dl.appendChild(el("dd", { text: r[i] })); }
           list.appendChild(el("div", { class: "rowcard" }, [el("h3", { text: title }), dl]));
         });
         s.appendChild(list);
