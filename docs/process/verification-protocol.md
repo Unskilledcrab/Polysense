@@ -21,10 +21,13 @@ Three ideas make it trustworthy without a human:
 | # | Layer | Who or what | Catches | Pass condition |
 |---|---|---|---|---|
 | 1 | **Deterministic gate** | Code: `check_citations.py`, `verify_hashes.py`, `readability.py` | Uncited sentences, unknown passage IDs, non-verbatim quotes, numbers missing from sources, loaded words, hash mismatches, hard reading level | 0 errors; every warning explained |
-| 2 | **Blind source check** | An independent agent with fresh context. It sees only the workspace and passages, never the drafter's notes | Unsupported or overstated claims, misattributions, wrong spans, subgroup vs. population mix-ups, timing words ("by" vs. "on"), reversed findings, bad arithmetic | Every flag resolved (text fixed, or flag shown wrong with evidence); 0 ungrounded evidence spans (`check_verifier.py`) |
+| 2 | **Blind source check** | An independent agent with fresh context. It sees only the workspace, its home-page items and the passages, never the drafter's notes | Unsupported or overstated claims, misattributions, wrong spans, subgroup vs. population mix-ups, timing words ("by" vs. "on"), reversed findings, bad arithmetic | Every flag resolved (text fixed, or flag shown wrong with evidence); 0 ungrounded evidence spans (`check_verifier.py`) |
 | 3 | **Bias panel** | Three independent agents: a **supporter's advocate**, a **critic's advocate** and a **neutral standards editor** (who also runs the flip test) | Missing strongest arguments, unfair wording, unequal verbs or space, labels that don't follow the evidence, false balance, named minors, rule breaks | Both advocates rate their side **≥ 4/5**; no unresolved high-severity issue; every change logged |
 | 4 | **Seeded-error calibration** | A second blind source verifier on a copy with hidden planted errors (numbers, dates, scope, attribution, reversed findings, wrong spans, dropped qualifiers, subgroup stats, arithmetic, loaded words) | Measures the verifier itself | Catch rate **≥ 90%** with 0 ungrounded spans; misses analyzed and the prompt or tools improved |
 | 5 | **Re-verify after fixes** | Layers 1–3 re-run on the revised text with fresh agents. The **whole** bias panel re-rates, not only the side that complained | Errors introduced while fixing; overcorrection toward the other side (Trial 001's round 2 failed this way) | Same pass conditions as layers 1–3 |
+
+Home-page items are the most-read lines, so they get the same source check as the page. They were added in
+round 3 of Trials 002 and 003, and the first check found a public-comment deadline shown without its time.
 
 Results go in the trial's `verification.md` and `verification/` folder: raw JSON reports, the mutated
 copy, the answer key (`mutation-key.json`, moved out of reach during the run) and the summary used by the
@@ -44,7 +47,9 @@ asked to add). So "done" is defined in advance:
    CLAUDE.md (a loaded word, a subgroup figure before its base rate, undefined jargon). A **targeted
    re-check** confirms the fixes: a fresh blind agent checks only the changed sentences against the
    passages. The whole panel re-runs only if a fix changes a card's claim, its evidence label, or which
-   side a point supports.
+   side a point supports. If a targeted re-check flags something, fix it and re-check only those units again.
+   Stop when a re-check finds nothing that misstates a passage; its style notes become open items. (Trial 003
+   took three passes, whose findings went 6, 3, 0.)
 3. **Remaining medium and low panel suggestions become open items.** They are listed in `verification.md`
    and on the page's "How we checked" view, and they feed the next revision, which starts a new full
    round. Suggestions that contradict each other are logged side by side, not silently resolved.
