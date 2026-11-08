@@ -1,0 +1,17 @@
+L8: Public high school students won't be allowed to use phones or similar devices during the school day, including between classes. [P-007, P-003, P-004, P-005, P-002]
+L27: Every district must adopt its device policy, revising it as needed, now covering kindergarten through 12th grade. [P-008]
+L42: It defines it as a learning environment where student devices are banned "to minimize distractions, improve academic outcomes, and increase meaningful interactions and focused learning experiences." [P-057]
+L56: By January 1 each year, districts must now adopt their policies and revise them as needed. [P-008]
+L75: In districts without limits, students can use phones in class, which the new law bans to reduce distractions. {analysis: the K-8-only rule (P-006) left grades 9-12 to districts; the law defines distraction-free education as banning access "to minimize distractions" (P-057)}
+L75: If Florida's results apply here, students would miss the test-score gains found there in year two, and the drop in unexcused absences the study suggests. {analysis: based on P-040}
+L83: The Florida study found that enforcing phone bans led to more suspensions in the short term, especially among Black students; the rise began to fade after the first year. [P-039]
+L88: It also rewrote what "bell-to-bell" means and left out "breaks", which the passed law includes. [P-027, P-002]
+L96: For this question, the margin of error, or how far off the result is likely to be, is about 4 points either way. {computed: 1.96 × 2.1 standard error (P-033) ≈ 4.1 percentage points}
+L98: It failed, and no senator voted against the final bill. [P-026, P-025, P-024]
+L112: We found no measured results from Georgia high schools yet. {analysis: none in the sources reviewed; Georgia's rule isn't required until July 1, 2027 (P-007)}
+L124: Supporters expect better mental health and in-person connection. [P-036, P-051, P-034]
+L124: The one study we found, of 12- to 15-year-olds in England, found no evidence of a well-being difference. [P-041, P-042, P-064]
+L125: Students testified in support at a legislative hearing; one, a 17-year-old, compared social media to cigarettes. [P-052]
+L130: Whether, and how, Georgia teens' well-being and friendships will change. {editorial}
+L140: So schools weren't yet required to enforce the K-8 rule statewide when the high school ban was signed. {analysis: follows from the two dates}
+L172: Teacher Darryl Adams said high school students should keep access to their phones, and 45.5% of parents who oppose a ban cited parental choice as a reason. [P-047, P-048, P-035]

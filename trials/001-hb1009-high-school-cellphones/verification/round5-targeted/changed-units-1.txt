@@ -1,0 +1,53 @@
+L8: Public high school students won't be allowed to use phones or similar devices during the school day, including between classes. [P-007, P-003, P-002]
+L10: You can tell your school district how you want the rules run, or tell your state lawmakers whether to keep or change the law. {editorial: suggested actions; districts set policies each year under P-008, and the General Assembly can amend laws in later sessions}
+L29: At least one school planned to start sooner: on June 1, 2026, Cairo High School said it would begin in the 2026-2027 school year. [P-054]
+L42: It defines one as a place where student devices are banned "to minimize distractions, improve academic outcomes, and increase meaningful interactions and focused learning experiences." [P-057]
+L50: All emergency messages go through the school's own systems. [P-011]
+L51: Students whose IEP (Individualized Education Program), Section 504 plan or medical plan explicitly requires a device may use it as the plan requires. [P-013]
+L52: Breaking the rules leads to consequences that grow with each violation, such as warnings, taking the device, notifying parents and other actions. [P-012]
+L56: Districts must now adopt or update their policies by January 1 every year. [P-008]
+L56: The old law set a one-time deadline of January 1, 2026. [P-020]
+L73: HB 1009, signed May 5, 2026, expands that law to high schools. [P-024, P-028]
+L73: It takes effect Dec 31, 2026, and high schools must comply no later than July 1, 2027. [P-019, P-007]
+L74: High schools avoid new monitoring and enforcement duties, and districts keep deciding high school phone rules. {analysis: the duties come from P-014, and P-018 bars opting out}
+L75: In districts without limits, phones can stay in class, which the new law treats as a distraction. {analysis: the K-8-only rule (P-006) left grades 9-12 to districts; the law defines distraction-free education as banning access "to minimize distractions" (P-057)}
+L75: State School Superintendent Richard Woods called for extending the ban "to end the harm caused by constant technology access and interruption." [P-036]
+L75: If Florida's results apply here, students would miss the second-year test-score gains found there and the drop in unexcused absences the study's findings suggest. {analysis: based on P-040}
+L82: A Florida study found that phone bans led to better test scores in the second year, and its findings suggest they cut unexcused absences. [P-040, P-038]
+L82: Of the 70.8% of parents who supported a ban in a 2025 survey, 87.7% cited better focus and learning as a reason, 71.2% better in-person social interactions, 69.1% better mental health and 60.3% better physical health and safety. [P-032, P-033, P-034]
+L83: Of the 29.2% who opposed a ban, 74.8% cited having no way to reach their child in an emergency as a reason. [P-033, P-035]
+L83: That study found that enforcing phone bans led to more suspensions in the short term, especially among Black students; the rise began to fade after the first year. [P-039]
+L84: Whether, and how much, focus, learning and well-being will change in Georgia high schools, and how suspensions and emergency contact will be affected, since the evidence so far is limited (see Layer 4). {editorial}
+L84: How much the new duties will cost, since we found no official cost estimate (fiscal note) and costs depend on each district's choices, such as lockers or locked pouches. {analysis: the list's whole 2026 section (P-069) has no entry for HB 1009; storage options are listed in P-009}
+L88: Its new wording of the school day also left out "breaks", which the passed law includes. [P-027, P-002]
+L96: The survey's margin of error, or how far off it is likely to be, is about 4 points either way. {computed: 1.96 × 2.1 standard error (P-033) ≈ 4.1 percentage points}
+L98: Our archived sources quote four officials and one student who spoke for the law, and one teacher who spoke against it. {analysis: Gov. Kemp (P-029), Woods (P-036), Hilton (P-051), Harrell (P-044) and a student (P-052) for the law; Adams (P-047 to P-049) against}
+L98: They also quote a public health professor who called parents' emergency concerns valid and said good policies can address them. {analysis: Gazmararian (P-037)}
+L98: In the Senate, 13 senators voted for an amendment to let districts allow high school students to use phones between classes. [P-026, P-027]
+L98: It failed, and no senator voted against the final bill. [P-026, P-025]
+L102: "Documented" means a real person made the argument, and we cite where. {editorial: labeling rule}
+L102: A "predictive" claim is about what will happen; a "factual" claim is about what is true now. {editorial: labeling rule}
+L106: It compared schools at one point in time, and its strict schools banned recreational phone use, meaning use for fun. [P-041]
+L112: There are no Georgia results yet. {analysis: none in the sources reviewed; Georgia's rule isn't required until July 1, 2027 (P-007)}
+L113: Among parents who support a ban, 87.7% cited better focus and learning as a reason. [P-034]
+L114: The Florida study found that phone bans led to better test scores in the second year, and its findings suggest they cut unexcused absences. [P-040, P-038]
+L115: No one in the sources we reviewed disputed this directly. {analysis: none of the archived statements argues that bans hurt learning; 19.8% of opposing parents cited needing phones for schoolwork (P-035), a related concern covered in card 6}
+L116: In the Florida study, the test-score gains came in the second year, after a first year in which suspensions rose. [P-039, P-040]
+L124: Supporters, including most parents who back a ban, expect better mental health and in-person connection; the one study we found, of 12- to 15-year-olds in England, found no evidence of a well-being difference. [P-034, P-042]
+L125: Students testified in support at a legislative hearing, and the article reported that one told lawmakers phones "have become addictive for teens." [P-052]
+L125: Among parents who support a ban, 71.2% cited better in-person social interactions and 69.1% better mental health as reasons. [P-034]
+L129: The quoted passage gives no measurements behind them. {analysis: P-051 reports the claim without data}
+L130: How Georgia teens' well-being and friendships will change. {editorial}
+L130: No study we found measured well-being among American high school students under a full-day ban; the English study covered ages 12 to 15. {analysis: P-041, P-042, P-064; the Florida summary (P-038 to P-040) reports no well-being results}
+L140: So the statewide K-8 rule hadn't yet taken effect when the high school ban was signed. {analysis: follows from the two dates}
+L149: Among parents who oppose a ban, 74.8% cited having no way to reach their child in an emergency as a reason. [P-035]
+L152: Julie Gazmararian, a professor at the Rollins School of Public Health, said, "Parents’ concerns about emergency access are valid and understandable. However, effective cellphone policies can address this by establishing rapid parent notification systems and guaranteed access to phones when needed." [P-037]
+L153: Districts can add faster parent alerts, because the law sets minimum rules, but by our reading they can't allow students' own phones in an emergency unless a plan or another law requires it. {analysis: P-008 says policies must "at a minimum" include its list; P-007 allows access only as the law provides, P-011 sends all emergency communication through school systems, and the only device exception is a plan that requires one (P-013)}
+L153: Adams's lockdown account is one family's experience; the quoted passage doesn't say when it happened or what phone rules applied. {analysis: based on P-049}
+L160: Teacher Darryl Adams said he worries that policing phones would burden teachers and administrators and can invite conflict; a Florida study found that enforcing phone bans led to more suspensions at first, especially among Black students. [P-047, P-039]
+L162: The Florida study found that enforcing phone bans led to more suspensions in the short term, especially among Black students. [P-039]
+L164: In that study, the rise in suspensions began to fade after the first year. [P-039]
+L164: The authors said this may suggest things settled down after an initial adjustment period. [P-039]
+L172: Teacher Darryl Adams said high school students should keep access to their phones, and 45.5% of parents who oppose a ban cited parental choice as a reason. [P-048, P-035]
+L173: Among parents who oppose a ban, 45.5% cited parental choice and 41.9% cited students' need to learn responsible use as reasons. [P-035]
+L174: Among parents who oppose a ban, 26.6% cited needing phones for health tools or apps and 19.8% cited needing them for schoolwork. [P-035]
