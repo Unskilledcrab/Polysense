@@ -1,0 +1,143 @@
+{
+ "checker": "standards editor (targeted flip test)",
+ "neutrality": 4,
+ "issues": [
+  {
+   "file": "workspace.md",
+   "line": 190,
+   "text": "Department heads must present their needs to two commissioners, not the full Board, critics say. ... Commissioner Barrett said the rules let only those two serve.",
+   "issue": "Pair 1 fails the flip test. Card 1's In short (L178) opens in the page's own voice with a benefit to residents (\"North and south Fulton would each have a commissioner shaping the draft, and the full Board still votes\"), then quotes its side's words (\"earlier and ongoing input\"). Card 2 opens with a complaint about department heads, hedged with a stance label (\"critics say\"). No card says \"supporters say\", and \"critics\" appears nowhere else on the page; cards 5 and 6 call the same people \"justice officials\". It also gives no outlet for what is FOX 5's paraphrase (P-076), unlike card 6 (\"justice officials said, Atlanta News First reported\"), and it paraphrases Barrett instead of quoting her. The paraphrase also softens her claim: she said the two are \"creating\" a commission \"that only they qualify to be on\", which the paraphrase turns into a neutral \"the rules let\". Read side by side, card 1 reads as settled fact and card 2 as a grievance.",
+   "severity": "medium",
+   "suggested_fix": "Build both openers the same way: either both as plain facts in the page's voice, or both with the \"If the claim is right,\" frame that cards 3 and 4 use, each giving the effect on residents. Example for card 1: \"If the claim is right, north and south Fulton each get early say, and the full Board still votes.\" Example for card 2: \"If the claim is right, two commissioners shape the draft more than the rest of the Board.\" Quote Barrett in her own terms, as card 1 quotes its resolution, e.g. \"Commissioner Barrett said \\\"only they qualify\\\" to serve.\" (P-072). If the officials' objection stays as the opener, name them by role and credit the outlet: \"justice officials said, FOX 5 reported\". Recount both cards to stay at 40 words or fewer; the card 2 example comes to 38 words with the evidence sentence suggested in the next issue."
+  },
+  {
+   "file": "workspace.md",
+   "line": 178,
+   "text": "The county code confirms these rules; results wait on the draft.",
+   "issue": "Every one of these evidence parts carries the same \"Supported\" label, but the verbs change with the side, the same way in both pairs. The cards for today's process get the strongest verbs: \"confirms\" (card 1) and \"Records back the announced hearings\" (card 4, L214). The critical cards get the flatter \"Who serves is on record\" (card 2, L190) and \"The code's rule and 2026 practice are on record\" (card 3, L202). Card 2's sentence also leaves out the Supported fact its claim rests on, that the two were seated under rules they sponsored (\"how chosen\" in its own label). Card 3's \"2026 practice\" is vaguer than card 4's \"the announced hearings\". Flipped, \"County records confirm the two sponsored the rules that seated them\" would sound like a validation that the critical cards never get.",
+   "severity": "medium",
+   "suggested_fix": "Use one verb for every Supported part, in the \"Records back X, not Y\" form that cards 4 and 6 already use. Card 1: \"Records back these rules; results wait on the draft.\" (38 words). Card 2: \"Records back who serves, under rules they sponsored; their effect isn't known yet.\" (38 words). Card 3: \"Records back the code's rule and 2026 practice; the conflict isn't settled.\" (38 words; name what the 2026 draft listed if the budget allows)."
+  },
+  {
+   "file": "workspace.md",
+   "line": 132,
+   "text": "**If you care most about early, balanced Board input:**",
+   "issue": "The label hands one side a value that both sides claim, which the rule forbids, and it puts a disputed word in our voice. (1) \"Board input\": the critics also argue for it. Option C says the commission failed its duty to seek priorities \"from all members of the board\" (P-029). The officials object to presenting to a two-commissioner panel \"rather than the full board\" (P-076, FOX 5's words). Barrett says some members are \"angling to take control of the budget process\" (P-072). The guide treats transparency as shared (L135) but steers readers who value Board members' input only to today's process. (2) \"balanced\" sits outside quotes in our voice, on the exact point card 2 disputes (\"Fairness: a values question\"). The officials' label (L133) carries no matching value adjective. Flipped, a critics' label like \"If you care most about fair, full-Board input:\" would read as taking their side.",
+   "severity": "medium",
+   "suggested_fix": "Label the line by what only this side claims, and keep \"balanced\" inside the quote. Example: \"If you care most about early, north-south representation:\", ending the body \"...adds \\\"earlier and ongoing input,\\\" with \\\"balanced representation.\\\"\" Then add Board members' input to the shared note (L135) in each side's words. Example: \"The same two sides invoke Board members' input: Resolution 26-0460 adds \\\"earlier and ongoing input,\\\" and Option C says the commission failed to seek priorities \\\"from all members of the board.\\\"\" [P-004, P-029]."
+  },
+  {
+   "file": "workspace.md",
+   "line": 133,
+   "text": "said they decline to join \"a process that unnecessarily limits the voices of the justice system.\"",
+   "issue": "This line is built differently from its neighbors. L132 and L134 each say what a side's preferred arrangement provides (\"adds\", \"has let the Board\"). This line is built around a refusal (a boycott), which can read as obstruction. The paraphrase also drops Johnson's own softening word (P-078: \"We respectfully decline to participate...\"). Flipped, a line about today's process built around what its sponsors refuse would read as hostile. Length (34 words) and quote (11 words) are fine.",
+   "severity": "low",
+   "suggested_fix": "Either state the value claim in the same form as the other lines, e.g. \"said the process \\\"unnecessarily limits the voices of the justice system.\\\"\" (the boycott is already on card 2). Or keep the refusal in her words: \"said they \\\"respectfully decline to participate in a process that unnecessarily limits the voices of the justice system,\\\"\" changing \"six justice officials\" to \"six officials\" to stay at 35 words (quote 16 words)."
+  },
+  {
+   "file": "workspace.md",
+   "line": 136,
+   "text": "Each side gets one line, so the justice officials' requests for more money and a January vote are on cards 6 and 5.",
+   "issue": "Here \"side\" means a group of speakers, but the cards' own Side labels put L133 (card 2) and L134 (card 3) on one side, \"critical of the current process\", and count the January vote and more funding as separate sides that get no line. A reader counting the bold lines sees two that question today's process and one that defends it. The sentence saying no source gives a reason for the limit explains part of this, but the count itself is never stated. Flipped (two lines for today's process, one against), critics would read the guide as stacked.",
+   "severity": "low",
+   "suggested_fix": "State the basis, as the Layer 4 intro does. Example: \"Each group quoted gets one line; that two of the three question today's process reflects whom the sources quoted, not how many people hold each view. The officials' requests for more money and a January vote are on cards 6 and 5.\""
+  },
+  {
+   "file": "workspace.md",
+   "line": 214,
+   "text": "If the claim is right, all commissioners and staff can hear departments' requests.",
+   "issue": "This tilts against the side supporting today's process. Card 4's opener limits the claim's meaning to insiders (commissioners and staff), narrower than the \"open meetings\" it goes on to quote. Its pair, card 3, opens on what everyone would see in the draft. Flipped, card 3 would read \"If the claim is right, commissioners and staff won't see departments' full requests\", which would undersell it the same way.",
+   "severity": "low",
+   "suggested_fix": "Example: \"If the claim is right, the public and commissioners can hear departments' requests.\" (same 13 words, so the In short stays at 40). Or keep Ellis's scope and say whose staff: \"all commissioners and their staff\"."
+  },
+  {
+   "file": "workspace.md",
+   "line": 226,
+   "text": "We found no plan for a December vote; whether to wait is a values question.",
+   "issue": "Cards 4 and 6 use the form \"Records back X, not Y\". Card 5's evidence sentence names neither its Supported part (the 2026 vote was in January) nor its uncertain premise. Our sources don't say when new members take office, and the opener's \"give incoming board members a say\" depends on that. Instead it adds a different kind of caveat, drawn partly from Ellis's statement (P-073), which can read as making the officials' request moot.",
+   "severity": "low",
+   "suggested_fix": "Use the shared form. Example: \"Waiting until January would give incoming board members a say, Atlanta News First reported. Justice officials asked the Board to wait. Records back a January vote in 2026, not when new members start; waiting is a values question.\" (38 words). Move the December-plan note to What's uncertain, where Ellis's statement already is."
+  },
+  {
+   "file": "workspace.md",
+   "line": 16,
+   "text": "2027 funding for the jail, courts, prosecutors and public defender's office isn't known as of Nov 8, 2026.",
+   "issue": "The line names prosecution by its people (\"prosecutors\") and defense by its institution (\"public defender's office\"), so the two aren't parallel. This is minor and doesn't tilt the budget dispute, but the flipped wording (\"prosecutor's offices and public defenders\") would read differently.",
+   "severity": "low",
+   "suggested_fix": "\"...courts, prosecutors and public defenders isn't known...\" (44 words)."
+  }
+ ],
+ "flip_test": [
+  {
+   "line": 132,
+   "flipped": "For the critics, the same frame would read \"If you care most about fair, full-Board input: [their document] says ...\". An evaluative adjective in our voice in their label would read as siding with them.",
+   "asymmetry": "The label gives \"Board input\", a value the critics also claim (P-029, P-076), to today's process only, and puts \"balanced\", the disputed point, in our voice. Otherwise the form (\"Resolution X, which [sponsors] sponsored, says ...\"), length (34 words) and quotes (4 + 2 words) match L134."
+  },
+  {
+   "line": 133,
+   "flipped": "Built the same way for the other side: \"If you care most about early Board input: Commissioner Ellis, for the sponsors, said they decline to support '...'\". That would read as obstruction.",
+   "asymmetry": "This is the only guide line built around an action (a boycott) rather than what the side's arrangement provides, and it drops her \"respectfully\". Length (34 words) and quote (11 words) are fine."
+  },
+  {
+   "line": 134,
+   "flipped": "\"If you care most about early Board input: Resolution 26-0460 (today's process), which ... sponsored, says ...\". This is the same form as L132.",
+   "asymmetry": "None material. It is 35 words against 34, and \"(Option C)\" only identifies the option."
+  },
+  {
+   "line": 135,
+   "flipped": "\"Two sides claim transparency: Commissioner Ellis said today's process is 'more transparent and open' than in recent years, and Option C aims 'to ensure transparency.'\"",
+   "asymmetry": "None in the visible text: the order alternates, and \"aims\" and \"said\" fit the source types. The tag's Uncertain note on Ellis's comparison only, and not on Option C's aim, is justified because his is a factual comparison and Option C's is a stated aim. The shared note should also carry Board members' input (see L132)."
+  },
+  {
+   "line": 136,
+   "flipped": "\"Each side gets one line, so the sponsors' 'full Board's exclusive authority' and Ellis's openness claims are on cards 1 and 4.\"",
+   "asymmetry": "Only the officials' left-out arguments get a pointer. That is justified, because cards 5 and 6 are the only cards with no guide line. But \"side\" here means a speaker group, while the cards' Side labels put L133 and L134 on one side, so the guide shows two lines that question today's process and one that defends it, and the count is never stated."
+  },
+  {
+   "line": 14,
+   "flipped": "There is no side's position in this line to flip.",
+   "asymmetry": "None. It uses the same \"isn't known as of Nov 8, 2026\" caveat as L15 and L16, and all three are 45 words."
+  },
+  {
+   "line": 15,
+   "flipped": "There is no side's position in this line to flip.",
+   "asymmetry": "None. It doesn't imply that the 5% limit or more spending would change bills, which no source supports."
+  },
+  {
+   "line": 16,
+   "flipped": "\"If you pay county taxes: ... some commissioners asked to hold spending down.\" No such position is documented (L166), so the line can only report the officials' request, and it does so with the neutral \"asked\" that card 6 also uses.",
+   "asymmetry": "Minor. \"prosecutors\" names people and \"public defender's office\" names an institution. Only justice-system users get a reader line that carries their leaders' request. That follows the evidence, but other General Fund services compete for the same money."
+  },
+  {
+   "line": 178,
+   "flipped": "In card 2's form: \"North and south Fulton would each have a commissioner shaping the draft, and the full Board still votes, supporters say. ... These rules are on record; results wait on the draft.\"",
+   "asymmetry": "It opens in the page's own voice with a benefit to residents and no hedge or stance label, where card 2 gets \"critics say\". It quotes its side's words, where card 2 paraphrases Barrett. Its evidence verb, \"confirms\", is the strongest on any card."
+  },
+  {
+   "line": 190,
+   "flipped": "In card 1's form: \"If the claim is right, two commissioners shape the draft more than the rest of the Board. Commissioner Barrett calls it a commission 'that only they qualify to be on.' County records confirm who serves and that they sponsored the rules; the effect waits on the draft.\"",
+   "asymmetry": "It uses a stance label, \"critics\", that no card uses for the other side. It centers on department heads rather than residents. It paraphrases Barrett instead of quoting her. Its Supported fact is stated vaguely (\"Who serves is on record\"), without \"under rules they sponsored\", and with the weaker verb."
+  },
+  {
+   "line": 202,
+   "flipped": "In card 4's form: \"... Records back the code's rule and 2026 practice, not the conflict.\"",
+   "asymmetry": "It says \"are on record\" where card 4 says \"Records back\", and \"2026 practice\" is less concrete than card 4's \"the announced hearings\". Otherwise it is parallel: a conditional opener, the side's quoted claim (\"impossible\") and a caveat on the unsettled part. 39 words."
+  },
+  {
+   "line": 214,
+   "flipped": "In card 3's form: \"If the claim is right, the draft will show departments' full requests ... The announced hearings are on record; the comparison isn't settled.\"",
+   "asymmetry": "The pull is mixed. \"Records back\" is a stronger verb than card 3's \"on record\", which favors this side. But the opener is limited to commissioners and staff, narrower than the claimed \"open meetings\", while card 3's opener covers what everyone sees in the draft, which disfavors it. The caveat, \"not the comparison\", matches card 3's \"the conflict isn't settled\"."
+  },
+  {
+   "line": 226,
+   "flipped": "In card 6's form: \"... Records back a January vote in 2026, not when new members take office.\"",
+   "asymmetry": "Unlike cards 4 and 6, it gives neither its Supported part nor its uncertain premise. \"We found no plan for a December vote\" is a different kind of caveat, partly drawn from the other side's statement, and it can read as making the request moot."
+  },
+  {
+   "line": 238,
+   "flipped": "\"Holding funding down could protect taxpayers and savings, [someone] said ...\". No documented argument against more money exists (L166), so there is nothing to mirror.",
+   "asymmetry": "None material. Its caveat, \"not most other needs\", parallels card 4's \"not the comparison\", and its double attribution (officials, then outlet) is the model card 2 should follow. At 34 words it is the shortest In short."
+  }
+ ],
+ "summary": "The reviewed lines have no recommendation words, matched lengths (values lines 34, 34 and 35 words; In short lines 34 to 40; If-you lines 45 each), attributed claims, and transparency correctly shown as shared, so the set rates 4 of 5. The remaining asymmetries mostly favor today's process: the supporting cards' In short lines get unhedged openers and stronger evidence verbs (\"confirms\", \"back\") than the critical cards (\"critics say\", \"on record\"), and the values guide gives \"Board input\" to one side with \"balanced\" in our voice. Smaller form issues touch the officials' guide line, the line-count wording in L136, and cards 4 and 5."
+}
