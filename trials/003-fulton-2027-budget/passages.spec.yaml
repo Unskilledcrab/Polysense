@@ -185,6 +185,11 @@ passages:
      start: '"name" : "Public Defender Budget Presentation_2027"', end: '"createdAt" : "2026-10-09T01:47:23.000Z"'}
   - {id: P-058, source: S10, file: S10.json, locator: "catalog entry: Probate Court deck",
      start: '"name" : "Probate Court Budget Presentation_2027"', end: '"createdAt" : "2026-10-09T01:43:16.000Z"'}
+  - {id: P-094, source: S10, file: S10.json, locator: "catalog result for the Sheriff deck (idwu-2gmj): permalink on the county's data site",
+     start: '"permalink" : "https://data.fultoncountyga.gov/d/idwu-2gmj"', end: '"permalink" : "https://data.fultoncountyga.gov/d/idwu-2gmj"',
+     note: "Added in revision 3: names the site (data.fultoncountyga.gov) that the catalog entries P-055 to P-058 come from."}
+  - {id: P-095, source: S10, file: S10.json, locator: "catalog result for the Public Defender deck (r22u-txge): permalink on the county's data site",
+     start: '"permalink" : "https://data.fultoncountyga.gov/d/r22u-txge"', end: '"permalink" : "https://data.fultoncountyga.gov/d/r22u-txge"'}
   - {id: P-059, source: S10b, file: S10b.txt, locator: "Sheriff deck, slide 1 (cover)",
      start: "FULTON COUNTY SHERIFF’S OFFICE PROPOSED BUDGET", end: "OCTOBER 13, 2026"}
   - {id: P-060, source: S10b, file: S10b.txt, locator: "Sheriff deck, slide 2 (2026 challenges and resolutions, first three rows)",

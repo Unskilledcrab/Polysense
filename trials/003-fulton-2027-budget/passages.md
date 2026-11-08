@@ -237,6 +237,14 @@ span of a hashed snapshot listed in [sources.yaml](sources.yaml), or of a text f
 ### P-058 · S10 · catalog entry: Probate Court deck
 > "name" : "Probate Court Budget Presentation_2027", "id" : "3srn-tydw", "resource_name" : null, "parent_fxf" : [], "description" : "", "attribution" : null, "attribution_link" : null, "contact_email" : null, "type" : "file", "updatedAt" : "2026-10-09T01:44:05.000Z", "createdAt" : "2026-10-09T01:43:16.000Z"
 
+### P-094 · S10 · catalog result for the Sheriff deck (idwu-2gmj): permalink on the county's data site
+> "permalink" : "https://data.fultoncountyga.gov/d/idwu-2gmj"
+
+*Note: Added in revision 3: names the site (data.fultoncountyga.gov) that the catalog entries P-055 to P-058 come from.*
+
+### P-095 · S10 · catalog result for the Public Defender deck (r22u-txge): permalink on the county's data site
+> "permalink" : "https://data.fultoncountyga.gov/d/r22u-txge"
+
 ### P-059 · S10b · Sheriff deck, slide 1 (cover)
 > FULTON COUNTY SHERIFF’S OFFICE PROPOSED BUDGET 2027 OCTOBER 13, 2026
 
