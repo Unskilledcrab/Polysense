@@ -7,7 +7,7 @@ owner reviews it. Reviewed trials become the **gold data** that automation must 
 
 | Trial | Process | Subject | Status |
 |---|---|---|---|
-| [001](001-hb1009-high-school-cellphones/) | A. Bill workspace (#1) | HB 1009 (2026), high school "bell-to-bell" personal device ban | **Blocked at step 2 (retrieval):** network policy denies Georgia sources. Steps 0–1 done |
+| [001](001-hb1009-high-school-cellphones/) | A. Bill workspace (#1) | HB 1009 (2026), high school "bell-to-bell" personal device ban | Steps 0–5 done. Verification round 1 done: planted-error catch rate 13/13; bias panel failed, then revised. Round 2 in progress. Prototype in [prototypes/hb1009/](../prototypes/hb1009/) |
 
 ## Folder layout
 
@@ -17,8 +17,9 @@ NNN-slug/
   sources.yaml      every source: id, type, URL, status, retrieved_at, sha256, archive URL
   passages.md       numbered passages (P-###) with locators
   workspace.md      the output (every sentence cited or tagged)
-  verification.md   checklist results + "where I'm least sure"
-  review.md         reviewer's verdicts, clarity scores, time
+  verification.md   verification protocol results + dispositions of every finding
+  verification/     raw verifier reports, planted-error copy and answer key
+  review.md         the owner's feedback on the user experience
   log.md            step-by-step log: time, friction, failures, rules learned
   _raw/             downloaded source files (git-ignored; hashes live in sources.yaml)
 ```

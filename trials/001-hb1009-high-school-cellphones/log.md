@@ -18,6 +18,9 @@ a person would need. Human review time is recorded separately in `review.md`.
 | 5. Deterministic gate | 04:15 → 04:16 | `check_citations.py` PASS (0 errors, 0 warnings) after the punctuation and number-word fixes; regression fixture still fails as expected | — |
 | 6. Verification setup | 04:16 → 04:17 | Made a calibration copy with **13 hidden planted errors**; the code-only gate caught **1 of 13** (as a warning). Answer key moved outside the repository. Launched 5 fresh agents: 2 blind source checks (real + calibration copy), supporter's advocate, critic's advocate, standards editor | — |
 | Prototype | 04:17 → 04:26 | Built `render_prototype.py` + template (home, 5 layer tabs, evidence drawer, bill markup view, "How we checked" page). Smoke test: 7 views × 2 widths, 0 script errors, 0 horizontal overflow | — |
+| Verification round 1 | 04:17 → 04:36 | Reports: supporter 3/5 (04:27); critic 3/5 (04:29); calibration **13/13 caught**, 92/92 spans grounded (04:30); editor neutrality 3/5, clarity 4/5 (04:32); blind source check of the real page 58 supports, 9 partial, 0 unsupported, 0 wrong span (04:36) | The panel **failed**, and rightly. My draft had given critics 4 cards to supporters' 2 (one of them invented as "anticipated"), cut two supporter quotes and one expert's concession, put an expert's proposal under "What the law says", and used a different template for each side's cards. The source checks found no wrong facts, only overstatements |
+| Revision 2 | 04:30 → 04:39 | Drafted in the scratchpad while the last verifier finished (so its input didn't change underneath it); swapped in at 04:38. 135 units (99 cited, 21 analysis, 13 editorial, 2 computed). Added 7 passages: the full bill text, the fiscal list's 2026 heading, the English study's outcomes. Gate: 0 errors, 0 warnings | Fixed a checker false positive ("Sen." read as a sentence end) |
+| Verification round 2 | 04:39 → … | Four fresh agents: blind source check, supporter's advocate, critic's advocate, standards editor. Calibration carried over (same verifier prompt) | — |
 
 ## Rules learned (fed back into the runbook)
 
@@ -32,6 +35,16 @@ a person would need. Human review time is recorded separately in `review.md`.
    dependencies.md.
 5. **When reports conflict about a local fact** (a district's start date versus the state law's), the
    likely explanation is local choice, not error. The workspace should explain both, not pick one.
+6. **Bill PDFs need strike-through and underline recovery.** Plain extraction silently merges deleted
+   and inserted words. → `pdf_markup.py` plus a visual spot-check (runbook step 2).
+7. **"The law doesn't say X" claims need the whole text archived.** Excerpts can't prove absence. →
+   Passages now cover every line of a bill whenever we make absence claims.
+8. **The drafter's own bias is invisible to the drafter.** I believed the first draft was balanced. Three
+   independent checkers each found the same structural tilts. → One fixed card template for every
+   side, base rates before subgroup statistics, and full quotes (style guide v0.1, runbook v0.2).
+9. **The verifier can be measured.** It caught 13/13 planted errors, including subtle ones such as
+   "on" vs. "no later than", a subgroup figure presented as everyone, and a misattributed quote. The
+   code-only gate caught 1/13. Calibration is what makes AI-only verification defensible.
 
 ## Automation notes (not yet eligible: 0 of 3 runs)
 
