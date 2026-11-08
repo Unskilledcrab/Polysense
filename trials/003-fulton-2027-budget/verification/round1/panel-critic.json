@@ -1,0 +1,178 @@
+{
+  "role": "critic-advocate",
+  "rating": 3,
+  "missing_arguments": [
+    {
+      "argument": "The justice leaders did not refuse to take part in the budget process. They declined live presentations to the commission in protest, but FOX 5 reported that all of them 'have submitted their formal 2027 budget requests in writing'. Chief Probate Judge Johnson spoke 'on behalf of the coalition'. The page never mentions the written submissions, so the timeline (line 18) reads as if they simply walked away.",
+      "passages": ["P-080", "P-076", "P-078"]
+    },
+    {
+      "argument": "State the critics' primary objection in their own terms. FOX 5 reported that it 'centers on a new framework that require department heads to present critical funding needs to a two-commissioner panel rather than the full board'. The code shows how deep that role is: the two commissioners 'participate directly and continuously' in 'review of departmental requests' and 'specific budgetary requests from other elected officials', help prepare the recommended budget, and present it jointly. FOX 5 also reported Ellis noting that the commission 'is solely responsible for drafting recommendations'. The page cites only the other half of that sentence (the full Board votes).",
+      "passages": ["P-076", "P-013", "P-015", "P-079"]
+    },
+    {
+      "argument": "Self-selection should lead card 3. Under rules the two sponsored, no other commissioner could serve for 2027: Ellis was the only eligible northern member, and the vice chair, the co-sponsor, takes the southern seat automatically. Both serve 'without nomination'. Barrett said they are 'creating a budget commission that only they qualify to be on', but that quote appears only in card 1's 'Who disagrees'. The facts are in card 3's body. The claim is missing from card 3's 'In short' and 'Who says it'.",
+      "passages": ["P-072", "P-016", "P-009", "P-010", "P-011", "P-021"]
+    },
+    {
+      "argument": "The policy case against uniform caps goes beyond the one GFOA quote the page uses. The resolution says across-the-board caps 'allow legacy spending in some departments to go unchecked while new and often necessary funding is denied'. It cites Pew's advice to 'resist the temptation to make indiscriminate, across-the-board budget cuts' and use data and evidence instead. It says departmental budgets changed from 'a decrease of 4 percent to an increase of 43 percent' between FY2025 and FY2026, showing that needs vary widely, so a single 5% line does not fit them. Attribute these to the resolution, as the page does with the 27-of-41 figure.",
+      "passages": ["P-028"]
+    },
+    {
+      "argument": "The county's own budget book backs the jail-related need, and card 6 leaves it out. It says the DOJ agreement addresses 'constitutional violations' and mandates 'improving staffing and supervision'. It says 'additional resources will be needed for consent decree compliance' and that the cost 'is expected to grow' (it 'could exceed a range from $30 - $60 million'). The sheriff's deck ties overtime funding to 'Consent Decree mandates'. These belong in card 6's 'What supports it'. The jail facts are in Layer 2 but are never connected to the critics' claim.",
+      "passages": ["P-048", "P-049", "P-050", "P-060"]
+    },
+    {
+      "argument": "Last year the full Board itself funded justice needs above the drafted proposal. Consent decree funding rose from $31,843,000 proposed to $50,000,000 adopted (+$18,157,000, about 57%). The solicitor-general rose from $14,605,358 to $16,149,063 (+$1,543,705, about 10.6%). These are {computed} figures from county records showing the draft fell short of what the Board chose to fund. In fairness, consent decree costs were 'still being vetted' when the proposal was written (P-050), and the same facts show the Board does amend drafts, which helps card 1. Show them in card 6 and Option B.",
+      "passages": ["P-054", "P-050"]
+    },
+    {
+      "argument": "A flat cap does not separate required costs from optional ones. Last year's process 'first categorized enhancements based on contractual, regulatory, statutory' drivers. Posted 2027 requests include a 'Contractually obligated' rent increase (the public defender's top-ranked item), Marsy's Law victim-contact compliance and ABA processing benchmarks (solicitor-general), and overtime tied to consent decree mandates (sheriff). The descriptions of the 5% limit we have mention no exceptions. Present this as {analysis} under card 4's 'What supports it'. Do not attribute it to any speaker.",
+      "passages": ["P-049", "P-064", "P-062", "P-060", "P-029", "P-077"]
+    },
+    {
+      "argument": "County records partly undercut Ellis's comparison ('more transparent and open than anything we've had in recent years'). Last year's process also 'reinstated formal budget hearings', and its proposal listed all extra requests in an appendix (almost $158M operating, over $64M capital), while this year's requests are capped. Card 2 has the appendix point but not the hearings point.",
+      "passages": ["P-049", "P-051", "P-073"]
+    },
+    {
+      "argument": "The draft carries weight. It serves 'as presented' as the operating budget until adoption. Last year's adopted General Fund ($1,057,100,578) differed from the proposal ($1,053,152,000) by about 0.4% net, with gross changes of about $37.2M (3.5%), so the draft set the starting point for nearly all spending. This is {computed}/{analysis}. It cuts both ways, so place it next to card 1's 'the full Board still decides', not instead of it.",
+      "passages": ["P-005", "P-054"]
+    },
+    {
+      "argument": "Barrett objected to the commission's makeup by Aug 19. She had the members' appointment removed from the consent agenda for separate consideration and cast the only no vote. The page gives the 4-to-1 count but not who objected. Lower importance.",
+      "passages": ["P-021", "P-023"]
+    },
+    {
+      "argument": "The critics' public-interest framing is missing. The coalition warned that 'funding decisions could affect court delays, jail conditions and public safety'. FOX 5 described Labat as calling the arrangement unfair 'to county agencies and taxpayers' (a paraphrase, so don't present it as his quote). Lower importance.",
+      "passages": ["P-069", "P-078"]
+    }
+  ],
+  "unfair_wording": [
+    {
+      "line": 18,
+      "text": "They sent the Board a letter and said they would skip the commission's budget hearings. [P-069, P-076]",
+      "why": "'Skip' is casual and suggests neglect. The cited source says they declined live presentations in protest (P-076), and Johnson said they 'respectfully decline' (P-078). The same report says they 'have submitted their formal 2027 budget requests in writing' (P-080), and the page leaves that out. This is the most-read part of the page, and as written it makes the critics look like they refused to take part. Suggest: 'They sent the Board a letter and said they would not present in person at the commission's hearings. FOX 5 reported they had already sent their 2027 requests in writing. [P-076, P-080]'",
+      "severity": "high"
+    },
+    {
+      "line": 163,
+      "text": "Barrett's resolution says departments may still describe broader needs \"in narrative form.\" [P-029]",
+      "why": "The source frames this as a restriction: the commission 'only allows departments to describe broader needs in narrative form' (P-029). 'May still' turns the critics' complaint into a mitigation and uses it against their own card. Card 2 (line 139) words the same fact correctly with 'only'. Suggest: 'Barrett's resolution says departments may describe broader needs, but only \"in narrative form.\"'",
+      "severity": "medium"
+    },
+    {
+      "line": 163,
+      "text": "So at least one office's larger needs are public, whatever the draft includes. {analysis}",
+      "why": "This is the author's own rebuttal. Line 162 says no one defended the limit, so no supporter made it. It implies the concern is moot, but being posted on the open data site is not the same as being included in the proposed budget, which the code's text requires (P-005), and it covers one office out of 41. The same numbers are the best county-record support for the card: the public defender's $4,720,447 in requests is about 16.6% of its 2026 budget, about 3.3 times the 5% amount (P-064, P-054). Yet they appear only under 'What challenges it', while the label on line 157 cites them neutrally. Move the computation to 'What supports it'. If it stays here, reword: 'These requests are posted publicly; whether the proposed budget will include them is not yet known.'",
+      "severity": "medium"
+    },
+    {
+      "line": 147,
+      "text": "Critics say the process lets two commissioners shape the budget before the full Board sees it. [P-076, P-078]",
+      "why": "This is weaker than the critics' documented case. It leaves out their 'primary objection': department heads must present funding needs to a two-commissioner panel 'rather than the full board' (P-076). It also leaves out the self-selection claim, that under the sponsors' own rules no one else could serve (P-072, P-016, P-021, P-011). Add both in one or two plain sentences.",
+      "severity": "medium"
+    },
+    {
+      "line": 148,
+      "text": "Commissioner Dana Barrett said, \"There are some shenanigans among some of the current board members who are angling to take control of the budget process in a way that I feel is inappropriate.\" [P-072]",
+      "why": "The quote is accurate. But the critics' own card uses Barrett's most heated line, while her more substantive, record-backed claim ('creating a budget commission that only they qualify to be on') appears only in card 1's 'Who disagrees'. Add that quote here. Also say Johnson spoke 'on behalf of the coalition' (P-078), so it's clear her words are the six offices' position.",
+      "severity": "low"
+    },
+    {
+      "line": 88,
+      "text": "Justice leaders are asking for more money for what they describe as staffing shortages, court delays and jail crowding. [P-070]",
+      "why": "The source says 'jail overcrowding' (P-070). 'Crowding' softens the critics' stated concern. Card 6 (line 183) makes the same change. Use 'overcrowding'.",
+      "severity": "low"
+    },
+    {
+      "line": 162,
+      "text": "The Board filed the resolution that would have removed it, 4 to 1.",
+      "why": "This puts a procedural vote under 'Who disagrees' as if it were a counterargument. Lines 105 and 111 say the members who voted to file gave no reasons, and the filing was a substitute motion that kept Barrett's motion to approve from a vote (P-025). Add 'Those voting to file gave no reasons in the records we archived.' Where line 160 says the resolution 'failed on Oct 21', give the count: 1 yes, 1 no, 2 not voting, 2 absent (P-033).",
+      "severity": "low"
+    },
+    {
+      "line": 174,
+      "text": "Commissioner Ellis said there is no talk of an early vote, Atlanta News First reported. [P-073]",
+      "why": "Ellis's statement does not disagree with waiting until January. Under 'Who disagrees' it reads as if the critics' request is aimed at nothing. Move it to 'What challenges it' or a neutral note.",
+      "severity": "low"
+    },
+    {
+      "line": 52,
+      "text": "A commissioner's resolution says departments' requests could not exceed 5% of their \"base budget,\" and FOX 5 reported a similar limit.",
+      "why": "This could read as doubt that the limit exists. The limit is named in the official title of a Board agenda item heard at two meetings (P-024, P-037), and FOX 5 describes it as a directive (P-077). No source disputes it, including Ellis. Add: 'No source we reviewed disputes that the limit exists.'",
+      "severity": "low"
+    }
+  ],
+  "imbalance": [
+    {
+      "issue": "Evidence labels lean toward supporters. Both supporter cards (1, 2) lead with 'Supported'. The critics' contested claims never get 'Supported', even where county records back their factual core; card 3's 'Supported' covers only who serves, which no one disputes. Card 1 gets a split label ('Supported on the rules; uncertain on results'). Card 4 has the same structure (code text and last year's practice on record, results waiting on the draft) but gets a flat 'Uncertain'. Card 6 gets 'Uncertain' even though the county's own budget book backs the jail need. See label_disagreements.",
+      "severity": "medium"
+    },
+    {
+      "issue": "The author's own summary sentences go one way. Supporter cards get affirmations: 'The code's text backs this structure' (line 123) and 'Public notices and posted presentations back this' (line 135). Critic cards get only qualifiers: 'Whether needs are hidden can't be checked until the draft is out' (line 159) and 'we found no independent data to check them' (line 183). Card 4 also gets an author-drawn rebuttal that no supporter made (line 163). The pattern is not justified where records back the critics' factual base.",
+      "severity": "medium"
+    },
+    {
+      "issue": "Card 6 cites P-049 selectively (line 187). It uses 'no additional resources ... above and beyond ... a current service level' against the justice leaders. It leaves out the next sentence of the same passage: 'This further emphasizes that additional resources will be needed for consent decree compliance.' It also leaves out that the volume of requests 'resulted in many unmet requests.'",
+      "severity": "medium"
+    },
+    {
+      "issue": "P-079 is used selectively. Cards 1 and 3 (lines 124, 150) use Ellis's point that the full Board votes. They leave out the first half of the same FOX 5 sentence, that the commission 'is solely responsible for drafting recommendations'. That half supports the critics' concern about who shapes the draft.",
+      "severity": "medium"
+    },
+    {
+      "issue": "Unchecked claims are flagged for critics but not for the supporter. Card 4 says 'We did not check the resolution's figure of 27 departments' (line 164). Card 2 gives no such caveat for Ellis's unchecked comparison ('more transparent and open than anything we've had in recent years'), which no county record supports and P-049 partly undercuts.",
+      "severity": "low"
+    },
+    {
+      "issue": "The supporters' main rebuttal, that the full Board decides, is restated at least seven times (lines 8, 42, 51, 123-125, 150, 151). The critics' matching point never appears in their own terms: the draft's weight, and having to present to a two-commissioner panel instead of the full Board (P-076, P-005, P-013).",
+      "severity": "low"
+    },
+    {
+      "issue": "Supporter cards always come first (line 115). The page says the order is not a ranking, but together with the label pattern it gives the supporters' framing the first word. Consider pairing cards by topic (structure: 1 with 3; openness and requests: 2 with 4).",
+      "severity": "low"
+    },
+    {
+      "issue": "Official voice. The adopted measure is called 'the Board's resolution' or 'the Board's own resolution' with no sponsors named (lines 87, 111). Option A's 'Who benefits' (line 87) quotes the sponsors' purpose clause as a benefit without the vote (4 yes, 1 abstain, 1 not voting; P-020). That's accurate, but it gives the supporters institutional weight. Name it as Resolution 26-0460 (Ellis/Abdur-Rahman) every time, as card 1 does.",
+      "severity": "low"
+    },
+    {
+      "issue": "No option in Layer 3 reflects the critics' primary objection (who drafts, and to whom departments present). Only the cap has an option (C). No passage records a formal proposal, so the page should not invent one, but Option A's 'What's uncertain' or the Questions could note that the objection exists (P-076).",
+      "severity": "low"
+    }
+  ],
+  "label_disagreements": [
+    {
+      "argument": "Card 1: The commission adds early input, and the full Board still decides",
+      "label": "Supported on the rules (the county code's text); uncertain on results (the draft isn't out yet)",
+      "proposed": "Supported on the rules (the code's text); disputed in practice (a commissioner's resolution says the commission did not seek all members' priorities before setting the cap, P-029); uncertain on results (the draft isn't out yet)",
+      "why": "'Early input' depends on the P-013 duties being carried out, and a formal Board item says they were not. 'Balanced representation' rests on the resolution's own WHEREAS clause (P-004), which is the claim's source, not separate evidence."
+    },
+    {
+      "argument": "Card 2: The new process is open",
+      "label": "Supported, with limits (the hearings were publicly noticed and several offices' presentations were posted; the 5% instruction was not found)",
+      "proposed": "Supported that the hearings were publicly noticed (P-042); uncertain on 'more transparent and open than anything we've had in recent years' (only a statement; last year's process also held formal budget hearings and listed all extra requests, P-049, P-051; this year's requests are capped and the instruction is not public)",
+      "why": "The page's own rule says a claim resting only on statements is 'Uncertain'. The comparison with earlier years has no county record behind it, and some records cut against it. The current label lets a narrow fact (notices were posted) carry the broader claim in the card's title."
+    },
+    {
+      "argument": "Card 4: The 5% limit keeps the Board from seeing what departments need",
+      "label": "Uncertain (the written limit and the draft are not public yet; one office's posted presentation lists requests far above 5% of its 2026 budget)",
+      "proposed": "Supported on the code's text and last year's practice (the draft 'shall include the budget requests'; last year's proposal listed about $158M and $64M in extra requests, P-005, P-049, P-051), and that at least one office's 2027 requests are about 3.3 times the 5% amount (P-064, P-054); uncertain on whether the Nov 15 draft will leave requests out (the draft and the written limit are not public)",
+      "why": "This matches card 1's split label. Card 4 has the same structure, with rules and practice on record and results waiting on the draft, so it should be labeled the same way."
+    },
+    {
+      "argument": "Card 6: Justice offices need more money",
+      "label": "Uncertain (the offices' own accounts; our sources have no independent workload data)",
+      "proposed": "Supported in part: for the jail, the county's own budget book records the DOJ agreement on 'constitutional violations' including staffing and says 'additional resources will be needed for consent decree compliance', and the Board raised consent decree funding $18,157,000 above last year's proposal (P-048, P-049, P-050, P-054); uncertain for court and prosecutor workloads (the offices' own accounts)",
+      "why": "Under the page's rule, county records backing a claim make it 'Supported', and they do for the jail part. 'No independent workload data' is true, but a federal agreement and the Board's own funding increase do not depend on the offices' accounts."
+    },
+    {
+      "argument": "Card 3: Two commissioners have too much say over the draft",
+      "label": "Supported on who serves (the county's records); whether that is fair is not mainly a factual question",
+      "proposed": "Supported on who serves and how (under rules the two sponsored, no other commissioner could serve for 2027: Ellis was the only eligible northern member and the vice chair is seated automatically, neither by a nominating vote; P-016, P-021, P-009, P-011); whether that is fair is a values question",
+      "why": "A minor refinement. The fact the critics rely on is not just who serves but that the sponsors' rules left no alternative. The rest of the label is fair."
+    }
+  ],
+  "questions_to_weigh": "Mostly neutral, and people on my side would accept them as fair. Three refinements. (1) Q1 ('staff alone, staff with two commissioners, or the whole Board?') is fair but leaves out how commissioner members are chosen, which is the heart of the critics' fairness objection: under the sponsors' rules no one else could serve for 2027 (P-021, P-011, P-072). Add: 'If commissioners take part, how should they be chosen?' Q1 could also cover the critics' primary objection, whether departments present their needs to the full Board or to a panel (P-076). (2) Q2 says 'first requests', which is vague and slightly softens the cap. Suggest: 'Should departments' budget requests be capped, or should the Board see every request in full?' (3) Q3 leaves out the reason given for waiting. Suggest: 'Should the current Board adopt the 2027 budget in December, or wait until January, when incoming members can take part?' (P-070). No one in the sources argued for December, so this adds the requesters' stated reason without inventing an opposing one.",
+  "verdict_summary": "The page is fair in structure and tone. Critics get three of the six cards, and the justice leaders get a fourth on funding. They are named in the 30-second summary and quoted word for word, and their factual claims are backed with county records: the code's 'shall include' text, last year's appendix of about $158M/$64M in extra requests, and the Nov 4 substitute motion that kept Barrett's motion from a vote. The page also admits the process's reasons are thinly documented. But my side is not shown at full strength. (1) The timeline says the justice leaders would 'skip' hearings and leaves out that they sent their requests in writing (P-080). (2) Evidence labels tilt: both supporter cards lead with 'Supported', while cards 4 and 6 get a flat 'Uncertain' although county records back their factual core. (3) Card 4 turns the critics' own complaint ('only ... in narrative form') and the public defender's above-5% requests into rebuttals, with an author-drawn conclusion no supporter made. (4) Card 6 cites P-049 selectively and leaves out the county's consent decree evidence. (5) The strongest policy argument in P-028 (legacy spending, Pew, the -4% to +43% spread) and the primary objection in P-076 (presenting to a two-commissioner panel instead of the full Board) are missing. The labels on card 3 (minor tweak) and card 5 are fair. Being honest, I found nothing that overstates my side, except that Gammage's 'Each year we are underfunded' (line 160) is about funding in general, not the cap, and fits card 6 better. If the page adds the P-028 arguments, it could fairly also note last year's 1% across-the-board cut (P-050), and critics would not object. These are targeted fixes. With them I would rate this 4 to 5."
+}

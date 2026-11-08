@@ -1,12 +1,12 @@
 # Hand-chosen passages for Trial 003 (Fulton County 2027 budget). Build with:
 #   uv run --with pyyaml python3 trials/tools/build_passages.py trials/003-fulton-2027-budget/passages.spec.yaml
 # Derived text files (all in _raw/, made from the hashed snapshots; see sources.yaml `derived`):
-#   S01.txt, S04d.txt, S09b.prefixed.txt  pdfplumber text with 'pN:' line prefixes (scratch script pdf_text.py --prefix),
+#   S01.txt, S04d.txt, S09b.prefixed.txt  pdfplumber text with 'pN:' line prefixes (scripts/pdf_text.py --prefix),
 #                                         so build_passages.py strips page tags and printed line numbers
 #   S01.clean.txt, S04d.clean.txt         trials/tools/pdf_markup.py --clean (struck words dropped); used only for the
 #                                         code sections that carry strike-through/underline markup
-#   S05.txt, S06.txt, S07b.txt, S08b.txt, S09b.txt  pdfplumber text (pdf_text.py, no prefix)
-#   S10b.txt ... S10e.txt                 slide text from the .pptx decks (scratch script pptx_text.py, stdlib only)
+#   S05.txt, S06.txt, S07b.txt, S08b.txt, S09b.txt  pdfplumber text (scripts/pdf_text.py, no prefix)
+#   S10b.txt ... S10e.txt                 slide text from the .pptx decks (scripts/pptx_text.py, stdlib only)
 #   S08.txt, S09.txt, S11.txt, S20.txt, S21.txt, S22.txt  visible text written by trials/tools/snapshot.py
 # JSON and HTML snapshots are read directly.
 title: "Trial 003 (Fulton County 2027 budget)"
@@ -136,7 +136,8 @@ passages:
   - {id: P-045, source: S09, file: S09.txt, locator: "Budget page, introduction and newest documents (captured 2026-11-08)",
      start: "Fulton County operates from a calendar year budget.", end: "FY2026 Fulton County Government Revised Budget Presentation"}
   - {id: P-046, source: S09b, file: S09b.txt, locator: "p.2, introduction",
-     start: "Fulton County’s Fiscal Year 2026 Final Adopted Budget was approved", end: "and amendments approved on January 21, 2026."}
+     start: "Fulton County’s Fiscal Year 2026 Final Adopted Budget was approved", end: "additional memos describing all modifications to that budget.",
+     note: "Widened in revision 2 to include the sentence saying the book reprints the budget message submitted with the FY2026 proposed budget."}
   - {id: P-047, source: S09b, file: S09b.prefixed.txt, locator: "p.4, FY2026 budget resolution, lines 4-11 (signed 2026-01-21)",
      start: "WHEREAS, Fulton County's County Manager submitted a proposed budget", end: "whether greater or less than the sums presented in the proposed budget.",
      fix: [["WHEREAS,Fulton County's Board", "WHEREAS, Fulton County's Board"]],
@@ -149,6 +150,8 @@ passages:
      start: "• Consent Decree: Includes funding of $31.8 million", end: "to determine impact."}
   - {id: P-051, source: S09b, file: S09b.txt, locator: "p.33 (budget message): requests beyond the proposal",
      start: "In addition to the above-mentioned enhancements already considered, there were almost $158", end: "additional resources are realized at the end of 2025."}
+  - {id: P-086, source: S09b, file: S09b.txt, locator: "p.22 (budget message): what the county means by 'base budget'",
+     start: "As part of our FY2026 budget development process, we identified the County’s “Base Budget”.", end: "and other operational spending."}
   - {id: P-052, source: S09b, file: S09b.txt, locator: "p.76, adopted budget by fund (in millions)",
      start: "FY2026 Adopted Budget by Fund and Year", end: "Grand Total $ 1,379.9 $ 1,431.1 $ 1,441.3",
      note: "Some figures carry stray spaces from the PDF's column layout (for example '7 .9' for 7.9); not corrected because the page cites only the General Fund and grand-total figures."}
@@ -181,6 +184,8 @@ passages:
      start: "2027 ENHANCEMENT PRIORITIZATION", end: "BAR FEES: Annual Bar fees for additional attorney staff $6,216 6"}
   - {id: P-065, source: S10e, file: S10e.txt, locator: "Probate Court deck, slide 1 (2026 challenges)",
      start: "CHALLENGES 1. Prolonged Case Processing Time", end: "technology, security, and efficiency improvements."}
+  - {id: P-087, source: S10e, file: S10e.txt, locator: "Probate Court deck, slide 2 (2026 achievements: outreach)",
+     start: "Participated in more than 20 community events", end: "and other essential Court services."}
   - {id: P-066, source: S10e, file: S10e.txt, locator: "Probate Court deck, slide 4 (2027 requests, ranked)",
      start: "2027 ENHANCEMENT PRIORITIZATION", end: "1 Associate Judge 2"}
   # --- S11: Clerk to the Commission page ------------------------------------------------------------------------

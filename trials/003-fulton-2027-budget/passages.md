@@ -166,7 +166,9 @@ span of a hashed snapshot listed in [sources.yaml](sources.yaml), or of a text f
 > Fulton County operates from a calendar year budget. Budgets are adopted annually for the General Fund and other specialty funds. Adopted budget documents are provided below. Budget Performance Reporting Strategic Plan 2026 FY 2026 Fulton County Adopted Budget FY2026 Fulton County Proposed Budget FY2026 Fulton County Government Revised Proposed Budget FY2026 Fulton County Government Revised Budget Presentation
 
 ### P-046 · S09b · p.2, introduction
-> Fulton County’s Fiscal Year 2026 Final Adopted Budget was approved by the Board of Commissioners on January 21, 2026. This budget includes all recommendations outlined in the Fiscal Year 2026 Proposed Budget provided on November 15, 2025, presented on November 19, 2025, and amendments approved on January 21, 2026.
+> Fulton County’s Fiscal Year 2026 Final Adopted Budget was approved by the Board of Commissioners on January 21, 2026. This budget includes all recommendations outlined in the Fiscal Year 2026 Proposed Budget provided on November 15, 2025, presented on November 19, 2025, and amendments approved on January 21, 2026. In this booklet, you will find the budget message submitted to the Board as part of the Fiscal Year 2026 Proposed Budget, and additional memos describing all modifications to that budget.
+
+*Note: Widened in revision 2 to include the sentence saying the book reprints the budget message submitted with the FY2026 proposed budget.*
 
 ### P-047 · S09b · p.4, FY2026 budget resolution, lines 4-11 (signed 2026-01-21)
 > WHEREAS, Fulton County's County Manager submitted a proposed budget to the Board of Commissioners on November 15th, 2025, as required under the County's Budget Ordinance, and WHEREAS, Fulton County's Board of Commissioners held a public hearing, as required by O.C.G.A. § 36-81-5, at a meeting on December 3, 2025, and WHEREAS, O.C.G.A. § 36-81-6 requires that on a date after the conclusion of the hearing, the governing authority adopt a budget ordinance or resolution making appropriations in such sums as the governing authority may deem sufficient, whether greater or less than the sums presented in the proposed budget.
@@ -184,6 +186,9 @@ span of a hashed snapshot listed in [sources.yaml](sources.yaml), or of a text f
 
 ### P-051 · S09b · p.33 (budget message): requests beyond the proposal
 > In addition to the above-mentioned enhancements already considered, there were almost $158 million in unique personnel/operating requests and over $64 million in capital requests received from departments, agencies and external stakeholders during the FY2026 budget process. The requests were separately reviewed and categorized into tranches for funding consideration if additional resources are realized at the end of 2025.
+
+### P-086 · S09b · p.22 (budget message): what the county means by 'base budget'
+> As part of our FY2026 budget development process, we identified the County’s “Base Budget”. This represents the current funding needed to address historical spending patterns including personnel expenditures (filled and vacant) and other operational spending.
 
 ### P-052 · S09b · p.76, adopted budget by fund (in millions)
 > FY2026 Adopted Budget by Fund and Year in millions $ FY2024 FY2025 FY2026 Fund Name Amended Amended Adopted Budget Budget Budget General Fund $ 954.1 $ 989.8 $ 1,057.1 Airport Fund 7.8 7 .9 8.0 Water Revenue Fund 164.1 1 71.0 181.4 Water Renewal Fund 105.5 9 9.0 19.1 FID Fund 28.3 3 1.1 30.3 Animal Services Fund 12.4 1 2.8 13.2 911 Emergency Fund 8.9 9 .3 9.6 Bond Fund Library 16.6 1 6.6 15.6 Risk Fund 60.0 7 0.1 83.2 Special Appropriation 22.2 2 3.7 23.9 Grand Total $ 1,379.9 $ 1,431.1 $ 1,441.3
@@ -232,6 +237,9 @@ span of a hashed snapshot listed in [sources.yaml](sources.yaml), or of a text f
 
 ### P-065 · S10e · Probate Court deck, slide 1 (2026 challenges)
 > CHALLENGES 1. Prolonged Case Processing Time Insufficient staffing and rising caseloads cause backlogs and delays in critical probate services. 2. Extended Wait Times for Hearings Limited staffing and judicial resources delay case preparation, hearings, and time-sensitive probate matters. 3. Growing Workload Without Corresponding Staffing Growth Growing caseloads and complexity without added staffing increases workloads, burnout, and retention challenges. 4. Limited Capacity to Maintain and Expand Public Access Budget constraints limit accessible services, technology, security, and efficiency improvements.
+
+### P-087 · S10e · Probate Court deck, slide 2 (2026 achievements: outreach)
+> Participated in more than 20 community events, bringing Probate Court information and resources directly into Fulton County communities and increasing public awareness of estates, guardianships, marriage licenses, weapons carry licenses, and other essential Court services.
 
 ### P-066 · S10e · Probate Court deck, slide 4 (2027 requests, ranked)
 > 2027 ENHANCEMENT PRIORITIZATION Request Ranking 6 Court Operations Specialists (Clerks) 1 1 Associate Judge 2
