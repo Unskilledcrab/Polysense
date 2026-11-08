@@ -24,12 +24,15 @@ from __future__ import annotations
 import re
 import sys
 import unicodedata
+from decimal import ROUND_HALF_UP, Decimal, InvalidOperation
 from pathlib import Path
 
 MARKER = re.compile(r"\[(P-\d{3}(?:\s*,\s*P-\d{3})*)\]|\{(analysis|editorial)(?::[^}]*)?\}|\{computed:[^}]*\}")
 PASSAGE_HEAD = re.compile(r"^###\s+(P-\d{3})\b")
 QUOTE = re.compile(r"[\"“]([^\"”]{3,})[\"”]")
-NUMBER = re.compile(r"(?<![\w-])\$?\d[\d,]*(?:\.\d+)?%?")
+NUMBER = re.compile(r"(?<![\w-])\$?\d[\d,]*(?:\.\d+)?(?:-\d+)*%?")
+LABELED = re.compile(r"\b(?:layer|option|question|card|step)\s+$", re.I)   # our own labels, not facts
+SCALE = {"thousand": 3, "million": 6, "billion": 9}
 # Words that signal loaded framing when used outside a verbatim quote (style guide §5).
 LOADED = [
     "radical", "extreme", "common-sense", "common sense", "giveaway", "attack on", "slash",
@@ -51,6 +54,32 @@ NUMBER_WORDS = {
 def with_numerals(text: str) -> str:
     """Add digit forms of number words so 'grade twelve' also matches '12'."""
     return text + " " + " ".join(NUMBER_WORDS[w] for w in re.findall(r"[a-z]+", text) if w in NUMBER_WORDS)
+
+
+def number_found(bare: str, scale: str, flat: str, nums: list[Decimal]) -> bool:
+    """Is a number from the sentence in the cited passages?
+
+    Whole numbers only, so "4" does not pass because "2024" is in the passage (Trial 003 found the old
+    substring match let that through). "05" in 05/05/2026 equals "5". A rounded figure with 2 or more
+    significant digits passes ("$1.48" for 1.48058; "$220 million" for $220,454,272); a 1-digit figure
+    must match exactly. An identifier or range such as 26-0729 must appear whole, or each part must.
+    """
+    if "-" in bare:
+        return bare in flat or all(number_found(p, "", flat, nums) for p in bare.split("-") if p)
+    claim = Decimal(bare)
+    if claim in nums:
+        return True
+    if len(claim.as_tuple().digits) < 2:
+        return False
+    places = Decimal(1).scaleb(claim.as_tuple().exponent)
+    for n in nums:
+        for shift in {0, SCALE.get(scale, 0)}:
+            try:
+                if n.scaleb(-shift).quantize(places, ROUND_HALF_UP) == claim:
+                    return True
+            except InvalidOperation:
+                continue
+    return False
 
 
 def norm(text: str) -> str:
@@ -125,11 +154,15 @@ def main(workspace: Path, passages_path: Path) -> int:
                     # every word must still match the passage exactly.
                     if norm(q).rstrip(".,") not in cited:
                         errors.append(f"L{no}: quote not verbatim in {ids}: \"{q[:60]}\"")
-                cited_nums = with_numerals(cited).replace(",", "")
-                for n in NUMBER.findall(chunk):
-                    bare = n.replace("$", "").replace(",", "").rstrip("%")
-                    if bare not in cited_nums:
-                        warnings.append(f"L{no}: number {n} not found in {ids} (tag {{computed}} if derived)")
+                flat = with_numerals(cited).replace(",", "")
+                nums = [Decimal(t) for t in re.findall(r"\d+(?:\.\d+)?", flat)]
+                for n in NUMBER.finditer(chunk):
+                    if LABELED.search(chunk[:n.start()]):
+                        continue                                  # the page's own label: "Option 1", "Layer 2"
+                    scale = re.match(r"\s*(thousand|million|billion)\b", chunk[n.end():], re.I)
+                    bare = n.group(0).replace("$", "").replace(",", "").rstrip("%")
+                    if not number_found(bare, scale.group(1).lower() if scale else "", flat, nums):
+                        warnings.append(f"L{no}: number {n.group(0)} not found in {ids} (tag {{computed}} if derived)")
             else:
                 kind = m.group(2) or "computed"
                 stats[kind] += 1

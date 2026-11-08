@@ -9,9 +9,9 @@ tool does one mechanical job. Judgment stays with the runbook and the verificati
 | `snapshot.py TRIAL ID URL` | Fetch a source; save exact bytes, headers and visible text in `_raw/`; print the sha256 and `sources.yaml` fields | httpx, beautifulsoup4 |
 | `pdf_markup.py BILL.pdf [--only-marked\|--clean\|--old]` | Recover strike-through (deleted) and underlined (inserted) words in Georgia bill PDFs; output the markup, the as-enacted text, or the prior law | pdfplumber |
 | `build_passages.py SPEC.yaml` | Copy hand-chosen spans exactly from snapshot text into `passages.md` (fixes and redactions must carry a note) | PyYAML |
-| `check_citations.py PAGE PASSAGES` | Every sentence cited or tagged; passage IDs exist; quotes verbatim; numbers found in cited passages; loaded words outside quotes | stdlib |
+| `check_citations.py PAGE PASSAGES` | Every sentence cited or tagged; passage IDs exist; quotes verbatim; each number found as a whole number in the cited passages (rounding allowed for 2+ significant digits); loaded words and party labels outside quotes | stdlib |
 | `verify_hashes.py SOURCES.yaml [--print]` | Every retrieved file in `_raw/` matches its recorded SHA-256 | PyYAML |
-| `readability.py PAGE` | Flesch–Kincaid grade per section; flags the 30-second version and Layers 1–3 above 8.5 | stdlib |
+| `readability.py PAGE` | Flesch–Kincaid grade per section; flags the 30-second version and Layers 1–3 above 8.5. Card labels and other `<!-- nocheck -->` lines aren't scored; it reports the longest card label instead | stdlib |
 | `check_verifier.py REPORT PASSAGES [KEY]` | Machine-check an independent verifier's evidence spans; list flags; score its catch rate against planted errors | stdlib |
 | `render_prototype.py TEMPLATE OUT TRIAL [TRIAL ...]` | Build the self-contained, clickable prototype from one or more trials. Each trial needs a `page.yaml` (slug, title, header chips, short source labels, optional bill-markup view) | PyYAML |
 
@@ -50,3 +50,19 @@ Run Python tools with `uv run --with <deps> python3 trials/tools/<tool>.py …`.
 - `verify_hashes.py` caught a deliberate hash mismatch.
 - `readability.py` scored plain text at grade 3.9 and dense legalese at 32.4.
 - `pdf_markup.py`'s strike and underline detection was checked against rendered images of bill pages 2–3.
+
+## Fixes from Trials 002 and 003 (2026-11-08)
+
+- **Numbers:** `check_citations.py` matched numbers as substrings, so "4" passed because "2024" was in the
+  passage. It now needs a whole number. "05" in a date equals "5". A rounded figure with 2 or more
+  significant digits passes ("$1.48" for 1.4806, "$220 million" for $220,454,272). An identifier such as
+  26-0729 must appear whole. The page's own labels ("Option 1", "Layer 2") are skipped. On a fixture with
+  6 planted wrong numbers it warned on all 6, but only 5 when the passage also held a date with "05": a
+  1-digit number can still match by coincidence, so the source check stays the real test. On the three
+  trials it found 4 real gaps (Trial 003 names Resolution 26-0729 while citing only the resolution's text,
+  which doesn't carry the number) and no false alarms.
+- **Card labels:** `render_prototype.py` split a card's meta line on "·", so an evidence label that used
+  "·" lost everything after it without warning. Evidence is now read whole, and an unknown field stops
+  the build.
+- **Reading grade:** `readability.py` scored card labels as prose. They are now left out, which changed
+  only the untargeted Layer 4 and 5 grades, and the longest label is reported.

@@ -61,15 +61,22 @@ def parse_block(line: str) -> dict:
 
 
 def parse_card_meta(line: str) -> dict:
-    parts = [p.strip() for p in line.replace("<!-- nocheck -->", "").split("·")]
+    # "Documented · Side: … · Claim type: … · Evidence: …". Evidence is the last field and is kept
+    # whole, even if it contains "·" (Trial 003 found labels silently cut at the first "·").
+    text = line.replace("<!-- nocheck -->", "").strip()
+    head, *evidence = re.split(r"(?i)\bEvidence:", text, maxsplit=1)
+    parts = [p.strip() for p in head.split("·") if p.strip()]
     meta = {"kind": "Anticipated" if parts and parts[0].startswith("Anticipated") else "Documented"}
     for p in parts:
-        if p.lower().startswith("side:"):
-            meta["side"] = p.split(":", 1)[1].strip()
-        if p.lower().startswith("claim type:"):
-            meta["claimType"] = p.split(":", 1)[1].strip()
-        if p.lower().startswith("evidence:"):
-            meta["evidence"] = p.split(":", 1)[1].strip()
+        key, _, value = p.partition(":")
+        if key.strip().lower() == "side":
+            meta["side"] = value.strip()
+        elif key.strip().lower() == "claim type":
+            meta["claimType"] = value.strip()
+        elif p not in ("Documented", "Anticipated"):
+            sys.exit(f"card meta line has an unknown field {p!r}: {line}")
+    if evidence:
+        meta["evidence"] = evidence[0].strip()
     return meta
 
 

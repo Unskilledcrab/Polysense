@@ -52,6 +52,9 @@ def sections(text: str):
 
 
 def clean(md: str) -> str:
+    # Lines marked <!-- nocheck --> are metadata such as a card's evidence label: short fragments that
+    # inflate the grade if scored as prose (Trial 003). Their length is reported separately in main().
+    md = "\n".join(line for line in md.splitlines() if not line.rstrip().endswith("<!-- nocheck -->"))
     md = MARKER.sub("", md)
     md = re.sub(r"<!--.*?-->", "", md, flags=re.S)
     lines = []
@@ -79,6 +82,12 @@ def main(path: Path) -> int:
             over += flag == "OVER"
         print(f"{title[:45]:45} {words:>6} {grade:>9.1f}  {flag}")
     print(f"Sections over target: {over}")
+    labels = [(no, len(MARKER.sub("", re.sub(r"<!--.*?-->", "", line)).split()))
+              for no, line in enumerate(path.read_text(encoding="utf-8").splitlines(), 1)
+              if line.rstrip().endswith("<!-- nocheck -->") and "Evidence:" in line]
+    if labels:
+        no, longest = max(labels, key=lambda x: x[1])
+        print(f"Card labels (not scored): {len(labels)}; longest {longest} words (L{no})")
     return 0
 
 
