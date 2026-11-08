@@ -483,18 +483,31 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
     L.appendChild(box);
 
     var s = sectionById("overview"), S = subs(s);
-    var act = el("div", { class: "sub", id: "act" }, [el("h2", { text: "What you can do" })]);
-    S["What you can do"].blocks.forEach(function (b) {
-      act.appendChild(el("div", { class: "card item" }, [el("div", { class: "chips" }, [el("span", { class: "power " + b.label.toLowerCase(), text: b.label })]), el("p", null, [units(b.units)])]));
+    // Actions first, then what's coming, then any other parts (such as "Who decides"), then what happened.
+    var order = ["What you can do", "Coming up"];
+    s.subs.forEach(function (x) { if (order.indexOf(x.title) < 0 && x.title !== "What happened") order.push(x.title); });
+    if (S["What happened"]) order.push("What happened");
+    order.forEach(function (title) {
+      var sub = S[title]; if (!sub) return;
+      var box = el("div", { class: "sub" }, [el("h2", { text: sub.title })]);
+      if (title === "What you can do") {
+        box.id = "act";
+        sub.blocks.forEach(function (b) {
+          var power = b.label && /^(decide|input|observe)$/i.test(b.label) ? b.label : null;
+          box.appendChild(el("div", { class: "card item" }, [power ? el("div", { class: "chips" }, [el("span", { class: "power " + power.toLowerCase(), text: power })]) : null,
+            el("p", null, [b.label && !power ? el("span", { class: "label", text: b.label + ": " }) : null, units(b.units)])]));
+        });
+      } else if (title === "What happened") {
+        var ul = el("ul", { class: "timeline" });
+        sub.blocks.forEach(function (b) {
+          var li = el("li"); if (b.label) li.appendChild(el("span", { class: "when", text: b.label })); li.appendChild(units(b.units)); ul.appendChild(li);
+        });
+        box.appendChild(ul);
+      } else {
+        box.appendChild(renderBlocks(sub.blocks));
+      }
+      L.appendChild(box);
     });
-    L.appendChild(act);
-    L.appendChild(el("div", { class: "sub" }, [el("h2", { text: "Coming up" }), renderBlocks(S["Coming up"].blocks)]));
-    var t = el("div", { class: "sub" }, [el("h2", { text: "What happened" })]);
-    var ul = el("ul", { class: "timeline" });
-    S["What happened"].blocks.forEach(function (b) {
-      var li = el("li"); li.appendChild(el("span", { class: "when", text: b.label })); li.appendChild(units(b.units)); ul.appendChild(li);
-    });
-    t.appendChild(ul); L.appendChild(t);
     return L;
   }
 

@@ -6,7 +6,7 @@ title: "Fulton County's 2027 budget"
 link_text: "Fulton County 2027 budget"
 status:                            # chips under the title
   - {text: "Draft due by Nov 15, 2026"}
-  - {text: "Vote due by Jan 20, 2027"}
+  - {text: "Vote due by the 2nd January meeting"}
 option_chips:                      # one chip per option, matched by the start of the option's heading
   "Option A": {text: "In force until adopted"}
   "Option B": {text: "Board may change it"}

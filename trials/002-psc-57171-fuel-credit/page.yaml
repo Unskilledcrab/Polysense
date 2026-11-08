@@ -6,7 +6,7 @@ title: "Big customers' payments and your fuel charge"
 link_text: "PSC 57171: real-time payments and fuel costs"
 status:                            # chips under the title
   - {text: "Open case · Public Service Commission"}
-  - {text: "Decision scheduled Dec 15, 2026", kind: law}
+  - {text: "Decision scheduled Dec 15, 2026"}
 option_chips:                      # one chip per option, matched by the start of the option's heading; all unstyled on purpose
   "Option A": {text: "Today's method"}
   "Option B": {text: "Georgia Power's plan"}
