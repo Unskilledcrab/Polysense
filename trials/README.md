@@ -7,7 +7,7 @@ owner reviews it. Reviewed trials become the **gold data** that automation must 
 
 | Trial | Process | Subject | Status |
 |---|---|---|---|
-| [001](001-hb1009-high-school-cellphones/) | A. Bill workspace (#1) | HB 1009 (2026), high school "bell-to-bell" personal device ban | Steps 0–5 done. Planted-error catch rate 13/13. Bias panel failed in rounds 1 and 2, with a revision after each; round 3 in progress. Prototype in [prototypes/hb1009/](../prototypes/hb1009/) |
+| [001](001-hb1009-high-school-cellphones/) | A. Bill workspace (#1) | HB 1009 (2026), high school "bell-to-bell" personal device ban | Steps 0–5 done. Planted-error catch rate 13/13. Bias panel failed in rounds 1 and 2; both advocates passed in round 3. Revision 4 in round-4 verification. Prototype in [prototypes/hb1009/](../prototypes/hb1009/) |
 
 ## Folder layout
 

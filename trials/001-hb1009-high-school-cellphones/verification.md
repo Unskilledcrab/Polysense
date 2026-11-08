@@ -79,6 +79,56 @@ argued with supporters more than with critics.
 Revision 3 also brought Layer 2's reading grade back down to 7.6 after these additions had raised it to
 9.3.
 
-## Round 3 (revision 3, current `workspace.md`)
+## Round 3 (revision 3, `verification/round3/workspace.r3.md`)
 
-*Pending: fresh blind source check, supporter's advocate, critic's advocate and standards editor.*
+| Layer | Check | Result |
+|---|---|---|
+| 1 | Deterministic gate | **Pass.** 154 units (107 cited, 31 analysis, 14 editorial, 2 computed), 0 errors, 0 warnings. Reading grade: 30-second 8.1, L1 5.6, L2 7.6, L3 7.3 |
+| 2 | Blind source check (fresh agent) | **100 supports, 7 partial, 0 does not support, 0 wrong span.** 8 tags questionable, 0 invalid; 14 framing issues (3 medium, 11 low). **154/154 evidence spans grounded**. All numbers, dates, vote counts and quotes correct |
+| 3 | Bias panel | **Advocates pass; 2 high-severity editor issues.** Supporter's advocate 4/5. Critic's advocate 4/5. Standards editor: neutrality 4/5, clarity 4/5 (24 issues: 2 high, 8 medium, 14 low; 15 flip-test asymmetries) |
+| 4 | Calibration | Carried over from round 1 (same verifier prompt and method) |
+
+Both advocates reached the pass mark for the first time. The round still can't count as a pass: the editor
+found two high-severity problems, and the source check left flags to resolve. Revision 4 fixes them, and
+round 4 re-checks it with the whole panel (protocol layer 5).
+
+### What round 3 found, and what we did
+
+S = supporter's advocate, C = critic's advocate, E = standards editor, SC = blind source check.
+
+| # | Finding (who raised it) | Disposition in revision 4 |
+|---|---|---|
+| 1 | **High.** The Florida study's findings were worded unevenly: "significant" and "led to" for the rise in suspensions, plain "rose" and "fell" for the gains (S, E) | **Fixed.** One wording rule for all three findings: "led to" for test scores and suspensions (the study was designed to estimate causal effects), the authors' own "suggest" for absences, and "significant" dropped everywhere, because readers hear it as "large" |
+| 2 | **High.** "Districts can add" the guaranteed phone access an expert described, though the ban has no emergency exception (E, SC) | **Fixed.** Districts can add faster parent alerts, but they can't allow students' own phones in an emergency unless a plan or another law requires it |
+| 3 | The 13-senator amendment vote appeared without the final votes, its grades 9–12 limit or the 20 House "no" votes; the voice count left out the student (S, C, E, SC) | **Fixed.** The intro gives 145–20 and 52–0, says the amendment covered high school students and that no senator voted against the final bill, and counts the student who testified |
+| 4 | Option B's benefits quoted officials while its costs had no opposing voice (C, E) | **Fixed.** Officials' quotes left Option B. Both lists now use the same kinds of evidence: the Florida study, the law's text, and each side's parents (87.7%, 71.2%, 69.1% and 60.3% expected benefits; 74.8% feared losing emergency contact) |
+| 5 | Option A used the Florida study only for the gains a ban might bring; its first "Who pays" item read like a benefit; a supporter's quote was cut to back the status quo (C, S) | **Fixed.** Option A now lists avoiding the short-term rise in suspensions as a benefit, names the distraction cost the law describes, and quotes Sen. Harrell in full |
+| 6 | The missing fiscal note under "Who pays" implied a cost no source estimated; "no money" lacked budget context (S, SC) | **Fixed.** The fiscal note moved to "What's uncertain", with the storage choices that drive cost. "Sets aside no money" stays under "Who pays" and in card 5, now noting that state funding would come through the budget, which we didn't review |
+| 7 | Card 5's label: split it like card 4 (S); add the lack of funding and the disparity for Black students (C) | **Fixed.** "Supported on new duties and early suspensions (the law's text; one Florida working paper); uncertain on staff workload (not measured)". The funding and "especially among Black students" points are in the card |
+| 8 | Woods's report of teachers' support had no caveat, while Adams's lockdown account did (C, E, SC) | **Fixed.** Card 5 says no source surveyed teachers, so neither Woods's account nor Adams's concern has been measured. The statement left Option B |
+| 9 | Card 6 recast critics as a claim about maturity, buried parental choice, and left the health and schoolwork reasons unanswered; "many parents" had no denominator (C, S, E, SC) | **Fixed.** Retitled in the documented speaker's terms ("should be allowed to keep phone access"). The summary names the 45.5% parental-choice reason. "What challenges it" adds the plan exception and school-provided laptops. "Who disagrees" adds the 70.8% majority |
+| 10 | Add the 13 senators to card 6 as speakers (C) | **Not adopted.** No source gives their reasons. Crediting them with an argument would break the anticipated-argument rule (the round-2 editor's finding) |
+| 11 | Relabel card 2 "Not supported so far" and card 3 "Unverified" (C) | **Not adopted.** In our vocabulary, "Uncertain" means little evidence yet, with the reason stated; "Mixed" is the label for evidence pointing both ways. The labeling rule is now printed above the cards, and card 3's label says "statements only" |
+| 12 | The English researchers' policy conclusion was cut (C) | **Fixed.** Their second sentence is quoted in full |
+| 13 | "Didn't measure test scores" and "didn't measure friendships" rested on a summary's partial outcome list (SC) | **Fixed.** The page now says the summary reports no such results and that we didn't read the full paper. That point moved from "What challenges it" to "What's missing" |
+| 14 | Card 1: "only" wasn't in the source, and its first-year finding sat under "What's missing" while card 5 filed the matching point as a challenge (S, E, SC) | **Fixed.** No "only"; the first-year finding is now under "What challenges it" |
+| 15 | The Florida summary never says what the bans covered; "larger effects in middle and high schools" may apply to every effect, including suspensions (C, E, SC) | **Fixed.** Added P-067 and P-068 so the whole abstract is archived. The study notes say the summary doesn't describe the bans' scope or which effects were larger. The ambiguous finding left the benefit and rebuttal fields |
+| 16 | Each study got uneven caveats: no strengths for the English study, no design note for the Florida one (E, SC) | **Fixed.** English: 1,227 students, 30 schools, a standard well-being questionnaire. Florida: "quasi-experimental", explained in plain words |
+| 17 | Side labels ("supports" vs. "concerned about"); titles named the policy differently and hedged only the critics' prediction (E) | **Fixed.** "Supports the law" and "Opposes the law". Every title says "the ban", and predictions use "will". Card 5 keeps Adams's own "can" for conflict |
+| 18 | "Worries" was the only emotional verb in an "In short" line, and Adams's wording was softened (E, C, S) | **Fixed.** "Said", and the reporter's own words: "put the burden on teachers and administrators to police phones, a task that can invite conflict" |
+| 19 | Supporters' survey reasons rebutted a concern (60.3% "physical health and safety" vs. emergency contact) (C, E, SC) | **Fixed.** Removed from card 4; it stays among Option B's expected benefits. Survey reasons are no longer used as rebuttals on either side |
+| 20 | Card 4 framed uncertainty only around the law's alert systems, and listed the law's own requirement as a challenge (S, SC) | **Fixed.** The label and "What's uncertain" now cover both school alerts and students' own phones; the requirement left "What challenges it" |
+| 21 | Supporter points the passages support: the law's review-and-adjust duty, the authors' "initial adjustment period" reading, the social and mental-health expectations (S) | **Fixed.** Card 5 and Option B carry them |
+| 22 | The labeling rule was never shown (E) | **Fixed.** A collapsed "How to read these cards" section above the cards gives the rule, the card order and the study notes |
+| 23 | Accuracy details: "exempt", "hold or wear" without the law's purpose clause, "replaces" (it expands), "he" for a senator whose gender no passage gives, "is unknown" and "no source" without "we reviewed", "short breaks", a definition called a goal, the K-8 deadline's tense, "must now also cover" for programs only newly named (SC, E, C) | **Fixed.** Each is now worded as its passage supports |
+| 24 | Plain language: undefined "dual enrollment", "amendment" and "margin of error"; jargon in visible tags; long sentences in Layer 4; subgroup precision misstated (E, SC) | **Fixed.** Defined in place; Layer 4 sentences split. Margins of error are given separately for each group |
+| 25 | Supporters' cards always come first (C, E) | **Kept**, with the ordering rule stated: the order is not a ranking |
+| 26 | Card 2's summary states its null result while critics' summaries carry no rebuttals; the result repeats four times (S) | **Kept.** Every "In short" line gives the claim's evidence status (card 4: no safety data; card 5: workload not measured). For card 2, that status is the null study |
+| 27 | Less in-school phone time isn't evidence for better mental health (C) | **Kept.** It is the first step the claim relies on; the null well-being result sits right below it |
+| 28 | Researchers are listed as voices only when their study cuts against the law (E) | **Kept.** The English authors made an explicit policy statement (P-043). The Florida summary makes none (P-067, P-038 to P-040), so there is no matching statement to list |
+| 29 | Every concern is raised by one ordinary person and answered by officials (E) | **Kept for this trial, and disclosed** on the page. The runbook (v0.3) now has the drafter count voices per side before drafting and search for more on the thin side |
+| 30 | The law's purpose is missing from card 1 and the 30-second version (S) | **Kept.** The law's own text isn't a side's speaker; Layer 2 states it |
+
+## Round 4 (revision 4, current `workspace.md`)
+
+*Running: fresh blind source check, supporter's advocate, critic's advocate and standards editor.*

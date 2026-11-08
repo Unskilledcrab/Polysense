@@ -1,0 +1,292 @@
+{
+  "role": "standards-editor",
+  "rating_neutrality": 4,
+  "rating_clarity": 4,
+  "issues": [
+    {
+      "line": 146,
+      "text": "The law doesn't require the rapid notification or guaranteed phone access Gazmararian described, though districts can add them because the law sets minimum rules.",
+      "rule": 8,
+      "problem": "P-008's 'at a minimum' lets districts add procedures, but the same list requires policies to 'prohibit bell-to-bell access ... subject to exceptions provided for by law' (P-008). P-007 bars student access except as the Code section or other law provides, and P-011 routes 'all emergency communication' through school systems. Nothing cited lets a district guarantee students access to their own phones in an emergency, and the sentence contradicts the page's own line 143 ('no emergency exception for students' own devices'). It overstates what districts can do on the concern most opposing parents named (74.8%).",
+      "fix": "Split the two ideas: 'The law doesn't require the rapid parent alerts Gazmararian described; districts can add them, because the law sets minimum rules. {analysis: P-008 \"at a minimum\"} Guaranteed access to students' own phones would have to fit inside the ban, which has no emergency exception. {analysis: P-007, P-008(c)(1), P-011, P-013}' If 'phones' could mean school phones, say so only as a labeled possibility (P-017, P-058).",
+      "severity": "high"
+    },
+    {
+      "line": 82,
+      "text": "In Florida, enforcing phone bans led to a significant short-term rise in suspensions, especially among Black students",
+      "rule": 3,
+      "problem": "The one Florida paper reports all three results as statistically significant and causal: 'significant improvements in student test scores' and bans 'significantly reduce student unexcused absences' (P-040), and 'a significant increase in student suspensions' (P-039). The page keeps 'significant' and causal 'led to' only for suspensions (lines 82, 155; 'led to' also lines 151, 153). The gains get plain 'rose' and 'fell' (lines 81, 105, 107). Lay readers hear 'significant' as 'large', so the cost sounds bigger and surer than the benefit, though both come from the same study and the same method.",
+      "fix": "Use the same wording for all three findings. Either drop 'significant' everywhere ('In Florida, phone bans led to more suspensions in the first year...' / 'led to higher test scores in the second year and fewer unexcused absences'), or keep it everywhere and define it once at line 97 ('significant here means unlikely to be chance, not necessarily large').",
+      "severity": "high"
+    },
+    {
+      "line": 103,
+      "text": "Evidence: Supported, with limits (one Florida working paper; gains in year two, possibly through better attendance)",
+      "rule": 2,
+      "problem": "The labels look applied by one rule (law text or a cause-and-effect study = Supported; statements or link-only studies = Uncertain), but the rubric is never shown, so readers can't check it. 'Uncertain' also lumps a claim with no measurements at all (card 3) together with one where the only measured study found no evidence of benefit (card 2). Card 2's label says the study 'found no well-being difference' (line 115), which is stronger than the source's 'no evidence of a difference' (P-042). Card 3's 'reports only' (lines 127, 129) makes plain statements sound like reports.",
+      "fix": "Add a one-line key above card 1, e.g. 'Supported: the law's text or a study built to show cause and effect backs it. Uncertain: only statements, or studies that show links but not causes. Values: mainly not a factual question.' Under Uncertain, say which kind applies. Card 2: '(the one study found no evidence of a well-being difference; it couldn't test cause and effect)'. Card 3: '(statements only; no measured results)'.",
+      "severity": "medium"
+    },
+    {
+      "line": 110,
+      "text": "The gains came only in the second year, after a first year with more suspensions.",
+      "rule": 1,
+      "problem": "This finding cuts against card 1's claim, yet it is filed under 'What's missing', while 'What challenges it' (line 109) says 'We found no evidence against this claim.' Card 5 files the matching Florida point (suspensions faded) under 'What challenges it' (line 157). Also, 'only' goes beyond P-040, which reports gains in year two but doesn't say there were none in year one.",
+      "fix": "Move it to card 1's 'What challenges it': 'In Florida, the test-score gains showed up in the second year, after a first year in which suspensions rose. [P-039, P-040]' Drop 'only'. Keep 'What's missing' for gaps in the evidence (see the line 107 issue).",
+      "severity": "medium"
+    },
+    {
+      "line": 107,
+      "text": "In Florida, test scores rose in the second year of school phone bans",
+      "rule": 8,
+      "problem": "The Florida summary (P-038 to P-040) never says what the bans covered: class time only, or bell to bell like Georgia's. The page still applies the results to Georgia's all-day rule in cards 1 and 6 and in Options A and B ('If Florida's results apply here', line 74). The English study's policy type is spelled out as a limit (line 97); Florida's is not mentioned. Option C's open question (phones between classes) turns on exactly this point.",
+      "fix": "Add to card 1 'What's missing': 'The study summary doesn't say whether Florida's bans covered the whole school day, like Georgia's, or only class time. {analysis: not described in P-038 to P-040}' Add the same caveat where line 97 describes the Florida study.",
+      "severity": "medium"
+    },
+    {
+      "line": 153,
+      "text": "Teacher Darryl Adams worries enforcement will burden staff and cause confrontations",
+      "rule": 3,
+      "problem": "Every other In-short uses neutral verbs ('say', 'expect', 'point to'). Only the critic 'worries', which makes his argument sound like a feeling. 'Cause confrontations' is also stronger than his reported claim that policing phones is a task that 'can invite conflict' (P-047). Line 154's 'said he worries' is fine, because it reports the source accurately.",
+      "fix": "'Teacher Darryl Adams says enforcement will burden staff and can lead to conflict; in Florida, phone bans led to more suspensions at first. No source measured staff workload.'",
+      "severity": "medium"
+    },
+    {
+      "line": 167,
+      "text": "Among parents who oppose a ban, 26.6% said phones are needed for health tools or apps and 19.8% said they're needed for schoolwork.",
+      "rule": 1,
+      "problem": "Neither reason supports card 6's claim that high schoolers are old enough to manage their own phones; both are separate reasons for opposing the ban. The card's real case (age, independence, learning responsible use) has no support line. The health and schoolwork concerns also go unanswered: the page doesn't note that the law covers plans that require a device (P-013) and lets schools supply laptops and tablets (P-017).",
+      "fix": "Replace with an honest support line, e.g. 'Those who hold this view point to students' age and independence; no source we reviewed tested whether teens manage phones well on their own. [P-048] {analysis}'. Move the 26.6% and 19.8% figures to Option B 'Who pays', or to a new documented card ('Some students need phones for health tools or schoolwork') whose challenges cite P-013 and P-017.",
+      "severity": "medium"
+    },
+    {
+      "line": 156,
+      "text": "Woods told lawmakers he had heard nothing but support from teachers across Georgia.",
+      "rule": 8,
+      "problem": "This sweeping claim about teachers is used as a rebuttal here and as a benefit in Option B (line 81), with no caveat. Adams's single account gets one (line 146: 'one family's experience...'), and the page's own sources include a teacher who raised concerns (P-047).",
+      "fix": "Add to card 5 'What's missing': 'Woods's account of teachers' views is his own; our sources include no survey of teachers. {analysis}' Give both speakers the same caveat, or neither.",
+      "severity": "medium"
+    },
+    {
+      "line": 81,
+      "text": "Sen. Sally Harrell said legislators want to hear teachers say, \"I can just teach again.\"",
+      "rule": 1,
+      "problem": "Option B's 'Who benefits' has two officials (Harrell, Woods) plus supporting parents' expectations (87.7%, 60.3%). 'Who pays' has no named voice and no opposing-parent figures, though both exist: Adams on enforcement (P-047) and 74.8% of opposing parents on emergencies (P-035). Harrell's line says what legislators hope to hear; it isn't a measured benefit.",
+      "fix": "Use the same kinds of evidence on both lists. Either add 'Among parents who oppose a ban, 74.8% said there would be no way to reach their child in an emergency. [P-035]' and Adams's enforcement concern [P-047] to 'Who pays', or drop the official quotes and parent expectations from 'Who benefits' and keep both lists to the law's text and study findings.",
+      "severity": "medium"
+    },
+    {
+      "line": 99,
+      "text": "In the Senate, 13 senators voted for an amendment that would have let districts allow phones between classes.",
+      "rule": 8,
+      "problem": "Coming right after 'one named critic', this sentence implies 13 senators opposed the law, but the Senate then passed the bill 52 to 0 (P-025). The clearest documented opposition among lawmakers, the 20 House members who voted no (P-025), is missing from this paragraph.",
+      "fix": "'In the House, 20 members voted against the bill. In the Senate, 13 senators voted to let districts allow phones between classes; the Senate then passed the bill 52 to 0. [P-025, P-026, P-027]'",
+      "severity": "medium"
+    },
+    {
+      "line": 74,
+      "text": "Woods called for extending the ban to end the harm he said constant phone access causes.",
+      "rule": 10,
+      "problem": "The first mention of Woods has no first name or title; readers don't learn he is the State School Superintendent until line 106. Adams gets his full name and role one line earlier (line 73). Card 5 (line 156) also uses bare 'Woods'.",
+      "fix": "'State School Superintendent Richard Woods called for...' at the first mention in each layer, then one short form for every speaker.",
+      "severity": "low"
+    },
+    {
+      "line": 8,
+      "text": "Some students with health or disability plans that require a device are exempt.",
+      "rule": 8,
+      "problem": "P-013 allows device access only 'as necessary to fulfill the requirements' of the plan, not a full exemption. Layer 2 (line 51) states this correctly.",
+      "fix": "'Students whose disability or medical plan requires a device may use it as the plan requires.'",
+      "severity": "low"
+    },
+    {
+      "line": 8,
+      "text": "Starting no later than July 1, 2027, public high school students won't be allowed to use, hold or wear phones or similar devices during the school day, including time between classes.",
+      "rule": 9,
+      "problem": "The 30-second version has three items, as required, but items 1 and 3 run 47 and 40 words. Its opening sentence (31 words) is the longest on the page, and the block reads at about grade 8.5.",
+      "fix": "Keep three items of one or two short sentences each, e.g. 'What it does: By July 1, 2027, public high school students can't use phones or similar devices from the first bell to the last. Students whose plan requires a device may use it.' Trim item 3 the same way.",
+      "severity": "low"
+    },
+    {
+      "line": 95,
+      "text": "Reasons given within each group come from smaller samples and are less precise",
+      "rule": 8,
+      "problem": "This isn't true of every figure: 87.7% has a standard error of 1.8 (P-034), smaller than the topline's 2.1. Readers also aren't told that opponents' reasons are much less precise (about 6 to 8 points either way) than supporters' (about 3.5 to 6).",
+      "fix": "'Reasons given within each group come from smaller samples. Their margins of error run about 3.5 to 6 points for supporters' reasons and about 6 to 8 points for opponents' reasons. {computed: 1.96 x standard errors in P-034 and P-035}'",
+      "severity": "low"
+    },
+    {
+      "line": 118,
+      "text": "one told lawmakers that phones have become addictive for teens",
+      "rule": 3,
+      "problem": "'Addictive' is a loaded, clinical word used outside quotation marks. It is the article's paraphrase, not the student's own words.",
+      "fix": "Use the student's verbatim quote, as card 6 does, or mark the paraphrase: 'one told lawmakers, as the article put it, that phones \"have become addictive for teens.\"'",
+      "severity": "low"
+    },
+    {
+      "line": 87,
+      "text": "Would have let districts allow high school students to use phones during short breaks between classes.",
+      "rule": 8,
+      "problem": "The amendment covered 'brief transitions between classes' (P-027). The law lists 'breaks' and 'transitions' separately (P-002), and the page keeps them apart elsewhere (lines 48, 79), so 'short breaks' could be read to include lunch or other breaks.",
+      "fix": "'...during the few minutes between classes.'",
+      "severity": "low"
+    },
+    {
+      "line": 89,
+      "text": "In districts that chose to allow it, students and families could reach each other between classes.",
+      "rule": 1,
+      "problem": "District choice is Option C's main feature. Option A lists local control as a benefit, but Option C's 'Who benefits' leaves it out, so Option C's strongest case is weaker than it needs to be.",
+      "fix": "Add: 'Each district, not the state, would decide whether to allow it. {analysis: P-027}'",
+      "severity": "low"
+    },
+    {
+      "line": 74,
+      "text": "Students in districts without limits keep their phones in class.",
+      "rule": 10,
+      "problem": "This is listed under 'Who pays' but reads like the 'Who benefits' line above it; it never names the cost.",
+      "fix": "'Students in districts without limits could keep facing phone distractions in class, which the law's supporters say hurts learning. [P-029, P-036]'",
+      "severity": "low"
+    },
+    {
+      "line": 165,
+      "text": "Teacher Darryl Adams and many parents who oppose the ban say older students should keep some phone access.",
+      "rule": 6,
+      "problem": "The survey's reasons were 'should be parental choice' and 'students need to learn responsible use' (P-035); none mentions age. The sentence puts Adams's age-based argument into parents' mouths.",
+      "fix": "'Teacher Darryl Adams says older students should keep some phone access; many parents who oppose the ban say it should be the parents' choice or that students need to learn responsible use.'",
+      "severity": "low"
+    },
+    {
+      "line": 42,
+      "text": "Fewer distractions, better school results, and more meaningful interactions and focused learning.",
+      "rule": 8,
+      "problem": "P-057 is the law's definition of 'distraction-free education', not a statement of purpose, so 'stated goal' slightly overstates it.",
+      "fix": "'How the law describes its aim: a \"distraction-free education\" meant to reduce distractions, improve results and increase \"meaningful interactions and focused learning.\" [P-057]'",
+      "severity": "low"
+    },
+    {
+      "line": 44,
+      "text": "That rule starts no later than July 1, 2026.",
+      "rule": 8,
+      "problem": "As of Nov 8, 2026, that deadline has passed, but the present tense reads as if it hasn't. Card 3 already uses past tense (line 135).",
+      "fix": "'That rule had to start by July 1, 2026.'",
+      "severity": "low"
+    },
+    {
+      "line": 57,
+      "text": "dual enrollment, work-based learning and apprenticeships",
+      "rule": 10,
+      "problem": "Several terms go undefined for a grade 6-8 reader: 'dual enrollment' (line 57); 'amendment' in the Option C heading and line 99 (the timeline calls it 'a change'); 'IEP', never spelled out (line 51); and 'margin of error' (line 95). Tags readers can see use 'standard error', 'cross-sectional design' and '1.96 x'. Layer 4 reads at about grade 9.2 (whole page about 8.7).",
+      "fix": "Add short explanations: 'dual enrollment (taking college classes in high school)', 'amendment (a proposed change to the bill)', 'IEP (special education plan)', 'margin of error (how far off the survey could be)'. Use plain words in tags ('one point in time', not 'cross-sectional'). Split Layer 4 sentences over 25 words.",
+      "severity": "low"
+    },
+    {
+      "line": 184,
+      "text": "Effects on well-being and phone use",
+      "rule": 8,
+      "problem": "A study done at one point in time can't show effects; the page itself says it 'can show links, not cause and effect' (line 122). The row is marked nocheck, but readers still see it.",
+      "fix": "'Links between school phone rules, well-being and phone use'",
+      "severity": "low"
+    },
+    {
+      "line": 169,
+      "text": "In Florida, the effects of phone bans were larger in middle and high schools",
+      "rule": 8,
+      "problem": "This result is used to challenge a claim about maturity, but it combines middle and high schools, and the authors tie the larger effect to phone ownership, not to students' age or self-control.",
+      "fix": "Add: 'The result combines middle and high schools, and the authors link it to phone ownership, not age. {analysis: P-040}'",
+      "severity": "low"
+    }
+  ],
+  "flip_test": [
+    {
+      "line": 82,
+      "text": "In Florida, enforcing phone bans led to a significant short-term rise in suspensions",
+      "asymmetry": "Same study, same method: the cost gets 'significant' and the causal 'led to' (lines 82, 155), while the benefits get neutral 'rose'/'fell' and no 'significant' (lines 81, 105, 107), though P-040 uses 'significant' and 'significantly reduce' for them. This tilts toward the law's critics.",
+      "fix": "Use the same wording rules for all three findings (see issue at line 82)."
+    },
+    {
+      "line": 153,
+      "text": "Teacher Darryl Adams worries enforcement will burden staff and cause confrontations",
+      "asymmetry": "Supporting In-shorts speak for a group with neutral verbs ('Supporters say / expect / point to', lines 105, 117, 129). Concerned In-shorts lead with one named teacher and an emotional verb (lines 153, 165). Skimmers see a broad camp against one worried person, though 29.2% of parents opposed (P-033) and 20 House members voted no (P-025).",
+      "fix": "Name documented voices at the same level on both sides (e.g. 'The governor, the state superintendent and most parents who back a ban say...' vs 'Teacher Darryl Adams says...'), or use a group label only where more than one documented voice exists (card 6: 'Some who oppose the ban, including teacher Darryl Adams and many opposing parents, say...'). Use 'says' throughout."
+    },
+    {
+      "line": 139,
+      "text": "Side: concerned about the law",
+      "asymmetry": "One side is labeled by its position ('supports the law', lines 103, 115, 127) and the other by a feeling ('concerned about', lines 139, 151, 163). Nobody would label the first group 'hopeful about the law'.",
+      "fix": "'Side: for the law' / 'Side: against the law', or 'Supporters' / 'Critics'. If 'concerned' is meant to include people who back the law but question how it's carried out, say so in the evidence key."
+    },
+    {
+      "line": 149,
+      "text": "Enforcing the ban could burden school staff and lead to conflict",
+      "asymmetry": "Predictions for the law are stated flatly ('help', 'helps', lines 101, 113), while the predicted concern is hedged ('could'). Supporting titles use softer names for the policy ('Phone-free school days', 'Phone limits'), while the concern title uses 'the ban'. A hedged claim is easier to label 'Supported', so the wording interacts with the rubric.",
+      "fix": "State every predictive claim the same way (all 'will' or all 'can') and use one neutral name for the policy in every title."
+    },
+    {
+      "line": 146,
+      "text": "Adams's lockdown account is one family's experience; the source doesn't say when it happened or what phone rules applied.",
+      "asymmetry": "The critic's story gets a reliability caveat. Woods's 'nothing but support from teachers across Georgia' (lines 81, 156) gets none, though it is a broader claim with no measurement behind it. Hilton's district reports are caveated (line 122), so Woods is the exception.",
+      "fix": "Add a matching caveat for Woods in card 5 and Option B, or cut the Adams caveat to the same length as the others."
+    },
+    {
+      "line": 81,
+      "text": "Among parents who back a ban, 87.7% expected better focus and learning, and 60.3% better physical health and safety.",
+      "asymmetry": "Option B's benefits carry two official voices and supporting parents' figures. Its costs (line 82) carry no named voice and no opposing-parent figures, though Adams (P-047) and the 74.8% figure (P-035) exist. Costs actually get more words (107 vs 76), so the gap is in voices and kinds of evidence, not space.",
+      "fix": "Use the same kinds of evidence on both lists (see issue at line 81)."
+    },
+    {
+      "line": 97,
+      "text": "The Florida study is a 2025 working paper designed to estimate cause and effect.",
+      "asymmetry": "The Florida study gets a strength plus one limit; the English study gets only limits (one point in time, ages 12 to 15, recreational-use bans). The English policy type is spelled out as a mismatch, but Florida's is never described. The English study's strengths go unmentioned: 1,227 students in 30 schools, with well-being measured on a set questionnaire (P-042, P-064).",
+      "fix": "Give each study one strength and its main limits: add the English sample and questionnaire, and add that the Florida summary doesn't say whether the bans covered the whole school day."
+    },
+    {
+      "line": 110,
+      "text": "The gains came only in the second year, after a first year with more suspensions.",
+      "asymmetry": "Florida facts that cut against a critics' card are filed as 'What challenges it' (card 5, line 157). Florida facts that complicate a supporters' card are filed as 'What's missing' (card 1), next to a challenge line that says 'We found no evidence against this claim.'",
+      "fix": "Define the fields (challenges = findings against the claim; missing = gaps in the evidence) and file both Florida points as challenges."
+    },
+    {
+      "line": 144,
+      "text": "Among parents who support a ban, 60.3% expected better physical health and safety.",
+      "asymmetry": "Supporting parents' survey reasons are used to rebut a concern (card 4). Opposing parents' reasons are never used to rebut supporters' claims; for example, 19.8% said phones are needed for schoolwork (P-035), a partial counter to card 1, whose rebuttal line says 'No one ... disputed this directly' (line 108).",
+      "fix": "Apply one rule: use relevant survey reasons as rebuttals on both sides (noting P-017's school laptops against the schoolwork point), or on neither."
+    },
+    {
+      "line": 154,
+      "text": "Teacher Darryl Adams said he worries the bill would make teachers and administrators responsible for enforcing phone rules, which can lead to conflict.",
+      "asymmetry": "Each concern is raised by an ordinary person and answered by officials or experts: card 5 pits a teacher against the superintendent and a senator (line 156), and card 4 pits a teacher against a senator and a professor (lines 144-145). Supporting cards 1 and 3 have no rebuttal voice at all. Across the page, four officials appear on 16 lines (governor 2, Woods 5, Hilton 4, Harrell 5) against one teacher on 8. Line 99 discloses this, but it doesn't count the only student quoted, who supported the ban (lines 118, 168).",
+      "fix": "In the next sourcing pass, look for documented critics (e.g. House members who voted no, the amendment's sponsor, teacher or student groups). For now, add to line 99: 'The one student quoted supported the ban.'"
+    },
+    {
+      "line": 99,
+      "text": "Our archived sources quote four officials who support the law and one named critic, a teacher.",
+      "asymmetry": "The nouns aren't parallel ('officials who support the law' vs 'critic'). The 13-senator sentence that follows implies those senators were critics, though the Senate passed the bill 52 to 0, and the 20 House no votes are left out.",
+      "fix": "'...four officials who support the law and one teacher who opposes it.' Then use the vote sentence from the issue at line 99."
+    },
+    {
+      "line": 83,
+      "text": "Whether, and how much, focus, learning and well-being will change in Georgia high schools, since the evidence so far is limited (see Layer 4).",
+      "asymmetry": "Option B's uncertainty asks only whether the promised benefits will arrive, not whether the feared costs will (more suspensions, failed emergency contact), which are just as unproven for Georgia.",
+      "fix": "'Whether, and how much, focus, learning and well-being will change, and whether suspensions rise as they did at first in Florida or school alerts fall short in emergencies, since the evidence so far is limited.'"
+    },
+    {
+      "line": 74,
+      "text": "Woods called for extending the ban to end the harm he said constant phone access causes.",
+      "asymmetry": "Introductions are uneven. Adams gets his name and role on first and most later mentions, and Harrell gets 'Sen. Sally Harrell' all five times. Woods and Hilton are cut to surnames, and Woods's role isn't given until line 106.",
+      "fix": "Give everyone their full name and role at first mention in each layer, then one short form afterward."
+    },
+    {
+      "line": 120,
+      "text": "The English study's authors said there is",
+      "asymmetry": "Researchers are listed as a disagreeing voice when their study cuts against the law's side (card 2), but the Florida authors are never listed under 'Who says it' when their study supports it (card 1).",
+      "fix": "Treat researchers the same on both sides: list both teams as voices, or keep both only in the evidence fields."
+    },
+    {
+      "line": 101,
+      "text": "Phone-free school days help students learn",
+      "asymmetry": "All three supporting cards come before all three concerned cards, so the law's side always gets first say. The options, by contrast, open with the old law (Option A).",
+      "fix": "Alternate cards (for, against, for...) or state the ordering rule in the Layer 4 intro."
+    }
+  ],
+  "verdict_summary": "The page is well built and open about its sources. All six argument cards and all three options use the same fields in the same order. Length budgets pass: the 30-second version has 3 items, Layer 2's 'decided' plus 'before' runs 52 words, there are 5 'what changes' items, and In-shorts run 23-29 words. No minor is named, and the values disputes in cards 4 and 6 are treated as legitimate. 'What you can do' offers a district route and a legislative route without urging a position, and the page says openly that its sources quote four officials for the law and one teacher against it. Two must-fix items: line 146 says districts can add 'guaranteed phone access', which the law's text (P-007, P-008, P-011) doesn't allow and the page itself contradicts at line 143; and the one Florida study is described unevenly ('significant' and 'led to' for suspensions, plain 'rose' and 'fell' for gains). Should-fix items: the evidence-label key is never published; card 6's support line cites reasons that don't support its claim; the page never notes that the Florida summary doesn't say how much of the day its bans covered; and a cluster of small asymmetries that mostly favor the law's side. These include Woods's claim about teachers left uncaveated while Adams's story is caveated, officials and supporting-parent figures in Option B's benefits with nothing matching in its costs, 'Supporters say' vs 'Adams worries', 'supports' vs 'concerned about', card 1's first-year caveat filed under 'What's missing', and the 13-senator line without the 20 House no votes. Reading level is about grade 8.7 overall and 9.2 in Layer 4, a little above the 6-8 target. Ready to publish after the two high and the medium fixes."
+}

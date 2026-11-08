@@ -65,6 +65,10 @@ If something doesn't fit, it moves to a deeper layer. It is not crammed in.
 | `{analysis}` | Our explanation or synthesis of cited facts | "Together, these changes mainly affect renters." |
 | `{editorial}` | Framing that can't be cited, such as "what's missing" or "what's uncertain". The blind source check rates each one valid, questionable or invalid ([verification protocol](../process/verification-protocol.md)) | "The fiscal note does not estimate effects on local budgets." |
 
+- **Absence claims need the whole text.** "The law doesn't say X" or "the study didn't measure X" is
+  allowed only when the whole text is archived as passages. Otherwise write "the summary we read reports
+  no results on X".
+
 ## 7. Quotes and attribution
 
 - Quotes are **verbatim**, with a passage citation. Never paraphrase inside quotation marks.
@@ -76,6 +80,8 @@ If something doesn't fit, it moves to a deeper layer. It is not crammed in.
 - Anticipated arguments use "Some people may argue…" and are never attributed.
 - **Never name minors.** Describe them by role.
 - **Party labels:** for every speaker or for none.
+- **Pronouns:** use a pronoun for a person only when a source gives it. Otherwise repeat the name or the
+  role ("this senator").
 - **Timing words matter.** "No later than July 1" is not "on July 1". Keep the law's own precision.
 - **Subgroup statistics:** say who was asked ("Among parents who oppose a ban, 74.8%…"), never let a
   subgroup figure read as everyone.
@@ -109,3 +115,4 @@ overcorrecting, against critics.
 | 2026-11-08 | v0 created from research | Planning |
 | 2026-11-08 | v0.1: quote punctuation, paraphrase vs. quote, minors, party labels, timing words, subgroup statistics | Trial 001 (HB 1009) drafting and planted-error design |
 | 2026-11-08 | v0.2: argument-card rules (one bar for every side) | Trial 001 verification rounds 1–2 |
+| 2026-11-08 | v0.3: pronouns need a source; absence claims need the whole text | Trial 001 verification round 3 |

@@ -1,0 +1,1640 @@
+{
+ "checker": "independent-source-verifier",
+ "document": "/home/user/Polysense/trials/001-hb1009-high-school-cellphones/workspace.md",
+ "units": [
+  {
+   "line": 8,
+   "sentence": "Starting no later than July 1, 2027, public high school students won't be allowed to use, hold or wear phones or similar devices during the school day, including time between classes.",
+   "marker": "[P-007, P-003, P-002]",
+   "verdict": "partial",
+   "evidence_span": "Beginning no later than July 1, 2027, no public school student in grades nine through 12 shall be permitted to access personal electronic devices during the school day",
+   "correct_passage": "",
+   "problem": "The date, grades and between-class coverage are correct. But P-003 defines access as viewing, holding, wearing or using a device 'for the purpose of communication, internet access, gaming, recording, listening to music, or any other function commonly associated with personal electronic devices'. Without that purpose clause, the sentence reads as if simply holding or carrying a phone is banned, which conflicts with the storage options in P-009 (locker, locked pouch). It also leaves out P-007's 'except as otherwise provided in this Code section or required by law'.",
+   "suggested_fix": "Starting no later than July 1, 2027, public high school students won't be allowed to access phones or similar devices (use, view, hold or wear them for calls, texts, internet, games, recording, music and similar functions) during the school day, including time between classes."
+  },
+  {
+   "line": 8,
+   "sentence": "Some students with health or disability plans that require a device are exempt.",
+   "marker": "[P-013]",
+   "verdict": "partial",
+   "evidence_span": "shall be permitted to access the device as necessary to fulfill the requirements of the respective program or plan",
+   "correct_passage": "",
+   "problem": "'Exempt' overstates P-013. These students are not exempt from the ban. They may access the device only 'as necessary to fulfill the requirements' of an IEP, Section 504 Plan or medical plan that 'explicitly mandates' it. In the 30-second summary, a reader could take 'exempt' to mean free phone use.",
+   "suggested_fix": "Students whose IEP, Section 504 plan or medical plan explicitly requires a device may use it, but only as the plan requires."
+  },
+  {
+   "line": 9,
+   "sentence": "Who it affects: Public high school students, their families, and the school staff who carry out the rules.",
+   "marker": "[P-007, P-011, P-014]",
+   "verdict": "supports",
+   "evidence_span": "no public school student in grades nine through 12 shall be permitted to access personal electronic devices during the school day",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 10,
+   "sentence": "The law takes effect Dec 31, 2026, and each district sets details like where phones are kept.",
+   "marker": "[P-019, P-008, P-009]",
+   "verdict": "supports",
+   "evidence_span": "This Act shall become effective December 31, 2026.",
+   "correct_passage": "",
+   "problem": "Minor: P-008 and P-009 give the duty to 'each local school system and public school', not to districts alone (charter schools also set policies).",
+   "suggested_fix": ""
+  },
+  {
+   "line": 10,
+   "sentence": "You can share your views with your school district, or with your state lawmakers, who can keep or change the law.",
+   "marker": "{editorial: suggested actions; districts set policies each year under P-008, and the General Assembly can amend laws in later sessions}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "A reasonable civic suggestion, correctly labeled.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 16,
+   "sentence": "Jan 16, 2026: The bill was filed in the House.",
+   "marker": "[P-024]",
+   "verdict": "supports",
+   "evidence_span": "01/16/2026 House Hopper",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 17,
+   "sentence": "Feb 6: The House Education Committee recommended it.",
+   "marker": "[P-024, P-023]",
+   "verdict": "supports",
+   "evidence_span": "02/06/2026 House Committee Favorably Reported",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 18,
+   "sentence": "Feb 24: The House passed it, 145 to 20.",
+   "marker": "[P-025]",
+   "verdict": "supports",
+   "evidence_span": "02/24/2026 House Vote #545 145 20 8 7",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 19,
+   "sentence": "Mar 18: The Senate Children and Families Committee recommended it.",
+   "marker": "[P-024, P-023]",
+   "verdict": "supports",
+   "evidence_span": "03/18/2026 Senate Committee Favorably Reported",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 20,
+   "sentence": "Mar 23: Senators voted down, 13 to 38, a change that would have let districts allow high school students to use phones between classes.",
+   "marker": "[P-026, P-027]",
+   "verdict": "supports",
+   "evidence_span": "\"yea\": 13, \"nay\": 38",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 21,
+   "sentence": "Mar 23: The Senate passed the bill, 52 to 0.",
+   "marker": "[P-025]",
+   "verdict": "supports",
+   "evidence_span": "03/23/2026 Senate Vote #784 52 0 3 1",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 22,
+   "sentence": "May 5: The governor signed it into law.",
+   "marker": "[P-024]",
+   "verdict": "supports",
+   "evidence_span": "05/05/2026 House Date Signed by Governor",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 22,
+   "sentence": "Its official number is Act 395.",
+   "marker": "[P-024]",
+   "verdict": "supports",
+   "evidence_span": "05/05/2026 Act 395",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 26,
+   "sentence": "Dec 31, 2026: The law takes effect.",
+   "marker": "[P-019]",
+   "verdict": "supports",
+   "evidence_span": "This Act shall become effective December 31, 2026.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 27,
+   "sentence": "By Jan 1 each year: Every district must adopt or update its device policy, now covering kindergarten through 12th grade.",
+   "marker": "[P-008]",
+   "verdict": "supports",
+   "evidence_span": "By January 1 each year, each local school system and public school shall adopt, and revise as appropriate, policies and procedures",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 27,
+   "sentence": "The first such deadline under the new law is Jan 1, 2027.",
+   "marker": "{analysis: P-008 sets \"January 1 each year\" and the law takes effect Dec 31, 2026 (P-019)}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "The inference holds. Possible addition: the policy due Jan 1, 2027 must already prohibit bell-to-bell access through grade 12 (P-008(c)(1)), although P-007 lets the high school ban start as late as July 1, 2027. Readers may wonder how the two dates fit together.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 28,
+   "sentence": "By Jul 1, 2027: High schools must enforce the ban, at the latest.",
+   "marker": "[P-007]",
+   "verdict": "supports",
+   "evidence_span": "Beginning no later than July 1, 2027, no public school student in grades nine through 12 shall be permitted to access personal electronic devices",
+   "correct_passage": "",
+   "problem": "Minor: P-007 sets when the prohibition must apply. The enforcement duty is in P-014 and falls on local school systems and public schools.",
+   "suggested_fix": "By Jul 1, 2027: The high school ban must be in effect, at the latest. [P-007, P-014]"
+  },
+  {
+   "line": 29,
+   "sentence": "At least one school plans to start sooner: Cairo High School said it would begin in the 2026-2027 school year.",
+   "marker": "[P-054]",
+   "verdict": "supports",
+   "evidence_span": "Cairo High School will begin implementation of this law in the 2026-2027 school year.",
+   "correct_passage": "",
+   "problem": "Minor: the notice says it will 'begin implementation' during 2026-2027. That may not mean a full ban from the start of that school year.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 30,
+   "sentence": "The Georgia Department of Education must give schools guidance and technical support.",
+   "marker": "[P-016]",
+   "verdict": "supports",
+   "evidence_span": "The Department of Education shall provide local school systems and public schools with guidance and technical support",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 34,
+   "sentence": "Input: Ask your school district or local school board how it will store phones, run off-campus activities, handle emergency communication and check whether the rules are working.",
+   "marker": "{editorial: suggested action; districts set these under P-009, P-010, P-011 and P-015}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "The cited provisions do cover storage, off-site events, communication protocols and effectiveness review (P-015(C)).",
+   "suggested_fix": ""
+  },
+  {
+   "line": 35,
+   "sentence": "Input: Tell your state representative and senator what you think of the law, whether you want it kept or changed.",
+   "marker": "{editorial: suggested action; the General Assembly can amend laws in later sessions}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 36,
+   "sentence": "Observe: Check your school's handbook or website, where districts must publish the rules.",
+   "marker": "[P-015]",
+   "verdict": "supports",
+   "evidence_span": "Ensure that parents, guardians, and students are informed of such policies and procedures through student and family handbooks, student codes of conduct, school public websites",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 40,
+   "sentence": "What was decided: Whether to extend Georgia's school-day device ban for public schools from kindergarten through 8th grade to high school.",
+   "marker": "[P-028, P-006]",
+   "verdict": "supports",
+   "evidence_span": "expands the prohibition of personal electronic devices in public schools to include high school grades nine through twelve",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 42,
+   "sentence": "The law's stated goal: Fewer distractions, better school results, and more meaningful interactions and focused learning.",
+   "marker": "[P-057]",
+   "verdict": "partial",
+   "evidence_span": "is prohibited to minimize distractions, improve academic outcomes, and increase meaningful interactions and focused learning experiences",
+   "correct_passage": "",
+   "problem": "The words are accurate, but P-057 is a definition of the term 'distraction-free education', not a purpose or findings clause. The law uses that term only in the 'encouraged' engagement-activities subsection (P-060). Calling it 'the law's stated goal' makes it sound more official than the text does.",
+   "suggested_fix": "What the law says bans are for: It defines 'distraction-free education' as a setting where devices are prohibited 'to minimize distractions, improve academic outcomes, and increase meaningful interactions and focused learning experiences.'"
+  },
+  {
+   "line": 44,
+   "sentence": "Before this law: A 2025 law already bars devices during the school day for public school students in kindergarten through 8th grade.",
+   "marker": "[P-006, P-028]",
+   "verdict": "supports",
+   "evidence_span": "HB 340, signed by the Governor in 2025, which banned these devices in K-8 classrooms",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 44,
+   "sentence": "That rule starts no later than July 1, 2026.",
+   "marker": "[P-006]",
+   "verdict": "supports",
+   "evidence_span": "Beginning no later than July 1, 2026, no public school student in kindergarten through grade eight shall be permitted to access personal electronic devices during the school day",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 46,
+   "sentence": "The rules that already cover younger students in public schools will apply through 12th grade.",
+   "marker": "[P-007, P-008]",
+   "verdict": "supports",
+   "evidence_span": "Prohibit bell-to-bell access to personal electronic devices by students in kindergarten through grade twelve",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 48,
+   "sentence": "Starting no later than July 1, 2027, students won't be allowed to use devices during the school day.",
+   "marker": "[P-007]",
+   "verdict": "supports",
+   "evidence_span": "Beginning no later than July 1, 2027, no public school student in grades nine through 12 shall be permitted to access personal electronic devices during the school day",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 48,
+   "sentence": "That means from the first bell to the last, including breaks and time between classes.",
+   "marker": "[P-002]",
+   "verdict": "supports",
+   "evidence_span": "the period beginning with the first bell signaling the start of instructional time and ending with the final bell signaling the conclusion of the school day and shall include all scheduled instructional time, breaks, transitions",
+   "correct_passage": "",
+   "problem": "Minor: the link 'school day = bell-to-bell period' is in P-005, not P-002.",
+   "suggested_fix": "Cite [P-005, P-002]."
+  },
+  {
+   "line": 49,
+   "sentence": "Each district chooses where phones go, such as lockers, locked pouches or a set place in the classroom.",
+   "marker": "[P-009]",
+   "verdict": "supports",
+   "evidence_span": "Establish appropriate methods for storing students' personal electronic devices, including, but not limited to, a student's locker, a locked pouch, or a designated place in the classroom",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 50,
+   "sentence": "Parents who need to reach their child during the school day must contact the school.",
+   "marker": "[P-011]",
+   "verdict": "supports",
+   "evidence_span": "Require parents or guardians who need to communicate with their student during the school day to contact the school directly",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 50,
+   "sentence": "Emergency messages go through the school's own systems.",
+   "marker": "[P-011]",
+   "verdict": "supports",
+   "evidence_span": "Facilitate all emergency communication through school emergency communication management systems and coordinated by school personnel",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 51,
+   "sentence": "Students whose IEP, Section 504 plan or medical plan explicitly requires a device may use it as the plan requires.",
+   "marker": "[P-013]",
+   "verdict": "supports",
+   "evidence_span": "explicitly mandates the use of a personal electronic device for medical or educational purposes shall be permitted to access the device as necessary to fulfill the requirements of the respective program or plan",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 51,
+   "sentence": "IEP and Section 504 plans are formal school plans for students with disabilities.",
+   "marker": "{analysis: plain-language definition, not from the cited sources}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "This is accurate general knowledge and is disclosed as not coming from the sources. Strictly it is background, not an inference, so 'editorial' or a 'background' label would fit better than 'analysis'.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 52,
+   "sentence": "Breaking the rules leads to escalating consequences, such as warnings, taking the device, calling parents and other actions.",
+   "marker": "[P-012]",
+   "verdict": "supports",
+   "evidence_span": "subject to progressive consequences in accordance with the local school system's or public school's student code of conduct, including, but not limited to, verbal warnings, confiscation of personal electronic devices, parental notification",
+   "correct_passage": "",
+   "problem": "Minor: 'calling parents' is narrower than 'parental notification'. The sentence also omits that consequences follow each district's or school's code of conduct.",
+   "suggested_fix": "...such as warnings, taking the device, notifying parents and other actions, under each district's code of conduct."
+  },
+  {
+   "line": 56,
+   "sentence": "District policies must be reviewed every year by January 1, instead of by a one-time deadline of January 1, 2026.",
+   "marker": "[P-008, P-020]",
+   "verdict": "supports",
+   "evidence_span": "By January 1 each year, each local school system and public school shall adopt, and revise as appropriate, policies and procedures",
+   "correct_passage": "",
+   "problem": "Minor paraphrase: the text says 'adopt, and revise as appropriate' each year. It does not use the word 'review'.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 57,
+   "sentence": "Districts must set rules for off-campus activities like field trips, school transportation and sports.",
+   "marker": "[P-010]",
+   "verdict": "supports",
+   "evidence_span": "Establish clear procedures for off-site events or activities, including all school sponsored events and field trips, daily transportation, athletic and extracurricular events",
+   "correct_passage": "",
+   "problem": "This sentence sits under 'Also new in this law', but the requirement already existed in prior law (P-065). Only the next sentence describes something new.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 57,
+   "sentence": "Those rules must now also cover dual enrollment, work-based learning and apprenticeships.",
+   "marker": "[P-010, P-065]",
+   "verdict": "partial",
+   "evidence_span": "including, but not limited to, participation in the dual enrollment program, work based learning programs, and apprenticeship programs",
+   "correct_passage": "",
+   "problem": "The new text names these programs as examples ('including, but not limited to') of 'other instructional opportunities that do not occur on school grounds'. Prior law (P-065) already covered that category. 'Must now also cover' implies new coverage, but the passages show only that the programs are now named explicitly.",
+   "suggested_fix": "The law now names dual enrollment, work-based learning and apprenticeships as examples of off-campus activities those rules must cover."
+  },
+  {
+   "line": 58,
+   "sentence": "E-readers were dropped from the law's list of example devices, but that list is not complete.",
+   "marker": "[P-004, P-021]",
+   "verdict": "supports",
+   "evidence_span": "Such term includes, but is not limited to, smartphones, smartwatches, tablets, headphones",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 62,
+   "sentence": "Students learning online away from campus are not covered.",
+   "marker": "[P-005]",
+   "verdict": "supports",
+   "evidence_span": "Such term shall not apply to students receiving virtual or remote instruction away from a school campus.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 63,
+   "sentence": "Schools can still give students laptops and tablets for schoolwork.",
+   "marker": "[P-017]",
+   "verdict": "supports",
+   "evidence_span": "from providing school equipment, including, but not limited to, laptops and tablets, for student use for educational purposes",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 64,
+   "sentence": "Schools are encouraged to hold family workshops, town halls and screen-free challenges.",
+   "marker": "[P-060]",
+   "verdict": "supports",
+   "evidence_span": "is encouraged to host student and parent engagement activities designed to promote distraction-free education",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 65,
+   "sentence": "Charter schools and other schools that can usually skip some state rules can't skip this one.",
+   "marker": "[P-018]",
+   "verdict": "supports",
+   "evidence_span": "shall not be subject to waiver pursuant to Code Section 20-2-82 for a strategic waivers school system, Code Section 20-2-2063.2 or 20-2-2065 for a charter system, Code Section 20-2-2065 for a charter school",
+   "correct_passage": "",
+   "problem": "Minor: the no-waiver rule also covers whole school systems (strategic waivers systems, charter systems, and waivers under 20-2-244), not only individual schools.",
+   "suggested_fix": "Charter schools, charter systems and other schools or districts that can usually get waivers from some state rules can't get one from this law."
+  },
+  {
+   "line": 71,
+   "sentence": "What it does: Sets a device ban for public school students in kindergarten through 8th grade only.",
+   "marker": "[P-006, P-066]",
+   "verdict": "supports",
+   "evidence_span": "Prohibit bell-to-bell access to personal electronic devices by students in kindergarten through grade eight",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 72,
+   "sentence": "HB 1009, signed May 5, 2026, replaces it when the new law takes effect on Dec 31, 2026.",
+   "marker": "[P-024, P-028, P-019]",
+   "verdict": "partial",
+   "evidence_span": "12/31/2026 Effective Date 05/05/2026 Act 395 05/05/2026 House Date Signed by Governor",
+   "correct_passage": "",
+   "problem": "The dates are correct. But the cited P-028 says HB 1009 'expands' and 'builds on' the 2025 law; none of the cited passages says it replaces it. The K-8 rule stays in force (P-006, 'existing law, unchanged'). 'Replaces' could make readers think the K-8 ban ends.",
+   "suggested_fix": "HB 1009, signed May 5, 2026, amends and expands that law to cover high schools; the change takes effect Dec 31, 2026."
+  },
+  {
+   "line": 73,
+   "sentence": "Who benefits: High school students and families keep whatever phone access their district allows.",
+   "marker": "{analysis: the state rule covered only K-8 (P-006), so grades 9-12 were left to districts}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 73,
+   "sentence": "Teacher Darryl Adams said high school students, who are older and often more independent, should be allowed to keep access to their phones.",
+   "marker": "[P-048]",
+   "verdict": "supports",
+   "evidence_span": "high school students, who are older and often more independent, should be allowed to keep access to their phones",
+   "correct_passage": "",
+   "problem": "Minor: the sentence copies the reporter's paraphrase ('Adams also argues that...') almost word for word without quotation marks. That is acceptable as a paraphrase, but it is not his own words.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 73,
+   "sentence": "Schools avoid new monitoring and enforcement duties and keep local control.",
+   "marker": "{analysis: the duties come from P-014, and P-018 bars opting out}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Valid for high schools. Note that the passages don't show whether P-014's monitoring duties already applied to K-8 under prior law, so 'new' should be read as new for grades 9-12.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 74,
+   "sentence": "Who pays: Students in districts without limits keep their phones in class.",
+   "marker": "{analysis: follows from the K-8-only rule, P-006}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "The fact follows from P-006. Treating it as a cost is the author's value judgment (see framing issues).",
+   "suggested_fix": ""
+  },
+  {
+   "line": 74,
+   "sentence": "Woods called for extending the ban to end the harm he said constant phone access causes.",
+   "marker": "[P-036]",
+   "verdict": "supports",
+   "evidence_span": "to be extended into grades 9-12, to end the harm caused by constant technology access and interruption",
+   "correct_passage": "",
+   "problem": "Minor: Woods said 'constant technology access and interruption', not 'phone access'. Also, Woods appears here before he is identified; his full name and title first appear at line 106.",
+   "suggested_fix": "State School Superintendent Richard Woods called for extending the ban to end what he called 'the harm caused by constant technology access and interruption.'"
+  },
+  {
+   "line": 74,
+   "sentence": "If Florida's results apply here, students would miss the test-score and attendance gains a ban might bring.",
+   "marker": "{analysis: based on P-040}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "This is a valid conditional. For balance, Option A's 'Who benefits' should also mention that by the same logic students would avoid the first-year rise in suspensions in P-039.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 74,
+   "sentence": "High school rules could differ from one district to the next.",
+   "marker": "{analysis: follows from leaving grades 9-12 to each district}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 75,
+   "sentence": "What's uncertain: Whether districts would have limited phones on their own.",
+   "marker": "{editorial}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 75,
+   "sentence": "Sen. Sally Harrell said such rules had \"been done in high schools already.\"",
+   "marker": "[P-046]",
+   "verdict": "supports",
+   "evidence_span": "It has been done in high schools already",
+   "correct_passage": "",
+   "problem": "Minor: P-046 says only 'she said'. The link to Harrell comes from the passage label and the surrounding article (P-044, P-045), and her referent 'It' is not spelled out.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 75,
+   "sentence": "We found no count of districts that already had them.",
+   "marker": "{analysis: none in the sources reviewed}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 79,
+   "sentence": "What it does: Bans device access for public high school students during the school day, from the first bell to the last, including breaks and time between classes.",
+   "marker": "[P-007, P-002]",
+   "verdict": "supports",
+   "evidence_span": "shall include all scheduled instructional time, breaks, transitions, assemblies, and other school related activities occurring between the start and end of the school day",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 80,
+   "sentence": "It passed the House 145 to 20 and the Senate 52 to 0, and was signed on May 5, 2026.",
+   "marker": "[P-025, P-024]",
+   "verdict": "supports",
+   "evidence_span": "02/24/2026 House Vote #545 145 20 8 7 03/23/2026 Senate Vote #783 13 38 4 1 03/23/2026 Senate Vote #784 52 0 3 1",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 81,
+   "sentence": "In a Florida study, test scores rose in the second year of school phone bans, unexcused absences fell, and effects were larger in middle and high schools.",
+   "marker": "[P-040]",
+   "verdict": "supports",
+   "evidence_span": "we find significant improvements in student test scores in the second year of the ban after that initial adjustment period",
+   "correct_passage": "",
+   "problem": "Accurate. But P-040's sentence that 'the effects of cellphone bans are more pronounced in middle and high school settings' doesn't say it covers only the gains, so it may include the suspension rise in P-039. Listing it only under benefits is one-sided (see framing issues).",
+   "suggested_fix": ""
+  },
+  {
+   "line": 81,
+   "sentence": "Among parents who back a ban, 87.7% expected better focus and learning, and 60.3% better physical health and safety.",
+   "marker": "[P-034]",
+   "verdict": "supports",
+   "evidence_span": "Improved academic focus and learning 87.7 (1.8) Improved in-person social interactions 71.2 (2.6) Improved mental health and wellbeing 69.1 (2.6) Improved physical health and safety 60.3 (2.9)",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 81,
+   "sentence": "Sen. Sally Harrell said legislators want to hear teachers say, \"I can just teach again.\"",
+   "marker": "[P-045]",
+   "verdict": "supports",
+   "evidence_span": "I can just teach again",
+   "correct_passage": "",
+   "problem": "The quote is accurate. As a 'benefit' it is an aspiration, not evidence of a benefit (see framing issues).",
+   "suggested_fix": ""
+  },
+  {
+   "line": 81,
+   "sentence": "Woods told lawmakers he had heard nothing but support from teachers across Georgia.",
+   "marker": "[P-053]",
+   "verdict": "supports",
+   "evidence_span": "He told lawmakers he has heard nothing but support from teachers across Georgia.",
+   "correct_passage": "",
+   "problem": "Accurate attribution, but it is given without caveat even though the same sources quote a teacher (Adams) who opposes the law (see framing issues). Woods is also not yet identified at this point.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 82,
+   "sentence": "Who pays: Families can't reach students directly during the school day and must contact the school instead.",
+   "marker": "[P-007, P-011]",
+   "verdict": "supports",
+   "evidence_span": "Require parents or guardians who need to communicate with their student during the school day to contact the school directly",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 82,
+   "sentence": "Students who use phones or smartwatches for health apps need a formal plan that explicitly requires the device, unless another law requires access.",
+   "marker": "[P-013, P-007, P-004]",
+   "verdict": "supports",
+   "evidence_span": "A student whose Individualized Education Program (IEP), Section 504 Plan, or medical plan explicitly mandates the use of a personal electronic device for medical or educational purposes",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 82,
+   "sentence": "Schools must set up phone storage methods, monitor and enforce the rules, review policies every year and keep families informed.",
+   "marker": "[P-009, P-014, P-008, P-015]",
+   "verdict": "supports",
+   "evidence_span": "Implement appropriate monitoring and enforcement mechanisms to ensure compliance with policies and procedures established pursuant to this Code section",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 82,
+   "sentence": "The law gives schools state guidance but sets aside no money, and we found no official cost estimate (fiscal note) for it.",
+   "marker": "{analysis: no funding provision in the full enacted text, P-001 to P-019 and P-056 to P-061; P-016 provides guidance; searched the 2025-2026 fiscal-note list, which has a 2026 section (P-062), for 1009}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "I confirmed that P-001 to P-019 plus P-056 to P-061 cover lines 1-106 with no appropriation or funding clause. The fiscal-note search can't be checked from the passages, since only the list headings are archived (P-030, P-062). Also, funding for a policy bill would usually come through a budget act, which was not checked, so 'sets aside no money' should be limited to this act.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 82,
+   "sentence": "In Florida, enforcing phone bans led to a significant short-term rise in suspensions, especially among Black students, which began to fade after the first year.",
+   "marker": "[P-039]",
+   "verdict": "supports",
+   "evidence_span": "the enforcement of cellphone bans in schools led to a significant increase in student suspensions in the short-term, especially among Black students, but disciplinary actions began to dissipate after the first year",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 83,
+   "sentence": "What's uncertain: Whether, and how much, focus, learning and well-being will change in Georgia high schools...",
+   "marker": "{editorial}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 87,
+   "sentence": "Would have let districts allow high school students to use phones during short breaks between classes.",
+   "marker": "[P-027]",
+   "verdict": "supports",
+   "evidence_span": "brief transitions 6 between classes for students in grades nine through 12, during which access to personal 7 electronic devices may be permitted",
+   "correct_passage": "",
+   "problem": "Minor: the amendment says 'brief transitions', not 'breaks'. Its text also drops 'breaks, transitions' from the definition's list for all grades. That is probably immaterial because the period still runs from the first bell to the final bell, but 'transitions' is the more accurate word.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 88,
+   "sentence": "Sen. Kemp of the 38th District offered it, and it failed, 13 to 38.",
+   "marker": "[P-027, P-026]",
+   "verdict": "supports",
+   "evidence_span": "LOST Senator Kemp of the 38th offered the following amendment #1",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 88,
+   "sentence": "He is a state senator, not Gov. Brian Kemp.",
+   "marker": "{analysis: P-027 identifies \"Senator Kemp of the 38th\"}",
+   "verdict": "questionable",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "The inference that this is not the governor is valid. But 'He' assigns a gender that no passage states: P-027 and P-026 give only 'Senator Kemp of the 38th' and 'the Senator from the 38th'.",
+   "suggested_fix": "This senator is not Gov. Brian Kemp."
+  },
+  {
+   "line": 89,
+   "sentence": "Who benefits: In districts that chose to allow it, students and families could reach each other between classes.",
+   "marker": "{analysis: inferred from the amendment text, P-027}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "This holds: transitions would fall outside the bell-to-bell 'school day', so P-011(B)'s contact-the-school rule would not apply to them.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 90,
+   "sentence": "Who pays: In those districts, part of the school day would no longer be phone-free.",
+   "marker": "{analysis: inferred from the amendment text, P-027}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 91,
+   "sentence": "What's uncertain: Whether phones between classes would change focus or learning compared with a full-day ban...",
+   "marker": "{editorial}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 95,
+   "sentence": "In a survey of 1,002 Georgia parents in fall 2025, 70.8% supported a high school ban and 29.2% opposed it.",
+   "marker": "[P-032, P-033]",
+   "verdict": "supports",
+   "evidence_span": "Do you support high schools banning student cellphone use during the school day? Response Overall % (SE) Yes 70.8 (2.1) No 29.2 (2.1)",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 95,
+   "sentence": "The margin of error is about 4 points either way.",
+   "marker": "{computed: 1.96 × 2.1 standard error (P-033) ≈ 4.1 percentage points}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Recomputed: 1.96 × 2.1 = 4.116, about 4.1 points. Suggest saying it is at 95% confidence.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 95,
+   "sentence": "Reasons given within each group come from smaller samples and are less precise, and parents could give more than one reason.",
+   "marker": "{analysis: standard errors of 1.8 to 4.2 points in P-034 and P-035; the opposing reasons sum to more than 100%}",
+   "verdict": "questionable",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "The SE range (1.8 to 4.2) and the sums are right: opposing reasons add to 208.6% and supporting reasons to 288.3%, so multiple answers were allowed. But 'are less precise' is not true across the board. The 87.7% supporter figure has SE 1.8, smaller than the 2.1 SE of the headline 70.8%. Only the opposing-group reasons (SE 2.9 to 4.2) and most supporting reasons (2.6 to 2.9) are less precise.",
+   "suggested_fix": "Reasons were asked only within each group, so most come from smaller samples with larger error margins (standard errors up to 4.2 points among opponents), and parents could give more than one reason."
+  },
+  {
+   "line": 97,
+   "sentence": "Two studies appear below.",
+   "marker": "[P-055, P-041]",
+   "verdict": "supports",
+   "evidence_span": "The Impact of Cellphone Bans in Schools on Student Outcomes: Evidence from Florida",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 97,
+   "sentence": "The Florida study is a 2025 working paper designed to estimate cause and effect.",
+   "marker": "[P-055, P-038]",
+   "verdict": "supports",
+   "evidence_span": "examining the causal effects of bans on student test scores, suspensions, and absences using detailed student-level data from Florida and a quasi-experimental research strategy",
+   "correct_passage": "",
+   "problem": "Accurate, but it leaves out P-038's 'quasi-experimental' (not randomized) design, while the English study's design limits are spelled out (see framing issues).",
+   "suggested_fix": "The Florida study is a 2025 working paper that uses a quasi-experimental (non-randomized) design to estimate cause and effect."
+  },
+  {
+   "line": 97,
+   "sentence": "A working paper is an early research report shared before formal publication.",
+   "marker": "{analysis: plain-language definition, not from the cited sources}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "This is accurate background and is disclosed as such. It is not really an inference from the sources.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 97,
+   "sentence": "The English study compared 30 schools at one point in time; its students were ages 12 to 15, and its strict schools banned recreational phone use.",
+   "marker": "[P-041, P-042]",
+   "verdict": "supports",
+   "evidence_span": "cross-sectional observational study with adolescents from 30 English secondary schools, comprising 20 with restrictive (recreational phone use is not permitted)",
+   "correct_passage": "",
+   "problem": "Minor: the participants (1,227) were 12 to 15, not necessarily all students at the schools.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 97,
+   "sentence": "We read each study's summary, not the full paper.",
+   "marker": "{editorial: process note}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "This disclosure matters. It means negative claims about what the studies did not measure (lines 109 and 122) rest only on the abstract.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 99,
+   "sentence": "Our archived sources quote four officials who support the law and one named critic, a teacher.",
+   "marker": "{analysis: Gov. Kemp (P-029), Woods (P-036), Hilton (P-051) and Harrell (P-044) for the law; Adams (P-047 to P-049) against}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "The count checks out. Gazmararian (P-037) and the student (P-052) are not officials, and Speaker Burns is mentioned but not quoted in P-028.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 99,
+   "sentence": "That reflects whom those sources quoted, not how many people hold each view.",
+   "marker": "{editorial}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 99,
+   "sentence": "In the Senate, 13 senators voted for an amendment that would have let districts allow phones between classes.",
+   "marker": "[P-026, P-027]",
+   "verdict": "partial",
+   "evidence_span": "\"name\": \"Senate Vote #783\", \"yea\": 13, \"nay\": 38",
+   "correct_passage": "",
+   "problem": "The vote count is right, but the amendment applied only to grades 9-12 ('for students in grades nine through 12', P-027). Without that limit the sentence reads as if all grades were covered. It also omits that the Senate then passed the bill 52-0 (P-025), so at least 9 of the 13 amendment supporters voted for the final bill (56 senators; 3 not voting and 1 excused on the final vote).",
+   "suggested_fix": "In the Senate, 13 senators voted for an amendment that would have let districts allow high school students to use phones between classes; the bill then passed 52 to 0."
+  },
+  {
+   "line": 105,
+   "sentence": "Supporters say fewer distractions mean more learning; a Florida study found test scores rose in the second year of phone bans.",
+   "marker": "[P-029, P-036, P-040]",
+   "verdict": "supports",
+   "evidence_span": "we find significant improvements in student test scores in the second year of the ban",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 106,
+   "sentence": "Gov. Brian Kemp said the bills he signed would \"reduce distractions in the classroom.\"",
+   "marker": "[P-029]",
+   "verdict": "supports",
+   "evidence_span": "The bills I signed today implement proven strategies to improve literacy and math scores, reduce distractions in the classroom",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 106,
+   "sentence": "State School Superintendent Richard Woods said learning without distractions is \"both an academic issue and a mental health issue.\"",
+   "marker": "[P-036]",
+   "verdict": "supports",
+   "evidence_span": "to learn without distractions is both an academic issue and a mental health issue",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 106,
+   "sentence": "Among parents who support a ban, 87.7% expected better focus and learning.",
+   "marker": "[P-034]",
+   "verdict": "supports",
+   "evidence_span": "Improved academic focus and learning 87.7 (1.8)",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 107,
+   "sentence": "In Florida, test scores rose in the second year of school phone bans, unexcused absences fell, and the effects were larger in middle and high schools.",
+   "marker": "[P-040]",
+   "verdict": "supports",
+   "evidence_span": "The effects of cellphone bans are more pronounced in middle and high school settings where student smartphone ownership is more common",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 107,
+   "sentence": "Fewer unexcused absences may explain a large share of the test-score gains.",
+   "marker": "[P-040]",
+   "verdict": "supports",
+   "evidence_span": "an effect that may explain a large fraction of the test score gains",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 108,
+   "sentence": "Who disagrees: No one in the sources we reviewed disputed this directly.",
+   "marker": "{analysis: none of the archived statements argues that bans hurt learning}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 109,
+   "sentence": "We found no evidence against this claim, and the English study didn't measure test scores.",
+   "marker": "{analysis: neither archived study reports a negative learning effect; the English study's outcomes are listed in P-064}",
+   "verdict": "questionable",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "P-064 says 'Secondary outcomes included smartphone and social media time'. 'Included' marks a partial list, and the authors say they read only the abstract (line 97). The passages therefore don't establish that the English study did not measure academic outcomes such as attainment. If the full paper reports attainment with no difference, that would be evidence against this claim. As written, the 'What challenges it' slot for a pro-law claim is effectively emptied on an unverified negative.",
+   "suggested_fix": "We found no evidence against this claim in the study summaries we read; the English study's summary reports no test-score results. Check the full paper before saying it didn't measure them."
+  },
+  {
+   "line": 110,
+   "sentence": "The gains came only in the second year, after a first year with more suspensions.",
+   "marker": "[P-039, P-040]",
+   "verdict": "partial",
+   "evidence_span": "significant improvements in student test scores in the second year of the ban after that initial adjustment period",
+   "correct_passage": "",
+   "problem": "P-040 reports significant test-score gains in the second year 'after that initial adjustment period'. It does not say 'only', and it gives no timing for the drop in unexcused absences (another 'gain'). 'Only' is stronger than the abstract.",
+   "suggested_fix": "Test-score gains appeared in the second year, after a first year in which suspensions rose."
+  },
+  {
+   "line": 110,
+   "sentence": "The study used data from Florida only.",
+   "marker": "[P-038]",
+   "verdict": "supports",
+   "evidence_span": "using detailed student-level data from Florida",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 111,
+   "sentence": "Whether Georgia high schools will see results like Florida's, since we found no Georgia high school results yet.",
+   "marker": "{analysis: none in the sources reviewed; Georgia's rule isn't required until July 1, 2027 (P-007)}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Valid if 'results' means measured results. Harrell (P-046) claims high school bans have 'been very successful', so 'no measured Georgia high school results' would be more precise.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 117,
+   "sentence": "Supporters expect better mental health and friendships; the one study we found, of younger students in England, found no evidence of a well-being difference.",
+   "marker": "[P-034, P-042]",
+   "verdict": "supports",
+   "evidence_span": "Mean WEMWBS score was 47 (SD = 9) with no evidence of a difference between groups",
+   "correct_passage": "",
+   "problem": "Minor: participants were 12 to 15, so the 14- and 15-year-olds overlap with Georgia 9th and 10th graders. 'Younger' is broadly fair but slightly discounts the study's relevance.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 118,
+   "sentence": "Woods called for extending the ban \"to end the harm caused by constant technology access and interruption.\"",
+   "marker": "[P-036]",
+   "verdict": "supports",
+   "evidence_span": "to be extended into grades 9-12, to end the harm caused by constant technology access and interruption",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 118,
+   "sentence": "The bill's sponsor, Rep. Scott Hilton, said, \"The technology meant to bring people together actually makes us feel further apart.\"",
+   "marker": "[P-051]",
+   "verdict": "supports",
+   "evidence_span": "The technology meant to bring people together actually makes us feel further apart",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 118,
+   "sentence": "Students testified in support at the hearing; one told lawmakers that phones have become addictive for teens.",
+   "marker": "[P-052]",
+   "verdict": "supports",
+   "evidence_span": "told lawmakers that phones have become addictive for teens",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 118,
+   "sentence": "Among parents who support a ban, 71.2% expected better in-person social interactions and 69.1% better mental health.",
+   "marker": "[P-034]",
+   "verdict": "supports",
+   "evidence_span": "Improved in-person social interactions 71.2 (2.6) Improved mental health and wellbeing 69.1 (2.6)",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 119,
+   "sentence": "Hilton said districts had reported less isolation among younger students under all-day phone limits.",
+   "marker": "[P-051]",
+   "verdict": "supports",
+   "evidence_span": "districts reported improved focus and less isolation among younger students under",
+   "correct_passage": "",
+   "problem": "Minor attribution ambiguity: P-051 reads 'Hilton ... said the state should move quickly after districts reported...'. The district reports may be the reporter's context rather than Hilton's own words. Reading them as Hilton's claim is plausible but not certain.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 119,
+   "sentence": "In the English study, strict rules went with about 40 minutes less phone time and about 32 minutes less social media time during school.",
+   "marker": "{computed: 0.67 hours × 60 ≈ 40 minutes; 0.54 hours × 60 ≈ 32 minutes (P-042)}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Recomputed: 0.67 × 60 = 40.2 and 0.54 × 60 = 32.4, so the arithmetic is right. 'Went with' is appropriately associational. As support for a mental-health claim it is indirect: it shows less in-school phone time, not better well-being.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 120,
+   "sentence": "The English study's authors said there is \"no evidence that restrictive school policies are associated with overall phone and social media use or better mental wellbeing in adolescents.\"",
+   "marker": "[P-043]",
+   "verdict": "supports",
+   "evidence_span": "There is no evidence that restrictive school policies are associated with overall phone and social media use or better mental wellbeing in adolescents",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 121,
+   "sentence": "That study found no evidence of better well-being at schools with strict rules, or of less phone use overall.",
+   "marker": "[P-042, P-043]",
+   "verdict": "supports",
+   "evidence_span": "there was no evidence for differences when comparing usage time on weekdays or weekends",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 122,
+   "sentence": "The district reports Hilton described were about younger students.",
+   "marker": "[P-051]",
+   "verdict": "supports",
+   "evidence_span": "improved focus and less isolation among younger students",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 122,
+   "sentence": "The article gives no measurements behind them.",
+   "marker": "{analysis: P-051 reports the claim without data}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Minor scope issue: the support is one archived excerpt (P-051), but the sentence speaks for the whole article.",
+   "suggested_fix": "The article excerpt we archived gives no measurements behind them."
+  },
+  {
+   "line": 122,
+   "sentence": "The English study can show links, not cause and effect, and it didn't measure friendships.",
+   "marker": "{analysis: cross-sectional design (P-041); its outcomes are listed in P-064}",
+   "verdict": "questionable",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "The first half is valid because P-041 says the study is 'cross-sectional observational'. But 'didn't measure friendships' rests on P-064's 'Secondary outcomes included...', which is a partial list. Only the abstract was read, so the passages can't show which outcomes were left out.",
+   "suggested_fix": "The English study can show links, not cause and effect, and its summary reports no results on friendships."
+  },
+  {
+   "line": 123,
+   "sentence": "How Georgia teens' well-being and friendships will change, because no study we found tested a rule like Georgia's on high schoolers.",
+   "marker": "{editorial: reason drawn from P-041, P-042 and P-064}",
+   "verdict": "questionable",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "This is too broad. The Florida study (P-040) did examine bans in high school settings, but it measured test scores, suspensions and absences, not well-being. The supportable reason is narrower: no study we found measured well-being or friendships among high schoolers under an all-day ban. The passages also don't show that Florida's rule is 'like Georgia's'.",
+   "suggested_fix": "...because no study we found measured well-being or friendships among high school students under an all-day ban."
+  },
+  {
+   "line": 129,
+   "sentence": "Supporters point to the 2025 law for younger grades and to schools that already limit phones.",
+   "marker": "[P-028, P-046]",
+   "verdict": "supports",
+   "evidence_span": "builds on the success of HB 340, signed by the Governor in 2025, which banned these devices in K-8 classrooms",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 129,
+   "sentence": "The evidence so far is reports, not measured results.",
+   "marker": "{analysis: no data appears in P-028, P-046, P-051 or P-053}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 130,
+   "sentence": "The governor's office said HB 1009 \"builds on the success of HB 340,\" the 2025 law for kindergarten through 8th grade.",
+   "marker": "[P-028]",
+   "verdict": "supports",
+   "evidence_span": "builds on the success of HB 340, signed by the Governor in 2025, which banned these devices in K-8 classrooms",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 130,
+   "sentence": "Sen. Sally Harrell said, \"It has been done in high schools already, it’s been very successful.\"",
+   "marker": "[P-046]",
+   "verdict": "supports",
+   "evidence_span": "It has been done in high schools already",
+   "correct_passage": "",
+   "problem": "The words are verbatim, but the quote is cut off with a period inside the quotation marks. The original continues '...very successful and we look forward to rolling that out statewide'. Also, P-046 says only 'she said', so the attribution to Harrell rests on the passage label and context.",
+   "suggested_fix": "Sen. Sally Harrell said, \"It has been done in high schools already, it’s been very successful...\""
+  },
+  {
+   "line": 131,
+   "sentence": "Hilton said districts had reported improved focus among younger students under all-day phone limits.",
+   "marker": "[P-051]",
+   "verdict": "supports",
+   "evidence_span": "districts reported improved focus and less isolation among younger students under",
+   "correct_passage": "",
+   "problem": "Same minor attribution ambiguity as line 119.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 132,
+   "sentence": "Who disagrees: No one in the sources we reviewed disputed that the rules work.",
+   "marker": "{analysis: none of the archived statements disputes it; teacher Darryl Adams's concerns were about enforcement, emergencies and older students (P-047 to P-049)}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Valid for Georgia. The English study's authors (P-043) question whether such policies work 'in their current form', but they are not writing about Georgia.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 133,
+   "sentence": "The high school ban was signed on May 5, 2026, before the statewide K-8 deadline of July 1, 2026.",
+   "marker": "[P-024, P-006]",
+   "verdict": "supports",
+   "evidence_span": "Beginning no later than July 1, 2026, no public school student in kindergarten through grade eight",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 133,
+   "sentence": "So statewide K-8 results weren't available yet.",
+   "marker": "{analysis: follows from the two dates}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Valid for statewide results. Some districts had started early (P-051), so district-level reports could exist, which the document does acknowledge elsewhere.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 134,
+   "sentence": "What's missing: No source we reviewed measured how the K-8 ban is working.",
+   "marker": "{analysis: none of the archived sources reports K-8 outcome data}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 135,
+   "sentence": "What's uncertain: How well the K-8 rules work statewide, because they only had to start in 2026.",
+   "marker": "{editorial: reason from P-006}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 141,
+   "sentence": "Students can't use phones during the school day, so families must reach them through the school.",
+   "marker": "[P-007, P-011]",
+   "verdict": "supports",
+   "evidence_span": "Require parents or guardians who need to communicate with their student during the school day to contact the school directly",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 141,
+   "sentence": "How well school alerts work in a crisis is unknown.",
+   "marker": "{analysis: no data on alert performance in the sources reviewed}",
+   "verdict": "questionable",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "This overstates the support. The basis is only that the reviewed sources have no data, but 'is unknown' says nobody knows. Line 147 words it correctly.",
+   "suggested_fix": "Our sources have no data on how well school alerts work in a crisis."
+  },
+  {
+   "line": 142,
+   "sentence": "Among parents who oppose a ban, 74.8% said there would be no way to reach their child in an emergency.",
+   "marker": "[P-035]",
+   "verdict": "supports",
+   "evidence_span": "No way to reach child during emergency 74.8 (3.5)",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 142,
+   "sentence": "Teacher and parent Darryl Adams said phones can be critical for families seeking information during emergencies.",
+   "marker": "[P-049]",
+   "verdict": "supports",
+   "evidence_span": "As a parent, Adams said phones can be critical for families seeking information during emergencies.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 143,
+   "sentence": "Under the law, parents who need to reach their child during the school day must contact the school directly.",
+   "marker": "[P-011]",
+   "verdict": "supports",
+   "evidence_span": "Require parents or guardians who need to communicate with their student during the school day to contact the school directly",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 143,
+   "sentence": "The law has no emergency exception for students' own devices.",
+   "marker": "{analysis: the full enacted text (P-001 to P-019, P-056 to P-061) allows access only under a plan that requires a device (P-013) or where access is \"required by law\" (P-007); neither is an emergency exception}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "I checked the full text and found no emergency carve-out, and P-011(A) sends 'all emergency communication' through school systems. One caveat: 'required by law' could cover another statute that requires access in an emergency, so 'no emergency exception in this law' is the precise version.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 143,
+   "sentence": "Adams said that when two of his daughters were in a lockdown, he could not get updates for hours.",
+   "marker": "[P-049]",
+   "verdict": "supports",
+   "evidence_span": "He recalled a time when two of his daughters were in lockdown and he was unable to get updates for hours.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 144,
+   "sentence": "Sen. Sally Harrell said, \"We’ve gotten very dependent on being able to reach our kids whenever we want to, but that education time needs to be protected.\"",
+   "marker": "[P-044]",
+   "verdict": "supports",
+   "evidence_span": "gotten very dependent on being able to reach our kids whenever we want to, but that education time needs to be protected",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 144,
+   "sentence": "Among parents who support a ban, 60.3% expected better physical health and safety.",
+   "marker": "[P-034]",
+   "verdict": "supports",
+   "evidence_span": "Improved physical health and safety 60.3 (2.9)",
+   "correct_passage": "",
+   "problem": "The figure is accurate, but the survey item is general 'physical health and safety', not emergency communication. Using it as a rebuttal to the emergency-contact concern stretches it (see framing issues).",
+   "suggested_fix": ""
+  },
+  {
+   "line": 145,
+   "sentence": "An Emory public health professor, Julie Gazmararian, said, \"Parents’ concerns about emergency access are valid and understandable. However, effective cellphone policies can address this...\"",
+   "marker": "[P-037]",
+   "verdict": "supports",
+   "evidence_span": "effective cellphone policies can address this by establishing rapid parent notification systems and guaranteed access to phones when needed",
+   "correct_passage": "",
+   "problem": "The quote is verbatim. Minor: P-037 calls her a 'professor of epidemiology at the Rollins School of Public Health'. 'Emory' comes from the passage label and source (S12), not the passage text.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 145,
+   "sentence": "The law requires emergency communication to go through school systems run by staff.",
+   "marker": "[P-011]",
+   "verdict": "supports",
+   "evidence_span": "Facilitate all emergency communication through school emergency communication management systems and coordinated by school personnel",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 146,
+   "sentence": "The law doesn't require the rapid notification or guaranteed phone access Gazmararian described, though districts can add them because the law sets minimum rules.",
+   "marker": "{analysis: no such requirement in the full enacted text; P-008 says policies must \"at a minimum\" include its list}",
+   "verdict": "questionable",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "The first clause is right. The second goes too far. 'At a minimum' (P-008) lets districts add policy provisions, but P-007 bars student access to personal devices 'except as otherwise provided in this Code section or required by law', and P-011(A) sends 'all emergency communication' through school systems. A district therefore cannot guarantee students access to their own phones in emergencies. It can add rapid parent notification and provide school phones (school equipment, P-017 and P-058). The sentence also conflicts with line 143 ('no emergency exception').",
+   "suggested_fix": "The law doesn't require the rapid notification or guaranteed phone access Gazmararian described. Districts can add faster parent alerts and access to school phones, but the law doesn't let them allow students' own phones in emergencies unless a plan or another law requires it."
+  },
+  {
+   "line": 146,
+   "sentence": "Adams's lockdown account is one family's experience; the source doesn't say when it happened or what phone rules applied.",
+   "marker": "{analysis: based on P-049}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Accurate, but similar caveats are not applied to supporters' anecdotal claims, such as Woods's 'nothing but support from teachers' (see framing issues).",
+   "suggested_fix": ""
+  },
+  {
+   "line": 147,
+   "sentence": "What's uncertain: How well school alert systems will reach families in a real crisis, since our sources have no data on how they perform.",
+   "marker": "{editorial}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 153,
+   "sentence": "Teacher Darryl Adams worries enforcement will burden staff and cause confrontations; in Florida, enforcing phone bans led to more suspensions at first.",
+   "marker": "[P-047, P-039]",
+   "verdict": "supports",
+   "evidence_span": "said he worries the bill would put the burden on teachers and administrators to police phones, a task that can invite conflict",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 153,
+   "sentence": "No source measured staff workload.",
+   "marker": "{analysis: none of the archived sources includes workload data}",
+   "verdict": "questionable",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "The scope is too broad. The basis covers only the archived sources, but the sentence says no source anywhere did. Line 158 words it correctly ('No source we reviewed').",
+   "suggested_fix": "No source we reviewed measured staff workload."
+  },
+  {
+   "line": 154,
+   "sentence": "Teacher Darryl Adams said he worries the bill would make teachers and administrators responsible for enforcing phone rules, which can lead to conflict.",
+   "marker": "[P-047]",
+   "verdict": "supports",
+   "evidence_span": "said he worries the bill would put the burden on teachers and administrators to police phones, a task that can invite conflict",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 154,
+   "sentence": "He said, \"We have a lot of older teachers that do not want to have that confrontation.\"",
+   "marker": "[P-047]",
+   "verdict": "supports",
+   "evidence_span": "We have a lot of older teachers that do not want to have that confrontation",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 155,
+   "sentence": "Each school system must monitor and enforce the rules, which may include assigning staff and auditing phone storage.",
+   "marker": "[P-014]",
+   "verdict": "supports",
+   "evidence_span": "which may include, but need not be limited to, assigning designated school personnel to oversee implementation and adherence to such policies and procedures, conducting periodic audits of personal electronic device storage",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 155,
+   "sentence": "Consequences can include taking students' devices.",
+   "marker": "[P-012]",
+   "verdict": "supports",
+   "evidence_span": "verbal warnings, confiscation of personal electronic devices, parental notification",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 155,
+   "sentence": "In Florida, enforcing phone bans led to a significant short-term rise in suspensions, especially among Black students.",
+   "marker": "[P-039]",
+   "verdict": "supports",
+   "evidence_span": "the enforcement of cellphone bans in schools led to a significant increase in student suspensions in the short-term, especially among Black students",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 156,
+   "sentence": "Who disagrees: Woods told lawmakers he had heard nothing but support from teachers across Georgia.",
+   "marker": "[P-053]",
+   "verdict": "supports",
+   "evidence_span": "He told lawmakers he has heard nothing but support from teachers across Georgia.",
+   "correct_passage": "",
+   "problem": "Accurate attribution, but it is given without caveat. The same sources include a teacher (Adams, P-047) who opposes key parts of the law, and the document caveats Adams's anecdote (line 146) but not this one (see framing issues).",
+   "suggested_fix": ""
+  },
+  {
+   "line": 156,
+   "sentence": "Sen. Sally Harrell said legislators want to hear teachers say, \"I can just teach again.\"",
+   "marker": "[P-045]",
+   "verdict": "supports",
+   "evidence_span": "I can just teach again",
+   "correct_passage": "",
+   "problem": "Accurate, but it states what legislators hope to hear. It is not a rebuttal to the workload concern.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 157,
+   "sentence": "What challenges it: In Florida, the rise in suspensions began to fade after the first year.",
+   "marker": "[P-039]",
+   "verdict": "supports",
+   "evidence_span": "disciplinary actions began to dissipate after the first year",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 157,
+   "sentence": "Districts choose their own storage and enforcement methods, and the state must give them guidance and technical support.",
+   "marker": "[P-009, P-050, P-016]",
+   "verdict": "supports",
+   "evidence_span": "The bill does not require a single statewide enforcement method, leaving districts to decide how to keep phones out of",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 158,
+   "sentence": "What's missing: No source we reviewed measured teacher or staff workload.",
+   "marker": "{analysis: none of the archived sources includes workload data}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 159,
+   "sentence": "What's uncertain: How much work each district's approach will create, since district policies were not part of our sources.",
+   "marker": "{editorial}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 165,
+   "sentence": "Teacher Darryl Adams and many parents who oppose the ban say older students should keep some phone access.",
+   "marker": "[P-048, P-035]",
+   "verdict": "supports",
+   "evidence_span": "high school students, who are older and often more independent, should be allowed to keep access to their phones",
+   "correct_passage": "",
+   "problem": "Minor: the survey (P-035) asked about a high school ban in general, not HB 1009, and recorded reasons, not an 'older students' argument as such.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 165,
+   "sentence": "This is mainly a question of values.",
+   "marker": "{editorial}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 166,
+   "sentence": "Teacher Darryl Adams said high school students, who are older and often more independent, should be allowed to keep access to their phones.",
+   "marker": "[P-048]",
+   "verdict": "supports",
+   "evidence_span": "Adams also argues that high school students, who are older and often more independent, should be allowed to keep access to their phones",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 166,
+   "sentence": "Among parents who oppose a ban, 45.5% said it should be the parents' choice and 41.9% said students need to learn responsible use.",
+   "marker": "[P-035]",
+   "verdict": "supports",
+   "evidence_span": "Should be parental choice 45.5 (4.2) No way to reach child during emergency 74.8 (3.5) Phones needed for health tools/apps 26.6 (3.6) Phones needed for schoolwork 19.8 (2.9) Students need to learn responsible use 41.9 (4.2)",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 167,
+   "sentence": "Among parents who oppose a ban, 26.6% said phones are needed for health tools or apps and 19.8% said they're needed for schoolwork.",
+   "marker": "[P-035]",
+   "verdict": "supports",
+   "evidence_span": "Phones needed for health tools/apps 26.6 (3.6) Phones needed for schoolwork 19.8 (2.9)",
+   "correct_passage": "",
+   "problem": "The numbers are right, but these reasons are about need, not whether teens are old enough to manage phones. They don't directly support the claim, and the law partly addresses both needs (P-013 plan exception, P-017 school laptops and tablets), which goes unmentioned here.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 168,
+   "sentence": "Students testified in support of the ban, and a 17-year-old said, \"Social media is the cigarette of our generation.\"",
+   "marker": "[P-052]",
+   "verdict": "supports",
+   "evidence_span": "Social media is the cigarette of our generation",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 169,
+   "sentence": "In Florida, the effects of phone bans were larger in middle and high schools, \"where student smartphone ownership is more common.\"",
+   "marker": "[P-040]",
+   "verdict": "supports",
+   "evidence_span": "more pronounced in middle and high school settings where student smartphone ownership is more common",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 170,
+   "sentence": "What's missing: Our sources don't measure whether teens learn responsible phone use with or without a ban.",
+   "marker": "{analysis: none of the archived sources addresses this}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 171,
+   "sentence": "What's uncertain: This is mainly a disagreement about who should decide and what school is for.",
+   "marker": "{editorial}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  }
+ ],
+ "framing_issues": [
+  {
+   "line": 156,
+   "text": "Who disagrees: Woods told lawmakers he had heard nothing but support from teachers across Georgia.",
+   "issue": "Uneven caveats. Woods's sweeping anecdotal claim appears twice (lines 81 and 156) with no caveat, even though the same sources quote a teacher (Adams) who opposes the law. Adams's own anecdote gets an explicit 'one family's experience' caveat (line 146). Either caveat both or neither, for example by noting that Woods's statement is his own impression and that Adams, a teacher, voiced concerns.",
+   "severity": "medium"
+  },
+  {
+   "line": 81,
+   "text": "In a Florida study, test scores rose ..., and effects were larger in middle and high schools.",
+   "issue": "One-sided use of an ambiguous finding. P-040's 'the effects of cellphone bans are more pronounced in middle and high school settings' doesn't say it is limited to the gains; it may also cover the suspension rise (P-039). The document presents it only as a benefit (lines 81 and 107) and as a rebuttal (line 169), never alongside the costs.",
+   "severity": "low"
+  },
+  {
+   "line": 97,
+   "text": "The Florida study is a 2025 working paper designed to estimate cause and effect.",
+   "issue": "Uneven methodological caveats between studies. The pro-ban Florida study is described as 'designed to estimate cause and effect' without P-038's 'quasi-experimental' (non-randomized) qualifier. The skeptical English study's limits are stated twice ('at one point in time', 'can show links, not cause and effect').",
+   "severity": "low"
+  },
+  {
+   "line": 109,
+   "text": "We found no evidence against this claim, and the English study didn't measure test scores.",
+   "issue": "This empties the 'What challenges it' slot for a pro-law claim on the basis of an abstract's partial outcome list ('Secondary outcomes included...', P-064). The same reasoning is used at line 122 ('didn't measure friendships'). The gap may be real, but the document states it with more certainty than the passages allow, and it favors one side.",
+   "severity": "medium"
+  },
+  {
+   "line": 81,
+   "text": "Who benefits: ... Among parents who back a ban, 87.7% expected ... Sen. Sally Harrell said legislators want to hear teachers say ... Woods told lawmakers ...",
+   "issue": "Option B's 'Who benefits' mixes one measured outcome (Florida) with expectations (survey reasons), a legislator's aspiration and an anecdote. Under a 'benefits' heading, these read as demonstrated benefits. Consider labeling them 'what supporters expect'.",
+   "severity": "low"
+  },
+  {
+   "line": 74,
+   "text": "Who pays: Students in districts without limits keep their phones in class.",
+   "issue": "Calling continued phone access a cost to students adopts the pro-ban premise. Option A also lists the missed Florida gains as a cost but doesn't list avoiding the Florida first-year suspension rise (P-039) as a benefit, while Option B lists that rise as a cost.",
+   "severity": "low"
+  },
+  {
+   "line": 99,
+   "text": "In the Senate, 13 senators voted for an amendment that would have let districts allow phones between classes.",
+   "issue": "Missing context. Placed right after the count of supporters and critics, this can read as 13 senators opposing the law. The Senate then passed the bill 52-0 (P-025), so at least 9 of those 13 voted for it. The sentence also drops the amendment's grades 9-12 limit.",
+   "severity": "low"
+  },
+  {
+   "line": 144,
+   "text": "Among parents who support a ban, 60.3% expected better physical health and safety.",
+   "issue": "This stretches a survey item. General 'physical health and safety' is offered as a counter to the specific concern about emergency contact.",
+   "severity": "low"
+  },
+  {
+   "line": 145,
+   "text": "The law requires emergency communication to go through school systems run by staff.",
+   "issue": "Listing the law's own requirement under 'What challenges it' implies it answers the concern. But the document says there is no data on how such systems perform (lines 141 and 147), and Gazmararian's quote first calls the concern 'valid and understandable'.",
+   "severity": "low"
+  },
+  {
+   "line": 167,
+   "text": "Among parents who oppose a ban, 26.6% said phones are needed for health tools or apps and 19.8% said they're needed for schoolwork.",
+   "issue": "These reasons are about need, not maturity, so they don't support the 'old enough to manage' claim. The document also doesn't mention that the law partly addresses both needs (P-013 plan exception, P-017 school-provided laptops and tablets).",
+   "severity": "low"
+  },
+  {
+   "line": 8,
+   "text": "Some students with health or disability plans that require a device are exempt.",
+   "issue": "In the most-read section, 'exempt' overstates a limited, as-necessary permission (P-013), which could mislead families about what students with plans may do.",
+   "severity": "medium"
+  },
+  {
+   "line": 57,
+   "text": "Also new in this law: Districts must set rules for off-campus activities like field trips, school transportation and sports.",
+   "issue": "This pre-existing requirement (P-065) is listed under 'Also new in this law', which suggests the requirement itself is new.",
+   "severity": "low"
+  },
+  {
+   "line": 82,
+   "text": "The law gives schools state guidance but sets aside no money",
+   "issue": "Policy acts rarely appropriate funds; that happens in budget acts, which were not reviewed. Without that context, readers may infer there is no state funding at all.",
+   "severity": "low"
+  },
+  {
+   "line": 74,
+   "text": "Woods called for extending the ban ...",
+   "issue": "Woods is referred to by surname at lines 74 and 81 before he is identified as State School Superintendent Richard Woods (line 106). Readers of Layer 3 can't tell who he is or what his role is.",
+   "severity": "low"
+  }
+ ],
+ "summary": {
+  "units_checked": 154,
+  "supports": 100,
+  "partial": 7,
+  "does_not_support": 0,
+  "wrong_span": 0,
+  "questionable_or_invalid_tags": 8
+ }
+}

@@ -1,0 +1,163 @@
+{
+  "role": "supporter-advocate",
+  "rating": 4,
+  "missing_arguments": [
+    {
+      "argument": "Card 6 leaves out the law's own answers to the parent reasons it lists as support: a student whose IEP, Section 504 plan or medical plan requires a device may use it, and schools may still provide laptops and tablets for schoolwork. Both belong under card 6's 'What challenges it'.",
+      "passages": ["P-013", "P-017"]
+    },
+    {
+      "argument": "Card 6 builds its values case partly on opposing parents' 'should be parental choice' answer but never says that most Georgia parents (70.8%, margin about 4 points) support a high school ban. That is directly relevant context for 'who should decide'.",
+      "passages": ["P-031", "P-032", "P-033"]
+    },
+    {
+      "argument": "The law has a built-in way to fix problems. Districts must regularly review whether their policies work and adjust them to fit 'educational goals and student well-being'. They must revisit policies every year, can go beyond the minimum rules (for example on emergency contact) and get state guidance and technical support. This is the supporters' answer to the emergency (card 4) and enforcement (card 5) concerns. The page mentions the review duty neutrally (line 56), as a cost (line 82) and as a question to ask (line 34), but never as a safeguard.",
+      "passages": ["P-015", "P-008", "P-016"]
+    },
+    {
+      "argument": "The Florida authors read the first-year suspension rise as 'potentially suggesting a new steady state after an initial adjustment period', and test scores rose after that period. Card 5 and Option B report the fade but not this reading, which is the strongest evidence-based reply to the conflict concern.",
+      "passages": ["P-039", "P-040"]
+    },
+    {
+      "argument": "The General Assembly wrote the law's purpose into the statute: to 'minimize distractions, improve academic outcomes, and increase meaningful interactions and focused learning experiences'. Layer 2 states it, but card 1's 'Who says it' does not cite it, and the 30-second version lists only what students can't do.",
+      "passages": ["P-057"]
+    },
+    {
+      "argument": "Option B's 'Who benefits' (line 81) leaves out the social and mental-health benefits supporters claim: 71.2% of supporting parents expected better in-person social interactions and 69.1% better mental health, Hilton reported improved focus and less isolation, and Woods spoke of ending 'the harm caused by constant technology access'. It does include the smaller 60.3% safety figure. These points appear in card 2 but are missing from the tradeoffs summary.",
+      "passages": ["P-034", "P-051", "P-036"]
+    },
+    {
+      "argument": "Line 99 should note the bill's broad, bipartisan passage: Harrell said the proposal 'already has bipartisan support', and the final votes were 145-20 in the House and 52-0 in the Senate. This is context, not a merits argument, but line 99 needs it next to the 13-senator amendment vote.",
+      "passages": ["P-044", "P-025"]
+    }
+  ],
+  "unfair_wording": [
+    {
+      "line": 107,
+      "text": "In Florida, test scores rose in the second year of school phone bans, unexcused absences fell, and the effects were larger in middle and high schools.",
+      "why": "P-040 reports 'significant improvements' in test scores and that bans 'significantly reduce' unexcused absences. Every benefit mention (lines 74, 81, 105, 107) drops 'significant' and uses plain verbs ('rose', 'fell'). Both suspension mentions (lines 82, 155) keep 'significant' and the causal 'led to'. Line 81 also credits the gains to 'a Florida study', while line 82 states the suspension rise as a fact about Florida. Both findings come from the same abstract and the same design, so they should be worded at the same strength. Either add 'significant' to the gains or drop it from suspensions and explain 'statistically significant' once.",
+      "severity": "medium"
+    },
+    {
+      "line": 99,
+      "text": "In the Senate, 13 senators voted for an amendment that would have let districts allow phones between classes.",
+      "why": "This comes right after the caveat that quote counts don't show 'how many people hold each view', so it reads as a measure of hidden opposition. In fact no senator voted against the bill (52-0, P-025). The paragraph also leaves out the 20 House 'no' votes, the 145-20 House passage and Harrell's 'bipartisan support' (P-044). Its count of 'four officials' for the law also omits the students who testified in support (P-052), while the critic is presented as 'a teacher'. Suggested: 'Twenty House members voted against the bill, and 13 senators backed an amendment to allow phones between classes before the Senate passed the bill 52 to 0.'",
+      "severity": "medium"
+    },
+    {
+      "line": 167,
+      "text": "Among parents who oppose a ban, 26.6% said phones are needed for health tools or apps and 19.8% said they're needed for schoolwork.",
+      "why": "These are listed as support for 'old enough to manage their own phones', but neither reason is about maturity. The card never says that the law already allows a device a student's medical, IEP or 504 plan requires (P-013), or that schools may provide laptops and tablets (P-017). As written, readers may think the law leaves these needs unmet.",
+      "severity": "medium"
+    },
+    {
+      "line": 110,
+      "text": "The gains came only in the second year, after a first year with more suspensions.",
+      "why": "The source doesn't say 'only'. It reports gains 'in the second year of the ban after that initial adjustment period' (P-040). The line is a timing detail filed under 'What's missing', and it brings the critics' cost into the supporters' card. Card 5, the cost card, gets no matching note that gains followed the adjustment period. Suggested: 'The gains appeared in the second year, after a first-year adjustment period with more suspensions.'",
+      "severity": "low"
+    },
+    {
+      "line": 115,
+      "text": "Evidence: Uncertain (one comparison of 12- to 15-year-olds in England found no well-being difference; it couldn't test cause and effect)",
+      "why": "'Found no well-being difference' overstates the source, which says 'no evidence of a difference' (P-042, P-043). The card's own In short (line 117) words it correctly. Not finding evidence of a difference is not the same as showing there is none.",
+      "severity": "low"
+    },
+    {
+      "line": 117,
+      "text": "Supporters expect better mental health and friendships; the one study we found, of younger students in England, found no evidence of a well-being difference.",
+      "why": "The rebuttal is built into the supporter card's one-line summary. The summaries of critic cards 4 and 6 (lines 141, 165) don't include their rebuttals (Gazmararian, Harrell, the student testimony). Put the main counterpoint in every card's In short or in none.",
+      "severity": "low"
+    },
+    {
+      "line": 153,
+      "text": "Teacher Darryl Adams worries enforcement will burden staff and cause confrontations",
+      "why": "Adams said policing phones is 'a task that can invite conflict' (P-047). The summary turns 'can invite conflict' into 'will ... cause confrontations', a more certain version of the critic's claim. Line 154 words it correctly ('which can lead to conflict').",
+      "severity": "low"
+    },
+    {
+      "line": 165,
+      "text": "Teacher Darryl Adams and many parents who oppose the ban say older students should keep some phone access.",
+      "why": "'Many parents' gives no denominator. Opposing parents are 29.2% of all parents (P-033), and the card never mentions the 70.8% who support the ban.",
+      "severity": "low"
+    },
+    {
+      "line": 74,
+      "text": "Students in districts without limits keep their phones in class.",
+      "why": "This is listed under 'Who pays' but reads like a benefit. It doesn't name the cost the law itself identifies, which is distraction (P-057). The next sentence hedges twice ('If Florida's results apply here' and 'might bring'). One hedge is enough, and Option B lists the Florida suspension rise as a cost without any such hedge. Suggested: 'In districts without limits, students keep phones in class, the source of distraction the law aims to reduce [P-057].'",
+      "severity": "low"
+    },
+    {
+      "line": 75,
+      "text": "Sen. Sally Harrell said such rules had \"been done in high schools already.\"",
+      "why": "This cuts a supporter's quote and uses it to back the status-quo option. It drops 'it's been very successful and we look forward to rolling that out statewide' (P-046), and her point was the opposite: take it statewide. Add that she called those rules 'very successful' and wanted them statewide.",
+      "severity": "low"
+    },
+    {
+      "line": 82,
+      "text": "The law gives schools state guidance but sets aside no money, and we found no official cost estimate (fiscal note) for it.",
+      "why": "Putting the missing fiscal note under 'Who pays' implies an unfunded cost that no source estimates. The storage options the law lists include a student's locker and a set place in the classroom (P-009), which may cost little. Either note that or move the sentence to 'What's uncertain'.",
+      "severity": "low"
+    }
+  ],
+  "imbalance": [
+    {
+      "issue": "The page reports one Florida abstract (P-038 to P-040) at full strength for its cost and softened for its benefits. 'Significant' and the causal 'led to' appear only with suspensions (lines 82, 155). Test-score gains and fewer absences get plain verbs ('rose', 'fell') on lines 74, 81, 105 and 107, and in Option B the gains are credited to 'a Florida study' while the suspension rise is stated as a fact about Florida.",
+      "severity": "medium"
+    },
+    {
+      "issue": "Line 99 offers the 13-senator amendment vote as a counterweight to the four-to-one quote count. It leaves out the final 52-0 Senate and 145-20 House votes and Harrell's 'bipartisan support' (P-044). It also counts only 'officials' on the supporting side, leaving out the students who testified for the bill (P-052).",
+      "severity": "medium"
+    },
+    {
+      "issue": "Card 5's label is more generous than card 1's relative to its evidence. Both get 'Supported, with limits', but card 5's core claim (staff burden) was never measured, which the page's own rubric labels 'Uncertain' on cards 2 and 3. Its conflict evidence comes from the same working paper that card 1's label flags as 'one Florida working paper', yet card 5's label leaves that caveat out.",
+      "severity": "medium"
+    },
+    {
+      "issue": "Card 6 presents opposing parents' health-app and schoolwork reasons as support. It never mentions that the law answers both (P-013 plan exception, P-017 school-provided devices), or that most parents (70.8%) back the ban.",
+      "severity": "medium"
+    },
+    {
+      "issue": "In Option B, 'Who pays' (106 words) is about 1.4 times as long as 'Who benefits' (75 words). Since the costs are mostly accurate legal duties, length alone is acceptable. But 'Who benefits' leaves out supporters' social and mental-health claims (71.2%, 69.1%, Hilton's reports), and 'Who pays' includes a missing fiscal note that no source puts a number on.",
+      "severity": "low"
+    },
+    {
+      "issue": "Rebuttals are placed unevenly. Supporter card 2 repeats one cross-sectional null result four times (label line 115, In short 117, Who disagrees 120, What challenges it 121). Critic cards 4 and 6 keep their rebuttals out of their In short lines.",
+      "severity": "low"
+    },
+    {
+      "issue": "Card 4 frames the emergency-safety uncertainty only around the law's school alert systems (lines 139, 141, 147). The sources also have no data that students' own phones make emergencies safer, and 60.3% of supporting parents expect safety to improve (P-034). The uncertainty should be stated both ways.",
+      "severity": "low"
+    },
+    {
+      "issue": "The 30-second version (lines 8-10) lists only what students can't do and who must enforce it. It omits the law's stated purpose (P-057) and its lopsided passage (P-025), so a reader who stops there sees the restrictions but not the reason for them.",
+      "severity": "low"
+    }
+  ],
+  "label_disagreements": [
+    {
+      "argument": "1. Phone-free school days help students learn",
+      "label": "Supported, with limits (one Florida working paper; gains in year two, possibly through better attendance)",
+      "proposed": "Supported, with limits (one Florida working paper designed to estimate cause and effect: significant test-score gains in year two and fewer unexcused absences, with larger effects in middle and high schools; no Georgia results yet)",
+      "why": "The top-level label is fair for one study that hasn't been formally published. The note in parentheses, though, lists mostly caveats and leaves out the two facts that matter most for a high-school law: the study was built to measure cause and effect (P-038), and the effect was larger in high schools (P-040). 'Possibly through better attendance' reads as a weakness, even though fewer unexcused absences is a benefit the study credits to the bans."
+    },
+    {
+      "argument": "2. Less phone time helps teens' mental health and friendships",
+      "label": "Uncertain (one comparison of 12- to 15-year-olds in England found no well-being difference; it couldn't test cause and effect)",
+      "proposed": "Uncertain (one comparison of 12- to 15-year-olds in England found less phone use during school but no evidence of a well-being difference; it couldn't test cause and effect, and no study tested a rule like Georgia's on high schoolers)",
+      "why": "'Uncertain' is fair. But 'found no well-being difference' overstates the source, which says 'no evidence of a difference'. The note also cites only the null result, not the same study's finding that strict rules went with less phone and social media time at school (P-042)."
+    },
+    {
+      "argument": "4. Families lose direct contact with students during the school day",
+      "label": "Supported on the facts (the law's text); uncertain on emergency safety (no data on school alerts)",
+      "proposed": "Supported on the facts (the law's text); uncertain on emergency safety (no data on how school alerts perform, or on whether students' own phones make emergencies safer)",
+      "why": "The split label is fair, but the note puts the burden of proof only on the law's alert system. The sources have no safety data for either arrangement, and Adams's account (P-049) is about getting updates, not about safety outcomes."
+    },
+    {
+      "argument": "5. Enforcing the ban could burden school staff and lead to conflict",
+      "label": "Supported, with limits (the law assigns new duties; in Florida, enforcement led to more suspensions at first; staff workload not measured)",
+      "proposed": "Supported on new duties (the law's text); uncertain on staff burden (not measured); one Florida working paper found suspensions rose in year one, then began to fade",
+      "why": "That the law assigns duties (P-014) is a fact. Whether they 'burden' staff was never measured, and the page labels unmeasured claims 'Uncertain' on cards 2 and 3. The conflict evidence (P-039) is the same single working paper that card 1's label flags, so card 5 should carry the same caveat and mention the fade. A split label like card 4's fits the evidence."
+    }
+  ],
+  "verdict_summary": "Mostly fair to supporters, at near full strength. Card 1, our strongest argument, is handled well: a study designed to measure cause and effect, 'No one in the sources we reviewed disputed this directly', no counter-evidence found, and larger effects in high schools. The page also includes students' testimony, teachers' reported relief, the 70.8% parent majority, and honest limits on the critics' strongest anecdote (Adams's lockdown account). The labels on cards 3 and 6 are fair, as is card 2's 'Uncertain'. The tilt is in the details. The Florida study's gains lose 'significant' while its suspension cost keeps 'significant' and 'led to'. Line 99 uses the 13-senator amendment vote as a counterweight without saying the bill passed 52-0 and 145-20. Card 5 gets 'Supported, with limits' for a burden nobody measured and lacks the 'one working paper' caveat that card 1 carries. Card 6 lists health and schoolwork needs without the law's plan exception (P-013) or school devices (P-017). None of these is a big distortion, and fixing them would earn a 5."
+}

@@ -158,6 +158,11 @@ passages:
   - {id: P-066, source: S01, file: hb1009-247117.old.txt, locator: "p.3, lines 47-48 (prior law, (c)(1))",
      start: "(1) Prohibit bell-to-bell access to personal electronic devices by students in kindergarten", end: "through grade eight",
      note: "Prior-law reading from the markup: 'eight' is struck and 'twelve' underlined in HB 1009."}
+  - {id: P-067, source: S13a, file: S13a.txt, locator: "abstract, opening sentence",
+     start: "Cellphone bans in schools have become a popular policy", end: "effects on student outcomes.",
+     note: "Added so the whole abstract is archived as passages (P-067, P-038, P-068, P-039, P-040), making 'the summary doesn't say what the bans covered' checkable."}
+  - {id: P-068, source: S13a, file: S13a.txt, locator: "abstract, lead-in to findings",
+     start: "Several important findings emerge.", end: "Several important findings emerge."}
   - {id: P-064, source: S13b, file: S13b.txt, locator: "abstract, outcomes",
      start: "The primary outcome was mental wellbeing", end: "smartphone and social media time."}
   # --- S19: Cairo High School (Grady County Schools) page, 2026-06-01 ------------------------

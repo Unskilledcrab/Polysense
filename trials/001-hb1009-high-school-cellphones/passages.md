@@ -209,6 +209,14 @@ text (struck words removed, underlined words kept), recovered with `trials/tools
 
 *Note: Prior-law reading from the markup: 'eight' is struck and 'twelve' underlined in HB 1009.*
 
+### P-067 · S13a · abstract, opening sentence
+> Cellphone bans in schools have become a popular policy in recent years in the United States, yet very little is known about their effects on student outcomes.
+
+*Note: Added so the whole abstract is archived as passages (P-067, P-038, P-068, P-039, P-040), making 'the summary doesn't say what the bans covered' checkable.*
+
+### P-068 · S13a · abstract, lead-in to findings
+> Several important findings emerge.
+
 ### P-064 · S13b · abstract, outcomes
 > The primary outcome was mental wellbeing (assessed using Warwick–Edinburgh Mental Well-Being Scale [WEMWBS]). Secondary outcomes included smartphone and social media time.
 
