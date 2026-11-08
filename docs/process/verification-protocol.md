@@ -29,6 +29,25 @@ Results go in the trial's `verification.md` and `verification/` folder: raw JSON
 copy, the answer key (`mutation-key.json`, moved out of reach during the run) and the summary used by the
 prototype's "How we checked" page.
 
+## When a page is done
+
+Adversarial checkers always find something more. In Trial 001, every round produced new medium and low
+suggestions, and some reversed the previous round's (one advocate asked to remove a line the other had
+asked to add). So "done" is defined in advance:
+
+1. **A round passes** when: the gate is clean; the blind source check finds 0 unsupported claims, 0 wrong
+   spans and 0 ungrounded evidence spans; both advocates rate their side at least 4/5; and the editor
+   finds no high-severity issue.
+2. **After a passing round, fix only accuracy flags:** "partial" verdicts, questionable tags, and wording
+   that misstates a passage. A **targeted re-check** confirms the fixes: a fresh blind agent checks only
+   the changed sentences against the passages. The whole panel re-runs only if a fix changes a card's
+   claim, its evidence label, or which side a point supports.
+3. **Remaining medium and low panel suggestions become open items.** They are listed in `verification.md`
+   and on the page's "How we checked" view, and they feed the next revision, which starts a new full
+   round. Suggestions that contradict each other are logged side by side, not silently resolved.
+4. The page is then labeled **"Passed checks (round N)"**, never "verified" in general, and that label
+   links to the open items.
+
 ## Independence rules
 
 - Verifiers get **only** the workspace (or mutated copy) and `passages.md`. They are not given the log,
