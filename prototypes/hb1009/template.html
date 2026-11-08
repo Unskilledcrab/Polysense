@@ -84,6 +84,11 @@ p { margin: 0 }
 .chip.bad { background: var(--bad-soft); border-color: var(--bad); color: var(--bad) }
 .power { font: 700 .72rem/1 var(--font-mono); letter-spacing: .06em; text-transform: uppercase; padding: 5px 8px; border-radius: 6px; display: inline-flex; align-items: center; gap: 6px }
 .power::before { content: ""; width: 8px; height: 8px; display: inline-block; border: 2px solid currentColor }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap }
+.evlist { list-style: none; margin: .35rem 0 .25rem; padding: 0; display: grid; gap: .3rem }
+.evlist li { display: flex; flex-wrap: wrap; gap: .25rem .45rem; align-items: baseline }
+.evlist .scope { flex: 1 1 7rem; min-width: 0; font-size: .92rem }
+.evpart .evbtn { margin-top: .15rem }
 .power.decide { color: var(--accent); background: var(--accent-soft) } .power.decide::before { background: currentColor }
 .power.input { color: var(--gold); background: var(--gold-soft) } .power.input::before { border-radius: 50% }
 .power.observe { color: var(--muted); background: var(--sunk) } .power.observe::before { border-radius: 50%; background: transparent }
@@ -449,8 +454,8 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
     var h = D.home, root = el("div", { class: "stack-lg" }), today = todayISO();
     root.appendChild(el("div", { class: "stack" }, [
       el("p", { class: "eyebrow", text: "Georgia · decisions explained" }),
-      el("h1", { text: "What's being decided" }),
-      el("p", { class: "lede", text: "Start with what each decision is and who it may affect. If you want to weigh in, the dates and ways to do it are further down. Every line links to its source." }),
+      el("h1", { text: "Public decisions, explained" }),
+      el("p", { class: "lede", text: "Start with what each decision is, where it stands and who it may affect. If you want to weigh in, the dates and ways to do it are further down. Every line links to its source." }),
       el("p", { class: "notice", text: "Prototype: it shows only the three decisions we've explained so far. Nothing you do here is saved." })
     ]));
     var dec = el("section", { class: "home-sec", "aria-labelledby": "h-decisions" }, [el("h2", { id: "h-decisions" }, ["Decisions", el("span", { class: "count", text: String(D.workspaces.length) })])]);
@@ -483,7 +488,10 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
 
   function wsBySlug(slug) { return D.workspaces.filter(function (w) { return w.slug === slug; })[0]; }
   function sectionById(id) { return W.workspace.sections.filter(function (s) { return s.id === id; })[0]; }
-  function statusChip(w) { return el("a", { class: "chip " + (w.verified ? "ok" : "warn"), href: "#" + w.slug + "-checks", text: w.statusText }); }
+  function statusChip(w) {
+    return el("a", { class: "chip " + (w.verified ? "ok" : "warn"), href: "#" + w.slug + "-checks", title: w.statusText,
+      text: w.verified ? "Passed our checks" : "Checks not finished", "aria-label": (w.verified ? "Passed our checks" : "Checks not finished") + ": see how we checked this page" });
+  }
   function headerChips(w) {
     var row = el("div", { class: "chips" });
     w.status.forEach(function (c) { row.appendChild(el("span", { class: "chip" + (c.kind ? " " + c.kind : ""), text: c.text })); });
@@ -600,7 +608,7 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
     });
     s.subs.forEach(function (sub) {
       var d = el("details", { class: "more" }, [el("summary", { text: sub.title })]);
-      if (/^where the money/i.test(sub.title)) d.open = true;
+      if (/^(where the money|not known)/i.test(sub.title)) d.open = true;
       d.appendChild(renderBlocks(sub.blocks));
       box.appendChild(d);
     });
@@ -680,6 +688,39 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
 
   // The grades an evidence label names, in order ("Supported", "Uncertain", "Values question"...). A folded
   // card shows only these, so it stays scannable on a phone; the full label is inside the card.
+  // Split a card's evidence label into parts: [{grade, scope, note, text}]. Handles "Rules: Supported (note). Results:
+  // Uncertain (note)", "Supported on X (note); uncertain on Y (note)" and "Supported (note); Mixed (note); size (note)".
+  function evParts(label) {
+    var t = (label || "").trim(), segs = [], cur = "", depth = 0, out = [];
+    for (var i = 0; i < t.length; i++) {
+      var ch = t.charAt(i);
+      if (ch === "(") depth++;
+      else if (ch === ")") depth = Math.max(0, depth - 1);
+      if (depth === 0 && (ch === ";" || (ch === "." && /\s/.test(t.charAt(i + 1) || " ")))) { if (cur.trim()) segs.push(cur.trim()); cur = ""; continue; }
+      cur += ch;
+    }
+    if (cur.trim()) segs.push(cur.trim());
+    segs.forEach(function (seg) {
+      var head = seg, note = "", open = seg.indexOf("(");
+      if (open >= 0 && /\)\s*$/.test(seg)) { head = seg.slice(0, open).trim(); note = seg.slice(open + 1, seg.lastIndexOf(")")).trim(); }
+      var g = evGrades(head)[0], scope = "", m;
+      if ((m = head.match(/^(.+?):\s*(?:a\s+)?(supported|mixed|uncertain|contested|values question|not mainly)/i))) scope = m[1].trim();
+      else if ((m = head.match(/^(?:supported|mixed|uncertain|contested)(?:, with limits)?\s+on\s+(.+)$/i))) scope = m[1].trim();
+      out.push({ grade: g || "", scope: scope, note: note, text: seg });
+    });
+    return out;
+  }
+  // One line per grade, naming the parts it covers ("● Supported: Rules"), or null when the label names no parts.
+  function evByPart(parts) {
+    var graded = parts.filter(function (p) { return p.grade; });
+    if (graded.length < 2 || !graded.every(function (p) { return p.scope; })) return null;
+    var order = [], by = {};
+    graded.forEach(function (p) { if (!by[p.grade]) { by[p.grade] = []; order.push(p.grade); } by[p.grade].push(p.scope); });
+    return el("ul", { class: "evlist" }, order.map(function (g) {
+      var txt = by[g].map(function (x, i) { return i && /^[A-Z][a-z]/.test(x) ? x.charAt(0).toLowerCase() + x.slice(1) : x; }).join("; ");
+      return el("li", null, [evChip(g), el("span", { class: "sr-only", text: ": " }), el("span", { class: "scope", text: txt })]);
+    }));
+  }
   function evGrades(label) {
     var t = label || "", prev;
     do { prev = t; t = t.replace(/\([^()]*\)/g, ""); } while (t !== prev);   // drop explanations in parentheses
@@ -712,7 +753,7 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
         L.appendChild(m);
         return;
       }
-      var meta = a.cardMeta, grades = evGrades(meta.evidence);
+      var meta = a.cardMeta, grades = evGrades(meta.evidence), parts = evParts(meta.evidence), byPart = evByPart(parts);
       var side = meta.side ? (meta.side.charAt(0).toUpperCase() + meta.side.slice(1)) : "";
       var shortB = a.blocks.filter(function (b) { return b.label === "In short"; })[0];
       var rest = a.blocks.filter(function (b) { return b !== shortB; });
@@ -722,13 +763,20 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
         el("div", { class: "chips" }, [el("span", { class: "chip wrap", text: side })]),
         shortB ? el("p", null, [units(shortB.units)]) : null,
         grades.length
-          ? el("div", { class: "chips" }, [el("span", { class: "meta-line", text: "Evidence:" })]
-              .concat(grades.map(evChip)).concat([legendButton(used, rule)]))
+          ? (byPart
+              ? el("div", { class: "evpart" }, [el("span", { class: "meta-line", text: "Evidence, part by part:" }), byPart, legendButton(used, rule)])
+              : el("div", { class: "chips" }, [el("span", { class: "meta-line", text: "Evidence:" })]
+                  .concat(grades.map(evChip)).concat([legendButton(used, rule)])))
           : el("div", null, [el("span", { class: "ev " + evClass(meta.evidence || ""), text: "Evidence: " + (meta.evidence || "") })])
       ]));
       var body = el("div", { class: "body" }, [
         el("p", { class: "meta-line", text: (meta.kind === "Anticipated" ? "Anticipated: not said by a named person" : "Documented: said on the record") + " · " + (meta.claimType || "") + " claim" }),
-        grades.length ? el("p", { class: "meta-line", text: "Evidence label: " + meta.evidence }) : null,
+        grades.length ? el("div", { class: "evfull" }, [el("p", { class: "meta-line", text: "The evidence label in full:" }),
+          el("ul", { class: "evlist" }, parts.map(function (p) {
+            var what = p.scope ? p.scope + (p.note ? " (" + p.note + ")" : "") : p.note;
+            return el("li", null, p.grade ? [evChip(p.grade), what ? el("span", { class: "sr-only", text: ": " }) : null, what ? el("span", { class: "scope", text: what }) : null]
+                                          : [el("span", { class: "scope", text: p.text.charAt(0).toUpperCase() + p.text.slice(1) })]);
+          }))]) : null,
         renderBlocks(rest)
       ]);
       d.appendChild(body);
@@ -819,7 +867,8 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
     var stayInBill = prev === key;
     app.innerHTML = "";
     app.appendChild(view === "home" ? viewHome() : view === "decisions" ? viewDecisions() : view === "method" ? viewMethod() : view === "checks" ? viewChecks() : viewBill(layer));
-    app.appendChild(el("footer", { text: D.meta.footer + ((view === "bill" || view === "checks") ? " · Test page " + W.trial + " · " + W.revisionLabel : "") }));
+    app.appendChild(el("footer", { text: D.meta.footer + (view === "checks" ? " · Test page " + W.trial + " · " + W.revisionLabel
+      : view === "bill" ? " · Test page · " + W.revisionLabel.replace(/ · fingerprint.*$/, "") : "") }));
     document.querySelectorAll("[data-nav]").forEach(function (a) { if (a.getAttribute("data-nav") === nav) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
     var tabs = document.querySelector(".tabs");
     if (stayInBill && tabs) {
