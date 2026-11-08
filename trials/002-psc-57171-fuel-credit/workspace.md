@@ -1,12 +1,12 @@
 # PSC Docket 57171 (2026): Business customers' real-time payments and your power bill
 
-Status: Open case at the Georgia Public Service Commission · Final decision scheduled Dec 15, 2026 · Trial 002, revision 6.2 (passed checks in rounds 5 and 6; accuracy fixes after round 6 and its first targeted re-check; second re-check pending) <!-- nocheck -->
+Status: Open case at the Georgia Public Service Commission · Final decision scheduled Dec 15, 2026 · Trial 002, revision 6.3 (passed checks in rounds 5 and 6; accuracy fixes after round 6 and two targeted re-checks; third re-check pending) <!-- nocheck -->
 How this page was made: an AI agent drafted it from archived sources; every sentence is cited or labeled. Dates were copied from PSC pages on Nov 8, 2026. <!-- nocheck -->
 
 ## 30-second version
 
 - **What's being decided:** Larger businesses can pay Georgia Power hourly real-time prices, and more large customers now do. [P-044, P-042, P-043, P-053] The Public Service Commission (PSC) will decide how much of those payments counts toward fuel costs (the fuel credit). [P-013, P-016, P-144]
-- **Who it affects:** Homes and businesses on standard rates. [P-061] A bigger fuel credit lowers their fuel charge, and the same dollars stop helping pay base costs, the rest of the bill. [P-144, P-061, P-111] Each proposed plan we could read would raise the credit through its take-or-pay option; PIA Staff's estimates are public, and Georgia Power's are blacked out. [P-128, P-073, P-058, P-115, P-139, P-140, P-078] Georgia Power estimates each $100 million cuts a typical home's fuel charge by about $1.48 a month, and adds about $1.65 if base rates rise by that much. [P-141, P-142, P-143] Parties disagree on whether, and how much, base rates would rise later; the next base rate case decides. [P-115, P-105, P-090, P-016]
+- **Who it affects:** Homes and businesses on standard rates. [P-061] A bigger fuel credit lowers their fuel charge, and the same dollars stop helping pay base costs, the rest of the bill. [P-144, P-061, P-111] Each proposed plan we could read would raise the credit through its take-or-pay option; PIA Staff's take-or-pay estimates are public, and Georgia Power's are blacked out. [P-128, P-073, P-058, P-115, P-139, P-140, P-078] Georgia Power estimates each $100 million cuts a typical home's fuel charge by about $1.48 a month, and adds about $1.65 if base rates rise by that much. [P-141, P-142, P-143] Parties disagree on whether, and how much, base rates would rise later; the next base rate case decides. [P-115, P-105, P-090, P-016]
 - **What's next:** A hearing on Nov 12 and a decision set for Dec 15, 2026; public comments are due 24 hours before the vote. [P-010, P-013, P-030] Dates can change. {editorial: process note; dates as posted on Nov 8, 2026}
 
 ## Layer 1: Participate
