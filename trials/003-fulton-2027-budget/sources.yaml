@@ -1,0 +1,225 @@
+# Sources for Trial 003 (Fulton County 2027 budget). See docs/process/runbooks/bill-workspace.md, steps 1-2.
+# status: retrieved | covered-by (facts available from another retrieved source) | not-retrieved | rejected
+# type:   primary-government | secondary-research | advocacy | news | local-government
+#         (County records are typed primary-government: they are the government's own records. The vocabulary has
+#          no separate "primary, local" type; see log.md, runbook fit.)
+# Files live in _raw/ (git-ignored). Re-download a URL and compare sha256 to check our copy.
+# Every file was fetched with trials/tools/snapshot.py (one request per source), unless `method` says otherwise.
+# Search-engine summaries were used for DISCOVERY ONLY and are never cited. Text in fetched pages was treated as data.
+trial: 003-fulton-2027-budget
+decision: {jurisdiction: "Fulton County, Georgia", body: "Board of Commissioners", subject: "FY2027 budget (calendar year 2027)",
+           proposal_due: "no later than 2026-11-15", adoption_due: "no later than the second regular meeting in January 2027 (proposed schedule: 2027-01-20)"}
+discovered_on: "2026-11-08"
+retrieved_on: "2026-11-08"
+user_agent: "Mozilla/5.0 (compatible; civic-research-trial/0.1; +https://github.com/Unskilledcrab/Polysense)"
+hosts_used: [webapi.legistar.com, fulton.legistar.com, fulton.legistar1.com, www.fultoncountyga.gov, fultoncountyga.gov,
+             data.fultoncountyga.gov, api.us.socrata.com, www.atlantanewsfirst.com, www.fox5atlanta.com, civicatlanta.org]
+hosts_blocked: {www.census.gov: "Cloudflare challenge (HTTP 403)", codes.findlaw.com: "Cloudflare challenge (HTTP 403)",
+                api.census.gov: "needs an API key (302 to missing_key.html)", www.ajc.com: "paywall (article text served scrambled)",
+                web.archive.org: "capture request denied by this session's permission system; not retried"}
+
+sources:
+  # --- The rules: Resolution 26-0460 (re-creates the Budget Commission) -------------------------------------------
+  - id: S01
+    title: "Resolution 26-0460: re-establishes the Budget Commission, amends Sec. 2-261 and adds Sec. 2-263 of the Fulton County Code (text attached to the Legistar matter as '08.05.26 - Resolution Fulton_County_Budget_Commission 7.30_')"
+    publisher: Fulton County Board of Commissioners (Legistar)
+    type: primary-government
+    url: "https://fulton.legistar1.com/fulton/attachments/3eebf1e5-1a77-413a-8209-b52b3b302a6e.pdf"
+    status: retrieved
+    method: "Direct download. The first request (07:05:32Z) got HTTP 404 from server node gasmp-legweb4; that response is kept as S01-404.html (sha256 dc1d54dab6ec8c00f70137927504e4f222c8395f10760b6beecfcfa94e08249f). One retry 33 seconds later reached node gasmp-legweb5 and returned the file. Same sha256 as the scout's copy fetched at 06:46Z."
+    retrieved_at: "2026-11-08T07:06:05Z"
+    http_status: 200
+    content_type: application/pdf
+    sha256: ca8be1ca14553d1a9b6328f66b5b975c08270a1963ff794d2b53eea780f24984
+    local_file: S01.pdf
+    derived: [S01.txt, S01.clean.txt, S01.markup.txt]
+    license: public record
+    settles: [D2, D3, D7]
+    notes: "Strike-through/underline markup recovered with trials/tools/pdf_markup.py (S01.markup.txt, S01.clean.txt) and checked against rendered images of pp. 2-3. S01.txt is pdfplumber text with 'pN:' prefixes (scratch script pdf_text.py --prefix). Passages use S01.clean.txt only for Sec. 2-261, which carries the markup; elsewhere the markup tool misorders some bold words, so S01.txt is used."
+  - id: S01b
+    title: "Resolution 26-0460, signed and adopted copy (scanned)"
+    publisher: Fulton County Board of Commissioners (Legistar)
+    type: primary-government
+    url: "https://fulton.legistar1.com/fulton/attachments/a7d741d5-024e-4f50-b004-ac7ff3460c20.pdf"
+    status: retrieved
+    retrieved_at: "2026-11-08T07:05:34Z"
+    http_status: 200
+    content_type: application/pdf
+    sha256: 6eb9df4ff04f98767b7ad994dda5fb9e2297bb653b5b3158ebb37cf216f29cc6
+    local_file: S01b.pdf
+    license: public record
+    settles: [D3]
+    notes: "Image-only scan (no text layer; no OCR tool in this environment), so no passages. Pages 2, 3 and 7 compared visually with S01 at 45-60 dpi: same wording line for line; the signed copy also underlines 'budget commission' on p.2 lines 19 and 23. Page 7 reads 'PASSED AND ADOPTED ... this 5 day of August, 2026' and 'ITEM #26-0460 FRM 08/05/26'. Pages 1, 4-6 and 8 were not compared."
+  # --- Legistar Web API records (JSON) --------------------------------------------------------------------------------
+  - id: S02
+    title: "Legistar record for matter 26-0460 (MatterId 16305): title, sponsors, status, dates"
+    publisher: Fulton County Clerk to the Commission (Legistar Web API)
+    type: primary-government
+    url: "https://webapi.legistar.com/v1/fulton/matters/16305"
+    status: retrieved
+    method: "Public Legistar Web API, no key. Found by listing Board events (/events?$filter=EventDate ...) and their agenda items (/events/{id}/eventitems)."
+    retrieved_at: "2026-11-08T07:00:42Z"
+    http_status: 200
+    content_type: application/json
+    sha256: f500f8cdd18850b0bcfb1361c7d993dfcd8d1910c4399f807f473fdb22f94eea
+    local_file: S02.json
+    license: public record
+    settles: [D1]
+  - {id: S02b, title: "Legistar history for matter 26-0460 (action of 2026-08-05: mover, seconder, result)", publisher: "Fulton County Clerk to the Commission (Legistar Web API)", type: primary-government,
+     url: "https://webapi.legistar.com/v1/fulton/matters/16305/histories", status: retrieved, retrieved_at: "2026-11-08T07:05:36Z", http_status: 200, content_type: application/json,
+     sha256: c45f3785e5dcb84574e08f53c89e18f230c667f9e261c9a925af108825568e59, local_file: S02b.json, license: public record}
+  - {id: S02c, title: "Legistar attachments list for matter 26-0460 (links S01 and S01b to the matter)", publisher: "Fulton County Clerk to the Commission (Legistar Web API)", type: primary-government,
+     url: "https://webapi.legistar.com/v1/fulton/matters/16305/attachments", status: retrieved, retrieved_at: "2026-11-08T07:05:38Z", http_status: 200, content_type: application/json,
+     sha256: 6c4a893c90971d3b591ce2a7f7c42fb1262c01c40fad2ff051762245e62cd7ff, local_file: S02c.json, license: public record}
+  - {id: S02d, title: "Legistar roll call for agenda item 198790 (26-0460), Board meeting of 2026-08-05", publisher: "Fulton County Clerk to the Commission (Legistar Web API)", type: primary-government,
+     url: "https://webapi.legistar.com/v1/fulton/eventitems/198790/votes", status: retrieved, retrieved_at: "2026-11-08T07:05:39Z", http_status: 200, content_type: application/json,
+     sha256: dbab80972496e8fb92790753c76dc6e0eef8cb7b4addff412cf9d4b66b270f4c, local_file: S02d.json, license: public record, settles: [D1],
+     notes: "Legistar gives no tally for this item (MatterHistoryTally is null); counts on the page are tallied from this roll call and tagged {computed}."}
+  - {id: S03, title: "Legistar record for item 26-0471 (MatterId 16367): Budget Commission members for the FY2027 cycle", publisher: "Fulton County Clerk to the Commission (Legistar Web API)", type: primary-government,
+     url: "https://webapi.legistar.com/v1/fulton/matters/16367", status: retrieved, retrieved_at: "2026-11-08T07:05:41Z", http_status: 200, content_type: application/json,
+     sha256: 5a135f156fbc01a48c007d83831a8464381a3fdf5bc233f4065b84261f0396c5, local_file: S03.json, license: public record}
+  - {id: S03b, title: "Legistar history for item 26-0471 (action of 2026-08-19)", publisher: "Fulton County Clerk to the Commission (Legistar Web API)", type: primary-government,
+     url: "https://webapi.legistar.com/v1/fulton/matters/16367/histories", status: retrieved, retrieved_at: "2026-11-08T07:05:42Z", http_status: 200, content_type: application/json,
+     sha256: 3382bec0a3b86c34ccb2a3d2b875ec1993e9fc576e73186a96afb1ae3b7e720e, local_file: S03b.json, license: public record}
+  - {id: S03c, title: "Legistar roll call for agenda item 199957 (26-0471), Board meeting of 2026-08-19", publisher: "Fulton County Clerk to the Commission (Legistar Web API)", type: primary-government,
+     url: "https://webapi.legistar.com/v1/fulton/eventitems/199957/votes", status: retrieved, retrieved_at: "2026-11-08T07:05:44Z", http_status: 200, content_type: application/json,
+     sha256: dbb7a31db43da1a1663cfc99503f0dd66b9523e8725bfaf50417e3c5c735e90f, local_file: S03c.json, license: public record}
+  # --- Resolution 26-0729 (remove the 5% cap): record, history, text, votes -------------------------------------------
+  - {id: S04, title: "Legistar record for Resolution 26-0729 (MatterId 16630): remove the 5% cap; status Filed", publisher: "Fulton County Clerk to the Commission (Legistar Web API)", type: primary-government,
+     url: "https://webapi.legistar.com/v1/fulton/matters/16630", status: retrieved, retrieved_at: "2026-11-08T07:06:38Z", http_status: 200, content_type: application/json,
+     sha256: 5617077bba689bec6af725f9d2cdd4572b6ddd87b734bec955f0a5b02608a051, local_file: S04.json, license: public record, settles: [D8],
+     notes: "MatterPassedDate reads 2026-11-04, the date it was filed; the status is 'Filed', and the title says the motion to approve failed on 10/21/26."}
+  - {id: S04b, title: "Legistar history for Resolution 26-0729 (2026-10-21 failed; 2026-11-04 no vote on approval, then filed on a substitute motion)", publisher: "Fulton County Clerk to the Commission (Legistar Web API)", type: primary-government,
+     url: "https://webapi.legistar.com/v1/fulton/matters/16630/histories", status: retrieved, retrieved_at: "2026-11-08T07:06:40Z", http_status: 200, content_type: application/json,
+     sha256: 9974cddd3c48232f16483f62e675cf413d015b2bc1d2af0530b6d501928b2774, local_file: S04b.json, license: public record, settles: [D8],
+     notes: "Archived whole as one passage (P-025), so 'no later action' can be checked."}
+  - {id: S04c, title: "Legistar attachments list for Resolution 26-0729", publisher: "Fulton County Clerk to the Commission (Legistar Web API)", type: primary-government,
+     url: "https://webapi.legistar.com/v1/fulton/matters/16630/attachments", status: retrieved, retrieved_at: "2026-11-08T07:06:41Z", http_status: 200, content_type: application/json,
+     sha256: f52ca8e7a16eb0dec1de477a13e37d40cbb4615ef28182211e487704c65e0b18, local_file: S04c.json, license: public record}
+  - id: S04d
+    title: "Resolution 26-0729 text, 'Budget Cap Removal Resolution Draft' (sponsor: Commissioner Dana Barrett, District 3)"
+    publisher: Fulton County Board of Commissioners (Legistar)
+    type: primary-government
+    url: "https://fulton.legistar1.com/fulton/attachments/83d19126-5565-4ca5-9bfe-92866f595c11.pdf"
+    status: retrieved
+    retrieved_at: "2026-11-08T07:06:43Z"
+    http_status: 200
+    content_type: application/pdf
+    sha256: 6c4bee4f0c0362e72dbe5538f140265997bec45c1feff64f9bf2155a7ae57fa5
+    local_file: S04d.pdf
+    derived: [S04d.txt, S04d.clean.txt, S04d.markup.txt]
+    license: public record
+    notes: "A failed proposal, so its WHEREAS clauses are the sponsor's statements, not county findings. The markup tool found 3 marked spans (one struck word, two underlined insertions). The page cites the as-proposed text (S04d.clean.txt) for the amended section and S04d.txt elsewhere. The figures in its WHEREAS clauses (27 of 41 departments, -4% to +43%) were not checked against budget books."
+  - {id: S04e, title: "Legistar roll call for agenda item 205210 (26-0729, motion to approve), Board meeting of 2026-10-21", publisher: "Fulton County Clerk to the Commission (Legistar Web API)", type: primary-government,
+     url: "https://webapi.legistar.com/v1/fulton/eventitems/205210/votes", status: retrieved, retrieved_at: "2026-11-08T07:06:45Z", http_status: 200, content_type: application/json,
+     sha256: 32ee836f2f8dbedf8878be6cafe93b01da765fb33c5c7c1405f5849de8ad9fe7, local_file: S04e.json, license: public record, settles: [D8]}
+  - {id: S04f, title: "Legistar roll call for agenda item 207004 (26-0729, substitute motion to file), Board meeting of 2026-11-04", publisher: "Fulton County Clerk to the Commission (Legistar Web API)", type: primary-government,
+     url: "https://webapi.legistar.com/v1/fulton/eventitems/207004/votes", status: retrieved, retrieved_at: "2026-11-08T07:06:47Z", http_status: 200, content_type: application/json,
+     sha256: 2abec0566b1fdd7847a8c2a1dec593b7ebd4d3c2156924f637867fcbd04ad33e, local_file: S04f.json, license: public record}
+  # --- Agendas and schedules ------------------------------------------------------------------------------------------
+  - {id: S05, title: "Board of Commissioners agenda, First Regular Meeting, 2026-11-04 (roll call; items 26-0736, 26-0748, 26-0729, 26-0766)", publisher: Fulton County Clerk to the Commission, type: primary-government,
+     url: "https://fulton.legistar.com/View.ashx?M=A&ID=1444877&GUID=ED0A01D3-0E2F-4FD7-B706-D267BFEFDF5A", status: retrieved, retrieved_at: "2026-11-08T07:06:48Z", http_status: 200, content_type: application/pdf,
+     sha256: bfb8173df91a2f30784a6128f87504e58ad33ef03303052716679e7e4ee0fee8, local_file: S05.pdf, derived: [S05.txt], license: public record, settles: [D9, D10],
+     notes: "Text extracted with pdfplumber (scratch script pdf_text.py). The 2026-11-18 agenda was not posted on Legistar when we checked (the events list ended at 2026-11-04)."}
+  - {id: S06, title: "Board of Commissioners 2026 meeting schedule", publisher: Fulton County Clerk to the Commission, type: primary-government,
+     url: "https://www.fultoncountyga.gov/-/media/Commissioners/2026/2026-BOC-SCHEDULE_eng-02.pdf", status: retrieved, retrieved_at: "2026-11-08T07:06:50Z", http_status: 200, content_type: application/pdf,
+     sha256: 39ff5525e17016d2e414065f50953b7c7fe62e2ee4c316844612c4420d92c9db, local_file: S06.pdf, derived: [S06.txt], license: public record}
+  - {id: S07, title: "Legistar record for item 26-0686 (MatterId 16607): 2027 Board meeting calendar", publisher: "Fulton County Clerk to the Commission (Legistar Web API)", type: primary-government,
+     url: "https://webapi.legistar.com/v1/fulton/matters/16607", status: retrieved, retrieved_at: "2026-11-08T07:06:52Z", http_status: 200, content_type: application/json,
+     sha256: 28c480177b713d4d8bf627ca244f111f5ad6e1804dfcabf7e4b0a58ba3cdda12, local_file: S07.json, license: public record, settles: [D2],
+     notes: "Title says 'APPROVED UPON ADOPTION OF THE CONSENT AGENDA' (2026-10-21 agenda) but MatterStatusName is 'Agenda Ready' and MatterPassedDate is null."}
+  - {id: S07b, title: "Proposed 2027 Board meeting schedule (attachment to item 26-0686)", publisher: Fulton County Clerk to the Commission, type: primary-government,
+     url: "https://fulton.legistar1.com/fulton/attachments/e8400f34-c948-4ffd-8577-9c0ab42ced1a.pdf", status: retrieved, retrieved_at: "2026-11-08T07:06:54Z", http_status: 200, content_type: application/pdf,
+     sha256: e19ca6ee2f4408d925845212ca304b9c61a779d977e0817b3081ffbca66b6e72, local_file: S07b.pdf, derived: [S07b.txt], license: public record, settles: [D2]}
+  # --- County web pages -------------------------------------------------------------------------------------------------
+  - {id: S08, title: "Clerk to the Commission: Public Notices page (newest notice: Budget Commission special called meetings, Oct 12-22, 2026)", publisher: Fulton County Government, type: primary-government,
+     url: "https://www.fultoncountyga.gov/Commissioners/Clerk-to-the-Commission/Public-Notices", status: retrieved, retrieved_at: "2026-11-08T07:11:57Z", http_status: 200, content_type: text/html,
+     sha256: e409e9b33c0e934a364acebb6e32d79c5bd54baa1b9df256b5545e321dfa6481, local_file: S08.html, license: public record,
+     notes: "Notices are listed newest first. No notice of a 2027 budget hearing on this capture. The page says notices also appear in the county legal organ, which we did not check."}
+  - {id: S08b, title: "Meeting agenda: Fulton County Budget Commission special called meetings (department hearing schedule, Oct 12-22, 2026)", publisher: Fulton County Government, type: primary-government,
+     url: "https://www.fultoncountyga.gov/-/media/Meeting-Agenda---Special-Called-Meetings-of-Budget-Commission.pdf", status: retrieved, retrieved_at: "2026-11-08T07:11:59Z", http_status: 200, content_type: application/pdf,
+     sha256: 60f83ceac497d995059d52bfb2ce7dd37f671adb0074c8775051b624d23c0bbf, local_file: S08b.pdf, derived: [S08b.txt], license: public record,
+     notes: "Linked from S08 ('Click here to view the meeting agenda'). A schedule, not minutes: it does not show who attended."}
+  - {id: S09, title: "Open Government: Budget page (newest documents: FY2026)", publisher: Fulton County Government, type: primary-government,
+     url: "https://www.fultoncountyga.gov/inside-fulton-county/open-government/budget", status: retrieved, retrieved_at: "2026-11-08T07:12:00Z", http_status: 200, content_type: text/html,
+     sha256: 538d49356dfe6475de491e60528bfc82725d4d42589756acbabee9451be598e9, local_file: S09.html, license: public record}
+  - id: S09b
+    title: "Fulton County FY2026 Adopted Budget book (adopted 2026-01-21; 'FY26 Adopted Budget Book - V5')"
+    publisher: Fulton County Finance Department
+    type: primary-government
+    url: "https://www.fultoncountyga.gov/-/media/Inside-Fulton-County-Documents/FY26-Adopted-Budget-Book---V5.pdf"
+    status: retrieved
+    retrieved_at: "2026-11-08T07:12:03Z"
+    http_status: 200
+    content_type: application/pdf
+    sha256: 40b9d94ff4622f21e24d9af80d0ee6471b7c6a68ffb4882f1d1c57293fbcf47f
+    local_file: S09b.pdf
+    derived: [S09b.txt, S09b.prefixed.txt]
+    license: public record
+    settles: [D7]
+    notes: "138 pages; linked from S09. Includes the signed FY2026 budget resolution (p.4, a scan with a text layer), the FY2026 proposed budget message, and fund schedules. Pages 4, 77 and the bottom of 78 checked against rendered images. Its General Fund schedule (p.78) has stray spaces in some 'changes' columns; the page cites only the adopted column."
+  - {id: S09c, title: "News release: Fulton County Board of Commissioners Approves FY2026 Budget (2026-02-17)", publisher: Fulton County Government, type: primary-government,
+     url: "https://fultoncountyga.gov/News/2026/02/17/Fulton-County-Board-of-Commissioners-Approve-FY2026-Budget", status: retrieved, retrieved_at: "2026-11-08T07:12:04Z", http_status: 200, content_type: text/html,
+     sha256: 1a8da15688919e26cc0976b41ffb73a1ee5b64f078c41ad0ef0244fd5c9ec5c9, local_file: S09c.html, license: public record,
+     notes: "Not cited: it gives the tax rate (8.87 mills) but no totals or adoption date; S09b covers the budget."}
+  - {id: S11, title: "Clerk to the Commission page (public comment in person or by Zoom; accommodations)", publisher: Fulton County Government, type: primary-government,
+     url: "https://www.fultoncountyga.gov/Commissioners/Clerk-to-the-Commission", status: retrieved, retrieved_at: "2026-11-08T07:14:44Z", http_status: 200, content_type: text/html,
+     sha256: 8ca295d7505d594a797fa1abd9ceabcb54b0213a988f88c8ff2755d620d4d217, local_file: S11.html, license: public record, settles: [D9],
+     notes: "No sign-up link or email address for comments appears in the page text we captured."}
+  # --- County open data portal (Socrata): 2027 budget-hearing presentations ------------------------------------------------
+  - {id: S10, title: "Socrata catalog search of data.fultoncountyga.gov for 'Budget Presentation_2027' (36 results)", publisher: "Fulton County open data portal (Socrata Discovery API)", type: primary-government,
+     url: "https://api.us.socrata.com/api/catalog/v1?domains=data.fultoncountyga.gov&q=Budget%20Presentation_2027&limit=100", status: retrieved, retrieved_at: "2026-11-08T07:12:06Z", http_status: 200, content_type: application/json,
+     sha256: 1b027e32a7bb32d766a3e309af47f8a611fe831a06a57fe2f5543800f91ae86b, local_file: S10.json, license: public record,
+     method: "Public Socrata Discovery API (no key). The portal's own /api/catalog/v1 endpoint returned no domain results; the shared api.us.socrata.com endpoint with domains= worked. A wider listing (only=file) showed 43 budget-hearing files posted 2026-10-07 to 2026-10-21, including updated versions; that listing was used for discovery only.",
+     notes: "Gives each deck's name, id and posting time (createdAt). Each deck's file is fetched from /api/views/{id}/files/{blobId} (blobId from /api/views/{id}.json)."}
+  - {id: S10b, title: "Sheriff's Office 2027 budget hearing presentation ('330 - Office of the Sheriff - 2027 Budget Hearing Presentation.pptx', dated Oct 13, 2026)", publisher: "Fulton County Sheriff's Office (posted on the county open data portal)", type: primary-government,
+     url: "https://data.fultoncountyga.gov/api/views/idwu-2gmj/files/15ee0f67-4e48-4380-98d4-9c79f34d82bc?download=true&filename=330%20-%20Office%20of%20the%20Sheriff%20-%20%202027%20Budget%20Hearing%20Presentation.pptx", status: retrieved, retrieved_at: "2026-11-08T07:12:08Z", http_status: 200, content_type: application/octet-stream,
+     sha256: 45fc8d76254e1901cd22a0d123686ae7f1dd3545847e4ad214ee331ea8146c19, local_file: S10b.bin, derived: [S10b.txt], license: public record,
+     notes: "PowerPoint file (served as octet-stream, so snapshot.py saved it as .bin). Slide text extracted with the scratch script pptx_text.py (standard library only; no new dependency). The office's own account of its needs."}
+  - {id: S10c, title: "Solicitor-General 2027 budget hearing presentation ('400 - Solicitor - 2027 Budget Hearing Presentation.pptx')", publisher: "Office of the Fulton County Solicitor-General (posted on the county open data portal)", type: primary-government,
+     url: "https://data.fultoncountyga.gov/api/views/wit9-gumy/files/07699a49-18b4-4d3a-a7b5-780ba1d22a13?download=true&filename=400%20-%20Solicitor%20-%202027%20Budget%20Hearing%20Presentation.pptx", status: retrieved, retrieved_at: "2026-11-08T07:12:16Z", http_status: 200, content_type: application/octet-stream,
+     sha256: a755835ab2c8214c1ae1abf5eac39ed09411ea0537ac1417c7490fa981d1f128, local_file: S10c.bin, derived: [S10c.txt], license: public record}
+  - {id: S10d, title: "Public Defender 2027 budget hearing presentation ('490 - Public Defender - 2027 Budget Hearing Presentation.pptx')", publisher: "Fulton County Public Defender (posted on the county open data portal)", type: primary-government,
+     url: "https://data.fultoncountyga.gov/api/views/r22u-txge/files/37c92870-0e80-47c4-9e24-115f6534686c?download=true&filename=490%20-%20Public%20Defender%20-%202027%20Budget%20Hearing%20Presentation.pptx", status: retrieved, retrieved_at: "2026-11-08T07:12:18Z", http_status: 200, content_type: application/octet-stream,
+     sha256: 8e0555c437e25e8993f5bdf7915f6c7b75fcd60aba34be07464fdf28bd76727f, local_file: S10d.bin, derived: [S10d.txt], license: public record}
+  - {id: S10e, title: "Probate Court 2027 budget hearing presentation ('410 - Probate Court - 2027 Budget Hearing Presentation.pptx')", publisher: "Fulton County Probate Court (posted on the county open data portal)", type: primary-government,
+     url: "https://data.fultoncountyga.gov/api/views/3srn-tydw/files/c733d684-df9e-4acf-8f43-88882709d511?download=true&filename=410%20-%20Probate%20Court%20-%202027%20Budget%20Hearing%20Presentation.pptx", status: retrieved, retrieved_at: "2026-11-08T07:12:20Z", http_status: 200, content_type: application/octet-stream,
+     sha256: 1eddbc16e715a060762764c04f2eb04a0905d1b04af45810ea20f0807001fcf8, local_file: S10e.bin, derived: [S10e.txt], license: public record}
+
+  # --- News (secondary; used for documented arguments as reported) -------------------------------------------------------
+  - {id: S20, title: "Fulton County justice leaders push back on 2027 budget process (Atlanta News First, 2026-10-07)", publisher: "Atlanta News First (Gray Media)", type: news,
+     url: "https://www.atlantanewsfirst.com/2026/10/07/fulton-county-justice-leaders-push-back-2027-budget-process/", status: retrieved, retrieved_at: "2026-11-08T07:07:35Z", http_status: 200, content_type: text/html,
+     sha256: 2e31634c129b54050c4e18bb9bf922e12df6dbdf067daa82a12d6d1eece96b4d, local_file: S20.html,
+     notes: "Publication time from the page's own metadata (datePublished 2026-10-07T15:55:37.083Z, passage P-068). Short excerpts only. The page's 'Most Read' sidebar (unrelated election stories) was ignored."}
+  - {id: S21, title: "Fulton County budget boycott: Leaders refuse to attend hearings (FOX 5 Atlanta, 2026-10-07)", publisher: "FOX 5 Atlanta (WAGA-TV)", type: news,
+     url: "https://www.fox5atlanta.com/news/fulton-county-budget-boycott-leaders-refuse-attend-hearings", status: retrieved, retrieved_at: "2026-11-08T07:07:37Z", http_status: 200, content_type: text/html,
+     sha256: e06a2caafcc56f8f472db1e86350aee41d81e5010520e49ffaeaaf4c2de4e1f3, local_file: S21.html, settles: [D5],
+     notes: "Publication time from page metadata (datePublished 2026-10-07T19:15:15-04:00). The story says it was updated to correct Judge Kenya Johnson's name. Short excerpts only."}
+  - {id: S22, title: "Fulton County Board of Commissioners revives Budget Commission (Center for Civic Innovation, This Week in Atlanta, 2026-08-09)", publisher: Center for Civic Innovation, type: news,
+     url: "https://civicatlanta.org/blog/2026-08-09-fulton-county-board-of-commissioners-revives-budget-commission", status: retrieved, retrieved_at: "2026-11-08T07:07:39Z", http_status: 200, content_type: text/html,
+     sha256: 54e4b5933b12ce248d2ed4380fbb54140f1b1112e40646cffc0d228551dd68e2, local_file: S22.html,
+     notes: "Cited only for its description of the Aug 5 vote ('4-1 ... Barrett absent'), which differs from the Legistar roll call (S02d). One sentence excerpted."}
+
+  # --- Wanted but not retrieved, and discovered but not used ----------------------------------------------------------------
+  - {id: S12, title: "U.S. Census Bureau QuickFacts, Fulton County, Georgia (population, households)", type: primary-government, url: "https://www.census.gov/quickfacts/fact/table/fultoncountygeorgia/PST045224", status: not-retrieved,
+     notes: "BLOCKED: Cloudflare challenge page ('Just a moment...', cf-mitigated: challenge, HTTP 403) at 2026-11-08T07:14:46Z; the challenge page is kept as S12.html (sha256 994971ff4ec07c819e30da75067730842576f80acac6900846aca43ebd0d6294). Not worked around. Without a population source, the page gives no per-resident or per-household figures."}
+  - {id: S12b, title: "U.S. Census Bureau Data API, ACS 5-year (population and households for state 13, county 121)", type: primary-government, url: "https://api.census.gov/data/2024/acs/acs5?get=NAME,B01003_001E,B11001_001E&for=county:121&in=state:13", status: not-retrieved,
+     notes: "The API redirects (302) to missing_key.html: it now needs an API key. We did not request one for this trial; see log.md."}
+  - {id: S13, title: "O.C.G.A. 36-81-5 (local government budget hearings and notice), unofficial copy on FindLaw", type: primary-government, url: "https://codes.findlaw.com/ga/title-36-local-government/ga-code-sect-36-81-5/", status: not-retrieved,
+     notes: "BLOCKED: Cloudflare challenge (HTTP 403) at 2026-11-08T07:14:47Z; challenge page kept as S13.html (sha256 486cbbc9a5ba05382fe85dacf4e2b12bfad4db6e0d733ebcb5dcfcde71eb68ba). law.justia.com also refuses scripted requests (scout report). The official code (LexisNexis) was not tried."}
+  - {id: S14, title: "State budget law requirements (public hearing before adoption; adoption after the hearing, in amounts greater or less than proposed)", type: primary-government, status: covered-by, covered_by: S09b,
+     notes: "Facts taken only as the county's own FY2026 budget resolution states them (S09b p.4, P-047). The statute text itself was not archived, so the page gives no notice periods."}
+  - {id: S15, title: "The justice leaders' joint letter to the Board of Commissioners (2026-10-07)", type: primary-government, status: not-retrieved,
+     notes: "GAP. Reported by S20 and S21. Not found on Legistar (no matching item or attachment through 2026-11-04), on the Sheriff's Office press-release page (newest linked releases dated July 2026, checked about 07:09Z), or in web search. Their views on the page come from news reports."}
+  - {id: S16, title: "Board meeting video, items 26-0735 (2026-10-21) and 26-0766 (2026-11-04): 'Update on the Budget Committee and the budget approval process'", type: primary-government, status: not-retrieved,
+     notes: "Legistar lists video for both items, but no transcript or minutes text. Watching and transcribing video was out of scope for this trial; what was said is unknown to us."}
+  - {id: S17, title: "Budget Commission's written instructions to departments (the 5% limit)", type: primary-government, status: not-retrieved,
+     notes: "GAP. Not on the Public Notices page, the budget page, Legistar, or in the posted department decks we read. Described only by S04d (sponsor's WHEREAS clause) and S21. A news search summary mentioned a finance director's memo reported by the AJC (paywalled); unverified and not cited."}
+  - {id: S23, title: "Justice system leaders in Fulton County spar over budget process (Atlanta Journal-Constitution, 2026-10-08)", type: news, url: "https://www.ajc.com/news/2026/10/fulton-justice-leaders-refuse-to-attend-budget-hearings/", status: rejected,
+     notes: "Paywalled: the article body is served scrambled to non-subscribers and its metadata says isAccessibleForFree false. Not reconstructed. Leads only."}
+  - {id: S24, title: "Fulton's move to draft budget by committee rankles current, future commissioners (Atlanta Journal-Constitution, 2026-08)", type: news, url: "https://www.ajc.com/news/2026/08/fultons-move-to-draft-budget-by-committee-rankles-current-future-commissioners/", status: rejected,
+     notes: "Paywalled (same site as S23); not fetched. Leads only."}
+  - {id: S25, title: "Capital B Atlanta stories on the FY2025 budget and the District Attorney's funding (2025-01-16, 2025-01-31)", type: news, url: "https://atlanta.capitalbnews.org/fulton-county-budget-fani-willis/", status: rejected,
+     notes: "About the 2025 budget; background only, not needed for the 2027 decision."}
+  - {id: S26, title: "Other 2027 decks on the open data portal (County Manager; Clerk of Superior and Magistrate Courts; and others)", type: primary-government, status: rejected,
+     notes: "Read for discovery. The County Manager's deck is that office's own request list, not budget instructions. The Clerk of Superior and Magistrate Courts deck is mostly images. No deck titled for the District Attorney appeared in the listings we read (absence in a search listing is not proof none exists)."}

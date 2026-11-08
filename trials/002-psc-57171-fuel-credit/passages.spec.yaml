@@ -1,0 +1,376 @@
+# Hand-chosen passages for Trial 002 (PSC Docket 57171). Build with:
+#   uv run --with pyyaml python3 trials/tools/build_passages.py trials/002-psc-57171-fuel-credit/passages.spec.yaml
+# Text files in _raw/ are derived mechanically from the hashed snapshots listed in sources.yaml:
+#   *.txt next to an .html snapshot   visible text written by trials/tools/snapshot.py
+#   *-docx.txt, S06b-*.txt, S11-rebuttal.txt, S12-motion.txt   .docx text (stdlib extractor, extract/docx2txt.py);
+#                                     "[fnN]" marks a footnote reference and "[footnote N]" starts the footnote's text
+#   *-pdf.txt                         PDF text layer as "pN: LINE text" (pdfplumber, extract/pdf2txt.py); LINE is the
+#                                     document's own margin line number (0 if none). build_passages.py strips the prefix.
+#   *-att*.txt                        .xlsx cell values as "Sheet!ROW: COL=value" (stdlib, extract/xlsx2txt.py)
+# Fixes are limited to extraction glitches (page footers inside a span, footnote numbers fused to words,
+# words split by a line-end hyphen) and each carries a note.
+passages:
+  # --- S01: Docket 57171 page -------------------------------------------------------------------
+  - {id: P-001, source: S01, file: S01.txt, locator: "docket page: docket fields",
+     start: "Docket #57171", end: "Status: Open"}
+  # --- S01b: the docket's filing list (JSON the docket page itself requests) ---------------------
+  - {id: P-002, source: S01b, file: S01b.txt, locator: "filing list: document 228918",
+     start: "\"documentId\":228918", end: "\"filedDate\":\"2026-09-22T00:00:00\""}
+  - {id: P-003, source: S01b, file: S01b.txt, locator: "filing list: document 229261",
+     start: "\"documentId\":229261", end: "\"hasAttachment\":false"}
+  # --- S02: Procedural and Scheduling Order, adopted 2026-07-07 (readable .docx copy) -------------
+  - {id: P-005, source: S02, file: S02-docx.txt, locator: "order, section I (Background)",
+     start: "The May 28, 2026, Short Order Adopting Stipulation in Docket 56765 required", end: "related to the methodology and allocations.”"}
+  - {id: P-006, source: S02, file: S02-docx.txt, locator: "order, section II: PIA Staff",
+     start: "The PIA Staff shall be responsible for performing an independent evaluation", end: "in the public interest."}
+  - {id: P-007, source: S02, file: S02-docx.txt, locator: "order, section II: Commissioner Advisory Staff",
+     start: "The Commissioner Advisory Staff shall not be a party to this case", end: "contained in the record."}
+  - {id: P-008, source: S02, file: S02-docx.txt, locator: "order, section III: August 14 and September 1, 2026",
+     start: "August 14, 2026 Georgia Power Company will file", end: "hearings on Georgia Power’s direct testimony in Docket 57171."}
+  - {id: P-009, source: S02, file: S02-docx.txt, locator: "order, section III: September 23 to October 27, 2026",
+     start: "September 23, 2026 Staff and Intervenors shall pre-file", end: "rebuttal testimony in Docket 57171 by 4:00 p.m."}
+  - {id: P-010, source: S02, file: S02-docx.txt, locator: "order, section III: November 12, 2026",
+     start: "November 12, 2026 Beginning after the regularly scheduled Committee Meetings", end: "hearings on Georgia Power’s rebuttal testimony."}
+  - {id: P-011, source: S02, file: S02-docx.txt, locator: "order, section III: December 2, 2026",
+     start: "December 2, 2026 All briefs", end: "with the Commission by 4:00 p.m."}
+  - {id: P-012, source: S02, file: S02-docx.txt, locator: "order, section III: December 10, 2026",
+     start: "December 10, 2026 This matter shall be considered", end: "held in the Commission’s hearing room."}
+  - {id: P-013, source: S02, file: S02-docx.txt, locator: "order, section III: December 15, 2026",
+     start: "December 15, 2026 A Final Decision", end: "regularly scheduled Administrative Session."}
+  - {id: P-014, source: S02, file: S02-docx.txt, locator: "order, ordering paragraphs and closing line",
+     start: "ORDERED, that the procedures and schedules", end: "7th day of July 2026."}
+  - {id: P-015, source: S02, file: S02-docx.txt, locator: "order, letterhead (commissioners on 2026-07-07)",
+     start: "COMMISSIONERS: JASON SHAW, Chairman", end: "TRICIA PRIDEMORE"}
+  # --- S21: Docket 56765 Short Order Adopting Stipulation, 2026-05-28 (.docx) ----------------------
+  - {id: P-016, source: S21, file: S21-docx.txt, locator: "short order, ordering paragraph 6",
+     start: "ORDERED FURTHER that the Commission shall further review the methodology", end: "addressed in the next base rate case."}
+  - {id: P-017, source: S21, file: S21-docx.txt, locator: "short order, procedural history (the stipulation)",
+     start: "On May 12, 2026, PIA Staff and the Company entered into a Stipulation", end: "MARTA joined on May 28, 2026."}
+  - {id: P-018, source: S21, file: S21-docx.txt, locator: "short order, procedural history (adoption)",
+     start: "On May 28, 2026, the Commission Advisory Staff recommended adoption", end: "adopted the proposed Stipulation in this matter."}
+  - {id: P-019, source: S21, file: S21-docx.txt, locator: "short order, ordering paragraph 2",
+     start: "ORDERED FURTHER that the FCR-27 fuel cost recovery rates", end: "bills rendered beginning June 1, 2026."}
+  # --- S05: Georgia Power's legal notice compliance filing, 2026-08-28 (.docx) --------------------
+  - {id: P-020, source: S05, file: S05-docx.txt, locator: "cover letter, 2026-08-28",
+     start: "This letter is to notify you", end: "first published on August 24, 2026."}
+  - {id: P-021, source: S05, file: S05-docx.txt, locator: "legal notice, paragraph 1",
+     start: "Consistent with the Georgia Public Service Commission’s", end: "to confirm the location of the hearing."}
+  - {id: P-022, source: S05, file: S05-docx.txt, locator: "legal notice, accommodation paragraph",
+     start: "If you have a disability", end: "prior to the hearing in this matter."}
+  # --- S04: PSC Commission Calendar (list view) ----------------------------------------------------
+  - {id: P-023, source: S04, file: S04.txt, locator: "calendar list: November 12, 2026",
+     start: "Nov 12 9:30 am Facilities Protection", end: "Methodology Hearing 11-12-2026"}
+  - {id: P-024, source: S04, file: S04.txt, locator: "calendar list: December 10 and 15, 2026",
+     start: "Dec 10 9:30 am Facilities Protection", end: "Administrative Session 12-15-2026"}
+  # --- S14: PSC page "Appearing as a Public Witness" -----------------------------------------------
+  - {id: P-025, source: S14, file: S14.txt, locator: "public witness page, paragraph 1",
+     start: "A public witness is an individual", end: "official transcript of the case."}
+  - {id: P-026, source: S14, file: S14.txt, locator: "public witness page, paragraph 3",
+     start: "Depending upon the number of people who sign up", end: "may be limited."}
+  - {id: P-027, source: S14, file: S14.txt, locator: "public witness page, tip on written comments",
+     start: "If you prefer to have your written comments entered", end: "rather not make a verbal presentation."}
+  - {id: P-028, source: S14, file: S14.txt, locator: "public witness page, tip on arrival",
+     start: "Arrive about 30 minutes before the hearing begins", end: "familiar with your surroundings."}
+  - {id: P-029, source: S14, file: S14.txt, locator: "public witness page, paragraph 2 (last sentence)",
+     start: "At the scheduled Administrative Session, the Commissioners make a decision", end: "presented during the hearing."}
+  # --- S15: PSC page "Public Comments" -------------------------------------------------------------
+  - {id: P-030, source: S15, file: S15.txt, locator: "public comments page, full text",
+     start: "The public comment is a comment to the Georgia Public Service Commission", end: "24 hours before a Commission vote."}
+  # --- S19: PSC FAQs --------------------------------------------------------------------------------
+  - {id: P-031, source: S19, file: S19.txt, locator: "FAQ: How long has the PSC been around? (last sentence)",
+     start: "Today, five elected Commissioners", end: "a gas burner is used."}
+  - {id: P-032, source: S19, file: S19.txt, locator: "FAQ: role and responsibility (administrative sessions)",
+     start: "Administrative sessions of the Georgia Public Service Commission are held", end: "Proceedings are open to the public."}
+  # --- S17, S17b-e: commissioners' PSC bio pages (party labels and family details left out) ----------
+  - {id: P-033, source: S17, file: S17.txt, locator: "Stan Wise bio: header fields",
+     start: "Commissioner Stan Wise Commissioner Since", end: "Serves Through: December 31, 2026"}
+  - {id: P-034, source: S17, file: S17.txt, locator: "Stan Wise bio: paragraph 2",
+     start: "Wise stepped down from his Commission post", end: "the remainder of her term."}
+  - {id: P-035, source: S17b, file: S17b.txt, locator: "Jason Shaw bio: header fields",
+     start: "Commissioner Jason Shaw PSC Chairman", end: "Serves Through: December 31, 2028"}
+  - {id: P-036, source: S17c, file: S17c.txt, locator: "Lauren McDonald bio: header fields",
+     start: "Commissioner Lauren “Bubba” McDonald Vice Chairman", end: "Serves Through: December 31, 2028"}
+  - {id: P-037, source: S17d, file: S17d.txt, locator: "Peter Hubbard bio: header fields",
+     start: "Commissioner Peter Hubbard Commissioner Since", end: "Serves Through: December 31, 2026"}
+  - {id: P-038, source: S17e, file: S17e.txt, locator: "Alicia M. Johnson bio: header fields",
+     start: "Commissioner Alicia M. Johnson, DBA", end: "Serves Through: December 31, 2030"}
+  # --- S07b: PIA Staff's First Errata, cover letter, 2026-10-07 (.docx) -----------------------------
+  - {id: P-039, source: S07b, file: S07b-docx.txt, locator: "errata cover letter, date and paragraph 1",
+     start: "October 7, 2026", end: "page 20, line 15."}
+  - {id: P-040, source: S07b, file: S07b-docx.txt, locator: "errata cover letter, letterhead (commissioners on 2026-10-07)",
+     start: "COMMISSIONERS: JASON SHAW, Chairman", end: "STAN WISE"}
+  # --- S06: Georgia Power direct testimony, 2026-08-14 (PDF in the filing's zip) ---------------------
+  - {id: P-041, source: S06, file: S06-pdf.txt, locator: "cover page (p.1)",
+     start: "DIRECT TESTIMONY OF DR. ROSS BEPPLER", end: "AUGUST 14, 2026"}
+  - {id: P-042, source: S06, file: S06-pdf.txt, locator: "p.6, lines 19-22",
+     start: "RTP rates are a collection of tariffs", end: "cost of electricity."}
+  - {id: P-043, source: S06, file: S06-pdf.txt, locator: "p.7, lines 12-17",
+     start: "Georgia Power’s RTP tariffs are two-part rate structures", end: "alongside variations in load.",
+     fix: [["rate.2 The", "rate. The"]],
+     note: "Removed footnote number 2, which the text layer fuses to the end of the first sentence."}
+  - {id: P-044, source: S06, file: S06-pdf.txt, locator: "p.8, lines 8-11",
+     start: "The Company’s RTP tariffs are available", end: "and 170 on RTP-HA.",
+     fix: [["RTP- DA", "RTP-DA"]],
+     note: "Rejoined 'RTP-DA', split by a line-end hyphen."}
+  - {id: P-045, source: S06, file: S06-pdf.txt, locator: "p.10, lines 3-7",
+     start: "Access to marginal cost-based rates makes RTP", end: "downward pressure on rates for all customers."}
+  - {id: P-046, source: S06, file: S06-pdf.txt, locator: "pp.10-11, p.10 line 24 to p.11 line 6",
+     start: "In the 2010 rate case, the Commission approved", end: "between fuel and base.",
+     fix: [["Direct Testimony of Dr. Ross Beppler, Lee Evans, and Brandon Looney On behalf of Georgia Power Company Docket No. 57171 Page 10 of 18 ", ""]],
+     note: "Removed the page footer that falls inside this span at the page break."}
+  - {id: P-047, source: S06, file: S06-pdf.txt, locator: "p.12, lines 9-11",
+     start: "Q. WOULD CHANGING THE METHODOLOGY", end: "BASE RATE REVENUE? A. Yes."}
+  - {id: P-048, source: S06, file: S06-pdf.txt, locator: "p.12, lines 16-21",
+     start: "For the incremental load priced at RTP", end: "at the underlying FCR rate."}
+  - {id: P-049, source: S06, file: S06-pdf.txt, locator: "p.13, lines 4-15",
+     start: "The RTP fuel credit is based on marginal replacement fuel costs as the RTP", end: "not included in the RTP fuel credit calculation."}
+  - {id: P-050, source: S06, file: S06-pdf.txt, locator: "p.13, lines 17-25",
+     start: "Non-dispatchable PPAs are those contracts", end: "not driven by large load growth.",
+     fix: [["take-or- pay", "take-or-pay"], ["non- dispatchable", "non-dispatchable"]],
+     note: "Rejoined 'take-or-pay' and 'non-dispatchable', split by line-end hyphens."}
+  - {id: P-051, source: S06, file: S06-pdf.txt, locator: "p.14, lines 2-14",
+     start: "Firm Transportation costs are monthly pipeline", end: "existing FT costs are not driven by large load growth."}
+  - {id: P-052, source: S06, file: S06-pdf.txt, locator: "p.14 line 18 to p.15 line 13",
+     start: "The RTP price charged to incremental load in all hours", end: "for 2025 was $264 million.",
+     fix: [["Direct Testimony of Dr. Ross Beppler, Lee Evans, and Brandon Looney On behalf of Georgia Power Company Docket No. 57171 Page 14 of 18 ", ""]],
+     note: "Removed the page footer that falls inside this span at the page break."}
+  - {id: P-053, source: S06, file: S06-pdf.txt, locator: "p.15, lines 17-26",
+     start: "Over the past 16 years", end: "agreed to this subsequent review."}
+  - {id: P-054, source: S06, file: S06-pdf.txt, locator: "p.16, lines 2-11",
+     start: "Per the Company’s revised rules and regulations", end: "years 2029, 2030, and 2031.",
+     fix: [["in 2025,3 Georgia Power", "in 2025, Georgia Power"]],
+     note: "Removed footnote number 3, which the text layer fuses to '2025,'."}
+  - {id: P-055, source: S06, file: S06-pdf.txt, locator: "p.16, lines 14-22",
+     start: "The revenues Georgia Power receives from large load customers", end: "non-large load customers in the FCR clause."}
+  - {id: P-056, source: S06, file: S06-pdf.txt, locator: "p.17, lines 5-10",
+     start: "In their FCR-27 testimony filed in Docket No. 56765", end: "load cost model."}
+  - {id: P-057, source: S06, file: S06-pdf.txt, locator: "p.17, lines 14-23",
+     start: "PIA Staff and intervenors have expressed concern regarding", end: "denominator of the RTP fuel credit rate calculation.",
+     fix: [["non- dispatchable", "non-dispatchable"]],
+     note: "Rejoined 'non-dispatchable', split by a line-end hyphen."}
+  - {id: P-058, source: S06, file: S06-pdf.txt, locator: "p.18, lines 2-13",
+     start: "There are two potential options", end: "larger allocation of RTP revenues to the fuel clause.",
+     fix: [["non- dispatchable", "non-dispatchable"]],
+     note: "Rejoined 'non-dispatchable', split by a line-end hyphen."}
+  # --- S07: PIA Staff direct testimony, public disclosure version, 2026-09-23 (.docx) ---------------
+  - {id: P-059, source: S07, file: S07-docx.txt, locator: "cover page",
+     start: "ON BEHALF OF THE", end: "September 23, 2026"}
+  - {id: P-060, source: S07, file: S07-docx.txt, locator: "p.2, witness Newsome",
+     start: "My name is Tom J. Newsome.", end: "with the Georgia Public Service Commission (“Commission”)."}
+  - {id: P-160, source: S07, file: S07-docx.txt, locator: "p.2, witness Hayet",
+     start: "My name is Philip Hayet.", end: "(“Kennedy and Associates”)."}
+  - {id: P-161, source: S07, file: S07-docx.txt, locator: "p.2, witness Wellborn",
+     start: "My name is Leah Wellborn.", end: "Principal at Kennedy and Associates."}
+  - {id: P-061, source: S07, file: S07-docx.txt, locator: "pp.2-3, why a fuel credit method is needed",
+     start: "Non-RTP customers, like residential and small commercial customers", end: "The remainder of RTP revenues are allocated to base revenues."}
+  - {id: P-062, source: S07, file: S07-docx.txt, locator: "p.3, Staff's three guidelines",
+     start: "Staff had three guidelines.", end: "allocated based on energy usage (MWhs)."}
+  - {id: P-063, source: S07, file: S07-docx.txt, locator: "pp.3-4, costs left out of the credit",
+     start: "The Company does not include the following costs", end: "should be recovered from all customers."}
+  - {id: P-064, source: S07, file: S07-docx.txt, locator: "p.4, not all costs need be included",
+     start: "Yes; however, Staff does not necessarily expect", end: "credited to the fuel revenues."}
+  - {id: P-065, source: S07, file: S07-docx.txt, locator: "p.5, Table 1, first two rows",
+     start: "Energy costs non-dispatchable PPAs | Option 1 or 2", end: "Include, allocate on MWH"}
+  - {id: P-066, source: S07, file: S07-docx.txt, locator: "p.7, estimated effect on current fuel rates (as filed; see S07b)",
+     start: "Q. IF STAFF’S RECOMMENDATIONS HAD BEEN IN PLACE DURING", end: "approximately $1.35 per month."}
+  - {id: P-067, source: S07, file: S07-docx.txt, locator: "footnote 4",
+     start: "[footnote 4] The $1.35 per month savings", end: "1,000 kWhs per month."}
+  - {id: P-068, source: S07, file: S07-docx.txt, locator: "p.8, reporting recommendation 1",
+     start: "1) Monthly RTP Reporting:", end: "starting no later than January 1, 2027."}
+  - {id: P-069, source: S07, file: S07-docx.txt, locator: "p.9, why Staff investigated",
+     start: "Staff recognized that RTP customer load is growing significantly", end: "address Staff’s concerns in this docket."}
+  - {id: P-070, source: S07, file: S07-docx.txt, locator: "p.9, RTP load growth",
+     start: "The Company acknowledged the growth in new economic development load", end: "mainly be based on RTP pricing."}
+  - {id: P-071, source: S07, file: S07-docx.txt, locator: "footnote 10",
+     start: "[footnote 10] New Large Load customers", end: "incremental fixed cost recovery."}
+  - {id: P-072, source: S07, file: S07-docx.txt, locator: "p.13, the take-or-pay concern and Georgia Power's two options",
+     start: "Staff is concerned the current RTP Fuel Credit Methodology does not include the costs", end: "in the calculation (Option 2)."}
+  - {id: P-073, source: S07, file: S07-docx.txt, locator: "p.13, Staff recommends Option 2",
+     start: "Staff recommends Option 2, which includes both the energy", end: "would be included in the calculation."}
+  - {id: P-074, source: S07, file: S07-docx.txt, locator: "p.14, why Staff opposes Option 1",
+     start: "Option 1 is inconsistent with Staff’s guidelines.", end: "serve all customers."}
+  - {id: P-075, source: S07, file: S07-docx.txt, locator: "p.15, the AIER",
+     start: "Had the Company wanted to use an accurate", end: "for use as the RTP fuel credit methodology."}
+  - {id: P-076, source: S07, file: S07-docx.txt, locator: "p.15, 2025 take-or-pay data",
+     start: "The Company provided settlement data for 2025", end: "credited to fuel revenues."}
+  - {id: P-077, source: S07, file: S07-docx.txt, locator: "footnote 24",
+     start: "[footnote 24] STF-JKA-3-6.", end: "not an RTP allocation of cost responsibility."}
+  - {id: P-078, source: S07, file: S07-docx.txt, locator: "p.16, Table 5 and the text after it",
+     start: "Historic 2023-2025 (Calendar Year)", end: "under-estimate the total impact."}
+  - {id: P-079, source: S07, file: S07-docx.txt, locator: "p.17, Table 6 and the text after it",
+     start: "Projected 2026-2031 (Calendar Year)", end: "if the current RTP Fuel Credit methodology is not modified as recommended by Staff."}
+  - {id: P-080, source: S07, file: S07-docx.txt, locator: "p.17, summary of the take-or-pay recommendation",
+     start: "Staff recommends the RTP Fuel Credit Methodology be modified to include both the costs and the energy", end: "credited to fuel revenues."}
+  - {id: P-081, source: S07, file: S07-docx.txt, locator: "p.17, pipeline (FT) and storage costs",
+     start: "Natural gas FT and storage costs are fixed costs", end: "natural gas FT and storage costs."}
+  - {id: P-082, source: S07, file: S07-docx.txt, locator: "p.18, Georgia Power's partial proposal",
+     start: "The Company proposed that only new FT costs be shared", end: "adds undue complexity to the RTP fuel credit methodology."}
+  - {id: P-083, source: S07, file: S07-docx.txt, locator: "p.18, double-recovery concern",
+     start: "The Company has asserted that a portion of the revenue paid by RTP customers", end: "recover a portion of its FT costs twice."}
+  - {id: P-084, source: S07, file: S07-docx.txt, locator: "pp.18-19, Staff's pipeline-cost recommendation",
+     start: "To eliminate this risk, Staff recommends", end: "non-RTP customers over the past 15 years."}
+  - {id: P-085, source: S07, file: S07-docx.txt, locator: "p.19, on a single-peak-hour (1-CP) allocation",
+     start: "It is clear that fixed cost recovery and reliability are not issues limited", end: "reliably serve customers."}
+  - {id: P-086, source: S07, file: S07-docx.txt, locator: "p.21, alternative if the PSC prefers a demand allocator",
+     start: "If the Commission prefers a demand allocator", end: "within the same recovery mechanism."}
+  - {id: P-087, source: S07, file: S07-docx.txt, locator: "p.24, Table 11 (fuel-related fixed costs)",
+     start: "Coal rail car leases | Excluded from RTP credit calculation", end: "Natural gas gains/losses on resales | Excluded from RTP credit calculation | Include and assign on MWH"}
+  - {id: P-088, source: S07, file: S07-docx.txt, locator: "p.25, corporate overhead",
+     start: "Staff recommends that Corporate Overhead costs be included", end: "follows procurement."}
+  - {id: P-089, source: S07, file: S07-docx.txt, locator: "p.25, policy-related costs",
+     start: "Staff acknowledges that other costs recovered from fuel revenues are primarily policy-related", end: "Staff makes no recommendation at this time."}
+  - {id: P-090, source: S07, file: S07-docx.txt, locator: "p.27, rate case considerations",
+     start: "However, since the fuel costs are completely the responsibility of ratepayers", end: "while maintaining its targeted Return on Equity (“ROE”)."}
+  - {id: P-091, source: S07, file: S07-docx.txt, locator: "footnote 45",
+     start: "[footnote 45] Staff estimated the Company’s earned ROE", end: "from the 2022 rate case."}
+  # --- S08: GIPL direct testimony (John D. Wilson), public disclosure version, 2026-09-23 (PDF) -------
+  - {id: P-092, source: S08, file: S08-pdf.txt, locator: "PDF p.3 (testimony p.1), line 2",
+     start: "My name is John D. Wilson.", end: "Vice President of Grid Strategies LLC"}
+  - {id: P-093, source: S08, file: S08-pdf.txt, locator: "PDF p.4 (testimony p.2), lines 10-12",
+     start: "ON WHOSE BEHALF ARE YOU TESTIFYING IN THIS CASE?", end: "Unitarian Universalist Church of Savannah."}
+  - {id: P-094, source: S08, file: S08-pdf.txt, locator: "PDF p.4 (testimony p.2), lines 16-18",
+     start: "First, I find that Georgia Power has set its RTP price too low", end: "inconsistently with the peaker method."}
+  - {id: P-095, source: S08, file: S08-pdf.txt, locator: "PDF p.5 (testimony p.3), lines 14-20",
+     start: "Second, I find that several categories of costs", end: "in the RTP fuel credit calculation.”"}
+  - {id: P-096, source: S08, file: S08-pdf.txt, locator: "PDF p.6 (testimony p.4), lines 1-17",
+     start: "5. Adopt, with modifications, Georgia Power’s recommendation", end: "coal-related costs and corporate overhead and labor."}
+  - {id: P-097, source: S08, file: S08-pdf.txt, locator: "PDF p.7 (testimony p.5), lines 6-14",
+     start: "In the last few years, the Commission has approved", end: "subsidized by existing customers."}
+  - {id: P-098, source: S08, file: S08-pdf.txt, locator: "PDF p.9 (testimony p.7), lines 7-19",
+     start: "Capital substitution is a core component of the peaker method", end: "represent downward pressure on rates."}
+  - {id: P-099, source: S08, file: S08-pdf.txt, locator: "PDF p.22 (testimony p.20), lines 3-13",
+     start: "Several categories of costs recovered from FCR customers are not included in either", end: "affect either an FCR filing or a rate case."}
+  - {id: P-100, source: S08, file: S08-pdf.txt, locator: "PDF p.24 (testimony p.22), lines 1-7",
+     start: "Q: DO YOU SUPPORT THIS PROPOSAL? A: Yes. This resolves", end: "price-sensitive demand."}
+  - {id: P-101, source: S08, file: S08-pdf.txt, locator: "PDF p.24 (testimony p.22), lines 16-20",
+     start: "Yes, but with modifications.", end: "attributable to large load customers."}
+  - {id: P-102, source: S08, file: S08-pdf.txt, locator: "PDF p.26 (testimony p.24), lines 9-16",
+     start: "Furthermore, even if FT costs are included in Georgia Power’s marginal value data", end: "a direct contribution to FT costs."}
+  - {id: P-103, source: S08, file: S08-pdf.txt, locator: "PDF p.28 (testimony p.26), lines 8-12",
+     start: "And further, Georgia Power’s assertion that its model uses a winter 1CP", end: "not even on a trade secret basis."}
+  - {id: P-104, source: S08, file: S08-pdf.txt, locator: "PDF p.29 (testimony p.27), lines 3-8",
+     start: "Since FT is similar to transmission", end: "can be considered."}
+  - {id: P-105, source: S08, file: S08-pdf.txt, locator: "PDF p.32 (testimony p.30), lines 8-11",
+     start: "This will not result in double-recovery", end: "depending on how other cost allocation questions are handled."}
+  - {id: P-106, source: S08, file: S08-pdf.txt, locator: "PDF p.33 (testimony p.31), lines 14-16",
+     start: "I support excluding fuel-related costs that are not actual costs of fuel", end: "net renewable program revenues/expenses."}
+  - {id: P-107, source: S08, file: S08-pdf.txt, locator: "PDF p.19 (testimony p.17), lines 15-19",
+     start: "Q: ARE CHANGES TO RTP RATE DESIGN WITHIN THE SCOPE", end: "as quickly as possible."}
+  # --- S09: GAM testimony (Jonathan Ly), redacted public version, 2026-09-23 (PDF in the filing's zip) --
+  - {id: P-108, source: S09, file: S09-pdf.txt, locator: "PDF p.4 (testimony p.1), line 5",
+     start: "I am an Associate Consultant at J. Pollock, Incorporated.", end: "I am an Associate Consultant at J. Pollock, Incorporated."}
+  - {id: P-109, source: S09, file: S09-pdf.txt, locator: "PDF p.5 (testimony p.2), lines 2-5",
+     start: "I am testifying on behalf of the Georgia Association of Manufacturers", end: "under a variety of rate schedules."}
+  - {id: P-110, source: S09, file: S09-pdf.txt, locator: "PDF p.6 (testimony p.3), lines 25-32",
+     start: "No specific portion of RTP revenues should be credited against FT costs", end: "operation and maintenance (O&M) expenses."}
+  - {id: P-111, source: S09, file: S09-pdf.txt, locator: "PDF p.7 (testimony p.4), lines 1-7",
+     start: "The revenues derived from RTP sales place downward price pressure", end: "adequately address PIA Staff and intervenors’ concerns."}
+  - {id: P-112, source: S09, file: S09-pdf.txt, locator: "PDF p.8 (testimony p.5), lines 17-20",
+     start: "The adders paid by RTP customers lower the remaining costs", end: "requirements by $ in 2025."}
+  - {id: P-113, source: S09, file: S09-pdf.txt, locator: "PDF p.14 (testimony p.11), lines 3-7",
+     start: "GPC is proposing that the costs of the new FT capacity", end: "fully recovered from these customers.",
+     fix: [["growth.2 This", "growth. This"]],
+     note: "Removed footnote number 2, which the text layer fuses to 'growth.'."}
+  - {id: P-114, source: S09, file: S09-pdf.txt, locator: "PDF p.15 (testimony p.12), lines 6-11",
+     start: "According to GPC, system lambda contributed $264 million", end: "which totaled $214 million.",
+     fix: [["in 2025.6 This", "in 2025. This"]],
+     note: "Removed footnote number 6, which the text layer fuses to '2025.'. The blanks after '$' are redactions in the public version."}
+  - {id: P-115, source: S09, file: S09-pdf.txt, locator: "PDF p.16 (testimony p.13), lines 3-7",
+     start: "Either of these changes would increase the amount of RTP revenues", end: "upward pressure on base rates."}
+  - {id: P-116, source: S09, file: S09-pdf.txt, locator: "PDF pp.16-17 (testimony pp.13-14), Table 1 and p.14 lines 1-4",
+     start: "Table 1 Percentage of Base Revenues", end: "Domestic, Small Business, and Lighting customers.",
+     fix: [["J.POLLOCK INCORPORATED Jonathan Ly Page 14 ", ""]],
+     note: "Removed the page footer and header that fall inside this span at the page break."}
+  # --- S11: Georgia Power rebuttal testimony, 2026-10-27 (.docx in the filing's zip) -----------------
+  - {id: P-117, source: S11, file: S11-rebuttal.txt, locator: "cover page",
+     start: "REBUTTAL TESTIMONY OF DR. ROSS BEPPLER", end: "OCTOBER 27, 2026"}
+  - {id: P-118, source: S11, file: S11-rebuttal.txt, locator: "section I, summary (Staff's guidelines)",
+     start: "Specifically, we address PIA Staff’s three overarching guidelines", end: "should be given no weight by the Georgia Public Service Commission (the “Commission”)."}
+  - {id: P-119, source: S11, file: S11-rebuttal.txt, locator: "section I, summary (Option 1)",
+     start: "Regarding non-dispatchable power purchase agreements", end: "from the RTP fuel credit calculation."}
+  - {id: P-120, source: S11, file: S11-rebuttal.txt, locator: "section II, Staff's guidelines",
+     start: "PIA Staff’s guidelines are new policy recommendations", end: "by their own admission."}
+  - {id: P-121, source: S11, file: S11-rebuttal.txt, locator: "section II, overarching concerns",
+     start: "PIA Staff’s recommendations endeavor to treat RTP load more like non-RTP load", end: "competitive value of RTP as a marginal cost-based rate."}
+  - {id: P-122, source: S11, file: S11-rebuttal.txt, locator: "section III, pipeline costs are fixed",
+     start: "In other words, FT costs are established and fixed years in advance", end: "how much energy is produced by a facility."}
+  - {id: P-123, source: S11, file: S11-rebuttal.txt, locator: "section III, double recovery",
+     start: "The Company would only be double recovering", end: "not included in base revenue requirements."}
+  - {id: P-124, source: S11, file: S11-rebuttal.txt, locator: "section III, revenue on the base side",
+     start: "That said, just because the full cost of FT in fuel", end: "lowering the retail cost of service for customers in a base rate case."}
+  - {id: P-125, source: S11, file: S11-rebuttal.txt, locator: "section III, Staff's earlier allocation",
+     start: "PIA Staff now recommends that the Company recover new and existing FT", end: "a demand-based method."}
+  - {id: P-126, source: S11, file: S11-rebuttal.txt, locator: "section III, energy allocation",
+     start: "As such, energy is not an appropriate allocation factor for FT", end: "allocated on a demand basis."}
+  - {id: P-127, source: S11, file: S11-rebuttal.txt, locator: "section III, demand-based allocation and customer protection",
+     start: "The Company’s proposed demand-based allocation for new FT ensures", end: "inconsistent with the Commission’s approach to customer protection."}
+  - {id: P-128, source: S11, file: S11-rebuttal.txt, locator: "section IV, the two options",
+     start: "As it pertains to non-dispatchable PPAs, the Company presented two options:", end: "will increase the amount of RTP revenues credited to fuel."}
+  - {id: P-129, source: S11, file: S11-rebuttal.txt, locator: "section IV, why Option 1",
+     start: "Option 1 preserves the integrity of RTP as a marginal cost-based rate", end: "in place since 2010."}
+  - {id: P-130, source: S11, file: S11-rebuttal.txt, locator: "section IV, Option 1 and marginal cost",
+     start: "Similarly, when RTP load does respond to the price signal", end: "fixed price feature of the non-dispatchable PPA."}
+  - {id: P-131, source: S11, file: S11-rebuttal.txt, locator: "section IV, Staff's other cost categories",
+     start: "As such, the Commission should decline to adopt PIA Staff’s recommendations", end: "in its direct testimony."}
+  - {id: P-132, source: S11, file: S11-rebuttal.txt, locator: "section V, reporting",
+     start: "The Company does not believe that PIA Staff’s recommended monthly reporting", end: "in the requested timeframe."}
+  - {id: P-133, source: S11, file: S11-rebuttal.txt, locator: "section VI, scope",
+     start: "The current proceeding is appropriately limited", end: "next base rate case."}
+  # --- S12: Georgia Power motion to strike, 2026-10-08 (.docx in the filing's zip) ------------------
+  - {id: P-134, source: S12, file: S12-motion.txt, locator: "motion, opening paragraph",
+     start: "COMES NOW Georgia Power Company", end: "and not considered by this Commission."}
+  - {id: P-135, source: S12, file: S12-motion.txt, locator: "motion, signature line",
+     start: "Respectfully submitted, this 8th day of October 2026.", end: "Respectfully submitted, this 8th day of October 2026."}
+  # --- S13: GIPL response in opposition, 2026-10-14 (PDF) -------------------------------------------
+  - {id: P-136, source: S13, file: S13-pdf.txt, locator: "response, p.1 (last sentences)",
+     start: "As explained below, the entirety of Mr. Wilson’s testimony", end: "The Commission should deny Georgia Power’s motion."}
+  - {id: P-137, source: S13, file: S13-pdf.txt, locator: "response, signature line (p.7)",
+     start: "Respectfully submitted this 14th day of October, 2026.", end: "Respectfully submitted this 14th day of October, 2026."}
+  # --- S06b: Georgia Power's hearing request responses, 2026-09-11 (zip: .docx and .xlsx) -----------
+  - {id: P-138, source: S06b, file: S06b-GIPL-1-2.txt, locator: "response GIPL-1-2",
+     start: "Please see GIPL-1-2 Attachment A", end: "if Option 2 was adopted."}
+  - {id: P-139, source: S06b, file: S06b-GIPL-1-2-attA.txt, locator: "GIPL-1-2 Attachment A (Option 1), sheet Impact, rows 39-53",
+     start: "Impact!39: A=Additional Fuel Revenue", end: "Impact!53: A=Annual Total | B=REDACTED | C=REDACTED | D=REDACTED | E=REDACTED | F=REDACTED | G=REDACTED"}
+  - {id: P-140, source: S06b, file: S06b-GIPL-1-2-attB.txt, locator: "GIPL-1-2 Attachment B (Option 2), sheet Impact, rows 38-52",
+     start: "Impact!38: A=Additional Fuel Revenue", end: "Impact!52: A=Annual Total | B=REDACTED | C=REDACTED | D=REDACTED | E=REDACTED | F=REDACTED | G=REDACTED"}
+  - {id: P-141, source: S06b, file: S06b-GIPL-1-4.txt, locator: "response GIPL-1-4",
+     start: "Please see GIPL-1-4 Attachment", end: "Docket Nos. 44280 and 56765."}
+  - {id: P-142, source: S06b, file: S06b-GIPL-1-4-att.txt, locator: "GIPL-1-4 Attachment, sheet Fuel, rows 1-4",
+     start: "Fuel!1: A=Typical Residential Customer Impact", end: "C=-1.4805840015717595"}
+  - {id: P-143, source: S06b, file: S06b-GIPL-1-4-att.txt, locator: "GIPL-1-4 Attachment, sheet Base, rows 1-4",
+     start: "Base!1: A=Typical Residential Customer Impact", end: "C=1.6484419845741718"}
+  # --- Added while drafting (spans needed by cards and Layer 1) --------------------------------------
+  - {id: P-144, source: S08, file: S08-pdf.txt, locator: "PDF p.21 (testimony p.19), lines 20-22",
+     start: "The RTP Fuel Credit is the process for recording", end: "net of the RTP Fuel Credit."}
+  - {id: P-145, source: S07, file: S07-docx.txt, locator: "p.19, Staff's earlier 1-CP illustration",
+     start: "As a preliminary matter, in FCR-27 Staff relied", end: "needed further consideration."}
+  - {id: P-146, source: S06b, file: S06b-STF-1-1-att.txt, locator: "STF-1-1 Attachment (new FT cost allocation), rows 1-14",
+     start: "STF-1-1 Attachment!1: A=New FT Cost Allocation", end: "STF-1-1 Attachment!14: A=Total | D=REDACTED | E=REDACTED | F=REDACTED | G=REDACTED | H=REDACTED"}
+  - {id: P-147, source: S07, file: S07-docx.txt, locator: "p.20, Table 8 (forecast pipeline and storage allocation)",
+     start: "Calendar Year | RTP Allocation on MWh", end: "Total | ……………"}
+  - {id: P-148, source: S08, file: S08-pdf.txt, locator: "PDF p.26 (testimony p.24), lines 3-8",
+     start: "Q: SO DOES THE RTP RATE RECOVER FT COSTS?", end: "Georgia Power’s marginal value of capacity."}
+  - {id: P-149, source: S07, file: S07-docx.txt, locator: "p.24, fuel-related fixed costs",
+     start: "The following table includes costs that are fuel related.", end: "appropriately assigned to all customers."}
+  - {id: P-150, source: S07, file: S07-docx.txt, locator: "p.22, Table 9 and the note after it",
+     start: "Cost Categories | 2023 | 2024 | 2025", end: "as shown in Tables 2, 5 and 7."}
+  - {id: P-151, source: S07, file: S07-docx.txt, locator: "footnote 3",
+     start: "[footnote 3] Docket No. 57171 (RTP Investigation) Transcript", end: "p. 105, ln. 14-15"}
+  - {id: P-152, source: S08, file: S08-pdf.txt, locator: "PDF p.2 (cover page)",
+     start: "DIRECT TESTIMONY OF JOHN D. WILSON", end: "PUBLIC DISCLOSURE VERSION"}
+  - {id: P-153, source: S09, file: S09-pdf.txt, locator: "PDF p.1 (cover page)",
+     start: "REDACTED – PUBLIC VERSION Testimony", end: "September 23, 2026"}
+  - {id: P-154, source: S11, file: S11-rebuttal.txt, locator: "section III, GIPL's position on pipeline costs",
+     start: "GIPL’s position has proven equally unstable", end: "in favor of an energy basis."}
+  - {id: P-155, source: S11, file: S11-rebuttal.txt, locator: "footnote 8",
+     start: "[footnote 8] GIPL witness Wilson testified", end: "Tr. 421, 458-59."}
+  - {id: P-156, source: S08, file: S08-pdf.txt, locator: "PDF p.30 (testimony p.28), lines 3-9",
+     start: "Coal-related costs are one type of fixed fuel costs", end: "providers.36",
+     fix: [["providers.36", "providers."]],
+     note: "Removed footnote number 36, which the text layer fuses to the final word."}
+  - {id: P-157, source: S07, file: S07-docx.txt, locator: "p.20, summary of Staff's pipeline and storage recommendation",
+     start: "Staff recommends the Company’s RTP fuel credit methodology allocate all natural gas FT and storage costs", end: "consistent with the current treatment of existing FT costs for non-RTP customers."}
+  - {id: P-158, source: S12, file: S12-motion.txt, locator: "motion, first item on the list of testimony to strike",
+     start: "Page 2, Line 16 through the word", end: "reliability and transmission cost components of the RTP rate."}
+  - {id: P-159, source: S14, file: S14.txt, locator: "public witness page, paragraph 2",
+     start: "Testimony is given by witnesses on behalf of staff", end: "as well as by public witnesses."}

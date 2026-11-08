@@ -1,0 +1,214 @@
+# Hand-chosen passages for Trial 003 (Fulton County 2027 budget). Build with:
+#   uv run --with pyyaml python3 trials/tools/build_passages.py trials/003-fulton-2027-budget/passages.spec.yaml
+# Derived text files (all in _raw/, made from the hashed snapshots; see sources.yaml `derived`):
+#   S01.txt, S04d.txt, S09b.prefixed.txt  pdfplumber text with 'pN:' line prefixes (scratch script pdf_text.py --prefix),
+#                                         so build_passages.py strips page tags and printed line numbers
+#   S01.clean.txt, S04d.clean.txt         trials/tools/pdf_markup.py --clean (struck words dropped); used only for the
+#                                         code sections that carry strike-through/underline markup
+#   S05.txt, S06.txt, S07b.txt, S08b.txt, S09b.txt  pdfplumber text (pdf_text.py, no prefix)
+#   S10b.txt ... S10e.txt                 slide text from the .pptx decks (scratch script pptx_text.py, stdlib only)
+#   S08.txt, S09.txt, S11.txt, S20.txt, S21.txt, S22.txt  visible text written by trials/tools/snapshot.py
+# JSON and HTML snapshots are read directly.
+passages:
+  # --- S01: Resolution 26-0460 (re-creates the Budget Commission), text attached to the Legistar matter ---------
+  - {id: P-001, source: S01, file: S01.txt, locator: "p.1, lines 1-7 (title)",
+     start: "A RESOLUTION BY THE FULTON COUNTY BOARD OF COMMISSIONERS, TO RE-", end: "AND FOR OTHER PURPOSES."}
+  - {id: P-002, source: S01, file: S01.txt, locator: "p.1, lines 11-27 (history, 1953 to 2016)",
+     start: "WHEREAS, from 1953 until 2016", end: "maintained the use of a budget commission composed of the chairman of the board of commissioners, the county manager, and the chief financial officer; and"}
+  - {id: P-003, source: S01, file: S01.txt, locator: "p.2, lines 1-6 (the 2018 change)",
+     start: "WHEREAS, on August 15, 2018", end: "along with the proposed budget; and"}
+  - {id: P-004, source: S01, file: S01.txt, locator: "p.2, lines 7-14 (stated purpose of the change)",
+     start: "WHEREAS, the Board determines", end: "exclusive authority to adopt the County's annual budget."}
+  - {id: P-005, source: S01, file: S01.clean.txt, locator: "pp.2-3, Sec. 2-261 as amended, first paragraph (as adopted: struck words dropped)",
+     start: "Sec. 2-261, - Proposal and adoption of the budget.", end: "of all funds for such year.",
+     fix: [["governing [2] authority", "governing authority"]],
+     note: "Removed the page number '[2]' that falls inside the span at the page break. 'county manager' is struck through on lines 19 and 23 (checked visually on a rendered page image)."}
+  - {id: P-006, source: S01, file: S01.clean.txt, locator: "p.3, lines 9-22, Sec. 2-261 as amended, second paragraph",
+     start: "The county manager is authorized to take all administrative steps", end: "to the county clerk of the commission of Fulton County.",
+     note: "'county manager' is struck and 'budget commission' underlined on line 16 (checked visually)."}
+  - {id: P-007, source: S01, file: S01.txt, locator: "p.3, lines 24-36, new Sec. 2-263(a) Purpose",
+     start: "BE IT FURTHER RESOLVED that the Fulton County Board of Commissioners hereby adopts", end: "accordance with this code section."}
+  - {id: P-008, source: S01, file: S01.txt, locator: "pp.3-4, Sec. 2-263(b) Composition",
+     start: "(b) Composition.", end: "(the “Southern Representative”).",
+     fix: [["members: [3] (1)", "members: (1)"]],
+     note: "Removed the page number '[3]' at the page break."}
+  - {id: P-009, source: S01, file: S01.txt, locator: "p.4, lines 11-34, Sec. 2-263(c) Selection",
+     start: "(c) Selection of commissioner members.", end: "without the necessity of nomination or vote."}
+  - {id: P-010, source: S01, file: S01.txt, locator: "pp.4-5, Sec. 2-263(d) Eligibility",
+     start: "(d) Eligibility; election-year exclusion.", end: "notwithstanding the exclusion in paragraph (2) of this subsection.",
+     fix: [["budget cycle. [4] i.", "budget cycle. i."]],
+     note: "Removed the page number '[4]' at the page break."}
+  - {id: P-011, source: S01, file: S01.txt, locator: "p.5, lines 18-35, Sec. 2-263(e) Vice chair",
+     start: "(e) Vice chair.", end: "regardless of whether the vice chair serves under paragraph (1) of this subsection."}
+  - {id: P-012, source: S01, file: S01.txt, locator: "p.5, lines 37-45, Sec. 2-263(f) County manager and CFO",
+     start: "(f) Administrative duties of the county manager and chief financial", end: "discuss proposed budgets and priorities."}
+  - {id: P-013, source: S01, file: S01.txt, locator: "p.6, lines 2-23, Sec. 2-263(g) Duties of commissioner members",
+     start: "(g) Duties of commissioner members.", end: "preparing the recommended budget for presentation to the full board of commissioners."}
+  - {id: P-014, source: S01, file: S01.txt, locator: "p.6, lines 25-41, Sec. 2-263(h) Decision-making",
+     start: "(h) Decision-making; advisory nature.", end: "consistent with O.C.G.A. § 36-81-1 et seq. and other applicable law."}
+  - {id: P-015, source: S01, file: S01.txt, locator: "pp.6-7, Sec. 2-263(i)-(j) Presentation and meeting schedule",
+     start: "(i) Presentation to the board of commissioners.", end: "chief financial officer in accordance with the applicable budget calendar.",
+     fix: [["commissioners. [6] The recommended", "commissioners. The recommended"]],
+     note: "Removed the page number '[6]' at the page break. Together, P-005, P-006 and P-007 to P-015 hold the full text of Sec. 2-261 and Sec. 2-263 as adopted."}
+  - {id: P-016, source: S01, file: S01.txt, locator: "pp.7-8, sponsors",
+     start: "SPONSORED BY:", end: "(District 6)",
+     fix: [["(District 2) [7] CO-SPONSORED BY:", "(District 2) CO-SPONSORED BY:"]],
+     note: "Removed the page number '[7]' at the page break."}
+  # --- S02: Legistar record for Resolution 26-0460 (Web API JSON) -------------------------------------------
+  - {id: P-017, source: S02, file: S02.json, locator: "matter 26-0460: file number, title, status, dates",
+     start: '"MatterFile":"26-0460"', end: '"MatterPassedDate":"2026-08-05T00:00:00"'}
+  - {id: P-018, source: S02b, file: S02b.json, locator: "matter 26-0460 history: action of 2026-08-05",
+     start: '"MatterHistoryActionDate":"2026-08-05T00:00:00"', end: '"MatterHistorySeconderName":"Khadijah Abdur-Rahman"'}
+  - {id: P-019, source: S02c, file: S02c.json, locator: "matter 26-0460 attachments (both files)",
+     start: '"MatterAttachmentName":"08.05.26 - Resolution Fulton_County_Budget_Commission 7.30_"', end: 'a7d741d5-024e-4f50-b004-ac7ff3460c20.pdf"'}
+  - {id: P-020, source: S02d, file: S02d.json, locator: "roll call, agenda item 198790 (26-0460), 2026-08-05 (whole response)",
+     start: '[{"VoteId":31792', end: '"VoteEventItemId":198790}]'}
+  # --- S03: Legistar record for item 26-0471 (Budget Commission members) ------------------------------------
+  - {id: P-021, source: S03, file: S03.json, locator: "matter 26-0471: title, status, dates",
+     start: '"MatterFile":"26-0471"', end: '"MatterPassedDate":"2026-08-19T00:00:00"'}
+  - {id: P-022, source: S03b, file: S03b.json, locator: "matter 26-0471 history: action of 2026-08-19",
+     start: '"MatterHistoryActionDate":"2026-08-19T00:00:00"', end: '"MatterHistorySeconderName":"Bob Ellis"'}
+  - {id: P-023, source: S03c, file: S03c.json, locator: "roll call, agenda item 199957 (26-0471), 2026-08-19 (whole response)",
+     start: '[{"VoteId":32008', end: '"VoteEventItemId":199957}]'}
+  # --- S04: Legistar record and text for Resolution 26-0729 (remove the 5% cap) ----------------------------
+  - {id: P-024, source: S04, file: S04.json, locator: "matter 26-0729: file number, title, status, dates",
+     start: '"MatterFile":"26-0729"', end: '"MatterPassedDate":"2026-11-04T00:00:00"'}
+  - {id: P-025, source: S04b, file: S04b.json, locator: "matter 26-0729 history (whole response: all three actions)",
+     start: '[{"MatterHistoryId":205210', end: '"MatterHistoryMatterStatusId":74}]'}
+  - {id: P-026, source: S04c, file: S04c.json, locator: "matter 26-0729 attachment",
+     start: '"MatterAttachmentName":"Budget Cap Removal Resolution Draft"', end: '83d19126-5565-4ca5-9bfe-92866f595c11.pdf"'}
+  - {id: P-027, source: S04d, file: S04d.txt, locator: "p.1, lines 1-6 (title)",
+     start: "A RESOLUTION TO ENSURE TRANSPARENCY", end: "AND FOR OTHER PURPOSES."}
+  - {id: P-028, source: S04d, file: S04d.txt, locator: "p.1, lines 8-27 (first five WHEREAS clauses)",
+     start: "WHEREAS, the Fulton County Board of Commissioners recognizes", end: "significant variation in the budgetary needs of individual departments; and"}
+  - {id: P-029, source: S04d, file: S04d.txt, locator: "p.2, lines 1-17 (WHEREAS clauses on the 5% cap)",
+     start: "WHEREAS, the newly established Budget Commission", end: "this unprecedented restriction on the departments; and"}
+  - {id: P-030, source: S04d, file: S04d.clean.txt, locator: "pp.2-4, proposed new wording of Sec. 2-261 (as proposed: struck words dropped)",
+     start: "Sec. 2-261, - Proposal and adoption of the budget.", end: "commission of Fulton County.",
+     fix: [["proposed budget [2] governing", "proposed budget governing"], ["required by subsection [3] (b)", "required by subsection (b)"]],
+     note: "Removed the page numbers '[2]' and '[3]' at the page breaks. In the draft, 'the' is struck and 'all' underlined on p.3 line 3, and the sentence 'No limits or caps shall be placed on what a department, agency, elected official, or authority can request.' is underlined (new)."}
+  - {id: P-031, source: S04d, file: S04d.txt, locator: "p.4, lines 6-11 (requests left out because of the cap)",
+     start: "BE IT FURTHER RESOLVED that all of the county's departments", end: "November 15, 2026."}
+  - {id: P-032, source: S04d, file: S04d.txt, locator: "p.5, sponsor",
+     start: "Sponsored by:", end: "(District 3)"}
+  - {id: P-083, source: S04d, file: S04d.txt, locator: "p.2, lines 18-20 (resolving clause)",
+     start: "NOW, THEREFORE BE IT RESOLVED that the Fulton County Board of", end: "are included in the proposed budget as follows:"}
+  - {id: P-084, source: S04d, file: S04d.txt, locator: "p.4, lines 12-20 (severability, effective date, adoption line)",
+     start: "BE IT FURTHER RESOLVED that if any section", end: "Georgia, this ____ day of ________________, 2026.",
+     note: "With P-027 to P-032 and P-083, this archives the resolution's full text apart from signature lines."}
+  - {id: P-033, source: S04e, file: S04e.json, locator: "roll call, agenda item 205210 (26-0729), 2026-10-21 (whole response)",
+     start: '[{"VoteId":32722', end: '"VoteEventItemId":205210}]'}
+  - {id: P-034, source: S04f, file: S04f.json, locator: "roll call, agenda item 207004 (26-0729, motion to file), 2026-11-04 (whole response)",
+     start: '[{"VoteId":32932', end: '"VoteEventItemId":207004}]'}
+  # --- S05: Board agenda, 2026-11-04 --------------------------------------------------------------------------
+  - {id: P-035, source: S05, file: S05.txt, locator: "p.1, heading and roll call",
+     start: "FULTON COUNTY BOARD OF COMMISSIONERS FIRST REGULAR MEETING", end: "Khadijah Abdur-Rahman, Vice Chair (District 6)"}
+  - {id: P-085, source: S05, file: S05.txt, locator: "p.2, item 26-0736 (what the consent agenda is)",
+     start: "Adoption of the Consent Agenda - All matters listed", end: "for separate consideration."}
+  - {id: P-036, source: S05, file: S05.txt, locator: "p.5, item 26-0748 (Public Comment)",
+     start: "26-0748 Board of Commissioners", end: "contact the Clerk’s Office."}
+  - {id: P-037, source: S05, file: S05.txt, locator: "p.9, item 26-0729",
+     start: "26-0729 Board of Commissioners", end: "(Barrett) (MOTION TO APPROVE FAILED ON 10/21/26)"}
+  - {id: P-038, source: S05, file: S05.txt, locator: "p.10, item 26-0766",
+     start: "26-0766 Board of Commissioners", end: "(Abdur-Rahman)"}
+  # --- S06, S07, S07b: meeting schedules -----------------------------------------------------------------------
+  - {id: P-039, source: S06, file: S06.txt, locator: "2026 meeting schedule (whole document)",
+     start: "FULTON COUNTY BOARD OF COMMISSIONERS", end: "or visit Fulton County’s website at https://www.fultoncountyga.gov/"}
+  - {id: P-040, source: S07, file: S07.json, locator: "matter 26-0686 (2027 meeting calendar): title, status, dates",
+     start: '"MatterFile":"26-0686"', end: '"MatterPassedDate":null'}
+  - {id: P-041, source: S07b, file: S07b.txt, locator: "proposed 2027 meeting schedule (whole document)",
+     start: "Fulton County Board of Commissioners Proposed 2027 Meeting Schedule", end: "County’s website at www.fultoncountyga.gov"}
+  # --- S08, S08b: public notices and the Budget Commission's hearing agenda -----------------------------------
+  - {id: P-042, source: S08, file: S08.txt, locator: "Public Notices page, introduction and newest notice (captured 2026-11-08)",
+     start: "Public Notices are provided by applicable laws", end: "September 2026"}
+  - {id: P-043, source: S08b, file: S08b.txt, locator: "hearing agenda, heading and October 12-14",
+     start: "Fulton County Budget Commission Special Called Meetings", end: "3:30-4:30 Magistrate Court Justice & Safety"}
+  - {id: P-044, source: S08b, file: S08b.txt, locator: "hearing agenda, October 22",
+     start: "Thursday, October 22nd", end: "10:00-11:00 Probate Court Justice & Safety"}
+  # --- S09, S09b: county budget page and the FY2026 adopted budget book --------------------------------------
+  - {id: P-045, source: S09, file: S09.txt, locator: "Budget page, introduction and newest documents (captured 2026-11-08)",
+     start: "Fulton County operates from a calendar year budget.", end: "FY2026 Fulton County Government Revised Budget Presentation"}
+  - {id: P-046, source: S09b, file: S09b.txt, locator: "p.2, introduction",
+     start: "Fulton County’s Fiscal Year 2026 Final Adopted Budget was approved", end: "and amendments approved on January 21, 2026."}
+  - {id: P-047, source: S09b, file: S09b.prefixed.txt, locator: "p.4, FY2026 budget resolution, lines 4-11 (signed 2026-01-21)",
+     start: "WHEREAS, Fulton County's County Manager submitted a proposed budget", end: "whether greater or less than the sums presented in the proposed budget.",
+     fix: [["WHEREAS,Fulton County's Board", "WHEREAS, Fulton County's Board"]],
+     note: "This page is a signed scan; its text layer omits the space after 'WHEREAS,' on line 6. Checked against the rendered page image."}
+  - {id: P-048, source: S09b, file: S09b.txt, locator: "p.7 (budget message): the jail agreement",
+     start: "In January 2025, the County", end: "while continuing to recover from our 2024 cybersecurity incident."}
+  - {id: P-049, source: S09b, file: S09b.txt, locator: "p.8 (budget message): hearings and enhancement requests (repeated on p.19)",
+     start: "The County reinstated formal budget hearings allowing department and agencies", end: "Economic Development and Open and Responsible Government."}
+  - {id: P-050, source: S09b, file: S09b.txt, locator: "p.21 (budget message): consent decree costs and a 1% reduction",
+     start: "• Consent Decree: Includes funding of $31.8 million", end: "to determine impact."}
+  - {id: P-051, source: S09b, file: S09b.txt, locator: "p.33 (budget message): requests beyond the proposal",
+     start: "In addition to the above-mentioned enhancements already considered, there were almost $158", end: "additional resources are realized at the end of 2025."}
+  - {id: P-052, source: S09b, file: S09b.txt, locator: "p.76, adopted budget by fund (in millions)",
+     start: "FY2026 Adopted Budget by Fund and Year", end: "Grand Total $ 1,379.9 $ 1,431.1 $ 1,441.3",
+     note: "Some figures carry stray spaces from the PDF's column layout (for example '7 .9' for 7.9); not corrected because the page cites only the General Fund and grand-total figures."}
+  - {id: P-053, source: S09b, file: S09b.txt, locator: "p.77, adopted budget by focus area and fund (in millions)",
+     start: "FY2026 Adopted Budget by Focus Area and Fund", end: "General Fund $ 160.6 $ 507.5 $ 194.0 $ 150.6 $ 44.4 $ 1,057.1",
+     note: "The column headings are stacked in the PDF, so extraction interleaves them. Read against the rendered page: the columns are Health and Human Services, Justice and Safety, Open and Responsible, Infrastructure & Economic Development, Arts and Libraries, Grand Total."}
+  - {id: P-054, source: S09b, file: S09b.txt, locator: "p.78, General Fund schedule (whole page)",
+     start: "Fund : 100 Adopted", end: "Requirement",
+     note: "Columns: 2023 Actual, 2024 Actual, 2025 Actual, 2026 Proposed Budget, Changes to Proposed 1-7-26, Changes to Proposed 1-21-26, 2026 Adopted Budget. Some 'changes' figures carry stray spaces from the PDF layout (for example '3 88,116'); the page cites only the adopted column, which extracted cleanly."}
+  # --- S10: the county open-data portal's 2027 budget-hearing presentations -----------------------------------
+  - {id: P-055, source: S10, file: S10.json, locator: "catalog entry: Sheriff deck",
+     start: '"name" : "Sheriff Budget Presentation_2027"', end: '"createdAt" : "2026-10-09T01:57:08.000Z"'}
+  - {id: P-056, source: S10, file: S10.json, locator: "catalog entry: Solicitor General deck",
+     start: '"name" : "Solicitor General Budget Presentation_2027"', end: '"createdAt" : "2026-10-09T01:58:29.000Z"'}
+  - {id: P-057, source: S10, file: S10.json, locator: "catalog entry: Public Defender deck",
+     start: '"name" : "Public Defender Budget Presentation_2027"', end: '"createdAt" : "2026-10-09T01:47:23.000Z"'}
+  - {id: P-058, source: S10, file: S10.json, locator: "catalog entry: Probate Court deck",
+     start: '"name" : "Probate Court Budget Presentation_2027"', end: '"createdAt" : "2026-10-09T01:43:16.000Z"'}
+  - {id: P-059, source: S10b, file: S10b.txt, locator: "Sheriff deck, slide 1 (cover)",
+     start: "FULTON COUNTY SHERIFF’S OFFICE PROPOSED BUDGET", end: "OCTOBER 13, 2026"}
+  - {id: P-060, source: S10b, file: S10b.txt, locator: "Sheriff deck, slide 2 (2026 challenges and resolutions, first three rows)",
+     start: "Attraction, Retention, and Recruitment of Personnel", end: "Include all sworn and civilians whose job functions require work at the jail."}
+  - {id: P-061, source: S10b, file: S10b.txt, locator: "Sheriff deck, slide 5 (2027 requests, ranked)",
+     start: "2027 ENHANCEMENT PRIORITIZATION", end: "Inmate Transport Services) 1"}
+  - {id: P-062, source: S10c, file: S10c.txt, locator: "Solicitor General deck, slide 1 (2026 challenges and resolutions)",
+     start: "CHALLENGES Caseload Growth without proportional staffing", end: "timely processing of charges."}
+  - {id: P-063, source: S10c, file: S10c.txt, locator: "Solicitor General deck, slide 4 (2027 requests, ranked)",
+     start: "2027 ENHANCEMENT PRIORITIZATION", end: "Middleware Phase 2-Development & Deployment 2"}
+  - {id: P-064, source: S10d, file: S10d.txt, locator: "Public Defender deck, slide 4 (2027 requests, ranked, with amounts)",
+     start: "2027 ENHANCEMENT PRIORITIZATION", end: "BAR FEES: Annual Bar fees for additional attorney staff $6,216 6"}
+  - {id: P-065, source: S10e, file: S10e.txt, locator: "Probate Court deck, slide 1 (2026 challenges)",
+     start: "CHALLENGES 1. Prolonged Case Processing Time", end: "technology, security, and efficiency improvements."}
+  - {id: P-066, source: S10e, file: S10e.txt, locator: "Probate Court deck, slide 4 (2027 requests, ranked)",
+     start: "2027 ENHANCEMENT PRIORITIZATION", end: "1 Associate Judge 2"}
+  # --- S11: Clerk to the Commission page ------------------------------------------------------------------------
+  - {id: P-067, source: S11, file: S11.txt, locator: "Clerk to the Commission page: public comment and accommodations (captured 2026-11-08)",
+     start: "Residents have two options to participate in public comment", end: "contact the Fulton County Clerk to the Commission at 404.612.8200."}
+  # --- S20: Atlanta News First, 2026-10-07 ------------------------------------------------------------------------
+  - {id: P-068, source: S20, file: S20.html, locator: "page metadata: publication time",
+     start: '"datePublished": "2026-10-07T15:55:37.083Z"', end: '"datePublished": "2026-10-07T15:55:37.083Z"'}
+  - {id: P-069, source: S20, file: S20.txt, locator: "article, paragraphs 1-3 (news conference, letter, who attended)",
+     start: "Fulton County justice officials are pushing back", end: "probate judge and public defender attended the news conference."}
+  - {id: P-070, source: S20, file: S20.txt, locator: "article, paragraphs 4-5 (what the group asked for)",
+     start: "The group is asking commissioners to wait until January", end: "staffing shortages, court delays and jail overcrowding."}
+  - {id: P-071, source: S20, file: S20.txt, locator: "article, Solicitor-General Keith Gammage",
+     start: "Fulton County Solicitor General Keith Gammage said his office is underfunded.", end: "upwards of 400,” Gammage said."}
+  - {id: P-072, source: S20, file: S20.txt, locator: "article, Commissioner Dana Barrett",
+     start: "Fulton County Board Commissioner Dana Barrett, District 3", end: "only they qualify to be on.”"}
+  - {id: P-073, source: S20, file: S20.txt, locator: "article, Commissioner Bob Ellis; Vice Chair not reached",
+     start: "Commissioner Bob Ellis responded to the allegation.", end: "still waiting to hear back from Commissioner Khadijah Abdur-Rahman."}
+  # --- S21: FOX 5 Atlanta, 2026-10-07 -----------------------------------------------------------------------------
+  - {id: P-074, source: S21, file: S21.html, locator: "page metadata: publication time",
+     start: '"datePublished":"2026-10-07T19:15:15-04:00"', end: '"datePublished":"2026-10-07T19:15:15-04:00"'}
+  - {id: P-076, source: S21, file: S21.txt, locator: "article, 'What we know'",
+     start: "The coalition calling themselves", end: "does not possess final voting power."}
+  - {id: P-077, source: S21, file: S21.txt, locator: "article, the 5% directive and Solicitor-General Gammage",
+     start: "The justice leaders also raised concerns over a directive", end: "said Fulton County Solicitor General Keith Gammage."}
+  - {id: P-078, source: S21, file: S21.txt, locator: "article, Chief Probate Judge Johnson and Sheriff Labat",
+     start: "Fulton County Chief Probate Judge Kenya Johnson, speaking on behalf", end: 'hijack this process is simply unfair," Labat said.'}
+  - {id: P-079, source: S21, file: S21.txt, locator: "article, Commissioner Ellis",
+     start: "Commissioner Bob Ellis addressed the coalition's concerns", end: "will review and vote on the final budget."}
+  - {id: P-080, source: S21, file: S21.txt, locator: "article, written submissions; the story's sources and correction",
+     start: "Despite refusing to appear in person", end: "to correct Judge Kenya Johnson's name."}
+  # --- S22: Center for Civic Innovation, 2026-08-09 ---------------------------------------------------------------
+  - {id: P-081, source: S22, file: S22.html, locator: "page metadata: publication time",
+     start: '"datePublished":"2026-08-09T23:55:00-0400"', end: '"datePublished":"2026-08-09T23:55:00-0400"'}
+  - {id: P-082, source: S22, file: S22.txt, locator: "post, first sentence",
+     start: "The Fulton County Board of Commissioners voted 4-1", end: "absent for the vote.",
+     fix: [[" , with", ", with"]],
+     note: "Removed a space before a comma left by a link boundary in the HTML. Only the sentence we cite is kept (copyrighted post)."}

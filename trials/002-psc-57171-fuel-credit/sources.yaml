@@ -1,0 +1,392 @@
+# Sources for Trial 002 (PSC Docket 57171). See docs/process/runbooks/bill-workspace.md, steps 1-2.
+# status: retrieved | covered-by (facts available from another retrieved source) | not-retrieved | rejected
+# type:   primary-government | secondary-research | advocacy | news | local-government | party-filing
+#         party-filing is NEW in this trial: testimony, motions, notices and data responses filed by a party
+#         in the contested case (Georgia Power, PIA Staff, GIPL, GAM, RSM). The runbook's list has no fitting
+#         type; see log.md. PIA Staff is a party here (S02, P-006), so its testimony is a party filing too.
+# Files live in _raw/ (git-ignored). Re-download a URL and compare sha256 to check our copy.
+# Files inside a downloaded .zip were extracted with extract/safe_unzip.py (flat names, new directory);
+# each member that is cited is listed with its own sha256 next to the archive's.
+# Text derivatives (derived:) were made mechanically: .docx -> docx2txt.py (stdlib), PDF -> pdf2txt.py
+# (pdfplumber), .xlsx -> xlsx2txt.py (stdlib). Scripts are in extract/ in this trial folder; see log.md.
+# Search-engine summaries were used for DISCOVERY ONLY and are never cited.
+trial: 002-psc-57171-fuel-credit
+decision: {state: GA, body: "Georgia Public Service Commission", docket: "57171", title: "RTP Revenue Credit and Allocation Methodology", final_decision_scheduled: "2026-12-15"}
+discovered_on: "2026-11-08"
+retrieved_on: "2026-11-08"
+user_agent: "Mozilla/5.0 (compatible; civic-research-trial/0.1; +https://github.com/Unskilledcrab/Polysense)"
+
+sources:
+  # --- Primary government records: the PSC's docket, orders, calendar and public pages ----------------
+  - id: S01
+    title: "Docket 57171 page: RTP Revenue Credit and Allocation Methodology"
+    publisher: Georgia Public Service Commission
+    type: primary-government
+    url: "https://psc.ga.gov/search/facts-docket/?docketId=57171"
+    status: retrieved
+    retrieved_at: "2026-11-08T07:00:09Z"
+    http_status: 200
+    content_type: text/html
+    sha256: db401d43c6c69c4954fb2c69dda4d4cd0f1bcd66925ef71cdabb6eeb6336906a
+    local_file: S01.html
+    derived: [S01.txt]
+    license: public record
+    notes: "Docket fields: industry Electric, date 06/02/2026, status Open. The filing table on this page is filled by JavaScript; see S01b."
+  - id: S01b
+    title: "Docket 57171 filing list (the JSON the docket page itself requests)"
+    publisher: Georgia Public Service Commission
+    type: primary-government
+    url: "https://psc.ga.gov/search/service-facts-docket/?docketId=57171&sortDirection=DESC&sortColumn=Filed&searchText=&pageSize=50&pageNumber=1"
+    status: retrieved
+    retrieved_at: "2026-11-08T07:00:39Z"
+    http_status: 200
+    content_type: text/html
+    sha256: 93995f181b49102e6e58bcfff21a21b12876344e001a0c3e5c3af72407c5c2eb
+    local_file: S01b.html
+    derived: [S01b.txt]
+    license: public record
+    notes: "Body is JSON served as text/html: resultsCount 32, all 32 items in this page. Without pageNumber=1 the endpoint returned an empty body (first try, discarded). No order on Georgia Power's motion to strike appears. The 2026-10-15 hearing transcript (229261) is listed with hasAttachment false."
+  - id: S02
+    title: "Procedural and Scheduling Order, Docket 57171 (adopted 2026-07-07)"
+    publisher: Georgia Public Service Commission
+    type: primary-government
+    url: "https://psc.ga.gov/search/facts-document/?documentId=227135"
+    status: retrieved
+    retrieved_at: "2026-11-08T07:00:45Z"
+    files:
+      - {local_file: S02-docx.bin, sha256: a8b397a87e39877e6e94e34517535a5c6320d321fb63ee099dd7f57dff96bd8e, captured_at: "2026-11-08T07:00:51Z", url: "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/227135/108426", content_type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document", note: "PSO RTP Proceeding.docx (readable copy)"}
+      - {local_file: S02-pdf.pdf, sha256: b1df84b84387f167193cd82dd037558ad3c85cd14f889a1b8bced1e9142873ea, captured_at: "2026-11-08T07:00:51Z", url: "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/227135/108427", content_type: application/pdf, note: "227135.pdf, the signed, stamped scan (7 pages, no text layer)"}
+      - {local_file: S02.html, sha256: 428dd981ef35b6fef9c6446a2aafed1f973fd4a530379efff9900319cdfe60fb, captured_at: "2026-11-08T07:00:45Z", note: "document page listing both attachments"}
+    derived: [S02-docx.txt]
+    license: public record
+    settles: [D1, D2, D3, D6, D9]
+    notes: "Passages come from the .docx. The signed scan was rendered to images and checked by eye against the .docx on pages 1 (background quote, letterhead), 3 (Jul 13 to Nov 12 entries), 4 (Dec 2, Dec 10, Dec 15 entries) and 7 (adopted 2026-07-07, signatures dated 7-7-26): they match."
+  - id: S03
+    title: "Commission calendar entry: Docket No. 57171 Hearing 11-12-2026"
+    publisher: Georgia Public Service Commission
+    type: primary-government
+    url: "https://psc.ga.gov/agendas-calendars/commission-calendar/docket-no-57171-rtp-revenue-credit-and-allocation-methodology-hearing-11-12-2026/"
+    status: retrieved
+    retrieved_at: "2026-11-08T07:07:07Z"
+    http_status: 200
+    content_type: text/html
+    sha256: 8f670a4bef1257fd4207b209229c7555c76099e9c2038e51ea8533c67eeb5ecd
+    local_file: S03.html
+    derived: [S03.txt]
+    license: public record
+    notes: "The entry itself shows 'Time: -', 'Location: N/A' and no attachments; its sidebar lists 9:35 am. Not cited: S04 carries the same times."
+  - id: S04
+    title: "Commission Calendar (list view)"
+    publisher: Georgia Public Service Commission
+    type: primary-government
+    url: "https://psc.ga.gov/agendas-calendars/commission-calendar/"
+    status: retrieved
+    retrieved_at: "2026-11-08T07:07:10Z"
+    http_status: 200
+    content_type: text/html
+    sha256: e2e03628b1a00831b56a155f69b5588abf923e7181b406d8c42a3ea572cbd608
+    local_file: S04.html
+    derived: [S04.txt]
+    license: public record
+    settles: [D2, D3, D10]
+  - id: S04b
+    title: "Calendar entry: Facilities Protection/Telecommunication/Energy and Administrative Affairs Committees 11-12-2026"
+    publisher: Georgia Public Service Commission
+    type: primary-government
+    url: "https://psc.ga.gov/agendas-calendars/commission-calendar/facilities-protection-telecommunication-energy-and-administrative-affairs-committees-11-12-2026/"
+    status: retrieved
+    retrieved_at: "2026-11-08T07:07:38Z"
+    http_status: 200
+    sha256: 92479491b959a2ad78bcca11f7ca4b52fe6759993dbeef1856d229fc4e81a12b
+    local_file: S04b.html
+    notes: "No agenda, time or location posted as of capture. Not cited."
+  - id: S04c
+    title: "Calendar entry: Committees 12-10-2026"
+    publisher: Georgia Public Service Commission
+    type: primary-government
+    url: "https://psc.ga.gov/agendas-calendars/commission-calendar/facilities-protection-telecommunication-energy-and-administrative-affairs-committees-12-10-2026/"
+    status: retrieved
+    retrieved_at: "2026-11-08T07:07:40Z"
+    http_status: 200
+    sha256: 0527966ab4b2610ae3ae1fc64155b42f3b6a36319bfe1eadc7436e4fc3cb2450
+    local_file: S04c.html
+    notes: "No agenda posted as of capture. Not cited. Re-check before 2026-12-10."
+  - id: S04d
+    title: "Calendar entry: Administrative Session 12-15-2026"
+    publisher: Georgia Public Service Commission
+    type: primary-government
+    url: "https://psc.ga.gov/agendas-calendars/commission-calendar/administrative-session-12-15-2026/"
+    status: retrieved
+    retrieved_at: "2026-11-08T07:07:42Z"
+    http_status: 200
+    sha256: 94069deaaf1a015d8a240597510bf0ced6af9abd55acfe99e1d38d5471a92c9a
+    local_file: S04d.html
+    notes: "No agenda posted as of capture. Not cited. Re-check before 2026-12-15."
+  - id: S14
+    title: "Appearing as a Public Witness Before The Georgia Public Service Commission"
+    publisher: Georgia Public Service Commission
+    type: primary-government
+    url: "https://psc.ga.gov/about-the-psc/consumer-corner/consumer-advisories/public-witness/"
+    status: retrieved
+    retrieved_at: "2026-11-08T07:07:13Z"
+    http_status: 200
+    content_type: text/html
+    sha256: 61789d2c4299e6668f55e17ca6f7694b35086aa0d34743f0f9e952b76d607a44
+    local_file: S14.html
+    derived: [S14.txt]
+    license: public record
+    notes: "General guidance, not specific to Docket 57171. Says nothing about speaking at committee meetings (D11)."
+  - id: S15
+    title: "Public Comments"
+    publisher: Georgia Public Service Commission
+    type: primary-government
+    url: "https://psc.ga.gov/public-comments/"
+    status: retrieved
+    retrieved_at: "2026-11-08T07:07:15Z"
+    http_status: 200
+    content_type: text/html
+    sha256: b3efc96d4478213ac6b1a5476c7aebd2422d55a685e9c1fa0d46c70852e722b4
+    local_file: S15.html
+    derived: [S15.txt]
+    license: public record
+    settles: [D10]
+    notes: "The comment form itself loads outside the static page; only the rules text was captured."
+  - id: S16
+    title: "Meet the Commission (commissioners list)"
+    publisher: Georgia Public Service Commission
+    type: primary-government
+    url: "https://psc.ga.gov/about-the-psc/commissioners/"
+    status: retrieved
+    retrieved_at: "2026-11-08T07:07:17Z"
+    http_status: 200
+    sha256: e311753e4dfbdc023009793a21479c9dee8b2bb63afb9725585118da708b1749
+    local_file: S16.html
+    notes: "Lists Shaw, McDonald, Hubbard, Johnson, Wise. Not cited: the bio pages (S17-S17e) give the same names plus term dates. One bio on this page names a commissioner's children; never copy it."
+  - id: S17
+    title: "Commissioner Stan Wise (PSC bio page)"
+    publisher: Georgia Public Service Commission
+    type: primary-government
+    url: "https://psc.ga.gov/about-the-psc/commissioners/stan-wise/"
+    status: retrieved
+    retrieved_at: "2026-11-08T07:08:16Z"
+    http_status: 200
+    sha256: f56a4bc7f97778779bfcdea5c34bcba2b4e364d8cb76c3b21b21eb5af4ee4159
+    local_file: S17.html
+    derived: [S17.txt]
+    license: public record
+    settles: [D8]
+    notes: "Party label and family details on the page are deliberately left out of passages (CLAUDE.md invariant 4, style guide section 7)."
+  - {id: S17b, title: "Commissioner Jason Shaw (PSC bio page)", publisher: Georgia Public Service Commission, type: primary-government, url: "https://psc.ga.gov/about-the-psc/commissioners/jason-shaw/", status: retrieved, retrieved_at: "2026-11-08T07:08:34Z", http_status: 200, sha256: b8e0dd1946b895a5eb1b69673627f305608160d02ecba4fd381aa410de0610c9, local_file: S17b.html, derived: [S17b.txt], settles: [D8], notes: "Party label and family details left out of passages."}
+  - {id: S17c, title: "Commissioner Lauren 'Bubba' McDonald (PSC bio page)", publisher: Georgia Public Service Commission, type: primary-government, url: "https://psc.ga.gov/about-the-psc/commissioners/lauren-mcdonald/", status: retrieved, retrieved_at: "2026-11-08T07:08:36Z", http_status: 200, sha256: 43f18aa917ede8bdcb3f73760f5454a7d80ca770dcdb1a844ec9d7d03352ef7d, local_file: S17c.html, derived: [S17c.txt], settles: [D8], notes: "Party label left out of passages."}
+  - {id: S17d, title: "Commissioner Peter Hubbard (PSC bio page)", publisher: Georgia Public Service Commission, type: primary-government, url: "https://psc.ga.gov/about-the-psc/commissioners/peter-hubbard/", status: retrieved, retrieved_at: "2026-11-08T07:08:38Z", http_status: 200, sha256: cc7ab9647ab2c0a5edb1514492613a1ffbd42618438a608562511f77e8e1a1e6, local_file: S17d.html, derived: [S17d.txt], settles: [D8], notes: "Party label left out of passages."}
+  - {id: S17e, title: "Commissioner Alicia M. Johnson (PSC bio page)", publisher: Georgia Public Service Commission, type: primary-government, url: "https://psc.ga.gov/about-the-psc/commissioners/alicia-johnson/", status: retrieved, retrieved_at: "2026-11-08T07:08:40Z", http_status: 200, sha256: 22a6a8dc6dae2f9b4c8e90c5da65e7ab5b5d24bb5b1a7b29dbc3f0272b33e808, local_file: S17e.html, derived: [S17e.txt], settles: [D8], notes: "Party label left out of passages."}
+  - {id: S18, title: "GPSC Information (index page)", publisher: Georgia Public Service Commission, type: primary-government, url: "https://psc.ga.gov/about-the-psc/gpsc-information/", status: retrieved, retrieved_at: "2026-11-08T07:08:18Z", http_status: 200, sha256: 3164d15b327d16ef26499919aaa8af6564f01e52f00c150ef096d84ac5b8357d, local_file: S18.html, notes: "Index of links only; no term or meeting rules. Not cited."}
+  - id: S19
+    title: "PSC FAQs"
+    publisher: Georgia Public Service Commission
+    type: primary-government
+    url: "https://psc.ga.gov/faqs/"
+    status: retrieved
+    retrieved_at: "2026-11-08T07:08:20Z"
+    http_status: 200
+    content_type: text/html
+    sha256: 0b8e208f57ddc171dfd222568af8cdd70f1b91e78b0658fb38e87bcf4b0667db
+    local_file: S19.html
+    derived: [S19.txt]
+    license: public record
+    notes: "Says administrative sessions are open to the public (hearing room 110). Nothing on public comment at committee meetings (D11)."
+  - {id: S20, title: "Docket 56765 (FCR-27) filing list (JSON)", publisher: Georgia Public Service Commission, type: primary-government, url: "https://psc.ga.gov/search/service-facts-docket/?docketId=56765&sortDirection=DESC&sortColumn=Filed&searchText=&pageSize=50&pageNumber=1", status: retrieved, retrieved_at: "2026-11-08T07:09:17Z", http_status: 200, sha256: e47b5cae915b3789173be0bd3d4ea4756e0d58b79a50af8a63d53689b20744b2, local_file: S20.html, settles: [D4], notes: "Used to find the 2026-05-28 short order (226750), the 2026-08-04 order (227445) and the 2026-05-12 stipulation (226544). First 50 of 97 items. Not cited."}
+  - id: S21
+    title: "Short Order Adopting Stipulation, Docket 56765 (FCR-27), 2026-05-28"
+    publisher: Georgia Public Service Commission
+    type: primary-government
+    url: "https://psc.ga.gov/search/facts-document/?documentId=226750"
+    status: retrieved
+    retrieved_at: "2026-11-08T07:09:24Z"
+    files:
+      - {local_file: S21-docx.bin, sha256: 83a8b6fb70674d7b3c28f4c7a04f1dd7e1dd939f39241c4ffe3dcb96a62f4854, captured_at: "2026-11-08T07:09:33Z", url: "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/226750/108029", content_type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document", note: "FCR-27 Short Order.docx"}
+      - {local_file: S21.html, sha256: e2e2b93f0f4cb1a5f5b3152820ecd9879fbd0e557a3e7b15d5a2f6e23994e63b, captured_at: "2026-11-08T07:09:24Z", note: "document page"}
+    derived: [S21-docx.txt]
+    license: public record
+    settles: [D1, D4]
+    notes: "Ordering paragraph 6 creates this review; the PSO (S02) quotes it verbatim. The signed PDF (226750.pdf, file 108017) was not downloaded."
+  - id: S21b
+    title: "Order Adopting Stipulation, Docket 56765 (FCR-27), 2026-08-04"
+    publisher: Georgia Public Service Commission
+    type: primary-government
+    url: "https://psc.ga.gov/search/facts-document/?documentId=227445"
+    status: retrieved
+    retrieved_at: "2026-11-08T07:09:26Z"
+    files:
+      - {local_file: S21b-docx.bin, sha256: 1c25ced326710a507b76f1c6ebae945d2d7112c1a4ec0a1214f73f8965157159, captured_at: "2026-11-08T07:09:36Z", url: "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/227445/108706"}
+      - {local_file: S21b.html, sha256: ff4d68d9c70bbac0311ace9d969426a841a5caa529ba0c5e741a2d0f76bdbb23, captured_at: "2026-11-08T07:09:26Z"}
+    settles: [D4]
+    notes: "The full order that followed the short order. Not cited (the short order's paragraph 6 is the operative text)."
+
+  # --- Party filings in Docket 57171 (contested case; testimony is pre-filed for the hearings) -------------
+  - id: S05
+    title: "Georgia Power: RTP Legal Notice Compliance Filing (cover letter 2026-08-28 and legal notice)"
+    publisher: Georgia Power Company
+    type: party-filing
+    url: "https://psc.ga.gov/search/facts-document/?documentId=228222"
+    status: retrieved
+    retrieved_at: "2026-11-08T07:02:02Z"
+    files:
+      - {local_file: S05-docx.bin, sha256: 8d767e2b5022d8ccda6ed5710eeb7573437d3a1b48d2b927c615c9014893fa93, captured_at: "2026-11-08T07:02:38Z", url: "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/228222/109363", note: "57171 RTP Hearing Legal Notice Letter.docx; byte-identical to the .docx inside S05-zip.bin"}
+      - {local_file: S05-pdf.pdf, sha256: 6bdb81875d4347688037f082af6797bc99151c178ef6eb0ccb8a8ed85260218c, captured_at: "2026-11-08T07:02:40Z", url: "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/228222/109364"}
+      - {local_file: S05-zip.bin, sha256: acbee376d0ab38fb20933db0b3396dd99fc4958b848509004088545e1da5446f, captured_at: "2026-11-08T07:02:42Z", url: "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/228222/109362"}
+      - {local_file: S05.html, sha256: 0f089387ac8febbc5356135abbfd8dc27db65a41d373fa32a8daaabf042182f7, captured_at: "2026-11-08T07:02:02Z", note: "document page"}
+    derived: [S05-docx.txt]
+    settles: [D9]
+    notes: "The notice is published at the Commission's direction. The cover letter carries a company employee's work email; it is not copied into passages."
+  - id: S06
+    title: "Georgia Power: RTP Direct Testimony of Dr. Ross Beppler, Lee Evans and Brandon Looney (2026-08-14)"
+    publisher: Georgia Power Company
+    type: party-filing
+    url: "https://psc.ga.gov/search/facts-document/?documentId=227629"
+    status: retrieved
+    retrieved_at: "2026-11-08T07:02:04Z"
+    files:
+      - {local_file: S06-zip.bin, sha256: 9a1f4ec4ec9ec0b8429817e45ac153fd36f703b1fd08c24d46e11b84ad998fba, captured_at: "2026-11-08T07:02:44Z", url: "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/227629/108958", note: "gpc_rtp_direct_testimony_dkt__no__57171.zip"}
+      - {local_file: "S06-zip.d/GPC RTP Direct Testimony (Dkt. No. 57171).pdf", sha256: 96220aada990c0d9797121696b1da099659904ba93291f4abb1a8ca354a5c983, note: "member of S06-zip.bin; the cited text (S06-pdf.txt) comes from this PDF's text layer"}
+      - {local_file: "S06-zip.d/GPC RTP Direct Testimony (Dkt. No. 57171).docx", sha256: b48fbb4fb0ebbfdc308ffba1c74b2a4ae1b5c6191020f4971e3972cff23c2cf0, note: "member of S06-zip.bin; same text (S06-direct.txt), used for reading"}
+      - {local_file: S06-pdf.pdf, sha256: a39c32999d194afea1c4be6239f929267310a4ab78eecaac767940964de1b2f6, captured_at: "2026-11-08T07:02:46Z", url: "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/227629/108972", note: "transmittal letter"}
+      - {local_file: S06.html, sha256: 5a19e783a58597fa19c9756fceffc4ce0ae723a7a387599ca999c3a7f64f06e4, captured_at: "2026-11-08T07:02:04Z", note: "document page"}
+    derived: [S06-pdf.txt, S06-direct.txt]
+    settles: [D7]
+  - id: S06b
+    title: "Georgia Power: Hearing Request Responses (GIPL-1-1 to 1-4, STF-1-1), public disclosure (2026-09-11)"
+    publisher: Georgia Power Company
+    type: party-filing
+    url: "https://psc.ga.gov/search/facts-document/?documentId=228416"
+    status: retrieved
+    retrieved_at: "2026-11-08T07:02:25Z"
+    files:
+      - {local_file: S06b-zip.bin, sha256: 8b45185c372807e3c0103741b86716c84af85e8b6dd3f3805a2ecfa07c408c09, captured_at: "2026-11-08T07:02:47Z", url: "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/228416/109676", note: "hearing_request_responses_public_disclosure.zip"}
+      - {local_file: S06b-zip.d/GIPL-1-2.docx, sha256: 9e35219e5b2214ec39402d7ffeea9f651fbd2dcdbaa0890ce988e879ad840fed}
+      - {local_file: "S06b-zip.d/GIPL-1-2 Attachment A PUBLIC DISCLOSURE.xlsx", sha256: 91f6675e5234d09180c92149ebedd951ae32f2b6cb532167055136b329b44021, note: "Option 1 estimates: every value cell reads REDACTED"}
+      - {local_file: "S06b-zip.d/GIPL-1-2 Attachment B PUBLIC DISCLOSURE.xlsx", sha256: dfd0d25b2f7eefb840ede4943fc0980c200d2854c25e2710a16a13e87dd68f0a, note: "Option 2 estimates: every value cell reads REDACTED"}
+      - {local_file: S06b-zip.d/GIPL-1-4.docx, sha256: f0de3cdd56dc73b8831d7fc36285ec776b6f0d8f7167300954272888296ab99d}
+      - {local_file: "S06b-zip.d/GIPL-1-4 Attachment.xlsx", sha256: a4e331adcc59184bd4a006307e9fadf7b8e93c78afbd5ffd0ddb76e54c1ddd7c, note: "typical residential bill impact per $100M of fuel or base revenue requirement"}
+      - {local_file: "S06b-zip.d/STF-1-1 Attachment PUBLIC DISCLOSURE.xlsx", sha256: 8ae9f71df7034811895e4c8660e6d4c14018942010def51b4b460a01585909ca, note: "new FT allocation: dollar cells REDACTED"}
+      - {local_file: S06b.html, sha256: 1f871b14912b0e1243f5e28ec22e174d63ee353f3bfa4f60c3b0b8a646bfbd5e, captured_at: "2026-11-08T07:02:25Z", note: "document page"}
+    derived: [S06b-GIPL-1-2.txt, S06b-GIPL-1-2-attA.txt, S06b-GIPL-1-2-attB.txt, S06b-GIPL-1-4.txt, S06b-GIPL-1-4-att.txt, S06b-STF-1-1-att.txt]
+    notes: "Spreadsheet values are the cached results Excel saved, read without recalculating."
+  - id: S07
+    title: "PIA Staff: Direct Testimony and Exhibits of Tom Newsome, Philip M. Hayet and Leah J. Wellborn, public disclosure version (2026-09-23)"
+    publisher: "Georgia Public Service Commission, Public Interest Advocacy Staff"
+    type: party-filing
+    url: "https://psc.ga.gov/search/facts-document/?documentId=228948"
+    status: retrieved
+    retrieved_at: "2026-11-08T07:02:07Z"
+    files:
+      - {local_file: S07-docx.bin, sha256: d19327e10815c7ca5f32ea66e8a1a7bc3eaadfbd1f8a2c072b3d52d4bf9e7ac7, captured_at: "2026-11-08T07:02:49Z", url: "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/228948/109860", note: "57171.RTP_Investigation_Testimony_9.22_PublicDisclosure_revTable8.docx"}
+      - {local_file: S07.html, sha256: 6b07669452904e6d9847b483f8a796f14415757b4b91f6a79c0742da1adf2f84, captured_at: "2026-11-08T07:02:07Z", note: "document page"}
+    derived: [S07-docx.txt]
+    settles: [D5, D7]
+    notes: "Redacted cells read '…………….' in this public version. Several figures were corrected by S07b (2026-10-07), including '$329 million' on p.7 line 9; see D5. Page numbers in passage locators are approximate (the filing has no PDF copy)."
+  - id: S07b
+    title: "PIA Staff: First Errata to Direct Testimony and Exhibits (2026-10-07)"
+    publisher: "Georgia Public Service Commission, Public Interest Advocacy Staff"
+    type: party-filing
+    url: "https://psc.ga.gov/search/facts-document/?documentId=229059"
+    status: retrieved
+    retrieved_at: "2026-11-08T07:02:09Z"
+    files:
+      - {local_file: S07b-docx.bin, sha256: 5c14c18118430157589b1d74ed3f2b9ec4ca8cf3e8049187cc7aaaefdfd9da38, captured_at: "2026-11-08T07:02:51Z", url: "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/229059/109977", note: "cover letter (.docx)"}
+      - {local_file: S07b-pdf.pdf, sha256: 9a51da4663abc869b3df244e725d93820c497d5ae9a9f5b801a9f1b70c5e92a0, captured_at: "2026-11-08T07:02:55Z", url: "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/229059/109978", note: "errata sheet: 3 scanned pages, no text layer"}
+      - {local_file: S07b.html, sha256: d908b897b61dd9aa829ad8207703281573edf8c819cafdd661664283b929d6d6, captured_at: "2026-11-08T07:02:09Z", note: "document page"}
+    derived: [S07b-docx.txt]
+    settles: [D5, D8]
+    notes: "The errata sheet has no text layer and no OCR tool is approved, so its content could not become passages. Read by eye from rendered images (see D5). The cover letter's letterhead lists Stan Wise."
+  - id: S08
+    title: "GIPL et al.: Direct Testimony of John D. Wilson, public disclosure version (2026-09-23)"
+    publisher: "Georgia Interfaith Power & Light, Park Avenue Baptist Church, Temple Sinai, and Unitarian Universalist Church of Savannah"
+    type: party-filing
+    url: "https://psc.ga.gov/search/facts-document/?documentId=228952"
+    status: retrieved
+    retrieved_at: "2026-11-08T07:02:12Z"
+    files:
+      - {local_file: S08-pdf.pdf, sha256: 47521a3c063504b19aec01d5a191c99987d1d3bfd3f58219feb3208c0304e206, captured_at: "2026-11-08T07:02:57Z", url: "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/228952/109864", note: "55 pages; pages 1, 14, 15, 17 and 18 have no text layer"}
+      - {local_file: S08.html, sha256: 7ccb07666cbcd11ecb367414db1b33bba1f1bce08dd5374b5027846a50d81fa8, captured_at: "2026-11-08T07:02:12Z", note: "document page"}
+    derived: [S08-pdf.txt]
+    settles: [D7]
+    notes: "Parts of this testimony are the subject of Georgia Power's motion to strike (S12); no ruling found (D12)."
+  - id: S09
+    title: "GAM: Testimony of Jonathan Ly, redacted public version (2026-09-23)"
+    publisher: Georgia Association of Manufacturers
+    type: party-filing
+    url: "https://psc.ga.gov/search/facts-document/?documentId=228951"
+    status: retrieved
+    retrieved_at: "2026-11-08T07:02:14Z"
+    files:
+      - {local_file: S09-zip.bin, sha256: f9e0e836ff374e59149a0466d1ae86bf737d15dd4e940c9a60c8f62d44c37861, captured_at: "2026-11-08T07:02:58Z", url: "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/228951/109863", note: "jl_-_testimony_redacted.zip"}
+      - {local_file: "S09-zip.d/JL - Testimony REDACTED.pdf", sha256: f78b8a7d17963433eff36f2767e3886211967a80d3034e19171bc018715177ae, note: "member of S09-zip.bin; cited text (S09-pdf.txt) comes from this PDF"}
+      - {local_file: "S09-zip.d/JL - Testimony REDACTED.docx", sha256: 64012da401f68fc12e796e45ae1a742e5c8a6e1d3b75f76dcb95652b0b76b3dd, note: "member of S09-zip.bin; draft-like ('APPENDIX B TO BE INSERTED IN FINAL PDF'); cited passages match the PDF"}
+      - {local_file: S09.html, sha256: a30b3d626d180c3287c07b369d14a0a74428a11dfce193417de266ec14fee9fd, captured_at: "2026-11-08T07:02:14Z", note: "document page"}
+    derived: [S09-pdf.txt, S09-ly.txt]
+    settles: [D7]
+    notes: "Redacted dollar amounts appear as gaps after '$'."
+  - id: S10
+    title: "RSM: Direct Testimony of Jim Clarkson (filed 2026-09-22)"
+    publisher: Resource Supply Management
+    type: party-filing
+    url: "https://psc.ga.gov/search/facts-document/?documentId=228918"
+    status: retrieved
+    retrieved_at: "2026-11-08T07:02:16Z"
+    files:
+      - {local_file: S10-pdf.pdf, sha256: d91a2bb1ac83aa68040a046b561c8fcbd7f8cb92ff9cbf7ebcd4cd29979a6dd3, captured_at: "2026-11-08T07:03:00Z", url: "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/228918/109809", note: "5 scanned pages, no text layer"}
+      - {local_file: S10.html, sha256: 5fbf0ddef110692b59154caee4418500e9b7fb7a5d50a62a6f132a89898c6868, captured_at: "2026-11-08T07:02:16Z", note: "document page"}
+    notes: "Read by eye only (no text layer, no approved OCR), so not cited. The cover is dated October 15, 2026 although the docket lists it as filed 2026-09-22. It argues for offering marginal-cost (real-time) pricing to existing customers' loads, not just new ones, and takes no position on Option 1 or Option 2 (see D13)."
+  - id: S11
+    title: "Georgia Power: RTP Rebuttal Testimony of Dr. Ross Beppler, Lee Evans and Brandon Looney (2026-10-27)"
+    publisher: Georgia Power Company
+    type: party-filing
+    url: "https://psc.ga.gov/search/facts-document/?documentId=229275"
+    status: retrieved
+    retrieved_at: "2026-11-08T07:02:18Z"
+    files:
+      - {local_file: S11-zip.bin, sha256: 1f62d47f9e1648f02793d68b45e7950c8e30595c662e14b822e799c0531c47e0, captured_at: "2026-11-08T07:03:02Z", url: "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/229275/110168", note: "gpc_rtp_rebuttal_testimony_57171.zip"}
+      - {local_file: "S11-zip.d/GPC RTP Rebuttal Testimony (Dkt. No. 57171) Final.docx", sha256: c0c53e42269c9c7931b25e5d4015905c7c1cb04a68cb364562dafcdbb655b028, note: "member of S11-zip.bin; the only copy of the testimony in the filing"}
+      - {local_file: S11.html, sha256: c62de284a6a6ccf03ba9f746526da6a47f966370f43ae0acba2ada523d66e349, captured_at: "2026-11-08T07:02:18Z", note: "document page"}
+    derived: [S11-rebuttal.txt]
+    settles: [D7]
+  - id: S12
+    title: "Georgia Power: Motion to Strike Portions of the Testimony of GIPL (2026-10-08)"
+    publisher: Georgia Power Company
+    type: party-filing
+    url: "https://psc.ga.gov/search/facts-document/?documentId=229066"
+    status: retrieved
+    retrieved_at: "2026-11-08T07:02:21Z"
+    files:
+      - {local_file: S12-zip.bin, sha256: 525611cf71f30c64c9d31b722a9773df2164e36aea63641b33b1cd0ae8120e45, captured_at: "2026-11-08T07:03:04Z", url: "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/229066/109997", note: "gpc_motion_to_strike_testimony_of_gipl_-_public_disclosure.zip"}
+      - {local_file: "S12-zip.d/GPC Motion to Strike Testimony of GIPL.docx", sha256: 488410d783f4df5831a478ff65f260cd137e4f9b0771d16bbfba49cfcbace513, note: "member of S12-zip.bin; cited text"}
+      - {local_file: S12.html, sha256: 1f1e05f163b1096051e6675e8591625e0b8d2778146af9270d9ac175cb22836f, captured_at: "2026-11-08T07:02:21Z", note: "document page"}
+    derived: [S12-motion.txt]
+    settles: [D12]
+  - id: S13
+    title: "GIPL et al.: Response in Opposition to Motion to Strike (2026-10-14)"
+    publisher: "Georgia Interfaith Power & Light, Park Avenue Baptist Church, Temple Sinai, and Unitarian Universalist Church of Savannah"
+    type: party-filing
+    url: "https://psc.ga.gov/search/facts-document/?documentId=229135"
+    status: retrieved
+    retrieved_at: "2026-11-08T07:02:23Z"
+    files:
+      - {local_file: S13-pdf.pdf, sha256: cea6666315962787bbef94e4e3deca8c0aeae192368656477f152dc9495e7a58, captured_at: "2026-11-08T07:03:06Z", url: "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/229135/110049"}
+      - {local_file: S13.html, sha256: 147b3317b083d6b616c05d5fb2156ed2d0c4f425fdb8d5a172e3317bdc522914, captured_at: "2026-11-08T07:02:23Z", note: "document page"}
+    derived: [S13-pdf.txt]
+    settles: [D12]
+    notes: "The certificate of service lists parties' work emails; not copied into passages."
+
+  # --- Records known to exist but not retrieved ---------------------------------------------------------
+  - {id: S30, title: "Transcript of the 2026-10-15 hearing (Docket 57171, document 229261)", type: primary-government, status: not-retrieved, notes: "Listed in S01b with hasAttachment false: no file to download as of 2026-11-08. Any ruling on the motion to strike, and the GIPL position change Georgia Power describes (S11, footnote 8), would be in it."}
+  - {id: S31, title: "Transcript of the 2026-09-01 hearing on Georgia Power's direct testimony", type: primary-government, status: not-retrieved, url: "https://www.selc.org/wp-content/uploads/2026/09/2026.09.01-57171-Transcript-with-Exhibits-2.pdf", notes: "Not in the PSC docket list. A search result shows a copy hosted by the Southern Environmental Law Center, which is counsel for GIPL (a party). Not used: a party-hosted copy cannot be checked against an official record. Staff's footnotes (P-151) show the hearing took place."}
+  - {id: S32, title: "Georgia Power data request responses STF-JKA-1 to STF-JKA-6 and Staff data requests", type: party-filing, status: not-retrieved, notes: "Eleven filings in S01b. Not needed for this page; Staff's testimony cites them."}
+  - {id: S33, title: "Stipulation between PIA Staff and Georgia Power, Docket 56765 (filed 2026-05-12, document 226544)", type: party-filing, status: covered-by, covered_by: S21, notes: "The short order (S21) summarizes and adopts it; ordering paragraph 6 is the operative text."}
+
+  # --- News and other leads (discovery only; none cited) ------------------------------------------------
+  - {id: S22, title: "Scrutiny grows over data center costs and construction compliance in Georgia (Atlanta News First, 2026-07-10)", publisher: "Atlanta News First (Gray Media)", type: news, url: "https://www.atlantanewsfirst.com/2026/07/10/scrutiny-grows-over-data-center-costs-construction-compliance-georgia/", status: retrieved, retrieved_at: "2026-11-08T07:11:54Z", http_status: 200, sha256: f3c4850640efaf0b1942d501335d2f21f631786d557750f926cabf2ac817ad5a, local_file: N01.html, notes: "Quotes one commissioner (a decision-maker) and a Georgia Power statement about the review in general. Not cited: no party position on the options; the page relies on sworn filings."}
+  - {id: S23, title: "Georgia Recorder story via News From The States (node 416118)", publisher: News From The States, type: news, url: "https://www.newsfromthestates.com/node/416118", status: rejected, retrieved_at: "2026-11-08T07:11:55Z", http_status: 403, sha256: b8812ebc7746a6195a62c781eb22fcb1717e200ad4efd423a95978e5f87002a2, local_file: N02.html, notes: "Site returned 403 to the scripted request (the saved bytes are the block page). Not worked around."}
+  - {id: S24, title: "Georgia Regulators Investigating Who Pays Data Center Costs (TNS / The Telegraph, via GovTech)", publisher: GovTech (Tribune News Service), type: news, url: "https://www.govtech.com/artificial-intelligence/georgia-regulators-investigating-who-pays-data-center-costs", status: retrieved, retrieved_at: "2026-11-08T07:11:57Z", http_status: 200, sha256: 7a18b0e0cf1576495d0f8a1aaf038fc62b905c80966d26526b3b2678df432351, local_file: N03.html, notes: "Leads only. Quotes a commissioner, a Georgia Power spokesperson and a non-party advocacy group, and describes a vote by party label. Not cited. Says the fuel case settled 'May 11'; primary records say the stipulation was filed 2026-05-12 (D4)."}
+  - {id: S25, title: "Georgia Investigates Data Centers Over Fuel Cost Shifting (Environment+Energy Leader)", publisher: Environment+Energy Leader, type: news, url: "https://environmentenergyleader.com/stories/georgia-investigates-data-centers-over-fuel-cost-shifting,133205", status: retrieved, retrieved_at: "2026-11-08T07:12:00Z", http_status: 200, sha256: 1ffee23d668d8b0d86aa5a53e85ba037ba3bf8db0033878434d6a7d70eec6fb0, local_file: N04.html, notes: "Leads only; mostly restates advocacy-group and company statements. Not cited. Final URL after redirect: https://www.environmentenergyleader.com/articles/45061-georgia-investigates-data-centers-over-fuel-cost-shifting"}
+  - {id: S26, title: "Fortune headline about the 2026-11-03 PSC election (2026-11-06)", publisher: Fortune, type: news, status: rejected, notes: "Returned 403 to the scout; not retried and not needed: the commissioners' PSC bio pages (S17-S17e) settle who serves on 2026-12-15 (D8). Election results are outside this page's scope."}

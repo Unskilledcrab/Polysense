@@ -1,0 +1,46 @@
+# How this trial's workspace appears in the prototype (display settings only; all content comes from
+# workspace.md, home.md, passages.md and sources.yaml). Read by trials/tools/render_prototype.py.
+slug: fulton-budget-2027           # used in page links: #fulton-budget-2027, #fulton-budget-2027-options, ...
+code: "Fulton County · 2027 budget"
+title: "Fulton County's 2027 budget"
+link_text: "Fulton County 2027 budget"
+status:                            # chips under the title
+  - {text: "Draft due by Nov 15, 2026"}
+  - {text: "Vote due by Jan 20, 2027"}
+option_chips:                      # one chip per option, matched by the start of the option's heading
+  "Option A": {text: "In force until adopted"}
+  "Option B": {text: "Board may change it"}
+  "Option C": {text: "Failed; filed Nov 4", kind: bad}
+short_labels:                      # source chip labels: one or two words, so a chip fits on a phone line
+  S01: "Res. 26-0460"
+  S02: Legistar
+  S02b: "Vote record"
+  S02c: Attachments
+  S02d: "Roll call"
+  S03: "Members item"
+  S03b: "Vote record"
+  S03c: "Roll call"
+  S04: "Res. 26-0729"
+  S04b: "Vote record"
+  S04c: Attachments
+  S04d: "Cap resolution"
+  S04e: "Roll call"
+  S04f: "Roll call"
+  S05: "Nov 4 agenda"
+  S06: "2026 schedule"
+  S07: "2027 calendar"
+  S07b: "2027 schedule"
+  S08: Notices
+  S08b: "Hearing agenda"
+  S09: "Budget page"
+  S09b: "2026 budget"
+  S10: "Open data"
+  S10b: "Sheriff deck"
+  S10c: "Solicitor deck"
+  S10d: "Defender deck"
+  S10e: "Probate deck"
+  S11: Clerk
+  S20: "News, Oct 7"
+  S21: "FOX 5, Oct 7"
+  S22: "CCI, Aug 9"
+# No `markup` view: the county code's strike/underline markup is shown in passages instead (see log.md).
