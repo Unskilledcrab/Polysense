@@ -6,9 +6,9 @@
 | **Decision** | The Fulton County Board of Commissioners adopts the county's budget for calendar year 2027. A re-created four-member Budget Commission must submit the proposal "by no later than November 15" (2026-11-15, a Sunday). The Board must adopt "no later than the second regular meeting in January" (2027-01-20 on the proposed 2027 schedule). Sources: S01 (P-005), S07b (P-041) |
 | **Kind** | 6, county decision (an upcoming decision; residents can still take part) |
 | **Done by** | AI agent (Claude Code), by hand, 2026-11-08 |
-| **Verified by** | Not yet. Steps 0 to 5 only: the deterministic gate is clean ([verification.md](verification.md)). The [verification protocol](../../docs/process/verification-protocol.md) (blind source checks, bias panel, planted errors) is for independent checkers; no human in the loop ([ADR 0014](../../docs/adr/0014-ai-only-verification.md)) |
+| **Verified by** | Not yet. Round 1 of the [verification protocol](../../docs/process/verification-protocol.md) ran on revision 1 (independent checkers run by the coordinating session; no human in the loop, [ADR 0014](../../docs/adr/0014-ai-only-verification.md)): the blind source check found no wrong facts, calibration caught 12/12 planted errors, and **the bias panel failed** (3/5, 3/5, editor 3/5). Revision 2 answers every finding ([verification.md](verification.md)); the next full round has not run |
 | **Owner's role** | Feedback on the user experience ([review.md](review.md)) |
-| **Status** | **Revision 1, drafted; not verified.** The key document, the proposed 2027 budget, **did not exist yet** on 2026-11-08. The page says so, and must change through append-only revisions as the proposal, hearing notice and vote arrive (see "How to update") |
+| **Status** | **Revision 2, drafted after round 1; not verified.** The key document, the proposed 2027 budget, **did not exist yet** on 2026-11-08. The page says so, and must change through append-only revisions as the proposal, hearing notice and vote arrive (see "How to update"). Revision 1 is kept at `verification/round1/workspace.r1.md` |
 
 ## Why this decision (step 0)
 
@@ -84,11 +84,11 @@ session's permissions). See [sources.yaml](sources.yaml).
 | File | What it is |
 |---|---|
 | [sources.yaml](sources.yaml) | 33 retrieved sources with SHA-256 hashes (raw files in `_raw/`, git-ignored), plus 11 sources recorded as blocked, covered or rejected |
-| [passages.spec.yaml](passages.spec.yaml) → [passages.md](passages.md) | 84 hand-chosen passages, copied mechanically. They hold the full text of County Code Sec. 2-261 and 2-263 as adopted, the full text of Resolution 26-0729, every roll call cited, and whole Legistar histories |
+| [passages.spec.yaml](passages.spec.yaml) → [passages.md](passages.md) | 86 hand-chosen passages, copied mechanically. They hold the full text of County Code Sec. 2-261 and 2-263 as adopted, the full text of Resolution 26-0729, every roll call cited, and whole Legistar histories |
 | [workspace.md](workspace.md) | The page: 30-second version + Layers 1-5. Every sentence cited or labeled |
 | [home.md](home.md) | Home-page items built from this trial |
 | [page.yaml](page.yaml) | Display settings for the prototype (slug `fulton-budget-2027`) |
-| [verification.md](verification.md) | Step 5 deterministic checklist only; the independent verification has not run |
-| [scripts/](scripts/) | Three small helpers used in this trial: PDF and PowerPoint text extraction (stdlib + pdfplumber) and the passages.md header fix |
+| [verification.md](verification.md) + [verification/](verification/) | Round 1 results and the disposition of every finding (77 rows), the revision 2 gate, and open items. `verification/round1/` holds the checkers' reports (unchanged copies) and revision 1 of the page and home items |
+| [scripts/](scripts/) | Two small helpers used to derive passage text: PDF text (pdfplumber) and PowerPoint slide text (standard library) |
 | [log.md](log.md) | Step-by-step log with times, friction, failures and every place the runbook didn't fit |
 | [review.md](review.md) | The owner's feedback form for the experience |

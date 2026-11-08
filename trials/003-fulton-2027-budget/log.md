@@ -13,6 +13,8 @@ would need. Steps overlapped: retrieval and discovery ran together, and the gate
 | 4. Draft | 07:29 → 07:40 | `workspace.md` (30-second version + Layers 1-5, 3 options, 6 cards, "Questions to weigh"), `home.md` (4 items), `page.yaml` (slug `fulton-budget-2027`). A test render of the prototype with Trials 001 and 003 together worked (scratch only; phone screenshot checked) | Several template fields assume a bill (see below). One pronoun ("he" for the chairman) had no source; replaced by the role |
 | 5. Deterministic gate | 07:32 → 07:44 | First run: PASS with 19 warnings; after fixes, **0 errors, 0 warnings** (234 units). Reading grade 6.6 / 7.8 / 7.4 / 6.3 for the 30-second version and Layers 1-3. Hashes 33/33. Step 5 checklist in `verification.md` | One quote failed: the source breaks "DECISION-MAKING" across a line. The checker's "several sentences share one marker" warning fires on "U.S.", "a.m.", middle initials and "Jr."; reworded rather than ignored. The number check needs the year or the outlet name ("FOX 5") inside a cited passage, so several sentences gained a second citation; sentences that carry our capture date ("On Nov 8, ...") are tagged `{analysis}` because no passage holds that date |
 | Records | 07:36 → 07:47 | `sources.yaml`, README (status table, D-list, hosts), `verification.md`, `review.md`, this log; derivation scripts copied to `scripts/` and re-run to confirm the derived files reproduce exactly | — |
+| *Round 1 (independent checks)* | by 08:14 | Run by the coordinating session, not the drafter: a blind source check (128 supports, 23 partial, 0 unsupported, 0 wrong span; 10 questionable tags; 19 framing issues; 234/234 spans grounded), a calibration checker (12/12 planted errors caught, plus 3 real issues in the true text) and the bias panel. **The panel failed:** supporter's advocate 3/5, critic's advocate 3/5, editor neutrality 3/5 and clarity 3/5 (3 high, 14 medium, 19 low; 20 flip-test asymmetries). Reports copied unchanged to `verification/round1/` | No factual errors were found. The failures were about balance and precision: labels not set by one visible rule, card 6 missing the county's own jail evidence, "no reasons" claims that didn't disclose the unreviewed meeting video, and "failed" used for a resolution whose motion failed |
+| Revision 2 | 08:15 → 08:40 | Read all four reports and the three calibration flags; saved revision 1 as `verification/round1/workspace.r1.md`. Rewrote the page against a 77-row disposition table (`verification.md`): one printed evidence-label rule applied to all six cards; card 6 given the county's consent-decree evidence; one note on the unreviewed video; precise procedural terms; both sides' missing documented points added (the 1953-2018 history, non-member votes, Ellis's full committee sentence, the hearing slots and written requests, the panel objection, Resolution 26-0729's policy case); cards paired by topic; questions reworded. Added P-086 and P-087, widened P-046, rebuilt with the updated tool (86 passages). Gate: 311 units, **0 errors, 0 warnings**; grades 7.4 / 8.0 / 7.9 / 7.4; Layer 4 10.6 → 8.6; hashes 33/33 | The advocates' suggestions conflicted in two places (the "narrative form" point in card 4; whether to keep the timing question); both views and the choice are in `verification.md` (rows 29 and 45). The first rewrite raised Layers 1 and 2 above the grade limit (8.7, 8.6) and Layer 4 to 10.6; splitting sentences and trimming quotes to exact key phrases fixed it. The coordinator had already added `title` and `header` keys to the passage spec and changed one page.yaml chip; both kept, and `scripts/retitle_passages.py` was deleted as no longer needed |
 
 ## Where the runbook didn't fit (v0.3 was written for bills)
 
@@ -77,7 +79,7 @@ Other places it didn't fit or needed a choice:
 
 ## Shared tool changes needed (described, not made)
 
-- `build_passages.py`: take the title and intro from the spec instead of hard-coding Trial 001's; allow a
+- `build_passages.py`: ~~take the title and intro from the spec instead of hard-coding Trial 001's~~ (done by the coordinating session before revision 2; `scripts/retitle_passages.py` deleted); allow a
   per-file option for the line-number prefix (it can't be used on agendas, where lines start with real numbers).
   A JSON mode (passages from fields, not raw text) would make roll-call passages readable.
 - `snapshot.py`: add PowerPoint/Word types to the extension map (the decks were saved as `.bin`), and write text for
@@ -102,6 +104,25 @@ Other places it didn't fit or needed a choice:
    action" can be checked.
 6. **County resolutions carry bill-style strike/underline markup.** `pdf_markup.py` works on them, but check bold
    words' order and compare against the signed copy.
+
+### Rules learned from round 1
+
+7. **Print one evidence rule and set every label by it.** "Supported" needs a record that settles the point: a rule's
+   own text for what the rule says; for money, needs or effects, a county record not written by the people making
+   the claim. Labels then differ only where the evidence does (both advocates and the editor converged on this).
+8. **Use each passage for everything it says.** Card 6 quoted P-049's "no additional resources" but not its next
+   sentence, "additional resources will be needed for consent decree compliance". Both sides' strongest points often
+   sit in the same county passage.
+9. **Say what you didn't review before saying no reasons exist.** The Legistar history links meeting video; "no
+   reasons in the records" must name the unreviewed video, once.
+10. **Procedural precision matters.** A motion to approve failed; the resolution was filed later. Name every member's
+    vote on every roll call, or none.
+11. **A vote is not an argument.** A procedural vote (filing) doesn't belong under "Who disagrees", and one person's
+    argument (a resolution's sponsor) shouldn't be credited to "critics".
+12. **Cite the document you archived.** "Last year's proposal" was really the adopted budget book; widening P-046 to
+    the book's own statement that it reprints the proposal's budget message fixed the provenance.
+13. **Short sentences beat dropped facts.** The first rewrite added both sides' missing points and pushed card text to
+    grade 10.6; splitting sentences and quoting only exact key phrases brought it to 8.6 without losing any.
 
 ## Automation notes (not yet eligible: 0 of 3 runs)
 

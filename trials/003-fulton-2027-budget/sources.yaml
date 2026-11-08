@@ -35,7 +35,7 @@ sources:
     derived: [S01.txt, S01.clean.txt, S01.markup.txt]
     license: public record
     settles: [D2, D3, D7]
-    notes: "Strike-through/underline markup recovered with trials/tools/pdf_markup.py (S01.markup.txt, S01.clean.txt) and checked against rendered images of pp. 2-3. S01.txt is pdfplumber text with 'pN:' prefixes (scratch script pdf_text.py --prefix). Passages use S01.clean.txt only for Sec. 2-261, which carries the markup; elsewhere the markup tool misorders some bold words, so S01.txt is used."
+    notes: "Strike-through/underline markup recovered with trials/tools/pdf_markup.py (S01.markup.txt, S01.clean.txt) and checked against rendered images of pp. 2-3. S01.txt is pdfplumber text with 'pN:' prefixes (scripts/pdf_text.py --prefix). Passages use S01.clean.txt only for Sec. 2-261, which carries the markup; elsewhere the markup tool misorders some bold words, so S01.txt is used."
   - id: S01b
     title: "Resolution 26-0460, signed and adopted copy (scanned)"
     publisher: Fulton County Board of Commissioners (Legistar)
@@ -175,7 +175,7 @@ sources:
   - {id: S10b, title: "Sheriff's Office 2027 budget hearing presentation ('330 - Office of the Sheriff - 2027 Budget Hearing Presentation.pptx', dated Oct 13, 2026)", publisher: "Fulton County Sheriff's Office (posted on the county open data portal)", type: primary-government,
      url: "https://data.fultoncountyga.gov/api/views/idwu-2gmj/files/15ee0f67-4e48-4380-98d4-9c79f34d82bc?download=true&filename=330%20-%20Office%20of%20the%20Sheriff%20-%20%202027%20Budget%20Hearing%20Presentation.pptx", status: retrieved, retrieved_at: "2026-11-08T07:12:08Z", http_status: 200, content_type: application/octet-stream,
      sha256: 45fc8d76254e1901cd22a0d123686ae7f1dd3545847e4ad214ee331ea8146c19, local_file: S10b.bin, derived: [S10b.txt], license: public record,
-     notes: "PowerPoint file (served as octet-stream, so snapshot.py saved it as .bin). Slide text extracted with the scratch script pptx_text.py (standard library only; no new dependency). The office's own account of its needs."}
+     notes: "PowerPoint file (served as octet-stream, so snapshot.py saved it as .bin). Slide text extracted with scripts/pptx_text.py (standard library only; no new dependency). The office's own account of its needs."}
   - {id: S10c, title: "Solicitor-General 2027 budget hearing presentation ('400 - Solicitor - 2027 Budget Hearing Presentation.pptx')", publisher: "Office of the Fulton County Solicitor-General (posted on the county open data portal)", type: primary-government,
      url: "https://data.fultoncountyga.gov/api/views/wit9-gumy/files/07699a49-18b4-4d3a-a7b5-780ba1d22a13?download=true&filename=400%20-%20Solicitor%20-%202027%20Budget%20Hearing%20Presentation.pptx", status: retrieved, retrieved_at: "2026-11-08T07:12:16Z", http_status: 200, content_type: application/octet-stream,
      sha256: a755835ab2c8214c1ae1abf5eac39ed09411ea0537ac1417c7490fa981d1f128, local_file: S10c.bin, derived: [S10c.txt], license: public record}

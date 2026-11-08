@@ -1,0 +1,157 @@
+[
+ {
+  "id": "M01",
+  "type": "number",
+  "line": 62,
+  "original": "$1,057,100,578",
+  "mutated": "$1,075,100,578",
+  "keywords": [
+   "1,075",
+   "1,057"
+  ]
+ },
+ {
+  "id": "M02",
+  "type": "date",
+  "line": 17,
+  "original": "**Aug 19:**",
+  "mutated": "**Aug 21:**",
+  "keywords": [
+   "aug 21",
+   "aug 19",
+   "august 19",
+   "august 21",
+   "08/19",
+   "2026-08-19"
+  ]
+ },
+ {
+  "id": "M03",
+  "type": "vote-count",
+  "line": 21,
+  "original": "The Board voted 4 to 1 to file that resolution",
+  "mutated": "The Board voted 5 to 1 to file that resolution",
+  "keywords": [
+   "5 to 1",
+   "4 to 1",
+   "4 \"yea\"",
+   "yea"
+  ]
+ },
+ {
+  "id": "M04",
+  "type": "misattribution",
+  "line": 136,
+  "original": "Ellis said, \"Those meetings are open meetings.\"",
+  "mutated": "Vice Chair Abdur-Rahman said, \"Those meetings are open meetings.\"",
+  "keywords": [
+   "abdur-rahman",
+   "ellis",
+   "attribut"
+  ]
+ },
+ {
+  "id": "M05",
+  "type": "scope",
+  "line": 161,
+  "original": "27 of 41 General Fund departments",
+  "mutated": "27 of 41 county departments",
+  "keywords": [
+   "general fund",
+   "scope",
+   "county departments"
+  ]
+ },
+ {
+  "id": "M06",
+  "type": "deadline-certainty",
+  "line": 10,
+  "original": "The Board must adopt it by its second regular meeting in January.",
+  "mutated": "The Board must adopt it at its second regular meeting in January.",
+  "keywords": [
+   "no later than",
+   "at its",
+   "by its",
+   "at the second"
+  ]
+ },
+ {
+  "id": "M07",
+  "type": "wrong-actor",
+  "line": 50,
+  "original": "When it can't agree, the county manager decides how to present the draft.",
+  "mutated": "When it can't agree, the chief financial officer decides how to present the draft.",
+  "keywords": [
+   "chief financial officer",
+   "county manager",
+   "cfo"
+  ]
+ },
+ {
+  "id": "M08",
+  "type": "arithmetic",
+  "line": 63,
+  "original": "That is about 48 cents of every General Fund dollar. {computed: $507.5 million ÷ $1,057.1 million ≈ 0.48}",
+  "mutated": "That is about 52 cents of every General Fund dollar. {computed: $507.5 million ÷ $1,057.1 million ≈ 0.52}",
+  "keywords": [
+   "0.52",
+   "52 cents",
+   "0.48",
+   "arithmetic",
+   "48 cents"
+  ]
+ },
+ {
+  "id": "M09",
+  "type": "reversed-direction",
+  "line": 66,
+  "original": "cover the gap and fall from $252,638,514 to $179,000,901",
+  "mutated": "cover the gap and rise from $179,000,901 to $252,638,514",
+  "keywords": [
+   "rise",
+   "fall",
+   "direction",
+   "revers",
+   "increase",
+   "decrease",
+   "declin"
+  ]
+ },
+ {
+  "id": "M10",
+  "type": "loaded-word",
+  "line": 8,
+  "original": "have objected to how the draft is being made",
+  "mutated": "have attacked how the draft is being made",
+  "keywords": [
+   "attacked",
+   "loaded"
+  ]
+ },
+ {
+  "id": "M11",
+  "type": "status-meaning",
+  "line": 102,
+  "original": "The Board filed it on Nov 4, by 4 votes to 1.",
+  "mutated": "The Board rejected it on Nov 4, by 4 votes to 1.",
+  "keywords": [
+   "rejected",
+   "filed",
+   "filing"
+  ]
+ },
+ {
+  "id": "M12",
+  "type": "source-misattribution",
+  "line": 52,
+  "original": "A commissioner's resolution says departments' requests could not exceed 5% of their \"base budget,\" and FOX 5 reported a similar limit.",
+  "mutated": "The county's written instructions say departments' requests could not exceed 5% of their \"base budget,\" and FOX 5 reported a similar limit.",
+  "keywords": [
+   "written instruction",
+   "instructions",
+   "resolution",
+   "not found",
+   "d4"
+  ]
+ }
+]

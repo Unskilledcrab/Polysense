@@ -8,9 +8,9 @@ status:                            # chips under the title
   - {text: "Draft due by Nov 15, 2026"}
   - {text: "Vote due by the 2nd January meeting"}
 option_chips:                      # one chip per option, matched by the start of the option's heading
-  "Option A": {text: "In force until adopted"}
+  "Option A": {text: "In force once submitted"}
   "Option B": {text: "Board may change it"}
-  "Option C": {text: "Failed; filed Nov 4", kind: bad}
+  "Option C": {text: "Filed Nov 4", kind: bad}
 short_labels:                      # source chip labels: one or two words, so a chip fits on a phone line
   S01: "Res. 26-0460"
   S02: Legistar
