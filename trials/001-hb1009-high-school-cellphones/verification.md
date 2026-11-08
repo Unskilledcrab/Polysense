@@ -467,3 +467,145 @@ LR = lay reader). Where reviewers disagree, both views are given.
     "bad" style (display check).
 42. Verbs: "would cut" vs. "could spark" and "said he worries" vs. "told lawmakers" (C, E). The editor advises no change
     to the line that follows its source (P-071).
+
+## Round 6 results (revision 6.1, `verification/round6/workspace.r6.1.md`)
+
+Inputs and reports are in [verification/round6/](verification/round6/): the page, home items and `page.yaml` strings as
+checked (`workspace.r6.1.md`, `home.r6.1.md`, `page.r6.1.yaml`, `passages.r6.1.md`), and every report.
+
+| Layer | Check | Result |
+|---|---|---|
+| 1 | Deterministic gate | **Pass.** 280 units (169 cited, 74 analysis, 34 editorial, 3 computed), 0 errors, 0 warnings; home 6 units, 0 errors, 0 warnings. Reading grade: 30-second 7.7, What it means for you 8.3, L1 6.0, L2 8.4, L3 7.9 |
+| 2 | Blind source check of the page (fresh agent) | **166 supports, 3 partial, 0 does not support, 0 wrong span.** 106 tags valid, 5 questionable, 0 invalid; 13 framing issues (3 medium, 10 low). **280/280 evidence spans grounded** (`check_verifier.py`) |
+| 2 | Blind source check of the home items | 4 supports, 2 tags valid; 1 low framing issue; 6/6 spans grounded |
+| 2 | Display check (`page.yaml` strings) | 9 supports; 1 low framing issue; 9/9 spans grounded |
+| 3 | Bias panel | **Pass.** Supporter's advocate **4/5** (6 missing arguments; wording notes 3 medium, 4 low; imbalance 2 medium, 4 low; 2 label proposals). Critic's advocate **4/5** (4 missing arguments; wording notes 1 medium, 3 low; imbalance 1 medium, 4 low; 2 label proposals). Standards editor: neutrality 4/5, clarity 3/5, **no high-severity issue** (22 issues: 4 medium, 18 low; 11 flip-test notes) |
+| 4 | Planted-error calibration (fresh blind verifier on a copy with hidden errors, `verification/round6/calibration/`) | **10 of 10 caught** |
+
+**Round 6 passes** under the "when a page is done" rule: a clean gate, 0 unsupported claims, 0 wrong spans and 0
+ungrounded spans, both advocates at 4/5, and no high-severity editor issue. So revision 6.2 makes only accuracy fixes and
+fixes for breaches of written rules. No card claim, evidence label, values-guide line or side changes; a targeted re-check
+covers the changed units, with the flip test on the changed "If you…" and "In short" lines.
+
+## Revision 6.2: what changed (2026-11-08, targeted re-check pending)
+
+Reason: **fixes after passing round 6**. Change class **correction**. Revision 6.1 is archived in `verification/round6/`
+(`workspace.r6.1.md`, `home.r6.1.md`, `page.r6.1.yaml`, `passages.r6.1.md`). `home.md`, `page.yaml`, `sources.yaml` and
+the passages are unchanged. The changed units are listed by line in `changed-units.txt` (scratch folder, for the re-check).
+
+**Not changed:** every card claim, evidence label and side; the values guide; the 30-second version.
+
+| # | Item | Done? | What changed |
+|---|---|---|---|
+| 1 | Start dates stated as settled | Done | "Decided later" and "Not known yet" now state only what the passages say: high schools must start no later than July 1, 2027 (P-007), policies are due by January 1 each year (P-008), and the law doesn't say how the two dates fit. "Not known yet" on learning says "must start the ban no later than July 1, 2027" (was "don't have to start until"). The students line's tag states the same three facts. The same correction goes into three tag notes on cards 1 and 5 that said the rule "isn't required until July 1, 2027" (tags only; one is on card 1's "In short") |
+| 2 | K-8 line | Done | "HB 1009 keeps the school-day device ban House Bill 340 set in 2025 for public school students in kindergarten through 8th grade. The bill drops e-readers from the device examples and requires yearly policies." The first sentence names the students, so it stands alone on the home page |
+| 3 | Card 3 "Who disagrees" | Done | Limited to Georgia: "No one in the sources we reviewed disputed that Georgia's phone rules are working." The tag notes that the English authors wrote about England (P-043) |
+| 4 | P-013's limit | Done | "Decided by the law" and card 6 now add that access is allowed only "as necessary to fulfill the requirements" of the plan |
+| 5 | Card 2's "In short" | Done | Cites P-034 (71.2% of supporting parents cited "Improved in-person social interactions") for the friendships half |
+| 6 | Line 64's tag | Done | "P-024 gives Act 395, and P-028 and P-054 give the bill number" |
+| 7 | "Must publish" | Done | Lines 42 and 48 (6.1's 40 and 46) cite P-014 with P-015 |
+| 8 | Line 44's tag | Done | Now `{analysis: …}`. The district entry's matching tag (line 48) gets the same fix |
+| 9 | The professor's safeguards | Done | The Layer 4 voice count says she named "rapid parent notification and guaranteed access to phones when needed" |
+| 10 | Card 4 | Done | The law's emergency-communication duty is stated as P-011 says it ("clear protocols" for "all emergency communication" through school systems, coordinated by staff) and moved from "What's missing" to "What challenges it", next to the professor. "What's missing" now quotes her two safeguards as she said them, says the law requires neither, and says her words don't say whose phones. The reading about students' own phones stays, as ours. Claim, label and side unchanged |
+| 11 | Card 2's England result | Done | "In short" says the study's strict schools "barred phone use for fun" (P-041). "What challenges it" no longer repeats the well-being result; it keeps the finding of no difference in overall phone and social media use. The result now appears once in "In short" and once in the authors' words |
+| 12 | Florida's larger middle- and high-school effects | Done | Card 5 gets the same two sentences as card 1. On card 1, card 5 and the study notes, the caveat now reads "doesn't say which effects were larger: test scores, absences or suspensions" |
+| 13 | Uneven caveats | Done | Adams's account loses "one family's experience" and keeps its factual caveat. Card 3 adds a matching one for Harrell: "Harrell's quoted passage doesn't name the high schools or say how their success was measured" |
+| 14 | Parents line | Done | "By July 1, 2027, reaching your child during the school day means contacting the school, which must set emergency-message procedures." 45 words, with the dated "Not known" kept |
+| 15 | "IEP" | Done | Spelled out at first use on each tab: Summary ("Decided by the law, exceptions"), Options (Option B "Who pays") and Arguments (card 6). Layer 2 already did |
+| 16 | The 219-word bullet | Done | Split into "Decided by the law, timing", "…, the rule" and "…, exceptions", with the same sentences (plus items 4 and 15) |
+| 17 | No-money repeats | Done | Kept in the parents and staff lines, "Not known yet", Option B's "Who pays" and card 5. Removed from Option B's "What's uncertain" (the fiscal-note sentence), the only other place |
+
+Two sentences split for reading level, with the same words: "Decided later by each school district" and "Not known
+yet" now give the dates as separate short sentences.
+
+### Deterministic gate (revision 6.2)
+
+| Check | Result |
+|---|---|
+| `check_citations.py` | workspace: 287 units (175 cited, 77 analysis, 32 editorial, 3 computed), 0 errors, 0 warnings. home: 6 units, 0 errors, 0 warnings |
+| `readability.py` | 30-second 7.7 (90 words), What it means for you 8.2, Layer 1 6.0, Layer 2 8.4, Layer 3 7.9 (Layer 4 8.0, not targeted). No budget warnings and no CHECK lines. "If you…" lines 45, 45, 45 and 45 words (first sentences 18 to 22) |
+| `verify_hashes.py` | PASS (15 retrieved) |
+| Test render | No warnings: version 6.2, 73 passages, 12 sources. In headless Chrome, the three "Decided by the law" bullets and card 4's moved sentence display as intended |
+
+### Where I'm least sure
+
+1. **Card 4 (item 10).** The law's emergency-communication duty now sits under "What challenges it", where the supporter
+   asked for it; rounds 2 and 3 had objected to listing the law's own requirement as a challenge. The critic's request to
+   put "the law requires neither safeguard" right after the professor's quote is not taken; that sentence stays under
+   "What's missing".
+2. **Parents line (item 14).** To fit 45 words, "including in emergencies" left the first sentence; emergencies now come in
+   through "which must set emergency-message procedures" (a hyphenated compound).
+3. **K-8 line (item 2).** "Keeps the … ban" rests on P-006's locator ("existing law, unchanged") rather than its text;
+   "requires yearly policies" compresses the change from the one-time Jan 1, 2026 deadline; the unknown, "your
+   district's next policy", is terse.
+4. **Card 2 (item 11).** "Barred phone use for fun" is the page's plain gloss of P-041's "recreational phone use is not
+   permitted" (the study notes use it too).
+5. **Item 1's tag edits** reach card 1's "In short" (tag only), so the flip test covers that line too.
+6. **Item 13.** Harrell's "very successful" in Option A's "What's uncertain" still has no caveat; the field itself marks
+   it as uncertain (open item 52).
+
+### Open items
+
+**Earlier items now done:** 40's start-date inference and K-8 direction (items 1 and 2). The rest of 17–42 stays open,
+with these updates: 22's "only account of a real emergency" is moot now that the "one family's experience" note is
+gone; 33's larger middle- and high-school effects are now on card 5, and still not on Option B.
+
+**From round 6, not taken.** S = supporter's advocate, C = critic's advocate, E = standards editor, SC = source check.
+Where reviewers disagree, both views are given.
+
+43. **Card 2's label (S):** "Uncertain (statements, and one English study of 12- to 15-year-olds that couldn't test cause
+    and effect; it found less phone and social media time during school but no evidence of a well-being difference, and
+    reported nothing on friendships)". The critic agrees with card 2's label as printed (C).
+44. **Card 5's label:** "Uncertain on staff burden (workload not measured; the duties themselves are in the law's text);
+    supported, with limits, on early suspensions (one Florida working paper; the rise faded after year one; no Georgia
+    results yet)" (S). Or keep the parts and add "designed to estimate cause and effect; ban scope not described" (C),
+    or "designed to estimate cause and effect; rise faded after year one" (E).
+45. **Card 1's label:** add "ban scope not described" (C).
+46. **Legend (E, medium):** the template's legend lists Mixed, Contested and Values question, which the printed rule
+    doesn't define. **Not applicable:** the page's legend shows only the labels the page uses. Card 4's values part as a
+    label (E) would be a label change.
+47. **Card 6's label wording:** "Not mainly factual", matching the legend, and "our sources don't measure" for
+    "untested" (E).
+48. **Card 4's title:** "…, even in emergencies" (C). A claim change.
+49. **"If you…" lines:** the high school lines list only duties and cost-type unknowns; add the law's aim (P-057) and
+    unknowns that run both ways ("whether class distractions change") (S, E). The students line should say "access"
+    includes holding or wearing, the ban covers breaks, and give the consequences (C, E). "Who pays for phone storage"
+    assumes a cost (S); round 5 asked for that honest unknown (SC).
+50. **No-money point:** keep it only in "Not known yet" and Option B's "What's uncertain" (S); check the state budget or
+    move the caveat (E). This revision keeps the six places the brief named.
+51. **Teachers:** Harrell (P-045) and Woods (P-053) on teachers focusing on teaching, on card 1 and the staff line (S). On
+    card 5, give Harrell's point in full (S), or drop or move it (E). Card 5's "police" and "worries" (E).
+52. **Harrell in Option A:** "What's uncertain" quotes "very successful" with no caveat (C, E).
+53. **Card 2:** the student's "phones have become addictive for teens" (S); the England study's scope against Georgia's
+    all-access ban (S); in-school phone time under "What supports it" (SC, and earlier item 2).
+54. **Options A and B's England sentence:** add "no evidence of less phone use overall" (C). The supporter notes it sits
+    in both slots that favor supporters, and that Option A's avoided suspension rise lacks the fade note (S).
+55. **Survey reasons:** "Fewer cited" splits the opponents' reasons (C); the 60.3% safety reason is on no card (S); the
+    opponents' top reason appears twice in Layer 3 and the supporters' once (E); card 6's survey shares under "What
+    supports it" (S).
+56. **Card 5:** the law requires "progressive" consequences and reviews tied to "educational goals and student
+    well-being" (S); the Florida abstract doesn't say what consequences its bans used (S).
+57. **Card 3:** its date challenge doesn't bear on the high schools Harrell described (S).
+58. **Card 1:** absences "may explain a large fraction" of the gains, so the study can't say how much came from fewer
+    distractions (C); move the larger-effects caveat to "What's missing" (S).
+59. **Option B:** the loss of local choice and the gain of one statewide rule, both as analysis (C). Option C: rules that
+    could differ by district, as in Option A (E).
+60. **Voices:** 20 House members voted no and none are quoted (C, E); the English authors count as voices (E). Modal verbs
+    in the Layer 4 opening follow the news report (E).
+61. **Questions to weigh:** add discipline (C) and staff workload and suspensions (E); "keep students safe and families
+    informed" (E); a contact-versus-class-time question (S, optional).
+62. **Values guide:** "reaching your child directly in an emergency" (S); "your child's focus and learning" (E); the
+    intro and Option C notes as plain lines, not bullets (E); a note that both sides cite safety (SC). The guide doesn't
+    name Option B (SC).
+63. **Who decides:** one set of fields for every decider, and what the governor can still decide (E); retry archiving a
+    readable General Assembly contact page (C, E).
+64. **Precision:** "Public high schools must start the ban" in the 30-second version; "districts" also means schools (SC).
+    Line 78's reading of "all" should say "by our reading" (SC, E). The P-060 events are "designed to promote
+    distraction-free education" (SC, E). The Department of Education item has no date (SC, E). The amendment also
+    dropped "transitions" and named "other public schools" (SC). "All-day" for "bell-to-bell" and P-051's "after
+    districts reported" clause (SC). Kemp's quote covers several bills (SC). The fiscal-note tag should name LC 47 3887
+    (E, earlier 40). Tags on "can change the law" lines should be analysis (E).
+65. **Plain language:** "The same goes for" in Option B (SC, E); "In that study" on card 5 (E); Rollins tied to Emory,
+    Cairo High as a public high school, "school system" (E); "standard" questionnaire (SC).
+66. **Home and display:** "became law, extending … to high schools" read alone (SC home); "phone use" in the title (display
+    check, and earlier 41).
