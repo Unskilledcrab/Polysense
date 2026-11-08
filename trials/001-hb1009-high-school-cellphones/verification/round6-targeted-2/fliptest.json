@@ -1,0 +1,111 @@
+{
+  "checker": "standards editor (targeted flip test)",
+  "neutrality": 4,
+  "issues": [
+    {
+      "file": "workspace.md",
+      "line": 201,
+      "text": "School staff would have to police phones, which can invite conflict, opponents say. [P-047, P-071]",
+      "issue": "Card 5's own evidence label lists 'Supported on new duties (the law's text)' first, and the law does require schools to monitor and enforce the ban (P-014). But the In short puts that duty inside 'opponents say' and cites only news passages. As a result the summary line gives two of the card's three evidence statuses and leaves out the strongest one. Card 4, the other card with a basis in the law, opens its In short with the legal fact in the page's own voice ('Under the law, families must go through the school...' [P-007, P-011]). No supporters' card leaves a legal fact unstated. Across the set, this understates one opposing argument in the line phone readers see first.",
+      "severity": "medium",
+      "suggested_fix": "State the duty in the page's voice, as Card 4 does, and keep the side's own terms attributed: 'Schools must enforce the ban. [P-014] Staff policing phones can invite conflict, opponents say. [P-047, P-071]' Leave the Florida sentence and the no-data sentence unchanged. The In short stays at 40 words."
+    },
+    {
+      "file": "workspace.md",
+      "line": 189,
+      "text": "Opponents say phones can be critical for families in an emergency. [P-049, P-047, P-035, P-071]",
+      "issue": "Order asymmetry. This is the only In short that puts the attribution first. All three supporters' In shorts end with 'supporters say', and Card 5 ends with 'opponents say'. Putting the attribution first marks the claim as disputed before the reader takes it in, so this opposing claim lands a little weaker than the supporters' claims, which are written the same way otherwise.",
+      "severity": "low",
+      "suggested_fix": "'Phones can be critical for families in an emergency, opponents say.' Same 11 words and same citations."
+    },
+    {
+      "file": "workspace.md",
+      "line": 15,
+      "text": "By July 1, 2027, reaching your child during the school day means contacting the school, whose staff coordinate all emergency messages. [P-007, P-011]",
+      "issue": "The law makes emergency coordination a duty that each policy must set up (P-011), but the revised wording ('whose staff coordinate') states it as how things already work. On the top reason opposing parents gave (74.8%, P-035), that reads as a small reassurance, while our sources have no data on how well school alerts perform (Card 4). The staff line states its parallel duty as 'must enforce'. The revision 6.2 wording ('which must set emergency-message procedures') kept it a duty.",
+      "severity": "low",
+      "suggested_fix": "'By July 1, 2027, reaching your child during the school day means contacting the school; staff must coordinate all emergency messages.' This is 21 words, the same as now, so the line stays at 45."
+    },
+    {
+      "file": "workspace.md",
+      "line": 16,
+      "text": "Not known as of Nov 8, 2026: how much work enforcement takes; the law sets aside no money, and we didn't review the state budget.",
+      "issue": "The staff line gives the cost (the law sets aside no money) but not the support that the page pairs with it elsewhere: the state must give schools guidance and technical support (P-016). Option B's 'Who pays' says 'The law gives schools state guidance but sets aside no money', and Card 5's 'What challenges it' also notes the state guidance. The parent line (L15) repeats 'the law sets aside no money', so the If-you set states the cost twice and never states the support.",
+      "severity": "low",
+      "suggested_fix": "'Not known as of Nov 8, 2026: how much work enforcement takes. {analysis: no district's policy is in our sources} The law gives state guidance, not money; we didn't review the state budget. {analysis: P-016 requires state guidance; no funding provision in the law's full text, P-001 to P-019 and P-056 to P-061; the budget is outside our sources}' The line stays at 45 words. Splitting it into two sentences also stops readers from taking 'the law...' as part of what is not known."
+    }
+  ],
+  "flip_test": [
+    {
+      "line": 14,
+      "flipped": "From the other direction it would read 'By July 1, 2027, your school day will be phone-free, with some exceptions.' The page uses the law's own verb ('can't access', P-007), which neither side would object to. The exceptions and the unknown start date are plain facts.",
+      "asymmetry": "none. Like every If-you line, it states what the law requires and what is unknown. It leaves out both the law's stated purpose (P-057) and any predicted harms, so neither side is favored."
+    },
+    {
+      "line": 15,
+      "flipped": "Written like the staff line's duty, it would read '...contacting the school; staff must coordinate all emergency messages.' That keeps a legal duty as a duty instead of stating it as how things already work.",
+      "asymmetry": "Low: 'whose staff coordinate' states a legal duty (P-011) as how things already work, on opposing parents' top concern, while L16 says 'must enforce'. Form only: the same no-money caveat uses two semicolons here but ', and' in L16. The double semicolon can read as if 'the law sets aside no money' were itself one of the unknowns."
+    },
+    {
+      "line": 16,
+      "flipped": "Pairing the cost with the support, as Option B's 'Who pays' line does, it would read '...the law gives state guidance, not money...'.",
+      "asymmetry": "Low: it gives the cost (no money) without the support (P-016 state guidance), although the page pairs them elsewhere. The no-money point also appears in L15, so the If-you set states it twice and the support never."
+    },
+    {
+      "line": 17,
+      "flipped": "Nothing to flip. 'Keeps', 'drops' and 'requires' are plain verbs about the text, and the unknown (the district's next policy) favors neither side.",
+      "asymmetry": "none"
+    },
+    {
+      "line": 104,
+      "flipped": "The sentence covers both following lines equally (same survey, same description).",
+      "asymmetry": "none"
+    },
+    {
+      "line": 105,
+      "flipped": "Swapping sides gives L106 word for word except 'opposing' and the opponents' top reason. Both use the same form, run 32 and 35 words, quote 5 and 6 words, and use no recommendation words.",
+      "asymmetry": "Minor and justified. The label paraphrases: 'your child's focus in class' drops 'academic' and 'learning', while L106's label stays close to its quote. Dropping 'learning' keeps from giving one side a value opponents also cite (phones needed for schoolwork, 19.8%; students need to learn responsible use, 41.9%; P-035), so no change is needed. 'Backing' and 'opposing' are a neutral pair. 'Supporting' would match P-034's heading, but that change is optional."
+    },
+    {
+      "line": 106,
+      "flipped": "Swapping sides gives L105.",
+      "asymmetry": "none. 'In an emergency' carries more weight than 'focus in class', but each is that side's own top-ranked reason (87.7% and 74.8%), not our framing. Neither line shows percentages."
+    },
+    {
+      "line": 107,
+      "flipped": "The same sentence would apply to any option with no documented argument. 'Voted down' is the recorded result (13 to 38, P-026).",
+      "asymmetry": "none"
+    },
+    {
+      "line": 153,
+      "flipped": "Card 5 mirrors this line for the other side: the same verb ('led to'), a timing limit ('in the ban's second year' here, 'at first' there) and the same no-Georgia-results caveat.",
+      "asymmetry": "none. Neither In short calls the Florida study a working paper, so that omission is the same on both sides. The attribution comes last, as in the other supporters' cards."
+    },
+    {
+      "line": 165,
+      "flipped": "If a study had found no evidence for an opposing claim, the labeling rule would add the same 'couldn't test cause and effect' caveat. The caveat follows the study's design and appears wherever the English study is cited (Options A and B).",
+      "asymmetry": "none. The caveat softens the evidence against supporters, but it comes from the study's design (one point in time, P-041). The Florida study gets no such caveat in Cards 1 and 5 because it was designed to estimate cause and effect. 'Social lives' follows the survey's 'in-person social interactions' (P-034)."
+    },
+    {
+      "line": 177,
+      "flipped": "An opposing claim backed only by statements gets the same kind of status (Card 4: 'Our sources have no data on emergency safety').",
+      "asymmetry": "none"
+    },
+    {
+      "line": 189,
+      "flipped": "Written like the supporters' cards, it would read 'Phones can be critical for families in an emergency, opponents say.'",
+      "asymmetry": "Low (order): this is the only In short that puts the attribution first. All three supporters' In shorts and Card 5 end with '... say'. The modal 'can' (against the supporters' 'would') comes from the sources (P-049, P-071), so it needs no change."
+    },
+    {
+      "line": 201,
+      "flipped": "Card 4 opens with its legal fact in the page's voice, citing the law. Written the same way, Card 5 would open 'Schools must enforce the ban. [P-014]' and then attribute the conflict claim to opponents.",
+      "asymmetry": "Medium: the duty that the card's label rates 'Supported on new duties (the law's text)' sits inside 'opponents say' with news citations only, so the In short leaves that status out. Otherwise it is parallel with Card 1. 'Police' is the side's own term (P-047) and is attributed. 'Especially among Black students' is the study's own subgroup finding (P-039). The Florida summary gives no subgroup for test scores, so this difference comes from the source, not the writing."
+    },
+    {
+      "line": 213,
+      "flipped": "A supporters' values claim would get the same 'mainly about values' status. Both uses of 'should' are the opponents' words (P-048, P-035), attributed to them, not the page's voice.",
+      "asymmetry": "none"
+    }
+  ],
+  "summary": "The reviewed lines are close to balanced: the two values-guide lines match in form, source and length (32 and 35 words) with no recommendation words, every In short uses 'say' for both sides, and the Florida study gets the same timing and no-Georgia-results caveats whether it backs supporters (Card 1) or opponents (Card 5). The one medium asymmetry is Card 5's In short, which folds the law's enforcement duty into 'opponents say' and so leaves out the card's 'Supported on new duties' status, while Card 4's In short states its legal fact in the page's voice; the low ones are Card 4's attribution coming first, the parent line stating a school duty as how things already work, and the staff line giving 'no money' without the state guidance the page pairs it with elsewhere."
+}

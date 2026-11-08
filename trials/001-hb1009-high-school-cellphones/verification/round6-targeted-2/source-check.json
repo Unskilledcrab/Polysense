@@ -1,0 +1,190 @@
+{
+  "checker": "independent-source-verifier (targeted)",
+  "document": "/home/user/Polysense/trials/001-hb1009-high-school-cellphones/workspace.md",
+  "units": [
+    {
+      "file": "workspace.md",
+      "line": 14,
+      "sentence": "Exceptions: your disability or medical plan explicitly requires access, or another law does.",
+      "marker": "[P-013, P-007]",
+      "verdict": "partial",
+      "evidence_span": "explicitly mandates the use of a personal electronic device for medical or educational purposes shall be permitted to access the device",
+      "correct_passage": "",
+      "problem": "The two triggers are supported: the plan exception (P-013) and 'except as otherwise provided in this Code section or required by law' (P-007). But the sentence drops the exception's limit. P-013 allows access only 'as necessary to fulfill the requirements of the respective program or plan'. Read as a bare 'Exceptions:' list, a qualifying plan looks like a general exemption from the ban. L23 keeps the limit; this IF-YOU line does not. The sentence also drops 'for medical or educational purposes'. 'Disability ... plan' is a plain-language gloss for 'Individualized Education Program (IEP), Section 504 Plan' that P-013 does not give. It is untagged here, while the page tags the same gloss {analysis: plain-language definition, not from the cited sources} at L23, L81, L122 and L217.",
+      "suggested_fix": "Stay under 45 words by dropping the redundant 'with some exceptions' from the first sentence: 'By July 1, 2027, you can't access phones or similar devices during the school day. [P-007, P-004, P-005] Exceptions: only the access your disability or medical plan explicitly requires, or another law requires. [P-013, P-007]' Then tag the gloss, e.g. {analysis: 'disability plan' is our plain-language term for an IEP or Section 504 plan (P-013), not from the cited sources}. The line comes to 44 words before tags."
+    },
+    {
+      "file": "workspace.md",
+      "line": 14,
+      "sentence": "Not known as of Nov 8, 2026: when your school will start the ban.",
+      "marker": "{analysis: P-007 sets \"no later than July 1, 2027\", P-008 makes policies due by January 1 each year, and the law doesn't say how the two dates fit; one school's plan (P-054) is the only one in our sources}",
+      "verdict": "valid",
+      "evidence_span": "",
+      "correct_passage": "",
+      "problem": "None. The quoted phrase is verbatim in P-007. P-008 sets 'By January 1 each year'. No passage of the full enacted text (P-001 to P-019, P-056 to P-061) links the two dates. P-054 (Cairo High, 2026-2027 school year) is the only school plan in the passages; P-072 is a general news statement, not one school's plan.",
+      "suggested_fix": ""
+    },
+    {
+      "file": "workspace.md",
+      "line": 15,
+      "sentence": "By July 1, 2027, reaching your child during the school day means contacting the school, whose staff coordinate all emergency messages.",
+      "marker": "[P-007, P-011]",
+      "verdict": "supports",
+      "evidence_span": "Facilitate all emergency communication through school emergency communication management systems and coordinated by school personnel; (B) Require parents or guardians who need to communicate with their student during the school day to contact the school directly",
+      "correct_passage": "",
+      "problem": "Two minor points. (1) 'whose staff coordinate' states as settled fact what the law requires each district's and school's policy to set up. P-011 is item (c)(4) of the policies that P-008 makes due 'By January 1 each year', and the old wording's 'must' is gone. (2) The July 1, 2027 date comes from the student ban (P-007). The contact-the-school protocol is a policy element due each January 1, so it may apply as early as Jan 1, 2027. 'By' keeps the sentence true, and L14 and L21 say the law doesn't link the two dates.",
+      "suggested_fix": "Optional: 'whose staff must coordinate all emergency messages' keeps the requirement framing. It adds one word, so trim elsewhere if the 45-word cap is strict."
+    },
+    {
+      "file": "workspace.md",
+      "line": 15,
+      "sentence": "Not known as of Nov 8, 2026: who pays for phone storage; the law sets aside no money; we didn't review the state budget.",
+      "marker": "{analysis: each district chooses storage (P-009); no funding or fee provision in the law's full text, P-001 to P-019 and P-056 to P-061; any state funding would come through the state budget, which is outside our sources}",
+      "verdict": "valid",
+      "evidence_span": "",
+      "correct_passage": "",
+      "problem": "The substance holds. P-009, under P-008's lead-in, leaves storage methods to each local school system and public school. No passage of the full enacted text appropriates money or sets a fee. The budget point is outside knowledge, and the tag says so. Small points: the tag says 'each district' where P-008 says 'each local school system and public school'. The new second semicolon, which replaced ', and', makes the text after the colon read as a three-item list. A reader can then take 'the law sets aside no money' (a known fact) and 'we didn't review the state budget' as things that are not known. See framing issues.",
+      "suggested_fix": "Same 24 words, clearer: 'Not known as of Nov 8, 2026: who pays for phone storage (the law sets aside no money; we didn't review the state budget).'"
+    },
+    {
+      "file": "workspace.md",
+      "line": 17,
+      "sentence": "HB 1009 keeps House Bill 340's school-day device ban for public school students in kindergarten through 8th grade.",
+      "marker": "[P-006, P-028]",
+      "verdict": "supports",
+      "evidence_span": "no public school student in kindergarten through grade eight shall be permitted to access personal electronic devices during the school day",
+      "correct_passage": "",
+      "problem": "Nothing of substance. P-006 is part of HB 1009's enacted text, and its header marks it as existing law, unchanged. P-028 ties the K-8 ban to HB 340 (2025), and P-066 shows the prior K-8 bell-to-bell rule. The next sentence lists what did change for K-8.",
+      "suggested_fix": ""
+    },
+    {
+      "file": "workspace.md",
+      "line": 17,
+      "sentence": "The bill drops e-readers from its list of examples, which isn't complete, and requires yearly policies.",
+      "marker": "[P-004, P-021, P-008, P-020]",
+      "verdict": "supports",
+      "evidence_span": "Such term includes, but is not limited to, smartphones, smartwatches, tablets, headphones, and other devices",
+      "correct_passage": "",
+      "problem": "The facts hold. P-021 (the prior list) has 'e-readers' and P-004 (as enacted) does not. 'includes, but is not limited to' supports 'isn't complete'. P-008 ('By January 1 each year ... shall adopt, and revise as appropriate') against P-020's one-time 'By January 1, 2026' supports 'requires yearly policies'. Wording: 'its list of examples' doesn't say examples of what (devices), and 'its' points to the bill rather than the law's device definition. The line also doesn't say these K-8 changes apply from Dec 31, 2026, with the first yearly deadline on Jan 1, 2027.",
+      "suggested_fix": "Optional, one word shorter: 'The bill drops e-readers from its incomplete list of example devices and requires yearly policies.'"
+    },
+    {
+      "file": "workspace.md",
+      "line": 105,
+      "sentence": "If you care most about your child's focus in class: ... the top reason parents cited for backing a high school cellphone ban was \"Improved academic focus and learning.\"",
+      "marker": "[P-034, P-032, P-070]",
+      "verdict": "supports",
+      "evidence_span": "Improved academic focus and learning 87.7 (1.8) Improved in-person social interactions 71.2 (2.6) Improved mental health and wellbeing 69.1 (2.6) Improved physical health and safety 60.3 (2.9)",
+      "correct_passage": "",
+      "problem": "None. At 87.7%, this is the highest of the four supporters' reasons. The base is parents who support a ban (P-034: 'Asked among parents who support a ban'), which 'for backing' conveys. The quoted words are verbatim; the period inside the closing quote mark is not in P-034, but that is punctuation style and L106 does the same. The new label 'your child's focus in class' now parallels L106's 'reaching your child in an emergency'.",
+      "suggested_fix": ""
+    },
+    {
+      "file": "workspace.md",
+      "line": 165,
+      "sentence": "Teens' mental health and in-person social lives would improve, supporters say.",
+      "marker": "[P-036, P-051, P-071, P-034]",
+      "verdict": "supports",
+      "evidence_span": "Improved in-person social interactions 71.2 (2.6) Improved mental health and wellbeing 69.1 (2.6)",
+      "correct_passage": "",
+      "problem": "Supported by the passages together. P-034: supporting parents cite in-person social interactions and mental health. P-071: 'ease anxiety'. P-036: Woods calls it 'a mental health issue' and wants 'to end the harm'. P-051: Hilton cites 'less isolation' and says technology 'makes us feel further apart'. Minor points: 'social lives' is a little broader than any passage's wording ('in-person social interactions', 'less isolation'). Hilton's district reports were about younger students, so the teen scope rests on P-034, P-036 and P-071. The card heading (L161, unchanged) still says 'friendships', which no passage uses.",
+      "suggested_fix": "Optional: use P-034's words, 'in-person social interactions', and align the L161 heading in a later revision."
+    },
+    {
+      "file": "workspace.md",
+      "line": 180,
+      "sentence": "No one in the sources we reviewed disputed that Georgia's phone rules are working.",
+      "marker": "{analysis: none of the archived statements about Georgia disputes it; teacher Darryl Adams's concerns were about enforcement, emergencies and older students (P-047 to P-049); the English study's authors wrote about schools in England (P-041, P-043)}",
+      "verdict": "valid",
+      "evidence_span": "",
+      "correct_passage": "",
+      "problem": "This holds. No Georgia statement in the passages disputes that the rules work. Adams's concerns are as described: enforcement (P-047), older students (P-048) and emergencies (P-049). The timing of his lockdown anecdote is unknown, so it doesn't count as a dispute. A small precision point: P-041 places the English study in 30 English schools, but P-043's conclusion is worded generally ('restrictive school policies', 'adolescents', policies that prohibit phone use 'in their current form'). 'Wrote about schools in England' therefore understates its reach. It still doesn't address Georgia, so the sentence stands.",
+      "suggested_fix": "Optional tag wording: 'the English study's authors studied schools in England (P-041) and did not discuss Georgia; their general conclusion (P-043) is on card 2'."
+    },
+    {
+      "file": "workspace.md",
+      "line": 182,
+      "sentence": "The news report quoting Harrell doesn't name the high schools or say how their success was measured.",
+      "marker": "{analysis: based on P-046, with P-044 naming her as a state senator}",
+      "verdict": "questionable",
+      "evidence_span": "",
+      "correct_passage": "",
+      "problem": "The revision widened the 'doesn't say' claim from the quoted passage to the whole news report (S16). The cited basis is one paragraph (P-046), and S16 is archived only in excerpts (P-044 to P-049; P-044 is 'paragraphs 2-3'). No passage can confirm what the rest of the report says. The narrower claim is true of P-046 itself. The project archived the whole Florida abstract to make a 'doesn't say' claim checkable (see the P-067 note). The project's copyright rule allows only short excerpts of a news article, so this claim can only be checked if it stays scoped to the archived passage.",
+      "suggested_fix": "'Harrell's remark, as reported, doesn't name the high schools or say how their success was measured.' {analysis: based on P-046, with P-044 naming her as a state senator}"
+    },
+    {
+      "file": "workspace.md",
+      "line": 194,
+      "sentence": "The news report doesn't say when two of Adams's daughters were in a lockdown, or what phone rules applied.",
+      "marker": "{analysis: based on P-049, with P-047 naming him as a teacher}",
+      "verdict": "questionable",
+      "evidence_span": "",
+      "correct_passage": "",
+      "problem": "Same scope problem as L182. The 'doesn't say' claim now covers the whole news report, but the basis is one archived paragraph (P-049) of an article archived only in excerpts. The narrower claim is true of P-049 itself. The 'two of Adams's daughters ... in a lockdown' detail now matches P-049, which fixes the old 'Adams's lockdown'. 'The news report' also has no antecedent in card 4, whereas L182 at least says 'quoting Harrell'.",
+      "suggested_fix": "'Adams's account, as reported, doesn't say when two of his daughters were in a lockdown, or what phone rules applied.' {analysis: based on P-049, with P-047 naming him as a teacher}"
+    },
+    {
+      "file": "workspace.md",
+      "line": 201,
+      "sentence": "We found no Georgia high school results or workload data yet.",
+      "marker": "{analysis: none in the sources reviewed; no archived source includes workload data; Georgia's high school ban must start no later than July 1, 2027 (P-007)}",
+      "verdict": "valid",
+      "evidence_span": "",
+      "correct_passage": "",
+      "problem": "This holds for measured results and workload data. No passage reports Georgia high school outcomes or staff workload: P-014 lists possible duties, not workload, and P-045 and P-053 are statements. The P-007 date is right. Wording: 'results' is unqualified and vague (results of what?). The parallel pro-side line, L153, says 'no measured results', and its tag notes Harrell's unmeasured claim that high school limits were 'very successful' (P-046). Without the qualifier, 'no ... results' is slightly broader than the sources allow and breaks the L153/L201 parallel that the flip test checks.",
+      "suggested_fix": "'We found no measured Georgia high school results or workload data yet.' This makes the line 41 words. Optionally add L153's P-046 caveat to the tag."
+    }
+  ],
+  "framing_issues": [
+    {
+      "file": "workspace.md",
+      "line": 14,
+      "text": "Exceptions: your disability or medical plan explicitly requires access",
+      "issue": "Undefined, untagged plain-language term. 'Disability ... plan' stands in for P-013's 'Individualized Education Program (IEP), Section 504 Plan', but no passage calls these disability plans. The page tags this same gloss as {analysis} at L23, L81, L122 and L217. Students and parents usually know these as an 'IEP' or a '504 plan', so the phrase may not tell them whether they qualify.",
+      "severity": "medium"
+    },
+    {
+      "file": "workspace.md",
+      "line": 15,
+      "text": "who pays for phone storage; the law sets aside no money; we didn't review the state budget",
+      "issue": "After 'Not known as of Nov 8, 2026:', the two semicolons read as a three-item list. A reader can then take 'the law sets aside no money' (a known fact) and 'we didn't review the state budget' (a process note) as things that are not known. The second semicolon, which replaced ', and', also breaks the parallel with L16 and strains the grade 6-8 reading target.",
+      "severity": "low"
+    },
+    {
+      "file": "workspace.md",
+      "line": 17,
+      "text": "drops e-readers from its list of examples, which isn't complete",
+      "issue": "Vague reference: 'its list of examples' doesn't say examples of what (devices), and 'its' points to 'the bill' rather than the law's device definition. The line also doesn't say when the K-8 changes apply: the law takes effect Dec 31, 2026, and the first yearly policy deadline is Jan 1, 2027.",
+      "severity": "low"
+    },
+    {
+      "file": "workspace.md",
+      "line": 165,
+      "text": "Teens' mental health and in-person social lives would improve",
+      "issue": "Inconsistent term. The card heading (L161, unchanged) still says 'friendships', a word no passage uses. The revised In short says 'social lives', and the source says 'in-person social interactions' (P-034).",
+      "severity": "low"
+    },
+    {
+      "file": "workspace.md",
+      "line": 194,
+      "text": "The news report doesn't say when two of Adams's daughters were in a lockdown",
+      "issue": "Vague reference: card 4 hasn't named a news report, and unlike L182 ('The news report quoting Harrell') this line doesn't say which one. This is a small asymmetry between the parallel 'What's missing' lines on the pro card (L182) and the con card (L194).",
+      "severity": "low"
+    },
+    {
+      "file": "workspace.md",
+      "line": 201,
+      "text": "We found no Georgia high school results or workload data yet.",
+      "issue": "Unequal qualifier between flip-tested In short lines. The pro card's L153 says 'no measured results', and its tag notes Harrell's unmeasured success claim (P-046). This con card's line drops 'measured', and 'results' alone is vague (results of what?).",
+      "severity": "low"
+    }
+  ],
+  "summary": {
+    "units_checked": 12,
+    "supports": 5,
+    "partial": 1,
+    "does_not_support": 0,
+    "wrong_span": 0,
+    "questionable_or_invalid_tags": 2
+  }
+}
