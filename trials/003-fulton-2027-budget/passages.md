@@ -176,6 +176,11 @@ span of a hashed snapshot listed in [sources.yaml](sources.yaml), or of a text f
 ### P-041 · S07b · proposed 2027 meeting schedule (whole document)
 > Fulton County Board of Commissioners Proposed 2027 Meeting Schedule First Regular Meetings Second Regular Meetings Wednesday, January 6, 2027 Wednesday, January 20, 2027 Wednesday, February 3, 2027 Wednesday, February 17, 2027 Wednesday, March 3, 2027 Wednesday, March 17, 2027 *Wednesday, April 14, 2027 Wednesday, April 21, 2027 (Postponed from April 7, 2027) Wednesday, May 5, 2027 Wednesday, May 19, 2027 Wednesday, June 2, 2027 Wednesday, June 16, 2027 *Wednesday, July 14, 2027 *No 2nd Regular Meeting (Postponed from July 7, 2027) Wednesday, August 4, 2027 Wednesday, August 18, 2027 Wednesday, September 1, 2027 Wednesday, September 15, 2027 Wednesday, October 6, 2027 Wednesday, October 20, 2027 Wednesday, November 3, 2027 Wednesday, November 17, 2027 Wednesday, December 1, 2027 Wednesday, December 15, 2027 * Except for the months of April and July, all meetings will be held on the first and third Wednesdays of each month at 10 a.m. in the Fulton County Government Center Assembly Hall, 141 Pryor Street SW, Atlanta, Georgia. For more information, please contact the Office of the Clerk to the Commission at 404-612-8200 or visit Fulton County’s website at www.fultoncountyga.gov
 
+### P-098 · S08 · Public Notices page: the Board's Sept 30, 2026, 10 a.m. hearing on the proposed millage rate (captured 2026-11-08)
+> FULTON COUNTY BOARD OF COMMISSIONERS SPECIAL CALLED MEETING WEDNESDAY, SEPTEMBER 30, 2026 10 A.M. THE FULTON COUNTY GOVERNMENT CENTER ASSEMBLY HALL 141 PRYOR STREET, SW ATLANTA, GEORGIA 30303 The Fulton County Board of Commissioners will convene a Special Called Meeting on Wednesday, September 30, 2026 at 10 a.m. in the Fulton County Government Center, 141 Pryor Street, SW, Atlanta, Georgia 30303 for the purpose of a Public Hearing on proposed millage rate.
+
+*Note: Revision 4. The same page lists a second hearing at 6 p.m. that day, and two hearings on July 29, 2026 that were canceled.*
+
 ### P-042 · S08 · Public Notices page, introduction and newest notice (captured 2026-11-08)
 > Public Notices are provided by applicable laws to inform citizens of special meetings, hearings, and other legislative events where a quorum of the Board of Commissioners is probable. Public Notices of the Board also appear in the county legal organ and posted throughout the Government Center, or at the exact meeting site. October 2026 PUBLIC NOTICE Fulton County Budget Commission - SPECIAL CALLED MEETINGS Monday, October 12, 2026, 10 a.m. – 5 p.m. Tuesday, October 13, 2026, 9 a.m. – 5 p.m. Wednesday, October 14, 2026, 9 a.m. – 5 p.m. Monday, October 19, 2026, 9 a.m. – 5 p.m. Tuesday, October 20, 2026, 9 a.m. – 4:30 p.m. Thursday, October 22, 2026, 9 a.m. – 5 p.m. Fulton County Government Center 141 Pryor Street, SW, Atlanta, GA 30303, Suite 3077A Special called meetings of the Fulton County Budget Commission will be conducted on the dates and locations provided above for the purpose of holding budget hearings for Fulton County’s 2027 General Fund Budget. Click here to view the meeting agenda . September 2026
 
@@ -209,6 +214,17 @@ span of a hashed snapshot listed in [sources.yaml](sources.yaml), or of a text f
 
 ### P-051 · S09b · p.33 (budget message): requests beyond the proposal
 > In addition to the above-mentioned enhancements already considered, there were almost $158 million in unique personnel/operating requests and over $64 million in capital requests received from departments, agencies and external stakeholders during the FY2026 budget process. The requests were separately reviewed and categorized into tranches for funding consideration if additional resources are realized at the end of 2025.
+
+### P-101 · S09b · p.20 (budget message): property tax as the main revenue; when the 2026 tax rate (millage rate) is set
+> The County’s primary source of revenue is property tax. The FY2026 current year property tax revenue projection assumes a flat millage rate of 8.87 as provided by the Board of Commissioners when setting the FY2025 millage rate. The final determination of the FY2026 millage rate by the Board of Commissioners will take place during the summer of 2026.
+
+*Note: Revision 4. Removed a bullet symbol (◼) that the PDF's layout places inside the sentence.*
+
+### P-102 · S09b · p.9 (budget message): how a property tax bill is figured
+> The tax digest value combined with the millage rate is used to determine the tax billing amount.
+
+### P-103 · S09b · p.16 (budget message, conclusion): whom the 2026 budget is for
+> This $1.4 billion budget reflects both, the needs of our residents and a steady operational and fiscally responsible plan.
 
 ### P-086 · S09b · p.22 (budget message): what the county means by 'base budget'
 > As part of our FY2026 budget development process, we identified the County’s “Base Budget”. This represents the current funding needed to address historical spending patterns including personnel expenditures (filled and vacant) and other operational spending.
@@ -277,6 +293,15 @@ span of a hashed snapshot listed in [sources.yaml](sources.yaml), or of a text f
 
 ### P-067 · S11 · Clerk to the Commission page: public comment and accommodations (captured 2026-11-08)
 > Residents have two options to participate in public comment: in person and virtually via Zoom. All virtual public comments and requests to speak in person must be submitted before the clerk sounds the start of the 10 a.m. meeting. Fulton County Government is committed to providing individuals with disabilities an equal opportunity to participate in and benefit from county programs, activities, and services. To request reasonable accommodations based on disability, including this notification in an alternate format, please contact the Fulton County Clerk to the Commission at 404.612.8200.
+
+### P-097 · S11 · Clerk to the Commission page: what the Clerk does (captured 2026-11-08)
+> The Clerk to the Commission is officially responsible for the County seal and the retention and preservation of official records, including meeting agendas, minutes, resolutions, ordinances, and appointments to more than 60 county-appointed boards and authorities. The Clerk to the Commission's primary role is to efficiently and effectively manage the goals and expectations of the Board of Commissioners.
+
+### P-099 · S11 · Clerk page, site menu: link to the Commission District Finder (HTML; the site is fultoncountyga.gov, P-039)
+> <a href="/Commission-District-Finder" class="desktop-utility-nav__link" title="" >Commission District Finder</a>
+
+### P-100 · S11 · Clerk page, menu: link to the Public Notices page (HTML; the site is fultoncountyga.gov, P-039)
+> <a href="/Commissioners/Clerk-to-the-Commission/Public-Notices" class="tertiary-menu__link" title="Link to information about public notices" >Public Notices</a>
 
 ### P-068 · S20 · page metadata: publication time
 > "datePublished": "2026-10-07T15:55:37.083Z"

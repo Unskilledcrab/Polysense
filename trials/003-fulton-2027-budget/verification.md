@@ -468,3 +468,94 @@ its list of changed units.
 The protocol's targeted re-check is done: no re-check found an unsupported claim, and the last one found nothing
 to fix. **Status: Passed checks (round 3), revision 3.3.**
 
+
+## Revision 4: reader-first update (change class: update; checks pending)
+
+Reason: reader-first revision after usability feedback ([style guide v0.6](../../docs/product/content-style-guide.md),
+section 9; [runbook v0.6](../../docs/process/runbooks/bill-workspace.md), Step 4). The coordinator also passed on the
+unclear terms a lay reader (a Fulton homeowner) found in the Summary, Options and Arguments tabs. Revision 3.3, which
+passed checks in round 3, is kept in `verification/round4/` (`workspace.r3.3.md`, `home.r3.3.md`, `page.r3.3.yaml`).
+No checker has seen revision 4; the drafter ran only the deterministic gate.
+
+### What changed, by part
+
+| Part | Change |
+|---|---|
+| Status lines | Revision 4, "reader-first update; checks pending" |
+| 30-second version (89 words) | "What's being decided" names the decider and defines it in cited words: Fulton County's Board of Commissioners, a chairman and six district seats (P-014, P-035). It also defines the Budget Commission: two commissioners and two staff, who must propose the budget by Nov 15 (P-005, P-008). "Who it affects" says Fulton County residents and property owners, and that property tax is the county's main income (P-103, P-101). The two sides' views were replaced by a stated fact: "The commission's makeup and a 5% cap on requests for extra money are disputed." This is the style guide's section 1 option ("give none and state the facts"), and it takes the line out of round 3's contradiction C3 |
+| New: What it means for you | Three "If you" lines: people who live in Fulton County, people who own property there, and people who use or work in the county courts or jail. Each line says the 2027 effect is not known yet, as of Nov 8, 2026, and why. Then three folded parts: **Where the money comes from** (5 steps: the General Fund, property tax as its biggest source, how the tax billing is figured, what the fund pays for, the 2026 draw on savings); **Decided now, and decided later** (the budget now; the property tax rate later, with the 2026 hearing on Sept 30 as the precedent, P-098; mid-year changes need a Board vote, P-006); **Not known yet** (four dated items, each with its reason) |
+| Layer 1 | Reordered: What you can do, Who decides and how to reach them, Coming up, What happened. **Who decides, and how to reach them** (new) lists every Board seat the same way from the Nov 4 roll call (P-035). It gives the Budget Commission's members and how its two commissioners were chosen (P-008, P-011, P-021), and the Clerk's office phone as the sources print it (404-612-8200, P-039; 404.612.8200 for accommodations, P-067). It says our sources give no selection method, term or direct contact for any commissioner, and it has no Decide, Input or Observe labels. **What you can do:** <br>- the public comment rules (residency check; a 60-minute cap, with the rest at the end of the meeting; P-036); <br>- the Zoom wording, and that the Clerk's page doesn't say where to submit (P-067); <br>- what the Clerk to the Commission does (P-097); <br>- the Public Notices page's address (P-100) and the Commission District Finder (P-099); <br>- "Tell your district commissioner" became "Tell Board members", with "This page can't look up your district"; <br>- what the budget message and the General Fund table are. <br>**Coming up:** the consent agenda is defined at its first use on the tab; "Agenda Ready" is explained; the 2025 proposal is credited to the county manager (P-047); "the code" became "Fulton County's code of laws"; the legal newspaper is said to be unnamed in our sources. **What happened:** "moved", "seconded" and "failed" are explained (1 yes among 6 members; our sources don't give the voting rule), and the "Budget Committee" item is linked to the Budget Commission as likely (README, D10) |
+| Layer 2 | "Who decides" moved to Layer 1. The Board is named and defined, and "Budget Commission" is used at first mention (re-check 3's note). New: the resolution says the commission set the limit at 5% of each department's "base budget" for 2027 (P-029), and the limit's exact wording and date aren't known. "The code" became "the county code" or "Section 2-261 of the county code". "Filed" is explained |
+| Layer 3 | Intro of 60 words, defining the Board and the Budget Commission and saying what filing means. New values guide (`### If you care most about…`), as its first sub-section: one line for Option C, then an `{editorial}` line saying Options A and B have no documented argument in our sources, and that the guide doesn't recommend an option. Option C's heading says "set aside on Nov 4". Option C no longer uses the word "authority". Option A names the six justice officials. Option structure unchanged |
+| Layer 4 | The preamble names the quoted speakers (Johnson, Labat, Barrett and Gammage) and the two resolutions' sponsors, and defines the Budget Commission and the county code (P-017). "Ratified" became "approved", and "tentative" is explained. The six justice officials are listed (P-076), and "filed" reads "filed, or set aside". Every "In short" was rewritten (40 words or fewer): first what the claim would mean for people, then the claim in its side's own terms, then its evidence status. Card 2's support names the sponsors (Ellis and Abdur-Rahman). Card 3 defines the jail agreement at its first mention on the tab (P-048). Card 5's gap reads "who the incoming board members are or when they take office", without "elected". **No evidence label, card claim, card order or side changed** |
+| home.md | Every item is 25 words or fewer and dated in its label, with the Board of Commissioners and the Budget Commission named. "Submit requests before 10 a.m." (P-067), and "Filing set the resolution aside" |
+| page.yaml | Title "Fulton County commissioners adopt the 2027 budget by their second January meeting" (12 words), with plain link text and chips. Each reader-facing string has a citation comment. The source chip "Legistar" became "Board record". `kind` is unchanged |
+| Passages | P-097 to P-103, all from snapshots already archived (S08, S09b, S11, captured 2026-11-08): what the Clerk does; the Board's Sept 30, 2026 hearing on the proposed millage rate; the district-finder and Public Notices links (from the HTML); property tax as the county's primary revenue and when the 2026 rate was to be set; how the tax billing is figured; and "the needs of our residents". 102 passages, 0 errors |
+
+### The values guide: why one line
+
+The format needs a documented, verbatim quote from someone who backs the option.
+
+- **Option C** (Resolution 26-0729) has one: its sponsor, Commissioner Barrett, proposed it "to ensure transparency and
+  informed decision-making in the development of the Fulton County budget" (P-024, P-032). The quote is the
+  resolution's title, not spoken words, so the line says "proposed it" rather than "said".
+- **Options A and B** are about the Board's vote on a proposal that isn't public. No archived statement argues for
+  adopting the proposal unchanged, or for changing it. Ellis's statements back the commission process, not either
+  vote. The justice officials ask for more money and a January vote, not for one of these options. Treating either
+  as backing an option would attribute an argument nobody made (CLAUDE.md, invariant 4). So those options get no line,
+  and the page says so.
+
+### Round 3 open items this revision touches
+
+- **Folded in, as asked:** what "filed" means, wherever it appears (Layer 3 intro, Option C heading, Layer 2, Layer 4,
+  home); the public comment rules (P-036).
+- **C3 (the 30-second version's wording):** the line no longer gives either side's view, so all three panelists' notes
+  lapse. This is a change of approach, and the next full round should look at it.
+- **C1 ("helps draft" against "the commission alone drafts"):** the 30-second version and "Who decides" now use the
+  code's duty ("must propose", P-005). Layer 2's "helps draft" and card 2's line 147 are unchanged, so C1 stays open.
+- **Lay reader's terms in the top layers and on home:** all addressed in place, except the template items the
+  coordinator is fixing (the Options lede, the label legend, "trial" and "sha256", and the folded "How to read these
+  cards").
+
+### What the sources couldn't support
+
+- **The size or direction of any household tax change.** The proposal wasn't public on Nov 8, and the 2027 tax rate
+  isn't set. Our sources show only how the 2026 rate was handled.
+- **How Board members are chosen, and how long their terms are.** The page doesn't call them elected.
+- **A direct phone or email for any commissioner or for the Budget Commission.**
+- **Where to submit a Zoom comment or a request to speak.** The Clerk's page doesn't say; the page points to the
+  Clerk's phone.
+- **The legal newspaper's name.**
+- **How many yes votes a motion needs.**
+- **Whether the agenda's "Budget Committee" is the Budget Commission.** The page says "likely".
+- **Who the incoming board members are, and when they take office.**
+- **Any documented argument for Option A or Option B.**
+
+### Revision 4: deterministic gate (run by the drafter)
+
+| Check | Result |
+|---|---|
+| `check_citations.py` on workspace.md | **Pass**: 390 units (244 cited, 91 analysis, 36 editorial, 19 computed), 0 errors, 0 warnings |
+| `check_citations.py` on home.md | **Pass**: 6 units (4 cited, 2 analysis), 0 errors, 0 warnings |
+| `readability.py` | **Pass**: 30-second version 7.5, What it means for you 7.2, Layer 1 8.0, Layer 2 8.2, Layer 3 8.0; 0 sections over target. No budget warnings and no CHECK lines. Layer 4 is 8.3 (not targeted); the longest card label is 74 words (card 3, unchanged) |
+| Length budgets | 30-second version 89 words. "If you" lines: 45, 44 and 37 words, with first sentences of 23, 20 and 16. Values line 32 words (quote 14). Layer 3 intro 60. "In short" lines 40, 40, 40, 40, 40 and 38. Home items 24, 20, 25 and 25 |
+| `verify_hashes.py` | **Pass**: 36/36 |
+| Test render (to scratch) | Renders version 4, with no Decide-label or undated-home-item warnings and no asterisks in the page data |
+
+### Where I'm least sure (revision 4)
+
+1. **"If you own property in Fulton County"**, the line most likely to be questioned:
+   - The first sentence gives the reason the coordinator set (the proposal isn't public). The fuller reason, that the
+     rate is a separate decision, comes in the third sentence.
+   - That third sentence calls the "proposed millage rate" of the Sept 30, 2026 notice (P-098) "the tax rate".
+   - It reads "months after its budget vote" from two dates in different sources (P-046, P-098).
+2. **"If you use or work in the county courts or jail":** the "work in" part rests on staffing requests and shortages
+   (P-064, P-066, P-070), not on a source that speaks about county workers.
+3. **"If you live in Fulton County":** "the jail, courts, libraries and other services" are 2026 General Fund lines
+   (P-054). The 2027 list isn't known.
+4. **The Option C values line quotes a resolution's title,** not a spoken statement. A checker may hold it to the
+   format's "said".
+5. **No values lines for Options A and B.** A checker might read Ellis as backing A, or the justice officials as backing
+   B. I treated both as inferences.
+6. **"Where the money comes from", step 3,** turns P-102's "tax digest value" into "the value of taxable property".
+7. **"Who it affects" cites the 2026 budget message** ("the needs of our residents", P-103) for a 2027 page.

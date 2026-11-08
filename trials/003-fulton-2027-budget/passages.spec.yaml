@@ -143,6 +143,9 @@ passages:
   - {id: P-041, source: S07b, file: S07b.txt, locator: "proposed 2027 meeting schedule (whole document)",
      start: "Fulton County Board of Commissioners Proposed 2027 Meeting Schedule", end: "County’s website at www.fultoncountyga.gov"}
   # --- S08, S08b: public notices and the Budget Commission's hearing agenda -----------------------------------
+  - {id: P-098, source: S08, file: S08.txt, locator: "Public Notices page: the Board's Sept 30, 2026, 10 a.m. hearing on the proposed millage rate (captured 2026-11-08)",
+     start: "FULTON COUNTY BOARD OF COMMISSIONERS SPECIAL CALLED MEETING WEDNESDAY, SEPTEMBER 30, 2026", end: "for the purpose of a Public Hearing on proposed millage rate.",
+     note: "Revision 4. The same page lists a second hearing at 6 p.m. that day, and two hearings on July 29, 2026 that were canceled."}
   - {id: P-042, source: S08, file: S08.txt, locator: "Public Notices page, introduction and newest notice (captured 2026-11-08)",
      start: "Public Notices are provided by applicable laws", end: "September 2026"}
   - {id: P-043, source: S08b, file: S08b.txt, locator: "hearing agenda, heading and October 12-14",
@@ -167,6 +170,14 @@ passages:
      start: "• Consent Decree: Includes funding of $31.8 million", end: "to determine impact."}
   - {id: P-051, source: S09b, file: S09b.txt, locator: "p.33 (budget message): requests beyond the proposal",
      start: "In addition to the above-mentioned enhancements already considered, there were almost $158", end: "additional resources are realized at the end of 2025."}
+  - {id: P-101, source: S09b, file: S09b.txt, locator: "p.20 (budget message): property tax as the main revenue; when the 2026 tax rate (millage rate) is set",
+     start: "The County’s primary source of revenue is property tax.", end: "will take place during the summer of 2026.",
+     fix: [["current year ◼ property", "current year property"]],
+     note: "Revision 4. Removed a bullet symbol (◼) that the PDF's layout places inside the sentence."}
+  - {id: P-102, source: S09b, file: S09b.txt, locator: "p.9 (budget message): how a property tax bill is figured",
+     start: "The tax digest value combined with the millage rate is used to", end: "determine the tax billing amount."}
+  - {id: P-103, source: S09b, file: S09b.txt, locator: "p.16 (budget message, conclusion): whom the 2026 budget is for",
+     start: "This $1.4 billion budget reflects both, the needs of our residents", end: "fiscally responsible plan."}
   - {id: P-086, source: S09b, file: S09b.txt, locator: "p.22 (budget message): what the county means by 'base budget'",
      start: "As part of our FY2026 budget development process, we identified the County’s “Base Budget”.", end: "and other operational spending."}
   - {id: P-052, source: S09b, file: S09b.txt, locator: "p.76, adopted budget by fund (in millions)",
@@ -213,6 +224,13 @@ passages:
   # --- S11: Clerk to the Commission page ------------------------------------------------------------------------
   - {id: P-067, source: S11, file: S11.txt, locator: "Clerk to the Commission page: public comment and accommodations (captured 2026-11-08)",
      start: "Residents have two options to participate in public comment", end: "contact the Fulton County Clerk to the Commission at 404.612.8200."}
+  # Revision 4 (reader-first): what the Clerk does, and two links from the page's menus (read from the HTML snapshot)
+  - {id: P-097, source: S11, file: S11.txt, locator: "Clerk to the Commission page: what the Clerk does (captured 2026-11-08)",
+     start: "The Clerk to the Commission is officially responsible", end: "manage the goals and expectations of the Board of Commissioners."}
+  - {id: P-099, source: S11, file: S11.html, locator: "Clerk page, site menu: link to the Commission District Finder (HTML; the site is fultoncountyga.gov, P-039)",
+     start: '<a href="/Commission-District-Finder" class="desktop-utility-nav__link"', end: 'Commission District Finder</a>'}
+  - {id: P-100, source: S11, file: S11.html, locator: "Clerk page, menu: link to the Public Notices page (HTML; the site is fultoncountyga.gov, P-039)",
+     start: '<a href="/Commissioners/Clerk-to-the-Commission/Public-Notices" class="tertiary-menu__link"', end: '>Public Notices</a>'}
   # --- S20: Atlanta News First, 2026-10-07 ------------------------------------------------------------------------
   - {id: P-068, source: S20, file: S20.html, locator: "page metadata: publication time",
      start: '"datePublished": "2026-10-07T15:55:37.083Z"', end: '"datePublished": "2026-10-07T15:55:37.083Z"'}
