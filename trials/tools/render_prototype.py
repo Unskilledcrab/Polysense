@@ -194,6 +194,8 @@ def main(trial: Path, template: Path, out_path: Path) -> int:
     verification = json.loads(summary_path.read_text(encoding="utf-8")) if summary_path.exists() else {
         "intro": "Verification has not run yet.", "stats": [], "sections": [], "verified": False}
     rev = hashlib.sha256((trial / "workspace.md").read_bytes()).hexdigest()
+    rev_no = re.search(r"revision (\d+)", (trial / "workspace.md").read_text(encoding="utf-8"))
+    rev_label = f"revision {rev_no.group(1)}" if rev_no else "revision ?"
     data = {
         "meta": {
             "verified": bool(verification.get("verified")),
@@ -201,7 +203,7 @@ def main(trial: Path, template: Path, out_path: Path) -> int:
             "disclosure": ("Drafted with AI help from the archived sources below. Every sentence links to its source or is "
                            "labeled as our analysis. Checked by automated tests and independent AI reviewers. In this trial, "
                            "no person reviewed it."),
-            "footer": (f"Prototype · Trial 001 · revision {rev[:12]} · built {dt.date.today().isoformat()} · "
+            "footer": (f"Prototype · Trial 001 · {rev_label} (sha256 {rev[:12]}) · built {dt.date.today().isoformat()} · "
                        "Independent project, not a government website."),
             "revision": rev,
         },
