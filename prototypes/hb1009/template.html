@@ -76,7 +76,8 @@ p { margin: 0 }
 
 /* Chips and badges */
 .chips { display: flex; flex-wrap: wrap; gap: 6px; align-items: center }
-.chip { font-size: .78rem; line-height: 1.2; padding: 4px 9px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--muted); white-space: nowrap }
+.chip { font-size: .78rem; line-height: 1.2; padding: 4px 9px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--muted); white-space: nowrap; max-width: 100% }
+.chip.wrap { white-space: normal; border-radius: 12px }   /* long chips (a card's side) wrap instead of widening the page */
 .chip.law { background: var(--accent-soft); border-color: var(--accent); color: var(--accent) }
 .chip.ok { background: var(--ok-soft); border-color: var(--ok); color: var(--ok) }
 .chip.warn { background: var(--warn-soft); border-color: var(--warn); color: var(--warn) }
@@ -557,6 +558,20 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
 
   function evClass(label) { return /^support/i.test(label) ? "supported" : /^mixed/i.test(label) ? "mixed" : /^uncertain/i.test(label) ? "uncertain" : "values"; }
 
+  // The grades an evidence label names, in order ("Supported", "Uncertain", "Values question"...). A folded
+  // card shows only these, so it stays scannable on a phone; the full label is inside the card.
+  function evGrades(label) {
+    var t = label || "", prev;
+    do { prev = t; t = t.replace(/\([^()]*\)/g, ""); } while (t !== prev);   // drop explanations in parentheses
+    var out = [], m, re = /\b(supported, with limits|supported|mixed|uncertain|contested|not mainly a factual question|values question)\b/gi;
+    while ((m = re.exec(t))) {
+      var g = m[1].toLowerCase().replace("not mainly a factual question", "not mainly factual");
+      g = g.charAt(0).toUpperCase() + g.slice(1);
+      if (out.indexOf(g) < 0) out.push(g);
+    }
+    return out;
+  }
+
   // Arguments: all cards start closed, so both sides' claims are visible at a glance.
   function layerArguments() {
     var s = sectionById("arguments"), L = el("section", { class: "layer" });
@@ -569,19 +584,23 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
         L.appendChild(m);
         return;
       }
-      var meta = a.cardMeta;
+      var meta = a.cardMeta, grades = evGrades(meta.evidence);
       var side = meta.side ? (meta.side.charAt(0).toUpperCase() + meta.side.slice(1)) : "";
       var shortB = a.blocks.filter(function (b) { return b.label === "In short"; })[0];
       var rest = a.blocks.filter(function (b) { return b !== shortB; });
       var d = el("details", { class: "fold" });
       d.appendChild(el("summary", null, [
         el("h3", { text: a.title.replace(/^\d+\.\s*/, "") }),
-        el("div", { class: "chips" }, [el("span", { class: "chip", text: side })]),
+        el("div", { class: "chips" }, [el("span", { class: "chip wrap", text: side })]),
         shortB ? el("p", null, [units(shortB.units)]) : null,
-        el("div", null, [el("span", { class: "ev " + evClass(meta.evidence || ""), text: "Evidence: " + (meta.evidence || "") })])
+        grades.length
+          ? el("div", { class: "chips" }, [el("span", { class: "meta-line", text: grades.length > 1 ? "Evidence, by part:" : "Evidence:" })]
+              .concat(grades.map(function (g) { return el("span", { class: "ev " + evClass(g), text: g }); })))
+          : el("div", null, [el("span", { class: "ev " + evClass(meta.evidence || ""), text: "Evidence: " + (meta.evidence || "") })])
       ]));
       var body = el("div", { class: "body" }, [
         el("p", { class: "meta-line", text: (meta.kind === "Anticipated" ? "Anticipated: not said by a named person" : "Documented: said on the record") + " · " + (meta.claimType || "") + " claim" }),
+        grades.length ? el("p", { class: "meta-line", text: "Evidence label: " + meta.evidence }) : null,
         renderBlocks(rest)
       ]);
       d.appendChild(body);
