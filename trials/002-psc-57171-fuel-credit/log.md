@@ -44,6 +44,8 @@ every lead was re-checked on a primary page and re-snapshotted here.
 | Revision 6: accuracy fixes | 13:58 → 14:02 | The 14 source-check items and 3 editor items in the brief: scoped every "no party disputes" to the parties whose testimony we could read; card 5's first grade from "Supported" to "Mixed" (P-102); P-107's redaction marked in the spec with a note, and `passages.md` rebuilt; GAM's ranking caveat made exact in two places; hedges restored (P-097, P-079); direction words for the 30-second bill figures; home line 15 in plain words | The new gate check flagged the 11 unscoped absence claims until item 9 and item 12 were done; then 0 warnings. Two flagged lines (SC L254 and L266) have a second point that would change another card's label; logged as O1 for the coordinator |
 | Revision 6: gate and write-up | 14:02 → 14:04 | Gate clean: 426 units, 0 errors, 0 warnings; reading grades 6.8 to 8.3 in the targeted sections; hashes PASS; test render parses (card 5 folds to "Mixed"). verification.md (round 5 results, 17 changes, 17 open items, 7 contradictions, revision 6 checklist), this log and README | — |
 | Revision 6: cards 7 and 8 | 14:05 → 14:06 | The coordinator decided O1: fix both now, since round 6 re-runs the whole panel. Card 8's premise narrowed to the price's design, with GIPL's peak-price point (P-094) in the support sentence and the label's "Mixed" part; card 7's premise narrowed to "most" left-out costs, naming the renewable-program exception (P-065). verification.md: fixes A15 and A16. Gate: 427 units, 0 errors, 0 warnings | Card 8's label grew to 83 words |
+| Round 6 (independent checkers) | (coordinator) | Full panel again, because revision 6 changed card 5's evidence label; fresh blind source check | **Passed.** Gate clean; source check 322 supports, 7 partial, 0 unsupported, 0 wrong span, 1 questionable tag, 437/437 spans grounded; both advocates 4/5; editor 4/5 on neutrality with no high issue, 3/5 on clarity |
+| Revision 6.1: accuracy fixes | 14:35 → 14:38 | Saved revision 6's page, home and passages and the five round 6 reports in `verification/round6/`; read them. Made the coordinator's nine accuracy fixes (lines 9, 24, 76, 110, 138, 174, 195 and 254, and home line 15) with no label, card claim or structure change, checked line by line against revision 6. Gate clean: 430 units, 0 errors, 0 warnings. verification.md: round 6 results, 9 fixes, 14 open items, 9 contradictions; this log; README | Line 9's narrower wording added 4 words to the 30-second version (160) |
 
 ## Where the runbook did not fit (and what I did)
 
@@ -184,6 +186,12 @@ From round 5 (revision 6):
     were a redaction; mark it in the passage and say on the page that part of the recommendation is blacked out.
 35. **Before grading a premise "Supported", read the supporting party's own words for the other side's view.** P-102's
     "I would agree with Georgia Power" showed Georgia Power held the opposite view.
+
+From round 6 (revision 6.1):
+
+36. **A summary sentence can't claim more than its citations.** "Every proposed change" was true of the take-or-pay options
+    the citations covered, not of every fallback in the plans.
+37. **Mark a look-back as a look-back.** A "had been in place" estimate is not a saving from adopting a plan now.
 
 ## Automation notes (not eligible: 0 of 3 runs for this kind of decision)
 
