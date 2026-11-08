@@ -609,3 +609,71 @@ Where reviewers disagree, both views are given.
     Cairo High as a public high school, "school system" (E); "standard" questionnaire (SC).
 66. **Home and display:** "became law, extending … to high schools" read alone (SC home); "phone use" in the title (display
     check, and earlier 41).
+
+## Targeted re-check results (revision 6.2, `verification/round6-targeted/`)
+
+Revision 6.2 is archived there as `workspace.r6.2.md`, with the unit list the checkers received (`changed-units.txt`).
+
+| Check | Units | Result |
+|---|---|---|
+| Blind source check of the changed units (fresh agent) | 50 | **24 supports, 26 tags valid, 0 partial, 0 does not support, 0 wrong span, 0 questionable.** 50/50 evidence spans grounded (`check_verifier.py`). Nothing misstates a passage. Framing: 1 medium (the K-8 line's e-readers sentence), 9 low |
+| Editor's flip test on the changed values-guide, "If you…" and "In short" lines | 14 lines | Neutrality 4/5, no high-severity issue; 2 medium (card 5's "In short" lacks card 1's Georgia caveat on the same study; the values guide gives "learning", which both sides claim, to supporters only), 4 low |
+
+Under the "when a page is done" rule the re-check passes on accuracy. Revision 6.3 takes the two medium flip-test
+points, the medium framing note and a few wording fixes; the other low notes are open items 67–74.
+
+## Revision 6.3: what changed (2026-11-08, re-check pending)
+
+Reason: **last fixes after the targeted re-check**. Change class **correction**. No card claim, evidence label or side
+changes. `home.md`, `page.yaml`, `sources.yaml` and the passages are unchanged. Line numbers are unchanged from
+revision 6.2; the changed units are listed in `changed-units.txt` in the 6.3 scratch folder.
+
+| # | Item | Done? | What changed |
+|---|---|---|---|
+| 1 | K-8 line (L17) | Done | "HB 1009 keeps House Bill 340's school-day device ban for public school students in kindergarten through 8th grade." (18 words, stands alone; no "set in 2025") "The bill drops e-readers from its list of examples, which isn't complete, and requires yearly policies." The line is 45 words |
+| 2 | Card 5's "In short" | Done | Ends "We found no Georgia high school results or workload data yet." (40 words), with a tag covering both points, as card 1 does for the same study |
+| 3 | Values guide, supporters' line | Done | "If you care most about your child's focus in class:" (32 words), with the survey quote unchanged. The opponents' line is unchanged (35 words) |
+| 4 | Students line (L14) | Done | "Not known as of Nov 8, 2026: when your school will start the ban." To stay at 45 words, the exceptions sentence now reads "Exceptions: your disability or medical plan explicitly requires access, or another law does." |
+| 5 | Parents line (L15) | Done | "By July 1, 2027, reaching your child during the school day means contacting the school, whose staff coordinate all emergency messages." (P-011(A)). The "Not known" part keeps the money point and the state-budget caveat, joined by semicolons to fit 45 words |
+| 6 | Card 2's "In short" (L165) | Done | "in-person social lives" for "in-person friendships" (P-034, P-051). The card's title is unchanged |
+| 7 | L180's tag | Done | Cites P-041 for England |
+| 8 | "Quoted passage" (L182, L194) | Done | "The news report quoting Harrell doesn't name the high schools…"; "The news report doesn't say when two of Adams's daughters were in a lockdown, or what phone rules applied" (P-049) |
+| 9 | L24's repeat | Done | Removed L24's two date sentences; "Decided by the law, timing" (L21) keeps them, so the district bullet no longer implies that districts pick the start date |
+
+### Deterministic gate (revision 6.3)
+
+| Check | Result |
+|---|---|
+| `check_citations.py` | workspace: 285 units (174 cited, 76 analysis, 32 editorial, 3 computed), 0 errors, 0 warnings. home: 6 units, 0 errors, 0 warnings |
+| `readability.py` | 30-second 7.7, What it means for you 8.3, Layer 1 6.0, Layer 2 8.4, Layer 3 7.9 (Layer 4 8.1, not targeted). No budget warnings and no CHECK lines. "If you…" lines 45 words each (first sentences 18–21); values lines 32 and 35; card 2 and card 5 "In short" 40 each |
+| `verify_hashes.py` | PASS |
+| Test render | No warnings: version 6.3, 73 passages, 12 sources. The home card shows the four "If you…" first sentences as intended |
+
+### Where I'm least sure
+
+1. **Students line.** "Exceptions: your disability or medical plan explicitly requires access, or another law does." is terser
+   than before; it was shortened so the brief's "when your school will start the ban" fits in 45 words.
+2. **Parents line.** "Whose staff coordinate all emergency messages" states P-011(A)'s "all" and "coordinated by school
+   personnel" but not the word "system"; the budget allowed no more.
+3. **K-8 line.** "Its list of examples" relies on the first sentence's "device ban" for what the examples are.
+
+### Open items (added by the targeted re-check)
+
+67. "The July start date" in "Decided by the law, timing" calls a no-later-than deadline a start date; say "the July 1, 2027
+    deadline to start the ban" (SC).
+68. "Policies are due by January 1 each year" in "Not known yet" doesn't say whose policies; that bullet also repeats the
+    dates a second time (SC).
+69. Option B's plan sentence lacks P-013's "as necessary" limit, which "Decided by the law" and card 6 now carry (SC,
+    optional).
+70. The Layer 4 voice count: cite P-037 directly, name Gazmararian, and use her "concerns about emergency access" (SC).
+71. The Florida caveat "doesn't say which effects were larger" presumes only some were; "doesn't say whether that holds
+    for each effect" is more exact (study notes, cards 1 and 5); the study notes' tag should add P-005 (SC).
+72. Card 4: "send" is firmer than the law's "Facilitate" (SC, optional). Card 2: "barred phone use for fun" can be misread;
+    "where students couldn't use phones for fun" (E).
+73. Flip test, low: card 5's "In short" could state the law-backed duty in our voice, as card 4 does (E); the staff line's
+    unknown could run both ways ("how your workload will change") (E); the parents line's "who pays for phone storage"
+    could read "whether storage costs families anything" (E).
+74. Option C's chip uses the "bad" style in `page.yaml`; drop it or use a neutral style (E; earlier items 41 and 66).
+
+The processing notes on the lawmaker lookup and the district directory (lines 46 and 48) are recorded as blocked sources
+S21 and S23 in `sources.yaml`.
