@@ -1,0 +1,48 @@
+Trial 001, revision 6.4: units changed since revision 6.3 (2026-11-08)
+
+Page: trials/001-hb1009-high-school-cellphones/workspace.md (revision 6.4), compared with
+verification/round6-targeted-2/workspace.r6.3.md. Line numbers are unchanged from revision 6.3 (no line added or
+removed). A unit is one sentence and its citation or tag. [IF-YOU LINE] and [IN SHORT LINE] mark the lines the
+flip test covers; no values-guide line changed. "Item" is the coordinator's 6.4 item number.
+
+home.md: no changes. page.yaml: no changes.
+Also changed, not a unit: the status line (L3, <!-- nocheck -->) now reads "revision 6.4: fixes from the second
+targeted re-check; re-check pending".
+
+== New or changed units ==
+L14 [IF-YOU LINE]  item 1 ("with some exceptions" dropped)  (What it means for you / If you're a student at a Georgia public high school)
+    By July 1, 2027, you can't access phones or similar devices during the school day. [P-007, P-004, P-005]
+L14 [IF-YOU LINE]  item 1 (P-013's limit; the gloss is tagged {analysis})  (What it means for you / If you're a student at a Georgia public high school)
+    Exceptions: only the access your disability or medical plan explicitly requires, or another law requires. {analysis: P-013 allows the access a student's IEP, Section 504 plan or medical plan explicitly requires, "as necessary to fulfill the requirements" of that plan, and P-007 allows access "required by law"; "disability plan" is our plain-language term for an IEP or Section 504 plan, not from the cited sources}
+L15 [IF-YOU LINE]  item 5  (What it means for you / If your child attends a Georgia public high school)
+    By July 1, 2027, reaching your child during the school day means contacting the school; staff must coordinate all emergency messages. [P-007, P-011]
+L15 [IF-YOU LINE]  item 5  (What it means for you / If your child attends a Georgia public high school)
+    Not known as of Nov 8, 2026: who pays for phone storage (the law sets aside no money; we didn't review the state budget). {analysis: each district chooses storage (P-009); no funding or fee provision in the law's full text, P-001 to P-019 and P-056 to P-061; any state funding would come through the state budget, which is outside our sources}
+L17 [IF-YOU LINE]  item 6  (What it means for you / If your child is in kindergarten through 8th grade at a Georgia public school)
+    The bill drops e-readers from its incomplete list of example devices and requires yearly policies. [P-004, P-021, P-008, P-020]
+L182  item 2  (3. Phone bans are already working in Georgia / What's missing)
+    Harrell's remark, as reported, doesn't name the high schools or say how their success was measured. {analysis: based on P-046, with P-044 naming her as a state senator}
+L189 [IN SHORT LINE]  item 4  (4. Families lose direct contact with students during the school day / In short)
+    Phones can be critical for families in an emergency, opponents say. [P-049, P-047, P-035, P-071]
+L194  item 2  (4. Families lose direct contact with students during the school day / What's missing)
+    Adams's account, as reported, doesn't say when two of his daughters were in a lockdown, or what phone rules applied. {analysis: based on P-049, with P-047 naming him as a teacher}
+L201 [IN SHORT LINE]  item 3  (5. Enforcing the ban will burden school staff and can lead to conflict / In short)
+    Schools must enforce the ban. [P-014]
+L201 [IN SHORT LINE]  item 3  (5. Enforcing the ban will burden school staff and can lead to conflict / In short)
+    Staff policing phones can invite conflict, opponents say. [P-047, P-071]
+L201 [IN SHORT LINE]  item 3  (5. Enforcing the ban will burden school staff and can lead to conflict / In short)
+    We found no measured Georgia high school results or workload data. {analysis: none in the sources reviewed, though a state senator said limits had been used in high schools already (P-046); no archived source includes workload data; Georgia's high school ban must start no later than July 1, 2027 (P-007)}
+
+== Old units replaced (revision 6.3 line numbers) ==
+old L14 [IF-YOU LINE]  (What it means for you / If you're a student at a Georgia public high school)  By July 1, 2027, you can't access phones or similar devices during the school day, with some exceptions. [P-007, P-004, P-005]
+old L14 [IF-YOU LINE]  (What it means for you / If you're a student at a Georgia public high school)  Exceptions: your disability or medical plan explicitly requires access, or another law does. [P-013, P-007]
+old L15 [IF-YOU LINE]  (What it means for you / If your child attends a Georgia public high school)  By July 1, 2027, reaching your child during the school day means contacting the school, whose staff coordinate all emergency messages. [P-007, P-011]
+old L15 [IF-YOU LINE]  (What it means for you / If your child attends a Georgia public high school)  Not known as of Nov 8, 2026: who pays for phone storage; the law sets aside no money; we didn't review the state budget. {analysis: each district chooses storage (P-009); no funding or fee provision in the law's full text, P-001 to P-019 and P-056 to P-061; any state funding would come through the state budget, which is outside our sources}
+old L17 [IF-YOU LINE]  (What it means for you / If your child is in kindergarten through 8th grade at a Georgia public school)  The bill drops e-readers from its list of examples, which isn't complete, and requires yearly policies. [P-004, P-021, P-008, P-020]
+old L182  (3. Phone bans are already working in Georgia / What's missing)  The news report quoting Harrell doesn't name the high schools or say how their success was measured. {analysis: based on P-046, with P-044 naming her as a state senator}
+old L189 [IN SHORT LINE]  (4. Families lose direct contact with students during the school day / In short)  Opponents say phones can be critical for families in an emergency. [P-049, P-047, P-035, P-071]
+old L194  (4. Families lose direct contact with students during the school day / What's missing)  The news report doesn't say when two of Adams's daughters were in a lockdown, or what phone rules applied. {analysis: based on P-049, with P-047 naming him as a teacher}
+old L201 [IN SHORT LINE]  (5. Enforcing the ban will burden school staff and can lead to conflict / In short)  School staff would have to police phones, which can invite conflict, opponents say. [P-047, P-071]
+old L201 [IN SHORT LINE]  (5. Enforcing the ban will burden school staff and can lead to conflict / In short)  We found no Georgia high school results or workload data yet. {analysis: none in the sources reviewed; no archived source includes workload data; Georgia's high school ban must start no later than July 1, 2027 (P-007)}
+
+Totals: 11 new or changed units; 10 old units replaced. Card 5's "In short" gained one unit ("Schools must enforce the ban.").
