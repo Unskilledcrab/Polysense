@@ -694,3 +694,19 @@ Kept for the record; the round 1 table above supersedes its claims of symmetry a
 Suggested planted-error types for calibration on this page, beyond Trial 001's set (used in round 1): an errata-superseded
 number, a redacted value presented as zero, an option attributed to the wrong party, a deadline shifted by the 24-hour rule,
 a commissioner's term date, and "Option 1" and "Option 2" swapped in one sentence.
+
+## Targeted re-checks (revisions 6.1 to 6.3, run by the coordinating session)
+
+Each re-check was a fresh blind agent that read only the page (or home items), the passages and a list of changed
+units, and checked only those units. Spans were machine-checked with `trials/tools/check_verifier.py`. Reports are
+copied unchanged into `verification/round6-targeted/`, `round6-targeted-2/` and `round6-targeted-3/`, each with its
+list of changed units.
+
+| Re-check | Units | Result | What it raised, and what we did |
+|---|---|---|---|
+| 1, on revision 6.1 | 12 page + 1 home | 10 of 10 cited units supported, 2 of 3 tags valid, 1 questionable; 13/13 spans grounded (66667ae612b25d7a…, b22adaa5066fb3cf…) | **Line 174 (questionable):** "so they too could have changed" implied Staff revised its profit-rate estimates; P-039's corrections don't include footnote 45 (P-091). Fixed in 6.2 (split into two tagged sentences: the estimates weren't corrected, but may rest on credited amounts in the corrected Tables 2 and 7). Also fixed in 6.2: line 9 says whose estimates are public; line 110 says the blacked-out words sit between "utilizes" and "as quickly as possible"; line 138 "1,000 kWh a month" (P-067); line 195 keeps Georgia Power's conclusion from P-130; line 254 quotes GIPL's own "increased or decreased by 250%" (P-156) |
+| 2, on revision 6.2 | 7 | 5 supports, 2 tags valid; 0 partial, 0 questionable; 7/7 grounded (2edca53eafb8cbb6…) | Nothing misstates a passage. One note on line 9: the 30-second version is read alone, and "PIA Staff's estimates are public" could suggest all of Staff's estimates are public, though its pipeline estimates and most single cost items are blacked out. Treated as a misstatement when read alone, so fixed in 6.3: "PIA Staff's take-or-pay estimates are public" |
+| 3, on revision 6.3 | 1 | supports; 1/1 grounded (e5287b562b0a6063…) | **Passed.** Two low notes, logged as open: the sentence doesn't say Staff's public estimate covers only its own option (Option 2), and "take-or-pay" isn't glossed in the 30-second version (Layer 2 defines it) |
+
+The protocol's targeted re-check is done: no re-check found an unsupported claim, and the last one found nothing
+that misstates a passage. **Status: Passed checks (round 6), revision 6.3.**

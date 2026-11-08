@@ -1,0 +1,38 @@
+{
+  "checker": "independent-source-verifier (targeted 3)",
+  "document": "/home/user/Polysense/trials/002-psc-57171-fuel-credit/workspace.md",
+  "units": [
+    {
+      "line": 9,
+      "sentence": "Each proposed plan we could read would raise the credit through its take-or-pay option; PIA Staff's take-or-pay estimates are public, and Georgia Power's are blacked out.",
+      "marker": "[P-128, P-073, P-058, P-115, P-139, P-140, P-078]",
+      "verdict": "supports",
+      "evidence_span": "Either of these changes would increase the amount of RTP revenues that are credited to fuel.",
+      "correct_passage": "",
+      "problem": "None material. Every cited passage supports its part. P-128: Georgia Power and GIPL recommend Option 1, and GAM and PIA Staff agree it increases the credit. P-073: Staff recommends Option 2. P-058: Option 1 'will increase the RTP fuel credit rate', and Option 2 gives 'a larger allocation of RTP revenues to the fuel clause'. P-115 (GAM): either change increases it. P-078: Staff's Option 2 Delta column ($69,780,970; $74,278,059; $76,395,242; total $220,454,272) is public. P-139 and P-140: every monthly and annual 'Additional Fuel Revenue' cell for Option 1 and Option 2, 2026-2031, is REDACTED. 'Each proposed plan we could read' does not overreach. The readable plans are Georgia Power's (Option 1 preferred, Option 2 also offered), PIA Staff's (Option 2) and GIPL's (Option 1). GAM proposes no take-or-pay plan of its own and says either option would increase the credit (P-115). 'We could read' covers Resource Supply Management's unreadable scan. Two minor notes that do not change the verdict. (1) 'Public' fits Staff's estimates of the increase (the Delta column and the 2023-2025 totals), but the yearly credit columns in Staff's Table 5 are dotted, that is, blacked out (P-078). (2) The 'Georgia Power's' attribution for P-139 and P-140 rests on their S06b / GIPL-1-2 headings. P-138, which is not cited, is the passage that calls these attachments 'the Company's estimate of additional revenue that would be booked to fuel revenues'.",
+      "suggested_fix": "Optional: add P-138 to the marker. Optional clarity rewrite for the 30-second version: 'Each proposed plan we could read would raise the credit by changing how it counts take-or-pay contracts (power Georgia Power must buy whenever it is produced). Only PIA Staff's estimate, for its own option, is public; Georgia Power's estimates for both options are blacked out.' [P-128, P-073, P-058, P-115, P-050, P-078, P-138, P-139, P-140]"
+    }
+  ],
+  "framing_issues": [
+    {
+      "line": 9,
+      "text": "PIA Staff's take-or-pay estimates are public, and Georgia Power's are blacked out.",
+      "issue": "Read alone, the sentence does not say that Staff's public estimate covers only Option 2, Staff's own plan. Option 1 is used by both Georgia Power's and GIPL's plans, and no passage gives a public figure for it: Staff's tables cover only Option 2 (P-078, P-079), and Georgia Power's Option 1 cells are all REDACTED (P-139). A reader of the 30-second version could assume a public figure exists for every plan's take-or-pay part. Layer 3 (L116) states this correctly: 'Only PIA Staff's plan has public estimates'.",
+      "severity": "low"
+    },
+    {
+      "line": 9,
+      "text": "through its take-or-pay option",
+      "issue": "'Take-or-pay' is jargon with no definition in the 30-second version. It is first explained in Layer 2 (L61) and the glossary (L84), so someone who reads only the 30-second version will not know what it means. A short gloss, such as 'power Georgia Power must buy whenever it is produced' (P-050), would fix it.",
+      "severity": "low"
+    }
+  ],
+  "summary": {
+    "units_checked": 1,
+    "supports": 1,
+    "partial": 0,
+    "does_not_support": 0,
+    "wrong_span": 0,
+    "questionable_or_invalid_tags": 0
+  }
+}

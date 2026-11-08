@@ -1,6 +1,6 @@
 # PSC Docket 57171 (2026): Business customers' real-time payments and your power bill
 
-Status: Open case at the Georgia Public Service Commission · Final decision scheduled Dec 15, 2026 · Trial 002, revision 6.3 (passed checks in rounds 5 and 6; accuracy fixes after round 6 and two targeted re-checks; third re-check pending) <!-- nocheck -->
+Status: Open case at the Georgia Public Service Commission · Final decision scheduled Dec 15, 2026 · Trial 002, revision 6.3: passed checks in round 6; its accuracy fixes were confirmed by three targeted re-checks; see verification.md <!-- nocheck -->
 How this page was made: an AI agent drafted it from archived sources; every sentence is cited or labeled. Dates were copied from PSC pages on Nov 8, 2026. <!-- nocheck -->
 
 ## 30-second version

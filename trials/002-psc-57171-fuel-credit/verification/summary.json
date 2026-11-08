@@ -1,54 +1,156 @@
 {
- "verified": false,
- "statusText": "Not yet passed (3 rounds so far)",
- "intro": "An AI agent wrote this page from saved copies of its sources. Separate AI checkers, which never saw the drafting, then checked it in rounds. This page has not passed yet: the version you see is a draft between rounds. In this trial, no person checked the facts. Here is what the checkers did and what they found.",
+ "verified": true,
+ "statusText": "Passed checks (round 6)",
+ "intro": "An AI agent wrote this page from saved copies of its sources. Separate AI checkers, which never saw the drafting, then checked it in rounds. In this trial, no person checked the facts. Here is what the checkers did, what they found, and what is still open.",
  "stats": [
-  {"value": "402", "label": "sentences, each tied to a source or labeled as our own analysis"},
-  {"value": "0", "label": "claims found unsupported by their sources in rounds 2 and 3 (round 1 found 1, which we fixed)"},
-  {"value": "12 of 12", "label": "hidden test errors the fact-checker caught"},
-  {"value": "4 and 3", "label": "fairness ratings (of 5) from the two side reviewers in round 3; passing needs 4 from both"}
+  {
+   "value": "430",
+   "label": "sentences, each tied to a source or labeled as our own analysis"
+  },
+  {
+   "value": "0",
+   "label": "claims found unsupported by their sources in rounds 2 to 6 and the follow-up checks (round 1 found 1, which we fixed)"
+  },
+  {
+   "value": "12 of 12",
+   "label": "hidden test errors the fact-checker caught"
+  },
+  {
+   "value": "4 of 5",
+   "label": "fairness rating from both side reviewers, rounds 4, 5 and 6"
+  }
  ],
  "sections": [
   {
    "title": "What we checked",
-   "paras": ["Each round runs the same checks. A page passes a round only when every check passes. Until then, each round's findings go into a new draft, and the next round starts fresh."],
-   "head": ["Check", "What it does", "Pass mark"],
+   "paras": [
+    "Each round runs the same checks. A page passes a round only when every check passes. After that, we fix only sentences that misstate a source or break our writing rules, and a fresh checker looks again at just those sentences. If a fix changes an evidence label, the whole panel checks the page again."
+   ],
+   "head": [
+    "Check",
+    "What it does",
+    "Pass mark"
+   ],
    "rows": [
-    ["Automatic checks", "Code confirms that every sentence cites a source passage or is labeled as our analysis, that quotes match word for word, that numbers appear in the cited passage, that saved files match their fingerprints, and that the reading level is about grade 8 or lower.", "No errors"],
-    ["Blind fact-check", "A separate AI checker sees only this page and the source passages. For each sentence it must copy the exact words that support it, and code confirms those words are really there.", "No unsupported claims"],
-    ["Fairness panel", "Three more AI checkers. One speaks up for Georgia Power's and the manufacturers' positions, one for the PSC's public-interest staff and the advocacy groups, and a neutral editor checks the rules. The editor also asks of each sentence: would we write it the same way about another party?", "Both side reviewers give at least 4 of 5, and no serious problem"],
-    ["Testing the fact-checker", "We hid 12 errors in a copy of the page, such as a wrong number, a quote credited to the wrong party and a wrong deadline time. The fact-checker had to find them without knowing they were there.", "At least 9 of every 10 caught"]
+    [
+     "Automatic checks",
+     "Code confirms that every sentence cites a source passage or is labeled as our analysis, that quotes match word for word, that numbers appear in the cited passage, that \"no party disputes\" claims are limited to what we could read, that saved files match their fingerprints, and that the reading level is about grade 8 or lower.",
+     "No errors"
+    ],
+    [
+     "Blind fact-check",
+     "A separate AI checker sees only this page and the source passages. For each sentence it must copy the exact words that support it, and code confirms those words are really there.",
+     "No unsupported claims"
+    ],
+    [
+     "Fairness panel",
+     "Three more AI checkers. One speaks up for Georgia Power's and the manufacturers' positions, one for the PSC's public-interest staff and the advocacy groups, and a neutral editor checks the rules. The editor also asks of each sentence: would we write it the same way about another party?",
+     "Both side reviewers give at least 4 of 5, and no serious problem"
+    ],
+    [
+     "Testing the fact-checker",
+     "We hid 12 errors in a copy of the page, such as a wrong number, a quote credited to the wrong party and a wrong deadline time. The fact-checker had to find them without knowing they were there.",
+     "At least 9 of every 10 caught"
+    ]
    ]
   },
   {
    "title": "What each round found",
-   "paras": ["This case has five parties and several separate questions, so it is harder to explain evenly than our other trials. Each round, the fact-check found less to fix, and the reviewers' remaining concerns moved from wording to structure: which side's numbers are shown, and where each side gets the last word."],
-   "head": ["Round", "Fact-check", "Georgia Power and manufacturers' reviewer", "Staff and advocacy groups' reviewer", "Editor (neutral, clear)", "Result"],
+   "paras": [
+    "This case has five parties and several separate questions, so it took longer than our other trials. After round 1, no fact-check found a claim its sources didn't support. The reviewers' concerns moved from missing points, to which side's numbers were shown, to one summary line, and then to labels."
+   ],
+   "head": [
+    "Round",
+    "Fact-check",
+    "Georgia Power and manufacturers' reviewer",
+    "Staff and advocacy groups' reviewer",
+    "Editor (neutral, clear)",
+    "Result"
+   ],
    "rows": [
-    ["1", "197 supported, 28 partly, 1 unsupported", "3 of 5", "3 of 5", "3, 3", "Failed. One claim wasn't supported by its source, and the editor found 4 serious problems"],
-    ["2", "289 supported, 7 partly, 0 unsupported", "3 of 5", "3 of 5", "3, 3", "Failed. Each reviewer found missing points for its own side"],
-    ["3", "321 supported, 5 partly, 0 unsupported", "3 of 5", "4 of 5", "4, 3", "Failed. Only the fuel side of a shift had dollar figures, and every evidence label came out \"Mixed\""]
+    [
+     "1",
+     "197 supported, 28 partly, 1 unsupported",
+     "3 of 5",
+     "3 of 5",
+     "3, 3",
+     "Failed. One claim wasn't supported by its source, and the editor found 4 serious problems"
+    ],
+    [
+     "2",
+     "289 supported, 7 partly, 0 unsupported",
+     "3 of 5",
+     "3 of 5",
+     "3, 3",
+     "Failed. Each reviewer found missing points for its own side"
+    ],
+    [
+     "3",
+     "321 supported, 5 partly, 0 unsupported",
+     "3 of 5",
+     "4 of 5",
+     "4, 3",
+     "Failed. Only the fuel side of a shift had dollar figures, and every evidence label came out \"Mixed\""
+    ],
+    [
+     "4",
+     "310 supported, 11 partly, 0 unsupported",
+     "4 of 5",
+     "4 of 5",
+     "4, 3",
+     "Failed. The editor found one serious problem in the 30-second summary"
+    ],
+    [
+     "5",
+     "315 supported, 10 partly, 0 unsupported",
+     "4 of 5",
+     "4 of 5",
+     "4, 3",
+     "Passed. Our accuracy fixes then changed three evidence labels, so the whole panel checked again"
+    ],
+    [
+     "6",
+     "322 supported, 7 partly, 0 unsupported",
+     "4 of 5",
+     "4 of 5",
+     "4, 3",
+     "Passed. We then fixed every sentence that said more than its source"
+    ],
+    [
+     "Follow-up",
+     "13 changed sentences, then 7, then 1: none unsupported",
+     "",
+     "",
+     "",
+     "Passed. The page you see is this version"
+    ]
    ]
   },
   {
-   "title": "What's next",
+   "title": "What's still open",
+   "paras": [
+    "These suggestions would change a card, a label or the balance between parties, so they wait for the next full round. Some contradict each other; we list every view rather than pick one quietly."
+   ],
    "items": [
-    "Show the money on both sides: what more credit on the fuel side means for the base side of the bill.",
-    "Fix the evidence-label rule so labels can tell facts no party disputes from real disagreements.",
-    "Apply one rule for where each side's reply goes, and say which filings have had no written answer yet.",
-    "Make the top of the page shorter and define the remaining technical terms."
+    "Reviewers disagree about card 5's label. One says the record shows Georgia Power disputing its first point; one says that rests only on the advocacy group's account of Georgia Power; one says no filing we could read disputes it.",
+    "Reviewers disagree about whether the advocacy group's claim that the peak price is set too low belongs on Georgia Power's card, since the group calls rate design outside this case and Georgia Power has asked to strike it.",
+    "Each side's reviewer listed points from the record that could strengthen its cards, and asked that its opponents' replies sit in the same fields on every card.",
+    "The top of the page and the evidence labels are longer than our budgets, and some technical terms remain.",
+    "The parties file briefs on Dec 2, and the PSC is scheduled to decide on Dec 15. This page must be revised as those come in."
    ]
   },
   {
    "title": "What this can't do",
    "paras": [
     "All the checkers are AI, like the writer, so they may share blind spots. Hiding test errors measures only the kinds of errors we thought to hide.",
-    "The checkers compare this page with the sources we saved. They can't tell what is missing from those sources. Some figures in the filings are blacked out, and one party's testimony is a scan we couldn't use."
+    "The checkers compare this page with the sources we saved. They can't tell what is missing from those sources. Some figures and words in the filings are blacked out, one party's testimony is a scan we couldn't use, and one hearing transcript isn't posted."
    ]
   },
   {
    "title": "See every report",
-   "paras": ["Every check, report and fix is public in the project's repository, in trials/002-psc-57171-fuel-credit/verification.md."]
+   "paras": [
+    "Every check, report and fix is public in the project's repository, in trials/002-psc-57171-fuel-credit/verification.md."
+   ]
   }
  ]
 }
