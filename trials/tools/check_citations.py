@@ -171,6 +171,10 @@ def main(workspace: Path, passages_path: Path) -> int:
             else:
                 kind = m.group(2) or "computed"
                 stats[kind] += 1
+                # Passage IDs named inside a tag's note ("{analysis: P-007 sets ...}") must exist too.
+                note_missing = sorted({i for i in re.findall(r"\bP-\d{3}\b", m.group(0)) if i not in passages})
+                if note_missing:
+                    errors.append(f"L{no}: tag note names unknown passage id(s) {note_missing}")
             unquoted = norm(QUOTE.sub("", chunk))
             for word in LOADED:
                 if word in f" {unquoted} ":

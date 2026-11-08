@@ -9,7 +9,7 @@ tool does one mechanical job. Judgment stays with the runbook and the verificati
 | `snapshot.py TRIAL ID URL` | Fetch a source; save exact bytes, headers and visible text in `_raw/`; print the sha256 and `sources.yaml` fields | httpx, beautifulsoup4 |
 | `pdf_markup.py BILL.pdf [--only-marked\|--clean\|--old]` | Recover strike-through (deleted) and underlined (inserted) words in Georgia bill PDFs; output the markup, the as-enacted text, or the prior law | pdfplumber |
 | `build_passages.py SPEC.yaml` | Copy hand-chosen spans exactly from snapshot text into `passages.md` (fixes and redactions must carry a note); warns when an end string repeats soon after its match | PyYAML |
-| `check_citations.py PAGE PASSAGES` | Every sentence cited or tagged; passage IDs exist; quotes verbatim; each number found as a whole number in the cited passages (rounding allowed for 2+ significant digits); loaded words and party labels outside quotes | stdlib |
+| `check_citations.py PAGE PASSAGES` | Every sentence cited or tagged; passage IDs exist (also those named in tag notes); quotes verbatim; each number found as a whole number in the cited passages (rounding allowed for 2+ significant digits); loaded words and party labels outside quotes | stdlib |
 | `verify_hashes.py SOURCES.yaml [--print]` | Every retrieved file in `_raw/` matches its recorded SHA-256 | PyYAML |
 | `readability.py PAGE` | Flesch–Kincaid grade per section; flags the 30-second version and Layers 1–3 above 8.5. Card labels and other `<!-- nocheck -->` lines aren't scored; it reports the longest card label instead | stdlib |
 | `check_verifier.py REPORT PASSAGES [KEY]` | Machine-check an independent verifier's evidence spans; list flags; score its catch rate against planted errors | stdlib |
@@ -93,3 +93,6 @@ Run Python tools with `uv run --with <deps> python3 trials/tools/<tool>.py …`.
     budgets (30-second version, "If you" lines, "In short", values lines, Layer 3 intro). It also prints
     CHECK lines for "both", "neither" or "either" standing alone. These are prompts, not warnings, because
     "no data on either" is fine when the two things are named in the same sentence.
+  - `check_citations.py` now also checks passage IDs named inside a tag's note (`{analysis: P-007 sets …}`);
+    an unknown ID is an error. The Trial 001 drafter found the gap. Self-test: a note naming P-999 failed; the
+    three current pages still pass with 0 errors and 0 warnings.
