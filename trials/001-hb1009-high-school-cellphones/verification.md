@@ -677,3 +677,52 @@ revision 6.2; the changed units are listed in `changed-units.txt` in the 6.3 scr
 
 The processing notes on the lawmaker lookup and the district directory (lines 46 and 48) are recorded as blocked sources
 S21 and S23 in `sources.yaml`.
+
+## Targeted re-check 2 results (revision 6.3, `verification/round6-targeted-2/`)
+
+Revision 6.3 is archived there as `workspace.r6.3.md`, with the unit list the checkers received (`changed-units.txt`).
+
+| Check | Units | Result |
+|---|---|---|
+| Blind source check of the changed units (fresh agent) | 12 | **5 supports, 4 tags valid, 1 partial, 2 questionable, 0 does not support, 0 wrong span.** 12/12 evidence spans grounded (`check_verifier.py`). No unsupported claims. The partial: the students line's "Exceptions:" sentence dropped P-013's limit, and its "disability plan" gloss was untagged. The two questionable tags: "the news report doesn't say…" claimed more than the archived excerpts (P-046, P-049) can show. Framing: 1 medium (the untagged gloss), 5 low |
+| Editor's flip test on the changed values-guide, "If you…" and "In short" lines | 14 lines | Neutrality 4/5, no high-severity issue; 1 medium (card 5's "In short" put the law's enforcement duty inside "opponents say", while card 4 states its legal fact in our voice), 3 low |
+
+## Revision 6.4: what changed (2026-11-08, re-check pending)
+
+Reason: **fixes from the second targeted re-check**. Change class **correction**. No card claim, evidence label, side or
+values-guide line changes. `home.md`, `page.yaml`, `sources.yaml` and the passages are unchanged, and line numbers are
+unchanged from revision 6.3. The changed units are listed in `changed-units.txt` in the 6.4 scratch folder.
+
+| # | Item | Done? | What changed |
+|---|---|---|---|
+| 1 | Students line (L14), partial | Done | "By July 1, 2027, you can't access phones or similar devices during the school day." ("with some exceptions" dropped as redundant.) "Exceptions: only the access your disability or medical plan explicitly requires, or another law requires." This sentence is now tagged `{analysis: …}`: the tag gives P-013's "as necessary to fulfill the requirements" limit and P-007's "required by law", and says "disability plan" is our plain-language term for an IEP or Section 504 plan, as at L23. 44 words |
+| 2 | L182 and L194, questionable | Done | Scoped to the archived excerpts: "Harrell's remark, as reported, doesn't name the high schools or say how their success was measured." and "Adams's account, as reported, doesn't say when two of his daughters were in a lockdown, or what phone rules applied." |
+| 3 | Card 5's "In short" (L201), flip test medium | Done | "Schools must enforce the ban. [P-014] Staff policing phones can invite conflict, opponents say." The Florida sentence is kept. The last sentence reads "We found no measured Georgia high school results or workload data.", matching card 1's "measured"; "yet" was dropped to stay at 40 words. Its tag adds card 1's note on Harrell's unmeasured claim (P-046) |
+| 4 | Card 4's "In short" (L189), low | Done | "Phones can be critical for families in an emergency, opponents say." The attribution now comes last, as on the other cards |
+| 5 | Parents line (L15), low | Done | "…means contacting the school; staff must coordinate all emergency messages." The no-money note is in parentheses so it doesn't read as an unknown: "Not known as of Nov 8, 2026: who pays for phone storage (the law sets aside no money; we didn't review the state budget)." 45 words |
+| 6 | K-8 line (L17), low | Done | "The bill drops e-readers from its incomplete list of example devices and requires yearly policies." 44 words |
+
+### Deterministic gate (revision 6.4)
+
+| Check | Result |
+|---|---|
+| `check_citations.py` | workspace: 286 units (174 cited, 77 analysis, 32 editorial, 3 computed), 0 errors, 0 warnings. home: 6 units, 0 errors, 0 warnings |
+| `readability.py` | 30-second 7.7, What it means for you 8.4, Layer 1 6.0, Layer 2 8.4, Layer 3 7.9 (Layer 4 8.0, not targeted). No budget warnings and no CHECK lines. "If you…" lines 44, 45, 45 and 44 words (first sentences 15–21); "In short" lines 29–40 |
+| `verify_hashes.py` | PASS |
+| Test render | No warnings: version 6.4, 73 passages, 12 sources |
+
+### Open items (added by targeted re-check 2)
+
+75. **Card 2's title** says "friendships", a word no passage uses (P-034 says "in-person social interactions"; P-051 "less
+    isolation"). Titles are claims, so it stays unchanged after a passing round; change it in the next full revision
+    (SC). The "In short" now says "social lives", which is still slightly broader than the sources (SC).
+76. The staff line gives "the law sets aside no money" without the state guidance the page pairs it with elsewhere
+    (P-016) (E).
+77. The K-8 line doesn't say its changes apply from Dec 31, 2026, with the first yearly policy deadline on Jan 1, 2027; "its"
+    in "its incomplete list" points to the bill, not the law's device definition (SC).
+78. The parents line: the contact-the-school rule is part of each policy due January 1, so it may apply before July 1,
+    2027; its tag says "each district" for "each local school system and public school" (SC).
+79. L180's tag could say the English authors studied schools in England (P-041) and didn't discuss Georgia, with their
+    general conclusion (P-043) on card 2 (SC, optional).
+80. The supporters' values label paraphrases its quote more loosely than the opponents' label does; the editor judged it
+    justified and asked for no change (E).

@@ -2,7 +2,7 @@
 
 ## Act now
 
-- **Input · Nov 18, 2026, 10 a.m.:** Speak at the Fulton County Board of Commissioners' public comment, in person or by Zoom, before it adopts the budget. [P-036, P-039, P-067, P-014] Submit requests before 10 a.m. [P-067]
+- **Input · Nov 18, 2026, 10 a.m.:** Speak at the Fulton County commissioners' public comment, in person or by Zoom, before the Board adopts the budget. [P-036, P-039, P-067, P-005, P-014] Submit requests before 10 a.m. [P-067]
 
 ## Coming up
 
@@ -11,4 +11,4 @@
 
 ## What happened
 
-- **Nov 4, 2026:** Fulton's Board of Commissioners voted to file, or set aside, a resolution to end a limit holding departments' requests to 5% above current funding. [P-024, P-025, P-077]
+- **Nov 4, 2026:** Fulton's Board of Commissioners voted to set aside (file) a resolution to end a limit holding departments' requests to 5% above current funding. {analysis: status "Filed" after a Nov 4 vote to file, with no later step (P-024, P-025); the limit's terms are FOX 5's (P-077)}
