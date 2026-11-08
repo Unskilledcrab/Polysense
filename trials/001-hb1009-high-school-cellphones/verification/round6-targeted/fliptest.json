@@ -1,0 +1,127 @@
+{
+  "checker": "standards editor (targeted flip test)",
+  "neutrality": 4,
+  "issues": [
+    {
+      "file": "workspace.md",
+      "line": 201,
+      "text": "A Florida study found enforcing bans led to more suspensions at first, especially among Black students. [P-039] No source we reviewed measured staff workload.",
+      "issue": "Caveat asymmetry on the same study. Card 1's In short (line 153) follows its Florida finding with \"We found no measured results from Georgia high schools yet.\" Card 5 cites the same Florida working paper with no such caveat, even though its own evidence label says \"no Georgia results yet\" and its What's uncertain (line 207) repeats it. The style guide requires the same kind of caveat for both sides' evidence. As written, the opponents' Florida finding reads as more applicable to Georgia than the supporters' finding from the same paper.",
+      "severity": "medium",
+      "suggested_fix": "Replace the last sentence with \"We found no Georgia high school results or workload data yet.\" and widen its analysis tag to cover both points (no workload data in the archived sources; Georgia's high school ban must start no later than July 1, 2027, per P-007, as card 1's tag says). The In short becomes exactly 40 words. Alternatively, use the 39-word rewrite under the next card-5 issue, which also fixes that one."
+    },
+    {
+      "file": "workspace.md",
+      "line": 105,
+      "text": "**If you care most about students' focus and learning:** In the Emory survey, the top reason parents cited for backing a high school cellphone ban was \"Improved academic focus and learning.\"",
+      "issue": "The line gives a value both sides claim to one side only. Opponents also invoke learning: 19.8% of opposing parents cited \"Phones needed for schoolwork\" and 41.9% \"Students need to learn responsible use\" (P-035), and card 1's Who disagrees counts the schoolwork reason as disagreement with this very claim. Flip test: the opponents' line names the narrow value \"reaching your child in an emergency\" rather than the shared value \"safety\" (60.3% of supporters cite \"Improved physical health and safety\", P-034), but the supporters' line was not narrowed the same way. It names a broad value most readers hold, which draws more readers than a narrow one.",
+      "severity": "medium",
+      "suggested_fix": "Name only the value supporters alone claim, and use the same second person as line 106: \"**If you care most about your child's focus in class:**\". Keep the quote \"Improved academic focus and learning.\" The line becomes 32 words, against 35 on line 106. The change also removes the minor person asymmetry (\"students'\" vs \"your child\") noted in the flip test."
+    },
+    {
+      "file": "workspace.md",
+      "line": 201,
+      "text": "School staff would have to police phones, which can invite conflict, opponents say. [P-047, P-071]",
+      "issue": "The card's label begins \"Supported on new duties (the law's text)\", but In short never says so. The law-backed part (each school system must monitor and enforce the rules, which may include assigning staff, P-014) is attributed to opponents only. Card 4, also against the law, states its law-text support in our voice (\"Under the law, families must go through the school...\"), so card 5 understates its strongest support by comparison.",
+      "severity": "low",
+      "suggested_fix": "Lead with the law fact and keep the side's terms: \"Schools must enforce the ban, which opponents say burdens staff and can invite conflict. [P-014, P-047, P-071] A Florida study found enforcing bans led to more suspensions at first, especially among Black students. [P-039] We found no Georgia results or workload data yet. {analysis: ...}\" (39 words; this also fixes the caveat asymmetry above)."
+    },
+    {
+      "file": "workspace.md",
+      "line": 16,
+      "text": "Not known as of Nov 8, 2026: how much work enforcement takes; the law sets aside no money, and we didn't review the state budget.",
+      "issue": "Flip test: the staff line gives only the burden side (must enforce, assign staff, check storage, how much work, no money), which restates card 5's opponents' claim in our voice. Supporters' documented points about staff have no counterpart: Harrell on lawmakers wanting to hear teachers say \"I can just teach again\" (P-045), and Woods hearing \"nothing but support from teachers\" (P-053). \"How much work enforcement takes\" also assumes the workload moves one way.",
+      "severity": "low",
+      "suggested_fix": "Make the unknown two-directional at the same length: \"Not known as of Nov 8, 2026: how your workload will change; the law sets aside no money, and we didn't review the state budget.\" (the line stays at 45 words)."
+    },
+    {
+      "file": "workspace.md",
+      "line": 15,
+      "text": "Not known as of Nov 8, 2026: who pays for phone storage; the law sets aside no money, and we didn't review the state budget.",
+      "issue": "\"Who pays\" assumes storage costs something, but the law's storage options include \"a designated place in the classroom\" (P-009), and the page's own Not known yet bullet asks the neutral question \"whether that costs families anything\" (line 31). With the same no-money clause on line 16, two of the four If-you lines frame their unknowns as costs, a point no documented speaker raised. No If-you line carries the parallel unknown on the benefit side, which the page leaves to line 33.",
+      "severity": "low",
+      "suggested_fix": "\"Not known as of Nov 8, 2026: whether storage costs families anything; the law sets aside no money, and we didn't review the state budget.\" (the line stays at 45 words)."
+    },
+    {
+      "file": "page.yaml",
+      "line": 16,
+      "text": "\"Option C\": {text: \"Voted down, 13 to 38\", kind: bad}  # [P-026, P-027]",
+      "issue": "The chip text is factual, but its style is named \"bad\". If that renders as a warning color, the page marks one option negative on a tab that says it recommends no option, while Option A's chip has no style kind. Flip test: a chip styled \"good\" on Option B would read as an endorsement, and \"bad\" reads as the reverse. I could not check how \"bad\" renders, because the renderer is outside my inputs.",
+      "severity": "low",
+      "suggested_fix": "Drop \"kind: bad\", as Option A's chip does, or use a neutral status style. Keep the text \"Voted down, 13 to 38\"."
+    }
+  ],
+  "flip_test": [
+    {
+      "line": 104,
+      "flipped": "n/a: the intro names one survey for both lines and favors neither side.",
+      "asymmetry": "none"
+    },
+    {
+      "line": 105,
+      "flipped": "Line 106 written the way this line is written: If you care most about students' safety: In the Emory survey, the top reason parents cited for opposing a high school cellphone ban was 'No way to reach child during emergency.'",
+      "asymmetry": "Breadth: that flipped version would give a shared value to one side (60.3% of supporters cite 'Improved physical health and safety', P-034), and the real line 106 avoids this by naming a narrow value. Line 105 still names the broad value 'learning', which opponents also invoke (P-035: schoolwork 19.8%, responsible use 41.9%). Person: general 'students' here vs personal 'your child' on line 106. Source, verbs (cited/backing vs cited/opposing), form and quote length (5 vs 7 words) are parallel. No recommendation words."
+    },
+    {
+      "line": 106,
+      "flipped": "Line 105 written the way this line is written: If you care most about your child's focus and learning: In the Emory survey, the top reason parents cited for backing a high school cellphone ban was 'Improved academic focus and learning.'",
+      "asymmetry": "Appeal: this line speaks to the reader's own child in an emergency, while line 105 speaks of students in general, so the opponents' value reads as more personal and urgent. Length is 35 words (at the cap) vs 31: similar. Otherwise parallel, and no recommendation words."
+    },
+    {
+      "line": 107,
+      "flipped": "n/a: the line explains why Option C has no line.",
+      "asymmetry": "none: 'voted down' is a fact (P-026), and the no-recommendation statement covers every option."
+    },
+    {
+      "line": 14,
+      "flipped": "By July 1, 2027, your school day will be phone-free, with some exceptions. (This frames the same rule by its purpose rather than as a restriction.)",
+      "asymmetry": "none: the line states the legal restriction and its exceptions plainly, with no cost or benefit framing. Its unknown (the start date) is practical."
+    },
+    {
+      "line": 15,
+      "flipped": "By July 1, 2027, your child's school day will be free of personal devices, which the law says is to minimize distractions. Not known as of Nov 8, 2026: whether your child's focus changes.",
+      "asymmetry": "Revision 6.2 improved the first sentence: the contact rule is now paired with the school's duty to set emergency-message procedures, and the alarm-toned 'including in emergencies' is gone. The unknown is cost-framed ('who pays' assumes a cost), adds the no-money clause, and has no counterpart on the benefit side."
+    },
+    {
+      "line": 16,
+      "flipped": "By July 1, 2027, your classes must be phone-free from bell to bell, which the law says is to minimize distractions. Not known as of Nov 8, 2026: whether teaching gets easier.",
+      "asymmetry": "Burden only: enforce, assign staff, check storage, how much work, no money. This mirrors card 5's opponents' claim. Supporters' documented points about teachers (P-045, P-053) have no counterpart, and the unknown assumes the workload moves one way."
+    },
+    {
+      "line": 17,
+      "flipped": "n/a: the line describes the unchanged K-8 rule and what the bill changes for it.",
+      "asymmetry": "none"
+    },
+    {
+      "line": 153,
+      "flipped": "Card 1's wording on card 5's Florida finding: '...opponents say. A Florida study found enforcing bans led to more suspensions at first, especially among Black students. We found no measured results from Georgia high schools yet.' Card 5 as written has no such last sentence.",
+      "asymmetry": "Caveat parity: this card adds 'no measured results from Georgia high schools yet' to its Florida finding, and card 5 (line 201) cites the same study without it. Verbs ('supporters say'; 'found ... led to') and timing qualifiers ('in the ban's second year' / 'at first') match card 5."
+    },
+    {
+      "line": 165,
+      "flipped": "The opponents' version in the same form: '[claim], opponents say. A study in [place] found no evidence of [benefit] among [ages] at schools that [policy]. That study couldn't test cause and effect.' It reads the same.",
+      "asymmetry": "Structure, verb and caveat match the labeling rule ('Uncertain' covers studies that show links, not causes). Specificity: the counter-study is described by place, ages 12 to 15, policy scope and design, while the Florida study on cards 1 and 5 is just 'phone bans'. That follows what each summary reports (Florida's doesn't say how much of the day its bans covered), so it is evidence-driven, not editorial. Wording: 'barred phone use for fun' can be misread as barring it for fun; 'at schools where students couldn't use phones for fun' keeps the meaning at 40 words."
+    },
+    {
+      "line": 177,
+      "flipped": "'[opponents' factual claim], opponents say. Our sources give statements, not measured results.' It reads the same.",
+      "asymmetry": "none: same 'X, supporters say' form, with a plain 'statements, not measured results' caveat that matches the 'no data' caveats on cards 4 and 5."
+    },
+    {
+      "line": 189,
+      "flipped": "'Under the law, students can't access phones during the school day. Supporters say [claim]. Our sources have no data on [outcome].'",
+      "asymmetry": "Minor order difference: 'Opponents say' comes before the claim, while the other five cards put 'supporters say' or 'opponents say' after it. The card opens with a law fact in our voice, so the opponents' side is not weakened. No fix needed."
+    },
+    {
+      "line": 201,
+      "flipped": "With card 1's caveat on the same study: '...especially among Black students. We found no measured results from Georgia high schools yet.'",
+      "asymmetry": "The Georgia caveat that card 1 applies to the same Florida paper is missing. The law-backed part (P-014 duties; the label 'Supported on new duties') is attributed to opponents instead of stated in our voice, as card 4 does. Verbs, structure and length (36 words) otherwise match card 1. 'Especially among Black students' has no parallel on card 1, but that is evidence-driven: the summary doesn't say which effect was larger in high schools."
+    },
+    {
+      "line": 213,
+      "flipped": "'High school students should have phone-free school days, supporters say, because education time needs to be protected. The disagreement is mainly about values.' It reads the same.",
+      "asymmetry": "none: 'should' is inside the attributed claim, and the values label follows the labeling rule."
+    }
+  ],
+  "summary": "The reviewed lines are close to symmetric: both values-guide lines share one survey, form and verb pattern, every In short line attributes its claim the same way and ends with an evidence-status caveat, and no recommendation words, loaded words or party labels appear in our voice. Two medium asymmetries remain (card 5's In short omits the 'no Georgia results yet' caveat that card 1 gives the same Florida study, and the values guide gives the shared value 'learning' to supporters only), plus low-severity cost-only framing in the parent and staff If-you lines, card 5's unstated law-text support and the Option C chip style."
+}
