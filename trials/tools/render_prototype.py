@@ -211,8 +211,10 @@ def build_workspace(trial: Path) -> dict:
         "verified": bool(verification.get("verified")),
         "statusText": verification.get("statusText", "Checks pending"),
         "disclosure": ("Drafted with AI help from the archived sources below. Every sentence links to its source or is "
-                       "labeled as our analysis. Checked by automated tests and independent AI reviewers. In this trial, "
-                       "no person reviewed it."),
+                       "labeled as our analysis. "
+                       + ("Checked by automated tests and independent AI reviewers. " if verification.get("verified") else
+                          "This draft has not passed our checks yet; see how we checked it. ")
+                       + "In this trial, no person reviewed it."),
         "revisionLabel": (f"revision {rev_no.group(1)}" if rev_no else "revision ?") + f" (sha256 {rev[:12]})",
         "workspace": workspace, "passages": passages, "sources": sources, "sourceOrder": used,
         "billChanges": changes, "markupNote": markup.get("note"), "verification": verification,
