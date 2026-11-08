@@ -1,4 +1,4 @@
-# Runbook: decision workspace (manual), v0.4
+# Runbook: decision workspace (manual), v0.5
 
 **Purpose:** turn one public decision into a clear, fully cited decision workspace (the 30-second version
 plus Layers 1–5) by hand. **Output:** `trials/NNN-<slug>/`. Written for bills (Trial 001), then adapted for
@@ -68,7 +68,10 @@ Rules added after Trial 001:
 
 **Other file types.** Word, Excel, PowerPoint, zip and PDF filings: extract their text with
 `trials/tools/extract/`. A scanned page with no text layer can't become a passage (no OCR tool is approved);
-read it by eye only if needed, record that, and don't state its contents as facts.
+read it by eye only if needed, record that, and don't state its contents as facts. Public versions of
+filings are often **redacted**, and the text layer silently drops blacked-out words. If a passage reads as
+if words are missing, render the page to an image and look for black bars; mark a redaction with a `fix`
+and a note ("[blacked out in the public version]").
 
 **Bill PDFs: strike-through and underline matter.** Plain text extraction merges deleted and inserted
 words ("restricted prohibited"). Run `pdf_markup.py`, which writes the default markup, `--clean` (as
@@ -191,4 +194,5 @@ on this workspace.
 | v0.1 | 2026-11-08 | Step 1: search summaries are discovery-only; discrepancy list; "hosts needed" list | [001](../../../trials/001-hb1009-high-school-cellphones/log.md) (steps 0–1) |
 | v0.2 | 2026-11-08 | Step 2: snapshot tool, legis.ga.gov browser method, bot-check fallback, strike/underline extraction. Step 3: passage spec + builder. Step 6: AI-only verification protocol replaces human review | [001](../../../trials/001-hb1009-high-school-cellphones/log.md) (steps 2–6) |
 | v0.4 | 2026-11-08 | Generalized from bills to decisions: blocks vs. pages that need JavaScript, one retry for 404/5xx, text extractors for other file types, passages that leave out party labels, and "Other kinds of decisions" (records by kind, decisions still ahead, more than two sides, parties' own numbers, votes and reasons) | [002](../../../trials/002-psc-57171-fuel-credit/log.md), [003](../../../trials/003-fulton-2027-budget/log.md) |
+| v0.5 | 2026-11-08 | Redactions: the text layer drops blacked-out words; check a rendered page and mark them | [002](../../../trials/002-psc-57171-fuel-credit/verification.md) (round 5) |
 | v0.3 | 2026-11-08 | Step 1: count documented voices per side before drafting. Step 4: follow the argument-card rules in the [style guide](../../product/content-style-guide.md) (section 8) | [001](../../../trials/001-hb1009-high-school-cellphones/verification.md) (verification rounds 1–3) |

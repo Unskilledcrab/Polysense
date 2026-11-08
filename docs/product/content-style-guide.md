@@ -3,7 +3,7 @@
 **Goal:** a reader who gives us 30 seconds leaves knowing what's being decided, who it affects, and what
 they can do. Someone who gives us 30 minutes can check every claim.
 
-This guide is **v0.4**: working rules from one trial, not settled policy. Each manual trial and
+This guide is **v0.5**: working rules from three trials, not settled policy. Each manual trial and
 comprehension round updates it, and changes are recorded at the bottom. After each trial, review the rules
 against the [tenets](vision.md#tenets): keep the ones that helped, simplify the ones that didn't, and
 retire any that a later trial makes unnecessary.
@@ -15,6 +15,9 @@ Every workspace starts with a **30-second version** of three lines:
 1. **What it does:** one sentence, with no bill jargon.
 2. **Who it affects:** concrete groups ("people who rent", "K-12 students").
 3. **What happens next / what you can do:** a date and an action.
+
+People often read only these lines, so each must be right **read on its own**. A sentence that is accurate
+in context can mislead here. Give every party's view the same way, or give none and state the facts.
 
 ## 2. Length budgets
 
@@ -47,6 +50,9 @@ If something doesn't fit, it moves to a deeper layer. It is not crammed in.
   `{computed}` and show the arithmetic in Layer 5.
 - Use ranges when sources give ranges. Never invent precision.
 - A blacked-out (redacted) number is unknown, not zero. Say so when only one side's numbers are public.
+  Blacked-out words are unknown too: say they are blacked out; don't guess at them or paraphrase around them.
+- When money moves between two groups or two parts of a bill, show **both sides** with the same numbers
+  (more credit on the fuel charge means less on the base side). Figures for one side alone read as one-sided.
 - When something is uncertain, **say why** ("depends on how many districts opt in").
 
 ## 5. Neutral wording
@@ -126,3 +132,4 @@ overcorrecting, against critics.
 | 2026-11-08 | v0.3: pronouns need a source; absence claims need the whole text | Trial 001 verification round 3 |
 | 2026-11-08 | v0.4: keep political parties out of it (replaces "party labels for every speaker or none") | Owner direction after Trial 001 |
 | 2026-11-08 | v0.4: redacted numbers are unknown, not zero | Trial 002 (PSC Docket 57171) |
+| 2026-11-08 | v0.5: the 30-second version must stand alone; blacked-out words; show both sides of a money shift | Trial 002 rounds 3–6 and re-checks |
