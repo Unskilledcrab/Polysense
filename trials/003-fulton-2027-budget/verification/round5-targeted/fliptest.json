@@ -1,0 +1,151 @@
+{
+  "checker": "standards editor (targeted flip test)",
+  "neutrality": 3,
+  "issues": [
+    {
+      "file": "workspace.md",
+      "line": 133,
+      "text": "**If you care most about transparency and informed decision-making:** Commissioner Dana Barrett, who sponsored Option C, proposed it \"to ensure transparency and informed decision-making in the development of the Fulton County budget.\"",
+      "issue": "A value both sides claim still heads one side's line. L135 now says both sides claim transparency, but the bold header a phone reader scans gives 'transparency' to the critics' line only, while the supporters' header (L132, 'early, balanced Board input') is a value only they claim. This cuts both ways. The critics' headline value is challenged in the very next line, which leaves them with no value of their own. The supporters' transparency claim sits in an unbolded note. The form also differs from L132: there the resolution is the speaker ('Resolution 26-0460 ... says'); here a person is ('Commissioner Dana Barrett ... proposed it'), though both quotes come from the resolutions' own text.",
+      "severity": "medium",
+      "suggested_fix": "Head the critics' line with a value only they claim, in their words, and use L132's form; keep transparency only in the shared line L135. For example (34 words; quote 8): 'If you care most about informed decision-making: Resolution 26-0729 (Option C), which Commissioner Dana Barrett sponsored, says listing requests in the proposed budget let the Board \"get a true picture of the departments’ needs.\"' [P-024, P-028, P-032]. The L136 issue below gives another option that also closes the who-drafts gap."
+    },
+    {
+      "file": "workspace.md",
+      "line": 136,
+      "text": "No source we archived gives a reason for the 5% limit, so no line speaks for it. ... The officials' request for a January vote has no line; our sources quote no one making it.",
+      "issue": "On who drafts the budget, the guide shows only one side's value. L132 gives the supporters' case for the commission's makeup, but the critics' objection to that makeup has no line. FOX 5 calls it the officials' 'primary objection' (P-076); Judge Johnson voiced it for the coalition (P-078), and Barrett made it too (P-072). The closing line explains every other missing line (Option A vs. B, the 5% limit, the January vote) but not this one. Flip: if the critics' who-drafts value had a line and L132 didn't, supporters would read the guide as tilted.",
+      "severity": "medium",
+      "suggested_fix": "Make the critics' one line their who-drafts objection, in the same form, and leave Option C's transparency aim in the shared line L135. This fixes the L133 issue too and keeps one line per side. For example (35 words; quote 11): 'If you care most about the full Board hearing departments: Chief Probate Judge Kenya Johnson, for six justice officials, said they decline to join \"a process that unnecessarily limits the voices of the justice system.\"' [P-076, P-078]. If the critics' line stays with Option C, add this as a same-form line, or say here why it has none, as this line already does for the other gaps."
+    },
+    {
+      "file": "workspace.md",
+      "line": 214,
+      "text": "**In short:** If the claim is right, the commission holds \"open meetings,\" and \"all commissioners and their staff are able to attend and hear what is said,\" in Commissioner Bob Ellis's words. [P-073] Records back the announced hearings, not the past-years comparison.",
+      "issue": "Card 4 gives its side far more of its own voice than the other cards get: 16 of its 39 words are Ellis's words in quotes. Across all six In-short lines, the current-process side (cards 1 and 4) has 20 of the 21 quoted words. Card 3 has one ('effectively'), and cards 2 and 6 have none, though quotable lines exist (Barrett, P-072; Johnson, P-078; Gammage, P-071). The line also merges the people-impact and the claim into one quote, unlike the three-part form of cards 1, 2, 3 and 5. And its caveat lands blind: 'not the past-years comparison' refers to a claim the In short never states. So the backed part is quoted at length, and the unbacked part ('more transparent and open than anything we've had in recent years') is only hinted at. Flip: if card 3 quoted 16 words of its resolution and only hinted at its unsettled part, it would read much stronger than it does.",
+      "severity": "medium",
+      "suggested_fix": "Use the same three parts as the other cards, with a short quote that also states the comparison the caveat refers to. For example (40 words): 'If the claim is right, all commissioners and staff can hear what departments say. Commissioner Ellis called the meetings \"open meetings\" and the process \"more transparent and open\" than in recent years. Records back the announced hearings, not the comparison.' [P-073; P-042, P-055 to P-058]. Or keep the long quote and give cards 2, 3 and 6 quotes of similar length in their own words, trimming to stay at or under 40 words."
+    },
+    {
+      "file": "workspace.md",
+      "line": 202,
+      "text": "Resolution 26-0729 says the 5% limit makes the county code's rule on requests \"effectively\" impossible to meet. [P-029, P-024] The code and budget book back part; the rest is unsettled.",
+      "issue": "Card 3 reads weaker than card 4, its pair. Its only quoted word is the resolution's hedge, 'effectively', and the strong word, 'impossible', sits outside the quotes. A hedge quoted alone reads as scare quotes. The status line, 'back part; the rest is unsettled', doesn't name the backed part (the code's all-requests rule and the 2026 draft's listed extras, Supported in the label) or the open parts. Card 4 names both. Cards 1 and 2 call their draft-dependent parts pending ('wait on the draft', 'isn't known yet'), while card 3 folds its draft-dependent part into 'unsettled'. Flip: 'Records back part; the rest is unsettled' on card 4 would read as doubt about Ellis.",
+      "severity": "medium",
+      "suggested_fix": "Quote the claim word, not the hedge, and name the backed and open parts. For example (40 words): 'If the claim is right, the draft won't show departments' full requests. Resolution 26-0729 says the 5% limit is effectively making the code's rule on requests \"impossible.\" The code's rule and 2026 practice are on record; the conflict isn't settled.' [P-029, P-024; P-005, P-049, P-046]"
+    },
+    {
+      "file": "workspace.md",
+      "line": 238,
+      "text": "Funding could affect court delays, jail conditions and public safety, said justice officials seeking more money, Atlanta News First reported. [P-069, P-070] County records back added costs of the jail agreement; other needs rest mainly on the offices' own accounts.",
+      "issue": "This is the only In-short line that names its speakers by what they want: the public-safety warning comes from 'justice officials seeking more money'. Card 4 doesn't describe Ellis as a member of the commission he defends. It is also the only In-short line that calls its evidence the claimants' 'own accounts'. Card 4's unbacked comparison also rests on the claimant's own statement (its label says 'Ellis's statement'), but its In short says only 'not the past-years comparison'. Card 3's needs above 5% rest on the claimants' figures, and its In short says only 'the rest is unsettled'. Flip: '..., in the words of Commissioner Bob Ellis, who sits on the commission; the comparison rests on his own account' would read as a dig. The claim itself (more money) is folded into the speaker label instead of standing as its own sentence.",
+      "severity": "medium",
+      "suggested_fix": "State the claim as its own sentence, and use one caveat form for every card. For example (33 words): 'Funding decisions could affect court delays, jail conditions and public safety, justice officials said, Atlanta News First reported. They asked for more money. County records back added jail-agreement costs, not most other needs.' [P-069, P-070; P-048 to P-050, P-054, P-061 to P-066]. Or keep 'own accounts' here and use the same wording on card 4 (the comparison rests on Ellis's own statement) and card 3 (needs above 5% rest on the resolution's figures), trimming to stay at or under 40 words."
+    },
+    {
+      "file": "workspace.md",
+      "line": 178,
+      "text": "North and south Fulton would each have a commissioner shaping the draft, and the full Board still votes. ... The county code confirms these rules; results wait on the draft.",
+      "issue": "Card 1 is the only In-short line that uses 'confirms'; the others use 'back' or 'on record'. It is also the only one whose people-impact is in our voice, with neither 'If the claim is right' (cards 3 and 4) nor attribution (cards 2, 5 and 6). That part is defensible, because the rules are Supported. But in pair 1 the choices of what to include tilt one way. Card 1 leaves out its own open item: whether all commissioners were asked for priorities, which Barrett's resolution says the commission failed to do (P-029). Card 2 (L190) leaves out a Supported item that backs its first sentence: the county notice lists the hearings as Budget Commission meetings (P-042).",
+      "severity": "low",
+      "suggested_fix": "Change 'The county code confirms these rules' to 'The code's text backs these rules' (same length). In card 2's status, credit the hearing notice as well as who serves, trimming elsewhere to stay at or under 40 words."
+    },
+    {
+      "file": "workspace.md",
+      "line": 134,
+      "text": "**If you care most about court funding:** Solicitor-General Keith Gammage, one of six justice officials seeking more money, said they believe there is \"a lack of proper investment in the entire ecosystem of the courts.\"",
+      "issue": "This is the only values-guide header not drawn from its side's own words. 'Court funding' is our neutral gloss, while L132 and L133 carry their sides' own appealing words ('balanced', 'transparency'), and Gammage's 'investment' is available. The speaker is also tagged by what the side wants ('seeking more money'), while Ellis and Barrett are tagged by an act ('sponsored').",
+      "severity": "low",
+      "suggested_fix": "For example (34 words; quote 12): 'If you care most about investment in the courts: Solicitor-General Keith Gammage, one of six justice officials, said they believe there is \"a lack of proper investment in the entire ecosystem of the courts.\"' [P-077, P-069]"
+    },
+    {
+      "file": "workspace.md",
+      "line": 226,
+      "text": "We found no plan for a December vote; whether to wait is a values question. {analysis: no notice or record we archived sets a December vote (P-041, P-042); Ellis said there is no talk of an early vote (P-073)}",
+      "issue": "The status sentence doesn't give the label's evidence status, as the other cards do. It drops the Supported part (the 2026 vote was in January, P-046) and the Uncertain premise behind the people-impact it leads with (our sources don't say when new members take office). In their place it puts a context point that rests partly on Ellis's statement, and Ellis is on the other side of the dispute. 'December' is also narrower than the request, since the Board also meets Nov 18 (P-039). The net effect is mixed, but no other card does this.",
+      "severity": "low",
+      "suggested_fix": "For example (39 words): 'Waiting until January would give incoming board members a say in the 2027 budget, Atlanta News First reported. Justice officials asked the Board to wait. The 2026 vote was in January; our sources don't say when new members start.' [P-070; P-046]. The no-early-vote point is already under What's missing and What's uncertain; if it stays here, say 'before January', not 'December'."
+    },
+    {
+      "file": "workspace.md",
+      "line": 135,
+      "text": "{analysis: Option C's aim is in its title (P-024, P-032); Ellis's statement is P-073, a comparison card 4 rates Uncertain}",
+      "issue": "The text readers see is even, but the tag adds an evidence caveat to Ellis's transparency claim only. Option C's aim gets no matching note, though it is a stated goal that was never tested because the resolution was filed. The rules call for the same caveats on every side. The different verbs ('aims' vs. 'said') fit a goal vs. a statement and are fine.",
+      "severity": "low",
+      "suggested_fix": "Drop 'a comparison card 4 rates Uncertain' from the tag (ratings belong on the cards), or add the parallel: 'Option C's aim is a stated goal; the resolution was filed before taking effect (P-024, P-025)'."
+    }
+  ],
+  "flip_test": [
+    {
+      "line": 14,
+      "flipped": "No side is named; listing libraries before the jail and courts would change no side's case.",
+      "asymmetry": "none"
+    },
+    {
+      "line": 15,
+      "flipped": "No side is named; the same caveats (proposal not posted, tax rate decided separately) would hold whoever drafted the budget.",
+      "asymmetry": "none"
+    },
+    {
+      "line": 16,
+      "flipped": "A matching line for library or senior-services users would say what they get isn't known, with no leaders' request, because none is in the sources.",
+      "asymmetry": "None material. The officials' request is reported with the plain verb 'asked' and no endorsement, and other groups' 2027 requests aren't in the sources."
+    },
+    {
+      "line": 132,
+      "flipped": "The critics' line in this form: 'Resolution 26-0729, which Commissioner Dana Barrett sponsored, says it aims ...'.",
+      "asymmetry": "Here the document is the speaker; in L133 and L134 a person is. The header is a value only this side claims, in its own words, and it answers a who-drafts objection that has no line (L136). 'Balanced' means north-south (P-004), and the quote makes that clear."
+    },
+    {
+      "line": 133,
+      "flipped": "'If you care most about transparency and openness: Commissioner Bob Ellis, who sponsored the commission's rules, said today's process is \"more transparent and open\" than in recent years', followed by 'Both sides claim transparency.'",
+      "asymmetry": "The bold header gives a value both sides claim (L135) to one side, while the supporters' header is theirs alone. A person is the speaker here, the resolution in L132."
+    },
+    {
+      "line": 134,
+      "flipped": "'If you care most about the Board's hand in drafting: Commissioner Bob Ellis, one of two commissioners seated on the commission, said ...'",
+      "asymmetry": "The speaker is tagged by what the side wants, not by an act. The header is our gloss ('court funding'), not the side's word ('investment'). The hedge 'they believe' is faithful to his 'what we believe to be' and is fine."
+    },
+    {
+      "line": 135,
+      "flipped": "'Both sides claim transparency: Commissioner Ellis said ..., and Option C aimed ...', with the tag 'Option C's aim was never tested; Ellis's statement is P-073'.",
+      "asymmetry": "The text readers see is even, and putting Option C first offsets L132's first place. Only the tag's caveat ('card 4 rates Uncertain') is one-sided, and it falls on the supporters."
+    },
+    {
+      "line": 136,
+      "flipped": "If L132 were missing and the critics' who-drafts objection had a line, supporters would find their main argument gone, with no explanation.",
+      "asymmetry": "The gaps for the 5% limit and the January vote are explained in matching terms. The missing critics' who-drafts line isn't explained."
+    },
+    {
+      "line": 178,
+      "flipped": "In card 2's form: 'North and south Fulton each have a commissioner shaping the draft, and the full Board still votes, supporters say. ... The code backs these rules; results wait on the draft.'",
+      "asymmetry": "It is the only In short with the people-impact in our voice and no frame or attribution, and the only one that says 'confirms'. It leaves out its own challenged item (whether all commissioners were asked)."
+    },
+    {
+      "line": 190,
+      "flipped": "In card 1's form: 'Department heads would present their needs to two commissioners, not the full Board' (our voice), with 'County records confirm who serves'.",
+      "asymmetry": "It is attributed ('critics say') where card 1 is in our voice. That is partly justified, since 'two commissioners' leaves out the two staff members (P-008). Barrett is paraphrased while Ellis is quoted at length on card 4. The status leaves out the Supported hearing-notice item (P-042). The caveat ('isn't known yet') matches card 1's."
+    },
+    {
+      "line": 202,
+      "flipped": "On card 4: 'Commissioner Ellis says the process is \"more\" open than in recent years. Records back part; the rest is unsettled.'",
+      "asymmetry": "A one-word quote of the hedge reads as scare quotes. The status names neither the backed nor the open parts, where card 4 names both. 'Unsettled' sounds harsher than cards 1 and 2's 'wait on the draft' and 'isn't known yet'."
+    },
+    {
+      "line": 214,
+      "flipped": "On card 3: about 16 quoted words from Resolution 26-0729 on the county's practice of listing requests, then 'Records back the code's rule, not the conflict claim', where the conflict claim is never stated.",
+      "asymmetry": "16 of its 39 words are the side's own words in quotes (card 3 has 1; cards 2 and 6 have none). The people-impact and the claim are merged. The caveat refers to a comparison the line never states."
+    },
+    {
+      "line": 226,
+      "flipped": "On card 1: 'We found no record the two asked every commissioner; whether the design is a good one is a values question' (a context point in place of the label's status).",
+      "asymmetry": "The label's Supported and Uncertain parts are swapped for a context point that leans partly on the other side's statement. The effect is mixed, but no other card does this."
+    },
+    {
+      "line": 238,
+      "flipped": "On card 4: '..., in the words of Commissioner Bob Ellis, who sits on the commission. Records back the announced hearings; the comparison rests on his own account.'",
+      "asymmetry": "A motive tag ('seeking more money') and an 'own accounts' caveat that no other In short uses for an equivalent self-reported claim. The claim is folded into the speaker label."
+    }
+  ],
+  "summary": "The reviewed lines have no recommendation words, party labels or loaded words outside quotes, and the 'If you…' lines and page.yaml strings read the same either way. But the values guide and In-short lines tilt toward the current process: its side keeps a headline value of its own and 20 of the 21 quoted words, and its unbacked comparison gets the mildest caveat, while the critics' headline value is shared, their main who-drafts objection has no line, card 3 quotes only a hedge, and card 6 labels its speakers by what they want."
+}
