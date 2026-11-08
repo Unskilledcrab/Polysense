@@ -68,7 +68,7 @@ passages:
   - {id: P-018, source: S02b, file: S02b.json, locator: "matter 26-0460 history: action of 2026-08-05",
      start: '"MatterHistoryActionDate":"2026-08-05T00:00:00"', end: '"MatterHistorySeconderName":"Khadijah Abdur-Rahman"'}
   - {id: P-019, source: S02c, file: S02c.json, locator: "matter 26-0460 attachments (both files)",
-     start: '"MatterAttachmentName":"08.05.26 - Resolution Fulton_County_Budget_Commission 7.30_"', end: 'a7d741d5-024e-4f50-b004-ac7ff3460c20.pdf"'}
+     start: '"MatterAttachmentName":"08.05.26 - Resolution Fulton_County_Budget_Commission 7.30_"', end: 'a7d741d5-024e-4f50-b004-ac7ff3460c20.pdf"', end_occurrence: 1}   # checked 2026-11-08: the next match starts the next item
   - {id: P-020, source: S02d, file: S02d.json, locator: "roll call, agenda item 198790 (26-0460), 2026-08-05 (whole response)",
      start: '[{"VoteId":31792', end: '"VoteEventItemId":198790}]'}
   # --- S03: Legistar record for item 26-0471 (Budget Commission members) ------------------------------------
@@ -84,7 +84,7 @@ passages:
   - {id: P-025, source: S04b, file: S04b.json, locator: "matter 26-0729 history (whole response: all three actions)",
      start: '[{"MatterHistoryId":205210', end: '"MatterHistoryMatterStatusId":74}]'}
   - {id: P-026, source: S04c, file: S04c.json, locator: "matter 26-0729 attachment",
-     start: '"MatterAttachmentName":"Budget Cap Removal Resolution Draft"', end: '83d19126-5565-4ca5-9bfe-92866f595c11.pdf"'}
+     start: '"MatterAttachmentName":"Budget Cap Removal Resolution Draft"', end: '83d19126-5565-4ca5-9bfe-92866f595c11.pdf"', end_occurrence: 1}   # checked 2026-11-08: the next match starts the next item
   - {id: P-027, source: S04d, file: S04d.txt, locator: "p.1, lines 1-6 (title)",
      start: "A RESOLUTION TO ENSURE TRANSPARENCY", end: "AND FOR OTHER PURPOSES."}
   - {id: P-028, source: S04d, file: S04d.txt, locator: "p.1, lines 8-27 (first five WHEREAS clauses)",

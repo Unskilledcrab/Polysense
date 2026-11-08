@@ -32,7 +32,8 @@ def syllables(word: str) -> int:
 
 
 def fk_grade(text: str) -> float:
-    sentences = max(1, len(re.findall(r"[.!?]+(?:\s|$)", text)))
+    # A sentence may end inside closing quotes or brackets: 'said "no." Then' (Trial 002).
+    sentences = max(1, len(re.findall(r"[.!?]+[\"'”’)\]]*(?:\s|$)", text)))
     words = re.findall(r"[A-Za-z][A-Za-z'-]*", text)
     if not words:
         return 0.0
@@ -60,7 +61,7 @@ def clean(md: str) -> str:
     lines = []
     for line in md.splitlines():
         line = re.sub(r"^\s*(?:[-*>]|\d+\.)\s+", "", line).strip()
-        if line and not re.search(r"[.!?]$", line):
+        if line and not re.search(r"[.!?][\"'”’)\]]*$", line):
             line += "."                      # bullets and table cells count as sentences
         lines.append(line)
     md = re.sub(r"[*_`#|]", " ", " ".join(lines))

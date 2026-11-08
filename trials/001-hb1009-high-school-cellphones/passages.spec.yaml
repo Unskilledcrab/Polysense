@@ -21,7 +21,7 @@ passages:
   - {id: P-005, source: S01, file: hb1009-247117.clean.txt, locator: "p.2, lines 31-33, (a)(5)",
      start: "(5) 'School day' means", end: "away from a school campus."}
   - {id: P-006, source: S01, file: hb1009-247117.clean.txt, locator: "p.2, lines 39-41, (b)(1) (existing law, unchanged)",
-     start: "(b)(1) Beginning no later than July 1, 2026", end: "or required by law."}
+     start: "(b)(1) Beginning no later than July 1, 2026", end: "or required by law.", end_occurrence: 1}   # checked 2026-11-08: the next match starts the next item
   - {id: P-007, source: S01, file: hb1009-247117.clean.txt, locator: "p.3, lines 42-44, (b)(2) (new)",
      start: "(2) Beginning no later than July 1, 2027", end: "or required by law."}
   - {id: P-008, source: S01, file: hb1009-247117.clean.txt, locator: "p.3, lines 45-48, (c) and (c)(1)",
@@ -69,7 +69,7 @@ passages:
   - {id: P-025, source: S02, file: hb1009-page-72304.txt, locator: "bill page: Votes table",
      start: "Votes Date Vote No.", end: "Senate Vote #784 52 0 3 1"}
   - {id: P-026, source: S02, file: hb1009-detail-72304.json, locator: "detail JSON: votes[1] (Senate Vote #783)",
-     start: "\"number\": 783,", end: "\"excused\": 1,"}
+     start: "\"number\": 783,", end: "\"excused\": 1,", end_occurrence: 1}   # checked 2026-11-08: the next match starts the next item
   # --- S03: Senate Floor Amendment 1 (LOST) --------------------------------------------------
   - {id: P-027, source: S03, file: hb1009-246996.txt, locator: "p.1, full text",
      start: "LOST", end: "pursuant to this Code section."}
@@ -104,7 +104,7 @@ passages:
   - {id: P-038, source: S13a, file: S13a.txt, locator: "abstract, methods",
      start: "In this study, we try to fill this gap", end: "building-level Advan data."}
   - {id: P-039, source: S13a, file: S13a.txt, locator: "abstract, finding 1",
-     start: "First, we show that the enforcement", end: "initial adjustment period."}
+     start: "First, we show that the enforcement", end: "initial adjustment period.", end_occurrence: 1}   # checked 2026-11-08: the next match starts the next item
   - {id: P-040, source: S13a, file: S13a.txt, locator: "abstract, findings 2-3",
      start: "Second, we find significant improvements", end: "smartphone ownership is more common."}
   - {id: P-055, source: S13a, file: S13a.txt, locator: "page, suggested citation",

@@ -8,7 +8,7 @@ tool does one mechanical job. Judgment stays with the runbook and the verificati
 |---|---|---|
 | `snapshot.py TRIAL ID URL` | Fetch a source; save exact bytes, headers and visible text in `_raw/`; print the sha256 and `sources.yaml` fields | httpx, beautifulsoup4 |
 | `pdf_markup.py BILL.pdf [--only-marked\|--clean\|--old]` | Recover strike-through (deleted) and underlined (inserted) words in Georgia bill PDFs; output the markup, the as-enacted text, or the prior law | pdfplumber |
-| `build_passages.py SPEC.yaml` | Copy hand-chosen spans exactly from snapshot text into `passages.md` (fixes and redactions must carry a note) | PyYAML |
+| `build_passages.py SPEC.yaml` | Copy hand-chosen spans exactly from snapshot text into `passages.md` (fixes and redactions must carry a note); warns when an end string repeats soon after its match | PyYAML |
 | `check_citations.py PAGE PASSAGES` | Every sentence cited or tagged; passage IDs exist; quotes verbatim; each number found as a whole number in the cited passages (rounding allowed for 2+ significant digits); loaded words and party labels outside quotes | stdlib |
 | `verify_hashes.py SOURCES.yaml [--print]` | Every retrieved file in `_raw/` matches its recorded SHA-256 | PyYAML |
 | `readability.py PAGE` | Flesch–Kincaid grade per section; flags the 30-second version and Layers 1–3 above 8.5. Card labels and other `<!-- nocheck -->` lines aren't scored; it reports the longest card label instead | stdlib |
@@ -64,5 +64,15 @@ Run Python tools with `uv run --with <deps> python3 trials/tools/<tool>.py …`.
 - **Card labels:** `render_prototype.py` split a card's meta line on "·", so an evidence label that used
   "·" lost everything after it without warning. Evidence is now read whole, and an unknown field stops
   the build.
-- **Reading grade:** `readability.py` scored card labels as prose. They are now left out, which changed
-  only the untargeted Layer 4 and 5 grades, and the longest label is reported.
+- **Reading grade:** `readability.py` scored card labels as prose, and missed sentences that end inside
+  quote marks or brackets (`said "no." Then`). Both raised grades on pages that quote testimony. Labels
+  are now left out (the longest is reported), and those sentences count. Targeted sections moved by 0 to
+  0.5 grades on the three trials, and every one still passes. Trial 002's Layer 4 went from 11.9 to 9.6.
+- **Passage ends:** `build_passages.py` cut a span at the first match of its end string, which silently
+  cut Trial 002's P-058 short. It now warns (`CHECK`) when the end string occurs again within 400
+  characters, and `end_occurrence: N` picks a later match. Of 326 passages in the three trials, 6 drew
+  the warning, and none was cut short: each repeat starts the next item. Those were marked checked
+  with `end_occurrence: 1`.
+- **Snapshots:** `snapshot.py` saved Word, Excel, PowerPoint and zip files as `.bin`. It now takes the
+  extension from the content type, or else from the served file name or URL. It prints the served file
+  name and which `extract/` tool makes the text, and it exits 1 on an empty body.

@@ -17,9 +17,12 @@ Spec entry:
     end: "required by law."
     fix: [["old", "new"]]            # optional, only for extraction glitches; always add a note
     note: "why the fix was needed"
+    end_occurrence: 2                # optional: use the 2nd match of `end` after `start` (default 1)
 
 Bill text files made by pdf_markup.py have "pN: LINE " prefixes, which are removed before matching.
 Whitespace is normalized to single spaces. Fails loudly if a start/end string is not found.
+Warns when `end` occurs again soon after the match, because a span cut at the first match may be short
+(Trial 002's P-058 was cut this way without notice). Lengthen `end` or set `end_occurrence`.
 """
 from __future__ import annotations
 
@@ -33,6 +36,7 @@ except ImportError:  # pragma: no cover
     sys.exit("needs PyYAML: uv run --with pyyaml python3 trials/tools/build_passages.py ...")
 
 PREFIX = re.compile(r"^p\d+:\s+(?:\d+\s+)?", re.M)
+AMBIGUOUS_WITHIN = 400   # characters
 
 
 def load(path: Path) -> str:
@@ -58,11 +62,20 @@ def main(spec_path: Path) -> int:
             cache[p["file"]] = load(raw / p["file"])
         text = cache[p["file"]]
         i = text.find(p["start"])
-        j = text.find(p["end"], i if i >= 0 else 0)
+        j, pos = -1, max(i, 0)
+        for _ in range(int(p.get("end_occurrence", 1))):
+            j = text.find(p["end"], pos)
+            if j < 0:
+                break
+            pos = j + 1
         if i < 0 or j < 0:
             print(f"NOT FOUND {p['id']}: start={i >= 0} end={j >= 0}", file=sys.stderr)
             errors += 1
             continue
+        nxt = text.find(p["end"], j + 1)
+        if "end_occurrence" not in p and 0 <= nxt - j <= AMBIGUOUS_WITHIN:
+            print(f"CHECK {p['id']}: end {p['end']!r} occurs again {nxt - j} characters later; "
+                  "the span may be cut short (lengthen `end` or set `end_occurrence`)", file=sys.stderr)
         span = text[i : j + len(p["end"])].strip()
         for old, new in p.get("fix", []) or []:
             if old not in span:
