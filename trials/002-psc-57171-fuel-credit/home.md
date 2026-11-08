@@ -12,4 +12,4 @@
 
 ## What happened
 
-- **Oct 27, 2026:** Georgia Power filed the last written testimony. [P-117, P-009, P-010, P-011] It and Georgia Interfaith Power & Light want solar, wind and biomass contracts taken out of the fuel credit entirely; PIA Staff, a party in the case, wants them counted in full. [P-128, P-129, P-050, P-093, P-006] Either way the credit grows, and the same dollars come off the base side. [P-058, P-115, P-061]
+- **Oct 27, 2026:** Georgia Power filed the last written testimony on the schedule. [P-117, P-009, P-010, P-011] The fuel credit is the part of business customers' real-time payments counted toward fuel costs. [P-144, P-016] Georgia Power and Georgia Interfaith Power & Light want its math to leave out both the cost and the power of contracts such as solar and wind; PIA Staff, a party in the case, wants both counted. [P-128, P-129, P-050, P-093, P-006] Either way, fuel charges for customers on standard rates go down, and the same dollars stop helping pay base costs, the rest of the bill. [P-058, P-115, P-144, P-061]

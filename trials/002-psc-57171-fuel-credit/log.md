@@ -39,6 +39,10 @@ every lead was re-checked on a primary page and re-snapshotted here.
 | Read round 4 | 13:00 → 13:05 | Saved revision 4's page, home and passages and the five round 4 reports in `verification/round4/` (originals untouched); read all five in full. The coordinator asked for a narrow revision: line 9, the accuracy flags, six agreed wording fixes, and nothing that changes a card's claim, a grade, the card order or the plan structure | — |
 | Revision 5: narrow edits | 13:05 → 13:10 | Line 9 rewritten as facts (both halves of the shift, every plan raises the credit, the per-$100 million examples, the base-rate dispute left to the next base rate case); "fuel credit" glossed in line 8; 13 source-check flags fixed; six agreed wording fixes; home items moved or extended (Nov 12 to "Coming up" with the PSC's number, Dec 14 with how to ask, Oct 27 with the base side) | The first rewrite of the 30-second version ran 156 words; cut to 149 by folding the blacked-out note into the plans sentence and glossing "fuel credit" in parentheses |
 | Revision 5: gate and write-up | 13:10 → 13:14 | Gate clean: 420 units, 0 errors, 0 warnings; reading grades 6.6 to 8.2 in the targeted sections; hashes and passages unchanged; test render parses. verification.md (round 4 results, 9 changes, 20 open items, 9 contradictions, revision 5 checklist), this log and README | — |
+| Round 5 (independent checkers) | (coordinator) | Fresh blind source check and bias panel on revision 5; calibration carried over | **Passed.** Gate clean; source check 315 supports, 10 partial, 0 unsupported, 0 wrong span, 13 questionable tags, 429/429 spans grounded; both advocates 4/5; editor 4/5 on neutrality with no high issue, 3/5 on clarity. The coordinator found that P-107's gap is a redaction (rendered image of PDF p.19) and updated `check_citations.py` to warn on unscoped absence claims |
+| Read round 5 | 13:54 → 13:58 | Saved revision 5's page, home and passages and the five round 5 reports in `verification/round5/`; read them in full, and the protocol's "When a page is done" rule | The brief allows accuracy fixes only, plus one label change (card 5) |
+| Revision 6: accuracy fixes | 13:58 → 14:02 | The 14 source-check items and 3 editor items in the brief: scoped every "no party disputes" to the parties whose testimony we could read; card 5's first grade from "Supported" to "Mixed" (P-102); P-107's redaction marked in the spec with a note, and `passages.md` rebuilt; GAM's ranking caveat made exact in two places; hedges restored (P-097, P-079); direction words for the 30-second bill figures; home line 15 in plain words | The new gate check flagged the 11 unscoped absence claims until item 9 and item 12 were done; then 0 warnings. Two flagged lines (SC L254 and L266) have a second point that would change another card's label; logged as O1 for the coordinator |
+| Revision 6: gate and write-up | 14:02 → 14:04 | Gate clean: 426 units, 0 errors, 0 warnings; reading grades 6.8 to 8.3 in the targeted sections; hashes PASS; test render parses (card 5 folds to "Mixed"). verification.md (round 5 results, 17 changes, 17 open items, 7 contradictions, revision 6 checklist), this log and README | — |
 
 ## Where the runbook did not fit (and what I did)
 
@@ -103,6 +107,9 @@ every lead was re-checked on a primary page and re-snapshotted here.
   before the whitespace. Revision 2's target sections were measured both ways and pass either way.
 - `check_citations.py`: the label skip matches the singular "card N" only, so "cards 8 and 9" inside a cited sentence
   warns. → Also skip plurals and "N and M" lists after "cards", "layers", "options" and "questions".
+- `check_citations.py`: warn on unscoped absence claims ("no party disputes …"). **Adopted** before revision 6.
+- `build_passages.py`: its doc comment limits `fix` to extraction glitches; revision 6 also uses one to mark a redaction the
+  text layer drops (P-107, checked on a rendered page image). → Document that use, or add a `redaction` key.
 - An **approved OCR tool** (with a dependencies.md entry) is needed for scanned filings.
 
 ## Rules learned (proposed; not yet applied to the runbook or style guide)
@@ -166,6 +173,16 @@ From round 4 (revision 5):
 31. **When the page computes, give every bound.** A net figure for one scenario only argues for that scenario.
 32. **When both advocates accept the balance, fix only the agreed accuracy items** and log the rest as open items, with
     contradicting suggestions side by side (Trial 001's lesson, applied here).
+
+From round 5 (revision 6):
+
+33. **Scope every absence claim to what was read.** "No party disputes" covered a party whose testimony was an unreadable
+    scan and a hearing with no transcript; "no party whose testimony we could read disputes" is what the record shows.
+    The gate now checks this.
+34. **Check a gap in a passage on a rendered page image before calling it an extraction glitch.** P-107's missing words
+    were a redaction; mark it in the passage and say on the page that part of the recommendation is blacked out.
+35. **Before grading a premise "Supported", read the supporting party's own words for the other side's view.** P-102's
+    "I would agree with Georgia Power" showed Georgia Power held the opposite view.
 
 ## Automation notes (not eligible: 0 of 3 runs for this kind of decision)
 
