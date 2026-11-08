@@ -3,8 +3,8 @@
 Method: the AI-only [verification protocol](../../docs/process/verification-protocol.md). There is no human in
 the loop ([ADR 0014](../../docs/adr/0014-ai-only-verification.md)). The independent checkers were run by the
 coordinating session, not by the drafting agent. Their reports are copied unchanged into
-[verification/round1/](verification/round1/), [verification/round2/](verification/round2/) and
-[verification/round3/](verification/round3/) (sha256 below). The planted-error copy and its answer key stay with the
+[verification/round1/](verification/round1/), [verification/round2/](verification/round2/),
+[verification/round3/](verification/round3/) and [verification/round4/](verification/round4/) (sha256 below). The planted-error copy and its answer key stay with the
 coordinating session. Nothing on this page may be called "verified" until a full round passes.
 
 ## Round 1 (revision 1, `verification/round1/workspace.r1.md`)
@@ -559,3 +559,224 @@ The format needs a documented, verbatim quote from someone who backs the option.
    B. I treated both as inferences.
 6. **"Where the money comes from", step 3,** turns P-102's "tax digest value" into "the value of taxable property".
 7. **"Who it affects" cites the 2026 budget message** ("the needs of our residents", P-103) for a 2027 page.
+
+## Round 4 results (revision 4, `verification/round4/workspace.r4.md`)
+
+| Layer | Check | Result |
+|---|---|---|
+| 1 | Deterministic gate on revision 4 (run by the drafter) | **Pass.** 390 units, 0 errors, 0 warnings; home.md 6 units, 0 and 0; no budget or CHECK lines; hashes 36/36 (see Revision 4 above) |
+| 2 | Blind source check, workspace.md | **241 supports, 3 partial, 0 does not support, 0 wrong span**; 145 valid and 1 questionable tag; 12 framing issues (2 medium, 10 low). Grounding: 390/390 units OK (`check_verifier.py`, run by the drafter for this record) |
+| 2 | Blind source check, home.md | **4 supports**, 2 valid tags; 3 framing issues (low). 6/6 grounded |
+| 2 | Display check, page.yaml | **6 supports, 1 partial** (the title); 3 framing issues (1 medium, 2 low). 7/7 grounded |
+| 3 | Bias panel | **Fail.** Supporter's advocate **3/5**. Critic's advocate 4/5. Standards editor: neutrality 3/5, clarity 3/5 (23 issues: **1 high**, 8 medium, 14 low; 15 flip-test items) |
+| 4 | Planted-error calibration | A copy with planted errors was checked (`round4/calibration/`). Per the coordinator, its checker also flagged the values-guide gap on its own. Not used for this revision |
+
+Reports (copied unchanged into `verification/round4/`): `source-check.json` (3ab22a025bd5f808…),
+`source-check-home.json` (3e3c865fa6f1d4a7…), `display-check.json` (81b376c16da4d481…), `panel-supporter.json`
+(13e5de0105b51416…), `panel-critic.json` (0e09f7296c3e7926…), `panel-editor.json` (17469034ca7df85b…). The page
+and home items the round checked: `workspace.r4.md` (c00564fc501c11ae…), `home.r4.md` (24461b1f0ecc2b52…),
+`page.r4.yaml` (f6cb0bec06954d5f…).
+
+**Why the round failed.** A pass needs both advocates at 4/5 or better and no high-severity editor issue. The
+supporter's advocate gave 3/5, and the editor found one high issue. Both came from the values guide: its one line
+was Commissioner Barrett's for Option C, which gave "transparency" to that side alone, although Commissioner Ellis
+claims transparency for today's process (P-073) and Resolution 26-0460 states its own purpose (P-004, P-016). The
+source check's framing notes flagged the same gap (medium). The source checks found no unsupported claim.
+
+**What each checker found.**
+
+- **Source check (SC), workspace.md:** 3 partial and 1 questionable, all in the reader-first lines: "wasn't public
+  then" says more than P-045 (line 14); the Sept 30 tax-rate hearing "came" and "held" when P-098 only notices it
+  (lines 15 and 29); the property-tax line's first sentence gave only part of the reason (line 15). Framing notes:
+  the values guide (medium), the property-tax line (medium), and 10 low notes ("isn't public" elsewhere, the general
+  consent-decree definition, "to address conditions" softening P-048, District 4 and the vice chair, uneven outlet
+  attribution, the Oct 7 letter, Option C's cost, the reserve figure only under Option A, "six offices" in card 2,
+  unexplained terms).
+- **Source check, home.md:** no flags; 3 low framing notes ("Submit requests" is vague; name the two county staff;
+  "file" can read as "submit").
+- **Display check, page.yaml:** the title read as done or certain and dropped "regular" (partial); the vote chip also
+  drops "regular" (minor); Option C's chip is styled "bad".
+- **Supporter's advocate (3/5):** the values guide (high); card 3's first label part and card 4's rebuttal inside its
+  label (medium); card 3's challenges lack the Board's power to fund above the draft and the fiscal half of P-049
+  (medium); card 1's challenge was twice card 2's (medium); "the commission alone drafts" and "Neither needed a
+  nominating vote" (medium); 8 missing arguments; 5 low wording notes; 3 label disagreements.
+- **Critic's advocate (4/5):** card 3's In short plays down the critics' case (medium); card 4's "does not say the
+  meetings were closed" (medium); Option C's only cost is overstated (medium); card 6 lacks the sheriff's, the
+  solicitor-general's and the county's own words; the 2026 deficit appears five times without the 2023 to 2025
+  actual results (medium); 4 label disagreements.
+- **Standards editor (3/5, 3/5):** the values guide (high); 8 medium issues: "unprecedented" treated unlike Ellis's
+  comparison; card 3's case against; the "if right" hedge hidden in tags on cards 3 and 4; the property-tax and
+  courts lines; why the other district 1 to 3 commissioners were ineligible; density (about 600 words before card 1);
+  undefined terms. 14 low issues and 15 flip-test items.
+
+## Revision 5: what changed (change class: update; checks pending)
+
+Reason: fixes after verification round 4 (values guide quoted one side). Revision 4 is kept in `verification/round4/`.
+No checker has seen revision 5; the drafter ran only the deterministic gate. Line numbers: "r4" is revision 4 as
+checked; "r5" is this revision. The v0.6 content contract is kept: no section, card or option was added, removed or
+reordered, and no evidence label, card claim or side changed except as items 9 and 10 say.
+
+| # | Item | r4 line | r5 line | What changed |
+|---|---|---|---|---|
+| 1 | Values guide (blocked the round) | 132-133 | 132-135 | One line for each side with a documented argument, in card order (card 1 supports today's process; cards 2 and 3 are critical; card 6 asks for more justice funding). **Today's process:** Ellis, "who sponsored today's process, which Option C would change, said that process is "more transparent and open than anything we’ve had in recent years."" (P-073, P-016, P-024). **Option C:** Barrett's line, unchanged. **Court funding:** Solicitor-General Gammage, "one of six justice officials asking for more money, said they see "a lack of proper investment in the entire ecosystem of the courts."" (P-077, P-069, P-070). The two transparency claims now sit side by side. Closing `{editorial}` line: no archived source argues for Option A over Option B; the officials' request for a January vote has no line because our sources quote no one making it (P-070 is the reporter's summary); the guide doesn't recommend an option. Lines are 35, 32 and 34 words; quotes 11, 14 and 12 words. The brief listed Barrett's line first; card order puts today's process first (runbook Step 4), so it comes first |
+| 2 | Accuracy flags | page.yaml 6; ws 15, 29 | page.yaml 6; ws 15, 29 | Title: "Fulton County commissioners must adopt the 2027 budget by their second regular January meeting". The vote chip also says "2nd regular January meeting" (display check, line 10, minor). Line 15: "a tax-rate hearing was set for Sept 30, after the January budget vote". Line 29: "scheduled a hearing on the proposed tax rate for Sept 30"; its tag now says the rate was "planned for after the budget" |
+| 3 | "wasn't public then" (line 14) | 14 | 14 | Removed. The line now gives the dates: "A proposal is due by Nov 15; the Board must adopt a budget by its second regular January meeting, expected Jan 20, 2027." [P-005, P-041] |
+| 4 | Property-owner line | 15 | 15, 36 | First sentence (24 words): "Whether your 2027 county property tax changes isn't known as of Nov 8, 2026; the proposal wasn't posted, and the tax rate comes later." Then "Bills also depend on property values." [P-102] and the Sept 30 sentence (item 2). "Not known yet" (line 36) gives the same reasons and drops "isn't public" (the source check's minor note) |
+| 5 | Option C's "Who pays" | 156 | 158 | "Budget staff would have had 25 days to add any omitted requests that departments chose to submit." The tag quotes P-031's "the opportunity to submit" |
+| 6 | "Neither needed a nominating vote" | 189 | 191 | "Neither Ellis nor the vice chair needed a nomination by their district group; the Board approved the item naming them on Aug 19." [P-021, P-022, P-009] Outcome only, no counts or reasons, so the votes-as-evidence rule holds |
+| 7 | "the commission alone drafts" | 190 | 192 | "FOX 5 reported that Ellis, addressing the officials' concerns, noted that the commission is solely responsible for drafting recommendations and that the full Board will review and vote on the final budget." P-079's own words, without quote marks, because they are the reporter's |
+| 8 | Courts and jail line | 16 | 16 | "What the jail, courts, prosecutors and public defender get for 2027 isn't known as of Nov 8, 2026. Six of their leaders asked for more money. What the draft funds isn't known. Adoption is due by the second regular January meeting, expected Jan 20, 2027." The officials' reasons moved off the line to fit 45 words; they stay in Option A and card 6 |
+| 9 | Card 3 | 197-205 | 199-207 | **Challenges:** state law lets the Board adopt "greater or less than the sums presented in the proposed budget" (P-047), and in 2026 the Board adopted more than the draft for four of the six justice offices (computed from P-054); as the resolution quotes them, the finance officers' association and Pew speak of across-the-board spending cuts or caps, not limits on requests (P-028). **Label:** new part "Unprecedented: Uncertain (the resolution's statement; we didn't check past years)". **What's missing:** "We did not check past years' budget instructions for earlier limits on requests." **Who says it:** the resolution's "true picture" argument (P-028) |
+| 10 | Card 4 | 209-217 | 211-219 | Label: "October hearings announced, some offices' slides posted: Supported (county records). More open than past years: Uncertain (Ellis's statement; we didn't check past years)". No label carries a rebuttal; "2026 also had hearings" was already in "What challenges it". New there: "The Oct 21 update was added to that day's agenda at the meeting itself, and the minutes don't record what either update said." (P-089, P-093; the duplicate under "What's missing" was removed). The unsourced pronouns for Ellis ("his") became "Ellis's" |
+| 11 | "In short", cards 3 and 4 | 199, 211 | 201, 213 | Card 3: "If the claim is right, the draft won't show departments' full requests." ... "The code and budget book back part; the rest is unsettled." Card 4: "If the claim is right, other commissioners and their staff can follow the commission's work." ... "Records back the announced hearings; the "recent years" comparison rests on Ellis's statement." 40 and 38 words |
+| 12 | Card 2, ineligibility | 192 | 194 | "Our sources don't say why the other two commissioners from districts 1 to 3 were not eligible." The tag gives P-010's grounds |
+| 13 | Card 6, documented reasons | 237 | 239 | The county's words: it entered the agreement "to address constitutional violations at the Fulton County Jail," which "mandated the County implement specific reforms" (P-048). The sheriff's slides: a staffing plan "to stabilize staffing and strengthen compliance," overtime "to align with operational realities and Consent Decree mandates" (P-060), and a "Consent Decree Compliance" request (P-061). The solicitor-general's slides: "Caseload Growth without proportional staffing" and outside advice that prosecutors "should not carry workloads so large/complex that they endanger fairness, accuracy or the timely processing of charges" (P-062). Each quote checked against its passage. The slides' "ABA", "ASGs" and "Marsy's Law" were left out: the sources don't define them |
+| 14 | The 2026 draw on savings | 24, 108, 139, 179, 239 | 24, 108, 241 | Kept in the Summary money steps, in Layer 2 and as card 6's challenge. Removed from Option A's "Who benefits" and from card 1 (item 15). Layer 2 now gives, once, the 2023 to 2025 actual results from the same table: revenue topped spending by about $3.0 million, $12.3 million and $13.0 million, and savings grew from $224,363,249 to $252,638,514 (P-054) |
+| 15 | Layer 4 preamble; card 1 | 161-163, 179 | 163-165, 181, 272-274 | The voice count and the labeling rule stay. The minutes, ratification and video notes moved to a new Layer 5 subsection, "Notes on the minutes and meeting video", unchanged except that "that resolution" became "Resolution 26-0729" (its antecedent stayed in Layer 4). The preamble's two visible paragraphs went from 302 to 245 words (602 to 545 with the folded "How to read these cards"; counted without citations and tags). Card 1's "What challenges it" went from 131 to 72 words (card 2's is 69): one rounded takeaway, with the line-item example in the tag |
+| 16 | Definitions on each tab | many | many | **Summary:** the 5% limit (30-second version: "a limit on requests to 5% above current funding"); "filed" (its definition now follows the first use, line 81); the General Fund (step 1, with the "specialty funds", P-045); savings ("fund balance", step 5); the Clerk to the Commission (line 44, P-097); "eligible" (line 64, P-010). The courts line names the offices instead of "justice offices". **What's decided:** the Budget Commission at first mention (line 85); "eligible" (line 98); the "Consent Decree" line as the jail agreement's (line 106). **Options:** savings (Option A); the 5% limit and the six officials (Option A's "Who pays"); the jail agreement and the General Fund (Option B). **Arguments:** the 5% limit, "filed" and the six justice offices (preamble, line 165); the General Fund (card 1); "eligible" (card 2); the jail agreement and "consent decree compliance" in P-048's words (card 3); savings (card 6). **page.yaml:** the source chips "Res. 26-0460" and "Res. 26-0729" now read "Resolution …" |
+| 17 | Dollar figures in "Where the money comes from" | 20-24 | 20-24 | Steps 1 and 2 already gave the 2026 General Fund total ($1,057,100,578) and property tax ($834,032,152), with citations; the lay reader saw the fold closed, and the template now opens it. Both now say "in the 2026 budget". No 2027 figure is projected |
+| 18 | home.md | 5, 14 | 5, 14 | Act now (25 words): "...; the Board adopts the budget." [P-014] defines the Board. What happened (24 words): "voted to file, or set aside, a resolution to end a limit holding departments' requests to 5% above current funding." [P-024, P-025, P-077]; the separate "Filing set the resolution aside" sentence is gone. No "Res." Items: 25, 20, 25 and 24 words |
+
+Also changed: the status line (revision 5, "fixes after round 4; checks pending") and the "How this page was made" line.
+Layer 3's reading grade rose to 8.9 after the first draft of these changes; splitting Option A's and Option B's new
+sentences brought it to 8.4.
+
+### Revision 5: deterministic gate (run by the drafter)
+
+| Check | Result |
+|---|---|
+| `check_citations.py` on workspace.md | **Pass**: 415 units (267 cited, 93 analysis, 37 editorial, 18 computed), 0 errors, 0 warnings |
+| `check_citations.py` on home.md | **Pass**: 5 units (4 cited, 1 analysis), 0 errors, 0 warnings |
+| `readability.py` | **Pass**: 30-second version 7.7, What it means for you 7.1, Layer 1 8.0, Layer 2 8.3, Layer 3 8.4; 0 sections over target; no budget warnings; no CHECK lines. Layer 4 is 8.7 (not targeted; 8.3 in revision 4), mostly from the verbatim quotes added under items 9 and 13. Longest card label 84 words (card 3, with the new "Unprecedented" part) |
+| Length budgets | 30-second version 90 words. "If you" lines 45, 45 and 45, first sentences 22, 24 and 18. Values lines 35, 32 and 34 (quotes 11, 14 and 12). Layer 3 intro 60. Layer 2 "What's being decided" 80 with its labels. "In short" lines 40, 40, 40, 38, 40 and 38. Home items 25, 20, 25 and 24 |
+| `verify_hashes.py` | **Pass**: 36/36 retrieved, 0 problems |
+| Passages | 102, unchanged; no new passages were needed |
+| Test render (to scratch) | Renders version 5 with no warnings: no Decide-label or undated-home-item warnings and no asterisks in the page data. The template's Sources tab shows only the sources, so the Layer 5 notes moved under item 15 are in workspace.md but not on the prototype page (the template is outside this revision's scope) |
+
+### Open items after revision 5 (round 4 suggestions not taken)
+
+Codes: **SC** source check (F = framing note), **SCH** home check, **DC** display check, **SUP** supporter's
+advocate, **CRIT** critic's advocate (M = missing argument, U = unfair wording, I = imbalance, L = label), **ED**
+editor issue, **FT** flip test. Numbers are revision 4 lines.
+
+- **Source checks:**
+  - "isn't public yet" remains in Option A's tag and in three "What's uncertain" fields (r5 lines 141, 143, 151, 243) (SC F14).
+  - The general consent-decree definition may suggest a court approved this agreement (SC 112, F112).
+  - District 4 residents are also represented on the commission by the vice chair (SC 47, F47).
+  - Atlanta News First quotes name no outlet while FOX 5 paraphrases do (SC F188).
+  - The Oct 7 letter is stated as fact (SC F78).
+  - Undefined: "FY", whether the county manager and CFO are appointed, the public defender, the superior court clerk (SC F201).
+  - home.md: "Submit requests" is vague, and the residency check and 60-minute cap are missing (SCH F5). The two county staff are unnamed (SCH F9). The Nov 4 item leaves out the 4-to-1 vote and the failed Oct 21 motion (SCH F14).
+  - Option C's chip is styled "bad" (DC F14).
+- **Supporter's advocate:**
+  - The code says "the budget requests of all of the county's departments", not "all budget requests" (M1, L card 3, carried from round 3 C2).
+  - Card 3 could show the 2026 fiscal context: "many unmet requests", "no additional resources available", the $158 million and $64 million in extra requests, and the $2.8 million margin (M3, I3).
+  - The 2026 proposal's 1% across-the-board cut, against "unprecedented" (M4).
+  - The eligibility rules are general (M6): partly met, since card 2 now states them.
+  - Card 1 could note the Oct 21 and Nov 4 updates as the reporting duty in action (M8).
+  - Card 4's "In short" stays with commissioners and staff, not the public (U211).
+  - Card 1's "would" (U175). Card 3's "but only 'in narrative form'" (U203, round 3 C5).
+  - Card 2's "In short" says two commissioners, not a four-member commission (U187). Card 2's heading (U183): a card claim, so out of scope.
+  - The GFOA and Pew quotes are secondhand (I6).
+  - The 30-second version's tag names only objectors (I7). Option A's timing line lacks Ellis's "no talk of an early vote" (I7, ED 141).
+  - Card 1's label could name the resolution as the source of doubt (L card 1).
+  - Q2 and Q3 wording (Q).
+- **Critic's advocate:**
+  - The GFOA's stated reason and Pew's alternative, quoted more fully (M1).
+  - The duty-to-solicit charge on card 3 (M2).
+  - The Board's 2026 raise for the solicitor-general (about 10.6% above the draft) as a Supported part of card 3's support (M3, L card 3).
+  - The sheriff's attrition point (M4).
+  - The solicitor-general's ABA benchmarks, 400-case limit and Marsy's Law (M5): left out because the sources don't define the terms.
+  - Card 3's In short, evidence sentence (U199): partly met by the item 11 trim; see R4-C3.
+  - Card 4's "The resolution does not say the meetings were closed" (U214, round 3 C7).
+  - Line 80's "1 yes vote among the Board's 6 members" (U80).
+  - Card 2's "critics say" (U187, FT 187).
+  - Card 6's "seeking more money" (U235).
+  - Option A's "Who pays" rests on news claims while county records back it too (I): partly met, since item 14 removed the county figure from "Who benefits".
+  - The missing written 5% instruction bears on openness, for card 4's challenges (I).
+  - The vice chair seat isn't re-chosen each cycle (I).
+  - Card 3's conflict reason (L card 3). Card 4's "Other commission meetings open: Uncertain" part (L card 4): item 10 narrowed the Supported part to the October hearings but did not add this part. Card 6's solicitor-general increase as its own Supported part (L card 6).
+  - Q1 (who hears requests) and Q4 (jail-agreement costs) (Q).
+  - The courts line could say whether the limit covers jail-agreement costs (optional).
+- **Standards editor:**
+  - Card 3's challenges could add the county's money position (203): the brief chose P-047 and P-054.
+  - Card 2's label could narrow to "Who serves in 2027" (189).
+  - Option B's four computed sentences of line-item arithmetic (161).
+  - Undefined: county manager and CFO on the Summary and Layer 2 (146); solicitor-general on Layer 4; GFOA and Pew.
+  - The card-pairing sentence (167). Q3's "wait" (247). Q2's bundled choices (246).
+  - "fits" in card 3's "What's uncertain" (205), and a bracket citation of P-061 for the quoted request names (205).
+  - Barrett "is listed as not voting" (76, FT 76).
+  - "cap" and "limit" are both used (8): new text says "limit", older sentences keep "cap".
+  - Mark the remaining meeting dates as scheduled (70).
+  - The accommodation line's label and phone format (52).
+  - Option C's documented limits on its benefit (156, FT 155).
+  - Card 5 could note that the draft serves as the operating budget until adoption (227).
+  - Attribute the jail agreement's aim in Layer 2 (112).
+  - The "A values question" wording against the legend (167).
+  - FT 189: card 2 could say the full Board adopted the rules on Aug 5.
+  - FT 214: Johnson "objected to" against "said".
+  - FT 51: an Observe link to the meeting videos.
+  - FT 192: Barrett's quotes also come from a news report.
+- **Carried from earlier rounds and still open:** the Nov 4 minutes ratification and the Nov 18 agenda (README,
+  step 3); the meeting video needs an approved transcription tool; re-test the "Uncertain" labels when the proposal
+  is published.
+
+### Contradicting suggestions, round 4, side by side (not resolved unless the brief chose)
+
+| # | Topic | One view | The other view(s) | Revision 5 |
+|---|---|---|---|---|
+| R4-C1 | The values line for today's process | **SUP** (values guide): Resolution 26-0460's purpose, "earlier and ongoing input" with "balanced representation" (P-004) | **ED** (132): show both transparency claims in parallel lines. **CRIT** (values guide): the one line was fair; add a pointer for the justice officials' values | Ellis's transparency claim (P-073), parallel to Barrett's unchanged line; the officials get a line (Gammage). P-004 stays on card 1 |
+| R4-C2 | The Board's 2026 increases above the draft (P-054) | **SUP** (M2, I3): a challenge on card 3; a limit on requests doesn't limit what the Board funds | **CRIT** (M3, L card 3): support on card 3, with its own Supported part (the solicitor-general, about +10.6%) | The brief's item 9: a challenge ("four of the six justice offices"). The critic's label part is open |
+| R4-C3 | Card 3's "In short", evidence sentence | **CRIT** (U199): "The code's text and the 2026 budget book back the rule and past practice; the effect waits on the draft." | **ED** (199): "Records back part; the rest is unsettled." | "The code and budget book back part; the rest is unsettled." (fits 40 words with the item 11 hedge) |
+| R4-C4 | Card 4's "More open than past years" label | **SUP** (L card 4): "his statement alone; no record compares the two years" | **ED** (FT 200): label it like the resolution's "unprecedented". Round 3 **CRIT** (C4): add the 2026 hearings and appendix | "Ellis's statement; we didn't check past years", parallel to card 3; the 2026 points stay in the card's body |
+| R4-C5 | Card 1's 2026 amendment figures | **SUP** (I4): move the Board's changes to "What supports it"; keep the 0.4% as the challenge | **ED** (161, FT 179): one rounded takeaway; move the arithmetic to the evidence layer | Trimmed in place (item 15); moving the figures would change which side they support |
+| R4-C6 | Card 4's "does not say the meetings were closed" | **CRIT** (U214): reword it as the resolution's concern, or drop it | **ED** (FT 214): add a matching caveat to card 2, or drop card 4's | Unchanged (round 3 C7) |
+| R4-C7 | The courts and jail "If you" line | **SUP** (if-you lines): end at "isn't known yet", or add a cost clause | **ED** (16): add the "when", then move the request or say how much the draft funds isn't known. **CRIT** (if-you lines): fair; optionally, whether the limit covers jail costs | The editor's version (item 8); the officials' reasons moved off the line to fit |
+| R4-C8 | Where the 2026 deficit and reserve go | **CRIT** (I): add the 2023 to 2025 actual results once, in Layer 2, or cut repetitions | **SUP** (M3): the fiscal context belongs on card 3. Round 3 **ED** (C9): add the margin to Option B and card 6 | Actual results once in Layer 2; removed from Option A and card 1 (item 14) |
+| R4-C9 | Option C's "Who pays" | **CRIT** (U156): "25 days to add any omitted requests departments chose to submit" | **ED** (156): add documented limits on Option C's benefit to "What's uncertain". Round 3 **ED** (C8): add a cost from the record | The critic's wording (item 5); the editor's addition is open |
+
+Round 3's C1 ("helps draft" against "the commission alone drafts") is now partly settled: card 2 uses P-079's own
+words (item 7), and Layer 2's "helps draft" is unchanged. C2 (card 3's first label part) is open again (SUP L card 3).
+
+### What the sources couldn't support (revision 5)
+
+- **A named speaker's words for the January-vote request.** Only Atlanta News First's summary exists (P-070), so that
+  side has no values line, and the page says so.
+- **Definitions of "ABA", "ASGs" and "Marsy's Law"** from the solicitor-general's slides (P-062). Those points were
+  left out, and the ABA's advice is called "outside advice".
+- **A source's own definition of the General Fund.** The page uses "biggest fund" (P-052), "specialty funds" (P-045)
+  and what the fund pays for (P-054).
+- **Whether a court approved the jail agreement.** The sources call it an agreement with the Department of Justice
+  (P-048); the general consent-decree definition in Layer 2 is ours.
+- **Why the other two district 1 to 3 commissioners were ineligible**, now said on card 2.
+- **When the 2027 tax rate will be set.** Only the 2026 pattern is archived (P-098, P-101).
+- **Who defends the 5% limit, and why it was set.**
+- **The GFOA and Pew originals.** Only the resolution's quotes are archived (P-028).
+
+### Where I'm least sure (revision 5)
+
+1. **Today's-process values line** uses Ellis's transparency claim (P-073), not Resolution 26-0460's purpose (P-004),
+   which the supporter's advocate called the side's strongest value. With Barrett's line kept as it was, parallel
+   transparency claims were the brief's way not to give transparency to one side. A checker may prefer P-004. A
+   critic may read the order (today's process first, by card order) as favoring the commission's side; the brief's
+   list put Barrett first.
+2. **Gammage's line** paraphrases "what we believe to be" as "they see" and quotes 12 of his 27 words. "Court funding"
+   is my reading of "proper investment in the entire ecosystem of the courts". The six officials are named in full
+   only later on the Options tab (Option A's "Who pays"), because the 35-word cap left no room in the line.
+3. **The closing line's January-vote note.** A checker may count Atlanta News First's report as enough for a line, or
+   treat Ellis's "no talk of an early vote" (P-073) as the other side of that question.
+4. **The courts and jail line** no longer gives the officials' reasons. "Six of their leaders" covers the courts,
+   where only the court clerk and the probate judge asked. "What the draft funds isn't known" is terse.
+5. **The property-owner line:** "the tax rate comes later" generalizes from the 2026 cycle; "wasn't posted" means not
+   on the county's budget page (P-045); "Bills also depend on property values" reads P-102's "tax digest value" as
+   property values.
+6. **Card 3's new challenge** ("four of the six justice offices", P-054) uses the budget-book fact the critic wants as
+   support (R4-C2).
+7. **Card 2's Aug 19 approval** states a vote's outcome on a card, despite the rule that cards don't use votes as
+   evidence. It gives no counts or reasons, as the editor suggested for a similar sentence (FT 189).
+8. **The Layer 5 notes** (item 15) don't show on the prototype page, because the template renders only the source
+   list there. Their main points also appear in "Not known yet" and on cards 3 and 4.
+9. **Item 14:** the 2023 to 2025 actual results appear once, in Layer 2. Card 6 keeps the 2026 deficit as a challenge
+   without them beside it.
+10. **Layer 4 reads at grade 8.7** (8.3 in revision 4). It isn't a targeted section, but the editor asked for less
+    density; the new material is mostly verbatim quotes.

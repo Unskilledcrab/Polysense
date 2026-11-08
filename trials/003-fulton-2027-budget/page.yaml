@@ -3,17 +3,17 @@
 slug: fulton-budget-2027           # used in page links: #fulton-budget-2027, #fulton-budget-2027-options, ...
 kind: budget                    # law | regulatory-case | budget: sets the decision and options headings
 code: "Fulton County · 2027 budget"
-title: "Fulton County commissioners adopt the 2027 budget by their second January meeting"  # [P-005, P-014, P-041]
+title: "Fulton County commissioners must adopt the 2027 budget by their second regular January meeting"  # [P-005, P-014, P-041]
 link_text: "Fulton County's 2027 budget"  # [P-005, P-042]
 status:                            # chips under the title
   - {text: "Budget Commission draft due by Nov 15, 2026"}   # [P-005]
-  - {text: "Board vote due by its 2nd January meeting, expected Jan 20"}   # [P-005, P-041]
+  - {text: "Board vote due by its 2nd regular January meeting, expected Jan 20"}   # [P-005, P-041]
 option_chips:                      # one chip per option, matched by the start of the option's heading
   "Option A": {text: "Draft due Nov 15"}   # [P-005]
   "Option B": {text: "Board can add or cut money"}   # [P-047]
   "Option C": {text: "Set aside (filed) Nov 4", kind: bad}   # [P-024, P-025]
 short_labels:                      # source chip labels: one or two words, so a chip fits on a phone line
-  S01: "Res. 26-0460"
+  S01: "Resolution 26-0460"
   S02: "Board record"
   S02b: "Vote record"
   S02c: Attachments
@@ -21,7 +21,7 @@ short_labels:                      # source chip labels: one or two words, so a 
   S03: "Members item"
   S03b: "Vote record"
   S03c: "Roll call"
-  S04: "Res. 26-0729"
+  S04: "Resolution 26-0729"
   S04b: "Vote record"
   S04c: Attachments
   S04d: "Cap resolution"
