@@ -11,4 +11,4 @@
 
 ## What happened
 
-- **Nov 4, 2026:** Fulton's Board of Commissioners voted to set aside (file) a resolution to end a limit holding departments' requests to 5% above current funding. {analysis: status "Filed" after a Nov 4 vote to file, with no later step (P-024, P-025); the limit's terms are FOX 5's (P-077)}
+- **Nov 4, 2026:** Fulton's Board of Commissioners voted to set aside (file) a resolution to end a 5% limit on departments' requests for extra money. {analysis: status "Filed" after a Nov 4 vote to file, with no later step (P-024, P-025); P-024 and P-029 describe the limit}

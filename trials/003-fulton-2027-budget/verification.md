@@ -1091,3 +1091,89 @@ this page was made" line.
    could still read as a scare quote.
 5. **home.md line 5** says "the Fulton County commissioners'" rather than naming the Board of Commissioners, to fit the
    25 words with "before the Board adopts the budget".
+
+## Targeted re-check 2 results (revision 5.2)
+
+Run by the coordinating session on revision 5.2's changed units (`t003-rev52/changed-units.txt`, copied into
+`verification/round5-targeted-2/`), with a separate flip test. Reports are copied unchanged into
+`verification/round5-targeted-2/`: `source-check.json` (d196c5bc67e4b320…), `fliptest.json` (c39a7f811f7f564e…),
+`changed-units.txt` (a23262727d72bb37…). The page checked was revision 5.2 (workspace sha256 6c8dc5ad3631…).
+
+| Check | Result |
+|---|---|
+| Source re-check (36 units) | **18 supports, 0 partial, 0 does not support, 0 wrong span**; 17 tags valid, **1 questionable**. 7 framing notes (1 medium, 6 low) |
+| Flip test | Neutrality **4/5**, **no high issue**; 3 medium and 6 low |
+
+**The questionable tag (line 136):** "Each side gets one line" used "side" for a group of speakers, while the cards' Side
+labels put the officials (card 2) and Resolution 26-0729 (card 3) on one side. So the sentence implied a balance the
+guide doesn't have: two lines from critics, one from supporters.
+
+**Word-level notes:**
+- line 92 should say "requests for extra money";
+- line 134 should say "extra requests" (P-028's "enhancement requests");
+- line 214 should say "their staff";
+- line 238 should give the year of the county records (2026);
+- home line 14 stated the limit's terms without attribution.
+
+**The flip test's medium issues:**
+- Card 2's opener is built differently from card 1's ("critics say", and Barrett paraphrased).
+- Evidence verbs varied by side ("confirms" and "Records back" for today's process; "is on record" and "are on record" for its critics).
+- Line 132's label gave "Board input", a value both sides claim, to one side, and put "balanced" in our voice.
+
+## Revision 5.3: what changed (change class: correction; reason: final fixes from the second targeted re-check)
+
+Only the coordinator's listed fixes changed. Revision 5.2 is the baseline. No card claim, evidence grade or side
+changed. No lines moved, so revision 5.3's line numbers match revision 5.2's. The changed units are listed in the
+drafter's scratch file `t003-rev53/changed-units.txt`, sent to the coordinator.
+
+| # | Item | Line(s) | What changed |
+|---|---|---|---|
+| 1 | Line 136, questionable | 136 | "Each group gets one line, and two of the three lines come from groups critical of today's process, because our sources quote more critics." Tagged `{analysis}`, pointing to the Layer 4 introduction's count of quoted voices. The rest stays: the officials' requests for more money and a January vote are on cards 6 and 5 |
+| 2 | Word-level faithfulness | 92, 134, 214, 238, home 14 | Line 92: "restricted requests for extra money to 5% of each department's "base budget."" Line 134: "listing extra requests" ("has let" became "let", to stay at 35 words). Line 214: "all commissioners and their staff" ("the commission's meetings" became "the meetings", to stay at 40). Line 238: "2026 county records back rising jail-agreement costs, not most other needs." Home line 14: "a resolution to end a 5% limit on departments' requests for extra money"; its tag now says P-024 and P-029 describe the limit |
+| 3a | Line 132's label | 132, 135 | Label "early, north-south representation", a value only this side states; "balanced" now appears only inside the quote ("with "balanced representation.""). The shared note adds Board members' input in each side's own words: "Both sides also invoke Board members' input." Resolution 26-0460's "earlier and ongoing input from members of the Board" (P-004); Option C's "from all members of the board" (P-029); and the justice officials' objection to a two-commissioner panel "rather than the full board," with FOX 5 credited (P-076) |
+| 3b | Evidence verbs, cards 1 to 4 | 178, 190, 202, 214 | One form for every Supported part, "Records back X, not Y". Card 1: "Records back these rules, not results, which wait on the draft." Card 2: "Records back who serves, not how much the two commissioners shape the draft." Card 3: "Records back the code's rule and 2026 practice, not a conflict." Card 4 already had the form: "Records back the announced hearings, not the comparison." "Confirms" and "on record" are gone from the In short lines. Lengths 40, 38, 37 and 40 |
+
+Also changed: the status line ("revision 5.3: final fixes from the second targeted re-check") and the "How this page was
+made" line.
+
+### Revision 5.3: deterministic gate (run by the drafter)
+
+| Check | Result |
+|---|---|
+| `check_citations.py` on workspace.md | **Pass**: 447 units (278 cited, 113 analysis, 36 editorial, 20 computed), 0 errors, 0 warnings |
+| `check_citations.py` on home.md | **Pass**: 5 units (3 cited, 2 analysis), 0 errors, 0 warnings |
+| `readability.py` | **Pass**: 30-second version 7.2, What it means for you 7.3, Layer 1 8.0, Layer 2 8.3, Layer 3 8.4; 0 sections over target; no budget warnings; no CHECK lines. Layer 4 8.6 (not targeted) |
+| Length budgets | 30-second version 90. "If you" lines 45, 45 and 45. Values lines 32, 34 and 35 (quotes 6, 11 and 8). Layer 3 intro 60. "In short" lines 40, 38, 37, 40, 40 and 35. Home items 24, 20, 25 and 22 |
+| `verify_hashes.py` | **Pass**: 36/36 retrieved, 0 problems |
+| Passages | 102, unchanged |
+| Test render (to scratch) | Renders version 5.3 with no warnings; no asterisks in the page data |
+
+### Open items after revision 5.3 (from the second re-check)
+
+- **Card 2's opener** (flip test, medium): it opens with "critics say" and paraphrases Barrett, where card 1 opens in the
+  page's voice and quotes its resolution. Card 2's evidence sentence also omits "under rules they sponsored".
+- **Barrett's quote:** card 2 paraphrases her "creating a budget commission that only they qualify to be on" (P-072).
+- **Line 133's framing** (flip test and source check, low): the line is built around a refusal. It drops Johnson's
+  "respectfully" and gives no date; on Oct 7 the officials declined the in-person hearings but still sent written requests
+  (P-076, P-080).
+- **Line 226** (flip test, low): card 5's evidence sentence names neither its Supported part nor its uncertain premise,
+  and leans partly on Ellis's statement.
+- **Line 16** (flip test, low): "prosecutors" (people) beside "public defender's office" (an institution).
+- **Line 214** (flip test, low): card 4's opener could include "the public"; revision 5.3 kept Ellis's own scope ("all
+  commissioners and their staff").
+- **Line 128** (source check, low): "a proposal to change how drafts are built" doesn't say what Option C would change
+  (remove the 5% limit and list every request).
+- **Line 202** (source check, low): "2026 practice" is still undefined in the In short. ("Not a conflict" no longer
+  assumes that a conflict exists.)
+- Earlier open items stand as listed under revisions 5.1 and 5.2.
+
+### Where I'm least sure (revision 5.3)
+
+1. **Line 136's "because our sources quote more critics"** gives one reason for the two-to-one split. The structure is
+   also a reason: the critics are two groups, Barrett and the justice officials.
+2. **Line 132's label, "early, north-south representation"**, takes "early" from "earlier and ongoing input" and
+   "north-south" from P-004's "northern and southern portions". The quote now carries only "balanced representation".
+3. **Card 3's "not a conflict"** could be read as records showing no conflict. It means no record settles whether there
+   is one, as the label says.
+4. **Card 4's "the meetings"** is less specific than "the commission's meetings", which was cut to keep the line at 40
+   words.

@@ -1,0 +1,326 @@
+{
+ "checker": "independent-source-verifier (targeted)",
+ "document": "/home/user/Polysense/trials/002-psc-57171-fuel-credit/workspace.md",
+ "units": [
+  {
+   "file": "workspace.md",
+   "line": 14,
+   "sentence": "As of Nov 8, 2026, no filing we read gives a home's net (both changes together) or its timing.",
+   "marker": "{editorial: scoped to the filings we read; Georgia Power's per-$100 million figures (P-142, P-143) are examples, not a plan's effect; the order leaves the fuel timing \"as determined by the Commission\" (P-016)}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "No error. The negative claim holds against every passage: Staff's $1.35 a month (P-066, P-067) is a fuel-only look back; the per-$100 million figures are examples (P-141 to P-143); Georgia Power's $102 a year (P-054) covers all large-load revenue, not a plan's net. 'as determined by the Commission' is verbatim in P-016, and since the order sets no date, reading it as leaving the fuel timing to the PSC is fair. Minor: the note explains only the fuel side's timing; the base side waits for 'the next base rate case' (P-016), which no passage dates, and Georgia Power says base rates are frozen through 2028 (P-054). 'its timing' could mean the home's or the net's.",
+   "suggested_fix": "Optional: 'or when it would arrive'; add to the note 'the base side waits for the next base rate case, which no filing we read dates (P-016); Georgia Power says base rates are frozen through 2028 (P-054)'."
+  },
+  {
+   "file": "workspace.md",
+   "line": 15,
+   "sentence": "As of Nov 8, 2026, no filing we read gives a business's net (both changes together) or its timing.",
+   "marker": "{editorial: scoped to the filings we read; the order leaves the fuel timing \"as determined by the Commission\" (P-016)}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "No error. No passage gives a business's net: GAM's class shares (P-116) give only a relative ranking, and the per-$100 million examples are residential only (P-141), so leaving them out of this note is correct. Same minor points as L14: the note covers only the fuel timing, and 'its timing' is ambiguous.",
+   "suggested_fix": "Optional: same wording change and base-timing note as L14."
+  },
+  {
+   "file": "workspace.md",
+   "line": 159,
+   "sentence": "Base rates, the rest of the bill, could rise later.",
+   "marker": "[P-061, P-115, P-016]",
+   "verdict": "supports",
+   "evidence_span": "increasing the RTP fuel credit would put upward pressure on base rates",
+   "correct_passage": "",
+   "problem": "None material. Now in the page's own voice and hedged ('could'), which is weaker than GAM's 'would put upward pressure' (P-115); 'later' rests on P-016 ('addressed in the next base rate case'); consistent with Staff's P-090 that the direction is undetermined. Minor: the only cited source for the direction is GAM's; L9 also cites GIPL's P-105 ('may increase base rates').",
+   "suggested_fix": "Optional: add P-105 to the citation, as on L9."
+  },
+  {
+   "file": "workspace.md",
+   "line": 159,
+   "sentence": "GAM, a manufacturers' group, also filed testimony.",
+   "marker": "[P-109, P-153]",
+   "verdict": "supports",
+   "evidence_span": "Testimony of Jonathan Ly On Behalf of Georgia Association of Manufacturers",
+   "correct_passage": "",
+   "problem": "None in the claim itself (P-109 gives the manufacturing membership). Framing note on omitting Resource Supply Management is under framing_issues.",
+   "suggested_fix": ""
+  },
+  {
+   "file": "workspace.md",
+   "line": 165,
+   "sentence": "If you care most about large users not shifting costs to others: GIPL's witness, who backs Plan D, said the PSC has held large loads \"to a higher standard when it comes to cost shifting.\"",
+   "marker": "[P-152, P-097]",
+   "verdict": "supports",
+   "evidence_span": "the Commission has treated these large loads in a distinct manner, holding them to a higher standard when it comes to cost shifting",
+   "correct_passage": "",
+   "problem": "The factual part is accurate: the quote is verbatim in P-097 and correctly attributed as GIPL's description of past PSC practice; P-152 names Wilson as GIPL's witness. 'Who backs Plan D' follows from the page naming Plan D as GIPL's plan (P-095, P-096), not from the cited passages. The value heading is a framing problem (see framing_issues): Georgia Power (P-054, P-127) and PIA Staff (P-063) claim the same value for their own plans.",
+   "suggested_fix": "Give Plan D a value only it distinctly serves (for example, splitting new pipeline fees the way power-line costs are, P-104), or keep this heading and add that Georgia Power says it \"committed to protect existing customers from bearing any of the costs of adding these large customers\" (P-054) and PIA Staff objects to standard-rate customers \"absorbing all these costs\" (P-063)."
+  },
+  {
+   "file": "workspace.md",
+   "line": 167,
+   "sentence": "PIA Staff and GIPL both say today's credit shifts costs to fuel-charge payers; Georgia Power and GAM both say real-time money on the base side lowers other customers' base costs.",
+   "marker": "[P-063, P-099, P-124, P-111, P-112]",
+   "verdict": "supports",
+   "evidence_span": "such RTP revenue is reducing other costs recovered through base rates and effectively lowering the retail cost of service for customers in a base rate case",
+   "correct_passage": "",
+   "problem": "All four attributions hold: PIA Staff, 'non-RTP customers absorbing all these costs' (P-063); GIPL, 'This shifts costs to FCR customers' (P-099); Georgia Power (P-124); GAM, 'lower the remaining costs that GPC must recover from non-RTP customers' (P-112), with RTP revenues offsetting base revenue requirements (P-111). GAM's part is no stronger than its testimony. Minor: Georgia Power places the lowering 'in a base rate case' (P-124), which this sentence drops (L174 keeps it); and GIPL says 'I agree with this concept' of base-side money lowering others' costs (P-099), so the two pairs are not fully opposed.",
+   "suggested_fix": "Optional: '...lowers other customers' base costs when base rates are set. GIPL agrees with that idea but says it misses two factors. [P-099]'"
+  },
+  {
+   "file": "workspace.md",
+   "line": 168,
+   "sentence": "GAM says that if the PSC finds a change is needed, either of Georgia Power's proposed changes would \"adequately address\" the concerns of PIA Staff and intervenors.",
+   "marker": "[P-111]",
+   "verdict": "supports",
+   "evidence_span": "Should the Commission find that GPC’s RTP fuel credit calculation methodology should be modified, either of GPC’s proposed changes would adequately address PIA Staff and intervenors’ concerns",
+   "correct_passage": "",
+   "problem": "Faithful to P-111: the condition is kept ('Should the Commission find that GPC's RTP fuel credit calculation methodology should be modified'), 'adequately address' is verbatim, and the claim is no stronger than GAM's words. It also fixes r7.3's 'take-or-pay choice', which P-111 does not say. But the page never says which two changes GAM means (see framing_issues). Same unidentified reference; here it follows GAM's pipeline sentence (P-110), so readers may take Georgia Power's pipeline split as one of the 'proposed changes', which P-110 contradicts.",
+   "suggested_fix": "Keep the sentence and add: 'These appear to be its two take-or-pay choices. {analysis: GAM says \"Either of these changes would increase the amount of RTP revenues that are credited to fuel\" (P-115); Georgia Power's rebuttal cites GAM as agreeing that Option 1 does so (P-128); Georgia Power offered \"two potential options to address their concern\" (P-058)}'"
+  },
+  {
+   "file": "workspace.md",
+   "line": 173,
+   "sentence": "GAM says that if the PSC finds a change is needed, either of Georgia Power's proposed changes would \"adequately address\" the concerns of PIA Staff and intervenors.",
+   "marker": "[P-111]",
+   "verdict": "supports",
+   "evidence_span": "Should the Commission find that GPC’s RTP fuel credit calculation methodology should be modified, either of GPC’s proposed changes would adequately address PIA Staff and intervenors’ concerns",
+   "correct_passage": "",
+   "problem": "Faithful to P-111: the condition is kept ('Should the Commission find that GPC's RTP fuel credit calculation methodology should be modified'), 'adequately address' is verbatim, and the claim is no stronger than GAM's words. It also fixes r7.3's 'take-or-pay choice', which P-111 does not say. But the page never says which two changes GAM means (see framing_issues). Same unidentified reference; lower stakes in Plan A's context.",
+   "suggested_fix": "Keep the sentence and add: 'These appear to be its two take-or-pay choices. {analysis: GAM says \"Either of these changes would increase the amount of RTP revenues that are credited to fuel\" (P-115); Georgia Power's rebuttal cites GAM as agreeing that Option 1 does so (P-128); Georgia Power offered \"two potential options to address their concern\" (P-058)}'"
+  },
+  {
+   "file": "workspace.md",
+   "line": 181,
+   "sentence": "GAM says that if the PSC finds a change is needed, either of Georgia Power's proposed changes would \"adequately address\" the concerns of PIA Staff and intervenors.",
+   "marker": "[P-111]",
+   "verdict": "supports",
+   "evidence_span": "Should the Commission find that GPC’s RTP fuel credit calculation methodology should be modified, either of GPC’s proposed changes would adequately address PIA Staff and intervenors’ concerns",
+   "correct_passage": "",
+   "problem": "Faithful to P-111: the condition is kept ('Should the Commission find that GPC's RTP fuel credit calculation methodology should be modified'), 'adequately address' is verbatim, and the claim is no stronger than GAM's words. It also fixes r7.3's 'take-or-pay choice', which P-111 does not say. But the page never says which two changes GAM means (see framing_issues). In Plan B's 'Where it stands', readers will likely take 'Georgia Power's proposed changes' as Plan B, pipeline split included; GAM opposes crediting any specific RTP money against pipeline fees (P-110).",
+   "suggested_fix": "Keep the sentence and add: 'These appear to be its two take-or-pay choices. {analysis: GAM says \"Either of these changes would increase the amount of RTP revenues that are credited to fuel\" (P-115); Georgia Power's rebuttal cites GAM as agreeing that Option 1 does so (P-128); Georgia Power offered \"two potential options to address their concern\" (P-058)}'"
+  },
+  {
+   "file": "workspace.md",
+   "line": 189,
+   "sentence": "GAM says that if the PSC finds a change is needed, either of Georgia Power's proposed changes would \"adequately address\" the concerns of PIA Staff and intervenors.",
+   "marker": "[P-111]",
+   "verdict": "supports",
+   "evidence_span": "Should the Commission find that GPC’s RTP fuel credit calculation methodology should be modified, either of GPC’s proposed changes would adequately address PIA Staff and intervenors’ concerns",
+   "correct_passage": "",
+   "problem": "Faithful to P-111: the condition is kept ('Should the Commission find that GPC's RTP fuel credit calculation methodology should be modified'), 'adequately address' is verbatim, and the claim is no stronger than GAM's words. It also fixes r7.3's 'take-or-pay choice', which P-111 does not say. But the page never says which two changes GAM means (see framing_issues). In Plan C's 'Where it stands', it reads as GAM preferring Georgia Power's plan over Plan C, though GAM's 'either' most likely includes take-or-pay choice 2, which Plan C uses (P-115, P-128).",
+   "suggested_fix": "Keep the sentence and add: 'These appear to be its two take-or-pay choices. {analysis: GAM says \"Either of these changes would increase the amount of RTP revenues that are credited to fuel\" (P-115); Georgia Power's rebuttal cites GAM as agreeing that Option 1 does so (P-128); Georgia Power offered \"two potential options to address their concern\" (P-058)}'"
+  },
+  {
+   "file": "workspace.md",
+   "line": 197,
+   "sentence": "GAM says that if the PSC finds a change is needed, either of Georgia Power's proposed changes would \"adequately address\" the concerns of PIA Staff and intervenors.",
+   "marker": "[P-111]",
+   "verdict": "supports",
+   "evidence_span": "Should the Commission find that GPC’s RTP fuel credit calculation methodology should be modified, either of GPC’s proposed changes would adequately address PIA Staff and intervenors’ concerns",
+   "correct_passage": "",
+   "problem": "Faithful to P-111: the condition is kept ('Should the Commission find that GPC's RTP fuel credit calculation methodology should be modified'), 'adequately address' is verbatim, and the claim is no stronger than GAM's words. It also fixes r7.3's 'take-or-pay choice', which P-111 does not say. But the page never says which two changes GAM means (see framing_issues). In Plan D's context it most likely covers choice 1, which Plan D also uses; the reader can't tell.",
+   "suggested_fix": "Keep the sentence and add: 'These appear to be its two take-or-pay choices. {analysis: GAM says \"Either of these changes would increase the amount of RTP revenues that are credited to fuel\" (P-115); Georgia Power's rebuttal cites GAM as agreeing that Option 1 does so (P-128); Georgia Power offered \"two potential options to address their concern\" (P-058)}'"
+  },
+  {
+   "file": "workspace.md",
+   "line": 331,
+   "sentence": "GAM says that if the PSC finds a change is needed, either of Georgia Power's proposed changes would \"adequately address\" the concerns of PIA Staff and intervenors.",
+   "marker": "[P-111]",
+   "verdict": "supports",
+   "evidence_span": "Should the Commission find that GPC’s RTP fuel credit calculation methodology should be modified, either of GPC’s proposed changes would adequately address PIA Staff and intervenors’ concerns",
+   "correct_passage": "",
+   "problem": "Faithful to P-111: the condition is kept ('Should the Commission find that GPC's RTP fuel credit calculation methodology should be modified'), 'adequately address' is verbatim, and the claim is no stronger than GAM's words. It also fixes r7.3's 'take-or-pay choice', which P-111 does not say. But the page never says which two changes GAM means (see framing_issues). Same unidentified reference; lower stakes in card 9.",
+   "suggested_fix": "Keep the sentence and add: 'These appear to be its two take-or-pay choices. {analysis: GAM says \"Either of these changes would increase the amount of RTP revenues that are credited to fuel\" (P-115); Georgia Power's rebuttal cites GAM as agreeing that Option 1 does so (P-128); Georgia Power offered \"two potential options to address their concern\" (P-058)}'"
+  },
+  {
+   "file": "workspace.md",
+   "line": 282,
+   "sentence": "GIPL's testimony says pipelines, like power lines, must meet peaks whenever they occur, so new fees warrant that split until the next rate case.",
+   "marker": "[P-104, P-096]",
+   "verdict": "supports",
+   "evidence_span": "Since FT is similar to transmission, in that it is required to meet peak demand conditions whenever and for whatever reason they may occur",
+   "correct_passage": "",
+   "problem": "Faithful to the filed testimony: P-104 gives the reason and the recommendation, and P-096 gives 'until the issue is fully examined in the next rate case'. 'that split' has no antecedent in the sentence (it relies on the card heading). 'GIPL's testimony' could be read as including the hearing, where Georgia Power says the witness switched to an energy split (P-154, P-155); L196 says 'As filed'.",
+   "suggested_fix": "'GIPL's written testimony says pipeline space, like power lines, must meet peaks whenever they occur, so new pipeline fees should be split the way power-line costs are until the next rate case.'"
+  },
+  {
+   "file": "workspace.md",
+   "line": 282,
+   "sentence": "Evidence: Mixed on group effects, peaks.",
+   "marker": "{editorial: restates the label}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "Accurately compresses the label's two 'Mixed' items on L280 (whether where money is credited changes what each customer group pays; peaks versus every hour) and, like the other cards, leaves out the size note. Too terse to read: 'group effects' is undefined.",
+   "suggested_fix": "'Evidence: Mixed on whether it changes what each customer group pays, and on peaks versus every hour.'"
+  },
+  {
+   "file": "workspace.md",
+   "line": 294,
+   "sentence": "In short: Fuel charges keep paying pipeline fees; base rates could stay lower.",
+   "marker": "[P-083, P-144, P-061, P-111, P-112]",
+   "verdict": "supports",
+   "evidence_span": "The revenues derived from RTP sales place downward price pressure on non-RTP rates",
+   "correct_passage": "",
+   "problem": "'Fuel charges keep paying pipeline fees' follows from P-083 ('all FT costs are indisputably charged to and recovered from fuel revenues') and P-144; 'base rates could stay lower' follows from GAM's P-111 and P-112 with P-061, hedged with 'could'. The direction is right (no fuel-charge cut, less base-side pressure). Minor: 'stay lower' names no comparison (it means lower than under plans that move money to fuel) and rests on a base-side benefit GIPL disputes (P-098); card 9 phrases the same effect as 'less chance of base rates rising later'.",
+   "suggested_fix": "'In short: Fuel charges keep paying pipeline fees; base rates would be less likely to rise later.'"
+  },
+  {
+   "file": "workspace.md",
+   "line": 318,
+   "sentence": "In short: Fuel charges keep paying most left-out costs; base rates could stay lower.",
+   "marker": "[P-144, P-063, P-065, P-061, P-124]",
+   "verdict": "supports",
+   "evidence_span": "such RTP revenue is reducing other costs recovered through base rates",
+   "correct_passage": "",
+   "problem": "'most' is correctly narrower than Staff's 'all these costs' (P-063), since one item's over/under is 'determined in base rates per FCR-27 stipulation' (P-065); 'base rates could stay lower' follows from P-124 and P-061. Same minor 'stay lower' comparison issue as L294; 'left-out costs' is informal shorthand.",
+   "suggested_fix": "'In short: Fuel charges keep paying most costs left out of the credit; base rates would be less likely to rise later.'"
+  },
+  {
+   "file": "workspace.md",
+   "line": 318,
+   "sentence": "Georgia Power says the real-time rate is \"not intended to recover all embedded costs\" but helps cover fixed costs.",
+   "marker": "[P-121, P-052, P-124]",
+   "verdict": "supports",
+   "evidence_span": "the RTP rate is by design a marginal cost-based rate that is not intended to recover all embedded costs",
+   "correct_passage": "",
+   "problem": "The quote is verbatim (P-121), and 'helps cover fixed costs' is supported by P-052 ('RTP incremental load is contributing to fixed costs') and P-124. It is weaker than Georgia Power's own claim, not stronger: Georgia Power says real-time customers pay 'their fair share of system costs' (P-121) and are effectively paying their share of fixed costs through the base side (P-124). Cutting 'by design a marginal cost-based rate' makes the quote sound like an admission. See framing_issues.",
+   "suggested_fix": "'Georgia Power says the real-time rate is by design a marginal-cost rate, \"not intended to recover all embedded costs,\" and that real-time customers still pay \"their fair share of system costs,\" partly through money on the base side. [P-121, P-124, P-052]'"
+  },
+  {
+   "file": "page.yaml",
+   "line": 15,
+   "sentence": "\"Plan D\": {text: \"GIPL's plan\"}",
+   "marker": "# [P-093, P-095]",
+   "verdict": "supports",
+   "evidence_span": "Accordingly, I make several recommendations for changes to the RTP fuel credit",
+   "correct_passage": "",
+   "problem": "None material. It matches the Plan D heading (workspace L194) and the parallel chips for Plans B and C. The filing is jointly for GIPL and three member congregations (P-093, P-152); the body says so (L197).",
+   "suggested_fix": ""
+  }
+ ],
+ "framing_issues": [
+  {
+   "file": "workspace.md",
+   "line": 165,
+   "text": "If you care most about large users not shifting costs to others: GIPL's witness, who backs Plan D, ...",
+   "issue": "Unequal values mapping. 'Large users not shifting costs to others' is a value Georgia Power claims for its own plan (it 'committed to protect existing customers from bearing any of the costs of adding these large customers', P-054; its pipeline split gives 'customer protection', P-127). PIA Staff's whole case is that standard-rate customers are 'absorbing all these costs' (P-063). L167's own analysis says every party claims to protect standard-rate customers. Plan D gets the case's central, most appealing goal, while Plan B gets a narrow technical one ('keeping the real-time rate's design intact'), which steers readers toward Plan D. The quote is GIPL's account of PSC practice, which also gives Plan D a sense of PSC backing. New in this revision (r7.3's line was narrow and distinctive).",
+   "severity": "high"
+  },
+  {
+   "file": "workspace.md",
+   "line": 318,
+   "text": "Georgia Power says the real-time rate is \"not intended to recover all embedded costs\" but helps cover fixed costs.",
+   "issue": "Unequal strength between the two cards on these costs. Card 7's In short gives PIA Staff and GIPL their full claim ('makes fuel-charge payers absorb them'). Card 8 is Georgia Power's own card, but its In short opens with a concession-sounding quote and the weak verb 'helps cover', and drops Georgia Power's actual claim that real-time customers pay 'their fair share of system costs' (P-121; P-124). Plan A (L173) keeps the 'fair share' claim, so Georgia Power's own card is weaker than the plan summary. 'Embedded costs' is jargon not defined on the card (only in the glossary, L136).",
+   "severity": "medium"
+  },
+  {
+   "file": "workspace.md",
+   "line": 168,
+   "text": "either of Georgia Power's proposed changes would \"adequately address\" ...",
+   "issue": "Vague reference: the page never says which two changes. Readers will likely take 'Georgia Power's proposed changes' as Plan B ('Georgia Power's plan'), pipeline split included. Here it comes right after GAM's statement that no specific RTP money should go against pipeline fees (P-110), so that reading makes GAM look self-contradictory. The passages point to the two take-or-pay choices (P-058, P-115, P-128); say so in a sentence tagged {analysis}.",
+   "severity": "medium"
+  },
+  {
+   "file": "workspace.md",
+   "line": 181,
+   "text": "either of Georgia Power's proposed changes would \"adequately address\" ...",
+   "issue": "In Plan B's 'Where it stands', the unidentified 'proposed changes' reads as GAM finding Plan B adequate, pipeline split included, though GAM opposes crediting RTP money against pipeline fees (P-110).",
+   "severity": "medium"
+  },
+  {
+   "file": "workspace.md",
+   "line": 189,
+   "text": "either of Georgia Power's proposed changes would \"adequately address\" ...",
+   "issue": "In Plan C's 'Where it stands', it reads as GAM preferring Georgia Power's plan over Staff's, though GAM's 'either' most likely includes take-or-pay choice 2, Staff's own choice (P-115, P-128). That may be the opposite of what GAM meant.",
+   "severity": "medium"
+  },
+  {
+   "file": "workspace.md",
+   "line": 197,
+   "text": "either of Georgia Power's proposed changes would \"adequately address\" ...",
+   "issue": "Same unidentified reference in Plan D; it most likely covers choice 1, which Plan D also uses, but readers can't tell.",
+   "severity": "low"
+  },
+  {
+   "file": "workspace.md",
+   "line": 173,
+   "text": "either of Georgia Power's proposed changes would \"adequately address\" ...",
+   "issue": "Same unidentified reference (Plan A); lower stakes in this context.",
+   "severity": "low"
+  },
+  {
+   "file": "workspace.md",
+   "line": 331,
+   "text": "either of Georgia Power's proposed changes would \"adequately address\" ...",
+   "issue": "Same unidentified reference (card 9); lower stakes in this context.",
+   "severity": "low"
+  },
+  {
+   "file": "workspace.md",
+   "line": 167,
+   "text": "PIA Staff and GIPL both say ...; Georgia Power and GAM both say ...",
+   "issue": "The two-pair split hides that GIPL says 'I agree with this concept' of base-side money lowering others' costs, while saying it misses two factors (P-099). It also drops Georgia Power's 'in a base rate case' timing (P-124). Verbs and caveats are otherwise equal.",
+   "severity": "low"
+  },
+  {
+   "file": "workspace.md",
+   "line": 282,
+   "text": "GIPL's testimony says ... so new fees warrant that split until the next rate case.",
+   "issue": "'that split' has no antecedent in the sentence. 'GIPL's testimony' is unscoped while Georgia Power says the witness changed this advice at the hearing (P-154, P-155); 'written testimony' or 'As filed' would match L196.",
+   "severity": "low"
+  },
+  {
+   "file": "workspace.md",
+   "line": 282,
+   "text": "Evidence: Mixed on group effects, peaks.",
+   "issue": "Telegraphic: 'group effects' is undefined and 'peaks' is unclear for a grade 6-8 phone reader.",
+   "severity": "low"
+  },
+  {
+   "file": "workspace.md",
+   "line": 294,
+   "text": "base rates could stay lower",
+   "issue": "Comparison with no referent (lower than what?). Card 9's 'less chance of base rates rising later' says the same thing clearly and keeps the cards parallel.",
+   "severity": "low"
+  },
+  {
+   "file": "workspace.md",
+   "line": 318,
+   "text": "Fuel charges keep paying most left-out costs; base rates could stay lower.",
+   "issue": "Same 'stay lower' comparison with no referent as L294; 'left-out costs' is informal shorthand.",
+   "severity": "low"
+  },
+  {
+   "file": "workspace.md",
+   "line": 159,
+   "text": "GAM, a manufacturers' group, also filed testimony.",
+   "issue": "This paragraph names four filers but not Resource Supply Management, which also filed (P-162), so 'also' can read as a complete list. The page covers Resource Supply Management elsewhere (L103, L168, L204).",
+   "severity": "low"
+  },
+  {
+   "file": "workspace.md",
+   "line": 14,
+   "text": "no filing we read gives a home's net (both changes together) or its timing",
+   "issue": "'its' could mean the home's or the net's; 'both changes' depends on the previous sentence.",
+   "severity": "low"
+  },
+  {
+   "file": "workspace.md",
+   "line": 15,
+   "text": "no filing we read gives a business's net (both changes together) or its timing",
+   "issue": "Same 'its' ambiguity as L14.",
+   "severity": "low"
+  }
+ ],
+ "summary": {
+  "units_checked": 18,
+  "supports": 15,
+  "partial": 0,
+  "does_not_support": 0,
+  "wrong_span": 0,
+  "questionable_or_invalid_tags": 0
+ }
+}

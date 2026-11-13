@@ -1,6 +1,6 @@
 # Georgia regulators' Dec 15 decision: how real-time payments split between fuel and base costs
 
-Status: Open case at the Georgia Public Service Commission · Final decision scheduled Dec 15, 2026 · Trial 002, revision 7.4: fixes from the third targeted re-check (last fix pass this cycle) <!-- nocheck -->
+Status: Open case at the Georgia Public Service Commission · Final decision scheduled Dec 15, 2026 · Trial 002, revision 7.5: passed checks (round 7); one values-guide line changed after the fourth re-check, follow-up check pending; see verification.md <!-- nocheck -->
 How this page was made: an AI agent drafted it from archived sources; every sentence is cited or labeled. Dates were copied from PSC pages on Nov 8, 2026. <!-- nocheck -->
 
 ## 30-second version
@@ -162,7 +162,7 @@ Plans B to D come from Georgia Power, the utility; PIA Staff, the PSC's advocacy
 
 - **If you care most about keeping the real-time rate's design intact:** Georgia Power's witnesses, who back Plan B, asked the PSC to "preserve the integrity and structure of the RTP rate design." [P-117, P-131]
 - **If you care most about sharing fuel costs by energy use:** PIA Staff's witnesses, who back Plan C, said "costs recovered from fuel revenues should be allocated based on energy usage." [P-059, P-062]
-- **If you care most about large users not shifting costs to others:** GIPL's witness, who backs Plan D, said the PSC has held large loads "to a higher standard when it comes to cost shifting." [P-152, P-097]
+- **If you care most about splitting new pipeline fees like power-line costs:** GIPL's witness, who backs Plan D, said new pipeline fees warrant "the same allocation factor as transmission costs." [P-152, P-104]
 - **If you care most about keeping base rates down:** GAM's witness, whose view comes closest to Plan A, said "increasing the RTP fuel credit would put upward pressure on base rates." [P-153, P-115, P-110, P-111]
 - Every party whose testimony we could read says its approach protects customers on standard rates; the parties differ on how. {analysis: Georgia Power commits to "protect existing customers" (P-054) and cites "customer protection" (P-127); PIA Staff objects to "non-RTP customers absorbing all these costs" (P-063); GIPL says today's credit "shifts costs to FCR customers" (P-099); GAM says real-time revenue puts "downward price pressure on non-RTP rates" (P-111) and lowers costs left for them (P-112)} PIA Staff and GIPL both say today's credit shifts costs to fuel-charge payers; Georgia Power and GAM both say real-time money on the base side lowers other customers' base costs. [P-063, P-099, P-124, P-111, P-112]
 - No party whose testimony we could read asks to keep today's method, Plan A, in every part. {editorial: scoped to the testimony we could read} GAM's view comes closest to Plan A. {analysis: GAM's statements in P-110 and P-111, next} GAM says no specific part of real-time revenue should be credited against pipeline fees. [P-110] GAM says that if the PSC finds a change is needed, either of Georgia Power's proposed changes would "adequately address" the concerns of PIA Staff and intervenors. [P-111] Resource Supply Management's testimony, a scan we could not read, isn't covered. {editorial: process note}

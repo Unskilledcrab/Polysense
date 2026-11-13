@@ -1,0 +1,29 @@
+Trial 003, revision 5.3 (correction; final fixes from the second targeted re-check): changed or new units
+Line numbers are in trials/003-fulton-2027-budget/workspace.md (revision 5.3); no lines moved, so they match
+revision 5.2's. The baseline is revision 5.2 (workspace sha256 6c8dc5ad3631…). "Unit" = one sentence and its
+citation or tag. Kinds: [VALUES] values-guide line, [IN-SHORT] card "In short" line, [NOCHECK] status lines
+(not checked). Item numbers refer to the coordinator's revision 5.3 message.
+
+workspace.md
+L3   [NOCHECK] Status line: "revision 5.3: final fixes from the second targeted re-check".
+L4   [NOCHECK] "How this page was made" line: "then made final fixes after two targeted re-checks".
+L92  "Commissioner Barrett's resolution says the commission restricted requests for extra money to 5% of each department's "base budget."" [P-029, P-032] (item 2).
+L132 [VALUES] Label now "early, north-south representation" (a value only this side states); "north-south" removed from the body, so "balanced" appears only inside the quote: "...adds "earlier and ongoing input," with "balanced representation."" [P-004, P-016, P-017] (item 3a). 32 words; quotes 4 + 2.
+L134 [VALUES] "...says listing extra requests in the proposed budget let the Board "get a true picture of the departments' needs."" [P-024, P-028, P-032] (item 2; "has let" became "let" to stay at 35 words).
+L135 [VALUES] New: "Both sides also invoke Board members' input." {analysis: P-004; P-029; P-076} (item 3a).
+L135 [VALUES] New: "Resolution 26-0460 adds "earlier and ongoing input from members of the Board," and Option C says the commission failed to seek priorities "from all members of the board."" [P-004, P-017, P-029, P-024] (item 3a).
+L135 [VALUES] New: "The justice officials object to presenting their needs to a two-commissioner panel "rather than the full board," FOX 5 reported." [P-076, P-080] (item 3a; FOX 5's wording, attributed).
+L136 [VALUES] "Each group gets one line, and two of the three lines come from groups critical of today's process, because our sources quote more critics." {analysis: see the Layer 4 introduction; P-073, P-079; P-078, P-072, P-071, P-077} (item 1; was "Each side gets one line, so ...").
+L136 [VALUES] "The justice officials' requests for more money and a January vote are on cards 6 and 5." {editorial} (item 1; unchanged in substance).
+L178 [IN-SHORT] Card 1: "Records back these rules, not results, which wait on the draft." {analysis} (item 3b; was "The county code confirms these rules; results wait on the draft."). Line 40 words.
+L190 [IN-SHORT] Card 2: "Records back who serves, not how much the two commissioners shape the draft." {analysis} (item 3b; was "Who serves is on record; ..."). Line 38 words.
+L202 [IN-SHORT] Card 3: "Records back the code's rule and 2026 practice, not a conflict." {analysis} (item 3b; was "... are on record; the conflict isn't settled."). Line 37 words.
+L214 [IN-SHORT] Card 4: "If the claim is right, all commissioners and their staff can hear departments' requests." {analysis} (item 2).
+L214 [IN-SHORT] Card 4: "Commissioner Ellis called the meetings "open meetings" and the process "more transparent and open" than in recent years." [P-073] ("the commission's meetings" became "the meetings" to stay at 40 words). Line 40 words.
+L238 [IN-SHORT] Card 6: "2026 county records back rising jail-agreement costs, not most other needs." {analysis} (item 2). Line 35 words.
+
+home.md
+L14  "Fulton's Board of Commissioners voted to set aside (file) a resolution to end a 5% limit on departments' requests for extra money." {analysis: status "Filed" after a Nov 4 vote to file, with no later step (P-024, P-025); P-024 and P-029 describe the limit} (item 2). 22 words.
+
+page.yaml
+No strings changed.
