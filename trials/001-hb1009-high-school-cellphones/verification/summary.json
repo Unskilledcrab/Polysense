@@ -1,10 +1,10 @@
 {
  "verified": true,
- "statusText": "Passed checks (round 6), revision 6.4",
+ "statusText": "Passed our checks",
  "intro": "On Nov 8, 2026, this page was rewritten for readers new to the subject, after usability feedback: it now says what the law means for students, families and staff, and what each side says it protects. An AI agent wrote it from saved copies of its sources. Separate AI checkers, which never saw the drafting, then checked it in rounds. In this trial, no person checked the facts. Here is what the checkers did, what they found, and what is still open.",
  "stats": [
   {
-   "value": "286",
+   "value": "292",
    "label": "sentences, each tied to a source or labeled as our own analysis"
   },
   {

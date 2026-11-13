@@ -1,0 +1,28 @@
+{
+ "trial": "001-hb1009-high-school-cellphones",
+ "revision": "6.4",
+ "generated": "2026-11-13",
+ "gate": {
+  "citations:workspace.md": {
+   "pass": true,
+   "result": "Result: PASS (0 errors, 0 warnings)"
+  },
+  "citations:home.md": {
+   "pass": true,
+   "result": "Result: PASS (0 errors, 0 warnings)"
+  },
+  "readability": {
+   "pass": true
+  },
+  "hashes": {
+   "pass": true,
+   "result": "Result: PASS (0 problems)"
+  },
+  "balance_prompts": 1
+ },
+ "units": 292,
+ "checked_ok": 292,
+ "flagged": [],
+ "pending": [],
+ "verified": true
+}

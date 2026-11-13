@@ -12,4 +12,4 @@
 
 ## What happened
 
-- **Oct 27, 2026:** Georgia Power filed the last scheduled testimony. [P-117, P-009, P-010, P-011] Each plan we could read would likely lower fuel charges for homes, but base rates could rise later. [P-058, P-115, P-144, P-061, P-105]
+- **Oct 27, 2026:** Georgia Power filed the last scheduled testimony. [P-117, P-009, P-010, P-011] Each proposed change we could read would likely lower fuel charges for homes; base rates could rise later, in a future rate case. [P-058, P-115, P-144, P-061, P-105, P-016]
