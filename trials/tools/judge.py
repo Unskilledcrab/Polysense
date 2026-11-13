@@ -115,13 +115,21 @@ def raw_passages(path: Path) -> dict[str, str]:
 def write_batches(out: Path, items: list[dict], size: int) -> None:
     out.mkdir(parents=True, exist_ok=True)
     (out / "PROMPT.md").write_text(PROMPT, encoding="utf-8")
-    n = 0
-    for i in range(0, len(items), size):
-        n += 1
-        (out / f"batch-{n:02d}.json").write_text(json.dumps({"units": items[i:i + size]}, ensure_ascii=False, indent=1),
-                                                 encoding="utf-8")
-    words = sum(len(json.dumps(x).split()) for x in items)
-    print(f"{len(items)} units in {n} batch(es) in {out} (about {int(words * 1.4):,} input tokens in all)")
+    # A batch closes at `size` units or about 15k tokens, whichever comes first: a small model's context holds its
+    # instructions, the batch and its answers, and one quiz batch of 55 long units overflowed it.
+    n, batch, chars, total = 0, [], 0, 0
+    for item in items + [None]:
+        c = len(json.dumps(item, ensure_ascii=False)) if item else 0
+        if batch and (item is None or len(batch) >= size or chars + c > 52000):
+            n += 1
+            (out / f"batch-{n:02d}.json").write_text(json.dumps({"units": batch}, ensure_ascii=False, indent=1),
+                                                     encoding="utf-8")
+            batch, chars = [], 0
+        if item:
+            batch.append(item)
+            chars += c
+            total += c
+    print(f"{len(items)} units in {n} batch(es) in {out} (about {total // 3500 * 1000:,} input tokens in all)")
 
 
 def emit(trial: Path, out: Path, size: int, everything: bool) -> None:
