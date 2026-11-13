@@ -33,8 +33,9 @@ Use only those passages: no outside knowledge, no other files, no web.
 
 Each unit has: "sentence" (one sentence from a civic explainer), "marker" (its citation or tag), "kind", and
 "passages" (the full text of every passage it cites or names). A unit that says something is absent, unknown or
-undisputed may also have "related": other passages from the same archive. If a related passage shows the thing does
-exist or is disputed, the sentence is not supported.
+undisputed may also have "related": other passages from the same archive that weren't cited. If a related passage
+shows the thing does exist or is disputed, or shows that a person's or party's position is narrower or more
+conditional than the sentence says, the sentence is "partial" or "questionable".
 
 For kind "cited", give one verdict:
 - "supports": the passages state this, or it follows directly from them.
@@ -86,12 +87,12 @@ def related(u: dict, passages: dict[str, str], k: int = 4) -> list[str]:
     return [p for p in sorted(score, key=score.get, reverse=True)[:k] if score[p] > 0]
 
 
-def batch_units(rows: list[dict], passages: dict[str, str], raw: dict[str, str]) -> list[dict]:
+def batch_units(rows: list[dict], passages: dict[str, str], raw: dict[str, str], always: bool = False) -> list[dict]:
     out = []
     for u in rows:
         item = {"id": u["key"], "sentence": u["sentence"], "marker": u["marker"], "kind": u["kind"],
                 "passages": {p: raw.get(p, "(no such passage)") for p in u["passages"]}}
-        if ABSENT.search(u["sentence"]):
+        if always or ABSENT.search(u["sentence"]):
             item["related"] = {p: raw.get(p, "") for p in related(u, passages)}
         out.append(item)
     return out
@@ -128,7 +129,8 @@ def emit(trial: Path, out: Path, size: int, everything: bool) -> None:
     rows = current(trial)
     write(trial, rows, store)
     todo = [u for u in rows if everything or not store.get(u["key"], {}).get("verdict")]
-    write_batches(out, batch_units(todo, load_passages(trial / "passages.md"), raw_passages(trial / "passages.md")), size)
+    write_batches(out, batch_units(todo, load_passages(trial / "passages.md"), raw_passages(trial / "passages.md"),
+                                   "--related-all" in sys.argv), size)
 
 
 def grounded(span: str, ids: list[str], passages: dict[str, str]) -> bool:
