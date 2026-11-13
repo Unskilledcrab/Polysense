@@ -61,7 +61,8 @@ def visual_units(trial: Path):
     if (v.get("bill") or {}).get("note"):
         notes.append((v["bill"]["title"] + ": ", v["bill"]["note"]))
     if v.get("seats"):
-        notes.append((f"{v['seats']['total']} seats, {v['seats'].get('vacant', 0)} vacant: ", v["seats"]["note"]))
+        vac = v["seats"].get("vacant")
+        notes.append((f"{v['seats']['total']} seats{f', {vac} vacant' if vac else ''}: ", v["seats"]["note"]))
     for i, (lead, note) in enumerate(notes, 1):
         pos = 0
         for m in MARKER.finditer(note):

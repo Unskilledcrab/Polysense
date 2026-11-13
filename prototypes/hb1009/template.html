@@ -560,7 +560,7 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
       var dots = [];
       for (var i = 0; i < v.seats.total; i++) dots.push(el("span", { class: "seat" + (i >= v.seats.total - v.seats.vacant ? " vacant" : "") }));
       box.appendChild(el("h3", { text: "Who decides" }));
-      box.appendChild(el("div", { class: "seats", role: "img", "aria-label": v.seats.total + " seats, " + (v.seats.vacant ? v.seats.vacant + " vacant" : "none vacant") }, dots));
+      box.appendChild(el("div", { class: "seats", role: "img", "aria-label": v.seats.total + " seats for the deciders" + (v.seats.vacant ? ", " + v.seats.vacant + " vacant" : "") }, dots));
       box.appendChild(el("p", { class: "note" }, [units(v.seats.units)]));
     }
     return box;

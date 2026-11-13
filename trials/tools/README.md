@@ -13,6 +13,10 @@ tool does one mechanical job. Judgment stays with the runbook and the verificati
 | `verify_hashes.py SOURCES.yaml [--print]` | Every retrieved file in `_raw/` matches its recorded SHA-256 | PyYAML |
 | `readability.py PAGE` | Flesch–Kincaid grade per section; flags the 30-second version and Layers 1–3 above 8.5. Card labels and other `<!-- nocheck -->` lines aren't scored; it reports the longest card label instead | stdlib |
 | `check_verifier.py REPORT PASSAGES [KEY]` | Machine-check an independent verifier's evidence spans; list flags; score its catch rate against planted errors | stdlib |
+| `ledger.py sync\|seed\|pending\|status TRIAL` | The claims ledger (`claims.jsonl`): one verdict per sentence, kept until the sentence or a cited passage changes. Lists what needs a check | stdlib (PyYAML for `page.yaml` visuals) |
+| `judge.py emit\|ingest\|quiz\|score …` | Pair checks: small batches (a sentence plus only its cited passages) for a cheap model; verifies answers and spans in code; builds and scores blind planted-error quizzes | stdlib |
+| `lint_balance.py lint\|surface TRIAL` | Balance prompts (verbs, values guide, undated unknowns, caveats, grades, terms) and the balance surface for one fairness reviewer | stdlib (PyYAML for terms) |
+| `status.py TRIAL [...]` | Writes `status.json` and the page's status fields from the gate and the ledger | stdlib |
 | `render_prototype.py TEMPLATE OUT TRIAL [TRIAL ...]` | Build the self-contained, clickable prototype from one or more trials. Each trial needs a `page.yaml` (slug, title, header chips, short source labels, optional bill-markup view) | PyYAML |
 
 ### `extract/`: text from non-HTML filings

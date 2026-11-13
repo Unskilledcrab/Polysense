@@ -50,13 +50,13 @@ short_labels:                      # source chip labels: one or two words, so a 
 audiences: ["Fulton resident", "Property owner", "Courts or jail"]   # chip names for the "If you" lines, in page order
 visuals:                           # pictures on the Summary tab; every note is cited or tagged like a page sentence
   numbers:
-    - {value: "$1.06 billion", note: "The General Fund, the county's biggest fund, in the 2026 budget. [P-052, P-054]"}
+    - {value: "$1.06 billion", note: "General Fund spending in the 2026 budget; the General Fund is the county's biggest fund. [P-052, P-054]"}
   split:
-    title: "Where the General Fund's money came from in the 2026 budget"
+    title: "Where the General Fund's 2026 income was expected to come from"
     parts:
       - {name: "Property tax", amount: 834032152, show: "$834 million"}
-      - {name: "All other sources", amount: 223068426, show: "$223 million"}
-    note: "Property tax was $834,032,152 of the $1,057,100,578 General Fund in the 2026 budget. [P-054, P-101] That is about 79%. {computed: 834,032,152 ÷ 1,057,100,578 = 0.789} All other sources come to $223,068,426. {computed: 1,057,100,578 − 834,032,152 = 223,068,426}"
+      - {name: "All other income", amount: 149430813, show: "$149 million"}
+    note: "Property tax was $834,032,152 of the $983,462,965 in General Fund revenue in the 2026 budget. [P-054, P-101] That is about 85%. {computed: 834,032,152 ÷ 983,462,965 = 0.848} All other revenue comes to $149,430,813. {computed: 983,462,965 − 834,032,152 = 149,430,813} The 2026 budget planned to spend more than this income, using savings. [P-054]"
   seats:
     total: 7
     vacant: 1
