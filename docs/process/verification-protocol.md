@@ -16,6 +16,45 @@ Three ideas make it trustworthy without a human:
    copy with known, hidden errors and count what it catches. "Several models agree" is never evidence.
    A **measured catch rate** is.
 
+## The lean flow (from 2026-11-13)
+
+The reader-first cycle spent about 13.5 million tokens on 57 checker and drafter runs for three pages, nearly all on the
+top model, and found 0 unsupported claims. Every checker re-read the whole page and every passage; re-checks re-read
+unchanged sentences; fairness review had no end. The layers below still define *what* is checked. This section sets
+*how much* runs, and on which tier.
+
+| Step | Runs when | Who or what | Tier |
+|---|---|---|---|
+| Gate, balance lints | Every change | Code: `check_citations.py`, `verify_hashes.py`, `readability.py`, `lint_balance.py` | none |
+| **Pair check** | Only sentences the ledger marks pending (`ledger.py`): new or changed text, or a changed cited passage | `judge.py`: a model sees one sentence and only the passages it cites (plus related passages for "no one disputes" claims). Code verifies every evidence span | Sonnet |
+| Whole-page source check | Once, when a page is first published | One blind agent, as in layer 2 | Strongest tier available |
+| Fairness review | Once per revision that touches the balance surface | One reviewer reads `lint_balance.py surface` (about 1,800 words), from each side's seat, with the flip test. Blocks only on a high-severity issue | Sonnet |
+| Full bias panel | First publication, or when a card claim, evidence grade or side changes | Layer 3 | Sonnet |
+| Planted-error check | Each new page; each change of checker tier or prompt | `judge.py quiz` on planted lines mixed blind with clean ones | The checker's tier |
+
+**Stop rule:** one check, one follow-up on changed sentences, then open items. No third pass.
+
+**Fixes are patches.** A fix is a list of exact replacements applied by code or by the coordinator. A drafter is never
+resumed: a resumed drafter replays its whole history (600–890k tokens a turn last cycle) for a ten-word change.
+
+**Budget:** a first publication should cost at most 1.0M tokens (at most 300k on the top tier); a revision at most
+100k. Record actual spend in the trial's `budget.json`. These are targets to measure against.
+
+**How the tiers were qualified (2026-11-13)**, on gold data from the reader-first cycle:
+
+| Test | Haiku | Sonnet |
+|---|---|---|
+| 52 planted errors (5 sets) mixed with 60 clean sentences: errors caught | 51 of 52 (the miss was a mistyped ID, which ingest rejects) | **52 of 52** |
+| Same quiz: clean sentences wrongly flagged | 10 of 60 (17%) | **0 of 60** |
+| 55 sentences the top tier had judged partial or questionable: re-flagged | 35 of 55 (64%) | 9 of 55 (16%) |
+
+Sonnet is qualified for the pair check: it catches real errors without false alarms. **No cheap tier is qualified to
+find subtle overstatement** (a single unsupported word, a missing citation for one clause) from a sentence and its
+cited passages alone; many of those findings needed a passage the sentence didn't cite. That is why a new page still
+gets one whole-page read, and why the lints and the fairness review carry the rest. The checker prompt was tightened
+afterward ("every clause needs support"; related passages); that version has not had the full quiz yet. Each test
+agent cost about 95–150k tokens, almost all fixed overhead; the same batches through an API would be about 27k in all.
+
 ## The five layers
 
 | # | Layer | Who or what | Catches | Pass condition |

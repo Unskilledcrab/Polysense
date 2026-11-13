@@ -59,6 +59,19 @@ automate any pipeline step, unless the user asks you to and the step has passed 
 10. **Clarity.** Follow [docs/product/content-style-guide.md](docs/product/content-style-guide.md): answer
     first, length budgets, grade 6–8 reading level, define jargon.
 
+## Cost rules (AI usage is a budget)
+
+- **Code first.** If a check can be a script, it is a script. Run the gate and `lint_balance.py` before any model.
+- **Check a sentence once.** `ledger.py` keeps each verdict until the sentence or its cited passages change. Never
+  re-run a whole-page check to confirm a small edit; run `judge.py` on the pending units.
+- **Smallest input, cheapest qualified tier.** A checker gets a sentence and its cited passages, not the page. Tiers and
+  their test scores are in the [verification protocol](docs/process/verification-protocol.md); don't use a stronger
+  tier than the step calls for.
+- **Stop.** One check, one follow-up, then open items. Fairness notes below high severity are open items.
+- **No resumed drafters, no process paperwork for agents to re-read.** Fixes are patches. Agents read the
+  [drafter card](docs/process/drafter-card.md) and the lines they change, not the history.
+- **Say what it cost.** Report tokens per step against the page's budget.
+
 ## Conventions
 
 - Codename `civic` in code and paths. The public brand lives in a single setting.
