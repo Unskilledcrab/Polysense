@@ -2,6 +2,8 @@
 # workspace.md, home.md, passages.md and sources.yaml). Read by trials/tools/render_prototype.py.
 slug: fulton-budget-2027           # used in page links: #fulton-budget-2027, #fulton-budget-2027-options, ...
 kind: budget                    # law | regulatory-case | budget: sets the decision and options headings
+topic: "County budget"        # a neutral subject label for the app bar and cards; a label, not a claim
+icon: building                # one of the built-in icons: school | bolt | building
 code: "Fulton County · 2027 budget"
 title: "Fulton County commissioners must adopt the 2027 budget by their second regular January meeting"  # [P-005, P-014, P-041]
 link_text: "Fulton County's 2027 budget"  # [P-005, P-042]

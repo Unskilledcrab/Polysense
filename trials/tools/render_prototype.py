@@ -278,7 +278,7 @@ def build_workspace(trial: Path) -> dict:
     markup = cfg.get("markup") or {}
     changes = bill_changes(trial / markup["file"], [tuple(x) for x in markup["lines"]]) if markup else []
     return {
-        "slug": cfg["slug"], "code": cfg["code"], "title": cfg["title"], "linkText": cfg["link_text"], "kind": kind,
+        "slug": cfg["slug"], "code": cfg["code"], "title": cfg["title"], "linkText": cfg["link_text"], "kind": kind, "topic": cfg.get("topic") or "", "icon": cfg.get("icon") or "",
         "trial": trial.name.split("-")[0],
         "status": cfg.get("status") or [], "optionChips": cfg.get("option_chips") or {},
         "verified": bool(verification.get("verified")),

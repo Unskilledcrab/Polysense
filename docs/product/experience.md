@@ -107,13 +107,20 @@ Design for a phone first, then widen. The owner reviewed the first prototype on 
 informative but harder to read and navigate than it should be. The second version of the prototype tries
 these patterns. They are experiments: keep the ones readers find easier, and change the rest.
 
-- The site menu sits in a bottom bar on phones, within thumb reach. Wide screens keep it at the top.
-- A bill page has one row of plainly named tabs (Summary, What it does, Options, Arguments, Sources),
-  pinned at the top while you scroll. Tab content starts near the top of the screen; the 30-second
-  version appears only on Summary.
-- Summary leads with the 30-second version, then "What you can do".
-- Labeled fields show the label on its own line and one sentence per line, with a short source chip at
-  the end of each line.
+- **It should feel like an app on the phone** (owner feedback, 2026-11-13). The third version uses the phone's
+  own font, flat cards and lists, a pinned app bar with a back button, and a tab bar with icons (Home, Dates,
+  How we check). Wide screens keep the menu at the top.
+- Home is a short list of decision cards. Each shows a topic icon and color, a countdown, the title, one
+  sentence and whether the page passed our checks. The whole card opens the decision.
+- Topic colors and icons mark the subject (schools, power bills, county budget). They never mark a side or
+  an option, and red and blue are not used.
+- A decision has one row of plainly named tabs (Summary, What it does, Options, Arguments, Sources), pinned
+  under the app bar.
+- Summary leads with the pictures, then "What it means for you", the 30-second version and "Not known yet".
+  Longer material (who decides, dates, the money trail) opens as a sheet from a list row.
+- "What you can do" is one button, pinned on every tab of a decision. It reads the same on every decision.
+- Each sentence ends with a small numbered dot. Tapping it slides up the exact source passage.
+- "Not known yet" is never folded or put behind a tap.
 - Options and argument cards start folded, so readers see every option and both sides' claims before
   opening any of them.
 - Each tab ends with links to the next and previous tabs.

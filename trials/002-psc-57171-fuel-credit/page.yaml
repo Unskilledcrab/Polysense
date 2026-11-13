@@ -2,6 +2,8 @@
 # workspace.md, home.md, passages.md and sources.yaml). Read by trials/tools/render_prototype.py.
 slug: psc-57171                    # used in page links: #psc-57171, #psc-57171-options, #psc-57171-checks
 kind: regulatory-case                    # law | regulatory-case | budget: sets the decision and options headings
+topic: "Power bills"          # a neutral subject label for the app bar and cards; a label, not a claim
+icon: bolt                    # one of the built-in icons: school | bolt | building
 code: "PSC Docket 57171 · 2026"
 title: "Georgia regulators' Dec 15 decision: how real-time payments split between fuel and base costs"  # [P-013, P-016, P-061, P-169]
 link_text: "Larger businesses' real-time power payments and your Georgia Power bill"  # [P-016, P-044, P-061, P-144]

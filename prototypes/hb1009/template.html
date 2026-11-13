@@ -1,317 +1,411 @@
 <title>Georgia Decisions Explained</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap">
 <style>
-/* Layout, phone first: one reading column; the site menu sits in a bottom bar on phones and in the top bar on
-   wide screens; the bill page pins one scrollable row of tabs at the top. */
+/* A phone app first: a pinned app bar, a tab bar with icons, flat cards and lists, and sheets that slide up.
+   Wide screens get the same screens in a centered column, with the menu in the top bar.
+   The page loads nothing from another host: system fonts, inline icons. */
 :root {
-  --bg: #f5f7f4; --surface: #ffffff; --sunk: #eef2ee; --ink: #16201c; --muted: #56625c; --line: #d6ddd7;
+  --bg: #f2f2f7; --surface: #ffffff; --sunk: #f1f2f6; --ink: #111418; --muted: #5b6170; --line: #e2e4ea;
   --accent: #1d5a45; --accent-ink: #ffffff; --accent-soft: #e2efe8; --gold: #8a5a00; --gold-soft: #f6ead2;
-  --ok: #2b7046; --ok-soft: #e1f0e6; --warn: #8a5a00; --warn-soft: #f6ead2; --bad: #a33a3a; --bad-soft: #f6e2e2;
+  --ok: #1f7a45; --ok-soft: #e1f0e6; --warn: #8a5a00; --warn-soft: #f6ead2; --bad: #a33a3a; --bad-soft: #f6e2e2;
   --ins: #1d5a45; --ins-bg: #dcefe4; --del: #a33a3a; --del-bg: #f6e2e2; --unc: #3d5486; --unc-soft: #e6ebf6;
-  --font-display: "Newsreader", Georgia, "Times New Roman", serif;
-  --font-body: "Atkinson Hyperlegible", "Segoe UI", system-ui, -apple-system, sans-serif;
-  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
-  --radius: 10px; --shadow: 0 1px 2px rgba(22, 32, 28, .06), 0 6px 18px rgba(22, 32, 28, .06);
-  --bottom-nav: 60px;
+  /* Topic colors mark the subject of a decision, never a side or an option. Checked with the dataviz validator. */
+  --t1: #6d4fc9; --t1-ink: #4f35a8; --t1-soft: #efebfb;
+  --t2: #b9540a; --t2-ink: #8f3f05; --t2-soft: #fbeee2;
+  --t3: #00897b; --t3-ink: #00665b; --t3-soft: #e0f3f0;
+  --on-topic: #ffffff; --glass: rgba(242, 242, 247, .88);
+  --topic: var(--accent); --topic-ink: var(--accent); --topic-soft: var(--accent-soft);
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-display: var(--font); --font-body: var(--font);
+  --font-mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --radius: 16px; --radius-sm: 12px; --shadow: 0 1px 2px rgba(17, 20, 24, .04), 0 4px 14px rgba(17, 20, 24, .05);
+  --bar: 48px; --bottom-nav: 56px;
 }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
-  --bg: #0e1412; --surface: #151d1a; --sunk: #111816; --ink: #e5ece8; --muted: #9eaba5; --line: #2a3531;
-  --accent: #7cc9a6; --accent-ink: #0e1412; --accent-soft: #193027; --gold: #e2b65c; --gold-soft: #2c2412;
+  --bg: #0b0c0e; --surface: #18191d; --sunk: #222429; --ink: #eceef2; --muted: #a0a5b1; --line: #2c2e35;
+  --accent: #7cc9a6; --accent-ink: #0b0c0e; --accent-soft: #193027; --gold: #e2b65c; --gold-soft: #2c2412;
   --ok: #7cc9a6; --ok-soft: #16291f; --warn: #e2b65c; --warn-soft: #2c2412; --bad: #ee8b8b; --bad-soft: #321a1a;
-  --ins: #8fdab6; --ins-bg: #173326; --del: #f09a9a; --del-bg: #3a1d1d; --unc: #a9bcea; --unc-soft: #1c2438; --shadow: none; color-scheme: dark } }
+  --ins: #8fdab6; --ins-bg: #173326; --del: #f09a9a; --del-bg: #3a1d1d; --unc: #a9bcea; --unc-soft: #1c2438;
+  --t1: #8f79e6; --t1-ink: #b9aaf2; --t1-soft: #241f3d;
+  --t2: #cc7526; --t2-ink: #e9a264; --t2-soft: #33230f;
+  --t3: #1aa38c; --t3-ink: #5fd0bc; --t3-soft: #0f2b27;
+  --on-topic: #0b0c0e; --glass: rgba(11, 12, 14, .86); --shadow: none; color-scheme: dark } }
 :root[data-theme="dark"] {
-  --bg: #0e1412; --surface: #151d1a; --sunk: #111816; --ink: #e5ece8; --muted: #9eaba5; --line: #2a3531;
-  --accent: #7cc9a6; --accent-ink: #0e1412; --accent-soft: #193027; --gold: #e2b65c; --gold-soft: #2c2412;
+  --bg: #0b0c0e; --surface: #18191d; --sunk: #222429; --ink: #eceef2; --muted: #a0a5b1; --line: #2c2e35;
+  --accent: #7cc9a6; --accent-ink: #0b0c0e; --accent-soft: #193027; --gold: #e2b65c; --gold-soft: #2c2412;
   --ok: #7cc9a6; --ok-soft: #16291f; --warn: #e2b65c; --warn-soft: #2c2412; --bad: #ee8b8b; --bad-soft: #321a1a;
-  --ins: #8fdab6; --ins-bg: #173326; --del: #f09a9a; --del-bg: #3a1d1d; --unc: #a9bcea; --unc-soft: #1c2438; --shadow: none; color-scheme: dark }
+  --ins: #8fdab6; --ins-bg: #173326; --del: #f09a9a; --del-bg: #3a1d1d; --unc: #a9bcea; --unc-soft: #1c2438;
+  --t1: #8f79e6; --t1-ink: #b9aaf2; --t1-soft: #241f3d;
+  --t2: #cc7526; --t2-ink: #e9a264; --t2-soft: #33230f;
+  --t3: #1aa38c; --t3-ink: #5fd0bc; --t3-soft: #0f2b27;
+  --on-topic: #0b0c0e; --glass: rgba(11, 12, 14, .86); --shadow: none; color-scheme: dark }
+.t-school { --topic: var(--t1); --topic-ink: var(--t1-ink); --topic-soft: var(--t1-soft) }
+.t-bolt { --topic: var(--t2); --topic-ink: var(--t2-ink); --topic-soft: var(--t2-soft) }
+.t-building { --topic: var(--t3); --topic-ink: var(--t3-ink); --topic-soft: var(--t3-soft) }
 
 * { box-sizing: border-box }
-html { -webkit-text-size-adjust: 100% }
-body { background: var(--bg); color: var(--ink); font: 17px/1.6 var(--font-body); }
-body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--surface) }
+html { -webkit-text-size-adjust: 100%; -webkit-tap-highlight-color: transparent }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.5 var(--font) }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg) }
 a { color: var(--accent) }
-:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 4px }
-.wrap { max-width: 46rem; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)) }
+button { font: inherit; color: inherit }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 6px }
+.wrap { max-width: 44rem; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)) }
+.ico { flex: none; display: block }
 
-/* Top bar: brand only on phones (it scrolls away); brand + menu, pinned, on wide screens */
-.bar { background: var(--surface); border-bottom: 1px solid var(--line) }
-.bar .wrap { display: flex; align-items: center; gap: 12px; padding-block: 10px; min-height: 52px }
-.brand { font: 600 1.15rem/1 var(--font-display); letter-spacing: .01em; color: var(--ink); text-decoration: none; display: flex; align-items: baseline; gap: 8px }
-.brand small { font: 500 .7rem/1 var(--font-mono); color: var(--muted); letter-spacing: .06em; text-transform: uppercase }
-.nav { display: none; gap: 4px; margin-left: auto }
-.nav a { font-size: .95rem; text-decoration: none; color: var(--muted); padding: 8px 10px; border-radius: 8px; min-height: 40px; display: inline-flex; align-items: center }
-.nav a[aria-current="page"] { color: var(--ink); background: var(--sunk); font-weight: 700 }
+/* App bar: pinned. Root screens show the name; a decision shows a back button and its topic. */
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 8; background: var(--glass);
+  -webkit-backdrop-filter: saturate(1.6) blur(14px); backdrop-filter: saturate(1.6) blur(14px) }
+.bar .wrap { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: 8px; min-height: var(--bar) }
+.bar .lead { display: flex; align-items: center; min-width: 0 }
+.brand { font: 800 1.15rem/1 var(--font); letter-spacing: -.01em; color: var(--ink); text-decoration: none; display: flex; align-items: center; gap: 8px; min-height: 44px }
+.brand small { font: 700 .6rem/1 var(--font); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: 4px 7px }
+.back { display: inline-flex; align-items: center; gap: 2px; min-height: 44px; padding-right: 10px; margin-left: -6px; text-decoration: none; color: var(--accent); font-weight: 600; font-size: 1rem; white-space: nowrap }
+.back:active { opacity: .5 }
+.bartitle { transition: opacity .15s ease; font-weight: 700; font-size: 1rem; text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0 }
+.bartitle.late { opacity: 0 }
+.nav { display: none; justify-self: end; gap: 4px }
+.nav a { font-size: .92rem; font-weight: 600; text-decoration: none; color: var(--muted); padding: 8px 10px; border-radius: 10px; min-height: 40px; display: inline-flex; align-items: center; white-space: nowrap }
+.nav a[aria-current="page"] { color: var(--ink); background: var(--surface) }
 
-/* Bottom menu on phones, within thumb reach */
-.bottom { position: fixed; left: 0; right: 0; bottom: 0; z-index: 6; background: var(--surface); border-top: 1px solid var(--line);
+/* Tab bar on phones, within thumb reach */
+.bottom { position: fixed; left: 0; right: 0; bottom: 0; z-index: 6; background: var(--glass); border-top: 1px solid var(--line);
+  -webkit-backdrop-filter: saturate(1.6) blur(14px); backdrop-filter: saturate(1.6) blur(14px);
   display: grid; grid-template-columns: repeat(3, 1fr);
   padding: 0 max(8px, env(safe-area-inset-right, 0px)) env(safe-area-inset-bottom, 0px) max(8px, env(safe-area-inset-left, 0px)) }
 .bottom a { min-height: var(--bottom-nav); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px;
-  text-decoration: none; color: var(--muted); font-size: .82rem; line-height: 1.15; text-align: center; padding: 6px 4px }
-.bottom a::before { content: ""; width: 22px; height: 3px; border-radius: 3px; background: transparent }
-.bottom a[aria-current="page"] { color: var(--ink); font-weight: 700 }
-.bottom a[aria-current="page"]::before { background: var(--accent) }
-main { padding-block: 18px calc(var(--bottom-nav) + 48px + env(safe-area-inset-bottom, 0px)) }
+  text-decoration: none; color: var(--muted); font-size: .68rem; font-weight: 600; line-height: 1.1; text-align: center; padding: 4px }
+.bottom a[aria-current="page"] { color: var(--ink) }
+.bottom a[aria-current="page"] .ico { stroke-width: 2.5 }
+.bottom a:active { opacity: .5 }
 
+/* "What you can do": one button, pinned above the tab bar on every tab of a decision */
+.actbar { position: fixed; left: 0; right: 0; bottom: calc(var(--bottom-nav) + env(safe-area-inset-bottom, 0px)); z-index: 6; pointer-events: none;
+  padding: 18px max(16px, env(safe-area-inset-right, 0px)) 10px max(16px, env(safe-area-inset-left, 0px));
+  background: linear-gradient(to top, var(--bg) 55%, transparent) }
+.actbar button { pointer-events: auto; width: 100%; max-width: 42rem; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 50px; border: 0; border-radius: 14px; background: var(--ink); color: var(--bg); font-weight: 700; font-size: 1rem; cursor: pointer;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, .18) }
+.actbar button:active { transform: scale(.98) }
+
+main { padding-block: 8px calc(var(--bottom-nav) + 32px + env(safe-area-inset-bottom, 0px)); overflow-x: clip }
+body.has-act main { padding-bottom: calc(var(--bottom-nav) + 104px + env(safe-area-inset-bottom, 0px)) }
 @media (min-width: 720px) {
-  .bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5 }
   .nav { display: flex }
   .bottom { display: none }
-  main { padding-block: 24px 72px }
+  .actbar { bottom: 0; padding-bottom: 18px }
+  .actbar button { max-width: 22rem }
+  main { padding-block: 16px 72px }
+  body.has-act main { padding-bottom: 120px }
 }
 
-h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.2; text-wrap: balance; margin: 0 }
-h1 { font-size: clamp(1.65rem, 4.6vw, 2.3rem) }
-h2 { font-size: 1.35rem }
-h3 { font-size: 1.12rem }
+h1, h2, h3, h4 { font-family: var(--font); line-height: 1.2; letter-spacing: -.01em; text-wrap: balance; margin: 0 }
+h1 { font-size: 1.5rem; font-weight: 800 }
+h2 { font-size: 1.2rem; font-weight: 700 }
+h3 { font-size: 1.05rem; font-weight: 700 }
 p { margin: 0 }
-.eyebrow { font: 500 .75rem/1.2 var(--font-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted) }
+.screen-title { font-size: 2.1rem; letter-spacing: -.025em }
+.eyebrow { font: 700 .72rem/1.2 var(--font); letter-spacing: .06em; text-transform: uppercase; color: var(--muted) }
 .lede { color: var(--muted); max-width: 40rem }
 .stack { display: flex; flex-direction: column; gap: 14px }
-.stack-lg { display: flex; flex-direction: column; gap: 26px }
-.notice { font-size: .92rem; color: var(--muted); border-left: 3px solid var(--line); padding: 2px 0 2px 12px }
+.stack-sm { display: flex; flex-direction: column; gap: 6px }
+.stack-lg { display: flex; flex-direction: column; gap: 22px }
+.notice { font-size: .88rem; color: var(--muted) }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap }
 
 /* Chips and badges */
 .chips { display: flex; flex-wrap: wrap; gap: 6px; align-items: center }
-.chip { font-size: .78rem; line-height: 1.2; padding: 4px 9px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--muted); white-space: nowrap; max-width: 100% }
-.chip.wrap { white-space: normal; border-radius: 12px }   /* long chips (a card's side) wrap instead of widening the page */
-.chip.law { background: var(--accent-soft); border-color: var(--accent); color: var(--accent) }
-.chip.ok { background: var(--ok-soft); border-color: var(--ok); color: var(--ok) }
-.chip.warn { background: var(--warn-soft); border-color: var(--warn); color: var(--warn) }
-.chip.bad { background: var(--bad-soft); border-color: var(--bad); color: var(--bad) }
-.power { font: 700 .72rem/1 var(--font-mono); letter-spacing: .06em; text-transform: uppercase; padding: 5px 8px; border-radius: 6px; display: inline-flex; align-items: center; gap: 6px }
+.chip { font-size: .78rem; font-weight: 600; line-height: 1.2; padding: 5px 10px; border-radius: 999px; background: var(--surface); color: var(--muted); white-space: nowrap; max-width: 100%; text-decoration: none; box-shadow: inset 0 0 0 1px var(--line) }
+.chip.wrap { white-space: normal; border-radius: 12px; margin: 0; padding: 5px 10px }   /* long chips wrap instead of widening the page */
+.chip.law { background: var(--accent-soft); color: var(--accent); box-shadow: none }
+.chip.ok { background: var(--ok-soft); color: var(--ok); box-shadow: none }
+.chip.warn { background: var(--warn-soft); color: var(--warn); box-shadow: none }
+.chip.bad { background: var(--bad-soft); color: var(--bad); box-shadow: none }
+.chip.past { background: var(--sunk); color: var(--muted) }
+.power { font: 700 .68rem/1 var(--font); letter-spacing: .05em; text-transform: uppercase; padding: 5px 8px; border-radius: 6px; display: inline-flex; align-items: center; gap: 6px }
 .power::before { content: ""; width: 8px; height: 8px; display: inline-block; border: 2px solid currentColor }
-.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap }
+.power.decide { color: var(--accent); background: var(--accent-soft) } .power.decide::before { background: currentColor }
+.power.input { color: var(--gold); background: var(--gold-soft) } .power.input::before { border-radius: 50% }
+.power.observe { color: var(--muted); background: var(--sunk) } .power.observe::before { border-radius: 50%; background: transparent }
 .evlist { list-style: none; margin: .35rem 0 .25rem; padding: 0; display: grid; gap: .3rem }
 .evlist li { display: flex; flex-wrap: wrap; gap: .25rem .45rem; align-items: baseline }
 .evlist .scope { flex: 1 1 7rem; min-width: 0; font-size: .92rem }
 .evpart .evbtn { margin-top: .15rem }
-.power.decide { color: var(--accent); background: var(--accent-soft) } .power.decide::before { background: currentColor }
-.power.input { color: var(--gold); background: var(--gold-soft) } .power.input::before { border-radius: 50% }
-.power.observe { color: var(--muted); background: var(--sunk) } .power.observe::before { border-radius: 50%; background: transparent }
 
-/* Source chips: small, at the end of each sentence; tap for the exact passage */
-.src { font: 500 .7rem/1 var(--font-body); vertical-align: .14em; margin-left: 5px; padding: 3px 7px; border-radius: 999px; border: 1px solid var(--line);
-  background: var(--sunk); color: var(--accent); cursor: pointer; min-height: 24px; white-space: nowrap }
-.src:hover { border-color: var(--accent) }
-.src.tag { color: var(--muted); border-style: dashed; background: transparent }
-.src.tag.editorial { color: var(--gold) }
+/* Source dots: a small number after each sentence; tap for the exact passage. Tags (our analysis, note, math) are
+   squared and dashed. The touch area is larger than the dot. */
+.src { position: relative; display: inline-flex; align-items: center; justify-content: center; min-width: 19px; height: 19px; padding: 0 5px; margin-left: 3px;
+  vertical-align: .12em; border: 0; border-radius: 999px; background: var(--surface); color: var(--accent); box-shadow: inset 0 0 0 1px var(--line);
+  font: 700 .66rem/1 var(--font); font-variant-numeric: tabular-nums; cursor: pointer }
+.src::after { content: ""; position: absolute; inset: -8px -6px }
+.src:active { background: var(--accent-soft) }
+.src.tag { border-radius: 6px; color: var(--muted); background: transparent; box-shadow: none; border: 1px dashed var(--muted) }
+.src.tag.editorial { color: var(--gold); border-color: var(--gold) }
+.linkbtn { font-weight: 600; font-size: .88rem; min-height: 36px; padding: 0 14px; border-radius: 999px; border: 0; background: var(--sunk); color: var(--ink); cursor: pointer }
+.linkbtn:active { background: var(--line) }
 
 /* Labeled fields: the label on its own line, then one sentence per line */
 .field { display: flex; flex-direction: column; gap: 4px }
-.flabel { font: 700 .78rem/1.3 var(--font-body); letter-spacing: .04em; text-transform: uppercase; color: var(--muted) }
+.flabel { font: 700 .72rem/1.3 var(--font); letter-spacing: .05em; text-transform: uppercase; color: var(--muted) }
 .lines { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 6px }
 .lines li { padding-left: 14px; position: relative }
-.lines li::before { content: ""; position: absolute; left: 1px; top: .72em; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); opacity: .6 }
+.lines li::before { content: ""; position: absolute; left: 1px; top: .68em; width: 5px; height: 5px; border-radius: 50%; background: var(--topic); opacity: .7 }
 
-/* Cards */
-.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px; box-shadow: var(--shadow) }
+/* Cards, lists and rows */
+.card { background: var(--surface); border-radius: var(--radius); padding: 16px; box-shadow: var(--shadow) }
 .home-sec { display: flex; flex-direction: column; gap: 12px }
-.home-sec > h2 { display: flex; align-items: baseline; gap: 10px }
-.home-sec > h2 .count { font: 500 .8rem var(--font-mono); color: var(--muted) }
-.item { display: grid; gap: 8px }
-.item .when { font: 500 .85rem/1.2 var(--font-mono); color: var(--ink) }
-.item .go { font-weight: 700; text-decoration: none; justify-self: start; padding: 6px 0; min-height: 40px; display: inline-flex; align-items: center }
+.home-sec > h2 { display: flex; align-items: baseline; gap: 8px; font-size: 1.3rem; font-weight: 800 }
+.home-sec > h2 .count { font: 600 .85rem var(--font); color: var(--muted) }
+.go { font-weight: 700; text-decoration: none; justify-self: start; align-self: flex-start; padding: 6px 0; min-height: 40px; display: inline-flex; align-items: center }
+.stretch::after { content: ""; position: absolute; inset: 0; border-radius: inherit }
+.dcard { position: relative; display: grid; gap: 10px; transition: transform .12s ease }
+.dcard:active { transform: scale(.985) }
+.dcard .src, .dcard .okline { position: relative; z-index: 1 }
+.dtop { display: flex; align-items: center; gap: 10px; min-width: 0 }
+.ticon { width: 36px; height: 36px; border-radius: 10px; background: var(--topic); color: var(--on-topic); display: grid; place-items: center; flex: none }
+.tlabel { font-weight: 700; font-size: .9rem; color: var(--topic-ink); min-width: 0 }
+.pill { margin-left: auto; font: 700 .78rem/1 var(--font); padding: 7px 10px; border-radius: 999px; background: var(--topic-soft); color: var(--topic-ink); white-space: nowrap; font-variant-numeric: tabular-nums }
+.dcard h2 { font-size: 1.15rem; line-height: 1.25; text-wrap: pretty }
+.dcard h2 a { color: inherit; text-decoration: none }
+.dsum { color: var(--muted); font-size: .95rem }
+.dfoot { display: flex; align-items: center; gap: 8px; font-size: .82rem; color: var(--muted); border-top: 1px solid var(--line); padding-top: 10px }
+.dfoot > div { flex: 1; min-width: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 2px 12px }
+.okline { display: inline-flex; align-items: center; gap: 4px; font-weight: 600; text-decoration: none; color: var(--ok); min-height: 28px }
+.okline.warn { color: var(--warn) }
+.list { background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden }
+.row { position: relative; display: flex; gap: 12px; align-items: center; padding: 12px 14px; min-height: 56px; width: 100%; text-align: left; background: none; border: 0; cursor: pointer }
+.row + .row, .month + .row { border-top: 1px solid var(--line) }
+button.row:active, .row.item:active { background: var(--sunk) }
+.rico { width: 32px; height: 32px; border-radius: 9px; background: var(--sunk); color: var(--ink); display: grid; place-items: center; flex: none }
+.rbody { flex: 1; min-width: 0; display: grid; gap: 3px }
+.rtitle { font-weight: 600 }
+.rsub { font-size: .85rem; color: var(--muted) }
+.row > .ico { color: var(--muted) }
+.row.item { align-items: flex-start; cursor: default }
+.row.item .src { z-index: 1 }
+.row.item p { font-size: .95rem }
+.rmeta { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px }
+.when { font: 700 .82rem/1.3 var(--font); color: var(--ink); font-variant-numeric: tabular-nums }
+.rlink { display: inline-flex; align-items: center; gap: 2px; font-size: .85rem; font-weight: 600; text-decoration: none; color: var(--topic-ink); min-height: 28px }
+.dtile { width: 46px; flex: none; border-radius: 10px; background: var(--topic-soft); color: var(--topic-ink); display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 46px; padding: 4px 0 }
+.dtile span { font: 700 .6rem/1.2 var(--font); letter-spacing: .06em; text-transform: uppercase }
+.dtile b { font: 800 1.15rem/1.1 var(--font); font-variant-numeric: tabular-nums }
+.dtile.soft { background: transparent; outline: 1.5px dashed var(--topic); outline-offset: -1.5px }   /* "by", "before", "expected": not a fixed day */
+.month { padding: 8px 14px; font: 700 .72rem/1.2 var(--font); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); background: var(--sunk) }
+.row + .month { border-top: 1px solid var(--line) }
 
-/* Bill header and the 30-second box */
-.billcode { font: 500 .82rem/1 var(--font-mono); color: var(--accent); letter-spacing: .04em }
-.billhead { display: flex; flex-direction: column; gap: 10px }
-.thirty { background: var(--surface); border: 2px solid var(--accent); border-radius: var(--radius); padding: 16px; display: flex; flex-direction: column; gap: 14px }
-.thirty h2 { font-size: 1.05rem; font-family: var(--font-body); font-weight: 700; letter-spacing: .01em }
-.cta { display: flex; align-items: center; justify-content: center; min-height: 48px; border-radius: 10px; background: var(--accent); color: var(--accent-ink);
-  font-weight: 700; text-decoration: none; padding: 10px 14px }
-.disclose { font-size: .86rem; color: var(--muted); display: flex; gap: 8px; align-items: flex-start }
-.disclose::before { content: "i"; font: 700 .75rem/1.35rem var(--font-mono); flex: 0 0 1.35rem; text-align: center; border-radius: 50%; border: 1px solid var(--muted) }
+/* Decision header and the 30-second box */
+.billhead { display: flex; flex-direction: column; gap: 12px; background: var(--topic-soft); border-radius: 20px; padding: 16px }
+.billhead h1 { font-size: 1.45rem; text-wrap: pretty }
+.billcode { font: 600 .8rem/1.3 var(--font); color: var(--muted) }
+.thirty { background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); padding: 16px; display: flex; flex-direction: column; gap: 14px }
+.disclose { font-size: .84rem; color: var(--muted); display: flex; gap: 8px; align-items: flex-start }
+.disclose::before { content: "i"; font: 700 .75rem/1.35rem var(--font); flex: 0 0 1.35rem; text-align: center; border-radius: 50%; border: 1px solid var(--muted) }
 
-/* Bill tabs: one scrollable row, pinned at the top while you read */
-.tabs { display: flex; gap: 4px; padding: 6px; background: var(--sunk); border-radius: 12px; overflow-x: auto; scrollbar-width: none;
-  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 4; scroll-snap-type: x proximity; box-shadow: 0 0 0 6px var(--bg) }
+/* Tabs: an underline strip, pinned under the app bar */
+.tabs { display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; position: sticky; top: calc(env(safe-area-inset-top, 0px) + var(--bar)); z-index: 4;
+  margin: 0 -16px; padding: 0 16px; background: var(--glass); border-bottom: 1px solid var(--line);
+  -webkit-backdrop-filter: saturate(1.6) blur(14px); backdrop-filter: saturate(1.6) blur(14px) }
 .tabs::-webkit-scrollbar { display: none }
-.tabs a { flex: 0 0 auto; scroll-snap-align: center; text-decoration: none; color: var(--muted); font-size: .95rem; padding: 8px 12px; border-radius: 8px;
-  min-height: 44px; display: inline-flex; align-items: center; white-space: nowrap }
-.tabs a[aria-selected="true"] { background: var(--surface); color: var(--ink); font-weight: 700; box-shadow: var(--shadow) }
-@media (min-width: 720px) { .tabs { top: calc(env(safe-area-inset-top, 0px) + 53px) } }
+.tabs a { flex: 0 0 auto; text-decoration: none; color: var(--muted); font-size: .95rem; font-weight: 600; padding: 0 10px; min-height: 46px;
+  display: inline-flex; align-items: center; white-space: nowrap; border-bottom: 3px solid transparent; margin-bottom: -1px }
+.tabs a[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--topic) }
 
 /* Workspace content */
-.layer { display: flex; flex-direction: column; gap: 18px }
+.layer { display: flex; flex-direction: column; gap: 16px }
 .layer-head { display: flex; flex-direction: column; gap: 4px }
 .blocks { display: flex; flex-direction: column; gap: 10px; margin: 0; padding: 0; list-style: none }
 .blocks li { padding-left: 16px; position: relative }
-.blocks li::before { content: ""; position: absolute; left: 2px; top: .75em; width: 6px; height: 6px; border-radius: 50%; background: var(--line) }
+.blocks li::before { content: ""; position: absolute; left: 2px; top: .68em; width: 6px; height: 6px; border-radius: 50%; background: var(--line) }
 .blocks.num { counter-reset: n } .blocks.num li { counter-increment: n; padding-left: 26px }
-.blocks.num li::before { content: counter(n); width: auto; height: auto; background: none; top: 0; font: 700 .85rem/1.6 var(--font-mono); color: var(--accent) }
+.blocks.num li::before { content: counter(n); width: auto; height: auto; background: none; top: 0; font: 700 .85rem/1.75 var(--font); color: var(--topic-ink) }
 .label { font-weight: 700 }
-.timeline { display: flex; flex-direction: column; gap: 0; margin: 0; padding: 0; list-style: none; border-left: 2px solid var(--line); margin-left: 6px }
+.timeline { display: flex; flex-direction: column; gap: 0; margin: 0 0 0 6px; padding: 0; list-style: none; border-left: 2px solid var(--line) }
 .timeline li { padding: 0 0 12px 16px; position: relative }
-.timeline li::before { content: ""; position: absolute; left: -7px; top: .45em; width: 12px; height: 12px; border-radius: 50%; background: var(--surface); border: 2px solid var(--accent) }
-.timeline .when { display: block; font: 500 .82rem/1.4 var(--font-mono); color: var(--muted) }
+.timeline li::before { content: ""; position: absolute; left: -7px; top: .4em; width: 12px; height: 12px; border-radius: 50%; background: var(--surface); border: 2px solid var(--topic) }
+.timeline .when { display: block; color: var(--muted) }
 .sub { display: flex; flex-direction: column; gap: 10px }
-#act { scroll-margin-top: 76px }
 .options { display: grid; gap: 12px }
-.opt-head { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; flex-wrap: wrap }
+.acard { background: var(--sunk); border-radius: var(--radius-sm); padding: 12px 14px; display: grid; gap: 8px }
 
 /* Expandable cards (options and arguments) */
-details.fold { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow) }
-details.fold > summary { list-style: none; cursor: pointer; padding: 14px 16px; display: grid; gap: 8px }
+details.fold { background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow) }
+details.fold > summary { list-style: none; cursor: pointer; padding: 16px; display: grid; gap: 8px }
 details.fold > summary::-webkit-details-marker { display: none }
-details.fold > summary h3 { display: flex; gap: 10px; align-items: baseline }
-details.fold > summary h3::after { content: "+"; margin-left: auto; font: 500 1.2rem var(--font-mono); color: var(--muted) }
-details.fold[open] > summary h3::after { content: "\2212" }
-details.fold .hint { font-size: .86rem; color: var(--accent); font-weight: 700 }
+details.fold > summary h3 { display: flex; gap: 10px; align-items: flex-start }
+details.fold > summary h3::after, details.more > summary::after { content: ""; flex: none; margin: .3em 4px 0 auto; width: 9px; height: 9px;
+  border-right: 2px solid var(--muted); border-bottom: 2px solid var(--muted); transform: rotate(45deg); transition: transform .15s ease }
+details.fold[open] > summary h3::after, details.more[open] > summary::after { transform: rotate(-135deg); margin-top: .55em }
+details.fold .hint { font-size: .84rem; color: var(--muted); font-weight: 600 }
 details.fold[open] .hint { display: none }
-details.fold .body { padding: 12px 16px 16px; display: flex; flex-direction: column; gap: 12px; border-top: 1px dashed var(--line) }
+details.fold .body { padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 12px; border-top: 1px solid var(--line) }
 .meta-line { font-size: .84rem; color: var(--muted) }
-.ev { font: 700 .74rem/1.3 var(--font-mono); letter-spacing: .02em; padding: 5px 8px; border-radius: 6px; border: 1px solid currentColor; display: inline-block }
+.ev { font: 700 .74rem/1.3 var(--font); padding: 5px 8px; border-radius: 6px; border: 1px solid currentColor; display: inline-block }
 .ev.supported { color: var(--ok) } .ev.mixed { color: var(--warn) }
 .ev.uncertain { color: var(--unc); border-style: dashed } .ev.values { color: var(--muted); border-style: dotted }
-.evbtn { font: 700 .78rem/1.2 var(--font-body); color: var(--accent); background: none; border: 0; padding: 6px 2px; min-height: 32px; cursor: pointer; text-decoration: underline }
+.evbtn { font: 700 .78rem/1.2 var(--font); color: var(--accent); background: none; border: 0; padding: 6px 2px; min-height: 32px; cursor: pointer; text-decoration: underline }
 .legend { display: grid; gap: 8px }
-.legend .row { display: grid; grid-template-columns: auto 1fr; gap: 10px; align-items: baseline }
+.legend .row { display: grid; grid-template-columns: auto 1fr; gap: 10px; align-items: baseline; padding: 0; min-height: 0; cursor: default; border: 0 }
 .legend .row p { margin: 0 }
-/* "What it means for you" and the values guide */
-.you { border-left: 4px solid var(--accent) }
-/* Reader-first visuals: every figure is drawn from cited data; nothing is to scale unless the source gives amounts */
-.datebadge { display: inline-flex; align-items: stretch; align-self: flex-start; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background: var(--surface); max-width: 100% }
-.datebadge .cal { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 6px 12px; background: var(--accent); color: var(--accent-ink); min-width: 58px }
-.datebadge .cal b { font: 600 1.5rem/1 var(--font-display) }
-.datebadge .cal span { font: 500 .7rem/1.3 var(--font-mono); letter-spacing: .08em; text-transform: uppercase }
-.datebadge .info { display: flex; flex-direction: column; justify-content: center; padding: 6px 12px; min-width: 0 }
-.datebadge .info b { font-size: 1rem; line-height: 1.25 }
+
+/* Pictures: every figure is drawn from cited data; nothing is to scale unless the source gives amounts */
+.datebadge { display: inline-flex; align-items: stretch; align-self: flex-start; border-radius: 14px; overflow: hidden; background: var(--surface); box-shadow: var(--shadow); max-width: 100% }
+.datebadge .cal { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 6px 12px; background: var(--topic-ink); color: var(--surface); min-width: 58px }
+.datebadge .cal b { font: 800 1.45rem/1 var(--font); font-variant-numeric: tabular-nums }
+.datebadge .cal span { font: 700 .66rem/1.3 var(--font); letter-spacing: .08em; text-transform: uppercase }
+.datebadge .info { display: flex; flex-direction: column; justify-content: center; padding: 8px 14px; min-width: 0 }
+.datebadge .info b { font-size: 1.05rem; line-height: 1.25 }
 .datebadge .info span { font-size: .82rem; color: var(--muted); line-height: 1.3 }
-.viz h3 { font: 700 .95rem/1.3 var(--font-body); margin: 0 }
+.viz h3 { font: 700 .95rem/1.3 var(--font); margin: 0 }
 .viz .note { margin: 0; font-size: .9rem; color: var(--muted) }
 .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr)); gap: 12px }
-.tile { background: var(--sunk); border-radius: var(--radius); padding: 14px; min-width: 0 }
-.tile .big { font: 600 clamp(1.7rem, 7vw, 2.3rem)/1.05 var(--font-display); font-variant-numeric: tabular-nums }
+.tile { background: var(--sunk); border-radius: var(--radius-sm); padding: 14px; min-width: 0 }
+.tile .big { font: 800 clamp(1.8rem, 8vw, 2.4rem)/1.05 var(--font); letter-spacing: -.02em; font-variant-numeric: tabular-nums }
 .tile p { margin: 6px 0 0; font-size: .9rem; color: var(--muted) }
 .split { display: flex; gap: 2px; height: 22px }
 .split i { display: block; border-radius: 4px; min-width: 6px }
-.split .s0 { background: var(--accent) } .split .s1 { background: var(--muted); opacity: .45 }
+.split .s0 { background: var(--topic) } .split .s1 { background: var(--muted); opacity: .4 }
 .keys { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: .9rem; margin: 0; padding: 0; list-style: none }
 .keys li { display: flex; align-items: baseline; gap: 6px }
 .keys i { width: 10px; height: 10px; border-radius: 3px; display: inline-block; flex: none }
-.keys .s0 { background: var(--accent) } .keys .s1 { background: var(--muted); opacity: .45 }
+.keys .s0 { background: var(--topic) } .keys .s1 { background: var(--muted); opacity: .4 }
 .keys b { font-variant-numeric: tabular-nums }
 .parts { display: grid; gap: 10px }
-.part { display: grid; grid-template-columns: auto 1fr; gap: 2px 12px; align-items: center; background: var(--sunk); border-radius: var(--radius); padding: 12px; min-width: 0 }
-.part .arrow { grid-row: span 2; width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; font: 700 1.5rem/1 var(--font-body); background: var(--surface); border: 2px solid var(--ink) }
+.part { display: grid; grid-template-columns: auto 1fr; gap: 2px 12px; align-items: center; background: var(--sunk); border-radius: var(--radius-sm); padding: 12px; min-width: 0 }
+.part .arrow { grid-row: span 2; width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; font: 700 1.4rem/1 var(--font); background: var(--surface); border: 2px solid var(--ink) }
 .part .arrow.up { border-style: dashed }
 .part b { font-size: 1.05rem; line-height: 1.2 }
 .part p { margin: 0; font-size: .92rem; grid-column: 2; min-width: 0 }
 .seats { display: flex; flex-wrap: wrap; gap: 8px }
-.seat { width: 22px; height: 22px; border-radius: 50%; background: var(--accent) }
+.seat { width: 22px; height: 22px; border-radius: 50%; background: var(--topic) }
 .seat.vacant { background: transparent; border: 2px dashed var(--muted) }
-.pick { display: flex; flex-wrap: wrap; gap: 8px }
-.pick button { font: 700 .9rem/1.2 var(--font-body); min-height: 40px; padding: 8px 14px; border-radius: 999px; border: 1.5px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer }
-.pick button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--accent-ink) }
+
+/* "What it means for you": pick a situation, read one line */
+.you h2, .vguide h3 { margin: 0 }
+.pick { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; margin: 0 -16px; padding: 2px 16px }
+.pick::-webkit-scrollbar { display: none }
+.pick button { flex: none; white-space: nowrap; font: 600 .9rem/1.2 var(--font); min-height: 40px; padding: 0 14px; border-radius: 999px; border: 0; background: var(--sunk); color: var(--ink); cursor: pointer }
+.pick button[aria-pressed="true"] { background: var(--ink); color: var(--surface) }
+.ifyou { font-size: 1.05rem }
+.ifyou strong.lead, .vguide strong.lead { color: var(--ink) }
+.unknown { font-size: .95rem }
 .flow { list-style: none; margin: 0; padding: 0; counter-reset: step }
 .flow li { counter-increment: step; position: relative; padding: 2px 0 18px 44px; min-height: 40px }
-.flow li::before { content: counter(step); position: absolute; left: 0; top: 0; width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; background: var(--accent-soft); color: var(--accent); font: 700 .9rem/1 var(--font-body); border: 1.5px solid var(--accent); box-sizing: border-box }
+.flow li::before { content: counter(step); position: absolute; left: 0; top: 0; width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; background: var(--topic-soft); color: var(--topic-ink); font: 800 .9rem/1 var(--font) }
 .flow li::after { content: ""; position: absolute; left: 14px; top: 34px; bottom: 2px; width: 2px; background: var(--line) }
 .flow li:last-child { padding-bottom: 0 } .flow li:last-child::after { display: none }
 .rail { list-style: none; margin: 0 0 0 7px; padding: 0; border-left: 2px solid var(--line) }
 .rail li { position: relative; padding: 0 0 14px 18px }
 .rail li:last-child { padding-bottom: 0 }
-.rail li::before { content: ""; position: absolute; left: -8px; top: .4em; width: 14px; height: 14px; border-radius: 50%; background: var(--surface); border: 2px solid var(--muted); box-sizing: border-box }
+.rail li::before { content: ""; position: absolute; left: -8px; top: .35em; width: 14px; height: 14px; border-radius: 50%; background: var(--surface); border: 2px solid var(--muted); box-sizing: border-box }
 .rail li.past { color: var(--muted) } .rail li.past::before { background: var(--muted) }
-.rail li.next::before { background: var(--accent); border-color: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft) }
-.rail li.today { font: 700 .78rem/1.2 var(--font-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--accent) }
-.rail li.today::before { border-radius: 2px; width: 14px; height: 4px; top: .45em; background: var(--accent); border: 0 }
-.rail .when { display: block; font: 500 .82rem/1.4 var(--font-mono) }
-.rail li.next .when { color: var(--accent); font-weight: 700 }
-.vgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 12px }
-.vguide .vgrid .vline { background: var(--sunk); border-radius: var(--radius); padding: 14px; border-top: 0; min-width: 0 }
-.vguide .vgrid .vline h4 { font: 600 1.05rem/1.25 var(--font-display); margin: 0 0 6px }
+.rail li.next::before { background: var(--topic); border-color: var(--topic); box-shadow: 0 0 0 4px var(--topic-soft) }
+.rail li.today { font: 700 .72rem/1.2 var(--font); letter-spacing: .08em; text-transform: uppercase; color: var(--topic-ink) }
+.rail li.today::before { border-radius: 2px; width: 14px; height: 4px; top: .4em; background: var(--topic); border: 0 }
+.rail .when { display: block }
+.rail li.next .when { color: var(--topic-ink) }
+.vgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 10px }
+.vguide .vgrid .vline { background: var(--sunk); border-radius: var(--radius-sm); padding: 14px; min-width: 0 }
+.vguide .vgrid .vline h4 { font: 700 1rem/1.25 var(--font); margin: 0 0 6px }
 .vguide .vgrid .vline p { margin: 0; font-size: .95rem }
-.twocol { display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: 12px }
-.twocol > div { background: var(--sunk); border-radius: var(--radius); padding: 12px; min-width: 0 }
-details.deep > summary { cursor: pointer; font-weight: 700; padding: 14px 16px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); list-style: none }
-details.deep > summary::-webkit-details-marker { display: none }
-details.deep > summary::after { content: " +"; color: var(--accent) }
-details.deep[open] > summary::after { content: " −" }
-details.deep > summary span { display: block; font-weight: 400; font-size: .88rem; color: var(--muted) }
-details.deep > .stack-lg { margin-top: 18px }
-.you h2, .vguide h3 { margin: 0 }
-.ifyou { padding-top: 10px; border-top: 1px solid var(--line) }
-.ifyou:first-of-type { border-top: 0; padding-top: 0 }
-.ifyou strong.lead, .vguide strong.lead { color: var(--ink) }
-.vguide .vline { padding-top: 10px; border-top: 1px solid var(--line) }
-.vguide .vline:first-of-type { border-top: 0 }
-.chip.past { background: var(--sunk); color: var(--muted); border-style: dashed }
-.mayline { margin: 0; font-size: .95rem }
+.twocol { display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: 10px }
+.twocol > div { background: var(--sunk); border-radius: var(--radius-sm); padding: 12px; min-width: 0 }
 .qcard ul { margin: 0; padding-left: 1.2em }
 
-/* Collapsible notes */
-details.more { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line) }
-details.more > summary { cursor: pointer; font-weight: 700; color: var(--accent); min-height: 48px; display: flex; align-items: center }
-details.more[open] { padding-bottom: 14px }
+/* Collapsible notes, as list rows that open in place */
+.mores { display: grid; gap: 8px }
+details.more { background: var(--surface); border-radius: var(--radius-sm); box-shadow: var(--shadow) }
+details.more > summary { list-style: none; cursor: pointer; font-weight: 600; min-height: 52px; padding: 8px 14px; display: flex; align-items: center; gap: 10px }
+details.more > summary::-webkit-details-marker { display: none }
+details.more > summary::after { margin-top: 0 }
+details.more[open] > summary::after { margin-top: .3em }
+details.more > :not(summary) { padding: 0 14px 14px }
 
 /* Bill markup */
-.markup { font: .88rem/1.7 var(--font-mono); background: var(--sunk); border: 1px solid var(--line); border-radius: var(--radius); padding: 12px 14px; overflow-x: auto }
+.markup { font: .86rem/1.7 var(--font-mono); background: var(--sunk); border-radius: var(--radius-sm); padding: 12px 14px; overflow-x: auto }
 .markup .ln { color: var(--muted); display: inline-block; width: 2.4em; user-select: none }
 .markup del { color: var(--del); background: var(--del-bg); text-decoration: line-through; text-decoration-thickness: 2px }
 .markup ins { color: var(--ins); background: var(--ins-bg); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px }
 
 /* Next and previous tab */
-.pager { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; border-top: 1px solid var(--line); padding-top: 16px }
-.pager a { min-height: 48px; display: inline-flex; align-items: center; padding: 8px 14px; border-radius: 10px; border: 1px solid var(--line);
-  background: var(--surface); text-decoration: none; font-weight: 700 }
-.pager a.next { margin-left: auto; background: var(--accent); color: var(--accent-ink); border-color: var(--accent) }
+.pager { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap }
+.pager a { min-height: 46px; display: inline-flex; align-items: center; padding: 8px 14px; border-radius: 12px; background: var(--surface); box-shadow: var(--shadow);
+  text-decoration: none; font-weight: 600; color: var(--ink) }
+.pager a.next { margin-left: auto }
 
-/* Evidence list */
+/* Sources list */
 .sources { display: flex; flex-direction: column; gap: 10px }
 .source { display: grid; gap: 6px }
 .source .meta { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: .82rem; color: var(--muted) }
 .hash { font-family: var(--font-mono); font-size: .8rem }
-.type { font: 700 .7rem/1 var(--font-mono); letter-spacing: .05em; text-transform: uppercase; padding: 4px 7px; border-radius: 5px; background: var(--sunk); color: var(--muted); justify-self: start }
+.type { font: 700 .66rem/1 var(--font); letter-spacing: .05em; text-transform: uppercase; padding: 5px 7px; border-radius: 6px; background: var(--sunk); color: var(--muted); justify-self: start; align-self: flex-start }
 .type.primary { background: var(--accent-soft); color: var(--accent) }
 
-/* Checks view: each table row becomes a small card */
+/* Checks view */
 .stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px }
 @media (min-width: 720px) { .stats { grid-template-columns: repeat(4, minmax(0, 1fr)) } }
-.stat { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 12px 14px; display: flex; flex-direction: column; gap: 4px; justify-content: flex-start }
-.stat b { font: 600 1.5rem/1.1 var(--font-display); font-variant-numeric: tabular-nums }
+.stat { background: var(--sunk); border-radius: var(--radius-sm); padding: 12px 14px; display: flex; flex-direction: column; gap: 4px; justify-content: flex-start }
+.stats.onbg .stat { background: var(--surface); box-shadow: var(--shadow) }
+.stat b { font: 800 1.5rem/1.1 var(--font); font-variant-numeric: tabular-nums }
 .stat span { font-size: .85rem; color: var(--muted) }
 .rowcards { display: flex; flex-direction: column; gap: 10px }
-.rowcard { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 12px 14px; display: flex; flex-direction: column; gap: 6px }
+.rowcard { background: var(--surface); border-radius: var(--radius-sm); box-shadow: var(--shadow); padding: 12px 14px; display: flex; flex-direction: column; gap: 6px }
 .rowcard h3 { font-size: 1.02rem }
 .rowcard dl { margin: 0; display: grid; grid-template-columns: minmax(0, 9.5rem) minmax(0, 1fr); gap: 4px 12px; font-size: .92rem }
 .rowcard dt { color: var(--muted) } .rowcard dd { margin: 0; min-width: 0 }
 @media (max-width: 420px) { .rowcard dl { grid-template-columns: 1fr } .rowcard dd { margin-bottom: 4px } }
 
-/* Drawer */
-.scrim { position: fixed; inset: 0; background: rgba(0, 0, 0, .35); z-index: 20 }
-.drawer { position: fixed; z-index: 21; background: var(--surface); color: var(--ink); border: 1px solid var(--line); box-shadow: 0 10px 40px rgba(0, 0, 0, .25);
-  left: 0; right: 0; bottom: 0; max-height: 82vh; overflow-y: auto; border-radius: 16px 16px 0 0;
-  padding: 18px max(16px, env(safe-area-inset-right, 0px)) calc(18px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)) }
-@media (min-width: 900px) { .drawer { left: auto; top: 0; bottom: 0; width: 30rem; max-height: none; border-radius: 0; padding-top: calc(18px + env(safe-area-inset-top, 0px)) } }
-.drawer .close { float: right; font: inherit; border: 1px solid var(--line); background: var(--sunk); color: var(--ink); border-radius: 8px; padding: 6px 14px; min-height: 44px }
-.drawer blockquote { margin: 10px 0; padding: 12px 14px; border-left: 3px solid var(--accent); background: var(--sunk); border-radius: 0 8px 8px 0; font-size: .95rem }
+/* Sheets: slide up from the bottom on phones; a side panel on wide screens */
+.scrim { position: fixed; inset: 0; background: rgba(0, 0, 0, .4); z-index: 20 }
+.drawer { position: fixed; z-index: 21; left: 0; right: 0; bottom: 0; max-height: 86vh; display: flex; flex-direction: column; background: var(--surface); color: var(--ink);
+  border-radius: 20px 20px 0 0; box-shadow: 0 -8px 40px rgba(0, 0, 0, .25) }
+.drawer .grab { flex: none; padding: 8px 0 2px; display: grid; place-items: center; touch-action: none }
+.drawer .grab i { width: 36px; height: 5px; border-radius: 3px; background: var(--line) }
+.drawer .shead { flex: none; display: flex; align-items: center; gap: 10px; touch-action: none;
+  padding: 4px max(12px, env(safe-area-inset-right, 0px)) 8px max(16px, env(safe-area-inset-left, 0px)) }
+.drawer .shead h2 { flex: 1; min-width: 0; font-size: 1.1rem }
+.drawer .close { position: relative; flex: none; width: 36px; height: 36px; border-radius: 50%; border: 0; background: var(--sunk); color: var(--ink); display: grid; place-items: center; cursor: pointer }
+.drawer .close::after { content: ""; position: absolute; inset: -4px }
+.drawer .sbody { overflow-y: auto; overscroll-behavior: contain;
+  padding: 4px max(16px, env(safe-area-inset-right, 0px)) calc(24px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)) }
+.drawer blockquote { margin: 10px 0; padding: 12px 14px; border-left: 3px solid var(--topic); background: var(--sunk); border-radius: 0 10px 10px 0; font-size: .95rem }
 .drawer dl { display: grid; grid-template-columns: max-content 1fr; gap: 4px 12px; font-size: .85rem; margin: 10px 0 }
 .drawer dt { color: var(--muted) } .drawer dd { margin: 0; min-width: 0; overflow-wrap: anywhere }
+@media (min-width: 900px) {
+  .drawer { left: auto; top: 0; bottom: 0; width: 30rem; max-height: none; border-radius: 0 }
+  .drawer .grab { display: none }
+  .drawer .shead { padding-top: calc(14px + env(safe-area-inset-top, 0px)) }
+}
 
-footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
-@media (prefers-reduced-motion: no-preference) { .drawer { animation: up .18s ease-out } @keyframes up { from { transform: translateY(12px); opacity: .6 } } }
+footer { margin-top: 28px; font-size: .78rem; color: var(--muted); text-align: center }
+@media (prefers-reduced-motion: no-preference) {
+  .drawer { animation: up .26s cubic-bezier(.2, .8, .2, 1) } .scrim { animation: fade .2s ease-out }
+  @keyframes up { from { transform: translateY(100%) } }
+  @keyframes fade { from { opacity: 0 } }
+  .screen.go-fwd { animation: fwd .24s cubic-bezier(.2, .8, .2, 1) } .screen.go-back { animation: bck .24s cubic-bezier(.2, .8, .2, 1) } .screen.go-fade { animation: fade .18s ease-out }
+  @keyframes fwd { from { transform: translateX(28px); opacity: 0 } }
+  @keyframes bck { from { transform: translateX(-28px); opacity: 0 } }
+}
+@media (prefers-reduced-motion: no-preference) and (min-width: 900px) { @keyframes up { from { transform: translateX(100%) } } }
 </style>
 
 <header class="bar"><div class="wrap">
-  <a class="brand" href="#home">civic <small>prototype</small></a>
+  <div class="lead" id="barlead"></div>
+  <div class="bartitle" id="bartitle" aria-hidden="true"></div>
   <nav class="nav" aria-label="Main">
     <a href="#home" data-nav="home">Home</a>
-    <a href="#decisions" data-nav="decisions">Decisions</a>
+    <a href="#dates" data-nav="dates">Dates</a>
     <a href="#checks" data-nav="checks">How we check</a>
   </nav>
 </div></header>
 
 <main class="wrap" id="app" tabindex="-1"></main>
 
+<div class="actbar" id="actbar" hidden><button type="button" id="actbtn">What you can do</button></div>
 <nav class="bottom" aria-label="Main">
-  <a href="#home" data-nav="home">Home</a>
-  <a href="#decisions" data-nav="decisions">Decisions</a>
-  <a href="#checks" data-nav="checks">How we check</a>
+  <a href="#home" data-nav="home" data-icon="home"><span>Home</span></a>
+  <a href="#dates" data-nav="dates" data-icon="calendar"><span>Dates</span></a>
+  <a href="#checks" data-nav="checks" data-icon="shield"><span>How we check</span></a>
 </nav>
 <div id="drawer-root"></div>
 
@@ -354,6 +448,30 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
     ["Not mainly factual", "values", "Mostly about what's fair or right, not about facts."]
   ];
   var SYM = { supported: "●", mixed: "◐", uncertain: "○", values: "◇" };
+  // Icons: inline strokes, no outside files. page.yaml `icon` uses these names (school, bolt, building).
+  var ICON = {
+    home: "M4 11l8-7 8 7M6 10v9h4v-5h4v5h4v-9",
+    calendar: "M5 6h14a1 1 0 011 1v12a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1zM4 10h16M8 3v5M16 3v5",
+    shield: "M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6l7-3zM9 12l2.2 2.2L15.5 10",
+    back: "M15 5l-7 7 7 7", chev: "M9 5l7 7-7 7", close: "M6 6l12 12M18 6L6 18",
+    up: "M12 19V5M6 11l6-6 6 6", down: "M12 5v14M6 13l6 6 6-6", same: "M5 12h14M13 6l6 6-6 6",
+    school: "M3 9l9-4 9 4-9 4-9-4zM7 11v4c0 1.5 2.5 3 5 3s5-1.5 5-3v-4M21 9v5",
+    bolt: "M13 3L5 13h6l-1 8 8-10h-6l1-8z",
+    building: "M4 20h16M6 20V10M10 20V10M14 20V10M18 20V10M3 10h18L12 4 3 10z",
+    people: "M9 11a3 3 0 100-6 3 3 0 000 6zM3 19c0-3 2.7-5 6-5s6 2 6 5M16 11a3 3 0 000-6M21 19c0-2.4-1.5-4.2-4-4.8",
+    clock: "M12 7v5l3 2M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
+    money: "M12 3v18M16 7.5C16 5.8 14.2 5 12 5S8 6 8 7.8c0 4 8 2 8 6 0 1.7-1.8 2.7-4 2.7S8 15.6 8 13.9",
+    info: "M12 11v6M12 7.5v.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+  };
+  function icon(name, size) {
+    var NS = "http://www.w3.org/2000/svg", sv = document.createElementNS(NS, "svg"), p = document.createElementNS(NS, "path");
+    var a = { viewBox: "0 0 24 24", width: size || 20, height: size || 20, fill: "none", stroke: "currentColor", "stroke-width": 2,
+      "stroke-linecap": "round", "stroke-linejoin": "round", "aria-hidden": "true", "class": "ico" };
+    for (var k in a) sv.setAttribute(k, a[k]);
+    p.setAttribute("d", ICON[name] || ICON.info); sv.appendChild(p);
+    return sv;
+  }
+  function tclass(w) { return "t-" + ((w && w.icon) || "none"); }
   function todayISO() { var d = new Date(); return d.getFullYear() + "-" + ("0" + (d.getMonth() + 1)).slice(-2) + "-" + ("0" + d.getDate()).slice(-2); }
 
   function el(tag, attrs, kids) {
@@ -368,7 +486,11 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
     return n;
   }
 
-  // A sentence unit: text + source chips (one per source) or a tag chip.
+  // A sentence unit: text, then a source dot or a tag dot. Dots are numbered per screen; the same set of passages
+  // gets the same number. Tags get a letter: A our analysis, N our note, = our math.
+  var dots = {}, dotN = 0;
+  function dotNo(key) { if (!dots[key]) dots[key] = ++dotN; return dots[key]; }
+  var TAG_SYM = { analysis: "A", editorial: "N", computed: "=" };
   function units(list) {
     var frag = document.createDocumentFragment(), ws = W;  // chips remember which decision they belong to
     list.forEach(function (u, i) {
@@ -382,14 +504,14 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
         pids.forEach(function (pid) { var n = (W.sources[W.passages[pid].source] || {}).short || W.passages[pid].source; if (names.indexOf(n) < 0) names.push(n); });
         if (pids.length) {
           frag.appendChild(document.createTextNode(" "));
-          var b = el("button", { class: "src", type: "button", text: names[0] + (names.length > 1 ? " +" + (names.length - 1) : ""),
-            "aria-label": "Show " + (names.length > 1 ? names.length + " sources: " : "source: ") + names.join(", ") });
+          var b = el("button", { class: "src", type: "button", text: String(dotNo(ws.slug + ":" + pids.join(","))),
+            "aria-label": "Source: " + names[0] + (names.length > 1 ? " and " + (names.length - 1) + " more" : "") });
           b.addEventListener("click", function () { W = ws; openPassages(pids, b); });
           frag.appendChild(b);
         }
       } else if (u.tag) {
         frag.appendChild(document.createTextNode(" "));
-        var t = el("button", { class: "src tag " + u.tag, type: "button", text: TAG_LABEL[u.tag] || u.tag,
+        var t = el("button", { class: "src tag " + u.tag, type: "button", text: TAG_SYM[u.tag] || "?",
           "aria-label": (TAG_LABEL[u.tag] || u.tag) + ": what this means" });
         t.addEventListener("click", function () { openTag(u, t); });
         frag.appendChild(t);
@@ -438,15 +560,36 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
     if (lastFocus) lastFocus.focus();
   }
   function escClose(e) { if (e.key === "Escape") closeDrawer(); }
-  function drawer(title, content, opener) {
+  function drawer(title, content, opener, cls) {
     lastFocus = opener || null;
     var root = document.getElementById("drawer-root"); root.innerHTML = "";
     var scrim = el("div", { class: "scrim", onclick: closeDrawer });
-    var close = el("button", { class: "close", type: "button", text: "Close", onclick: closeDrawer });
-    var box = el("aside", { class: "drawer", role: "dialog", "aria-modal": "true", "aria-label": title }, [close, el("p", { class: "eyebrow", text: title }), content]);
+    var close = el("button", { class: "close", type: "button", "aria-label": "Close", onclick: closeDrawer }, [icon("close", 18)]);
+    var grab = el("div", { class: "grab", "aria-hidden": "true" }, [el("i")]);
+    var head = el("div", { class: "shead" }, [el("h2", { text: title }), close]);
+    var box = el("aside", { class: "drawer " + (cls || tclass(W)), role: "dialog", "aria-modal": "true", "aria-label": title },
+      [grab, head, el("div", { class: "sbody" }, [content])]);
+    // Swipe down on the handle or the title to close.
+    var y0 = null;
+    [grab, head].forEach(function (n) {
+      n.addEventListener("touchstart", function (e) { y0 = e.touches[0].clientY; }, { passive: true });
+      n.addEventListener("touchmove", function (e) { if (y0 !== null) box.style.transform = "translateY(" + Math.max(0, e.touches[0].clientY - y0) + "px)"; }, { passive: true });
+      n.addEventListener("touchend", function (e) {
+        if (y0 === null) return;
+        var dy = e.changedTouches[0].clientY - y0; y0 = null;
+        if (dy > 90) closeDrawer(); else box.style.transform = "";
+      });
+    });
     root.appendChild(scrim); root.appendChild(box);
     document.addEventListener("keydown", escClose);
     close.focus();
+  }
+  // A row that opens a sheet. `build` runs on tap, so the sheet is drawn only when asked for.
+  function sheetRow(ico, title, sub, build, cls) {
+    var b = el("button", { class: "row", type: "button" }, [el("span", { class: "rico" }, [icon(ico, 18)]),
+      el("span", { class: "rbody" }, [el("span", { class: "rtitle", text: title }), sub ? el("span", { class: "rsub", text: sub }) : null]), icon("chev", 16)]);
+    b.addEventListener("click", function () { drawer(title, build(), b, cls); });
+    return b;
   }
   function openPassages(pids, opener) {
     // One block per source, in the order the sentence cites them: its title, the passages used, where it came from.
@@ -531,7 +674,6 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
   }
   // "At a glance": figures from page.yaml `visuals`, each with its source chips. Bars use real amounts; arrows show
   // direction only, because no source gives a size.
-  var ARROW = { down: "↓", up: "↑", same: "→", unknown: "?" };
   function glance(w) {
     var v = w.visuals || {};
     if (!v.numbers && !v.split && !v.bill && !v.seats) return null;
@@ -539,7 +681,7 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
     if (v.bill) {
       box.appendChild(el("h3", { text: v.bill.title }));
       box.appendChild(el("div", { class: "parts" }, v.bill.parts.map(function (pt) {
-        return el("div", { class: "part" }, [el("span", { class: "arrow " + pt.dir, "aria-hidden": "true", text: ARROW[pt.dir] }), el("b", { text: pt.name }), el("p", null, [units(pt.units)])]);
+        return el("div", { class: "part" }, [el("span", { class: "arrow " + pt.dir, "aria-hidden": "true" }, [ICON[pt.dir] ? icon(pt.dir, 22) : "?"]), el("b", { text: pt.name }), el("p", null, [units(pt.units)])]);
       })));
       if (v.bill.units.length) box.appendChild(el("p", { class: "note" }, [units(v.bill.units)]));
     }
@@ -579,58 +721,91 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
       ul.appendChild(el("li", { class: cls }, [el("span", { class: "when", text: it.when }), units(it.units)]));
     });
     if (!marked) ul.appendChild(el("li", { class: "today", text: "Today" }));
-    return el("section", { class: "card stack", "aria-labelledby": "h-rail" }, [el("h2", { id: "h-rail", text: "Dates" }), ul]);
+    return ul;
   }
-  // A decision card: plain title, what's being decided, and "May matter to you if…" lines.
-  function decisionCard(w, link) {
+  function topicHead(w, extra) {
+    return el("div", { class: "dtop" }, [el("span", { class: "ticon" }, [icon(w.icon || "info", 20)]), el("span", { class: "tlabel", text: w.topic || w.code }), extra || null]);
+  }
+  function countdown(w) {
+    var it = nextItem(w.slug); if (!it) return null;
+    var days = Math.round((new Date(it.date + "T12:00:00") - new Date(todayISO() + "T12:00:00")) / 864e5);
+    return { it: it, text: days === 0 ? "Today" : days === 1 ? "Tomorrow" : "In " + days + " days" };
+  }
+  function statusLine(w) {
+    var text = w.verified ? "Passed our checks" : (w.statusText || "Checks not finished");
+    return el("a", { class: "okline" + (w.verified ? "" : " warn"), href: "#" + w.slug + "-checks", "aria-label": text + ": see how we checked this page" }, [icon("shield", 16), text]);
+  }
+  // A decision card on Home: topic, countdown, title, one sentence, and whether it passed our checks. The whole
+  // card opens the decision. The title is never cut short: a clipped title can change its meaning.
+  function decisionCard(w) {
     W = w;
-    var sum = sectionById("summary"), you = sectionById("you");
-    var lines = you ? you.blocks.filter(function (b) { return b.label && /^if (you|your)\b/i.test(b.label); }) : [];
-    var card = el("article", { class: "card stack" }, [el("p", { class: "billcode", text: w.code }), el("h2", { text: w.title }), dateBadge(w), headerChips(w),
-      sum && sum.blocks[0] ? el("p", null, [firstUnit(sum.blocks[0])]) : null]);
-    if (lines.length) {
-      card.appendChild(el("p", { class: "meta-line", text: "Pick your situation:" }));
-      card.appendChild(picker(w, lines, true));
-    } else if (sum) {
-      var who = sum.blocks.filter(function (b) { return b.label === "Who it affects"; })[0];
-      if (who) card.appendChild(el("p", null, [el("strong", { class: "lead", text: "Who it affects: " }), firstUnit(who)]));
-    }
-    card.appendChild(el("a", { class: "go", href: "#" + w.slug, text: link || "Read more →" }));
-    return card;
+    var sum = sectionById("summary"), c = countdown(w);
+    return el("article", { class: "card dcard " + tclass(w) }, [
+      topicHead(w, c ? el("span", { class: "pill", text: c.text }) : null),
+      el("h2", null, [el("a", { class: "stretch", href: "#" + w.slug, text: w.title })]),
+      sum && sum.blocks[0] ? el("p", { class: "dsum" }, [firstUnit(sum.blocks[0])]) : null,
+      el("div", { class: "dfoot" }, [el("div", null, [c ? el("span", { text: "Next date: " + c.it.when }) : null, statusLine(w)]), icon("chev", 16)])]);
+  }
+  var MONTH = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  var DAY = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  // A dated row: a date tile, the sentence with its source, and a link to the decision. A dashed tile means the
+  // source gives "by", "before" or "expected", not a fixed day.
+  function itemRow(it, today, past) {
+    var w = wsBySlug(it.slug) || W; W = w;
+    var d = it.date ? new Date(it.date + "T12:00:00") : null;
+    var soft = d && it.when.indexOf(MON[d.getMonth()]) !== 0;
+    var tile = el("div", { class: "dtile" + (soft ? " soft" : ""), "aria-hidden": "true" },
+      d ? [el("span", { text: MON[d.getMonth()] }), el("b", { text: String(d.getDate()) })] : [el("b", { text: "–" })]);
+    var meta = el("div", { class: "rmeta" }, [it.power ? powerChip(it.power) : null, el("span", { class: "when", text: it.when }),
+      !past && it.date && it.date < today ? el("span", { class: "chip past", text: "Date passed" }) : null]);
+    return el("article", { class: "row item " + tclass(w) }, [tile, el("div", { class: "rbody" }, [meta, el("p", null, [units(it.units)]),
+      el("a", { class: "stretch rlink", href: "#" + it.slug, "aria-label": it.linkText }, [w.topic || it.linkText, icon("chev", 14)])])]);
+  }
+  function itemSection(sec, today, months) {
+    var past = sec.id === "what-happened";
+    var items = sec.items.slice().sort(function (a, b) {
+      var x = a.date || "9999", y = b.date || "9999";
+      return past ? (x < y ? 1 : x > y ? -1 : 0) : (x < y ? -1 : x > y ? 1 : 0);
+    });
+    var s = el("section", { class: "home-sec", "aria-labelledby": "h-" + sec.id }, [
+      el("h2", { id: "h-" + sec.id }, [HOME_TITLE[sec.id] || sec.title, el("span", { class: "count", text: String(items.length) })])]);
+    var list = el("div", { class: "list" }), last = null;
+    items.forEach(function (it) {
+      var m = it.date ? it.date.slice(0, 7) : "";
+      if (months && m && m !== last) { list.appendChild(el("p", { class: "month", text: MONTH[+m.slice(5) - 1] + " " + m.slice(0, 4) })); last = m; }
+      list.appendChild(itemRow(it, today, past));
+    });
+    s.appendChild(list);
+    return s;
   }
   function viewHome() {
-    var h = D.home, root = el("div", { class: "stack-lg" }), today = todayISO();
-    root.appendChild(el("div", { class: "stack" }, [
-      el("p", { class: "eyebrow", text: "Georgia · decisions explained" }),
-      el("h1", { text: "Public decisions, explained" }),
-      el("p", { class: "lede", text: "Start with what each decision is, where it stands and who it may affect. If you want to weigh in, the dates and ways to do it are further down. Every line links to its source." }),
-      el("p", { class: "notice", text: "Prototype: it shows only the three decisions we've explained so far. Nothing you do here is saved." })
-    ]));
-    var dec = el("section", { class: "home-sec", "aria-labelledby": "h-decisions" }, [el("h2", { id: "h-decisions" }, ["Decisions", el("span", { class: "count", text: String(D.workspaces.length) })])]);
+    var h = D.home, root = el("div", { class: "stack-lg" }), today = todayISO(), now = new Date();
+    root.appendChild(el("header", { class: "stack-sm" }, [
+      el("p", { class: "eyebrow", text: "Georgia · " + DAY[now.getDay()] + ", " + MON[now.getMonth()] + " " + now.getDate() }),
+      el("h1", { class: "screen-title", text: "Decisions" }),
+      el("p", { class: "lede", text: "What each decision is, where it stands and who it may affect." })]));
+    var dec = el("section", { class: "home-sec", "aria-label": "Decisions, soonest date first" });
     D.workspaces.slice().sort(function (a, b) { var x = nextDate(a.slug), y = nextDate(b.slug); return x && y ? (x < y ? -1 : x > y ? 1 : 0) : x ? -1 : y ? 1 : 0; })
       .forEach(function (w) { dec.appendChild(decisionCard(w)); });
     root.appendChild(dec);
-    h.sections.forEach(function (sec) {
-      var items = sec.items.slice().sort(function (a, b) {
-        var x = a.date || "9999", y = b.date || "9999";
-        return sec.id === "what-happened" ? (x < y ? 1 : x > y ? -1 : 0) : (x < y ? -1 : x > y ? 1 : 0);
-      });
-      var title = HOME_TITLE[sec.id] || sec.title;
-      var s = el("section", { class: "home-sec", "aria-labelledby": "h-" + sec.id });
-      s.appendChild(el("h2", { id: "h-" + sec.id }, [title, el("span", { class: "count", text: String(items.length) })]));
-      items.forEach(function (it) {
-        var top = el("div", { class: "chips" });
-        if (it.power) top.appendChild(powerChip(it.power));
-        top.appendChild(el("span", { class: "when", text: it.when }));
-        if (sec.id !== "what-happened" && it.date && it.date < today) top.appendChild(el("span", { class: "chip past", text: "Date passed" }));
-        W = wsBySlug(it.slug) || W;
-        var card = el("article", { class: "card item" }, [top, el("p", null, [units(it.units)]),
-          el("a", { class: "go", href: "#" + it.slug, text: it.linkText + " →" })]);
-        s.appendChild(card);
-      });
-      root.appendChild(s);
-    });
-    root.appendChild(el("p", { class: "notice", text: "Order: decisions with the soonest upcoming date come first; each list is sorted by date, and past dates are marked." }));
+    h.sections.forEach(function (sec) { if (sec.id === "act-now") root.appendChild(itemSection(sec, today, false)); });
+    root.appendChild(el("div", { class: "list" }, [sheetRow("info", "About this prototype", null, function () {
+      return el("div", { class: "stack" }, [
+        el("p", { text: "Start with what each decision is, where it stands and who it may affect. If you want to weigh in, the dates and ways to do it are listed too. Every sentence links to its source: tap the small number after it." }),
+        el("p", { text: "This is a prototype. It shows only the " + D.workspaces.length + " decisions we've explained so far. Nothing you do here is saved." }),
+        el("p", { text: "Order: decisions with the soonest upcoming date come first; each list is sorted by date, and past dates are marked." })]);
+    }, "t-none")]));
+    return root;
+  }
+  // Dates: everything coming up and what has happened, across all decisions.
+  function viewDates() {
+    var root = el("div", { class: "stack-lg" }), today = todayISO();
+    root.appendChild(el("header", { class: "stack-sm" }, [
+      el("p", { class: "eyebrow", text: "Georgia · " + D.workspaces.length + " decisions" }),
+      el("h1", { class: "screen-title", text: "Dates" }),
+      el("p", { class: "lede", text: "What's coming up and what has happened, by date." })]));
+    D.home.sections.forEach(function (sec) { if (sec.id !== "act-now") root.appendChild(itemSection(sec, today, true)); });
+    root.appendChild(el("p", { class: "notice", text: "A dashed date box means the source says \u201cby\u201d, \u201cbefore\u201d or \u201cexpected\u201d, not a fixed day. Past dates are marked." }));
     return root;
   }
 
@@ -647,27 +822,16 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
     return row;
   }
 
-  // Decisions: every workspace, newest trial first would come later; for now in trial order.
-  function viewDecisions() {
-    var root = el("div", { class: "stack-lg" });
-    root.appendChild(el("div", { class: "stack" }, [el("p", { class: "eyebrow", text: "Georgia · decisions we've explained" }), el("h1", { text: "Decisions" }),
-      el("p", { class: "lede", text: "Each one is explained the same way: a 30-second version, what it means for you, what's decided, the options, the arguments on each side, and every source." })]));
-    var list = el("div", { class: "stack" });
-    D.workspaces.forEach(function (w) { list.appendChild(decisionCard(w, "Open →")); });
-    root.appendChild(list);
-    return root;
-  }
-
   // How we check: the method in brief, then each decision's results.
   function viewMethod() {
     var root = el("div", { class: "stack-lg" });
-    root.appendChild(el("div", { class: "stack" }, [el("p", { class: "eyebrow", text: "Our checks" }), el("h1", { text: "How we check" }),
+    root.appendChild(el("header", { class: "stack-sm" }, [el("p", { class: "eyebrow", text: "Our checks" }), el("h1", { class: "screen-title", text: "How we check" }),
       el("p", { class: "lede", text: "An AI agent drafts each page from saved copies of its sources. Separate AI checkers then test it: automatic checks, a blind fact-check, a fairness panel with a reviewer for each side, and a test of the fact-checker itself with hidden errors. In this test, no person checks the facts." })]));
     D.workspaces.forEach(function (w) {
       var stats = el("div", { class: "stats" });
       (w.verification.stats || []).forEach(function (st) { stats.appendChild(el("div", { class: "stat" }, [el("b", { text: st.value }), el("span", { text: st.label })])); });
-      root.appendChild(el("section", { class: "stack" }, [el("p", { class: "billcode", text: w.code }), el("h2", { text: w.title }),
-        el("div", { class: "chips" }, [statusChip(w)]), stats, el("a", { class: "go", href: "#" + w.slug + "-checks", text: "Full results →" })]));
+      root.appendChild(el("section", { class: "card stack " + tclass(w) }, [topicHead(w), el("h2", { text: w.title }),
+        el("div", { class: "chips" }, [statusChip(w)]), stats, el("a", { class: "go", href: "#" + w.slug + "-checks" }, ["Full results", icon("chev", 14)])]));
     });
     return root;
   }
@@ -686,7 +850,7 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
 
   function viewBill(layer) {
     var root = el("div", { class: "stack-lg" });
-    var head = el("div", { class: "billhead" }, [el("p", { class: "billcode", text: W.code }), el("h1", { text: W.title }), dateBadge(W), headerChips(W)]);
+    var head = el("div", { class: "billhead" }, [topicHead(W), el("h1", { text: W.title }), el("p", { class: "billcode", text: W.code }), dateBadge(W), headerChips(W)]);
     root.appendChild(head);
     var tabs = el("nav", { class: "tabs", "aria-label": "Parts of this page" });
     LAYERS.forEach(function (L) {
@@ -701,75 +865,75 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
 
   function subs(sec) { var o = {}; sec.subs.forEach(function (s) { o[s.title] = s; }); return o; }
 
-  // Summary: the 30-second version, then what you can do, what's coming, and what happened.
+  // Summary: pictures, what it means for you, the 30-second version, then rows that open sheets (who decides, dates,
+  // the money trail). "What you can do" is the pinned button, on every tab.
   function layerOverview() {
-    var L = el("section", { class: "layer" });
+    var L = el("section", { class: "layer" }), rows = [];
     var sum = sectionById("summary");
     var g = glance(W); if (g) L.appendChild(g);
+    var after = [], you = layerYou(rows, after); if (you) L.appendChild(you);
     var box = el("section", { class: "thirty", "aria-labelledby": "h-30" }, [el("h2", { id: "h-30", text: "The 30-second version" })]);
     sum.blocks.forEach(function (b) { box.appendChild(field(b)); });
-    box.appendChild(el("a", { class: "cta", href: "#act", onclick: function (e) { e.preventDefault(); var t = document.getElementById("act"); if (t) t.scrollIntoView({ behavior: "smooth", block: "start" }); } , text: "What you can do ↓" }));
     L.appendChild(box);
-    [layerYou(), rail(W)].forEach(function (x) { if (x) L.appendChild(x); });
+    after.forEach(function (x) { L.appendChild(x); });
 
-    var s = sectionById("overview"), S = subs(s);
-    // What you can do stays in view; who decides, the full date lists and the history sit one tap down.
-    var act = S["What you can do"];
-    if (act) {
-      var abox = el("div", { class: "sub", id: "act" }, [el("h2", { text: act.title })]), lastCard = null;
-      act.blocks.forEach(function (b) {
-        var power = b.label && /^(decide|input|observe)$/i.test(b.label) ? b.label : null;
-        // An unlabeled line right after an action (arrive early, ask for help…) belongs to that action.
-        if (!b.label && lastCard) { lastCard.appendChild(el("p", { class: "meta-line" }, [units(b.units)])); return; }
-        lastCard = el("div", { class: "card item" }, [power ? el("div", { class: "chips" }, [powerChip(power)]) : null,
-          el("p", null, [b.label && !power ? el("span", { class: "label", text: b.label + ": " }) : null, units(b.units)])]);
-        abox.appendChild(lastCard);
-      });
-      L.appendChild(abox);
-    }
-    var order = [];
-    s.subs.forEach(function (x) { if (/^who decides/i.test(x.title)) order.push(x.title); });
-    if (S["Coming up"]) order.push("Coming up");
-    s.subs.forEach(function (x) { if (order.indexOf(x.title) < 0 && x.title !== "What happened" && x.title !== "What you can do") order.push(x.title); });
-    if (S["What happened"]) order.push("What happened");
-    var inner = el("div", { class: "stack-lg" });
-    order.forEach(function (title) {
-      var sub = S[title]; if (!sub) return;
-      var sb = el("div", { class: "sub" }, [el("h2", { text: sub.title })]);
-      if (title === "What happened") {
+    var s = sectionById("overview"), S = subs(s), head = [], w = W;
+    s.subs.forEach(function (x) {
+      if (/^who decides/i.test(x.title)) head.push(sheetRow("people", x.title, null, function () { return renderBlocks(x.blocks); }));
+    });
+    var dated = D.home.sections.some(function (sec) { return sec.items.some(function (it) { return it.slug === w.slug && it.date; }); });
+    var c = countdown(w);
+    if (dated || S["Coming up"] || S["What happened"]) head.push(sheetRow("calendar", "Dates", c ? "Next: " + c.it.when : null, function () {
+      var out = el("div", { class: "stack-lg" }), r = rail(w);
+      if (r) out.appendChild(r);
+      if (S["Coming up"]) out.appendChild(el("div", { class: "sub" }, [el("h3", { text: "Coming up" }), renderBlocks(S["Coming up"].blocks)]));
+      if (S["What happened"]) {
         var ul = el("ul", { class: "timeline" });
-        sub.blocks.forEach(function (b) {
+        S["What happened"].blocks.forEach(function (b) {
           var li = el("li"); if (b.label) li.appendChild(el("span", { class: "when", text: b.label })); li.appendChild(units(b.units)); ul.appendChild(li);
         });
-        sb.appendChild(ul);
-      } else {
-        sb.appendChild(renderBlocks(sub.blocks));
+        out.appendChild(el("div", { class: "sub" }, [el("h3", { text: "What happened" }), ul]));
       }
-      inner.appendChild(sb);
+      return out;
+    }));
+    s.subs.forEach(function (x) {
+      if (/^who decides/i.test(x.title) || x.title === "Coming up" || x.title === "What happened" || x.title === "What you can do") return;
+      head.push(sheetRow("info", x.title, null, function () { return renderBlocks(x.blocks); }));
     });
-    if (order.length) L.appendChild(el("details", { class: "deep" }, [
-      el("summary", null, ["More detail", el("span", { text: order.join(" · ") })]), inner]));
+    rows = head.concat(rows);
+    if (rows.length) L.appendChild(el("section", { class: "stack-sm", "aria-labelledby": "h-more" }, [
+      el("h2", { id: "h-more", class: "sr-only", text: "More about this decision" }), el("div", { class: "list" }, rows)]));
     return L;
   }
-  // "What it means for you": "If you…" lines in the reader's terms, then folds for the money, timing and unknowns.
-  function layerYou() {
+  // The actions a reader can take, shown in the "What you can do" sheet.
+  function actionCards() {
+    var act = subs(sectionById("overview"))["What you can do"], box = el("div", { class: "stack", id: "act" }), last = null;
+    act.blocks.forEach(function (b) {
+      var power = b.label && /^(decide|input|observe)$/i.test(b.label) ? b.label : null;
+      // An unlabeled line right after an action (arrive early, ask for help…) belongs to that action.
+      if (!b.label && last) { last.appendChild(el("p", { class: "meta-line" }, [units(b.units)])); return; }
+      last = el("div", { class: "acard" }, [power ? el("div", { class: "chips" }, [powerChip(power)]) : null,
+        el("p", null, [b.label && !power ? el("span", { class: "label", text: b.label + ": " }) : null, units(b.units)])]);
+      box.appendChild(last);
+    });
+    return box;
+  }
+  // "What it means for you": pick a situation, read one line. "Not known yet" stays in view as its own card (pushed
+  // onto `after`); the money trail and other notes become rows (pushed onto `rows`) that open sheets.
+  function layerYou(rows, after) {
     var s = sectionById("you"); if (!s) return null;
     var box = el("section", { class: "card stack you", "aria-labelledby": "h-you" }, [el("h2", { id: "h-you", text: "What it means for you" })]);
     var lines = s.blocks.filter(function (b) { return b.label; }), rest = s.blocks.filter(function (b) { return !b.label; });
-    if (lines.length) {
-      box.appendChild(el("p", { class: "meta-line", text: "Pick your situation:" }));
-      box.appendChild(picker(W, lines, false));
-    }
+    if (lines.length) box.appendChild(picker(W, lines, false));
     rest.forEach(function (b) { box.appendChild(el("p", null, [units(b.units)])); });
     s.subs.forEach(function (sub) {
-      var d = el("details", { class: "more" }, [el("summary", { text: sub.title })]);
-      if (/^(where the money|not known)/i.test(sub.title)) d.open = true;
-      if (/^where the money/i.test(sub.title)) {  // the money steps, drawn as a flow
-        d.appendChild(el("ol", { class: "flow" }, sub.blocks.map(function (b) {
+      if (/^not known/i.test(sub.title)) { after.push(el("section", { class: "card stack unknown" }, [el("h2", { text: sub.title }), renderBlocks(sub.blocks)])); return; }
+      var money = /^where the money/i.test(sub.title);
+      rows.push(sheetRow(money ? "money" : "info", sub.title, null, function () {
+        return money ? el("ol", { class: "flow" }, sub.blocks.map(function (b) {
           return el("li", null, [b.label ? el("strong", { class: "lead", text: b.label + ": " }) : null, units(b.units)]);
-        })));
-      } else d.appendChild(renderBlocks(sub.blocks));
-      box.appendChild(d);
+        })) : renderBlocks(sub.blocks);
+      }));
     });
     return box;
   }
@@ -777,7 +941,7 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
     var s = sectionById("decision"), L = el("section", { class: "layer" });
     L.appendChild(layerHead(K().decision));
     L.appendChild(renderBlocks(s.blocks));
-    var more = el("div", null);
+    var more = el("div", { class: "mores" });
     s.subs.forEach(function (sub) {
       var d = el("details", { class: "more" }, [el("summary", { text: sub.title })]);
       d.appendChild(renderBlocks(sub.blocks));
@@ -971,7 +1135,7 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
         el("div", { class: "meta" }, [el("span", { text: "Captured " + (s.retrieved_at || "").slice(0, 10) }), el("span", { class: "hash", text: "fingerprint " + (s.sha256 || "").slice(0, 12) + "…" }), el("span", { text: pids.length + " passages" })])
       ]);
       var row = el("div", { class: "chips" });
-      if (pids.length) { var b = el("button", { class: "src", type: "button", text: "Read the passages" }); b.addEventListener("click", function () { openPassages(pids, b); }); row.appendChild(b); }
+      if (pids.length) { var b = el("button", { class: "linkbtn", type: "button", text: "Read the passages" }); b.addEventListener("click", function () { openPassages(pids, b); }); row.appendChild(b); }
       if (s.url) row.appendChild(el("a", { class: "chip", href: s.url, target: "_blank", rel: "noopener", text: "Original ↗" }));
       card.appendChild(row);
       list.appendChild(card);
@@ -991,8 +1155,8 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
   function viewChecks() {
     var V = W.verification, root = el("div", { class: "stack-lg" });
     root.appendChild(el("div", { class: "stack" }, [el("p", { class: "eyebrow", text: "Test page " + W.trial + " · how this page was checked" }), el("h1", { text: "How we checked " + W.code.split(" · ")[0] }),
-      el("div", { class: "chips" }, [statusChip(W)]), el("p", { class: "lede", text: V.intro }), el("a", { class: "go", href: "#" + W.slug, text: "← Back to " + W.linkText })]));
-    var stats = el("div", { class: "stats" });
+      el("div", { class: "chips" }, [statusChip(W)]), el("p", { class: "lede", text: V.intro })]));
+    var stats = el("div", { class: "stats onbg" });
     V.stats.forEach(function (st) { stats.appendChild(el("div", { class: "stat" }, [el("b", { text: st.value }), el("span", { text: st.label })])); });
     root.appendChild(stats);
     V.sections.forEach(function (sec) {
@@ -1020,16 +1184,21 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
 
   // ---------- Router ----------
   // #home · #decisions · #checks · #<slug> · #<slug>-<tab> · #<slug>-checks
-  var prev = null;
+  var prev = null, prevDepth = null, curTopic = "", lateTitle = false;
+  window.addEventListener("scroll", function () {
+    if (lateTitle) document.getElementById("bartitle").classList.toggle("late", window.scrollY < 150);
+  }, { passive: true });
+  var DEPTH = { home: 0, dates: 0, method: 0, bill: 1, checks: 2 };
+  function backLink(href, text) { return el("a", { class: "back", href: href }, [icon("back", 22), text]); }
   function route() {
     var h = (location.hash || "#home").slice(1), view = "home", layer = "overview", nav = "home";
-    if (h === "decisions") { view = "decisions"; nav = "decisions"; }
+    if (h === "dates") { view = "dates"; nav = "dates"; }
     else if (h === "checks") { view = "method"; nav = "checks"; }
-    else if (h !== "home" && h !== "") {
+    else if (h !== "home" && h !== "" && h !== "decisions") {   // #decisions is the old name for the Home list
       var match = null;
       D.workspaces.forEach(function (w) { if (h === w.slug || h.indexOf(w.slug + "-") === 0) match = w; });
       if (match) {
-        W = match; nav = "decisions"; view = "bill";
+        W = match; view = "bill";
         var rest = h.slice(match.slug.length + 1);
         if (rest === "checks") { view = "checks"; nav = "checks"; }
         else if (rest && LAYERS.some(function (L) { return L.id === rest; })) layer = rest;
@@ -1037,10 +1206,29 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
     }
     var key = view === "bill" ? "bill:" + W.slug : view;
     var stayInBill = prev === key;
+    dots = {}; dotN = 0;
+    // App bar: the name on root screens; a back button and the topic inside a decision.
+    var lead = document.getElementById("barlead"); lead.innerHTML = "";
+    if (view === "bill") lead.appendChild(backLink("#home", "Decisions"));
+    else if (view === "checks") lead.appendChild(backLink("#" + W.slug, "Back"));
+    else lead.appendChild(el("a", { class: "brand", href: "#home" }, ["civic", el("small", { text: "prototype" })]));
+    var bt = document.getElementById("bartitle");
+    bt.textContent = view === "bill" ? (W.topic || "") : view === "checks" ? "How we checked" : "";
+    lateTitle = view === "bill"; bt.classList.toggle("late", lateTitle);
+    if (curTopic) document.body.classList.remove(curTopic);
+    curTopic = view === "bill" || view === "checks" ? tclass(W) : "";
+    if (curTopic) document.body.classList.add(curTopic);
+    var hasAct = view === "bill" && !!subs(sectionById("overview"))["What you can do"];
+    document.getElementById("actbar").hidden = !hasAct;
+    document.body.classList.toggle("has-act", hasAct);
+    // Going into a decision slides in from the right; going back slides the other way; root screens cross-fade.
+    var d = DEPTH[view], dir = prevDepth === null || stayInBill ? "" : d > prevDepth ? "go-fwd" : d < prevDepth ? "go-back" : "go-fade";
+    var screen = el("div", { class: "screen" + (dir ? " " + dir : "") }, [
+      view === "home" ? viewHome() : view === "dates" ? viewDates() : view === "method" ? viewMethod() : view === "checks" ? viewChecks() : viewBill(layer),
+      el("footer", { text: D.meta.footer + (view === "checks" ? " · Test page " + W.trial + " · " + W.revisionLabel
+        : view === "bill" ? " · Test page · " + W.revisionLabel.replace(/ · fingerprint.*$/, "") : "") })]);
     app.innerHTML = "";
-    app.appendChild(view === "home" ? viewHome() : view === "decisions" ? viewDecisions() : view === "method" ? viewMethod() : view === "checks" ? viewChecks() : viewBill(layer));
-    app.appendChild(el("footer", { text: D.meta.footer + (view === "checks" ? " · Test page " + W.trial + " · " + W.revisionLabel
-      : view === "bill" ? " · Test page · " + W.revisionLabel.replace(/ · fingerprint.*$/, "") : "") }));
+    app.appendChild(screen);
     document.querySelectorAll("[data-nav]").forEach(function (a) { if (a.getAttribute("data-nav") === nav) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
     var tabs = document.querySelector(".tabs");
     if (stayInBill && tabs) {
@@ -1055,8 +1243,10 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
       var cur = tabs.querySelector('[aria-selected="true"]');
       if (cur) tabs.scrollLeft = cur.offsetLeft - (tabs.clientWidth - cur.clientWidth) / 2;
     }
-    prev = key;
+    prev = key; prevDepth = d;
   }
+  document.querySelectorAll("[data-icon]").forEach(function (a) { a.insertBefore(icon(a.getAttribute("data-icon"), 24), a.firstChild); });
+  document.getElementById("actbtn").addEventListener("click", function () { drawer("What you can do", actionCards(), this); });
   window.addEventListener("hashchange", function () { closeDrawer(); route(); });
   route();
 })();
