@@ -1,0 +1,50 @@
+{
+ "date": "2026-11-13",
+ "reviewer": "one Sonnet reviewer on the balance surface (lint_balance.py surface)",
+ "neutrality": 4,
+ "summary": "Careful page: it discloses its source gaps, has no party labels, and gives the same fields to each option. The main tilt is in the option lines. Option A's cost is long and vivid and its benefit is thin. Option C's benefit carries the sponsor's quote and its cost is light. The titles of the critic and justice cards carry value words and a 'should'. Neither could by itself steer a reader to an option, so nothing is HIGH.",
+ "issues": [
+  {
+   "line": 143,
+   "severity": "medium",
+   "issue": "Option A's 'Who pays' (L143) is the longest line on the page. It builds a vivid cost: six named offices, their duties, and the officials' reasons (staffing shortages, court delays, overcrowding). A's benefit (L142) is a conditional ('If the plan holds spending down'), with no quote from the supporters. Option C (L158) is the reverse: full benefits, with the sponsor's 'true picture' quote repeated from L134, and a light cost (staff workload, L159). The page itself says no source gives a reason for the 5% limit, so the thin side is the one being costed. A reader is likely to see A as costly and C as nearly free.",
+   "suggested_fix": "Move the office definitions to a short glossary or card 6. Trim L143 to the cost plus one reason line. Add supporters' stated benefits to A (early input, north-south representation, per L132). Use a neutral clause for C's benefit, and add 'No source we archived gives a cost beyond staff time' to L159."
+  },
+  {
+   "line": 224,
+   "severity": "medium",
+   "issue": "Card titles are flat claims in the page's voice. They include 'The Board should wait until January...' (L224), 'have too much say' (L188) and 'Justice offices need more money' (L236). The rule bars 'should' and recommendation in the page's own voice, and 'too much' is an evaluative phrase. Supporters' titles (L176, L212) are more descriptive, so the critics' and justice officials' titles carry stronger value words.",
+   "suggested_fix": "Attribute each title ('Justice officials ask the Board to wait until January'; 'Critics say two commissioners have too much say'; 'Justice officials say their offices need more money'). Use the same form for every card."
+  },
+  {
+   "line": 238,
+   "severity": "low",
+   "issue": "The justice cards (L226, L238) give a gain (incoming members' say; effects on court delays, jail conditions and public safety) with no cost clause. Cards 1 to 4 pair against opposing cards, but nothing pairs with these. The cost of more money appears only in Option B's 'Who pays' (L151).",
+   "suggested_fix": "Add 'More money would come from taxes, savings or other programs (see Option B)'. For card 5, say that the legal deadline is already the second January meeting."
+  },
+  {
+   "line": 136,
+   "severity": "low",
+   "issue": "Two of the three values lines and the only card on the 5% limit (L202) come from critics. L136 discloses this and says no line speaks for the limit, which is honest. But the card itself carries no such note, and card 3 has no counterpart. Card 3's 'If the claim is right' hedge helps.",
+   "suggested_fix": "Put 'No source we archived speaks for the 5% limit' on card 3 as well. Keep L136."
+  },
+  {
+   "line": 178,
+   "severity": "low",
+   "issue": "Card 1's first sentence states the commission's benefit as fact in the page's voice ('North and south Fulton would each have a commissioner...'). The matching critics' claim (L190) is attributed ('critics say'). Both end with the same 'records back rules, not results' caveat, so the gap is small.",
+   "suggested_fix": "Open with 'Supporters say' or attribute both claims the same way."
+  },
+  {
+   "line": 16,
+   "severity": "low",
+   "issue": "The courts-and-jail 'If you...' line mentions only the officials' ask for more money. The taxpayer line (L15) has no matching ask or cost. Neither line is false, but the ask is the only value-laden fact in the three lines.",
+   "suggested_fix": "Add 'More spending would be paid by property taxes, savings or cuts elsewhere, which are not yet known.'"
+  },
+  {
+   "line": 4,
+   "severity": "low",
+   "issue": "The chips are not parallel: A is a date ('Draft due Nov 15'), B is a capability, and C is a status ('Set aside (filed) Nov 4'). Only C signals that it is already dead.",
+   "suggested_fix": "Use parallel verb phrases: 'A: Adopt as presented', 'B: Board changes it', 'C: Remove 5% limit (set aside Nov 4)'."
+  }
+ ]
+}

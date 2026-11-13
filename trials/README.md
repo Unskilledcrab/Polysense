@@ -7,9 +7,28 @@ owner reviews it. Reviewed trials become the **gold data** that automation must 
 
 | Trial | Process | Subject | Status |
 |---|---|---|---|
-| [001](001-hb1009-high-school-cellphones/) | A. Bill workspace (#1) | HB 1009 (2026), high school "bell-to-bell" personal device ban | **Passed checks (round 4)**, revision 5. Planted-error catch rate 13/13. Owner reviewed the experience. Prototype in [prototypes/hb1009/](../prototypes/hb1009/) |
-| [002](002-psc-57171-fuel-credit/) | A. Decision workspace (adapted to a regulatory case) | PSC Docket 57171: how Georgia Power credits data-center-heavy Real-Time Pricing revenue against fuel costs (vote 2026-12-15) | **Passed checks (round 6)**, revision 6.3, after accuracy fixes and three targeted re-checks. Five parties; the hardest trial so far (rounds 1 to 4 failed the fairness panel). Planted-error catch rate 12/12. Must be revised after the Dec 2 briefs and the Dec 15 decision |
-| [003](003-fulton-2027-budget/) | A. Decision workspace (adapted to a county budget) | Fulton County 2027 budget, and the dispute over how it is being prepared (proposal due 2026-11-15) | **Passed checks (round 3)**, revision 3.3, after accuracy fixes and three targeted re-checks. Planted-error catch rate 12/12. Must be revised when the proposal is posted (due by 2026-11-15) |
+| [001](001-hb1009-high-school-cellphones/) | A. Bill workspace (#1) | HB 1009 (2026), high school "bell-to-bell" personal device ban | **Passed checks**, revision 6.4: 292 of 292 sentences checked, gate passing. Prototype in [prototypes/hb1009/](../prototypes/hb1009/) |
+| [002](002-psc-57171-fuel-credit/) | A. Decision workspace (adapted to a regulatory case) | PSC Docket 57171: how Georgia Power credits data-center-heavy Real-Time Pricing revenue against fuel costs (vote 2026-12-15) | **Passed checks**, revision 7.7: 560 of 560 sentences checked, gate passing, fairness review 4 of 5 with no high issue (4 medium notes open). Must be revised after the Dec 2 briefs and the Dec 15 decision |
+| [003](003-fulton-2027-budget/) | A. Decision workspace (adapted to a county budget) | Fulton County 2027 budget, and the dispute over how it is being prepared (proposal due 2026-11-15) | **Passed checks**, revision 5.4: 459 of 459 sentences checked, gate passing, fairness review 4 of 5 with no high issue (2 medium notes open). Must be revised when the proposal is posted (due by 2026-11-15) |
+
+The status column is a summary. The current record for each trial is its generated `status.json`
+(`trials/tools/status.py`), which lists the gate results, the sentence counts and the open fairness notes.
+
+## What checking costs now (2026-11-13)
+
+The reader-first cycle used about 13.5 million tokens for three pages, nearly all on the top tier. The lean flow
+in the [verification protocol](../docs/process/verification-protocol.md) replaced it. Measured on these three pages:
+
+| Step | Last cycle | Lean flow |
+|---|---|---|
+| Follow-up check of changed sentences, three pages | about 750k, top tier | about 110k, then 86k and 83k, on Sonnet |
+| Planted-error test | about 1.1M, top tier | about 150k on Sonnet (52 of 52 caught, 0 false alarms on 60 clean sentences) |
+| Fairness review, two pages | two advocates and an editor per round | one reviewer, about 98k on Sonnet |
+| Building and qualifying the new tools, whole cycle | | about 1.33M delegated tokens (Haiku about 702k, Sonnet about 630k), none on the top tier |
+
+**Known limit.** Given only a sentence and its cited passages, Sonnet re-found 9 of 55 subtle overstatements
+that the top tier had flagged, and Haiku 35 of 55 with 10 false alarms in 60. So a new page still gets one
+whole-page read at first publication.
 
 ## What the three trials showed (2026-11-08)
 

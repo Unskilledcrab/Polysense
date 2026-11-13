@@ -59,10 +59,17 @@ def status(trial: Path) -> dict:
     gate_ok = all(v["pass"] for v in gate.values() if isinstance(v, dict))
     brief = lambda r: {"file": r["file"], "line": r["line"], "sentence": r["sentence"][:140],   # noqa: E731
                        "verdict": r.get("verdict"), "problem": r.get("problem", "")}
+    fair, fr = None, trial / "verification" / "fairness-review.json"
+    if fr.exists():
+        f = json.loads(fr.read_text(encoding="utf-8"))
+        fair = {"date": f.get("date"), "neutrality": f.get("neutrality"),
+                "high": [i for i in f.get("issues", []) if i.get("severity") == "high"],
+                "open_items": [i for i in f.get("issues", []) if i.get("severity") == "medium"]}
     st = {"trial": trial.name, "revision": rev.group(1) if rev else None, "generated": datetime.date.today().isoformat(),
           "gate": gate, "units": len(rows), "checked_ok": len(rows) - len(pending) - len(flagged),
           "flagged": [brief(r) for r in flagged], "pending": [brief(r) for r in pending],
-          "verified": gate_ok and not pending and not flagged}
+          "fairness": fair,
+          "verified": gate_ok and not pending and not flagged and not (fair and fair["high"])}
     (trial / "status.json").write_text(json.dumps(st, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
 
     sp = trial / "verification" / "summary.json"

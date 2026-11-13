@@ -24,5 +24,36 @@
  "checked_ok": 560,
  "flagged": [],
  "pending": [],
+ "fairness": {
+  "date": "2026-11-13",
+  "neutrality": 4,
+  "high": [],
+  "open_items": [
+   {
+    "line": 166,
+    "severity": "medium",
+    "issue": "Values guide gives 'keeping base rates down' to GAM alone, although L167 and L174 say Georgia Power also claims it. Staff and GIPL's matching value (lower fuel charges, no cost shifted to fuel-charge payers) gets no outcome-level line. B, C and D are worded as methods or design ('rate design intact', 'by energy use', 'like power-line costs'), while GAM's is a plain bill outcome. A reader who cares about their bill finds only one line that speaks to it.",
+    "suggested_fix": "Make the lines parallel. Either add 'If you care most about lowering fuel charges' (PIA Staff, GIPL) and let 'keeping base rates down' name Georgia Power and GAM, or word all four as methods."
+   },
+   {
+    "line": 294,
+    "severity": "medium",
+    "issue": "Flip test on the 'In short' openers. Cards for changing the credit (L234, L246, L258, L270, L282, L306) say 'Fuel charges would likely fall; base rates could rise later': a likely gain and a hedged cost. Cards for keeping things as they are (L294, L318) say 'Fuel charges keep paying...; base rates could stay lower': a flat status-quo burden and a hedged gain. L330 is closer to parallel. The 'keep' side's gain is more hedged and its cost reads as a continuing condition, not a change in a bill.",
+    "suggested_fix": "Mirror the wording: 'Fuel charges would not fall by this route; base rates would likely stay lower than under a larger credit.' Use the same hedge words on both sides."
+   },
+   {
+    "line": 174,
+    "severity": "medium",
+    "issue": "Plan A's benefit is attributed ('Georgia Power and GAM say') and tempered ('when base rates are next set'; 'frozen through 2028'). The fuel-charge gains for B, C and D (L182, L190, L198) are in the page's voice, though L328 says no party disputes that the same dollars move off the base side. The 2028 freeze appears only on Plan A, yet it also delays the base-rate cost on B, C and D.",
+    "suggested_fix": "State A's base-side benefit with the same confidence and hedge as the others' fuel-side gain. Put the freeze note on both sides or in one neutral line (L9)."
+   },
+   {
+    "line": 190,
+    "severity": "medium",
+    "issue": "Plan C's benefit line gives a home-level gain ($1.35 a month less in fuel charges, as first filed) and the '$322 million under collected' quote. Plan C's cost line (L191) gives only system dollars, with no home-level base-side figure. A phone reader takes away a household saving with no household cost. The look-back caveat is there, but L14 is the only place that says a home's net is unknown.",
+    "suggested_fix": "Add after the $1.35 figure: 'The filing gives no matching change in a home's base rates.' Alternatively, move the figure to the cost-benefit detail below the fold."
+   }
+  ]
+ },
  "verified": true
 }

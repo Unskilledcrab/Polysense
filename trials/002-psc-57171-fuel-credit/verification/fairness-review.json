@@ -1,0 +1,56 @@
+{
+ "date": "2026-11-13",
+ "reviewer": "one Sonnet reviewer on the balance surface (lint_balance.py surface)",
+ "neutrality": 4,
+ "summary": "Careful and mostly even: attribution is dense, the base-rate cost is stated everywhere, and no party labels, recommendations or loaded words appear outside quotes. The slant is modest. The values guide, the 'In short' hedges and the attribution of Plan A's benefit all favor the options that cut fuel charges. No line steers a reader to an option, so nothing is HIGH.",
+ "issues": [
+  {
+   "line": 166,
+   "severity": "medium",
+   "issue": "Values guide gives 'keeping base rates down' to GAM alone, although L167 and L174 say Georgia Power also claims it. Staff and GIPL's matching value (lower fuel charges, no cost shifted to fuel-charge payers) gets no outcome-level line. B, C and D are worded as methods or design ('rate design intact', 'by energy use', 'like power-line costs'), while GAM's is a plain bill outcome. A reader who cares about their bill finds only one line that speaks to it.",
+   "suggested_fix": "Make the lines parallel. Either add 'If you care most about lowering fuel charges' (PIA Staff, GIPL) and let 'keeping base rates down' name Georgia Power and GAM, or word all four as methods."
+  },
+  {
+   "line": 294,
+   "severity": "medium",
+   "issue": "Flip test on the 'In short' openers. Cards for changing the credit (L234, L246, L258, L270, L282, L306) say 'Fuel charges would likely fall; base rates could rise later': a likely gain and a hedged cost. Cards for keeping things as they are (L294, L318) say 'Fuel charges keep paying...; base rates could stay lower': a flat status-quo burden and a hedged gain. L330 is closer to parallel. The 'keep' side's gain is more hedged and its cost reads as a continuing condition, not a change in a bill.",
+   "suggested_fix": "Mirror the wording: 'Fuel charges would not fall by this route; base rates would likely stay lower than under a larger credit.' Use the same hedge words on both sides."
+  },
+  {
+   "line": 174,
+   "severity": "medium",
+   "issue": "Plan A's benefit is attributed ('Georgia Power and GAM say') and tempered ('when base rates are next set'; 'frozen through 2028'). The fuel-charge gains for B, C and D (L182, L190, L198) are in the page's voice, though L328 says no party disputes that the same dollars move off the base side. The 2028 freeze appears only on Plan A, yet it also delays the base-rate cost on B, C and D.",
+   "suggested_fix": "State A's base-side benefit with the same confidence and hedge as the others' fuel-side gain. Put the freeze note on both sides or in one neutral line (L9)."
+  },
+  {
+   "line": 190,
+   "severity": "medium",
+   "issue": "Plan C's benefit line gives a home-level gain ($1.35 a month less in fuel charges, as first filed) and the '$322 million under collected' quote. Plan C's cost line (L191) gives only system dollars, with no home-level base-side figure. A phone reader takes away a household saving with no household cost. The look-back caveat is there, but L14 is the only place that says a home's net is unknown.",
+   "suggested_fix": "Add after the $1.35 figure: 'The filing gives no matching change in a home's base rates.' Alternatively, move the figure to the cost-benefit detail below the fold."
+  },
+  {
+   "line": 14,
+   "severity": "low",
+   "issue": "'If the PSC adopts any proposed plan' leaves out Plan A, which is also a listed option, so the line reads as if every option lowers fuel charges.",
+   "suggested_fix": "Say 'If the PSC adopts Plan B, C or D'. Add 'Under Plan A, today's split stays.'"
+  },
+  {
+   "line": 246,
+   "severity": "low",
+   "issue": "'...so the contracts' costs should count in the credit too' (also L258 'should set shares', L282 'warrant that split', L294 'should offset') can read as the page's own 'should'. The rule bars 'should' in the page's voice.",
+   "suggested_fix": "Put the 'should' inside the attribution, e.g. 'PIA Staff says the contracts serve all customers at all times and their costs should count too.'"
+  },
+  {
+   "line": 188,
+   "severity": "low",
+   "issue": "Plan C's 'What it does' is about twice as long as B's and D's, with a backup and an extra non-recommendation. Plan C's own 'Who benefits' (L190) is also much longer. This follows the evidence, but on a phone it gives C more weight.",
+   "suggested_fix": "Move the backup and the three policy-related costs to a detail section. Keep the same fields in the same order for each plan."
+  },
+  {
+   "line": 175,
+   "severity": "low",
+   "issue": "'FCR customers' is undefined jargon inside the GIPL quote.",
+   "suggested_fix": "Add '(fuel charge customers)' after the quote."
+  }
+ ]
+}

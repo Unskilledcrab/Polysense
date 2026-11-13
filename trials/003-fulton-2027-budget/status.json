@@ -24,5 +24,24 @@
  "checked_ok": 459,
  "flagged": [],
  "pending": [],
+ "fairness": {
+  "date": "2026-11-13",
+  "neutrality": 4,
+  "high": [],
+  "open_items": [
+   {
+    "line": 143,
+    "severity": "medium",
+    "issue": "Option A's 'Who pays' (L143) is the longest line on the page. It builds a vivid cost: six named offices, their duties, and the officials' reasons (staffing shortages, court delays, overcrowding). A's benefit (L142) is a conditional ('If the plan holds spending down'), with no quote from the supporters. Option C (L158) is the reverse: full benefits, with the sponsor's 'true picture' quote repeated from L134, and a light cost (staff workload, L159). The page itself says no source gives a reason for the 5% limit, so the thin side is the one being costed. A reader is likely to see A as costly and C as nearly free.",
+    "suggested_fix": "Move the office definitions to a short glossary or card 6. Trim L143 to the cost plus one reason line. Add supporters' stated benefits to A (early input, north-south representation, per L132). Use a neutral clause for C's benefit, and add 'No source we archived gives a cost beyond staff time' to L159."
+   },
+   {
+    "line": 224,
+    "severity": "medium",
+    "issue": "Card titles are flat claims in the page's voice. They include 'The Board should wait until January...' (L224), 'have too much say' (L188) and 'Justice offices need more money' (L236). The rule bars 'should' and recommendation in the page's own voice, and 'too much' is an evaluative phrase. Supporters' titles (L176, L212) are more descriptive, so the critics' and justice officials' titles carry stronger value words.",
+    "suggested_fix": "Attribute each title ('Justice officials ask the Board to wait until January'; 'Critics say two commissioners have too much say'; 'Justice officials say their offices need more money'). Use the same form for every card."
+   }
+  ]
+ },
  "verified": true
 }
