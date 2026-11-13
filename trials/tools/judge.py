@@ -26,13 +26,15 @@ sys.path.insert(0, str(Path(__file__).parent))
 from check_citations import load_passages, norm  # noqa: E402
 from ledger import FLAG, OK, current, key_of, load_ledger, units, write  # noqa: E402
 
-PROMPT_VERSION = "pair-1"
+PROMPT_VERSION = "pair-2"
 PROMPT = """You are an independent fact-checker for a nonpartisan civic information project. You did not write these
 sentences. For each unit in the batch file, decide whether the sentence is supported by the passages given with it.
 Use only those passages: no outside knowledge, no other files, no web.
 
 Each unit has: "sentence" (one sentence from a civic explainer), "marker" (its citation or tag), "kind", and
-"passages" (the full text of every passage it cites or names).
+"passages" (the full text of every passage it cites or names). A unit that says something is absent, unknown or
+undisputed may also have "related": other passages from the same archive. If a related passage shows the thing does
+exist or is disputed, the sentence is not supported.
 
 For kind "cited", give one verdict:
 - "supports": the passages state this, or it follows directly from them.
@@ -40,6 +42,8 @@ For kind "cited", give one verdict:
   the passages (a dropped condition, "must" for "may", a wider group, a later or earlier date, a merged attribution).
 - "does_not_support": the passages don't establish it, or they contradict it (wrong number, date, name, direction,
   speaker, or words inside quotation marks that aren't in the passage).
+Every part of the sentence needs support: if one word or clause ("later", "only", "all", a title, a date) has no
+basis in the cited passages, the verdict is "partial" even when the rest is right.
 For "supports" and "partial", copy into "span" the exact words (3 to 40 words, verbatim, from one passage) that best
 support the sentence. Spans are checked by code.
 
@@ -60,12 +64,36 @@ Make sure it is valid JSON and has every id. Then reply with only the verdict co
 """
 
 
+ABSENT = re.compile(r"\b(no one|no (?:\w+ ){0,3}(?:sources?|party|filings?|records?|passages?|statements?|documents?)|"
+                    r"none of|nothing|not known|isn't known|"
+                    r"aren't known|doesn't say|don't say|does not say|we found no|we didn't find|has no|have no|gives no|"
+                    r"give no|undisputed|never)\b", re.I)
+COMMON = set("their there which would could should other these those about after before under between through because "
+             "where while being during against within without public sources source passage passages".split())
+
+
+def related(u: dict, passages: dict[str, str], k: int = 4) -> list[str]:
+    """Uncited passages that share the most uncommon words with the sentence. A claim that something is absent or
+    undisputed can't be judged from its cited passages alone, so the judge also sees these."""
+    words = lambda t: {w for w in re.findall(r"[a-z]{5,}", t.lower())} - COMMON          # noqa: E731
+    mine = words(u["sentence"] + " " + u["marker"])
+    df: dict[str, int] = {}
+    bags = {p: words(t) for p, t in passages.items()}
+    for bag in bags.values():
+        for w in bag:
+            df[w] = df.get(w, 0) + 1
+    score = {p: sum(1.0 / df[w] for w in mine & bag) for p, bag in bags.items() if p not in u["passages"]}
+    return [p for p in sorted(score, key=score.get, reverse=True)[:k] if score[p] > 0]
+
+
 def batch_units(rows: list[dict], passages: dict[str, str], raw: dict[str, str]) -> list[dict]:
     out = []
     for u in rows:
-        ids = u["passages"]
-        out.append({"id": u["key"], "sentence": u["sentence"], "marker": u["marker"], "kind": u["kind"],
-                    "passages": {p: raw.get(p, "(no such passage)") for p in ids}})
+        item = {"id": u["key"], "sentence": u["sentence"], "marker": u["marker"], "kind": u["kind"],
+                "passages": {p: raw.get(p, "(no such passage)") for p in u["passages"]}}
+        if ABSENT.search(u["sentence"]):
+            item["related"] = {p: raw.get(p, "") for p in related(u, passages)}
+        out.append(item)
     return out
 
 
