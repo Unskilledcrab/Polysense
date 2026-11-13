@@ -26,6 +26,8 @@ in the [verification protocol](../docs/process/verification-protocol.md) replace
 | Fairness review, two pages | two advocates and an editor per round | one reviewer, about 98k on Sonnet |
 | Building and qualifying the new tools, whole cycle | | about 1.33M delegated tokens (Haiku about 702k, Sonnet about 630k), none on the top tier |
 
+Each AI step is logged in [spend.jsonl](spend.jsonl).
+
 **Known limit.** Given only a sentence and its cited passages, Sonnet re-found 9 of 55 subtle overstatements
 that the top tier had flagged, and Haiku 35 of 55 with 10 false alarms in 60. So a new page still gets one
 whole-page read at first publication.

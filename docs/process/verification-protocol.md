@@ -38,7 +38,13 @@ unchanged sentences; fairness review had no end. The layers below still define *
 resumed: a resumed drafter replays its whole history (600–890k tokens a turn last cycle) for a ten-word change.
 
 **Budget:** a first publication should cost at most 1.0M tokens (at most 300k on the top tier); a revision at most
-100k. Record actual spend in the trial's `budget.json`. These are targets to measure against.
+100k. Record actual spend as one line per AI step in [`trials/spend.jsonl`](../../trials/spend.jsonl) (a step often
+covers several pages, so the record is shared). These are targets to measure against.
+
+**One record, written by code.** `trials/tools/status.py` writes each trial's `status.json`: gate results, sentence
+counts, flagged sentences and the open fairness notes. From 2026-11-13 nobody hand-writes status, and no new page
+copies are archived per round (git keeps every revision; record the commit hash). Each trial's `verification.md` and
+`log.md` are history up to that date. Agents don't read them.
 
 **How the tiers were qualified (2026-11-13)**, on gold data from the reader-first cycle:
 
@@ -111,7 +117,7 @@ asked to add). So "done" is defined in advance:
    high-severity issue; its medium notes may be fixed in the same pass or become open items.
    Stop when a re-check finds nothing that misstates a passage; its style notes become open items. (Trial 003
    took three passes, whose findings went 6, 3, 0.)
-3. **Remaining medium and low panel suggestions become open items.** They are listed in `verification.md`
+3. **Remaining medium and low panel suggestions become open items.** They are listed in `status.json`
    and on the page's "How we checked" view, and they feed the next revision, which starts a new full
    round. Suggestions that contradict each other are logged side by side, not silently resolved.
 4. The page is then labeled **"Passed our checks"**, never "verified" in general. The label links to the
