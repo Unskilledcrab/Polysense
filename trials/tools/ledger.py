@@ -45,6 +45,33 @@ def units(path: Path):
                    "passages": sorted(set(re.findall(r"P-\d{3}", marker)))}
 
 
+def visual_units(trial: Path):
+    """The cited or tagged notes under page.yaml `visuals:`, each prefixed with the figure it captions, so the pictures
+    on the page are checked like sentences. Needs PyYAML; without it the notes are skipped (and stay pending)."""
+    try:
+        import yaml
+    except ImportError:
+        return
+    v = (yaml.safe_load((trial / "page.yaml").read_text(encoding="utf-8")) or {}).get("visuals") or {}
+    notes = [(f"{n['value']}: ", n["note"]) for n in v.get("numbers", [])]
+    if v.get("split"):
+        notes.append((v["split"]["title"] + ": ", v["split"]["note"]))
+    for part in (v.get("bill") or {}).get("parts", []):
+        notes.append((f"{v['bill']['title']}. {part['name']} ({part['dir']}): ", part["note"]))
+    if (v.get("bill") or {}).get("note"):
+        notes.append((v["bill"]["title"] + ": ", v["bill"]["note"]))
+    if v.get("seats"):
+        notes.append((f"{v['seats']['total']} seats, {v['seats'].get('vacant', 0)} vacant: ", v["seats"]["note"]))
+    for i, (lead, note) in enumerate(notes, 1):
+        pos = 0
+        for m in MARKER.finditer(note):
+            chunk = note[pos:m.start()].strip()
+            pos = m.end()
+            kind = "cited" if m.group(1) else (m.group(2) or "computed")
+            yield {"line": i, "sentence": lead + chunk, "marker": m.group(0), "kind": kind,
+                   "passages": sorted(set(re.findall(r"P-\d{3}", m.group(0))))}
+
+
 def key_of(u: dict, passages: dict[str, str]) -> str:
     body = "\n".join([norm(u["sentence"]), norm(u["marker"])] + [passages.get(p, "?") for p in u["passages"]])
     return hashlib.sha256(body.encode("utf-8")).hexdigest()[:16]
@@ -67,6 +94,10 @@ def current(trial: Path) -> list[dict]:
                 u["file"] = name
                 u["key"] = key_of(u, passages)
                 out.append(u)
+    for u in visual_units(trial):
+        u["file"] = "page.yaml"
+        u["key"] = key_of(u, passages)
+        out.append(u)
     return out
 
 

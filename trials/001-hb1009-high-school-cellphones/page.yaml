@@ -31,3 +31,4 @@ markup:                            # optional "see the exact changes" view, from
   file: _raw/hb1009-247117.markup.txt
   lines: [[p2, 22], [p2, 23], [p2, 28], [p3, 42], [p3, 43], [p3, 44], [p3, 45], [p3, 46], [p3, 47], [p3, 48]]
   note: "From the bill as passed (pages 2-3). Georgia bills strike out removed words and underline new ones."
+audiences: ["Student", "Parent of a high schooler", "School staff", "K-8 parent"]   # chip names for the "If you" lines, in page order

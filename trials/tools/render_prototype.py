@@ -224,6 +224,30 @@ def bill_changes(markup_path: Path, wanted: list[tuple[str, int]]) -> list[dict]
     return out
 
 
+def visuals(v: dict) -> dict:
+    """page.yaml `visuals:` for the Summary tab's pictures. Every `note` is written like a page sentence (cited or
+    tagged), so it gets source chips here and a verdict in the ledger. Nothing is drawn to scale without amounts."""
+    out = {}
+    if v.get("numbers"):
+        out["numbers"] = [{"value": n["value"], "units": split_units(n["note"])} for n in v["numbers"]]
+    if v.get("split"):
+        sp = v["split"]
+        total = sum(p["amount"] for p in sp["parts"])
+        out["split"] = {"title": sp["title"], "units": split_units(sp["note"]),
+                        "parts": [{"name": p["name"], "show": p["show"], "share": p["amount"] / total} for p in sp["parts"]]}
+    if v.get("bill"):
+        b = v["bill"]
+        for p in b["parts"]:
+            if p["dir"] not in ("up", "down", "same", "unknown"):
+                sys.exit(f"visuals.bill: dir must be up, down, same or unknown, not {p['dir']!r}")
+        out["bill"] = {"title": b["title"], "units": split_units(b.get("note", "")),
+                       "parts": [{"name": p["name"], "dir": p["dir"], "units": split_units(p["note"])} for p in b["parts"]]}
+    if v.get("seats"):
+        out["seats"] = {"total": v["seats"]["total"], "vacant": v["seats"].get("vacant", 0),
+                        "units": split_units(v["seats"]["note"])}
+    return out
+
+
 def build_workspace(trial: Path) -> dict:
     cfg = yaml.safe_load((trial / "page.yaml").read_text(encoding="utf-8"))
     short = cfg.get("short_labels") or {}
@@ -267,6 +291,7 @@ def build_workspace(trial: Path) -> dict:
         "revisionLabel": (f"version {rev_no.group(1)}" if rev_no else "version ?") + f" · fingerprint {rev[:12]}",
         "workspace": workspace, "passages": passages, "sources": sources, "sourceOrder": used,
         "billChanges": changes, "markupNote": markup.get("note"), "verification": verification,
+        "audiences": cfg.get("audiences") or [], "visuals": visuals(cfg.get("visuals") or {}),
     }
 
 

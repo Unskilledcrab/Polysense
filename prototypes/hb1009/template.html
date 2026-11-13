@@ -173,6 +173,67 @@ details.fold .body { padding: 12px 16px 16px; display: flex; flex-direction: col
 .legend .row p { margin: 0 }
 /* "What it means for you" and the values guide */
 .you { border-left: 4px solid var(--accent) }
+/* Reader-first visuals: every figure is drawn from cited data; nothing is to scale unless the source gives amounts */
+.datebadge { display: inline-flex; align-items: stretch; align-self: flex-start; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background: var(--surface); max-width: 100% }
+.datebadge .cal { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 6px 12px; background: var(--accent); color: var(--accent-ink); min-width: 58px }
+.datebadge .cal b { font: 600 1.5rem/1 var(--font-display) }
+.datebadge .cal span { font: 500 .7rem/1.3 var(--font-mono); letter-spacing: .08em; text-transform: uppercase }
+.datebadge .info { display: flex; flex-direction: column; justify-content: center; padding: 6px 12px; min-width: 0 }
+.datebadge .info b { font-size: 1rem; line-height: 1.25 }
+.datebadge .info span { font-size: .82rem; color: var(--muted); line-height: 1.3 }
+.viz h3 { font: 700 .95rem/1.3 var(--font-body); margin: 0 }
+.viz .note { margin: 0; font-size: .9rem; color: var(--muted) }
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr)); gap: 12px }
+.tile { background: var(--sunk); border-radius: var(--radius); padding: 14px; min-width: 0 }
+.tile .big { font: 600 clamp(1.7rem, 7vw, 2.3rem)/1.05 var(--font-display); font-variant-numeric: tabular-nums }
+.tile p { margin: 6px 0 0; font-size: .9rem; color: var(--muted) }
+.split { display: flex; gap: 2px; height: 22px }
+.split i { display: block; border-radius: 4px; min-width: 6px }
+.split .s0 { background: var(--accent) } .split .s1 { background: var(--muted); opacity: .45 }
+.keys { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: .9rem; margin: 0; padding: 0; list-style: none }
+.keys li { display: flex; align-items: baseline; gap: 6px }
+.keys i { width: 10px; height: 10px; border-radius: 3px; display: inline-block; flex: none }
+.keys .s0 { background: var(--accent) } .keys .s1 { background: var(--muted); opacity: .45 }
+.keys b { font-variant-numeric: tabular-nums }
+.parts { display: grid; gap: 10px }
+.part { display: grid; grid-template-columns: auto 1fr; gap: 2px 12px; align-items: center; background: var(--sunk); border-radius: var(--radius); padding: 12px; min-width: 0 }
+.part .arrow { grid-row: span 2; width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; font: 700 1.5rem/1 var(--font-body); background: var(--surface); border: 2px solid var(--ink) }
+.part .arrow.up { border-style: dashed }
+.part b { font-size: 1.05rem; line-height: 1.2 }
+.part p { margin: 0; font-size: .92rem; grid-column: 2; min-width: 0 }
+.seats { display: flex; flex-wrap: wrap; gap: 8px }
+.seat { width: 22px; height: 22px; border-radius: 50%; background: var(--accent) }
+.seat.vacant { background: transparent; border: 2px dashed var(--muted) }
+.pick { display: flex; flex-wrap: wrap; gap: 8px }
+.pick button { font: 700 .9rem/1.2 var(--font-body); min-height: 40px; padding: 8px 14px; border-radius: 999px; border: 1.5px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer }
+.pick button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--accent-ink) }
+.flow { list-style: none; margin: 0; padding: 0; counter-reset: step }
+.flow li { counter-increment: step; position: relative; padding: 2px 0 18px 44px; min-height: 40px }
+.flow li::before { content: counter(step); position: absolute; left: 0; top: 0; width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; background: var(--accent-soft); color: var(--accent); font: 700 .9rem/1 var(--font-body); border: 1.5px solid var(--accent); box-sizing: border-box }
+.flow li::after { content: ""; position: absolute; left: 14px; top: 34px; bottom: 2px; width: 2px; background: var(--line) }
+.flow li:last-child { padding-bottom: 0 } .flow li:last-child::after { display: none }
+.rail { list-style: none; margin: 0 0 0 7px; padding: 0; border-left: 2px solid var(--line) }
+.rail li { position: relative; padding: 0 0 14px 18px }
+.rail li:last-child { padding-bottom: 0 }
+.rail li::before { content: ""; position: absolute; left: -8px; top: .4em; width: 14px; height: 14px; border-radius: 50%; background: var(--surface); border: 2px solid var(--muted); box-sizing: border-box }
+.rail li.past { color: var(--muted) } .rail li.past::before { background: var(--muted) }
+.rail li.next::before { background: var(--accent); border-color: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft) }
+.rail li.today { font: 700 .78rem/1.2 var(--font-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--accent) }
+.rail li.today::before { border-radius: 2px; width: 14px; height: 4px; top: .45em; background: var(--accent); border: 0 }
+.rail .when { display: block; font: 500 .82rem/1.4 var(--font-mono) }
+.rail li.next .when { color: var(--accent); font-weight: 700 }
+.vgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 12px }
+.vguide .vgrid .vline { background: var(--sunk); border-radius: var(--radius); padding: 14px; border-top: 0; min-width: 0 }
+.vguide .vgrid .vline h4 { font: 600 1.05rem/1.25 var(--font-display); margin: 0 0 6px }
+.vguide .vgrid .vline p { margin: 0; font-size: .95rem }
+.twocol { display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: 12px }
+.twocol > div { background: var(--sunk); border-radius: var(--radius); padding: 12px; min-width: 0 }
+details.deep > summary { cursor: pointer; font-weight: 700; padding: 14px 16px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); list-style: none }
+details.deep > summary::-webkit-details-marker { display: none }
+details.deep > summary::after { content: " +"; color: var(--accent) }
+details.deep[open] > summary::after { content: " −" }
+details.deep > summary span { display: block; font-weight: 400; font-size: .88rem; color: var(--muted) }
+details.deep > .stack-lg { margin-top: 18px }
 .you h2, .vguide h3 { margin: 0 }
 .ifyou { padding-top: 10px; border-top: 1px solid var(--line) }
 .ifyou:first-of-type { border-top: 0; padding-top: 0 }
@@ -317,17 +378,15 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
       else span.textContent = u.t;
       frag.appendChild(span);
       if (u.cite) {
-        var seen = {};
-        u.cite.forEach(function (pid) {
-          var p = W.passages[pid]; if (!p) return;
-          var sid = p.source; if (seen[sid]) { seen[sid].push(pid); return; }
-          seen[sid] = [pid];
+        var pids = u.cite.filter(function (pid) { return W.passages[pid]; }), names = [];
+        pids.forEach(function (pid) { var n = (W.sources[W.passages[pid].source] || {}).short || W.passages[pid].source; if (names.indexOf(n) < 0) names.push(n); });
+        if (pids.length) {
           frag.appendChild(document.createTextNode(" "));
-          var b = el("button", { class: "src", type: "button", text: (W.sources[sid] || {}).short || sid,
-            "aria-label": "Show source: " + ((W.sources[sid] || {}).title || sid) });
-          b.addEventListener("click", function () { W = ws; openPassages(seen[sid], b); });
+          var b = el("button", { class: "src", type: "button", text: names[0] + (names.length > 1 ? " +" + (names.length - 1) : ""),
+            "aria-label": "Show " + (names.length > 1 ? names.length + " sources: " : "source: ") + names.join(", ") });
+          b.addEventListener("click", function () { W = ws; openPassages(pids, b); });
           frag.appendChild(b);
-        });
+        }
       } else if (u.tag) {
         frag.appendChild(document.createTextNode(" "));
         var t = el("button", { class: "src tag " + u.tag, type: "button", text: TAG_LABEL[u.tag] || u.tag,
@@ -390,23 +449,27 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
     close.focus();
   }
   function openPassages(pids, opener) {
-    var p0 = W.passages[pids[0]], s = W.sources[p0.source] || {};
-    var c = el("div", { class: "stack" });
-    c.appendChild(el("h3", { text: s.title || p0.source }));
-    c.appendChild(el("span", { class: "type" + (s.type === "primary-government" ? " primary" : ""), text: s.typeLabel || s.type || "" }));
-    pids.forEach(function (pid) {
-      var p = W.passages[pid];
-      c.appendChild(el("p", { class: "eyebrow", text: pid + " · " + p.locator }));
-      c.appendChild(el("blockquote", { text: p.text }));
-      if (p.note) c.appendChild(el("p", { class: "notice", text: "Note: " + p.note }));
+    // One block per source, in the order the sentence cites them: its title, the passages used, where it came from.
+    var c = el("div", { class: "stack" }), order = [], by = {};
+    pids.forEach(function (pid) { var sid = W.passages[pid].source; if (!by[sid]) { by[sid] = []; order.push(sid); } by[sid].push(pid); });
+    order.forEach(function (sid) {
+      var s = W.sources[sid] || {};
+      c.appendChild(el("h3", { text: s.title || sid }));
+      c.appendChild(el("span", { class: "type" + (s.type === "primary-government" ? " primary" : ""), text: s.typeLabel || s.type || "" }));
+      by[sid].forEach(function (pid) {
+        var p = W.passages[pid];
+        c.appendChild(el("p", { class: "eyebrow", text: pid + " · " + p.locator }));
+        c.appendChild(el("blockquote", { text: p.text }));
+        if (p.note) c.appendChild(el("p", { class: "notice", text: "Note: " + p.note }));
+      });
+      var dl = el("dl");
+      [["Publisher", s.publisher], ["Captured", s.retrieved_at], ["SHA-256", s.sha256 ? s.sha256.slice(0, 16) + "…" : "n/a"], ["How captured", s.method]].forEach(function (r) {
+        if (!r[1]) return; dl.appendChild(el("dt", { text: r[0] })); dl.appendChild(el("dd", { class: r[0] === "SHA-256" ? "hash" : "", text: r[1] }));
+      });
+      c.appendChild(dl);
+      if (s.url) c.appendChild(el("a", { href: s.url, target: "_blank", rel: "noopener", text: "Open the original source ↗" }));
     });
-    var dl = el("dl");
-    [["Publisher", s.publisher], ["Captured", s.retrieved_at], ["SHA-256", s.sha256 ? s.sha256.slice(0, 16) + "…" : "n/a"], ["How captured", s.method]].forEach(function (r) {
-      if (!r[1]) return; dl.appendChild(el("dt", { text: r[0] })); dl.appendChild(el("dd", { class: r[0] === "SHA-256" ? "hash" : "", text: r[1] }));
-    });
-    c.appendChild(dl);
-    if (s.url) c.appendChild(el("a", { href: s.url, target: "_blank", rel: "noopener", text: "Open the original source ↗" }));
-    drawer("Source", c, opener);
+    drawer(order.length > 1 ? order.length + " sources" : "Source", c, opener);
   }
   function openTag(u, opener) {
     var expl = {
@@ -431,18 +494,103 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
     return best;
   }
   function firstUnit(b) { return b && b.units.length ? units(b.units.slice(0, 1)) : null; }
+  // The nearest upcoming dated item for a decision, and a calendar badge with a countdown.
+  function nextItem(slug) {
+    var t = todayISO(), best = null;
+    D.home.sections.forEach(function (sec) { sec.items.forEach(function (it) {
+      if (it.slug === slug && it.date && it.date >= t && (!best || it.date < best.date)) best = it;
+    }); });
+    return best;
+  }
+  var MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  function dateBadge(w) {
+    var it = nextItem(w.slug); if (!it) return null;
+    var d = new Date(it.date + "T12:00:00"), days = Math.round((d - new Date(todayISO() + "T12:00:00")) / 864e5);
+    return el("div", { class: "datebadge", role: "group", "aria-label": "Next date: " + it.when }, [
+      el("div", { class: "cal", "aria-hidden": "true" }, [el("span", { text: MON[d.getMonth()] }), el("b", { text: String(d.getDate()) })]),
+      el("div", { class: "info" }, [el("b", { text: days === 0 ? "Today" : days === 1 ? "Tomorrow" : "In " + days + " days" }),
+        el("span", { text: "Next date: " + it.when })])]);
+  }
+  // "Pick your situation": one chip per "If you…" line; the chosen line shows, the others wait. Nothing is stored.
+  function picker(w, blocks, firstOnly) {
+    var wrap = el("div", { class: "stack" }), row = el("div", { class: "pick", role: "group", "aria-label": "Pick your situation" }), panels = [], btns = [];
+    blocks.forEach(function (b, i) {
+      var name = (w.audiences || [])[i] || b.label.replace(/^If (you're|you are|your|you)\s+/i, "");
+      var btn = el("button", { type: "button", "aria-pressed": String(i === 0), text: name });
+      var panel = el("div", { class: "ifyou" }, [el("p", null, [el("strong", { class: "lead", text: b.label + ": " }), firstOnly ? firstUnit(b) : units(b.units)])]);
+      panel.hidden = i !== 0;
+      btn.addEventListener("click", function () {
+        panels.forEach(function (x, j) { x.hidden = j !== i; });
+        btns.forEach(function (x, j) { x.setAttribute("aria-pressed", String(j === i)); });
+      });
+      row.appendChild(btn); btns.push(btn); panels.push(panel);
+    });
+    wrap.appendChild(row);
+    panels.forEach(function (x) { wrap.appendChild(x); });
+    return wrap;
+  }
+  // "At a glance": figures from page.yaml `visuals`, each with its source chips. Bars use real amounts; arrows show
+  // direction only, because no source gives a size.
+  var ARROW = { down: "↓", up: "↑", same: "→", unknown: "?" };
+  function glance(w) {
+    var v = w.visuals || {};
+    if (!v.numbers && !v.split && !v.bill && !v.seats) return null;
+    var box = el("section", { class: "card stack viz", "aria-labelledby": "h-glance" }, [el("h2", { id: "h-glance", text: "At a glance" })]);
+    if (v.bill) {
+      box.appendChild(el("h3", { text: v.bill.title }));
+      box.appendChild(el("div", { class: "parts" }, v.bill.parts.map(function (pt) {
+        return el("div", { class: "part" }, [el("span", { class: "arrow " + pt.dir, "aria-hidden": "true", text: ARROW[pt.dir] }), el("b", { text: pt.name }), el("p", null, [units(pt.units)])]);
+      })));
+      if (v.bill.units.length) box.appendChild(el("p", { class: "note" }, [units(v.bill.units)]));
+    }
+    if (v.numbers) box.appendChild(el("div", { class: "tiles" }, v.numbers.map(function (n) {
+      return el("div", { class: "tile" }, [el("div", { class: "big", text: n.value }), el("p", null, [units(n.units)])]);
+    })));
+    if (v.split) {
+      var pct = function (x) { return Math.round(x.share * 100) + "%"; };
+      box.appendChild(el("h3", { text: v.split.title }));
+      box.appendChild(el("div", { class: "split", role: "img", "aria-label": v.split.parts.map(function (x) { return x.name + ": " + x.show + ", " + pct(x); }).join("; ") },
+        v.split.parts.map(function (x, i) { return el("i", { class: "s" + i, style: "flex:" + x.share + " 1 0", title: x.name + ": " + x.show + " (" + pct(x) + ")" }); })));
+      box.appendChild(el("ul", { class: "keys" }, v.split.parts.map(function (x, i) {
+        return el("li", null, [el("i", { class: "s" + i, "aria-hidden": "true" }), el("span", null, [x.name + " ", el("b", { text: x.show }), " (" + pct(x) + ")"])]);
+      })));
+      box.appendChild(el("p", { class: "note" }, [units(v.split.units)]));
+    }
+    if (v.seats) {
+      var dots = [];
+      for (var i = 0; i < v.seats.total; i++) dots.push(el("span", { class: "seat" + (i >= v.seats.total - v.seats.vacant ? " vacant" : "") }));
+      box.appendChild(el("h3", { text: "Who decides" }));
+      box.appendChild(el("div", { class: "seats", role: "img", "aria-label": v.seats.total + " seats, " + (v.seats.vacant ? v.seats.vacant + " vacant" : "none vacant") }, dots));
+      box.appendChild(el("p", { class: "note" }, [units(v.seats.units)]));
+    }
+    return box;
+  }
+  // A dated rail for one decision, from its home-page items: what happened, a "today" marker, what's next.
+  function rail(w) {
+    var t = todayISO(), items = [];
+    D.home.sections.forEach(function (sec) { sec.items.forEach(function (it) { if (it.slug === w.slug && it.date) items.push(it); }); });
+    if (!items.length) return null;
+    items.sort(function (a, b) { return a.date < b.date ? -1 : a.date > b.date ? 1 : 0; });
+    var ul = el("ul", { class: "rail" }), marked = false, nextDone = false;
+    items.forEach(function (it) {
+      if (!marked && it.date >= t) { ul.appendChild(el("li", { class: "today", text: "Today" })); marked = true; }
+      var cls = it.date < t ? "past" : (!nextDone ? "next" : "");
+      if (it.date >= t) nextDone = true;
+      ul.appendChild(el("li", { class: cls }, [el("span", { class: "when", text: it.when }), units(it.units)]));
+    });
+    if (!marked) ul.appendChild(el("li", { class: "today", text: "Today" }));
+    return el("section", { class: "card stack", "aria-labelledby": "h-rail" }, [el("h2", { id: "h-rail", text: "Dates" }), ul]);
+  }
   // A decision card: plain title, what's being decided, and "May matter to you if…" lines.
   function decisionCard(w, link) {
     W = w;
     var sum = sectionById("summary"), you = sectionById("you");
     var lines = you ? you.blocks.filter(function (b) { return b.label && /^if (you|your)\b/i.test(b.label); }) : [];
-    var card = el("article", { class: "card stack" }, [el("p", { class: "billcode", text: w.code }), el("h2", { text: w.title }), headerChips(w),
+    var card = el("article", { class: "card stack" }, [el("p", { class: "billcode", text: w.code }), el("h2", { text: w.title }), dateBadge(w), headerChips(w),
       sum && sum.blocks[0] ? el("p", null, [firstUnit(sum.blocks[0])]) : null]);
     if (lines.length) {
-      card.appendChild(el("p", { class: "meta-line", text: "May matter to you:" }));
-      var ul = el("ul", { class: "lines" });
-      lines.forEach(function (b) { ul.appendChild(el("li", null, [el("p", { class: "mayline" }, [el("strong", { class: "lead", text: b.label + ": " }), firstUnit(b)])])); });
-      card.appendChild(ul);
+      card.appendChild(el("p", { class: "meta-line", text: "Pick your situation:" }));
+      card.appendChild(picker(w, lines, true));
     } else if (sum) {
       var who = sum.blocks.filter(function (b) { return b.label === "Who it affects"; })[0];
       if (who) card.appendChild(el("p", null, [el("strong", { class: "lead", text: "Who it affects: " }), firstUnit(who)]));
@@ -489,8 +637,8 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
   function wsBySlug(slug) { return D.workspaces.filter(function (w) { return w.slug === slug; })[0]; }
   function sectionById(id) { return W.workspace.sections.filter(function (s) { return s.id === id; })[0]; }
   function statusChip(w) {
-    return el("a", { class: "chip " + (w.verified ? "ok" : "warn"), href: "#" + w.slug + "-checks", title: w.statusText,
-      text: w.verified ? "Passed our checks" : "Checks not finished", "aria-label": (w.verified ? "Passed our checks" : "Checks not finished") + ": see how we checked this page" });
+    var text = w.verified ? "Passed our checks" : (w.statusText || "Checks not finished");
+    return el("a", { class: "chip wrap " + (w.verified ? "ok" : "warn"), href: "#" + w.slug + "-checks", text: text, "aria-label": text + ": see how we checked this page" });
   }
   function headerChips(w) {
     var row = el("div", { class: "chips" });
@@ -538,8 +686,7 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
 
   function viewBill(layer) {
     var root = el("div", { class: "stack-lg" });
-    var head = el("div", { class: "billhead" }, [el("p", { class: "billcode", text: W.code }), el("h1", { text: W.title }), headerChips(W)]);
-    if (layer === "overview") head.appendChild(el("p", { class: "disclose", text: W.disclosure }));
+    var head = el("div", { class: "billhead" }, [el("p", { class: "billcode", text: W.code }), el("h1", { text: W.title }), dateBadge(W), headerChips(W)]);
     root.appendChild(head);
     var tabs = el("nav", { class: "tabs", "aria-label": "Parts of this page" });
     LAYERS.forEach(function (L) {
@@ -547,6 +694,7 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
     });
     root.appendChild(tabs);
     root.appendChild(({ overview: layerOverview, decision: layerDecision, options: layerOptions, arguments: layerArguments, evidence: layerEvidence })[layer]());
+    if (layer === "overview") root.appendChild(el("p", { class: "disclose", text: W.disclosure }));
     root.appendChild(pager(layer));
     return root;
   }
@@ -557,64 +705,74 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
   function layerOverview() {
     var L = el("section", { class: "layer" });
     var sum = sectionById("summary");
+    var g = glance(W); if (g) L.appendChild(g);
     var box = el("section", { class: "thirty", "aria-labelledby": "h-30" }, [el("h2", { id: "h-30", text: "The 30-second version" })]);
     sum.blocks.forEach(function (b) { box.appendChild(field(b)); });
     box.appendChild(el("a", { class: "cta", href: "#act", onclick: function (e) { e.preventDefault(); var t = document.getElementById("act"); if (t) t.scrollIntoView({ behavior: "smooth", block: "start" }); } , text: "What you can do ↓" }));
     L.appendChild(box);
-    var you = layerYou();
-    if (you) L.appendChild(you);
+    [layerYou(), rail(W)].forEach(function (x) { if (x) L.appendChild(x); });
 
     var s = sectionById("overview"), S = subs(s);
-    // Actions first, then who decides (and how to reach them), then what's coming, other parts, what happened.
-    var order = ["What you can do"];
+    // What you can do stays in view; who decides, the full date lists and the history sit one tap down.
+    var act = S["What you can do"];
+    if (act) {
+      var abox = el("div", { class: "sub", id: "act" }, [el("h2", { text: act.title })]), lastCard = null;
+      act.blocks.forEach(function (b) {
+        var power = b.label && /^(decide|input|observe)$/i.test(b.label) ? b.label : null;
+        // An unlabeled line right after an action (arrive early, ask for help…) belongs to that action.
+        if (!b.label && lastCard) { lastCard.appendChild(el("p", { class: "meta-line" }, [units(b.units)])); return; }
+        lastCard = el("div", { class: "card item" }, [power ? el("div", { class: "chips" }, [powerChip(power)]) : null,
+          el("p", null, [b.label && !power ? el("span", { class: "label", text: b.label + ": " }) : null, units(b.units)])]);
+        abox.appendChild(lastCard);
+      });
+      L.appendChild(abox);
+    }
+    var order = [];
     s.subs.forEach(function (x) { if (/^who decides/i.test(x.title)) order.push(x.title); });
-    order.push("Coming up");
-    s.subs.forEach(function (x) { if (order.indexOf(x.title) < 0 && x.title !== "What happened") order.push(x.title); });
+    if (S["Coming up"]) order.push("Coming up");
+    s.subs.forEach(function (x) { if (order.indexOf(x.title) < 0 && x.title !== "What happened" && x.title !== "What you can do") order.push(x.title); });
     if (S["What happened"]) order.push("What happened");
+    var inner = el("div", { class: "stack-lg" });
     order.forEach(function (title) {
       var sub = S[title]; if (!sub) return;
-      var box = el("div", { class: "sub" }, [el("h2", { text: sub.title })]);
-      if (title === "What you can do") {
-        box.id = "act";
-        var lastCard = null;
-        sub.blocks.forEach(function (b) {
-          var power = b.label && /^(decide|input|observe)$/i.test(b.label) ? b.label : null;
-          // An unlabeled line right after an action (arrive early, ask for help…) belongs to that action.
-          if (!b.label && lastCard) { lastCard.appendChild(el("p", { class: "meta-line" }, [units(b.units)])); return; }
-          lastCard = el("div", { class: "card item" }, [power ? el("div", { class: "chips" }, [powerChip(power)]) : null,
-            el("p", null, [b.label && !power ? el("span", { class: "label", text: b.label + ": " }) : null, units(b.units)])]);
-          box.appendChild(lastCard);
-        });
-      } else if (title === "What happened") {
+      var sb = el("div", { class: "sub" }, [el("h2", { text: sub.title })]);
+      if (title === "What happened") {
         var ul = el("ul", { class: "timeline" });
         sub.blocks.forEach(function (b) {
           var li = el("li"); if (b.label) li.appendChild(el("span", { class: "when", text: b.label })); li.appendChild(units(b.units)); ul.appendChild(li);
         });
-        box.appendChild(ul);
+        sb.appendChild(ul);
       } else {
-        box.appendChild(renderBlocks(sub.blocks));
+        sb.appendChild(renderBlocks(sub.blocks));
       }
-      L.appendChild(box);
+      inner.appendChild(sb);
     });
+    if (order.length) L.appendChild(el("details", { class: "deep" }, [
+      el("summary", null, ["More detail", el("span", { text: order.join(" · ") })]), inner]));
     return L;
   }
-
   // "What it means for you": "If you…" lines in the reader's terms, then folds for the money, timing and unknowns.
   function layerYou() {
     var s = sectionById("you"); if (!s) return null;
     var box = el("section", { class: "card stack you", "aria-labelledby": "h-you" }, [el("h2", { id: "h-you", text: "What it means for you" })]);
-    s.blocks.forEach(function (b) {
-      box.appendChild(el("div", { class: "ifyou" }, [el("p", null, [b.label ? el("strong", { class: "lead", text: b.label + ": " }) : null, units(b.units)])]));
-    });
+    var lines = s.blocks.filter(function (b) { return b.label; }), rest = s.blocks.filter(function (b) { return !b.label; });
+    if (lines.length) {
+      box.appendChild(el("p", { class: "meta-line", text: "Pick your situation:" }));
+      box.appendChild(picker(W, lines, false));
+    }
+    rest.forEach(function (b) { box.appendChild(el("p", null, [units(b.units)])); });
     s.subs.forEach(function (sub) {
       var d = el("details", { class: "more" }, [el("summary", { text: sub.title })]);
       if (/^(where the money|not known)/i.test(sub.title)) d.open = true;
-      d.appendChild(renderBlocks(sub.blocks));
+      if (/^where the money/i.test(sub.title)) {  // the money steps, drawn as a flow
+        d.appendChild(el("ol", { class: "flow" }, sub.blocks.map(function (b) {
+          return el("li", null, [b.label ? el("strong", { class: "lead", text: b.label + ": " }) : null, units(b.units)]);
+        })));
+      } else d.appendChild(renderBlocks(sub.blocks));
       box.appendChild(d);
     });
     return box;
   }
-
   function layerDecision() {
     var s = sectionById("decision"), L = el("section", { class: "layer" });
     L.appendChild(layerHead(K().decision));
@@ -649,9 +807,12 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
       if (/^if you care most about/i.test(o.title)) {  // the values guide: what each side says it protects
         var g = el("section", { class: "card stack vguide", "aria-labelledby": "h-values" }, [el("h3", { id: "h-values", text: "What each side says it protects" }),
           el("p", { class: "meta-line", text: "Quoted from the record: each side's own words, or the reasons it gave. We don't recommend an option." })]);
+        var vg = el("div", { class: "vgrid" });
         o.blocks.forEach(function (b) {
-          g.appendChild(el("div", { class: "vline" }, [el("p", null, [b.label ? el("strong", { class: "lead", text: b.label + ": " }) : null, units(b.units)])]));
+          if (b.label) vg.appendChild(el("div", { class: "vline" }, [el("h4", { text: b.label }), el("p", null, [units(b.units)])]));
         });
+        g.appendChild(vg);
+        o.blocks.forEach(function (b) { if (!b.label) g.appendChild(el("p", { class: "meta-line" }, [units(b.units)])); });
         L.appendChild(g);
         return;
       }
@@ -663,7 +824,10 @@ footer { margin-top: 32px; font-size: .82rem; color: var(--muted) }
       d.appendChild(el("summary", null, [el("h3", { text: o.title }), chip ? el("div", { class: "chips" }, [chip]) : null,
         does ? el("p", null, [units(does.units)]) : null,
         el("span", { class: "hint", text: rest.filter(function (b) { return b.label; }).map(function (b) { return b.label.toLowerCase(); }).join(" · ") || "Details" })]));
-      d.appendChild(el("div", { class: "body" }, [renderBlocks(rest)]));
+      // Who gains and who gives something up, side by side; the other fields below.
+      var pair = rest.filter(function (b) { return b.label === "Who benefits" || b.label === "Who pays"; });
+      var others = rest.filter(function (b) { return pair.indexOf(b) < 0; });
+      d.appendChild(el("div", { class: "body" }, [pair.length ? el("div", { class: "twocol" }, pair.map(function (b) { return el("div", null, [field(b)]); })) : null, renderBlocks(others)]));
       grid.appendChild(d);
     });
     L.appendChild(grid);

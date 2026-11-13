@@ -81,6 +81,23 @@ const { chromium } = require('playwright');
     const head = await page.innerText('.billhead');
     ok(!/fingerprint|round \d/i.test(head), `${s}: fingerprint or round number in the page header`);
   }
+  // Reader-first visuals: a countdown badge; "pick your situation" swaps the line shown; pictures have text equivalents.
+  for (const s of slugs) {
+    await get(s);
+    ok(await page.$('.billhead .datebadge') !== null, `${s}: no date badge`);
+    const btns = await page.$$('section.you .pick button');
+    ok(btns.length >= 2, `${s}: situation picker has ${btns.length} choices`);
+    if (btns.length >= 2) {
+      await btns[1].click();
+      const shown = await page.$$eval('section.you .ifyou', n => n.map(x => !x.hidden));
+      ok(shown.filter(Boolean).length === 1 && shown[1], `${s}: picking the second situation didn't show only its line`);
+    }
+    const imgs = await page.$$eval('.viz [role="img"]', n => n.map(x => x.getAttribute('aria-label') || ''));
+    ok(imgs.every(t => t.length > 8), `${s}: a picture has no text equivalent`);
+  }
+  for (const s of ['psc-57171', 'fulton-budget-2027']) { await get(s); ok(await page.$('.viz') !== null, `${s}: no "At a glance" card`); }
+  const src = require('fs').readFileSync(process.argv[2], 'utf8');
+  ok(!/localStorage|sessionStorage|indexedDB|document\.cookie/.test(src), 'the page stores something on the device');
   // Arguments: legend present; Mixed and Uncertain differ; the legend button leaves its card folded.
   for (const s of slugs) {
     await get(s + '-arguments');

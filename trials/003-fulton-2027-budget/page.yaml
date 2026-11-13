@@ -47,3 +47,17 @@ short_labels:                      # source chip labels: one or two words, so a 
   S21: "FOX 5, Oct 7"
   S22: "CCI, Aug 9"
 # No `markup` view: the county code's strike/underline markup is shown in passages instead (see log.md).
+audiences: ["Fulton resident", "Property owner", "Courts or jail"]   # chip names for the "If you" lines, in page order
+visuals:                           # pictures on the Summary tab; every note is cited or tagged like a page sentence
+  numbers:
+    - {value: "$1.06 billion", note: "The General Fund, the county's biggest fund, in the 2026 budget. [P-052, P-054]"}
+  split:
+    title: "Where the General Fund's money came from in the 2026 budget"
+    parts:
+      - {name: "Property tax", amount: 834032152, show: "$834 million"}
+      - {name: "All other sources", amount: 223068426, show: "$223 million"}
+    note: "Property tax was $834,032,152 of the $1,057,100,578 General Fund in the 2026 budget. [P-054, P-101] That is about 79%. {computed: 834,032,152 ÷ 1,057,100,578 = 0.789} All other sources come to $223,068,426. {computed: 1,057,100,578 − 834,032,152 = 223,068,426}"
+  seats:
+    total: 7
+    vacant: 1
+    note: "The Board of Commissioners has a chairman and six district seats. [P-014, P-035] District 4 was vacant on the Nov 4 agenda. [P-035]"
