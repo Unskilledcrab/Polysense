@@ -1,6 +1,6 @@
 # Georgia regulators' Dec 15 decision: how real-time payments split between fuel and base costs
 
-Status: Open case at the Georgia Public Service Commission · Final decision scheduled Dec 15, 2026 · Trial 002, revision 7.7: passed checks (round 7); values-guide lines name each plan in brackets; re-check pending; see verification.md <!-- nocheck -->
+Status: Open case at the Georgia Public Service Commission · Final decision scheduled Dec 15, 2026 · Trial 002, revision 7.7: passed checks (round 7); every later change re-checked sentence by sentence; see status.json <!-- nocheck -->
 How this page was made: an AI agent drafted it from archived sources; every sentence is cited or labeled. Dates were copied from PSC pages on Nov 8, 2026. <!-- nocheck -->
 
 ## 30-second version

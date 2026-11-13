@@ -1,6 +1,6 @@
 # Fulton County's 2027 budget
 
-Status: Proposal due by Nov 15, 2026; not on the county's budget page on Nov 8 · Adoption due by the Board's second regular meeting in January 2027 (expected Jan 20) · Trial 003, revision 5.4: passed checks (round 5); one tag fixed after the follow-up check, re-check pending; see verification.md <!-- nocheck -->
+Status: Proposal due by Nov 15, 2026; not on the county's budget page on Nov 8 · Adoption due by the Board's second regular meeting in January 2027 (expected Jan 20) · Trial 003, revision 5.4: passed checks (round 5); every later change re-checked sentence by sentence; see status.json <!-- nocheck -->
 How this page was made: an AI agent drafted it from sources archived on Nov 8, 2026, revised it after three rounds of independent checks, rewrote it for readers new to the subject, revised it after a fourth round, made accuracy fixes after passing a fifth, then made final fixes after two targeted re-checks. Every sentence is cited or labeled. <!-- nocheck -->
 
 ## 30-second version

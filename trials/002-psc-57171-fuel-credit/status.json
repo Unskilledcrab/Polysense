@@ -1,6 +1,6 @@
 {
  "trial": "002-psc-57171-fuel-credit",
- "revision": "7.6",
+ "revision": "7.7",
  "generated": "2026-11-13",
  "gate": {
   "citations:workspace.md": {
@@ -20,38 +20,9 @@
   },
   "balance_prompts": 4
  },
- "units": 556,
- "checked_ok": 552,
+ "units": 560,
+ "checked_ok": 560,
  "flagged": [],
- "pending": [
-  {
-   "file": "workspace.md",
-   "line": 165,
-   "sentence": "**If you care most about pipeline fees split like power-line costs:** GIPL's witness, who backs Plan D, recommended splitting new pipeline c",
-   "verdict": null,
-   "problem": ""
-  },
-  {
-   "file": "workspace.md",
-   "line": 310,
-   "sentence": "**What challenges it:** Georgia Power says Staff's guidelines are \"new policy recommendations for the Commission’s consideration.\"",
-   "verdict": null,
-   "problem": ""
-  },
-  {
-   "file": "workspace.md",
-   "line": 310,
-   "sentence": "Georgia Power says Staff's guidelines \"are not based on or consistent with cost-allocation best practices, previous Commission policy decisi",
-   "verdict": null,
-   "problem": ""
-  },
-  {
-   "file": "home.md",
-   "line": 15,
-   "sentence": "Each proposed change we could read would likely lower fuel charges for homes; base rates could rise later, in a future rate case.",
-   "verdict": null,
-   "problem": ""
-  }
- ],
- "verified": false
+ "pending": [],
+ "verified": true
 }

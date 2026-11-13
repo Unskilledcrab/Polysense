@@ -20,17 +20,9 @@
   },
   "balance_prompts": 0
  },
- "units": 452,
- "checked_ok": 451,
+ "units": 459,
+ "checked_ok": 459,
  "flagged": [],
- "pending": [
-  {
-   "file": "workspace.md",
-   "line": 136,
-   "sentence": "The justice officials' requests for more money and a January vote are on cards 6 and 5.",
-   "verdict": null,
-   "problem": ""
-  }
- ],
- "verified": false
+ "pending": [],
+ "verified": true
 }
