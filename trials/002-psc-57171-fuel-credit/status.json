@@ -14,6 +14,10 @@
   "readability": {
    "pass": true
   },
+  "privacy": {
+   "pass": true,
+   "result": "002-psc-57171-fuel-credit: PASS (0 findings; 0 guarded names; 2 public addresses allowed)"
+  },
   "hashes": {
    "pass": true,
    "result": "Result: PASS (0 problems)"

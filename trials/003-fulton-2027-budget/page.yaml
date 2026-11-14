@@ -5,6 +5,7 @@ kind: budget                    # law | regulatory-case | budget: sets the decis
 topic: "County budget"        # a neutral subject label for the app bar and cards; a label, not a claim
 icon: building                # one of the built-in icons: school | bolt | building
 stage: open                   # open | decided: which Home group the page sits in
+public_addresses: ["141 Pryor Street"]   # the Fulton County Government Center; any other street address fails trials/tools/check_privacy.py
 publish: true                 # false keeps a page out of the app while it is being drafted
 watch:                        # what would make this page stale; read by trials/tools/desk.py (work notes, not page text)
   sources: [S09, S08, S05d]   # the county's budget page, its public notices, and the Legistar meetings list

@@ -1,0 +1,53 @@
+# What the drafter gets instead of the whole record (trials/tools/candidates.py; stage 4 of the source funnel).
+# Short documents are included whole. Long ones are searched for each question below, with a cap per document.
+# The saved record holds about 8 million characters of text; this narrows it to about 200,000.
+full:
+  - {source: S01b, file: S01b.list.txt}                      # the docket's filing list: dates and titles
+  - {source: S02, file: S02-1.txt}                           # amended scheduling order and notice of hearing
+  - {source: S05, file: "S05-1.d/2026.07.13 VoltaGrid Complaint.pdf.txt"}                       # the petition
+  - {source: S05, file: "S05-1.d/Ex. 1 - Notice of Violation to VoltaGrid from EPD.pdf.txt"}
+  - {source: S07, file: "S07-1.d/VoltaGrid's Mot. to Dismiss_For Filing.pdf.txt"}
+  - {source: S07, file: "S07-1.d/VG.Attachment 1 - Affidavit of Chris Atchley (executed).pdf.txt"}
+  - {source: S09, file: S09-1.txt}                           # PSC Staff's response to the motion to dismiss
+  - {source: S13, file: "S13-1.d/VoltaGrid.Atchley.Testimony.FINAL.docx.txt"}                   # VoltaGrid's witness
+  - {source: S14b, file: "S14b-1.d/2026.10.09 [57243] A. Gutierrez City of Covington Direct Testimony.pdf.txt"}
+  - {source: S16, file: "S16-1.d/corrected.voltagird.energy.cmte.request.11.09.26.FINAL.docx.txt"}   # emergency appeal
+  - {source: S18, file: "S18-1.d/GEMC Petition to Intervene (Docket No. 57243).pdf.txt"}
+  - {source: S18b, file: "S18b-1.d/Georgia Power Company's Application for Leave to Intervene - Sustainable Newton v. VoltaGrid - Docket No. 57243.pdf.txt"}
+  - {source: S20, file: S20.txt}                             # how to appear as a public witness
+  - {source: S21, file: S21.txt}                             # how to send a public comment
+search:
+  - {source: S02b, file: S02b-1.txt, cap: 3000}
+  - {source: S03, file: S03-1.txt, cap: 2500}
+  - {source: S03b, file: S03b-1.txt, cap: 5000}
+  - {source: S05, file: "S05-1.d/Ex. 5 - VoltaGrid EPD Narrative.pdf.txt", cap: 4000}
+  - {source: S05, file: "S05-1.d/Ex. 4 - Natural Gas Sales Agreement.pdf.txt", cap: 2500}
+  - {source: S06, file: S06-2.txt, cap: 6000}
+  - {source: S07, file: "S07-1.d/VG.Brief in Supp. of VoltaGrid's Mot. to Dismiss_For Filing.pdf.txt", cap: 9000}
+  - {source: S08, file: S08-1.txt, cap: 10000}
+  - {source: S10, file: "S10-1.d/Georgia EMC's Response in Opposition to VoltaGrid's Motion to Dismiss.pdf.txt", cap: 8000}
+  - {source: S11, file: "S11-1.d/Georgia Power's Response to VoltaGrid's Motion to Dismiss.pdf.txt", cap: 8000}
+  - {source: S12, file: "S12-1.d/Vg.M.Dismiss.Reply.Brief.Final.docx.txt", cap: 9000}
+  - {source: S14, file: S14-4.txt, cap: 5000}
+  - {source: S14, file: S14-8.txt, cap: 3000}
+  - {source: S14c, file: S14c-1.txt, cap: 3000}
+  - {source: S14d, file: S14d-1.txt, cap: 3000}
+  - {source: S14e, file: S14e-1.txt, cap: 3000}
+  - {source: S14f, file: S14f-1.txt, cap: 3000}
+  - {source: S15b, file: S15b-1.txt, cap: 12000}
+  - {source: S17, file: S17-1.txt, cap: 8000}
+  - {source: S22, file: S22.txt, cap: 1500}
+  - {source: S23, file: S23.txt, cap: 1500}
+questions:
+  - {q: "What is being decided, and what the petitioners ask for", any: [declaratory, relief, "WHEREFORE", enjoin, "cease", "request", "order", "violat", "unlawful"]}
+  - {q: "What law applies", any: ["Territorial", "Cogeneration", "electric supplier", "retail", "premises", "O.C.G.A.", "assigned", "exclusive", "customer choice", "900 kW"]}
+  - {q: "The plant and the data center: what, where, how big, what fuel", any: ["megawatt", " MW", "Serverfarm", "data center", "turbine", "generator", "natural gas", "Newton County", "Covington", "island", "grid", "behind the meter"]}
+  - {q: "Who decides, and how the case is run", any: ["Hearing Officer", "jurisdiction", "full Commission", "Chairman", "Energy Committee", "assign", "certif", "appeal", "recommend", "final"]}
+  - {q: "Dates and deadlines", any: ["hearing", "pre-hearing", "December", "November", "deadline", "rebuttal", "due", "10:00", "2:00", "exchange"]}
+  - {q: "How the public can take part", any: ["public witness", "public comment", "members of the public", "intervene", "attend", "livestream", "testify"]}
+  - {q: "VoltaGrid's arguments", any: ["not an electric supplier", "private", "exempt", "self-generation", "lease", "own use", "standing", "lacks jurisdiction", "dismiss", "contract", "single customer"]}
+  - {q: "The petitioners' arguments and the harms they describe", any: ["noise", "emissions", "air quality", "harm", "property", "health", "permit", "without", "neighbor", "residents"]}
+  - {q: "The utilities' and Staff's positions", any: ["Georgia EMC", "Georgia Power", "Snapping Shoals", "Staff", "service territory", "electric membership", "ratepayers", "precedent", "position"]}
+  - {q: "Effects on bills, other customers and future projects", any: ["rate", "ratepayer", "cost", "bill", "other customers", "precedent", "future", "large load", "data centers"]}
+  - {q: "Trade secrets, the emergency appeal and the stay", any: ["trade secret", "confidential", "emergency", "stay", "protective", "disclos", "redact"]}
+  - {q: "State environmental enforcement", any: ["Notice of Violation", "EPD", "Environmental Protection", "air permit", "construct", "without a permit"]}

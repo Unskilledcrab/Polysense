@@ -14,6 +14,10 @@
   "readability": {
    "pass": true
   },
+  "privacy": {
+   "pass": true,
+   "result": "001-hb1009-high-school-cellphones: PASS (0 findings; 0 guarded names; 1 public addresses allowed)"
+  },
   "hashes": {
    "pass": true,
    "result": "Result: PASS (0 problems)"

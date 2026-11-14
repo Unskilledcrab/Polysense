@@ -1,0 +1,525 @@
+# Sources for Trial 004 (PSC Docket 57243). See docs/process/runbooks/bill-workspace.md, steps 1-2.
+# status: retrieved | not-retrieved | rejected
+# type:   primary-government | party-filing (testimony, motions and briefs a party filed in the contested case)
+# Files live in _raw/ (git-ignored). Re-download a URL and compare sha256 to check our copy.
+# Fetched with trials/tools/psc_docket.py (filings) and snapshot.py (pages). Zip filings were unpacked with
+# trials/tools/extract/safe_unzip.py into _raw/<file>.d/; each member is listed with its own sha256.
+# Text derivatives: PDF -> extract/pdf2txt.py (pdfplumber), .docx -> extract/docx2txt.py (stdlib).
+# PRIVACY: the filings name private residents and give their streets. Titles here are by role, and no address
+# is copied into any tracked file (trials/tools/check_privacy.py).
+trial: 004-psc-57243-plant-power-sale
+decision: {state: GA, body: "Georgia Public Service Commission", docket: "57243", title: "Petition For Expedited Declaratory Judgment and Enforcement Against Voltagrid"}
+discovered_on: "2026-11-08"
+retrieved_on: "2026-11-14"
+user_agent: "Mozilla/5.0 (compatible; civic-research-trial/0.1; +https://github.com/Unskilledcrab/Polysense)"
+
+sources:
+  - id: S01
+    title: "Docket 57243 page"
+    publisher: Georgia Public Service Commission
+    type: primary-government
+    url: "https://psc.ga.gov/search/facts-docket/?docketId=57243"
+    status: retrieved
+    retrieved_at: "2026-11-14T01:32:05Z"
+    http_status: 200
+    sha256: 3d79d7602b46eb20b96b5a1afd9fb3702f3f6c535024da79dfdd72d8896a7c75
+    local_file: S01.html
+    derived: [S01.txt]
+    license: public record
+  - id: S01b
+    title: "Docket 57243 filing list (the JSON the docket page itself requests)"
+    publisher: Georgia Public Service Commission
+    type: primary-government
+    url: "https://psc.ga.gov/search/service-facts-docket/?docketId=57243&sortDirection=DESC&sortColumn=Filed&searchText=&pageSize=50&pageNumber=1"
+    status: retrieved
+    retrieved_at: "2026-11-14T01:32:06Z"
+    http_status: 200
+    sha256: 9de537e36a8eaf2607d0bb4ad69784197565f0b2b2544ff6b69f9e9756a5a24d
+    local_file: S01b.html
+    derived: [S01b.txt]
+    license: public record
+    notes: "Body is JSON served as text/html: 44 filings as of the capture. S01b.list.txt is a derived table of date and description."
+  - id: S02
+    title: "Amended Scheduling Order and Notice of Hearing, Docket 57243"
+    publisher: "Georgia Public Service Commission"
+    type: primary-government
+    filed: "2026-10-22"
+    url: "https://psc.ga.gov/search/facts-document/?documentId=229246"
+    status: retrieved
+    retrieved_at: "2026-11-14T01:33:37Z"
+    http_status: 200
+    sha256: a206c37d8ef53da74eab8d3dded129f970aed99ff39a8c3064b795ae10baba27
+    local_file: S02.html
+    license: public record
+    files:
+      - {"local_file": "S02-1.pdf", "sha256": "61329fcd02d480b4e80289078b39b133a25affe12a852c6292e7a7b0064db52b", "captured_at": "2026-11-14T01:33:38Z", "url": "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/229246/110137", "http_status": 200, "bytes": 241812, "derived": "S02-1.txt"}
+      - {"local_file": "S02-2.pdf", "sha256": "f186c174029b139312fa9f14ba8bf046db2dadd2e869d2e9022c1a5339669c64", "captured_at": "2026-11-14T01:33:39Z", "url": "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/229246/110138", "http_status": 200, "bytes": 87532, "derived": "S02-2.txt"}
+  - id: S02b
+    title: "Notice of Hearing and Scheduling Order, Docket 57243"
+    publisher: "Georgia Public Service Commission"
+    type: primary-government
+    filed: "2026-08-24"
+    url: "https://psc.ga.gov/search/facts-document/?documentId=228008"
+    status: retrieved
+    retrieved_at: "2026-11-14T01:33:40Z"
+    http_status: 200
+    sha256: 9220bf5d12a3f20cf23fad01e4dd52915ca3c6392cdf8db03ffc1d35597535e5
+    local_file: S02b.html
+    license: public record
+    files:
+      - {"local_file": "S02b-1.pdf", "sha256": "c5dff12301f2790353954e3ab839a64a6f858b5cc485a1d3427c505c9a1efb3c", "captured_at": "2026-11-14T01:33:41Z", "url": "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/228008/109217", "http_status": 200, "bytes": 347764, "derived": "S02b-1.txt"}
+  - id: S02c
+    title: "Order assigning Docket 57243 to a Hearing Officer"
+    publisher: "Georgia Public Service Commission"
+    type: primary-government
+    filed: "2026-08-24"
+    url: "https://psc.ga.gov/search/facts-document/?documentId=227960"
+    status: retrieved
+    retrieved_at: "2026-11-14T01:33:43Z"
+    http_status: 200
+    sha256: 9ddab611c3340c8b0564306813882eda8d036a7a1d72e60fc75b59b1c996c3aa
+    local_file: S02c.html
+    license: public record
+    files:
+      - {"local_file": "S02c-1.pdf", "sha256": "11d5f6716040dc06cf945d5debdf0497963efc3eb754a0657811cb8bd49b043e", "captured_at": "2026-11-14T01:33:44Z", "url": "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/227960/109170", "http_status": 200, "bytes": 627844, "derived": "S02c-1.txt"}
+  - id: S03
+    title: "Order on VoltaGrid's Motion to Stay Proceedings"
+    publisher: "Georgia Public Service Commission"
+    type: primary-government
+    filed: "2026-09-28"
+    url: "https://psc.ga.gov/search/facts-document/?documentId=228969"
+    status: retrieved
+    retrieved_at: "2026-11-14T01:33:45Z"
+    http_status: 200
+    sha256: ddfdf166e495dbeb3796e56c36b1d1027d69f417659729d9069a234d5481e9cb
+    local_file: S03.html
+    license: public record
+    files:
+      - {"local_file": "S03-1.pdf", "sha256": "cb5db4e0fa749ae5a34a9e62f9f04007abb54d90fec2fa8fb936b4e76375f5b8", "captured_at": "2026-11-14T01:33:46Z", "url": "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/228969/109886", "http_status": 200, "bytes": 258541, "derived": "S03-1.txt"}
+      - {"local_file": "S03-2.pdf", "sha256": "89ed70e97b339031d93ef6db046eabd623a421b0270a7265544a292d440e42bc", "captured_at": "2026-11-14T01:33:46Z", "url": "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/228969/109887", "http_status": 200, "bytes": 181518, "derived": "S03-2.txt"}
+  - id: S03b
+    title: "Hearing Officer's order on the petitioners' motion challenging trade secret designations"
+    publisher: "Georgia Public Service Commission Hearing Officer"
+    type: primary-government
+    filed: "2026-11-04"
+    url: "https://psc.ga.gov/search/facts-document/?documentId=229350"
+    status: retrieved
+    retrieved_at: "2026-11-14T01:33:47Z"
+    http_status: 200
+    sha256: fd94465abf98b9545b7cc0e4bb83f58bdd9706bc00058f1849ee6c751adf6615
+    local_file: S03b.html
+    license: public record
+    files:
+      - {"local_file": "S03b-1.pdf", "sha256": "6c702861ddf098bcda860326ffe844b252792825d88432ed53e1038fed4fd2aa", "captured_at": "2026-11-14T01:33:48Z", "url": "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/229350/110214", "http_status": 200, "bytes": 203553, "derived": "S03b-1.txt"}
+      - {"local_file": "S03b-2.pdf", "sha256": "1dd89be30ce24f13d1466c123cd0ffa73b772a050ae081c251a09b8557c5d690", "captured_at": "2026-11-14T01:33:48Z", "url": "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/229350/110215", "http_status": 200, "bytes": 96366, "derived": "S03b-2.txt"}
+  - id: S03c
+    title: "Chairman's Order Temporarily Staying Hearing Officer's Order"
+    publisher: "Georgia Public Service Commission"
+    type: primary-government
+    filed: "2026-11-12"
+    url: "https://psc.ga.gov/search/facts-document/?documentId=229426"
+    status: retrieved
+    retrieved_at: "2026-11-14T01:33:50Z"
+    http_status: 200
+    sha256: f6355c5c55ef6371664122c36c01be3fd3cb4d17604755046ef2acb06814a3cc
+    local_file: S03c.html
+    license: public record
+    files:
+      - {"local_file": "S03c-1.pdf", "sha256": "30c93bd61754151346b09ec1336922b52c4d7c3803b1b2a929bbd2d509ce84be", "captured_at": "2026-11-14T01:33:50Z", "url": "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/229426/110347", "http_status": 200, "bytes": 511213, "derived": "S03c-1.txt"}
+  - id: S05
+    title: "Petition for Expedited Declaratory Judgment and Enforcement Against VoltaGrid, with exhibits"
+    publisher: "Petitioners (a Newton County nonprofit and four residents), through the Southern Environmental Law Center"
+    type: party-filing
+    filed: "2026-07-13"
+    url: "https://psc.ga.gov/search/facts-document/?documentId=227215"
+    status: retrieved
+    retrieved_at: "2026-11-14T01:33:51Z"
+    http_status: 200
+    sha256: 2bd7d5fa15e645421b9ffeaf91b78b1f9b024c78b099c88f60ba3456d61a0ae1
+    local_file: S05.html
+    license: public record
+    files:
+      - {"local_file": "S05-1.zip", "sha256": "5ea21ffb72b0b4426d4ad8f5f0891dea040d582b1c950ef3fa6da37582fdffa6", "captured_at": "2026-11-14T01:33:54Z", "url": "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/227215/108472", "http_status": 200, "bytes": 49831943}
+      - {"local_file": "S05-1.d/2026.07.13 VoltaGrid Complaint.pdf", "sha256": "a32af839aa16bd948cb96d0ebaef678f4040fa6737809e90dfa6fe15446b9bff", "bytes": 367871, "member_of": "S05-1.zip", "derived": "S05-1.d/2026.07.13 VoltaGrid Complaint.pdf.txt"}
+      - {"local_file": "S05-1.d/Ex. 1 - Notice of Violation to VoltaGrid from EPD.pdf", "sha256": "ebf491bc04d2f72f86fd6ea3fda6d4e3ae8d94b70b1b52e1d118ab57a02b5725", "bytes": 254965, "member_of": "S05-1.zip", "derived": "S05-1.d/Ex. 1 - Notice of Violation to VoltaGrid from EPD.pdf.txt"}
+      - {"local_file": "S05-1.d/Ex. 2 - VoltaGrid Air Permit Application.pdf", "sha256": "c232914258d1bab4fbb4818908cfb8baad86e3345d6b192558269007a1695ef7", "bytes": 32275391, "member_of": "S05-1.zip", "derived": "S05-1.d/Ex. 2 - VoltaGrid Air Permit Application.pdf.txt"}
+      - {"local_file": "S05-1.d/Ex. 3 - Serverfarm Air Permit Application.pdf", "sha256": "f7a604d59d3af6c6cad89d10d70ac08a64ac356bf9bea23888a867bb58c0b288", "bytes": 16942303, "member_of": "S05-1.zip", "derived": "S05-1.d/Ex. 3 - Serverfarm Air Permit Application.pdf.txt"}
+      - {"local_file": "S05-1.d/Ex. 4 - Natural Gas Sales Agreement.pdf", "sha256": "784c20abfa6eca805b175c440a8140e7a744a64b29934f14c1501844067b707c", "bytes": 814710, "member_of": "S05-1.zip", "derived": "S05-1.d/Ex. 4 - Natural Gas Sales Agreement.pdf.txt"}
+      - {"local_file": "S05-1.d/Ex. 5 - VoltaGrid EPD Narrative.pdf", "sha256": "22565c066d1d02af490d387424918109122e34cd9e4c1eefc1bd418216d64844", "bytes": 333998, "member_of": "S05-1.zip", "derived": "S05-1.d/Ex. 5 - VoltaGrid EPD Narrative.pdf.txt"}
+  - id: S06
+    title: "Answer of Respondent VoltaGrid, LLC"
+    publisher: "VoltaGrid, LLC"
+    type: party-filing
+    filed: "2026-08-12"
+    url: "https://psc.ga.gov/search/facts-document/?documentId=227557"
+    status: retrieved
+    retrieved_at: "2026-11-14T01:33:55Z"
+    http_status: 200
+    sha256: 78e6d8a94bd6b72afed3e386caa1deb50373d66f8252c6294778b8283fa6dcf3
+    local_file: S06.html
+    license: public record
+    files:
+      - {"local_file": "S06-1.docx", "sha256": "c0623a293f11fa6f2b520b2679524d9fa92585fece63bbbb82dbcb0833dac092", "captured_at": "2026-11-14T01:33:55Z", "url": "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/227557/108873", "http_status": 200, "bytes": 39232}
+      - {"local_file": "S06-2.pdf", "sha256": "e097451273c411d65518b51698787017a71a57a421503a9994dde02bb01ad2a9", "captured_at": "2026-11-14T01:33:55Z", "url": "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/227557/108874", "http_status": 200, "bytes": 103970, "derived": "S06-2.txt"}
+  - id: S07
+    title: "VoltaGrid's Motion to Dismiss and Brief in Support, with exhibit"
+    publisher: "VoltaGrid, LLC"
+    type: party-filing
+    filed: "2026-09-16"
+    url: "https://psc.ga.gov/search/facts-document/?documentId=228806"
+    status: retrieved
+    retrieved_at: "2026-11-14T01:33:57Z"
+    http_status: 200
+    sha256: 9c500c8fa70aa1b636641b3740955e06e2b5f67dc21b24a9563255c5f2b35938
+    local_file: S07.html
+    license: public record
+    files:
+      - {"local_file": "S07-1.zip", "sha256": "abda08b233ef3c9177e612864f565eeca2df421852fee0de40bdabcc9e845b7b", "captured_at": "2026-11-14T01:33:58Z", "url": "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/228806/109738", "http_status": 200, "bytes": 669301}
+      - {"local_file": "S07-1.d/VG.Attachment 1 - Affidavit of Chris Atchley (executed).pdf", "sha256": "c7fc09b398ebbbf9f4d7dad806147b41257c960b6a72ee786a9fd95b8a5cc1b7", "bytes": 125985, "member_of": "S07-1.zip", "derived": "S07-1.d/VG.Attachment 1 - Affidavit of Chris Atchley (executed).pdf.txt"}
+      - {"local_file": "S07-1.d/VG.Brief in Supp. of VoltaGrid's Mot. to Dismiss_For Filing.pdf", "sha256": "09b483196dd879a0a1a1aab57eca11e4d235bc2c10581cc5304b744dad2acaa5", "bytes": 331359, "member_of": "S07-1.zip", "derived": "S07-1.d/VG.Brief in Supp. of VoltaGrid's Mot. to Dismiss_For Filing.pdf.txt"}
+      - {"local_file": "S07-1.d/VoltaGrid's Mot. to Dismiss_For Filing.pdf", "sha256": "4b62519a7d47130501b0cb36c5e2a990fdf4dbbf487e3a05896ae1d0cd615a80", "bytes": 225201, "member_of": "S07-1.zip", "derived": "S07-1.d/VoltaGrid's Mot. to Dismiss_For Filing.pdf.txt"}
+      - {"local_file": "S07-1.d/vg.Sallie Tanner filing Ltr - Motion to Dismiss.doc", "sha256": "fee8e363783727fc3f5865defa7f65387b154a7f1b387c03ff4a1fcbc9bc0801", "bytes": 47104, "member_of": "S07-1.zip"}
+      - {"local_file": "S07-2.pdf", "sha256": "9af8fc6aef9f60551ea7ba30854dd450f41be495025dafdf23f16222b51a333c", "captured_at": "2026-11-14T01:33:58Z", "url": "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/228806/109743", "http_status": 200, "bytes": 59948, "derived": "S07-2.txt"}
+  - id: S08
+    title: "Petitioners' Response to VoltaGrid's Motion to Dismiss"
+    publisher: "Petitioners"
+    type: party-filing
+    filed: "2026-10-16"
+    url: "https://psc.ga.gov/search/facts-document/?documentId=229170"
+    status: retrieved
+    retrieved_at: "2026-11-14T01:33:59Z"
+    http_status: 200
+    sha256: ee3429f5b6688baeeafea086d7f4c68d246a43ec0af070e97f57854cd5b8febd
+    local_file: S08.html
+    license: public record
+    files:
+      - {"local_file": "S08-1.pdf", "sha256": "4024443a5e0d45307e0e65af85c904c43b3886733df3a43da796fac973ec8c7e", "captured_at": "2026-11-14T01:34:00Z", "url": "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/229170/110086", "http_status": 200, "bytes": 1026447, "derived": "S08-1.txt"}
+  - id: S09
+    title: "Staff's Response to Respondent's Motion to Dismiss"
+    publisher: "PSC Staff"
+    type: party-filing
+    filed: "2026-10-16"
+    url: "https://psc.ga.gov/search/facts-document/?documentId=229167"
+    status: retrieved
+    retrieved_at: "2026-11-14T01:34:04Z"
+    http_status: 200
+    sha256: feddd9b87cb06cf8476730991c96956fff69dcaa328219c0015a1bf7a0e49c4b
+    local_file: S09.html
+    license: public record
+    files:
+      - {"local_file": "S09-1.pdf", "sha256": "538e26ff9bc3fe3cf846501b03ce183b987b526159436b1e28b2cac893c6c136", "captured_at": "2026-11-14T01:34:05Z", "url": "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/229167/110082", "http_status": 200, "bytes": 299683, "derived": "S09-1.txt"}
+      - {"local_file": "S09-2.pdf", "sha256": "da63e5e9fa3b6a5087cf1c05eaf260480867642dcac8858c5bb50eb3c852df9e", "captured_at": "2026-11-14T01:34:05Z", "url": "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/229167/110083", "http_status": 200, "bytes": 228330, "derived": "S09-2.txt"}
+  - id: S10
+    title: "Georgia EMC's Response in Opposition to VoltaGrid's Motion to Dismiss"
+    publisher: "Georgia EMC"
+    type: party-filing
+    filed: "2026-10-16"
+    url: "https://psc.ga.gov/search/facts-document/?documentId=229171"
+    status: retrieved
+    retrieved_at: "2026-11-14T01:34:07Z"
+    http_status: 200
+    sha256: eff09acf3803c229dd0b3762853dead538f259f9cdf0245c3cf745a7eae11552
+    local_file: S10.html
+    license: public record
+    files:
+      - {"local_file": "S10-1.zip", "sha256": "aef2c01e38726ba451fdd6746431c0dd2e4af5b542b86ceb9e000dcb90f081da", "captured_at": "2026-11-14T01:34:07Z", "url": "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/229171/110087", "http_status": 200, "bytes": 926810}
+      - {"local_file": "S10-1.d/2026-10-16 B. Reed Transmittal Letter to S. Tanner (Docket No. 57243).docx", "sha256": "9dff0d06a8ec65f15b1b3adba0489f0a68a91f7c02d9608999eea73550d1f375", "bytes": 808290, "member_of": "S10-1.zip"}
+      - {"local_file": "S10-1.d/2026-10-16 B. Reed Transmittal Letter to S. Tanner (Docket No. 57243).pdf", "sha256": "0fd046b2db9d3f9be59deaedf39962f07103279296f6972853b99274ac3d096a", "bytes": 43038, "member_of": "S10-1.zip", "derived": "S10-1.d/2026-10-16 B. Reed Transmittal Letter to S. Tanner (Docket No. 57243).pdf.txt"}
+      - {"local_file": "S10-1.d/Georgia EMC's Response in Opposition to VoltaGrid's Motion to Dismiss.docx", "sha256": "47fc952a649669234ed33699b0f8b2b209a25d110d93011e1491d828dc33f0f7", "bytes": 56652, "member_of": "S10-1.zip"}
+      - {"local_file": "S10-1.d/Georgia EMC's Response in Opposition to VoltaGrid's Motion to Dismiss.pdf", "sha256": "9e079989729b2b905d1de51514bfbf539f4fd2127855ffc926ef288d9c0431af", "bytes": 230106, "member_of": "S10-1.zip", "derived": "S10-1.d/Georgia EMC's Response in Opposition to VoltaGrid's Motion to Dismiss.pdf.txt"}
+  - id: S11
+    title: "Georgia Power Company's Response to VoltaGrid's Motion to Dismiss"
+    publisher: "Georgia Power Company"
+    type: party-filing
+    filed: "2026-10-16"
+    url: "https://psc.ga.gov/search/facts-document/?documentId=229172"
+    status: retrieved
+    retrieved_at: "2026-11-14T01:34:08Z"
+    http_status: 200
+    sha256: 5952f9ce8cae9dee7f181c0e5804c37fd613eea87a4392d3f30010d46419e49a
+    local_file: S11.html
+    license: public record
+    files:
+      - {"local_file": "S11-1.zip", "sha256": "7d10aea4906c0b308ffc9a1f4e8aee49c64d590b4d8f111efba6728cd209053b", "captured_at": "2026-11-14T01:34:09Z", "url": "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/229172/110088", "http_status": 200, "bytes": 453025}
+      - {"local_file": "S11-1.d/COS - GPC Response to MTD - Sustainable Newton v. VoltaGrid - DKT 57243 - EXECUTED.pdf", "sha256": "91ed6b85161ca683c087d742a38cd89898e1fdb6b5a4dc86146217b56132f455", "bytes": 113384, "member_of": "S11-1.zip", "derived": "S11-1.d/COS - GPC Response to MTD - Sustainable Newton v. VoltaGrid - DKT 57243 - EXECUTED.pdf.txt"}
+      - {"local_file": "S11-1.d/Georgia Power's Response to VoltaGrid's Motion to Dismiss.docx", "sha256": "60a8b515931d235b575b542af1751d134a3dfc49f7926493d2183db11b51ac7e", "bytes": 54780, "member_of": "S11-1.zip"}
+      - {"local_file": "S11-1.d/Georgia Power's Response to VoltaGrid's Motion to Dismiss.pdf", "sha256": "e173ee0e48513cdf10017c029146bcd6c15e0e0936c159591ef4c19e9a416c7c", "bytes": 278746, "member_of": "S11-1.zip", "derived": "S11-1.d/Georgia Power's Response to VoltaGrid's Motion to Dismiss.pdf.txt"}
+      - {"local_file": "S11-1.d/Transmittal Letter - Georgia Power's Response to VoltaGrid's MTD - DKT 57243 - EXECUTED.pdf", "sha256": "e352186f322985cc9d2e22eef1c69c42f4447a5b8d6dd87a58d6a21da7556306", "bytes": 29485, "member_of": "S11-1.zip", "derived": "S11-1.d/Transmittal Letter - Georgia Power's Response to VoltaGrid's MTD - DKT 57243 - EXECUTED.pdf.txt"}
+  - id: S12
+    title: "VoltaGrid's Reply Brief in support of its Motion to Dismiss"
+    publisher: "VoltaGrid, LLC"
+    type: party-filing
+    filed: "2026-10-26"
+    url: "https://psc.ga.gov/search/facts-document/?documentId=229266"
+    status: retrieved
+    retrieved_at: "2026-11-14T01:34:10Z"
+    http_status: 200
+    sha256: ce4eca102612efbcbdda5ac437978f446d1990d10e33aea68ff6c9acb405b6f1
+    local_file: S12.html
+    license: public record
+    files:
+      - {"local_file": "S12-1.zip", "sha256": "2a5e721ada861d416faa8193caea646c39d571222eda4dc1d21ac1face9d2739", "captured_at": "2026-11-14T01:34:10Z", "url": "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/229266/110159", "http_status": 200, "bytes": 1278523}
+      - {"local_file": "S12-1.d/Sallie Tanner filing Ltr - VoltaGrid Reply Brief.doc", "sha256": "5072de0ebac0d67906eda99672fab76e7223f0b28aa3f0478085cdbf4c22adfc", "bytes": 47104, "member_of": "S12-1.zip"}
+      - {"local_file": "S12-1.d/Vg.M.Dismiss.Reply.Brief.Final.docx", "sha256": "af2c420802de041182a10e44499eec4cdfcece643c4b86826ff32264cb5c1ec2", "bytes": 84216, "member_of": "S12-1.zip"}
+      - {"local_file": "S12-1.d/Vg.M.Dismiss.Reply.Knowles.att.A.pdf", "sha256": "41fc04e5b37b746367d7963e949993ab2b8d314bf1eaaa148753027186d8eefc", "bytes": 1191022, "member_of": "S12-1.zip", "derived": "S12-1.d/Vg.M.Dismiss.Reply.Knowles.att.A.pdf.txt"}
+  - id: S13
+    title: "Direct testimony of VoltaGrid's witness"
+    publisher: "VoltaGrid, LLC"
+    type: party-filing
+    filed: "2026-10-09"
+    url: "https://psc.ga.gov/search/facts-document/?documentId=229090"
+    status: retrieved
+    retrieved_at: "2026-11-14T01:34:12Z"
+    http_status: 200
+    sha256: d4c7da2b870a658f8cbbfb831bd72be2c3ac0abc6cee98a3a60bf70982c9437e
+    local_file: S13.html
+    license: public record
+    files:
+      - {"local_file": "S13-1.zip", "sha256": "bc1c13112193fa40d9005a00300fb59adf4a2b63d38bb6f10f0836f854ae319e", "captured_at": "2026-11-14T01:34:12Z", "url": "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/229090/110026", "http_status": 200, "bytes": 933993}
+      - {"local_file": "S13-1.d/VoltaGrid.Atchley.Testimony.FINAL.docx", "sha256": "fdac8dee015f40f06d97544079a888f31209f853fa9c1d77651aa8e4fa8f919e", "bytes": 43934, "member_of": "S13-1.zip"}
+      - {"local_file": "S13-1.d/voltagrid.atchley.ex1.pdf", "sha256": "f79e35ce0089c4aedf64942bd9e76b2e51ae059330a5021257a62779bf119522", "bytes": 897769, "member_of": "S13-1.zip", "derived": "S13-1.d/voltagrid.atchley.ex1.pdf.txt"}
+  - id: S14
+    title: "Direct testimony for the petitioners (PSC document 229089)"
+    publisher: "Petitioners"
+    type: party-filing
+    filed: "2026-10-09"
+    url: "https://psc.ga.gov/search/facts-document/?documentId=229089"
+    status: retrieved
+    retrieved_at: "2026-11-14T01:34:13Z"
+    http_status: 200
+    sha256: cbe5c6828146534937fb9f52bb9de64f29dba9da508d5e80357104402b642f86
+    local_file: S14.html
+    license: public record
+    files:
+      - {"local_file": "S14-1.bin", "sha256": "b93ea1432c9c75b1ed5565955d56157ccb838d338647621f71e9c947aabe3fe0", "captured_at": "2026-11-14T01:34:37Z", "url": "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/229089/110013", "http_status": 200, "bytes": 498086813, "note": "MP4 video exhibit; saved and hashed, not read"}
+      - {"local_file": "S14-2.bin", "sha256": "06c5486da04aabcc4b4d4c19044e83b23048092c872ed19fcdadd1b7fc81ce66", "captured_at": "2026-11-14T01:34:53Z", "url": "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/229089/110014", "http_status": 200, "bytes": 434325595, "note": "MP4 video exhibit; saved and hashed, not read"}
+      - {"local_file": "S14-3.bin", "sha256": "036cbf8c743240632f7ac37aa5835709a4ccf6203c2daeed141dfdb6fe35ba10", "captured_at": "2026-11-14T01:34:56Z", "url": "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/229089/110015", "http_status": 200, "bytes": 63998735, "note": "MP4 video exhibit; saved and hashed, not read"}
+      - {"local_file": "S14-4.pdf", "sha256": "c02b0903ce9e3b2dc9164e0cb79febc368e3d659f1859dd9be52f89dad89f324", "captured_at": "2026-11-14T01:34:56Z", "url": "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/229089/110016", "http_status": 200, "bytes": 51975, "derived": "S14-4.txt"}
+      - {"local_file": "S14-5.pdf", "sha256": "8c2400483308dd7d46e6020c1801ad831e19bb7ac7cdb62ad5d0b476c88c64a2", "captured_at": "2026-11-14T01:34:56Z", "url": "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/229089/110017", "http_status": 200, "bytes": 365013, "derived": "S14-5.txt"}
+      - {"local_file": "S14-6.bin", "sha256": "7f61a46d878d5a1ef0827aa0dca726370f749ca0432e7bd982763ae2c58092d5", "captured_at": "2026-11-14T01:34:57Z", "url": "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/229089/110018", "http_status": 200, "bytes": 29276556, "note": "MP4 video exhibit; saved and hashed, not read"}
+      - {"local_file": "S14-7.pdf", "sha256": "9b54c8cf2571045b91d6470f174f14546e4cbcba529c1055dca7abc7b9285fc1", "captured_at": "2026-11-14T01:34:57Z", "url": "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/229089/110019", "http_status": 200, "bytes": 417323, "derived": "S14-7.txt"}
+      - {"local_file": "S14-8.pdf", "sha256": "1632391c9cc9455b5ce07ffc60cdea881d0750d6a642133594b2493a1d66cc2e", "captured_at": "2026-11-14T01:34:58Z", "url": "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/229089/110020", "http_status": 200, "bytes": 268039, "derived": "S14-8.txt"}
+      - {"local_file": "S14-9.pdf", "sha256": "e1b5c0c0fe8872a435bc09a9b74249ba34370bd3c1de553b7086fc39215fe401", "captured_at": "2026-11-14T01:34:59Z", "url": "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/229089/110021", "http_status": 200, "bytes": 346591, "derived": "S14-9.txt"}
+      - {"local_file": "S14-10.pdf", "sha256": "12c859ccb099bd66aee68dfdc38a6ab39c27636545fcd45cdbdcb4969e490c28", "captured_at": "2026-11-14T01:34:59Z", "url": "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/229089/110022", "http_status": 200, "bytes": 478852, "derived": "S14-10.txt"}
+      - {"local_file": "S14-11.pdf", "sha256": "107b79804d11986c6dfead670882c23291af7001569f071bb7f2345eefb4b520", "captured_at": "2026-11-14T01:35:00Z", "url": "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/229089/110023", "http_status": 200, "bytes": 259833, "derived": "S14-11.txt"}
+      - {"local_file": "S14-12.pdf", "sha256": "16c6625dece184af2456c731d0505df84eb4c2c13f87812310d71219eee9e49b", "captured_at": "2026-11-14T01:35:01Z", "url": "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/229089/110024", "http_status": 200, "bytes": 409114, "derived": "S14-12.txt"}
+      - {"local_file": "S14-13.pdf", "sha256": "137e0e9d13da13bd45ff29b1c3c5f1b9d3cc1bbb563ef0813a125132cd1d4574", "captured_at": "2026-11-14T01:35:04Z", "url": "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/229089/110025", "http_status": 200, "bytes": 374960, "derived": "S14-13.txt"}
+  - id: S14b
+    title: "Direct testimony of a City of Covington witness, filed by the petitioners"
+    publisher: "Petitioners"
+    type: party-filing
+    filed: "2026-10-09"
+    url: "https://psc.ga.gov/search/facts-document/?documentId=229088"
+    status: retrieved
+    retrieved_at: "2026-11-14T01:35:06Z"
+    http_status: 200
+    sha256: 221526c4e28c0656e0d57a8c20c48154720960033631126117fafb15e928a340
+    local_file: S14b.html
+    license: public record
+    files:
+      - {"local_file": "S14b-1.zip", "sha256": "73d7a84c66b1d7bcb8908191830adca763af692f63aac6d0b3b57bd6dca7ce48", "captured_at": "2026-11-14T01:35:10Z", "url": "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/229088/110011", "http_status": 200, "bytes": 74861484}
+      - {"local_file": "S14b-1.d/2026.10.09 [57243] A. Gutierrez City of Covington Direct Testimony.pdf", "sha256": "8dc9ec854dbe17fad1c370d4778bb53a3f5694e50ceeda6f65818f671ab4813b", "bytes": 525618, "member_of": "S14b-1.zip", "derived": "S14b-1.d/2026.10.09 [57243] A. Gutierrez City of Covington Direct Testimony.pdf.txt"}
+      - {"local_file": "S14b-1.d/Ex. 1 - 2026.04.29 - SELC GORA to Covington re VoltaGrid.pdf", "sha256": "737b6e7646138b98f3a822f027042f91fb880a954daf766e758ae45bc3773e3c", "bytes": 564913, "member_of": "S14b-1.zip", "derived": "S14b-1.d/Ex. 1 - 2026.04.29 - SELC GORA to Covington re VoltaGrid.pdf.txt"}
+      - {"local_file": "S14b-1.d/Ex. 2 - 2026.06.24 City of Covington GORA Response.pdf", "sha256": "8c69d13d76e50cac116b5981f3d048652c9159d66799f41b580628e80ff5c8b2", "bytes": 53478095, "member_of": "S14b-1.zip", "derived": "S14b-1.d/Ex. 2 - 2026.06.24 City of Covington GORA Response.pdf.txt"}
+      - {"local_file": "S14b-1.d/Ex. 3 - 2026.07.07 - Email From W. Snow to A. Gutierrez - City of Covington.pdf", "sha256": "3f156324f57f1fc250386d21640d18a7a291cdce4d0d1df0ec9362176ff5bd97", "bytes": 290607, "member_of": "S14b-1.zip", "derived": "S14b-1.d/Ex. 3 - 2026.07.07 - Email From W. Snow to A. Gutierrez - City of Covington.pdf.txt"}
+      - {"local_file": "S14b-1.d/Ex. 4 - 2026.07.17 City of Covington GORA Follow-Up Response.pdf", "sha256": "8dd3caa0dc9998b6ec6099d93d7b1e7c643ee5484d6df2336ed1d6b3b597b679", "bytes": 29098038, "member_of": "S14b-1.zip", "derived": "S14b-1.d/Ex. 4 - 2026.07.17 City of Covington GORA Follow-Up Response.pdf.txt"}
+      - {"local_file": "S14b-1.d/Ex. 5 - 2026.07.17 - All emails from W. Snow to A. Gutierrez - City of Covington.pdf", "sha256": "b16e2f9de650bfa33e3dff54b03a1752f7e73d52dc0453754965c04558bd023d", "bytes": 443823, "member_of": "S14b-1.zip", "derived": "S14b-1.d/Ex. 5 - 2026.07.17 - All emails from W. Snow to A. Gutierrez - City of Covington.pdf.txt"}
+  - id: S14c
+    title: "Direct testimony of a petitioner who lives nearby (PSC document 229084)"
+    publisher: "Petitioners"
+    type: party-filing
+    filed: "2026-10-09"
+    url: "https://psc.ga.gov/search/facts-document/?documentId=229084"
+    status: retrieved
+    retrieved_at: "2026-11-14T01:35:11Z"
+    http_status: 200
+    sha256: 17a580784784d8d414326b316b1abae5e664f66d86da8698c4b78faa9cf85e28
+    local_file: S14c.html
+    license: public record
+    files:
+      - {"local_file": "S14c-1.pdf", "sha256": "3778188f6c279508a8287c00eacce15a64bdfb08dacfb9ad464e383e36180a31", "captured_at": "2026-11-14T01:35:12Z", "url": "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/229084/110007", "http_status": 200, "bytes": 829608, "derived": "S14c-1.txt"}
+  - id: S14d
+    title: "Direct testimony of a petitioner who lives nearby (PSC document 229085)"
+    publisher: "Petitioners"
+    type: party-filing
+    filed: "2026-10-09"
+    url: "https://psc.ga.gov/search/facts-document/?documentId=229085"
+    status: retrieved
+    retrieved_at: "2026-11-14T01:35:14Z"
+    http_status: 200
+    sha256: f7a971988d027a10ac8211c183d513626580113434351b8fbd0f33a4ad520982
+    local_file: S14d.html
+    license: public record
+    files:
+      - {"local_file": "S14d-1.pdf", "sha256": "d1df49692a6d97a3426c066c844f592658d55a27370a0b168508430b6f817a04", "captured_at": "2026-11-14T01:35:15Z", "url": "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/229085/110008", "http_status": 200, "bytes": 364265, "derived": "S14d-1.txt"}
+  - id: S14e
+    title: "Direct testimony of a petitioner who lives nearby (PSC document 229086)"
+    publisher: "Petitioners"
+    type: party-filing
+    filed: "2026-10-09"
+    url: "https://psc.ga.gov/search/facts-document/?documentId=229086"
+    status: retrieved
+    retrieved_at: "2026-11-14T01:35:16Z"
+    http_status: 200
+    sha256: c13249d60d3ed0e8012b26f7bb8399b8c6095d71f991d0e63b889bb5e9b2b689
+    local_file: S14e.html
+    license: public record
+    files:
+      - {"local_file": "S14e-1.pdf", "sha256": "b3f267f70120dc910d323a9afd3976eaddcca36c90bcbea1d8e6bdac40746aff", "captured_at": "2026-11-14T01:35:17Z", "url": "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/229086/110009", "http_status": 200, "bytes": 5136518, "derived": "S14e-1.txt"}
+  - id: S14f
+    title: "Direct testimony of a petitioner who lives nearby (PSC document 229087)"
+    publisher: "Petitioners"
+    type: party-filing
+    filed: "2026-10-09"
+    url: "https://psc.ga.gov/search/facts-document/?documentId=229087"
+    status: retrieved
+    retrieved_at: "2026-11-14T01:35:19Z"
+    http_status: 200
+    sha256: 3a8413220b11f99960ee30b20c475b659a07e7fc73df521188a06ce14deb740d
+    local_file: S14f.html
+    license: public record
+    files:
+      - {"local_file": "S14f-1.pdf", "sha256": "53385e833c681408178e277fab9e08c22d498a112e8ba1c8fe8806f1948e58b9", "captured_at": "2026-11-14T01:35:19Z", "url": "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/229087/110010", "http_status": 200, "bytes": 1281769, "derived": "S14f-1.txt"}
+  - id: S15
+    title: "Direct testimony of the PSC Staff's witness"
+    publisher: "PSC Staff"
+    type: party-filing
+    filed: "2026-11-12"
+    url: "https://psc.ga.gov/search/facts-document/?documentId=229424"
+    status: not-retrieved
+    retrieved_at: "2026-11-14T01:35:21Z"
+    http_status: 200
+    sha256: 8660d410d85671a20eed0c9bc9f0702485845fee6b58946fa285014896db8330
+    local_file: S15.html
+    license: public record
+    notes: "The document page offered no file to download on 2026-11-14."
+  - id: S15b
+    title: "Rebuttal testimony and exhibits of the PSC Staff's witness"
+    publisher: "PSC Staff"
+    type: party-filing
+    filed: "2026-11-13"
+    url: "https://psc.ga.gov/search/facts-document/?documentId=229444"
+    status: retrieved
+    retrieved_at: "2026-11-14T01:35:22Z"
+    http_status: 200
+    sha256: 725552c1103c5b65389682a23cd8845c7b64e370bd07895a7d307360bec31553
+    local_file: S15b.html
+    license: public record
+    files:
+      - {"local_file": "S15b-1.pdf", "sha256": "4aee57ad6c9a662faf082b09efe0792164a2a7d110b03a72f701b51016d72c9f", "captured_at": "2026-11-14T01:35:23Z", "url": "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/229444/110366", "http_status": 200, "bytes": 4906766, "derived": "S15b-1.txt"}
+  - id: S16
+    title: "VoltaGrid's corrected Emergency Appeal from the Hearing Officer's November 4, 2026 order, and Motion for Stay"
+    publisher: "VoltaGrid, LLC"
+    type: party-filing
+    filed: "2026-11-12"
+    url: "https://psc.ga.gov/search/facts-document/?documentId=229419"
+    status: retrieved
+    retrieved_at: "2026-11-14T01:35:36Z"
+    http_status: 200
+    sha256: 9a7f3a14427aaae43b0ef1d07cc84cddefd6e4de5d5b2b67572fa2d9d8b6f684
+    local_file: S16.html
+    license: public record
+    files:
+      - {"local_file": "S16-1.zip", "sha256": "c01828d7f31a2fdd40e031c3b328213560276898806faedb8bff9655c54e45b2", "captured_at": "2026-11-14T01:35:37Z", "url": "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/229419/110339", "http_status": 200, "bytes": 18530952}
+      - {"local_file": "S16-1.d/Exhibit A - VoltaGrid Emergency Appeal.pdf", "sha256": "986439bd4b3b05b66ded65af1532cb5c53917470d96c38b8d7ac453ce71f468b", "bytes": 19134836, "member_of": "S16-1.zip", "derived": "S16-1.d/Exhibit A - VoltaGrid Emergency Appeal.pdf.txt"}
+      - {"local_file": "S16-1.d/corrected.voltagird.energy.cmte.request.11.09.26.FINAL.docx", "sha256": "e716f9f0bf96ea9bc5937bdc8348ba87b295c075ec151b2a8082c18d238f3189", "bytes": 25237, "member_of": "S16-1.zip"}
+  - id: S17
+    title: "Petitioners' Response to VoltaGrid's Emergency Appeal and Motion to Stay"
+    publisher: "Petitioners"
+    type: party-filing
+    filed: "2026-11-13"
+    url: "https://psc.ga.gov/search/facts-document/?documentId=229432"
+    status: retrieved
+    retrieved_at: "2026-11-14T01:35:39Z"
+    http_status: 200
+    sha256: 54697496a53d2e231df41c836eb2ee47ceeefd252bbc216d2095eaf1aecaa953
+    local_file: S17.html
+    license: public record
+    files:
+      - {"local_file": "S17-1.pdf", "sha256": "73f569bda52f48c6440f6e4205361bbf50e28a756e93d117f1c3d0b0d4b7cd1b", "captured_at": "2026-11-14T01:35:39Z", "url": "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/229432/110353", "http_status": 200, "bytes": 442360, "derived": "S17-1.txt"}
+  - id: S18
+    title: "Petition to Intervene of Georgia EMC"
+    publisher: "Georgia EMC"
+    type: party-filing
+    filed: "2026-09-23"
+    url: "https://psc.ga.gov/search/facts-document/?documentId=228949"
+    status: retrieved
+    retrieved_at: "2026-11-14T01:35:42Z"
+    http_status: 200
+    sha256: 82583242144965d9f0d4ffa44f71acc910f268071ebc8baf4f8c3b7f6936f488
+    local_file: S18.html
+    license: public record
+    files:
+      - {"local_file": "S18-1.zip", "sha256": "8769c204002c7ec6cb38a04a49fa4d9456354b0925185d290d980b2310868c75", "captured_at": "2026-11-14T01:35:43Z", "url": "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/228949/109861", "http_status": 200, "bytes": 850990}
+      - {"local_file": "S18-1.d/2026-09-23 B. Reed Transmittal Letter to S. Tanner (Docket No. 57243).docx", "sha256": "316c1c3c4aec3f665a216890dbd29ff9293e68b73c9815b3a508701e349450ff", "bytes": 807169, "member_of": "S18-1.zip"}
+      - {"local_file": "S18-1.d/2026-09-23 B. Reed Transmittal Letter to S. Tanner (Docket No. 57243).pdf", "sha256": "cc92e670235f226a43cab1622e6005af090b2c450a1ef49d7b2b67df6469421b", "bytes": 42408, "member_of": "S18-1.zip", "derived": "S18-1.d/2026-09-23 B. Reed Transmittal Letter to S. Tanner (Docket No. 57243).pdf.txt"}
+      - {"local_file": "S18-1.d/GEMC Petition to Intervene (Docket No. 57243).docx", "sha256": "8a3d5e1184425d124bb26571ffd3352888afd2b3953b4630153e21cf4fb80910", "bytes": 37843, "member_of": "S18-1.zip"}
+      - {"local_file": "S18-1.d/GEMC Petition to Intervene (Docket No. 57243).pdf", "sha256": "14eee04a0db52d3166e58902ebe74c330836cc6c75e09b8c7fba93926fab5b86", "bytes": 172287, "member_of": "S18-1.zip", "derived": "S18-1.d/GEMC Petition to Intervene (Docket No. 57243).pdf.txt"}
+  - id: S18b
+    title: "Georgia Power Company's Application for Leave to Intervene"
+    publisher: "Georgia Power Company"
+    type: party-filing
+    filed: "2026-09-22"
+    url: "https://psc.ga.gov/search/facts-document/?documentId=228938"
+    status: retrieved
+    retrieved_at: "2026-11-14T01:35:44Z"
+    http_status: 200
+    sha256: 46df90b3d4675bdd3e42dc3e241273099bc7f593fae4cd8c2c9b2c0ff0fa0b5a
+    local_file: S18b.html
+    license: public record
+    files:
+      - {"local_file": "S18b-1.zip", "sha256": "4a65f80b85cdeaa6e425f2e52b4b1cbf7fa02f260c9f81e6415f6c6ebd1b6e12", "captured_at": "2026-11-14T01:35:44Z", "url": "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/228938/109845", "http_status": 200, "bytes": 536878}
+      - {"local_file": "S18b-1.d/COS - GPC's Motion to Intervene - Sustainable Newton v. VoltaGrid.pdf", "sha256": "56629f483b8335b228885897c84036b8410c4da5599e7448b243b08efe8626c9", "bytes": 97941, "member_of": "S18b-1.zip", "derived": "S18b-1.d/COS - GPC's Motion to Intervene - Sustainable Newton v. VoltaGrid.pdf.txt"}
+      - {"local_file": "S18b-1.d/COS - Sustainable Newton v. VoltaGrid.docx", "sha256": "6a1be54f191973f70f2e3fb39b87cea7bfbc98769fe39ce5d0c4df98ce86878d", "bytes": 53511, "member_of": "S18b-1.zip"}
+      - {"local_file": "S18b-1.d/Georgia Power Company's Application for Leave to Intervene - Sustainable Newton v. VoltaGrid - Docket No. 57243.docx", "sha256": "11d206549a187d1738d6bce8e7919a90784aae6e574c120b3d1c4ae0f7389399", "bytes": 29166, "member_of": "S18b-1.zip"}
+      - {"local_file": "S18b-1.d/Georgia Power Company's Application for Leave to Intervene - Sustainable Newton v. VoltaGrid - Docket No. 57243.pdf", "sha256": "b91a8bf4bde54df83c10b1f44d96facbe461c931f236133661a033fa1a550f44", "bytes": 145345, "member_of": "S18b-1.zip", "derived": "S18b-1.d/Georgia Power Company's Application for Leave to Intervene - Sustainable Newton v. VoltaGrid - Docket No. 57243.pdf.txt"}
+      - {"local_file": "S18b-1.d/Transmittal Letter - Georgia Power's Application for Leave to Intervene - Dkt 53243.docx", "sha256": "7161998254b3020a42d444e0dc2916d6d7a1bcbd9e77995f424bb56456954830", "bytes": 168482, "member_of": "S18b-1.zip"}
+      - {"local_file": "S18b-1.d/Transmittal Letter - Georgia Power's Application for Leave to Intervene - Dkt 53243.pdf", "sha256": "1bfa2c0aacab806cd1397578805b4adab9accfc1ce07817eb35eec7dd3a7f034", "bytes": 107764, "member_of": "S18b-1.zip", "derived": "S18b-1.d/Transmittal Letter - Georgia Power's Application for Leave to Intervene - Dkt 53243.pdf.txt"}
+  - id: S20
+    title: "Appearing as a Public Witness Before The Georgia Public Service Commission"
+    publisher: Georgia Public Service Commission
+    type: primary-government
+    url: "https://psc.ga.gov/about-the-psc/consumer-corner/consumer-advisories/public-witness/"
+    status: retrieved
+    retrieved_at: "2026-11-14T01:40:33Z"
+    http_status: 200
+    sha256: 0af422ba86ac22ee8a2d7849fd8a98cd7770beffb989536ad49f2b7465cd3023
+    local_file: S20.html
+    derived: [S20.txt]
+    license: public record
+  - id: S21
+    title: "Public Comments"
+    publisher: Georgia Public Service Commission
+    type: primary-government
+    url: "https://psc.ga.gov/public-comments/"
+    status: retrieved
+    retrieved_at: "2026-11-14T01:40:34Z"
+    http_status: 200
+    sha256: 71329223b5effe77d82cebad472d1ea4f63bb3ce697d21bb19974f34919bc68d
+    local_file: S21.html
+    derived: [S21.txt]
+    license: public record
+  - id: S22
+    title: "Meet the Commission (commissioners list)"
+    publisher: Georgia Public Service Commission
+    type: primary-government
+    url: "https://psc.ga.gov/about-the-psc/commissioners/"
+    status: retrieved
+    retrieved_at: "2026-11-14T01:40:35Z"
+    http_status: 200
+    sha256: ef04a88813e58aabf958b0606d3a9678ec56db72fd458764f0916a8484fa487c
+    local_file: S22.html
+    derived: [S22.txt]
+    license: public record
+  - id: S23
+    title: "Commission Calendar (list view)"
+    publisher: Georgia Public Service Commission
+    type: primary-government
+    url: "https://psc.ga.gov/agendas-calendars/commission-calendar/"
+    status: retrieved
+    retrieved_at: "2026-11-14T01:40:37Z"
+    http_status: 200
+    sha256: f8089e99f245bb5b24ba5d2128b265c8b549630a8f494af79920440609551aba
+    local_file: S23.html
+    derived: [S23.txt]
+    license: public record

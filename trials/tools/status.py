@@ -46,6 +46,8 @@ def status(trial: Path) -> dict:
                          capture_output=True, text=True).stdout
     over = re.search(r"Sections over target: (\d+)", out)
     gate["readability"] = {"pass": bool(over) and over.group(1) == "0" and "WARN" not in out}
+    ok, last = run(str(TOOLS / "check_privacy.py"), str(trial))   # no street address or guarded name in tracked files
+    gate["privacy"] = {"pass": ok, "result": last}
     try:
         import yaml  # noqa: F401
         ok, last = run(str(TOOLS / "verify_hashes.py"), str(trial / "sources.yaml"))
