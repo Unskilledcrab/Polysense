@@ -117,8 +117,22 @@ Run Python tools with `uv run --with <deps> python3 trials/tools/<tool>.py …`.
 | Planted errors caught | 11 of 11 | 11 of 11 | 11 of 11 |
 | Clean sentences flagged | 0 of 20 | 6 of 20 | 2 of 20 |
 
-It costs about a tenth as much and missed no planted error, but it flags clean sentences the general subagent
-passes, so **it has not passed and must not be the only check on a sentence**. Both remaining false alarms were
+It costs about a tenth as much, but **it failed a larger test and must not be used for real checks**, alone or
+as a first pass (see below). On this small quiz it missed nothing and flagged clean sentences the general subagent
+passes. Both remaining false alarms were
 about who is speaking or which document a quote comes from. One run each; the general subagent's 0 of 20 was on
 the old quiz. The quiz sets are in `trials/004-psc-57243-plant-power-sale/verification/quiz/` and `quiz-pair3/`;
 a checker under test must not be given `answer-sheet.json`, `mutation-key.json` or `workspace.mutated.md`.
+
+**Larger test, same day** (37 planted errors and 60 clean sentences from Trials 001 to 003; 116,858 tokens). The
+owner had agreed to use the lean checker as a first pass, with the general checker judging only its flags, if it
+missed nothing. It missed 6 of 36: a wrong date in arithmetic (Dec 13 for Dec 14), a dropped condition, a narrowed
+scope, two loaded verbs ("claimed", "attacked") and "rejected" for "filed". It also flagged 7 of 60 clean
+sentences. The two-pass rule was not adopted.
+
+- One possible cause, not tested: the lean checker answers 30 sentences in about 35 seconds, with no visible
+  working. A general subagent takes longer over the same batch.
+- A fault in `judge.py quiz` showed up: when a planted sentence and a clean one start with the same 40 characters
+  on one line, the clean one is labelled planted too. It cost one false "miss" here (scored 30 of 37). Not fixed.
+- This quiz was rebuilt from round-1 pages against today's passages, so its "clean" sentences include some that
+  later revisions corrected. Its false-alarm count overstates the true rate; its misses are real.
