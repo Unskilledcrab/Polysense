@@ -105,17 +105,20 @@ Run Python tools with `uv run --with <deps> python3 trials/tools/<tool>.py …`.
   - `check_citations.py` now also checks passage IDs named inside a tag's note (`{analysis: P-007 sets …}`);
     an unknown ID is an error. The Trial 001 drafter found the gap. Self-test: a note naming P-999 failed; the
     three current pages still pass with 0 errors and 0 warnings.
-## A lean checker agent: not qualified yet (2026-11-14)
+## A lean checker agent: cheap, but not qualified (2026-11-14)
 
 `.claude/agents/pair-checker.md` defines a checker with one tool, Sonnet and the `judge.py` instructions
-(prompt pair-3). The aim is to cut the fixed cost of a general subagent, measured at about 68,000 tokens to check
-one sentence. It could not be loaded in the session that wrote it: new agent types load when a session starts.
+(prompt pair-3). New agent types load when a session starts, so it was tested from a separate session.
 
-**Do not use it for real checks until it passes this test**, in a new session:
+| | General subagent | Lean checker, old quiz | Lean checker, quiz with passage origins |
+|---|---|---|---|
+| Tokens, 1 sentence | about 68,000 | 6,363 | 7,426 |
+| Tokens, 30 sentences | not measured alone | 19,620 | 26,687 |
+| Planted errors caught | 11 of 11 | 11 of 11 | 11 of 11 |
+| Clean sentences flagged | 0 of 20 | 6 of 20 | 2 of 20 |
 
-1. Give it `trials/004-psc-57243-plant-power-sale/verification/quiz/batch-01.json` and `batch-02.json` (31
-   sentences). It must not be given `answer-sheet.json` or `mutation-key.json` in the same folder.
-2. Save its replies as answers files and run `judge.py score` on that folder. To pass it must match the general
-   subagent's result: 11 of 11 planted errors caught, 0 of 20 clean sentences flagged.
-3. Record the tokens for the one-sentence batch and the 30-sentence batch in `trials/spend.jsonl`, next to the
-   68,000 baseline, and add the tier to the verification protocol only if it passes.
+It costs about a tenth as much and missed no planted error, but it flags clean sentences the general subagent
+passes, so **it has not passed and must not be the only check on a sentence**. Both remaining false alarms were
+about who is speaking or which document a quote comes from. One run each; the general subagent's 0 of 20 was on
+the old quiz. The quiz sets are in `trials/004-psc-57243-plant-power-sale/verification/quiz/` and `quiz-pair3/`;
+a checker under test must not be given `answer-sheet.json`, `mutation-key.json` or `workspace.mutated.md`.
