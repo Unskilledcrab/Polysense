@@ -26,13 +26,16 @@ sys.path.insert(0, str(Path(__file__).parent))
 from check_citations import load_passages, norm  # noqa: E402
 from ledger import FLAG, OK, current, key_of, load_ledger, units, write  # noqa: E402
 
-PROMPT_VERSION = "pair-2"
+PROMPT_VERSION = "pair-3"   # pair-3 adds "from": where each passage comes from, so attribution can be checked
 PROMPT = """You are an independent fact-checker for a nonpartisan civic information project. You did not write these
 sentences. For each unit in the batch file, decide whether the sentence is supported by the passages given with it.
 Use only those passages: no outside knowledge, no other files, no web.
 
 Each unit has: "sentence" (one sentence from a civic explainer), "marker" (its citation or tag), "kind", and
-"passages" (the full text of every passage it cites or names). A unit that says something is absent, unknown or
+"passages" (the full text of every passage it cites or names). A unit may also have "from": for each passage, the
+document it was copied from (its title, date and who filed or published it) and the place in that document. Use
+"from" to judge who is speaking and when: words in a party's filing are that party's statement. "from" is a label,
+not evidence of anything else. A unit that says something is absent, unknown or
 undisputed may also have "related": other passages from the same archive that weren't cited. If a related passage
 shows the thing does exist or is disputed, or shows that a person's or party's position is narrower or more
 conditional than the sentence says, the sentence is "partial" or "questionable".
@@ -87,11 +90,44 @@ def related(u: dict, passages: dict[str, str], k: int = 4) -> list[str]:
     return [p for p in sorted(score, key=score.get, reverse=True)[:k] if score[p] > 0]
 
 
-def batch_units(rows: list[dict], passages: dict[str, str], raw: dict[str, str], always: bool = False) -> list[dict]:
+def origins(passages_path: Path) -> dict[str, str]:
+    """Where each passage comes from: the document's title, who filed it, and the place in it. Without this a
+    checker can't tell who is speaking, and flags every "Georgia Power says…" (Trial 004 had ten such flags)."""
+    titles: dict[str, str] = {}
+    try:
+        import yaml
+
+        def walk(x):
+            if isinstance(x, dict):
+                if re.fullmatch(r"S\d+[a-z]?", str(x.get("id", ""))):
+                    who = f" (filed or published by {x['publisher']})" if x.get("publisher") else ""
+                    when = f", {x['filed']}" if x.get("filed") else ""
+                    titles.setdefault(x["id"], f"{x.get('title', '')}{when}{who}")
+                for v in x.values():
+                    walk(v)
+            elif isinstance(x, list):
+                for v in x:
+                    walk(v)
+
+        walk(yaml.safe_load((passages_path.parent / "sources.yaml").read_text(encoding="utf-8")))
+    except (ImportError, FileNotFoundError):
+        pass
+    out = {}
+    for line in passages_path.read_text(encoding="utf-8").splitlines():
+        m = re.match(r"^###\s+(P-\d{3})\s+·\s+(\S+)\s+·\s+(.*)$", line)
+        if m:
+            out[m.group(1)] = f"{titles.get(m.group(2), m.group(2))}; {m.group(3).strip()}"
+    return out
+
+
+def batch_units(rows: list[dict], passages: dict[str, str], raw: dict[str, str], always: bool = False,
+                origin: dict[str, str] | None = None) -> list[dict]:
     out = []
     for u in rows:
         item = {"id": u["key"], "sentence": u["sentence"], "marker": u["marker"], "kind": u["kind"],
                 "passages": {p: raw.get(p, "(no such passage)") for p in u["passages"]}}
+        if origin:
+            item["from"] = {p: origin[p] for p in u["passages"] if p in origin}
         if always or ABSENT.search(u["sentence"]):
             item["related"] = {p: raw.get(p, "") for p in related(u, passages)}
         out.append(item)
@@ -136,9 +172,11 @@ def emit(trial: Path, out: Path, size: int, everything: bool) -> None:
     store = load_ledger(trial)
     rows = current(trial)
     write(trial, rows, store)
-    todo = [u for u in rows if everything or not store.get(u["key"], {}).get("verdict")]
+    again = "--flagged" in sys.argv   # also re-check flagged sentences (after a prompt or input change)
+    todo = [u for u in rows if everything or not store.get(u["key"], {}).get("verdict")
+            or (again and store.get(u["key"], {}).get("verdict") in FLAG)]
     write_batches(out, batch_units(todo, load_passages(trial / "passages.md"), raw_passages(trial / "passages.md"),
-                                   "--related-all" in sys.argv), size)
+                                   "--related-all" in sys.argv, origins(trial / "passages.md")), size)
 
 
 def grounded(span: str, ids: list[str], passages: dict[str, str]) -> bool:

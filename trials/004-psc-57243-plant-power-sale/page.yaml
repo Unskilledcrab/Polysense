@@ -61,8 +61,8 @@ terms:                             # each term and the phrase that defines it at
   EPD: "Environmental Protection Division"
 visuals:                           # pictures on the Summary tab; every note is cited or tagged like a page sentence
   numbers:
-    - {value: "90 MW", note: "The plant's top output, in a state air-permit review. [P-040]"}
-    - {value: "33", note: "Natural gas engines at the plant, in the same review. [P-040]"}
+    - {value: "90 MW", note: "The plant's maximum power output, from an exhibit to the petition. [P-040]"}
+    - {value: "33", note: "Natural gas engines in the plant, from the same exhibit. [P-040]"}
   seats:
     total: 5
     note: "The PSC's five commissioners make the final decision. [P-020, P-085]"

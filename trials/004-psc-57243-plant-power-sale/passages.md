@@ -33,11 +33,11 @@ span of a hashed snapshot listed in [sources.yaml](sources.yaml).
 ### P-010 · S01b · filing list, Nov 13, 2026 row (document 229432)
 > 2026-11-13 | document 229432 | Petitioners' Response to VoltaGrid's Emergency Appeal and Motion to Stay
 
-### P-011 · S01b · filing list, Nov 12, 2026 row (document 229424), up to the witness's name
-> 2026-11-12 | document 229424 | Direct Testimony of
+### P-011 · S01b · filing list, Nov 12, 2026 row (document 229424)
+> 2026-11-12 | document 229424 | Direct Testimony of Robert L. Trokey
 
-### P-012 · S01b · filing list, Nov 13, 2026 row (document 229444), up to the witness's name
-> 2026-11-13 | document 229444 | Rebuttal Testimony and Exhibits of
+### P-012 · S01b · filing list, Nov 13, 2026 row (document 229444)
+> 2026-11-13 | document 229444 | Rebuttal Testimony and Exhibits of Robert L. Trokey
 
 ### P-014 · S01b · filing list, Oct 9, 2026 row (document 229089), up to the witness's name
 > 2026-10-09 | document 229089 | Direct Testimony of
@@ -265,3 +265,6 @@ span of a hashed snapshot listed in [sources.yaml](sources.yaml).
 
 ### P-093 · S07 · affidavit p.3, para. 13
 > VoltaGrid is not engaged in negotiations with any person or entity, other than Serverfarm at the Subject Property, to provide power services in Georgia. VoltaGrid is not soliciting, marketing to, or otherwise pursuing any additional customer or business in Georgia.
+
+### P-094 · S11 · p.1, Introduction (the sentence naming the petitioners is left out)
+> In the Motion, VoltaGrid seeks dismissal of the Petition on two independent bases: (1) Petitioners are not “interested parties” as required by O.C.G.A. 46-3-8(c) and (2) the Commission lacks jurisdiction over VoltaGrid. Georgia Power’s response is limited to the second contention, which provides no basis for dismissal.

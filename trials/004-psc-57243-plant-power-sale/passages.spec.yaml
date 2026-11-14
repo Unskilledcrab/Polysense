@@ -64,15 +64,15 @@ passages:
   - id: P-011
     source: S01b
     file: "S01b.list.txt"
-    locator: "filing list, Nov 12, 2026 row (document 229424), up to the witness's name"
+    locator: "filing list, Nov 12, 2026 row (document 229424)"
     start: "2026-11-12 | document 229424"
-    end: "229424 | Direct Testimony of"
+    end: "229424 | Direct Testimony of Robert L. Trokey"
   - id: P-012
     source: S01b
     file: "S01b.list.txt"
-    locator: "filing list, Nov 13, 2026 row (document 229444), up to the witness's name"
+    locator: "filing list, Nov 13, 2026 row (document 229444)"
     start: "2026-11-13 | document 229444"
-    end: "Rebuttal Testimony and Exhibits of"
+    end: "Rebuttal Testimony and Exhibits of Robert L. Trokey"
   - id: P-014
     source: S01b
     file: "S01b.list.txt"
@@ -528,3 +528,10 @@ passages:
     locator: "affidavit p.3, para. 13"
     start: "VoltaGrid is not engaged in negotiations with any person or entity"
     end: "additional customer or business in Georgia."
+  # Added after the pair check: Georgia Power's own statement of which of VoltaGrid's two grounds it answers.
+  - id: P-094
+    source: S11
+    file: "S11-1.d/Georgia Power's Response to VoltaGrid's Motion to Dismiss.pdf.txt"
+    locator: "p.1, Introduction (the sentence naming the petitioners is left out)"
+    start: "In the Motion, VoltaGrid seeks dismissal"
+    end: "contention, which provides no basis for dismissal."
