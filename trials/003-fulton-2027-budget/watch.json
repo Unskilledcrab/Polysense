@@ -34,22 +34,17 @@
    "url": "https://webapi.legistar.com/v1/fulton/events?$filter=EventDate+ge+datetime'2026-10-15'+and+EventDate+le+datetime'2026-11-20'",
    "last_checked": "2026-11-14T01:22:34Z",
    "checks": 3,
-   "text_sha256": "1c4fad0542cad496feeefc191af6427b7e6a697a351edd4622043270a6411669",
-   "baseline_at": "2026-11-08T09:22:06Z",
-   "baseline": "our saved copy",
-   "state": "changed",
+   "text_sha256": "99463d705e15a81e41e703389fccd129ff6b7ae3092445aed77f220f26592893",
+   "baseline_at": "2026-11-14T01:49:13Z",
+   "baseline": "accepted after a revision",
+   "state": "unchanged",
    "http_status": 200,
    "rule": {
     "ignore": null,
     "only": null,
     "norm": 3
    },
-   "changes": 1,
-   "new_text_sha256": "99463d705e15a81e41e703389fccd129ff6b7ae3092445aed77f220f26592893",
-   "diff": {
-    "added": 1,
-    "removed": 0
-   }
+   "changes": 1
   }
  },
  "checked": "2026-11-14T01:22:34Z"

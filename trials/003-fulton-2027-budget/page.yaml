@@ -43,6 +43,7 @@ short_labels:                      # source chip labels: one or two words, so a 
   S05: "Nov 4 agenda"
   S05b: "Oct 21 minutes"
   S05c: "Nov 4 minutes"
+  S05e: "Nov 18 agenda"
   S06: "2026 schedule"
   S07: "2027 calendar"
   S07b: "2027 schedule"

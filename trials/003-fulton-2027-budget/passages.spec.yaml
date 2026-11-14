@@ -264,3 +264,8 @@ passages:
      start: "The Fulton County Board of Commissioners voted 4-1", end: "absent for the vote.",
      fix: [[" , with", ", with"]],
      note: "Removed a space before a comma left by a link boundary in the HTML. Only the sentence we cite is kept (copyrighted post)."}
+  # --- S05e: Board agenda for 2026-11-18, found by desk.py watch on 2026-11-14 --------------------------------------
+  - {id: P-104, source: S05e, file: S05e.txt, locator: "agenda, p.1: meeting, date, time and place",
+     start: "FULTON COUNTY BOARD OF COMMISSIONERS", end: "Atlanta, Georgia 30303"}
+  - {id: P-105, source: S05e, file: S05e.txt, locator: "agenda, p.9: item 26-0803",
+     start: "26-0803 Finance", end: "Proposed Operating Budget."}

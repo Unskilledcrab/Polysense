@@ -1,6 +1,6 @@
 # Fulton County's 2027 budget
 
-Status: Proposal due by Nov 15, 2026; not on the county's budget page on Nov 8 · Adoption due by the Board's second regular meeting in January 2027 (expected Jan 20) · Trial 003, revision 5.4: passed checks (round 5); every later change re-checked sentence by sentence; see status.json <!-- nocheck -->
+Status: Proposal due by Nov 15, 2026; not on the county's budget page on Nov 8 · Adoption due by the Board's second regular meeting in January 2027 (expected Jan 20) · Trial 003, revision 5.5: passed checks (round 5); every later change re-checked sentence by sentence; see status.json <!-- nocheck -->
 How this page was made: an AI agent drafted it from sources archived on Nov 8, 2026, revised it after three rounds of independent checks, rewrote it for readers new to the subject, revised it after a fourth round, made accuracy fixes after passing a fifth, then made final fixes after two targeted re-checks. Every sentence is cited or labeled. <!-- nocheck -->
 
 ## 30-second version
@@ -68,6 +68,7 @@ How this page was made: an AI agent drafted it from sources archived on Nov 8, 2
 
 - **By Nov 15:** The Budget Commission must submit its proposed budget to the Board. [P-005] Nov 15, 2026 falls on a Sunday. {computed: Nov 4, 2026 is a Wednesday (P-039), and Nov 15 is 11 days later} The budget section of Fulton County's code of laws, Section 2-261, doesn't say what happens when the deadline falls on a weekend. {analysis: its full text is in P-005 and P-006; we did not check other sections or state law} In the 2026 cycle, the county manager submitted the proposal on Nov 15, 2025, and it was presented on Nov 19. [P-047, P-046] Nov 15, 2025 was a Saturday. {computed: Nov 15, 2025 is 365 days before Sunday, Nov 15, 2026, so a Saturday} A copy goes to the Clerk to the Commission the day it is submitted. [P-006]
 - **Nov 18, Dec 2 and Dec 16, 10 a.m.:** The Board holds regular meetings in the Assembly Hall of the Fulton County Government Center, 141 Pryor Street SW, Atlanta. [P-039]
+- **Nov 18, 10 a.m.:** The Board's agenda for this meeting lists a "Presentation of the FY2027 Proposed Operating Budget" under the county's Finance department. [P-105, P-104] The agenda gives the item's title only, with no budget figures. {editorial: scoped to the agenda document (source S05e), fetched Nov 14, 2026}
 - **Public hearing (no date on the county's notices page yet):** The county's 2026 budget resolution says state law required a public hearing before that budget was adopted. [P-047, P-046] The 2026 cycle's hearing was held at a meeting on Dec 3, 2025. [P-047, P-046] On Nov 8, the newest notice on the county's Public Notices page was for the commission's October hearings. {analysis: P-042, captured Nov 8, 2026} Notices also appear in the county's legal newspaper and are posted at the Government Center. [P-042] Our sources don't name the newspaper, and we didn't check the newspaper or the posted notices. {editorial: scope note}
 - **Expected by Jan 20, 2027 (deadline: the second regular meeting in January):** The Board must adopt the budget "no later than the second regular meeting in January." [P-005, P-041] The proposed 2027 schedule puts that meeting on Jan 20, 2027, after a first meeting on Jan 6. [P-041] The county's records say the 2027 calendar was approved with the consent agenda. [P-040] A consent agenda is a group of routine items passed in one vote. [P-085] But the calendar's record still shows the status "Agenda Ready," and the posted schedule is labeled "Proposed." [P-040, P-041] Those labels suggest the schedule may not be final. {analysis: P-040 and P-041} So treat Jan 20 as the expected date until the Clerk to the Commission posts a final schedule. {editorial} The Board may vote earlier, since the deadline is "no later than." [P-005] In the 2026 cycle, the Board adopted its budget on Jan 21, 2026. [P-046]
 
@@ -259,6 +260,7 @@ Documented · Side: asks for more justice funding · Claim type: factual, with a
 | S03, S03b, S03c Legistar record, history and roll call for 26-0471 | Primary · government | 2026-11-08 | 5a135f15… | Who sits on the Budget Commission, and the vote | <!-- nocheck -->
 | S04, S04b, S04c, S04d, S04e, S04f Resolution 26-0729: record, history, text and two roll calls | Primary · government | 2026-11-08 | 5617077b… | The proposal to remove the 5% limit, its reasons, and the votes on it | <!-- nocheck -->
 | S05 Board agenda, Nov 4, 2026 | Primary · government | 2026-11-08 | bfb8173d… | Board members, public comment rules, budget items | <!-- nocheck -->
+| S05e Board agenda, Nov 18, 2026 | Primary · government | 2026-11-14 | aafd3019… | That the proposed 2027 budget is on the Nov 18 agenda | <!-- nocheck -->
 | S05b, S05c Clerk's minutes ("post agenda minutes"), Oct 21 and Nov 4, 2026 | Primary · government | 2026-11-08 | 1701ad06… | Motions and votes on Resolution 26-0729, and the budget updates; they record no reasons | <!-- nocheck -->
 | S06 Board meeting schedule, 2026 | Primary · government | 2026-11-08 | 39ff5525… | Dates of the remaining 2026 meetings | <!-- nocheck -->
 | S07, S07b 2027 meeting calendar: record and proposed schedule | Primary · government | 2026-11-08 | 28c48017… | The expected January 2027 deadline | <!-- nocheck -->
@@ -273,3 +275,7 @@ Documented · Side: asks for more justice funding · Claim type: factual, with a
 ### Notes on the minutes and meeting video
 
 The minutes of the Oct 21 and Nov 4 meetings, kept by the Clerk to the Commission, record the motions and votes on Resolution 26-0729. [P-096, P-088, P-090, P-092, P-097] They give no reasons. {analysis: P-088 and P-092 are the full entries, and the full minutes are archived (sources.yaml, S05b and S05c)} Both meetings also took up an "Update on the Budget Committee and the budget approval process," which the minutes list only as discussed. [P-089, P-093] The Board approved the Oct 21 minutes on Nov 4; the Nov 4 minutes are marked "tentative," meaning not yet approved, until a vote set for Nov 18. [P-091, P-090] The county's records link video of both meetings. [P-025] We did not review the video, so reasons may have been given there. {editorial: scope note; see sources.yaml, S16}
+
+## What changed
+
+- **Nov 14, 2026:** We added the Board's Nov 18 agenda, which lists a presentation of the proposed 2027 budget. {editorial: page history}

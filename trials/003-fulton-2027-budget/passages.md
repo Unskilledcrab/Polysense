@@ -346,3 +346,9 @@ span of a hashed snapshot listed in [sources.yaml](sources.yaml), or of a text f
 > The Fulton County Board of Commissioners voted 4-1 to reestablish a Budget Commission, with Commissioner Marvin Arrington Jr. abstaining and Commissioner Dana Barrett absent for the vote.
 
 *Note: Removed a space before a comma left by a link boundary in the HTML. Only the sentence we cite is kept (copyrighted post).*
+
+### P-104 · S05e · agenda, p.1: meeting, date, time and place
+> FULTON COUNTY BOARD OF COMMISSIONERS SECOND REGULAR MEETING November 18, 2026 10:00 AM Fulton County Government Center Assembly Hall 141 Pryor Street SW Atlanta, Georgia 30303
+
+### P-105 · S05e · agenda, p.9: item 26-0803
+> 26-0803 Finance Presentation of the FY2027 Proposed Operating Budget.

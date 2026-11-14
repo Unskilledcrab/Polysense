@@ -133,6 +133,10 @@ sources:
      url: "https://webapi.legistar.com/v1/fulton/events?$filter=EventDate+ge+datetime'2026-10-15'+and+EventDate+le+datetime'2026-11-20'", status: retrieved, retrieved_at: "2026-11-08T09:22:06Z", http_status: 200, content_type: application/json,
      sha256: 73d650e9190687a7475af0210cc3a6b7c13b3f6a89195b1383a913cf2a74bbc1, local_file: S05d.json, license: public record, settles: [D12],
      notes: "Two events: 6398 (2026-10-21, EventMinutesStatusName 'Final') and 6399 (2026-11-04, 'Post Agenda'). EventMinutesFile is null for both: no separate minutes document was posted when checked. No 2026-11-18 event was listed yet. The per-item MinutesNote fields for 26-0729, 26-0735 and 26-0766 were also empty (eventitems?MinutesNote=1, checked the same minute; not archived because empty)."}
+  - {id: S05e, title: "Board of Commissioners agenda, Second Regular Meeting, 2026-11-18", publisher: Fulton County Clerk to the Commission, type: primary-government,
+     url: "https://fulton.legistar1.com/fulton/meetings/2026/11/6400_A_Board_of_Commissioners_26-11-18_Second_Regular_Meeting.pdf", status: retrieved, retrieved_at: "2026-11-14T01:48:03Z", http_status: 200, content_type: application/pdf,
+     sha256: aafd3019c6d681326448dd732b2d255407585cc2a9b95967c3c410b077b7f0f4, local_file: S05e.pdf, derived: [S05e.txt], license: public record,
+     notes: "Found by desk.py watch on 2026-11-14: the Legistar events list (S05d) gained an agenda file for the Nov 18 meeting. Item 26-0803 (Finance) is 'Presentation of the FY2027 Proposed Operating Budget.' The agenda lists the item by title only."}
   - {id: S06, title: "Board of Commissioners 2026 meeting schedule", publisher: Fulton County Clerk to the Commission, type: primary-government,
      url: "https://www.fultoncountyga.gov/-/media/Commissioners/2026/2026-BOC-SCHEDULE_eng-02.pdf", status: retrieved, retrieved_at: "2026-11-08T07:06:50Z", http_status: 200, content_type: application/pdf,
      sha256: 39ff5525e17016d2e414065f50953b7c7fe62e2ee4c316844612c4420d92c9db, local_file: S06.pdf, derived: [S06.txt], license: public record}
