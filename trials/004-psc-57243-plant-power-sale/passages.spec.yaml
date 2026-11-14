@@ -1,0 +1,530 @@
+title: "Trial 004 (PSC Docket 57243)"
+# P-013, P-045, P-071, P-080, P-082 and P-083 were drafted but not cited, and were left out; the numbering has gaps.
+passages:
+  - id: P-001
+    source: S01
+    file: "S01.txt"
+    locator: "docket page, summary"
+    start: "Docket #57243"
+    end: "Status: Open"
+  - id: P-002
+    source: S01b
+    file: "S01b.list.txt"
+    locator: "filing list, Jul 13, 2026 row"
+    start: "2026-07-13 | document 227215"
+    end: "Enforcement Against Voltagrid"
+  - id: P-003
+    source: S01b
+    file: "S01b.list.txt"
+    locator: "filing list, Aug 24, 2026 row"
+    start: "2026-08-24 | document 227960"
+    end: "Assignment to Hearing Officer Order"
+  - id: P-004
+    source: S01b
+    file: "S01b.list.txt"
+    locator: "filing list, Sep 16, 2026 row"
+    start: "2026-09-16 | document 228806"
+    end: "Brief in Support (w/Exhibit)"
+  - id: P-005
+    source: S01b
+    file: "S01b.list.txt"
+    locator: "filing list, Oct 16, 2026 rows"
+    start: "2026-10-16 | document 229167"
+    end: "Georgia Power Company's Response to VoltaGrid's Motion to Dismiss"
+  - id: P-006
+    source: S01b
+    file: "S01b.list.txt"
+    locator: "filing list, Oct 26, 2026 row"
+    start: "2026-10-26 | document 229266"
+    end: "Reply Brief in support of its Motion to Dismiss"
+  - id: P-007
+    source: S01b
+    file: "S01b.list.txt"
+    locator: "filing list, Nov 4, 2026 row"
+    start: "2026-11-04 | document 229350"
+    end: "ACCESS TO TRADE SECRET INFORMATION"
+  - id: P-008
+    source: S01b
+    file: "S01b.list.txt"
+    locator: "filing list, Nov 9, 2026 row"
+    start: "2026-11-09 | document 229399"
+    end: "Order and Motion for Stay"
+  - id: P-009
+    source: S01b
+    file: "S01b.list.txt"
+    locator: "filing list, Nov 12, 2026 row (document 229426)"
+    start: "2026-11-12 | document 229426"
+    end: "Staying Hearing Officer's Order"
+  - id: P-010
+    source: S01b
+    file: "S01b.list.txt"
+    locator: "filing list, Nov 13, 2026 row (document 229432)"
+    start: "2026-11-13 | document 229432"
+    end: "Emergency Appeal and Motion to Stay"
+  - id: P-011
+    source: S01b
+    file: "S01b.list.txt"
+    locator: "filing list, Nov 12, 2026 row (document 229424), up to the witness's name"
+    start: "2026-11-12 | document 229424"
+    end: "229424 | Direct Testimony of"
+  - id: P-012
+    source: S01b
+    file: "S01b.list.txt"
+    locator: "filing list, Nov 13, 2026 row (document 229444), up to the witness's name"
+    start: "2026-11-13 | document 229444"
+    end: "Rebuttal Testimony and Exhibits of"
+  - id: P-014
+    source: S01b
+    file: "S01b.list.txt"
+    locator: "filing list, Oct 9, 2026 row (document 229089), up to the witness's name"
+    start: "2026-10-09 | document 229089"
+    end: "229089 | Direct Testimony of"
+  - id: P-015
+    source: S02
+    file: "S02-1.txt"
+    locator: "p.2, schedule"
+    start: "November 24, 2026 The Parties are to confer"
+    end: "used at hearing as exhibits."
+  - id: P-016
+    source: S02
+    file: "S02-1.txt"
+    locator: "p.2, schedule"
+    start: "December 2, 2026 Objections"
+    end: "exhibits must be filed."
+  - id: P-017
+    source: S02
+    file: "S02-1.txt"
+    locator: "p.2, schedule"
+    start: "December 4, 2026 Pre-Hearing Conference"
+    end: "offered into evidence."
+  - id: P-018
+    source: S02
+    file: "S02-1.txt"
+    locator: "p.2, schedule"
+    start: "December 9, 2026 The Hearing Officer, beginning at 10:00AM"
+    end: "a hearing in this proceeding."
+  - id: P-019
+    source: S02
+    file: "S02-1.txt"
+    locator: "p.3"
+    start: "Public notice of this hearing shall be given"
+    end: "Commission website."
+  - id: P-020
+    source: S02b
+    file: "S02b-1.txt"
+    locator: "p.3, section 4"
+    start: "Pursuant to O.C.G.A. § 46-2-58, the Commission has appointed"
+    end: "for adoption by the Commission."
+  - id: P-021
+    source: S02b
+    file: "S02b-1.txt"
+    locator: "p.5, Matter at Issue"
+    start: "The following matters are at issue in this proceeding"
+    end: "matters at issue is necessary."
+  - id: P-022
+    source: S03
+    file: "S03-1.txt"
+    locator: "p.2"
+    start: "In addition to assigning the matter to a Hearing Officer"
+    end: "action the Commission should take."
+  - id: P-023
+    source: S03
+    file: "S03-1.txt"
+    locator: "p.3"
+    start: "For these reasons, VoltaGrid"
+    end: "is DENIED."
+  - id: P-024
+    source: S03b
+    file: "S03b-1.txt"
+    locator: "p.6"
+    start: "IT IS HEREBY ORDERED that counsel for Petitioners"
+    end: "November 12, 2026;"
+  - id: P-025
+    source: S03b
+    file: "S03b-1.txt"
+    locator: "p.4"
+    start: "The first is whether VoltaGrid is an"
+    end: "nothing in this Order decides it."
+  - id: P-026
+    source: S03b
+    file: "S03b-1.txt"
+    locator: "p.3"
+    start: "The Hearing Officer does not dispute that these"
+    end: "to the direction of the Commission."
+  - id: P-027
+    source: S05
+    file: "S05-1.d/2026.07.13 VoltaGrid Complaint.pdf.txt"
+    locator: "petition p.1, Introduction"
+    start: "VoltaGrid, LLC, is in the advanced stages"
+    end: "neighboring data center, Serverfarm."
+  - id: P-028
+    source: S05
+    file: "S05-1.d/2026.07.13 VoltaGrid Complaint.pdf.txt"
+    locator: "petition p.1, Introduction"
+    start: "On July 2, 2026, the Environmental Protection Division issued"
+    end: "before EPD issued an air permit."
+  - id: P-029
+    source: S05
+    file: "S05-1.d/2026.07.13 VoltaGrid Complaint.pdf.txt"
+    locator: "petition p.3, para. 2"
+    start: "Sustainable Newton is a grassroots"
+    end: "headquartered in Newton County, Georgia."
+  - id: P-030
+    source: S05
+    file: "S05-1.d/2026.07.13 VoltaGrid Complaint.pdf.txt"
+    locator: "petition p.4, para. 4 (part of a sentence; the name and road are left out)"
+    start: "approximately two miles from VoltaGrid."
+    end: "two miles from VoltaGrid."
+  - id: P-031
+    source: S05
+    file: "S05-1.d/2026.07.13 VoltaGrid Complaint.pdf.txt"
+    locator: "petition p.4, para. 5 (part of a sentence; the name and road are left out)"
+    start: "in Newton County, less than 5 miles from VoltaGrid."
+    end: "5 miles from VoltaGrid."
+  - id: P-032
+    source: S05
+    file: "S05-1.d/2026.07.13 VoltaGrid Complaint.pdf.txt"
+    locator: "petition p.5, para. 6"
+    start: "All Petitioners are interested parties in preventing"
+    end: "equal enforcement of the Territorial Act."
+  - id: P-033
+    source: S05
+    file: "S05-1.d/2026.07.13 VoltaGrid Complaint.pdf.txt"
+    locator: "petition p.11, para. 25"
+    start: "VoltaGrid plans to furnish electric power to Serverfarm, a large retail customer."
+    end: "from furnishing retail electric service to Serverfarm."
+  - id: P-034
+    source: S05
+    file: "S05-1.d/2026.07.13 VoltaGrid Complaint.pdf.txt"
+    locator: "petition p.12, para. 26"
+    start: "VoltaGrid is a cogeneration facility within the meaning"
+    end: "sale of electric energy to another person."
+  - id: P-035
+    source: S05
+    file: "S05-1.d/2026.07.13 VoltaGrid Complaint.pdf.txt"
+    locator: "petition p.12, Prayer for Relief"
+    start: "(a) Determine and declare whether VoltaGrid"
+    end: "violation of the Territorial Act or Cogeneration Act."
+  - id: P-036
+    source: S05
+    file: "S05-1.d/2026.07.13 VoltaGrid Complaint.pdf.txt"
+    locator: "petition pp.10-11, para. 24"
+    start: "The Cogeneration and Distributed Generation Act of 2001 provides that"
+    end: "to an electric supplier."
+    fix: [["electric 10 energy", "electric energy"]]
+    note: "A page number (10) fell inside the sentence where the PDF page breaks; removed."
+  - id: P-037
+    source: S05
+    file: "S05-1.d/2026.07.13 VoltaGrid Complaint.pdf.txt"
+    locator: "petition p.2, para. 1"
+    start: "The Territorial Act provides that upon"
+    end: "by appropriate orders."
+  - id: P-038
+    source: S05
+    file: "S05-1.d/2026.07.13 VoltaGrid Complaint.pdf.txt"
+    locator: "petition p.9, para. 20"
+    start: "Serverfarm and VoltaGrid are separate companies"
+    end: "operations;"
+  - id: P-039
+    source: S05
+    file: "S05-1.d/Ex. 1 - Notice of Violation to VoltaGrid from EPD.pdf.txt"
+    locator: "Exhibit 1, p.1"
+    start: "Upon receiving this letter, the Company must stop"
+    end: "operation of the Facility."
+  - id: P-040
+    source: S05
+    file: "S05-1.d/Ex. 5 - VoltaGrid EPD Narrative.pdf.txt"
+    locator: "Exhibit 5, p.1"
+    start: "VoltaGrid LLC proposes the construction and operation"
+    end: "8,760 hours per year."
+  - id: P-041
+    source: S07
+    file: "S07-1.d/VG.Brief in Supp. of VoltaGrid's Mot. to Dismiss_For Filing.pdf.txt"
+    locator: "brief p.2"
+    start: "As to the merits, VoltaGrid is not an"
+    end: "jurisdiction."
+  - id: P-042
+    source: S07
+    file: "S07-1.d/VG.Brief in Supp. of VoltaGrid's Mot. to Dismiss_For Filing.pdf.txt"
+    locator: "brief p.8"
+    start: "Because the only rights at stake under the Territorial Act belong to Georgia Power"
+    end: "under O.C.G.A. § 46-3-13."
+  - id: P-043
+    source: S07
+    file: "S07-1.d/VG.Brief in Supp. of VoltaGrid's Mot. to Dismiss_For Filing.pdf.txt"
+    locator: "brief p.22"
+    start: "That balance does not apply in any sense to"
+    end: "sophisticated counterparty."
+  - id: P-044
+    source: S07
+    file: "S07-1.d/VG.Attachment 1 - Affidavit of Chris Atchley (executed).pdf.txt"
+    locator: "affidavit p.2, para. 2"
+    start: "I serve as Executive Vice President of VoltaGrid"
+    end: "since October 2025."
+  - id: P-046
+    source: S07
+    file: "S07-1.d/VG.Attachment 1 - Affidavit of Chris Atchley (executed).pdf.txt"
+    locator: "affidavit p.3, paras. 9-10"
+    start: "Under the Serverfarm Agreement, Serverfarm supplies natural gas"
+    end: "to Serverfarm or to anyone else."
+  - id: P-047
+    source: S08
+    file: "S08-1.txt"
+    locator: "p.15"
+    start: "The Georgia Constitution creates the Commission"
+    end: "regulation of utilities,"
+  - id: P-048
+    source: S08
+    file: "S08-1.txt"
+    locator: "p.12"
+    start: "If Respondent’s interpretation is accepted"
+    end: "limitations on monopolistic behavior."
+  - id: P-049
+    source: S08
+    file: "S08-1.txt"
+    locator: "p.17"
+    start: "Under this interpretation, VoltaGrid is in violation"
+    end: "qualifies as an electric supplier."
+  - id: P-050
+    source: S09
+    file: "S09-1.txt"
+    locator: "p.2"
+    start: "The Petitioners contend that the provision of such electrical service"
+    end: "territorial boundaries established by the Commission."
+  - id: P-051
+    source: S09
+    file: "S09-1.txt"
+    locator: "p.3"
+    start: "Dismissing the Petition or the Petitioners from this docket"
+    end: "subject to the Territorial Act."
+  - id: P-052
+    source: S09
+    file: "S09-1.txt"
+    locator: "p.4"
+    start: "Wherefore, Staff requests that the Hearing Officer reserve"
+    end: "This 16th day of October, 2026."
+  - id: P-053
+    source: S10
+    file: "S10-1.d/Georgia EMC's Response in Opposition to VoltaGrid's Motion to Dismiss.pdf.txt"
+    locator: "p.3"
+    start: "VoltaGrid conflates the Commission"
+    end: "enforce the provisions of the Territorial Act."
+    end_occurrence: 1
+  - id: P-054
+    source: S10
+    file: "S10-1.d/Georgia EMC's Response in Opposition to VoltaGrid's Motion to Dismiss.pdf.txt"
+    locator: "p.1, footnote 1"
+    start: "Georgia EMC takes no position herein"
+    end: "standing argument."
+  - id: P-055
+    source: S10
+    file: "S10-1.d/Georgia EMC's Response in Opposition to VoltaGrid's Motion to Dismiss.pdf.txt"
+    locator: "p.8"
+    start: "The same is true if an electric supplier makes investments"
+    end: "segment of the public."
+  - id: P-056
+    source: S11
+    file: "S11-1.d/Georgia Power's Response to VoltaGrid's Motion to Dismiss.pdf.txt"
+    locator: "p.1"
+    start: "Georgia Power’s response is limited"
+    end: "no basis for dismissal."
+  - id: P-057
+    source: S11
+    file: "S11-1.d/Georgia Power's Response to VoltaGrid's Motion to Dismiss.pdf.txt"
+    locator: "p.11"
+    start: "Under VoltaGrid’s proposed rule, however, this orderly service"
+    end: "only one customer in the state."
+  - id: P-058
+    source: S11
+    file: "S11-1.d/Georgia Power's Response to VoltaGrid's Motion to Dismiss.pdf.txt"
+    locator: "p.12, Conclusion"
+    start: "VoltaGrid’s service of electricity to Serverfarm is a public service"
+    end: "proliferate across the state."
+  - id: P-059
+    source: S11
+    file: "S11-1.d/Georgia Power's Response to VoltaGrid's Motion to Dismiss.pdf.txt"
+    locator: "p.11"
+    start: "The Territorial Act divides the state of Georgia into assigned and unassigned territories"
+    end: "lawfully constructed lines."
+  - id: P-060
+    source: S18b
+    file: "S18b-1.d/Georgia Power Company's Application for Leave to Intervene - Sustainable Newton v. VoltaGrid - Docket No. 57243.pdf.txt"
+    locator: "p.2, para. 2"
+    start: "Georgia Power is a vertically integrated electric utility"
+    end: "service territory in Georgia."
+  - id: P-061
+    source: S18b
+    file: "S18b-1.d/Georgia Power Company's Application for Leave to Intervene - Sustainable Newton v. VoltaGrid - Docket No. 57243.pdf.txt"
+    locator: "p.2, para. 3"
+    start: "Respondent seeks to provide bridge power"
+    end: "designated under the Territorial Act."
+  - id: P-062
+    source: S18
+    file: "S18-1.d/GEMC Petition to Intervene (Docket No. 57243).pdf.txt"
+    locator: "p.1, para. 1"
+    start: "Georgia EMC is a statewide trade association"
+    end: "approximately 5 million Georgians."
+  - id: P-063
+    source: S18
+    file: "S18-1.d/GEMC Petition to Intervene (Docket No. 57243).pdf.txt"
+    locator: "pp.1-2, para. 2"
+    start: "The interests of Georgia EMC and its member EMCs may be substantially affected"
+    end: "in this proceeding."
+  - id: P-064
+    source: S12
+    file: "S12-1.d/Vg.M.Dismiss.Reply.Brief.Final.docx.txt"
+    locator: "reply brief, part II.B"
+    start: "An on-site generator privately serving the owner of the site"
+    end: "authorized to serve Serverfarm."
+  - id: P-065
+    source: S12
+    file: "S12-1.d/Vg.M.Dismiss.Reply.Brief.Final.docx.txt"
+    locator: "reply brief, part I"
+    start: "This is demonstrably false, given that Petitioners raised"
+    end: "permit for VoltaGrid’s project."
+  - id: P-066
+    source: S12
+    file: "S12-1.d/Vg.M.Dismiss.Reply.Brief.Final.docx.txt"
+    locator: "reply brief, part II.A"
+    start: "Every prohibition in the Territorial Act runs to"
+    end: "otherwise subject to regulation by the commission."
+    end_occurrence: 1
+  - id: P-067
+    source: S13
+    file: "S13-1.d/VoltaGrid.Atchley.Testimony.FINAL.docx.txt"
+    locator: "cover page"
+    start: "Presented on behalf of"
+    end: "October 9, 2026"
+  - id: P-068
+    source: S13
+    file: "S13-1.d/VoltaGrid.Atchley.Testimony.FINAL.docx.txt"
+    locator: "first answer under 'VoltaGrid's one customer in Georgia'"
+    start: "VoltaGrid has not commenced operation of its ATL-1 project"
+    end: "to date."
+  - id: P-069
+    source: S13
+    file: "S13-1.d/VoltaGrid.Atchley.Testimony.FINAL.docx.txt"
+    locator: "near the end"
+    start: "Q. Does VoltaGrid furnish service to the public in Georgia?"
+    end: "A. No."
+    end_occurrence: 1
+  - id: P-070
+    source: S14
+    file: "S14-8.txt"
+    locator: "p.8, lines 10-15"
+    start: "When looking at VoltaGrid"
+    end: "outside the purview of the PSC."
+  - id: P-072
+    source: S14c
+    file: "S14c-1.txt"
+    locator: "p.10"
+    start: "VoltaGrid will also cause noise and light pollution"
+    end: "rural character of Newton County."
+  - id: P-073
+    source: S15b
+    file: "S15b-1.txt"
+    locator: "p.3, line 11"
+    start: "I am testifying on behalf of the GPSC"
+    end: "Advocacy Staff"
+  - id: P-074
+    source: S15b
+    file: "S15b-1.txt"
+    locator: "p.3, lines 17-18"
+    start: "Briefly, the testimony also considers potential risks"
+    end: "Georgia Power customers."
+  - id: P-075
+    source: S15b
+    file: "S15b-1.txt"
+    locator: "p.8, lines 1-5"
+    start: "Statement of Work No. 1 identifies the specific services"
+    end: "reaching 90 MW."
+  - id: P-076
+    source: S15b
+    file: "S15b-1.txt"
+    locator: "p.10, lines 4-5"
+    start: "The SOW states Monthly Fees per kWh of"
+    end: "as the installation scales."
+  - id: P-077
+    source: S15b
+    file: "S15b-1.txt"
+    locator: "p.14, lines 10-11"
+    start: "Based on the cited contract language, VoltaGrid is providing"
+    end: "power-delivery service to Serverfarm."
+  - id: P-078
+    source: S15b
+    file: "S15b-1.txt"
+    locator: "p.14, lines 5-7"
+    start: "I am not a lawyer and do not have an"
+    end: "under Georgia law."
+  - id: P-079
+    source: S16
+    file: "S16-1.d/corrected.voltagird.energy.cmte.request.11.09.26.FINAL.docx.txt"
+    locator: "letter p.1"
+    start: "In response to Staff"
+    end: "Commission Rule 515-3-1-.11."
+  - id: P-081
+    source: S16
+    file: "S16-1.d/corrected.voltagird.energy.cmte.request.11.09.26.FINAL.docx.txt"
+    locator: "letter p.2"
+    start: "The Order improperly requires VoltaGrid to execute"
+    end: "jurisdiction over VoltaGrid."
+  - id: P-084
+    source: S20
+    file: "S20.txt"
+    locator: "page text"
+    start: "A public witness is an individual"
+    end: "official transcript of the case."
+  - id: P-085
+    source: S20
+    file: "S20.txt"
+    locator: "page text"
+    start: "There are five commissioners"
+    end: "presented during the hearing."
+  - id: P-086
+    source: S20
+    file: "S20.txt"
+    locator: "page text, contact block"
+    start: "email: gapsc@psc.state.ga.us"
+    end: "404-656-4501 (local), press 2"
+  - id: P-087
+    source: S20
+    file: "S20.txt"
+    locator: "page text, Upcoming Events"
+    start: "Nov 17 9:30 am Administrative Session 11-17-2026"
+    end: "Committees 11-24-2026"
+  - id: P-088
+    source: S21
+    file: "S21.txt"
+    locator: "page text"
+    start: "The public comment is a comment to the Georgia Public Service Commission"
+    end: "before a Commission vote."
+  - id: P-089
+    source: S23
+    file: "S23.txt"
+    locator: "calendar, Dec 2026"
+    start: "Dec 9 10:00 am Docket # 57243"
+    end: "Enforcement Against Voltagrid"
+  - id: P-090
+    source: S01b
+    file: "S01b.list.txt"
+    locator: "filing list, Sep 28, 2026 row"
+    start: "2026-09-28 | document 228969"
+    end: "MOTION TO STAY PROCEEDINGS"
+  - id: P-091
+    source: S01b
+    file: "S01b.list.txt"
+    locator: "filing list, Sep 22 and Sep 23, 2026 rows"
+    start: "2026-09-23 | document 228949"
+    end: "Application for Leave to Intervene"
+  - id: P-092
+    source: S08
+    file: "S08-1.txt"
+    locator: "p.4"
+    start: "Serverfarm is VoltaGrid’s first data center customer in Georgia"
+    end: "to other large load customers."
+  - id: P-093
+    source: S07
+    file: "S07-1.d/VG.Attachment 1 - Affidavit of Chris Atchley (executed).pdf.txt"
+    locator: "affidavit p.3, para. 13"
+    start: "VoltaGrid is not engaged in negotiations with any person or entity"
+    end: "additional customer or business in Georgia."

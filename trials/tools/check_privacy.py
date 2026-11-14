@@ -18,7 +18,7 @@ import re
 import sys
 from pathlib import Path
 
-FILES = ("workspace.md", "home.md", "passages.md", "page.yaml", "sources.yaml", "candidates.yaml", "revisions.jsonl", "status.json", "claims.jsonl", "watch.json")
+FILES = ("workspace.md", "home.md", "passages.md", "passages.spec.yaml", "page.yaml", "sources.yaml", "candidates.yaml", "revisions.jsonl", "status.json", "claims.jsonl", "watch.json")
 STREET = re.compile(r"\b\d{1,6}\s+(?:[A-Z][A-Za-z.'-]+\s+){1,4}(?:Road|Rd|Street|St|Lane|Ln|Drive|Dr|Way|Court|Ct|Highway|Hwy|Avenue|Ave|Boulevard|Blvd|Circle|Cir|Trail|Trl|Place|Pl|Parkway|Pkwy)\b\.?")
 NOT_A_STREET = re.compile(r"(Superior|State|Juvenile|Magistrate|Probate|Supreme|District|Municipal|Federal|Appeals|Recorder's|Drug|Family) Court$")
 

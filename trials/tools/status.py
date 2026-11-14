@@ -67,11 +67,14 @@ def status(trial: Path) -> dict:
         fair = {"date": f.get("date"), "neutrality": f.get("neutrality"),
                 "high": [i for i in f.get("issues", []) if i.get("severity") == "high"],
                 "open_items": [i for i in f.get("issues", []) if i.get("severity") == "medium"]}
+    # A new page needs one whole-page source check before it can pass (verification protocol, lean flow). Its
+    # record is verification/source-check.json, or a round's source-check.json for pages checked in rounds.
+    whole_page = bool(list((trial / "verification").glob("**/source-check*.json"))) if (trial / "verification").exists() else False
     st = {"trial": trial.name, "revision": rev.group(1) if rev else None, "generated": datetime.date.today().isoformat(),
           "gate": gate, "units": len(rows), "checked_ok": len(rows) - len(pending) - len(flagged),
           "flagged": [brief(r) for r in flagged], "pending": [brief(r) for r in pending],
-          "fairness": fair,
-          "verified": gate_ok and not pending and not flagged and not (fair and fair["high"])}
+          "fairness": fair, "whole_page_check": whole_page,
+          "verified": gate_ok and not pending and not flagged and not (fair and fair["high"]) and whole_page}
     (trial / "status.json").write_text(json.dumps(st, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
 
     sp = trial / "verification" / "summary.json"
@@ -80,7 +83,9 @@ def status(trial: Path) -> dict:
         d["verified"] = st["verified"]
         waiting = len(pending) + len(flagged)
         d["statusText"] = "Passed our checks" if st["verified"] else (
-            f"{waiting} sentence{'s' if waiting != 1 else ''} waiting for a check" if gate_ok else "Automatic checks failing")
+            "Automatic checks failing" if not gate_ok else
+            f"{waiting} sentence{'s' if waiting != 1 else ''} waiting for a check" if waiting else
+            "First full read not done yet" if not whole_page else "Fairness review found a serious issue")
         # Whether later changes were re-checked is a fact about today, so code writes it. A hand-written sentence
         # here went stale ("not re-checked yet" beside a "Passed our checks" badge).
         d["stateLine"] = ("Every sentence on this page has a current check. A sentence is checked again whenever it or its source changes."

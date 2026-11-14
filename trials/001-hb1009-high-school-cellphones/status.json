@@ -29,5 +29,6 @@
  "flagged": [],
  "pending": [],
  "fairness": null,
+ "whole_page_check": true,
  "verified": true
 }

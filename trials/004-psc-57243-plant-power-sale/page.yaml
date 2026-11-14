@@ -1,0 +1,68 @@
+# How this trial's workspace appears in the prototype (display settings only; all content comes from
+# workspace.md, home.md, passages.md and sources.yaml). Read by trials/tools/render_prototype.py.
+slug: psc-57243                    # used in page links
+kind: regulatory-case              # law | regulatory-case | budget
+topic: "Power supply"              # a neutral subject label; a label, not a claim
+icon: bolt
+stage: open                        # open | decided
+publish: false                     # a draft: not yet checked
+public_addresses: []               # no street address is used on this page or in its passages
+watch:                             # what would make this page stale (work notes, not page text)
+  sources: [S01b, {id: S23, only: "57243"}]
+  events:
+    - {date: 2026-11-24, what: "Parties confer and exchange hearing exhibits. Check the filing list for new filings and any ruling on VoltaGrid's emergency appeal."}
+    - {date: 2026-12-02, what: "Objections to pre-filed testimony and exhibits due. Snapshot them."}
+    - {date: 2026-12-04, what: "Pre-hearing conference, 2:00 p.m. Look for any order that changes the hearing date."}
+    - {date: 2026-12-09, what: "Hearing before the Hearing Officer, 10:00 a.m. Move the hearing to What happened; look for a transcript and the date of the recommended decision."}
+code: "PSC Docket 57243 · 2026"
+title: "Georgia regulators' case on a Covington power plant built to run one data center"  # [P-021, P-027, P-051]
+link_text: "A Covington power plant built to run one data center"  # [P-027, P-051]
+status:                            # chips under the title
+  - {text: "Open case at the Georgia Public Service Commission"}  # [P-001]
+  - {text: "Hearing set for Dec 9, 2026"}  # [P-018]
+option_chips:                      # one chip per option, matched by the start of the option's heading
+  "Outcome A": {text: "VoltaGrid's request"}  # [P-041, P-042]
+  "Outcome B": {text: "The petition's request"}  # [P-035]
+  "Outcome C": {text: "The PSC's own question"}  # [P-022]
+short_labels:                      # source chip labels: one or two words, by role
+  S01: Docket
+  S01b: Filing list
+  S02: Schedule order
+  S02b: Hearing notice
+  S03: Pause order
+  S03b: Secrets order
+  S05: Petition
+  S07: VoltaGrid brief
+  S08: Petitioners' response
+  S09: Staff response
+  S10: Georgia EMC
+  S11: Georgia Power
+  S12: VoltaGrid reply
+  S13: VoltaGrid testimony
+  S14: Nonprofit testimony
+  S14c: Resident testimony
+  S15b: Staff testimony
+  S16: Appeal letter
+  S18: EMC request
+  S18b: Power request
+  S20: Public witness
+  S21: Comments
+  S23: PSC calendar
+audiences: ["Near the plant", "Georgia Power customer", "EMC customer"]   # chip names for the "If you" lines, in page order
+terms:                             # each term and the phrase that defines it at first use on a tab
+  PSC: "Public Service Commission"
+  Hearing Officer: "the person the PSC appointed to hear the case"
+  Territorial Act: "the Georgia law that assigns service areas to utilities"
+  Cogeneration Act: "a 2001 Georgia law on plants that power their owners"
+  EMC: "electric membership corporation"
+  megawatt: "a unit of power"
+  trade secret: "business information a company keeps private"
+  docket: "case file"
+  EPD: "Environmental Protection Division"
+visuals:                           # pictures on the Summary tab; every note is cited or tagged like a page sentence
+  numbers:
+    - {value: "90 MW", note: "The plant's top output, in a state air-permit review. [P-040]"}
+    - {value: "33", note: "Natural gas engines at the plant, in the same review. [P-040]"}
+  seats:
+    total: 5
+    note: "The PSC's five commissioners make the final decision. [P-020, P-085]"

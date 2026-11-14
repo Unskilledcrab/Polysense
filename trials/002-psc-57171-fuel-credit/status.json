@@ -1,6 +1,6 @@
 {
  "trial": "002-psc-57171-fuel-credit",
- "revision": "7.7",
+ "revision": "7.8",
  "generated": "2026-11-14",
  "gate": {
   "citations:workspace.md": {
@@ -24,10 +24,25 @@
   },
   "balance_prompts": 4
  },
- "units": 560,
- "checked_ok": 560,
+ "units": 556,
+ "checked_ok": 554,
  "flagged": [],
- "pending": [],
+ "pending": [
+  {
+   "file": "workspace.md",
+   "line": 46,
+   "sentence": "For more information, that page lists these PSC contacts: 404-656-4501 (local) or 1-800-282-5813 (outside metro-Atlanta), then press 2, or e",
+   "verdict": null,
+   "problem": ""
+  },
+  {
+   "file": "home.md",
+   "line": 14,
+   "sentence": "**Nov 12, 2026:** The Public Service Commission (PSC) had a hearing scheduled on counting business customers' real-time payments toward fuel",
+   "verdict": null,
+   "problem": ""
+  }
+ ],
  "fairness": {
   "date": "2026-11-13",
   "neutrality": 4,
@@ -59,5 +74,6 @@
    }
   ]
  },
- "verified": true
+ "whole_page_check": true,
+ "verified": false
 }

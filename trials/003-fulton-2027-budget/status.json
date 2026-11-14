@@ -1,6 +1,6 @@
 {
  "trial": "003-fulton-2027-budget",
- "revision": "5.4",
+ "revision": "5.5",
  "generated": "2026-11-14",
  "gate": {
   "citations:workspace.md": {
@@ -24,8 +24,8 @@
   },
   "balance_prompts": 0
  },
- "units": 459,
- "checked_ok": 459,
+ "units": 463,
+ "checked_ok": 463,
  "flagged": [],
  "pending": [],
  "fairness": {
@@ -47,5 +47,6 @@
    }
   ]
  },
+ "whole_page_check": true,
  "verified": true
 }
