@@ -65,5 +65,310 @@
    }
   }
  },
- "checked": "2026-11-14T01:22:34Z"
+ "checked": "2026-11-14T01:22:34Z",
+ "links": {
+  "S01": {
+   "files": {
+    "S01.html": {
+     "text_sha256": "315f5b0c87dd6ea985a5261454f4f2af3f7950d960d40de379b5645a3580faff",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:25Z",
+     "note": "the page changed around them, but every passage we quote is still there"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:25Z"
+  },
+  "S02": {
+   "files": {
+    "S02-docx.bin": {
+     "text_sha256": "f8c910e696ac40c265d4c7c317f7f737ba769bd90fb16882d7bc24ea69b6303f",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:25Z"
+    },
+    "S02-pdf.pdf": {
+     "text_sha256": "3a1b9fa7c817b420908b8d972feac6889eeb4bc667e109c3e9201d5c24a912d1",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:25Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:25Z"
+  },
+  "S21": {
+   "files": {
+    "S21-docx.bin": {
+     "text_sha256": "3749f71d4d75c91ba818ae4d220c5bcf0a48eee3f07da0651aa8219b06cd2237",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:25Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:25Z"
+  },
+  "S05": {
+   "files": {
+    "S05-docx.bin": {
+     "text_sha256": "677e92f5eb1cc1c4ece9694d324bec55554bfaa4b20264d06044947a41acd6c8",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:25Z"
+    },
+    "S05-pdf.pdf": {
+     "text_sha256": "3efcb4837805301c9fba592817006179fba8b733a09268d5bc7c94ffc58ad773",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:25Z"
+    },
+    "S05-zip.bin": {
+     "text_sha256": "80b9e4a570df1fc5da1a7a5aaae1f14090d7512105013bfcb46aa8a46dc88869",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:25Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:25Z"
+  },
+  "S14": {
+   "files": {
+    "S14.html": {
+     "text_sha256": "e5e2fde9c48a473ab06b994d9fc6e5b0128da194a56b05b4b8d34f895f65688b",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:25Z",
+     "note": "the page changed around them, but every passage we quote is still there"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:25Z"
+  },
+  "S15": {
+   "files": {
+    "S15.html": {
+     "text_sha256": "0b344d977ec20fb197f81caf9e05fdc5ffc8d6a1f83480612ea6e7239fd2c999",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:25Z",
+     "note": "the page changed around them, but every passage we quote is still there"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:25Z"
+  },
+  "S19": {
+   "files": {
+    "S19.html": {
+     "text_sha256": "62986f53c6b6eb5b03ce5f9e776677e429071b63383b3e5d3a07c9cdd236bd2b",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:25Z",
+     "note": "the page changed around them, but every passage we quote is still there"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:25Z"
+  },
+  "S17": {
+   "files": {
+    "S17.html": {
+     "text_sha256": "0ca578159f94aea62cc7d2aa8d47378d227ff6665421645add294ab3222c36e1",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:25Z",
+     "note": "the page changed around them, but every passage we quote is still there"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:25Z"
+  },
+  "S17b": {
+   "files": {
+    "S17b.html": {
+     "text_sha256": "f11835358923ae9656aa5c28f3820eb40e0fffd36af3da45daa2080f2a993a0d",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:25Z",
+     "note": "the page changed around them, but every passage we quote is still there"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:25Z"
+  },
+  "S17c": {
+   "files": {
+    "S17c.html": {
+     "text_sha256": "6a82926e05189d0656b38eb76be5c45959b0f17a46af1896f4c0c004434f3c99",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:25Z",
+     "note": "the page changed around them, but every passage we quote is still there"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:25Z"
+  },
+  "S17d": {
+   "files": {
+    "S17d.html": {
+     "text_sha256": "94c93145be4d4a58f66c3e9247ba2075343303bac2b4ba8f1d10de0c876305c0",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:25Z",
+     "note": "the page changed around them, but every passage we quote is still there"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:25Z"
+  },
+  "S17e": {
+   "files": {
+    "S17e.html": {
+     "text_sha256": "2f4c55664d11695c7a89c8a5f5f9f60e9e9c3829553c65ddf1e5dacdeb0179d9",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:25Z",
+     "note": "the page changed around them, but every passage we quote is still there"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:25Z"
+  },
+  "S07b": {
+   "files": {
+    "S07b-docx.bin": {
+     "text_sha256": "fb5f8d9e06fb807d505e16854f09a5949b2cc569eb7f259c2a9bc07db1461f00",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:25Z"
+    },
+    "S07b-pdf.pdf": {
+     "text_sha256": "d1b2373a540992e9df1f65abe14606e7ebdfa5201c693ee18b4bdcf67c652c4f",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:25Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:25Z"
+  },
+  "S06": {
+   "files": {
+    "S06-zip.bin": {
+     "text_sha256": "6d2e5e0af190dc5bc513dac3cb7b64e73c37c1793831bdfbd993f464daae844a",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:25Z"
+    },
+    "S06-pdf.pdf": {
+     "text_sha256": "f2034ed30d41a5dff85663513b64f3e7d0fc23871c5a4c1e7441d3da998537fb",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:25Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:25Z"
+  },
+  "S07": {
+   "files": {
+    "S07-docx.bin": {
+     "text_sha256": "47b902d480c324216e728df0f4dc87da159c054129bb16fd9d5404df68457984",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:25Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:25Z"
+  },
+  "S08": {
+   "files": {
+    "S08-pdf.pdf": {
+     "text_sha256": "c224859504630fc168f8f1a9cad490bd769248801a51569adcdeb519bfb31c3a",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:25Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:25Z"
+  },
+  "S09": {
+   "files": {
+    "S09-zip.bin": {
+     "text_sha256": "8e418d4160d4e77e99b6fa1cb3bb8c6bb8b35f118ea6adda436938c77ed16941",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:25Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:25Z"
+  },
+  "S11": {
+   "files": {
+    "S11-zip.bin": {
+     "text_sha256": "202bc5fa87d4f313427ef23be434529df3dd0e190e51551c16071831785414fa",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:25Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:25Z"
+  },
+  "S12": {
+   "files": {
+    "S12-zip.bin": {
+     "text_sha256": "3f9deaafe674c28c10d610a319adf0be29a31f8e043e6001f4f80645400a4dd2",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:25Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:25Z"
+  },
+  "S13": {
+   "files": {
+    "S13-pdf.pdf": {
+     "text_sha256": "87d1bead2d5ddbd764e043bdddefb1eaeb3b6c07167d3c6680dacb36b9b75546",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:25Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:25Z"
+  },
+  "S06b": {
+   "files": {
+    "S06b-zip.bin": {
+     "text_sha256": "5e46f10cbddb84533ddb0f304f0c7dccba62b12e59a60946d0aac3c4b67c34cf",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:25Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:25Z"
+  },
+  "S10": {
+   "files": {
+    "S10-pdf.pdf": {
+     "text_sha256": "d1d0b42eb2c25a378815786ef811b37bf00345f4e1e7922bbfbbdf7ff5ac0619",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:25Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:25Z"
+  }
+ }
 }

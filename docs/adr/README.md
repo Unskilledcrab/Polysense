@@ -20,3 +20,4 @@ write a new ADR that supersedes the old one. Never rewrite history.
 | [0013](0013-security-baseline.md) | Security baseline and dependency policy | Accepted |
 | [0014](0014-ai-only-verification.md) | AI-only verification in the proof of concept; no human in the loop | Accepted |
 | [0015](0015-source-funnel-and-ai-budget.md) | A funnel for source documents; AI usage as a budget (tiers, ledger, stop rules) | Accepted for trial |
+| [0016](0016-pointers-not-copies.md) | Point to sources where they are hosted; keep the link, a fingerprint and the passages we quote, not copies | Accepted |

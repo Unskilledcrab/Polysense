@@ -173,6 +173,107 @@ class DeskTest(unittest.TestCase):
         self.assertNotIn("Example Street", (self.trial / "watch.json").read_text())
         self.assertIn("Example Street", (self.trial / "_raw" / "watch" / "S01.diff.txt").read_text())
 
+    # ----- pointers, not copies (ADR 0016) -----
+
+    def hashed(self):
+        """Give the fixture's S01 a real fingerprint, as a snapshot would."""
+        sha = desk.sha_bytes(SAVED.encode("utf-8"))
+        (self.trial / "sources.yaml").write_text(SOURCES.replace('status: retrieved, retrieved_at: "2026-11-01T00:00:00Z"}',
+            f'status: retrieved, retrieved_at: "2026-11-01T00:00:00Z", local_file: S01.html, sha256: {sha}}}'), encoding="utf-8")
+        return sha
+
+    def test_a_missing_cache_is_not_a_failure_but_a_wrong_hash_is(self):
+        import subprocess
+        self.hashed()
+        tool = str(Path(__file__).parent / "verify_hashes.py")
+        run = lambda: subprocess.run([sys.executable, tool, str(self.trial / "sources.yaml")], capture_output=True, text=True)   # noqa: E731
+        self.assertIn("PASS", run().stdout.splitlines()[-1])
+        (self.trial / "_raw" / "S01.html").rename(self.trial / "_raw" / "moved-aside.html")
+        r = run()
+        self.assertEqual(r.returncode, 0)
+        self.assertIn("1 not cached", r.stdout.splitlines()[-1])
+        (self.trial / "_raw" / "S01.html").write_text("a different document", encoding="utf-8")
+        self.assertEqual(run().returncode, 1)
+
+    def test_restore_keeps_a_file_only_if_it_is_the_document_we_read(self):
+        try:
+            import bs4  # noqa: F401
+        except ImportError:
+            self.skipTest("beautifulsoup4 not installed")
+        self.hashed()
+        cached = self.trial / "_raw" / "S01.html"
+        desk.links(self.trial, "2026-11-14T00:00:00Z")            # records the text fingerprint while the file is cached
+        cached.unlink()
+        rows = desk.restore(self.trial, "2026-11-14T00:00:00Z", self.fetcher({"https://example.org/budget": SAVED}))
+        self.assertEqual([(r["source"], r["state"]) for r in rows], [("S01", "restored")])
+        self.assertTrue(cached.exists() and (self.trial / "_raw" / "S01.txt").exists())
+        cached.unlink()
+        changed = HTML.format(tok="z", body="The county now plans to spend $12 million in 2027.")
+        rows = desk.restore(self.trial, "2026-11-14T00:00:00Z", self.fetcher({"https://example.org/budget": changed}))
+        self.assertEqual(rows[0]["state"], "changed")
+        self.assertFalse(cached.exists())                         # a changed document never replaces the original
+        self.assertTrue((self.trial / "_raw" / "changed" / "S01.html").exists())
+
+    def test_links_tells_same_from_changed_from_gone_and_queues_the_stale_ones(self):
+        try:
+            import bs4  # noqa: F401
+        except ImportError:
+            self.skipTest("beautifulsoup4 not installed")
+        self.hashed()
+        (self.trial / "page.yaml").write_text(PAGE.replace("sources: [S01, {id: S02", "sources: [{id: S02"), encoding="utf-8")   # S01 is cited, not watched
+        url = "https://example.org/budget"
+        same_text = HTML.format(tok="new-token", body="The county plans to spend $10 million in 2027.")   # new bytes, same words
+        book = desk.links(self.trial, "2026-11-14T00:00:00Z", self.fetcher({url: same_text}))
+        self.assertEqual(book["S01"]["state"], "same")
+        # The page gains a sidebar, but the passage we can test (the one that is in our saved copy) is still there.
+        grown = HTML.format(tok="t", body="The county plans to spend $10 million in 2027.</p><p>Upcoming: a meeting on Nov 24.")
+        book = desk.links(self.trial, "2026-11-14T12:00:00Z", self.fetcher({url: grown}))
+        self.assertEqual(book["S01"]["state"], "same")
+        self.assertEqual(book["S01"]["files"]["S01.html"]["testable"], ["P-001"])   # P-003 isn't in the saved copy, so it can't be tested
+        self.assertIn("still there", book["S01"]["files"]["S01.html"]["note"])
+        book = desk.links(self.trial, "2026-11-15T00:00:00Z", self.fetcher({url: HTML.format(tok="t", body="Something else entirely.")}))
+        self.assertEqual(book["S01"]["state"], "changed")
+        self.assertIn("1 of 1 passages", book["S01"]["files"]["S01.html"]["note"])
+        stale = [i for i in desk.queue(self.root, "2026-11-15") if "link we cite" in i["what"]]
+        self.assertEqual(len(stale), 1)
+        self.assertIn("3 sentences cite it", stale[0]["size"])
+        book = desk.links(self.trial, "2026-11-16T00:00:00Z", lambda u: (404, "text/html", b"not found"))
+        self.assertEqual(book["S01"]["state"], "gone")
+        self.assertNotIn("S02", book)                             # a watched listing page is left to `watch`
+
+    def test_passages_carry_forward_when_the_source_is_not_cached(self):
+        import subprocess
+        (self.trial / "_raw" / "S01.html.txt").write_text("Budget\nThe county plans to spend $10 million in 2027.\nProperty tax is the main income.", encoding="utf-8")
+        (self.trial / "passages.spec.yaml").write_text(
+            'passages:\n'
+            '  - {id: P-001, source: S01, file: S01.html.txt, locator: "page 1", start: "The county plans", end: "in 2027."}\n'
+            '  - {id: P-003, source: S01, file: S01.html.txt, locator: "page 2", start: "Property tax", end: "main income."}\n', encoding="utf-8")
+        tool = str(Path(__file__).parent / "build_passages.py")
+        run = lambda: subprocess.run([sys.executable, tool, str(self.trial / "passages.spec.yaml")], capture_output=True, text=True)   # noqa: E731
+        self.assertEqual(run().returncode, 0)
+        built = (self.trial / "passages.md").read_text()
+        (self.trial / "_raw" / "S01.html.txt").unlink()
+        r = run()
+        self.assertEqual(r.returncode, 0)
+        self.assertIn("2 carried forward", r.stdout)
+        self.assertEqual((self.trial / "passages.md").read_text(), built)       # byte for byte
+        spec = self.trial / "passages.spec.yaml"
+        spec.write_text(spec.read_text().replace('start: "Property tax"', 'start: "A span we never built"'), encoding="utf-8")
+        self.assertEqual(run().returncode, 1)                                   # a changed spec needs the source restored
+
+    def test_archive_records_what_it_found_and_never_invents_a_copy(self):
+        def found(url):
+            return 200, "application/json", b'{"archived_snapshots": {"closest": {"available": true, "url": "http://web.archive.org/web/20261109/https://example.org/budget", "timestamp": "20261109000000"}}}'
+        self.assertEqual(desk.archive_lookup("https://example.org/budget", found)["url"], "https://web.archive.org/web/20261109/https://example.org/budget")
+        def nothing(url):
+            return (200, "application/json", b'{"archived_snapshots": {}}') if "available" in url else (523, "text/html", b"")
+        res = desk.archive_lookup("https://example.org/budget", nothing)
+        self.assertEqual(res["state"], "none")
+        self.assertNotIn("url", res)
+        def boom(url):
+            raise OSError("no route")
+        self.assertEqual(desk.archive_lookup("https://example.org/budget", boom)["state"], "blocked")
+
     def test_a_failed_fetch_is_recorded_as_blocked(self):
         def boom(url):
             raise OSError("no route")

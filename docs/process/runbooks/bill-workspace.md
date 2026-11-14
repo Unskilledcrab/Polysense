@@ -61,8 +61,11 @@ Rules added after Trial 001:
    text; record the `method`. An anti-bot challenge, a 403 or a paywall is a **block**: record it and move
    on, never work around it. Retry once, after a pause, for a 404 or 5xx error, and keep both responses.
 4. Record everything in `sources.yaml`, then run `verify_hashes.py`.
-5. Request an Internet Archive capture where the session allows it, and record the archive URL. If the
-   request is denied, record that.
+5. Run `desk.py archive TRIAL` to find or request an Internet Archive copy of each cited source, and
+   `desk.py links TRIAL` to record text fingerprints. If the archive request is denied, that is recorded.
+   - We keep pointers, not copies ([ADR 0016](../../adr/0016-pointers-not-copies.md)): the link, the date,
+     the fingerprint and the passages we quote. `_raw/` is a cache; `desk.py restore` brings a file back.
+   - Don't download video, audio or files over 50 MB; record them by link.
 6. If a source can't be fetched, mark it `not-retrieved` or `rejected` with the reason. **Never
    substitute another document.**
 

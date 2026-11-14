@@ -30,7 +30,9 @@ try:
 except ImportError:  # pragma: no cover
     sys.exit(NEEDS)
 
-UA = "Mozilla/5.0 (compatible; civic-research-trial/0.1; +https://github.com/Unskilledcrab/Polysense)"
+# A generic client name. Requests to outside sites carry nothing that names the project, its owner or its repository.
+UA = "Mozilla/5.0 (compatible; civic-research/0.1)"
+POINTER_ONLY_MB = 50   # video, audio and files larger than this are recorded by link, type and size, not downloaded
 EXT = {"text/html": "html", "application/pdf": "pdf", "application/json": "json", "text/plain": "txt",
        "text/csv": "csv", "application/xml": "xml", "text/xml": "xml", "application/zip": "zip",
        "application/x-zip-compressed": "zip", "application/msword": "doc", "application/vnd.ms-excel": "xls",

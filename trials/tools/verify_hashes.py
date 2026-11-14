@@ -35,7 +35,7 @@ def main(manifest: Path, show: bool) -> int:
         for f in sorted(raw.glob("*")) if raw.exists() else []:
             print(f"{sha256(f)}  {f.name}")
         return 0
-    bad = 0
+    bad = ok = absent = 0
     counts: dict[str, int] = {}
     for src in data.get("sources", []):
         status = src.get("status", "unknown")
@@ -44,17 +44,25 @@ def main(manifest: Path, show: bool) -> int:
             continue
         entries = src.get("files") or [{"local_file": src.get("local_file"), "sha256": src.get("sha256")}]
         for entry in entries:
+            if entry.get("pointer"):   # recorded by link, type and size only (video, audio, very large files)
+                continue
             local = raw / str(entry.get("local_file") or "")
-            if not entry.get("local_file") or not local.is_file():
-                print(f"MISSING  {src['id']}: {local}")
+            if not entry.get("local_file") or not entry.get("sha256"):
+                print(f"MISSING  {src['id']}: no local_file or sha256 recorded")
                 bad += 1
+            elif not local.is_file():
+                # We keep pointers, not copies (ADR 0016): the cache may be gone. `desk.py restore` brings a file
+                # back and compares it with this fingerprint.
+                print(f"NOT CACHED {src['id']}: {entry['local_file']}")
+                absent += 1
             elif sha256(local) != entry.get("sha256"):
                 print(f"MISMATCH {src['id']}: recorded {entry.get('sha256')} != actual {sha256(local)}")
                 bad += 1
             else:
                 print(f"OK       {src['id']}: {entry['sha256'][:12]}…  {entry['local_file']}")
+                ok += 1
     print("status counts:", counts)
-    print(f"Result: {'FAIL' if bad else 'PASS'} ({bad} problems)")
+    print(f"Result: {'FAIL' if bad else 'PASS'} ({bad} problems; {ok} files match their fingerprint, {absent} not cached)")
     return 1 if bad else 0
 
 

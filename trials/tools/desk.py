@@ -7,6 +7,12 @@
     desk.py queue                     everything that needs work, soonest first -> trials/queue.json and a printed list
     desk.py impact TRIAL SID|P-NNN    the passages a source holds and the sentences that cite them
     desk.py brief TRIAL               a one-screen card for an agent: state, what is due, and a map of the files
+    desk.py links [--fetch] [TRIAL [SID]]   does each cited source's link still serve the document we read?
+    desk.py restore [TRIAL [SID]]     fetch cited sources that aren't cached; keep each only if its fingerprint matches
+    desk.py archive [TRIAL [SID]]     find or request an Internet Archive copy of each cited source; record its link
+
+We keep pointers to sources, not copies (ADR 0016): the link, the date read, a fingerprint, and the passages we
+quote. _raw/ is a cache that can be deleted. `links` without --fetch only records text fingerprints from the cache.
 
 Options: --root DIR (default: the trials/ folder this script sits in) and --today YYYY-MM-DD (for tests).
 
@@ -352,6 +358,223 @@ def watch_accept(trial: Path, sid: str, now: str) -> None:
     (trial / "watch.json").write_text(json.dumps(state, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
 
 
+# ---------- pointers, not copies (ADR 0016) ----------
+# We don't host source documents. Git holds each source's link, the date we read it, a fingerprint of what we read
+# and the passages we quote. _raw/ is a cache: `restore` brings a file back and proves it is the same document,
+# `links` says whether a link still serves that document, and `archive` records an Internet Archive copy.
+
+MAX_FETCH_MB = 60
+
+
+def cited_sources(trial: Path) -> list[str]:
+    f = trial / "passages.md"
+    if not f.exists():
+        return []
+    seen: list[str] = []
+    for p in parse_passages(f).values():
+        if p["source"] not in seen:
+            seen.append(p["source"])
+    return seen
+
+
+def source_files(src: dict) -> list[dict]:
+    """The fetched files recorded for a source, each with url, local_file and sha256. Zip members and files
+    recorded as pointers only (video, audio, very large files) are left out."""
+    files = [f for f in (src.get("files") or []) if f.get("url") and f.get("local_file") and not f.get("pointer") and not f.get("member_of")]
+    if not files and src.get("url") and src.get("local_file") and src.get("sha256"):
+        files = [{"url": src["url"], "local_file": src["local_file"], "sha256": src["sha256"]}]
+    return files
+
+
+def sha_bytes(body: bytes) -> str:
+    return hashlib.sha256(body).hexdigest()
+
+
+def text_fingerprint(body: bytes) -> str:
+    return digest(norm_text(text_of(body)))
+
+
+def derive(raw: Path, local: str) -> list[str]:
+    """Rebuild the text files our tools read from a restored file: page text, PDF text, and a zip's members."""
+    made, f = [], raw / local
+    tools = Path(__file__).parent / "extract"
+    ext = f.suffix.lower()
+
+    def run(tool: str, *args: str) -> None:
+        subprocess.run([sys.executable, "-I", str(tools / tool), *args], capture_output=True, text=True)
+
+    if ext in (".html", ".htm"):
+        from snapshot import visible_text
+        out = f.with_suffix(".txt")
+        out.write_text(visible_text(f.read_bytes()), encoding="utf-8")
+        made.append(out.name)
+    elif ext == ".pdf":
+        out = f.with_suffix(".txt")
+        run("pdf2txt.py", str(f), str(out))
+        if out.exists():
+            made.append(out.name)
+    elif ext == ".docx":
+        out = f.with_name(f.name + ".txt")
+        run("docx2txt.py", str(f), str(out))
+        if out.exists():
+            made.append(out.name)
+    elif ext == ".zip":
+        folder = f.with_name(f.stem + ".d")
+        if not folder.exists():
+            run("safe_unzip.py", str(f), str(folder))
+        for m in sorted(folder.iterdir()) if folder.exists() else []:
+            if m.suffix.lower() in (".pdf", ".docx") and not m.with_name(m.name + ".txt").exists():
+                run("pdf2txt.py" if m.suffix.lower() == ".pdf" else "docx2txt.py", str(m), str(m.with_name(m.name + ".txt")))
+            if m.with_name(m.name + ".txt").exists():
+                made.append(f"{folder.name}/{m.name}.txt")
+    return made
+
+
+def link_state(entry: dict, base: dict, fetch) -> dict:
+    """Does the link still serve the document we read? Bytes first; for pages whose bytes shift on every load, the
+    visible text. `base` is this file's record in watch.json (its text fingerprint, taken while it was cached)."""
+    try:
+        code, _, body = fetch(entry["url"])
+    except Exception as e:   # noqa: BLE001
+        return {"state": "blocked", "note": f"{type(e).__name__}: {str(e)[:100]}"}
+    if code in (404, 410):
+        return {"state": "gone", "http_status": code}
+    if code != 200 or not body:
+        return {"state": "blocked", "http_status": code, "note": "not 200, or an empty body"}
+    if sha_bytes(body) == entry["sha256"]:
+        return {"state": "same", "http_status": code, "body": body}
+    if base.get("text_sha256") and text_fingerprint(body) == base["text_sha256"]:
+        return {"state": "same", "http_status": code, "note": "bytes differ, visible text is the same", "body": body}
+    return {"state": "changed", "http_status": code, "body": body,
+            "note": "" if base.get("text_sha256") else "bytes differ and we have no text fingerprint to compare"}
+
+
+def links(trial: Path, now: str, fetch=None, only: str | None = None) -> dict:
+    """Record a text fingerprint for every cited source that is still cached, and, with a fetcher, check each link.
+    Results go in watch.json under `links`. Watched listing pages are left to `watch`: they change by nature."""
+    srcs, state = sources_of(trial), load_watch(trial)
+    book = state.setdefault("links", {})
+    skip = {w["id"] for w in watched(cfg_of(trial))}
+    quoted = parse_passages(trial / "passages.md") if (trial / "passages.md").exists() else {}
+    for sid in cited_sources(trial):
+        if (only and sid != only) or sid in skip or sid not in srcs:
+            continue
+        rec = book.setdefault(sid, {"files": {}})
+        bodies: dict[str, bytes] = {}
+        for entry in source_files(srcs[sid]):
+            fr = rec["files"].setdefault(entry["local_file"], {})
+            cached = trial / "_raw" / entry["local_file"]
+            if cached.exists() and cached.stat().st_size < MAX_FETCH_MB * 2 ** 20:
+                body = cached.read_bytes()
+                fr.setdefault("text_sha256", text_fingerprint(body))
+                # Which of our passages this method can find in our own copy. A passage built from page metadata, a
+                # rendered page or a corrected span can't be found this way, so it can't be used to judge a change.
+                flat_c = re.sub(r"\s+", " ", text_of(body))
+                fr["testable"] = sorted(pid for pid, p in quoted.items()
+                                        if p["source"] == sid and re.sub(r"\s+", " ", p["text"]).strip() in flat_c)
+            if fetch is None:
+                continue
+            if (entry.get("bytes") or 0) > MAX_FETCH_MB * 2 ** 20:
+                fr.update(state="not checked", note=f"over {MAX_FETCH_MB} MB", checked=now)
+                continue
+            how = (str(srcs[sid].get("method", "")) + " " + entry["local_file"]).lower()
+            if "headless" in how or "render" in how or "browser" in how:
+                fr.update(state="unsure", note="this page shows its text only in a browser, so a plain fetch can't re-check it", checked=now)
+                continue
+            res = link_state(entry, fr, fetch)
+            if res.get("body") is not None:
+                bodies[entry["local_file"]] = res.pop("body")
+            fr.pop("note", None)
+            fr.update(res, checked=now)
+        if fetch is None:
+            continue
+        # A web page's menus and sidebars change around the part we read. What matters is whether the passages we
+        # quote are still there, so a "changed" page is tested for exactly that.
+        changed = [k for k, v in rec["files"].items() if v.get("state") == "changed" and k in bodies]
+        if changed:
+            flat = " ".join(re.sub(r"\s+", " ", text_of(bodies[k])) for k in changed)
+            can = {pid for v in rec["files"].values() for pid in v.get("testable") or []}
+            mine = {pid: re.sub(r"\s+", " ", quoted[pid]["text"]).strip() for pid in can if pid in quoted}
+            missing = sorted(pid for pid, text in mine.items() if text not in flat)
+            for k in changed:
+                if mine and not missing:
+                    rec["files"][k].update(state="same", note=f"the page changed around them, but the {len(mine)} passages we can test are still there")
+                elif mine:
+                    rec["files"][k]["note"] = f"{len(missing)} of {len(mine)} passages we quote are no longer on the page: {', '.join(missing[:8])}"
+                else:
+                    rec["files"][k].update(state="unsure", note="the page's bytes and text differ, and none of our passages can be tested on this kind of file")
+        order = ["same", "not checked", "unsure", "blocked", "changed", "gone"]
+        states = [v.get("state", "not checked") for v in rec["files"].values()] or ["not checked"]
+        rec.update(state=max(states, key=order.index), checked=now)
+    (trial / "watch.json").write_text(json.dumps(state, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
+    return book
+
+
+def restore(trial: Path, now: str, fetch=http_fetch, only: str | None = None) -> list[dict]:
+    """Fetch each cited source that isn't cached, and keep it only if it is the document we read (same fingerprint).
+    A document that has changed is saved under _raw/changed/ for comparison and never replaces the original."""
+    srcs, raw, out = sources_of(trial), trial / "_raw", []
+    book = load_watch(trial).get("links") or {}
+    for sid in cited_sources(trial):
+        if (only and sid != only) or sid not in srcs:
+            continue
+        for entry in source_files(srcs[sid]):
+            dest = raw / entry["local_file"]
+            if dest.exists():
+                out.append({"source": sid, "file": entry["local_file"], "state": "cached"})
+                continue
+            res = link_state(entry, (book.get(sid) or {}).get("files", {}).get(entry["local_file"], {}), fetch)
+            body = res.pop("body", None)
+            row = {"source": sid, "file": entry["local_file"], **res}
+            if res["state"] == "same" and body is not None and sha_bytes(body) == entry["sha256"]:
+                dest.parent.mkdir(parents=True, exist_ok=True)
+                dest.write_bytes(body)
+                row.update(state="restored", derived=derive(raw, entry["local_file"]))
+            elif res["state"] in ("same", "changed") and body is not None:
+                keep = raw / "changed" / entry["local_file"]
+                keep.parent.mkdir(parents=True, exist_ok=True)
+                keep.write_bytes(body)
+                row.update(state="changed" if res["state"] == "changed" else "same text, different bytes",
+                           note="saved under _raw/changed/; it is not the exact file we read")
+            out.append(row)
+    return out
+
+
+def archive_lookup(url: str, fetch=http_fetch) -> dict:
+    """The Internet Archive's closest capture of a link, or a request to make one. Records what happened; never
+    claims a copy that isn't there."""
+    from urllib.parse import quote
+    try:
+        code, _, body = fetch("https://archive.org/wayback/available?url=" + quote(url, safe=""))
+        snap = (json.loads(body.decode("utf-8", "replace")).get("archived_snapshots") or {}).get("closest") if code == 200 else None
+        if snap and snap.get("available"):
+            return {"state": "found", "url": snap["url"].replace("http://", "https://", 1), "captured": snap.get("timestamp")}
+        code, _, body = fetch("https://web.archive.org/save/" + url)
+        if code == 200:
+            code2, _, body2 = fetch("https://archive.org/wayback/available?url=" + quote(url, safe=""))
+            snap = (json.loads(body2.decode("utf-8", "replace")).get("archived_snapshots") or {}).get("closest") if code2 == 200 else None
+            if snap and snap.get("available"):
+                return {"state": "saved", "url": snap["url"].replace("http://", "https://", 1), "captured": snap.get("timestamp")}
+            return {"state": "requested", "note": "capture requested; not listed yet"}
+        return {"state": "none", "note": f"no capture, and the save request returned {code}"}
+    except Exception as e:   # noqa: BLE001
+        return {"state": "blocked", "note": f"{type(e).__name__}: {str(e)[:100]}"}
+
+
+def archive(trial: Path, now: str, fetch=http_fetch, only: str | None = None) -> dict:
+    srcs, state = sources_of(trial), load_watch(trial)
+    book = state.setdefault("links", {})
+    for sid in cited_sources(trial):
+        if (only and sid != only) or sid not in srcs or not srcs[sid].get("url"):
+            continue
+        rec = book.setdefault(sid, {"files": {}})
+        if (rec.get("archive") or {}).get("state") in ("found", "saved"):
+            continue
+        rec["archive"] = dict(archive_lookup(srcs[sid]["url"], fetch), checked=now)
+    (trial / "watch.json").write_text(json.dumps(state, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
+    return book
+
+
 # ---------- impact ----------
 
 def impact(trial: Path, ref: str) -> dict:
@@ -386,6 +609,11 @@ def queue(root: Path, today: str) -> list[dict]:
                     f"desk.py impact {trial.name} {sid}", f"{n} sentences cite it")
             elif rec.get("state") == "blocked":
                 add("source-changed", (rec.get("last_checked") or today)[:10], f"{sid} could not be re-checked ({rec.get('note', '')})", "", "record as blocked")
+        for sid, rec in (load_watch(trial).get("links") or {}).items():   # a cited source's link went stale
+            if rec.get("state") in ("changed", "gone"):
+                n = len(impact(trial, sid)["sentences"])
+                add("source-changed", today, f"{sid}: the link we cite {'is gone' if rec['state'] == 'gone' else 'now serves a different document'}",
+                    f"desk.py impact {trial.name} {sid}", f"{n} sentences cite it")
         for ev in (cfg.get("watch") or {}).get("events") or []:
             if ev.get("done"):
                 continue
@@ -458,10 +686,32 @@ def main(argv: list[str]) -> int:
     accept = "--accept" in argv
     no_refresh = "--no-refresh" in argv
     argv = [a for a in argv if a not in ("--fetch", "--accept", "--no-refresh")]
-    if not argv or argv[0] not in ("index", "watch", "queue", "impact", "brief"):
+    if not argv or argv[0] not in ("index", "watch", "queue", "impact", "brief", "links", "restore", "archive"):
         sys.exit(__doc__)
     cmd, args = argv[0], argv[1:]
     now = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    if cmd in ("links", "restore", "archive"):
+        only = args[1] if len(args) > 1 else None
+        for t in ([find_trial(root, args[0])] if args else trial_dirs(root)):
+            if cmd == "restore":
+                rows = restore(t, now, only=only)
+                for r in rows:
+                    if r["state"] != "cached":
+                        print(f"{t.name} {r['source']} {r['file']}: {r['state']}" + (f" ({r['note']})" if r.get("note") else "")
+                              + (f"; text: {', '.join(r['derived'])}" if r.get("derived") else ""))
+                print(f"{t.name}: {sum(1 for r in rows if r['state'] == 'cached')} already cached, "
+                      f"{sum(1 for r in rows if r['state'] == 'restored')} restored, "
+                      f"{sum(1 for r in rows if r['state'] not in ('cached', 'restored'))} not restored")
+            else:
+                book = links(t, now, http_fetch if fetch else None, only) if cmd == "links" else archive(t, now, only=only)
+                tally: dict[str, int] = {}
+                for sid, rec in book.items():
+                    s = rec.get("state", "never checked") if cmd == "links" else (rec.get("archive") or {}).get("state", "not asked")
+                    tally[s] = tally.get(s, 0) + 1
+                    if s not in ("same", "found", "saved", "never checked"):
+                        print(f"{t.name} {sid}: {s}")
+                print(f"{t.name}: " + ", ".join(f"{n} {s}" for s, n in sorted(tally.items())))
+        return 0
     if cmd == "index":
         print(table(index(root, today, refresh=not no_refresh)))
     elif cmd == "watch":

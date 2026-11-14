@@ -47,5 +47,411 @@
    "changes": 1
   }
  },
- "checked": "2026-11-14T01:22:34Z"
+ "checked": "2026-11-14T01:22:34Z",
+ "links": {
+  "S01": {
+   "files": {
+    "S01.pdf": {
+     "text_sha256": "8136c0def6d4705f5adb9b3594c898bb20ba8717de4c46c745fb01b8d522a045",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:42Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:42Z"
+  },
+  "S02": {
+   "files": {
+    "S02.json": {
+     "text_sha256": "4f0d95c78ec5cb848f4cea80dc667c522acaeef64d56f5aea14d6bee2942f2f7",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:42Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:42Z"
+  },
+  "S02b": {
+   "files": {
+    "S02b.json": {
+     "text_sha256": "314e99a6217b66a6ed4fd8b94ced71f0379164bf7ec0c9ea6a04c2de6057f642",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:42Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:42Z"
+  },
+  "S02c": {
+   "files": {
+    "S02c.json": {
+     "text_sha256": "c1826f5f164f06e6f7839cb290372add946ccadeef4990df9e5b92308c521ca3",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:42Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:42Z"
+  },
+  "S02d": {
+   "files": {
+    "S02d.json": {
+     "text_sha256": "1a54d90234d6f50a5c6e2d16d0c3393b6aaaa51df9b6ed5adadd423efe3c0a49",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:42Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:42Z"
+  },
+  "S03": {
+   "files": {
+    "S03.json": {
+     "text_sha256": "aebd3f0f17ccf0d6952dcad44a906f548277794ca28d5cc0ef11ffea3db550f4",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:42Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:42Z"
+  },
+  "S03b": {
+   "files": {
+    "S03b.json": {
+     "text_sha256": "c638c5e1cad92ff76e0ca6d5aee056b6f6af3c30627af756e51ceecc748ce10e",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:42Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:42Z"
+  },
+  "S03c": {
+   "files": {
+    "S03c.json": {
+     "text_sha256": "62939f44fac3eb56c39cbaca7cb05a2ac1f995bf760712f614901e92e16fb3f8",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:42Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:42Z"
+  },
+  "S04": {
+   "files": {
+    "S04.json": {
+     "text_sha256": "455c4bb08e6536b979e4944d354f0411b339bc781c43f6cfd8bb92db2e0170f2",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:42Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:42Z"
+  },
+  "S04b": {
+   "files": {
+    "S04b.json": {
+     "text_sha256": "ab9b26d612ecc6fca8cae97f5352998f8661f505a0cc28da737e3683c17574ae",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:42Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:42Z"
+  },
+  "S04c": {
+   "files": {
+    "S04c.json": {
+     "text_sha256": "4fcb8af1646d5393e2b5713fe93d95d4050efb4f63a658b3b5d90a5e2f00bae0",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:42Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:42Z"
+  },
+  "S04d": {
+   "files": {
+    "S04d.pdf": {
+     "text_sha256": "c7ccf8baac457e29e3a5de3f2956569bf9a443fbfb2038bdd463fa5f9bb4249f",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:42Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:42Z"
+  },
+  "S04e": {
+   "files": {
+    "S04e.json": {
+     "text_sha256": "ab749830211e30cec5ad50c78b5097ced6e187823b1e38826d4f113a4a24977d",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:42Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:42Z"
+  },
+  "S04f": {
+   "files": {
+    "S04f.json": {
+     "text_sha256": "fbbe02560a125f583c199eecb16e7944733f401b8e4db2bf7f0142a040738cfb",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:42Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:42Z"
+  },
+  "S05": {
+   "files": {
+    "S05.pdf": {
+     "text_sha256": "fd481a69fead877d819bd9804bede242e6a1792073f84dea45bdfa1fe27c0125",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:42Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:42Z"
+  },
+  "S05b": {
+   "files": {
+    "S05b.pdf": {
+     "text_sha256": "ce2dc2cfe5ed853d81f5ff298c8c46ff5707d43699566cec3674d55b8aef0e7f",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:42Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:42Z"
+  },
+  "S05c": {
+   "files": {
+    "S05c.pdf": {
+     "text_sha256": "4fa5ad0e4164404524d34cf80f12cead1a3723b886d84ffe0f9ee5f6a424cdcb",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:42Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:42Z"
+  },
+  "S06": {
+   "files": {
+    "S06.pdf": {
+     "text_sha256": "cd17c7d4504dd3cbb626700f13764f815a1a1230084d812518e1b5bf7d01f522",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:42Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:42Z"
+  },
+  "S07": {
+   "files": {
+    "S07.json": {
+     "text_sha256": "38d382e148731a36444001d8642603129872c8a5c84bee2fa37d59bbbc89e3a7",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:42Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:42Z"
+  },
+  "S07b": {
+   "files": {
+    "S07b.pdf": {
+     "text_sha256": "1c344797189bb04f711e32430dd1e313368a68c6cc0eb0369cdf5fef31a6f0c8",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:42Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:42Z"
+  },
+  "S08b": {
+   "files": {
+    "S08b.pdf": {
+     "text_sha256": "3ac2d030e1e137c084bc7ad0514e347932f6a2eac84420f9295fd99fdf7f114d",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:42Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:42Z"
+  },
+  "S09b": {
+   "files": {
+    "S09b.pdf": {
+     "text_sha256": "0c861de3cb341dc1eaa33225f39b55fe1f28e00b7bffc9533ef2cf9f5b6ce3b0",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:42Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:42Z"
+  },
+  "S10": {
+   "files": {
+    "S10.json": {
+     "text_sha256": "ce1798d5c676242e2d3f2da4e9c3ec6351f76bddbd005212a75aeb80f889ad9f",
+     "state": "unsure",
+     "http_status": 200,
+     "checked": "2026-11-14T03:20:44Z",
+     "testable": [],
+     "note": "the page's bytes and text differ, and none of our passages can be tested on this kind of file"
+    }
+   },
+   "state": "unsure",
+   "checked": "2026-11-14T03:20:44Z"
+  },
+  "S10b": {
+   "files": {
+    "S10b.bin": {
+     "text_sha256": "8a6c2877ba1f8f3e554a61434da2cca0562584a55438ea944f163160be9bbdfc",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:42Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:42Z"
+  },
+  "S10c": {
+   "files": {
+    "S10c.bin": {
+     "text_sha256": "30e19fb3eaf4e8c2242b43c97b5404653550b22d21bf4d9ce9ccc83cba53df72",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:42Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:42Z"
+  },
+  "S10d": {
+   "files": {
+    "S10d.bin": {
+     "text_sha256": "e01c433ac94d1cae5f8daf0790858c907285df6fef578c2773aa947c9c766239",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:42Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:42Z"
+  },
+  "S10e": {
+   "files": {
+    "S10e.bin": {
+     "text_sha256": "8d37ae87934e2d73a638d933a7a885ae732b159635ba3b3b263673915e02f51c",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:42Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:42Z"
+  },
+  "S11": {
+   "files": {
+    "S11.html": {
+     "text_sha256": "49e105ffc8c4e0da1af2a1267236c4be4604b1934a9bb54b401a1fbdc03a69ec",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:42Z",
+     "note": "bytes differ, visible text is the same"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:42Z"
+  },
+  "S20": {
+   "files": {
+    "S20.html": {
+     "text_sha256": "749c2adc372853b801cd8fc7f83699f86b7755c7ee9e123be1d1080921fff956",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:20:49Z",
+     "testable": [
+      "P-069",
+      "P-070",
+      "P-071",
+      "P-072",
+      "P-073"
+     ],
+     "note": "the page changed around them, but the 5 passages we can test are still there"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:20:49Z"
+  },
+  "S21": {
+   "files": {
+    "S21.html": {
+     "text_sha256": "a0b2414f6fceb2e4ec976a5f9c2bbf9c6df92968421ad1e5e0ccf273fbbf0d66",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:20:50Z",
+     "testable": [
+      "P-076",
+      "P-077",
+      "P-078",
+      "P-079",
+      "P-080"
+     ],
+     "note": "the page changed around them, but the 5 passages we can test are still there"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:20:50Z"
+  },
+  "S22": {
+   "files": {
+    "S22.html": {
+     "text_sha256": "e3aab0cafb67fe1be9a76de83c5845d57e9a16b770ba476927de2792090e4264",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:42Z",
+     "note": "bytes differ, visible text is the same"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:42Z"
+  },
+  "S05e": {
+   "files": {
+    "S05e.pdf": {
+     "text_sha256": "8bb67cad5357ced9f9414de6a49d1e3a1d7b906a223621d84642939f74d066e7",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:42Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:42Z"
+  }
+ }
 }

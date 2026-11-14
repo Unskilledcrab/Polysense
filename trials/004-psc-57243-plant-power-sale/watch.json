@@ -1,0 +1,335 @@
+{
+ "sources": {},
+ "links": {
+  "S01": {
+   "files": {
+    "S01.html": {
+     "text_sha256": "5595a6ae597f0a09d7c5c9b84e4b51e30502f30675098c112c859d83e7f4bba2",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:15:25Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:15:25Z"
+  },
+  "S02": {
+   "files": {
+    "S02-1.pdf": {
+     "text_sha256": "5e0cd8d47ced87fad96a7d12be0e3dcaf122d23f9507cd5749d6b8b069025bc4",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:15:25Z"
+    },
+    "S02-2.pdf": {
+     "text_sha256": "87a63db560384023ad99a0121b3a5083a4ddc2fbf70636d7c1e9c89f8585a7f1",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:15:25Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:15:25Z"
+  },
+  "S02b": {
+   "files": {
+    "S02b-1.pdf": {
+     "text_sha256": "801f9e19453bcee46c4adb1e4569437e7e92db04b9877452c17a93208c051dba",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:15:25Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:15:25Z"
+  },
+  "S03": {
+   "files": {
+    "S03-1.pdf": {
+     "text_sha256": "56572cd2b7e11005c01b827b5ad53dd76131e07e7986db0d660423052ac43c88",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:15:25Z"
+    },
+    "S03-2.pdf": {
+     "text_sha256": "53ed9bc5ad9934683e0d0a898da75d4bff045affe5d7d385666184f6cc644d90",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:15:25Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:15:25Z"
+  },
+  "S03b": {
+   "files": {
+    "S03b-1.pdf": {
+     "text_sha256": "7bf8b27d48e782d4f0d245ddcb75355eb4820b8cf1c979dc5e2bb8abf138eb1a",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:15:25Z"
+    },
+    "S03b-2.pdf": {
+     "text_sha256": "72765c112718e7b9f2e859ea878cd479c8c8f5f553b99bd8177d870ba0071269",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:15:25Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:15:25Z"
+  },
+  "S05": {
+   "files": {
+    "S05-1.zip": {
+     "text_sha256": "5da009f93222dc9b014e53fce9cd17174702abf2fc915282dcded29b48f14b77",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:15:25Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:15:25Z"
+  },
+  "S07": {
+   "files": {
+    "S07-1.zip": {
+     "text_sha256": "3cdbff2c4871dc5d31becacee703bf22801150ebb8a1f60b540247fab13c3e23",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:15:25Z"
+    },
+    "S07-2.pdf": {
+     "text_sha256": "dcbf9fa8e1d07db447b6433b3890dac00ce2c62b78e216e69d8b490ca7b9842e",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:15:25Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:15:25Z"
+  },
+  "S08": {
+   "files": {
+    "S08-1.pdf": {
+     "text_sha256": "9fce3abb0bb3f8b289858854b9dd178391874de3155d5968874411bc32431e59",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:15:25Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:15:25Z"
+  },
+  "S09": {
+   "files": {
+    "S09-1.pdf": {
+     "text_sha256": "0531380135707998a2bb7f271276738839cc920bbb364cf05b82151c9e0739d0",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:15:25Z"
+    },
+    "S09-2.pdf": {
+     "text_sha256": "0c79d5ee0a47e3478c0a1976e0bc1ac274c185dc398309f8b913d6ddc0a1ca7d",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:15:25Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:15:25Z"
+  },
+  "S10": {
+   "files": {
+    "S10-1.zip": {
+     "text_sha256": "3769e8d5ed10d6458a42734dee7eb58777d16ce620f0e2a3e3232e89ebd64336",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:15:25Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:15:25Z"
+  },
+  "S11": {
+   "files": {
+    "S11-1.zip": {
+     "text_sha256": "e62f5170b273f736ce47a62cf405765c8022b48a2f7dc8757c04ba2dcdaad842",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:15:25Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:15:25Z"
+  },
+  "S18b": {
+   "files": {
+    "S18b-1.zip": {
+     "text_sha256": "99ee3eedafdb64ffdc1f1130639284e1381f8c29b2065bfe6c47d3d099dbc272",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:15:25Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:15:25Z"
+  },
+  "S18": {
+   "files": {
+    "S18-1.zip": {
+     "text_sha256": "f5ee829842d49c142133d8b8527262c7d0243d716762bb8ad54c8b9b7b48d5e2",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:15:25Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:15:25Z"
+  },
+  "S12": {
+   "files": {
+    "S12-1.zip": {
+     "text_sha256": "5d6fc75e28b82a62e172d7025ac5991f07d2bbc75d8b26005f04e7fd3fd6046e",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:15:25Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:15:25Z"
+  },
+  "S13": {
+   "files": {
+    "S13-1.zip": {
+     "text_sha256": "d4a5eb12a63ebd9b77b4b0ed18678f307ca423fa486b4eedf7dc20ea80881440",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:15:25Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:15:25Z"
+  },
+  "S14": {
+   "files": {
+    "S14-4.pdf": {
+     "text_sha256": "3ee8604db63d896381db9b9c083246a8da0664a737f1c6ddf3f73decba49ba9b",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:15:25Z"
+    },
+    "S14-5.pdf": {
+     "text_sha256": "f43ae39e1d8e568f1261bdf34f0a1d355a3b938b42bbc02bedb6fe5b895a465b",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:15:25Z"
+    },
+    "S14-7.pdf": {
+     "text_sha256": "ff4a5e52ce5d4c2cf482ee57048954401517aadd4af51a8cca7cd7b05d2af99c",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:15:25Z"
+    },
+    "S14-8.pdf": {
+     "text_sha256": "3c80d3667ce400f2f8eb5db1caf58b1f6342cdfa4fc03fddba6792b5a1e14a64",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:15:25Z"
+    },
+    "S14-9.pdf": {
+     "text_sha256": "fe3866fa836c5ede6e3832a05c340b0174fc11503b66426637529b21f616a22d",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:15:25Z"
+    },
+    "S14-10.pdf": {
+     "text_sha256": "ebf9f2edb51ce3ec01f37af4c47075710241064880148fc6035e2bbc59ffb717",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:15:25Z"
+    },
+    "S14-11.pdf": {
+     "text_sha256": "e4f78f70880ce4d58aa708c6ad54576de3fcc2f7363ceb8092ccd237d5adc9fa",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:15:25Z"
+    },
+    "S14-12.pdf": {
+     "text_sha256": "e626e29227762b509fd20034225705c5db529f0b61a3e4f0e49482dab7058f60",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:15:25Z"
+    },
+    "S14-13.pdf": {
+     "text_sha256": "0dac8d7e969d6ad53c256bfaa56e5855eccdb7784ad2af82532dd4e146f558db",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:15:25Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:15:25Z"
+  },
+  "S14c": {
+   "files": {
+    "S14c-1.pdf": {
+     "text_sha256": "7dbc997027508e4d7be7aca7df2ffdd139b59b050c55d06f2d1fd4cfb8e1b58f",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:15:25Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:15:25Z"
+  },
+  "S15b": {
+   "files": {
+    "S15b-1.pdf": {
+     "text_sha256": "a3e4170cd49f58fcd660e18d106eb657b7b72bc55575fedb81d9111c38bc4101",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:15:25Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:15:25Z"
+  },
+  "S16": {
+   "files": {
+    "S16-1.zip": {
+     "text_sha256": "a29297d77d8f7cd3e8648ce210faba64c578e24d52a26e81e9cc2c62ba5d91aa",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:15:25Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:15:25Z"
+  },
+  "S20": {
+   "files": {
+    "S20.html": {
+     "text_sha256": "6b917ab5ad209ae702d71afeec59e0698dab1c75717402cefcd0e7cce7457ecd",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:15:25Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:15:25Z"
+  },
+  "S21": {
+   "files": {
+    "S21.html": {
+     "text_sha256": "be5e42085ec381eaeeb9bb557521c6fb7c68ef2ebded93b06f8aa7ab598f02a0",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:15:25Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:15:25Z"
+  }
+ }
+}

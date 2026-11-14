@@ -267,6 +267,8 @@ def build_workspace(trial: Path) -> dict:
     order = [x["id"] for x in srcs]
     used = sorted({p["source"] for p in passages.values()}, key=order.index)
     sources = {}
+    watch_file = trial / "watch.json"
+    links = (json.loads(watch_file.read_text(encoding="utf-8")).get("links") or {}) if watch_file.exists() else {}
     for s in srcs:
         if s["id"] not in used:
             continue
@@ -274,7 +276,10 @@ def build_workspace(trial: Path) -> dict:
         sources[s["id"]] = {"title": s.get("title"), "publisher": s.get("publisher"), "type": s.get("type"),
                             "typeLabel": TYPE_LABEL.get(s.get("type"), s.get("type")), "url": s.get("url"),
                             "retrieved_at": s.get("retrieved_at"), "sha256": sha, "method": s.get("method"),
-                            "short": short.get(s["id"], s["id"]), "why": why.get(s["id"])}
+                            "short": short.get(s["id"], s["id"]), "why": why.get(s["id"]),
+                            # Pointers, not copies (ADR 0016): an archived copy's link and whether the link still matches.
+                            "archive": ((links.get(s["id"]) or {}).get("archive") or {}).get("url"),
+                            "linkState": (links.get(s["id"]) or {}).get("state")}
     summary_path = trial / "verification" / "summary.json"
     verification = json.loads(summary_path.read_text(encoding="utf-8")) if summary_path.exists() else {
         "intro": "Checks have not run yet.", "stats": [], "sections": [], "verified": False}
@@ -292,7 +297,7 @@ def build_workspace(trial: Path) -> dict:
         "status": cfg.get("status") or [], "optionChips": cfg.get("option_chips") or {},
         "verified": bool(verification.get("verified")),
         "statusText": verification.get("statusText", "Checks pending"),
-        "disclosure": ("Drafted with AI help from the archived sources below. Every sentence links to its source or is "
+        "disclosure": ("Drafted with AI help from the sources below. Every sentence links to its source or is "
                        "labeled as our analysis. "
                        + ("Checked by automated tests and independent AI reviewers. " if verification.get("verified") else
                           "This draft has not passed our checks yet; see how we checked it. ")

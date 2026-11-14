@@ -1,599 +1,149 @@
 {
  "date": "2026-11-14",
- "reviewer": "first-publication panel on Sonnet: an advocate for VoltaGrid's positions, an advocate for the petitioners and the parties opposing dismissal, and a neutral editor",
- "neutrality": 3,
- "ratings": {
-  "neutral editor": 3,
-  "advocate: VoltaGrid's positions": 3,
-  "advocate: the petitioners, and the parties opposing dismissal": 3
+ "reviewer": "one Sonnet reviewer, reading the whole page from each side's seat after the first panel's fixes",
+ "neutrality": 4,
+ "summary": "No high-severity problems remain. The three earlier high issues are resolved: titles name their speakers, P-076 is quoted in full without 'own', and the bill-effect lines now carry P-055 and P-074. Remaining problems are medium: card 1 truncates the staff witness's disclaimer (P-078) and omits VoltaGrid's capacity account; the page's own voice uses VoltaGrid's description of the deal as a settled fact in the card 1 'What's uncertain' line (148) and in the line 214 question; line 103 and the card 4 title state Georgia EMC's position more broadly than P-053; card 5 misfiles one passage; the 30-second version leaves out the petitioners' stop-order request; and Outcome A and B 'Who pays' are unb",
+ "earlier_high_issues": [
+  {
+   "id": "a",
+   "status": "resolved",
+   "note": "All six titles now name the speaker: 'The petitioners say the plan is a power sale VoltaGrid has no right to make'; 'VoltaGrid says the PSC has no authority...'; 'VoltaGrid says the people who filed are not the interested parties...'; 'Georgia EMC says the PSC can enforce...'; 'Georgia Power says a "
+  },
+  {
+   "id": "b",
+   "status": "resolved",
+   "note": "P-076 is now quoted in full, with 'with cumulative Monthly Fees increasing as the installation scales', at lines 23, 144, 158 and 206, and the word 'own' is gone: 'A witness for the PSC's staff says the contract 'states Monthly Fees per kWh' of a blacked-out amount, 'with cumulative Monthly Fees inc"
+  },
+  {
+   "id": "c",
+   "status": "resolved",
+   "note": "Line 15 now reads: 'No filing we read puts an amount on any bill effect... A PSC staff witness's testimony 'considers potential risks to other Georgia Power customers.'' Line 16 now gives Georgia EMC's stranded-cost statement with a scoped 'no amount' note. Both lines are accurate to P-055 and P-074"
+  }
+ ],
+ "first_panel": {
+  "record": "fairness-panel-1.json",
+  "ratings": {
+   "neutral editor": 3,
+   "advocate: VoltaGrid's positions": 3,
+   "advocate: the petitioners, and the parties opposing dismissal": 3
+  },
+  "note": "Three seats each rated the first draft 3 of 5 and found one high-severity issue. All three were fixed, and this review found each resolved. Its medium and low notes that were not fixed with them are superseded by this review's list, which was made on the patched page."
  },
- "summary": "Each reviewer rated the first draft 3 of 5 and found one high-severity issue. All three were patched the same day, along with the title, the 30-second version, the outcome set, the values guide and the questions. The patches have not been re-reviewed, so the high issues stay listed and the page cannot pass.",
  "issues": [
   {
-   "seat": "editor",
-   "severity": "high",
-   "line": 137,
-   "issue": "Legal conclusions, predictions and a disputed reading of the contract are stated as fact in headings, the most-read part of a card. Attribution only appears one line below. 'Unregulated' and 'spread' are also loaded words in our voice. 'On-site' is itself disputed (the petition calls the data center 'neighboring', P-02",
-   "fix": "Name the speaker and use 'says' in every title. 1: 'Petitioners say the plan is a power sale VoltaGrid has no right to make'. 2: 'VoltaGrid says the PSC has no authority over a company serving one customer on that customer's site'. 3: 'VoltaGrid says the people who filed are not interested parties who may bring the cas",
-   "status": "Patched 2026-11-14: every card title now names its speaker. Not re-reviewed."
-  },
-  {
-   "seat": "voltagrid",
-   "severity": "high",
-   "line": 23,
-   "issue": "P-076 reads 'Monthly Fees per kWh of [blacked out], with cumulative Monthly Fees increasing as the installation scales.' The page turns this into 'per unit of energy' and says the 'amounts' are blacked out, but what is hidden is the text after 'of'. The unredacted clause that fees increase 'as the installation scales' ",
-   "status": "Patched 2026-11-14: the staff witness's sentence is quoted in full wherever it is used, and 'own' is gone. The evidence grades were not changed. Not re-reviewed."
-  },
-  {
-   "seat": "petitioners",
-   "severity": "high",
-   "line": 16,
-   "issue": "Contradicted by a filing the page cites elsewhere. Georgia EMC's response says stranded investment could have its 'costs thereof to be absorbed by the electric supplier's other consumers' (P-055), which is a stated, conditional effect on other consumers. Georgia EMC's whole case for opposing dismissal is this cost-shif",
-   "status": "Patched 2026-11-14: both bill lines now give the filed statements about other customers. Not re-reviewed."
-  },
-  {
-   "seat": "editor",
    "severity": "medium",
-   "line": 1,
-   "issue": "The case was brought by a nonprofit and residents, not by the regulators. 'Regulators' case' suggests the PSC is the complainant. The title also says the plant is 'built', while the petition says it is in 'advanced stages of building' (P-027) and a VoltaGrid executive says it has not begun operating (P-068).",
-   "fix": "# A Covington power plant for one data center: the case before Georgia's Public Service Commission"
+   "line": 147,
+   "issue": "The quote is cut so the disclaimer reads as covering the whole legal classification. P-078 says the witness has no opinion on whether the cited contract terms, 'standing alone,' resolve any legal classification. Card 6 (line 208) states it correctly; card 1 states it more broadly and weakens the petitioners' evidence.",
+   "fix": "The PSC staff's witness said 'I am not a lawyer and do not have an opinion as to whether, standing alone, they resolve any legal classification under Georgia law,' about the contract language the witness cited. [P-078]",
+   "status": "Patched 2026-11-14, before the whole-page read."
   },
   {
-   "seat": "editor",
    "severity": "medium",
-   "line": 8,
-   "issue": "A reader of this section alone does not learn who is accused, who filed, or that VoltaGrid says the PSC has no power over it and has asked to dismiss. 'Will decide whether a company may power' also skips the first hearing question, which is whether the PSC has power at all (P-021), so it overstates what the PSC will de",
-   "fix": "- **What's being decided:** A Newton County nonprofit and four nearby residents asked the Georgia Public Service Commission (PSC), which regulates utilities, to decide whether VoltaGrid, the company that built the plant, breaks two power laws by supplying one Covington data center. [P-027, P-035] VoltaGrid says the PSC"
+   "line": 145,
+   "issue": "Card 1 puts the staff witness's per-kWh sentence under 'What supports it' but leaves VoltaGrid's direct answer on how Serverfarm pays (same passage, P-046) out of the card. A reader of card 1 alone sees one side's fee evidence and not the other's.",
+   "fix": "Add after the quote: VoltaGrid's executive also said Serverfarm pays 'in amounts based on the Conversion Assets' producing capacity in operation, rather than a fee per kWh of energy that the Conversion Assets actually deliver.' [P-046]",
+   "status": "Patched 2026-11-14, before the whole-page read."
   },
   {
-   "seat": "editor",
    "severity": "medium",
-   "line": 15,
-   "issue": "Georgia EMC says stranded investment could be 'absorbed by the electric supplier's other consumers' (P-055), and the staff witness says the testimony 'considers potential risks to other Georgia Power customers' (P-074). Both are on this page. A reader who stops at the audience lines hears 'no effect stated', which unde",
-   "fix": "Replace the first sentence in both lines with: 'No excerpt we read gives an amount or an effect on your bill, as of Nov 14, 2026. Georgia EMC says a supplier's other consumers could absorb costs of stranded lines [P-055], and a PSC staff witness says testimony considers 'potential risks to other Georgia Power customers"
+   "line": 148,
+   "issue": "The page's own voice describes the deal as 'turning a customer's gas into power for a fee', which is VoltaGrid's account (P-046). The petitioners call it a plan 'to sell power' (P-027). Using one side's description inside the question gives that side the framing.",
+   "fix": "Whether VoltaGrid's arrangement with Serverfarm, which VoltaGrid describes as converting Serverfarm's gas into electricity for a fee and the petitioners describe as a power sale, is a retail sale of electricity is a legal question the PSC has not decided as of Nov 14, 2026. (Use the same neutral wording at line 214.)",
+   "status": "Patched 2026-11-14, before the whole-page read."
   },
   {
-   "seat": "editor",
    "severity": "medium",
-   "line": 14,
-   "issue": "The scope distinction itself is fair and well sourced. Its placement is lopsided. Residents get their harm claim and a reminder that the permit is elsewhere. VoltaGrid's account (state issued the air permit, P-065) is missing from the audience line and the timeline, so the notice of violation reads as an unanswered wro",
-   "fix": "Line 14: add 'VoltaGrid says the state Environmental Protection Division issued the plant's air permit. [P-065] A PSC ruling would not change that permit.' {analysis: the hearing questions (P-021) do not include the permit}. Line 69: append 'VoltaGrid says the state later issued the permit [P-065]; the date is not in t"
+   "line": 103,
+   "issue": "States the three positions as one shared position. Georgia EMC says the PSC's power to enforce the Territorial Act is distinct from its power to regulate public utilities (P-053); it does not say VoltaGrid is a regulated utility. Georgia Power says the service 'should be regulated' (P-058). P-037 is a quote of the statute in the petition, not a statement abo",
+   "fix": "On whether the PSC has power over VoltaGrid, the people who filed say the Cogeneration Act subjects VoltaGrid to the PSC [P-034]; Georgia EMC says the PSC's power to enforce the Territorial Act is separate from its power to regulate public utilities [P-053]; and Georgia Power says VoltaGrid's service 'should be regulated by the Commission' [P-058].",
+   "status": "Patched 2026-11-14, before the whole-page read."
   },
   {
-   "seat": "editor",
    "severity": "medium",
-   "line": 21,
-   "issue": "P-027 is the petition ('to sell power to a neighboring data center'), not VoltaGrid. The sentence credits VoltaGrid but cites the opposing party. Items 1-3 all give VoltaGrid's account of the money flow. The petitioners' account, that VoltaGrid sells power, is missing until item 4, so the section opens on one side's fr",
-   "fix": "Item 2: 'VoltaGrid, the plant's builder, says it will use its engines to convert that gas into electricity for Serverfarm's use. [P-046]' Add item: 'The petitioners say VoltaGrid is building the plant 'to sell power' to Serverfarm. [P-027] VoltaGrid says it 'will not sell that electricity to Serverfarm or to anyone els"
+   "line": 174,
+   "issue": "'Against any company' is broader than P-053, which says VoltaGrid conflates the PSC's regulatory power over public utilities with its power to enforce the Territorial Act. 'Could pay' compresses a conditional prediction in P-055 (costs 'could' be absorbed 'if' customers are picked off).",
+   "fix": "### 4. Georgia EMC says the PSC can enforce the Territorial Act apart from its power to regulate utilities, and that other customers could absorb stranded costs",
+   "status": "Patched 2026-11-14, before the whole-page read."
   },
   {
-   "seat": "editor",
    "severity": "medium",
-   "line": 38,
-   "issue": "The passage says 'summarily dismissing the case on such grounds before establishing and certifying a record on the issues would be premature and contrary to the direction of the Commission.' Dropping 'on such grounds' and trimming the quote makes it a general statement against dismissal. The same order says the electri",
-   "fix": "'The Hearing Officer wrote on Nov 4 that summarily dismissing the case 'on such grounds before establishing and certifying a record on the issues would be premature and contrary to the direction of the Commission.' [P-007, P-026] The same order says the electric-supplier question 'is central to this docket and nothing "
+   "line": 194,
+   "issue": "In card 5 this statement is filed under 'What challenges it', but it points toward Georgia Power's worry that such plants could serve more customers, so it supports the card. It is misfiled. Also 'What supports it' (line 192) holds Georgia Power's size and territory (P-060, P-061), which do not bear on whether plants would spread.",
+   "fix": "Move the P-092 sentence to 'What supports it'. Keep only VoltaGrid's P-093 sworn statement and P-064 under 'What challenges it'. Drop or relabel the P-060 sentence as background.",
+   "status": "Patched 2026-11-14, before the whole-page read."
   },
   {
-   "seat": "editor",
    "severity": "medium",
-   "line": 76,
-   "issue": "The order grants access 'subject to a protective agreement' that must 'reasonably protect' confidentiality (P-024). Leaving this out makes the order sound like an open release and omits the safeguard VoltaGrid would point to. It is a one-sided omission against VoltaGrid.",
-   "fix": "'...ordered that the petitioners' lawyers get access to papers VoltaGrid marked as a trade secret, under a protective agreement that 'reasonably protects and insures the confidentiality of the protected information.' [P-007, P-024]'"
+   "line": 109,
+   "issue": "In the summary surface, ending the case costs the public and ratepayers, while a violation finding costs two companies. The cost to neighbors rests on allegations. Line 14 and line 31 say the case is not about the air permit, yet Outcome A treats pollution as the result. Georgia EMC's statement (P-055) is general and not tied to this site, where the supplier",
+   "fix": "Add to Outcome A 'Who pays': 'Georgia EMC's statement is about suppliers' lines in general; no filing we read says it applies to this site or gives an amount. {editorial: scoped to the filings and excerpts we read}' Add to Outcome B 'Who pays': 'No filing we read says whether such an order would change the pollution neighbors describe, because the air permit",
+   "status": "Patched 2026-11-14, before the whole-page read."
   },
   {
-   "seat": "editor",
    "severity": "medium",
-   "line": 78,
-   "issue": "The page admits (line 36 and the Sources table) that the Nov 12 order has no readable text. P-009 gives only the title 'Chairman's Order Temporarily Staying Hearing Officer's Order'. The title does not name the Nov 4 order, and 'for now' is a guess about duration. The timeline states as known what the 'Not known' secti",
-   "fix": "'The PSC's Chairman issued an order titled 'Temporarily Staying Hearing Officer's Order.' [P-009] We could not read it, so which order it holds, and for how long, is not known. VoltaGrid's Nov 9 appeal had asked for a stay. [P-008]'"
+   "line": 166,
+   "issue": "Under the page's printed rule, Uncertain means deciding facts are blacked out, missing or not yet known. Card 3 turns on how the law reads (who is an interested party) and no deciding fact is missing, so 'no ruling yet' is not a reason to use Uncertain.",
+   "fix": "Header: Legal question (who counts as an 'interested party'). In short: Evidence: Legal question.",
+   "status": "Patched 2026-11-14, before the whole-page read."
   },
   {
-   "seat": "editor",
    "severity": "medium",
-   "line": 102,
-   "issue": "The page never says plainly that four parties filed against dismissal on Oct 16 or on what question each did so. It does not say the count does not settle anything. The line sits inside a list of values, so a skimmer reads it as a 3-to-1 tally. Staff asked only to defer the ruling (P-052). Georgia EMC took no position ",
-   "fix": "'On whether the PSC has power over VoltaGrid, the people who filed, Georgia EMC and Georgia Power each say it does. [P-037, P-053, P-058] The PSC's staff asked that the dismissal decision wait until after the hearing. [P-052] On whether the petitioners may bring the case, Georgia EMC took no position and Georgia Power "
+   "line": 200,
+   "issue": "The card's main premise is that the contract has VoltaGrid generate and deliver power to Serverfarm (P-075, P-077). VoltaGrid's executive describes the same arrangement as a service (P-046) and no party we read disputes the premise. The dispute is about how it is classified and how Serverfarm pays. P-076 does not say what the per-kWh figure measures, and 'in",
+   "fix": "Header: Legal question (whether the contract makes VoltaGrid a retail seller); Supported (the contract has VoltaGrid generate and deliver power to Serverfarm, which VoltaGrid's executive also describes); Uncertain (fee terms are blacked out, and we could not read the witness's direct testimony). Line 202: Evidence: Supported. Line 206: VoltaGrid's executive ",
+   "status": "Patched 2026-11-14, before the whole-page read."
   },
   {
-   "seat": "editor",
-   "severity": "medium",
-   "line": 104,
-   "issue": "The petitioners' winning path (B) is a post-hearing finding. VoltaGrid's only path (A) is an early dismissal, which the page itself reports the Hearing Officer called 'premature'. No outcome covers a post-hearing finding for VoltaGrid: no PSC power, petitioners not interested parties, or no violation. All four hearing ",
-   "fix": "Rename and widen A: 'Outcome A: Rule for VoltaGrid. What it does: the PSC would end the case with no ruling against VoltaGrid's plan, either by dismissing now or by finding after the hearing that it lacks power over VoltaGrid, that the petitioners may not bring the case, or that no law is broken. {analysis: results Vol"
-  },
-  {
-   "seat": "editor",
-   "severity": "medium",
-   "line": 115,
-   "issue": "Unequal evidence in parallel fields. Outcome A's cost side has two quoted party claims. Outcome B's has an analysis line plus a Georgia Power label, 'bridge power', that says nothing about who pays and hints the plant is temporary. The page does not say that no filing it read states a cost to VoltaGrid or Serverfarm. F",
-   "fix": "Delete the 'bridge power' sentence. Add: 'No filing we read states what an order would cost VoltaGrid or Serverfarm. {editorial: scoped to the filings and excerpts we read}'"
-  },
-  {
-   "seat": "editor",
-   "severity": "medium",
-   "line": 99,
-   "issue": "The source is conditional: an investment 'could become stranded (with the costs thereof to be absorbed...)' 'if future customers in the area can be picked off' (P-055). Our wording turns a possibility into a certainty. The page elsewhere labels this a prediction, so the summary surfaces contradict the card.",
-   "fix": "Line 99: 'Georgia EMC, a trade group for electric membership corporations (EMCs), says a supplier's line investment 'could become stranded (with the costs thereof to be absorbed by the electric supplier's other consumers)'. [P-055, P-062] Stranded means built but no longer used. {analysis: plain-language definition, no"
-  },
-  {
-   "seat": "editor",
-   "severity": "medium",
-   "line": 143,
-   "issue": "P-038 is paragraph 20 of the petition itself. Nothing in the passage shows it quotes Serverfarm's air permit papers. The attribution is not supported by the passage. The sentence is also about ownership and control, not about whether a retail sale occurs.",
-   "fix": "'The petition states: 'Serverfarm and VoltaGrid are separate companies with no cross ownership or direct control over each other's operations.' [P-038]' Tag the relevance with {analysis: goes to ownership, not to whether a sale occurs}."
-  },
-  {
-   "seat": "editor",
-   "severity": "medium",
-   "line": 143,
-   "issue": "VoltaGrid itself describes 'this service' (P-046). The quote does not separate the two accounts, so it does not support the petitioners' 'sale' claim. The witness opens with 'Based on the cited contract language' and says they have no opinion on legal classification (P-078). Placing a PSC staff witness first among supp",
-   "fix": "'A witness for the PSC's staff said on Nov 13, 2026, that the contract's statement of work 'states Monthly Fees per kWh'; the amounts are blacked out. [P-012, P-073, P-076]' Keep the 'ongoing service' quote only in card 6."
-  },
-  {
-   "seat": "editor",
-   "severity": "medium",
-   "line": 179,
-   "issue": "P-050 is the staff's summary of 'The Petitioners contend that...'. It is background, not staff backing Georgia EMC's stranded-cost or enforcement argument. Listing it as support makes the PSC staff appear aligned with Georgia EMC. Georgia EMC's member count is also an interest statement, not support for the argument.",
-   "fix": "Remove the staff sentence from 'What supports it'. Move the 'about 5 million Georgians' sentence to 'Who says it'. Add 'What supports it: No other filing we read gives support for the stranded-cost point. {editorial: scoped to the filings and excerpts we read}' if that holds."
-  },
-  {
-   "seat": "editor",
-   "severity": "medium",
-   "line": 211,
-   "issue": "Whether the plant is on Serverfarm's land is not shown in the passages. The petition calls the data center 'neighboring' (P-027), VoltaGrid calls the plant 'an on-site generator' (P-064), and the page lists no 'not known' item for it. Also, the three questions to weigh match VoltaGrid's cards 2, 3 and 5 plus the final ",
-   "fix": "Q1: 'Is a plant that serves one customer, which VoltaGrid says is on that customer's site, serving the public?' Add: 'Is turning a customer's gas into power for a fee a retail sale of electricity? {editorial: open question from cards 1 and 6}' Add to 'Not known yet': 'Whether the plant sits on Serverfarm's property: th"
-  },
-  {
-   "seat": "voltagrid",
-   "severity": "medium",
-   "line": 1,
-   "issue": "'Georgia regulators' case' reads as if the state is the accuser. The petition was brought by a nonprofit and four residents (P-029 to P-031), and the staff asked only to reserve the ruling (P-052). Whether the PSC has authority is the first contested question (P-021). 'Built' also sits oddly with an 'advanced stages of"
-  },
-  {
-   "seat": "voltagrid",
    "severity": "medium",
    "line": 8,
-   "issue": "Frames the case as a permission question, which assumes the PSC has the authority VoltaGrid disputes. The cited P-021 lists jurisdiction and standing first, and neither appears here. P-051 speaks of whether the project 'falls under the Commission's jurisdiction'. Suggested: 'The PSC will decide whether it has authority"
+   "issue": "The 30-second version gives the petitioners' request only as a question. P-035(b) also asks the PSC to order VoltaGrid to cease and desist. That is the largest stake for VoltaGrid and the data center, and it is in Layer 2 but not on this surface, while VoltaGrid's matching request (dismissal) is stated in the same bullet.",
+   "fix": "The filers ask whether VoltaGrid's power plant for one data center breaks two power laws, and ask the PSC to order VoltaGrid to stop any work that does. [P-035, P-027]",
+   "status": "Patched 2026-11-14, before the whole-page read."
   },
   {
-   "seat": "voltagrid",
    "severity": "medium",
-   "line": 38,
-   "issue": "P-026 opens with 'The Hearing Officer does not dispute that these issues are essential to this case'. Quoting only 'would be premature' (here and at line 170) reads as a rebuke of VoltaGrid. The full sentence says the issues are essential and the problem is timing. Add the clause."
+   "issue": "Card 3's evidence label did not follow the page's printed rule. Required: Legal question (who counts as an 'interested party'). The printed rule reserves Uncertain for blacked-out, missing or not-yet-known facts. This card turns only on how the Territorial Act reads, and the petitioners' location and role are not disputed, so Uncertain does not apply and the",
+   "status": "Patched 2026-11-14: the label now follows the rule."
   },
   {
-   "seat": "voltagrid",
    "severity": "medium",
-   "line": 98,
-   "issue": "The quote is cut mid-sentence and does not state the value in the line's label. It also drops the clause 'is negotiating bespoke rates with a sophisticated counterparty'. Its best-documented value is that a private arrangement between sophisticated parties, serving only the site owner, needs no public-utility oversight"
+   "issue": "Card 6's evidence label did not follow the page's printed rule. Required: Legal question (whether the contract makes VoltaGrid a retail seller); Supported (the contract has VoltaGrid generate and deliver power to Serverfarm); Uncertain (fee terms are blacked out, and we could not read the witness's direct testimony). The card's premise is that the contract h",
+   "status": "Patched 2026-11-14: the label now follows the rule."
   },
   {
-   "seat": "voltagrid",
-   "severity": "medium",
-   "line": 108,
-   "issue": "Both costs of dismissal are unproven claims (the page itself says no dollar figure and 'a prediction'). The first conflicts with the page's own statement that the air permit is a separate matter: a PSC dismissal does not decide whether the plant may emit. Outcome B's 'Who pays' is a labeled {analysis} sentence with no "
-  },
-  {
-   "seat": "voltagrid",
-   "severity": "medium",
-   "line": 121,
-   "issue": "Outcome C says the benefit and cost 'depend on the action', yet the fields are filled with Georgia Power's litigating position under 'benefits' and VoltaGrid's under 'pays'. These are positions, not benefits or costs, and they tilt the outcome toward Georgia Power. Either leave the fields at 'depends on the action' or "
-  },
-  {
-   "seat": "voltagrid",
-   "severity": "medium",
-   "line": 143,
-   "issue": "Present-tense 'is providing an ongoing ... service' is used as support with no note that VoltaGrid testified on Oct 9 that the plant has not commenced operation and has furnished no service to date (P-068). The page shows P-068 only at line 41. The witness's own qualifier that this is 'based on the cited contract langu"
-  },
-  {
-   "seat": "voltagrid",
-   "severity": "medium",
-   "line": 157,
-   "issue": "Both quotes stop before 'of [blacked out]' and before 'with cumulative Monthly Fees increasing as the installation scales'. Presented as the witness's account of fees per unit of energy delivered, set against VoltaGrid's 'rather than a fee per kWh of energy that the Conversion Assets actually deliver' (P-046). The reda"
-  },
-  {
-   "seat": "voltagrid",
-   "severity": "medium",
-   "line": 169,
-   "issue": "Card 3 lists one supporting item against five opposing items. Under 'What challenges it', the staff's remark is about timing, not about whether the petitioners are interested parties (P-052 only asks to reserve). Georgia EMC's and Georgia Power's silence on standing is neutral at best and favors VoltaGrid, since only t"
-  },
-  {
-   "seat": "voltagrid",
-   "severity": "medium",
-   "line": 197,
-   "issue": "The second half is a factual claim in the page's voice. Its source is a witness who gives no legal opinion (P-078) about a plant that has not started (P-068). The other card titles are phrased as each side's claim ('The PSC has no authority ...'), so this one should be 'the staff's witness says the contract describes ."
-  },
-  {
-   "seat": "voltagrid",
-   "severity": "medium",
-   "issue": "Missing outcome for VoltaGrid's full position. VoltaGrid argues it breaks neither law and is outside the PSC's authority. Outcome A is only a dismissal, which the page elsewhere reports the Hearing Officer called premature (line 38). Outcome C puts 'no action' under 'PSC has power'. There is no outcome for 'after the h"
-  },
-  {
-   "seat": "voltagrid",
-   "severity": "medium",
-   "issue": "Borrowed authority and padding in the opposing cards. Card 4 'What supports it' lists Georgia EMC's size (about 5 million Georgians) and a staff sentence (P-050) that is the staff's summary of the petitioners' contention plus a general description of the statute, not a finding that supports EMC's argument. Card 5 lists"
-  },
-  {
-   "seat": "voltagrid",
-   "severity": "medium",
-   "issue": "The values guide's first line offers air, noise and light as what to care about in a case the page itself says does not decide the air permit (lines 14 and 31). It is the only line whose stake the PSC case cannot deliver, and its quote ('already overburdened') is the most emotive of the five. Add a short scope note, or"
-  },
-  {
-   "seat": "voltagrid",
-   "severity": "medium",
-   "issue": "Questions to weigh omit the central contested legal questions: (1) does the Territorial Act's ban reach only 'electric suppliers' (P-066) or any company furnishing retail service (P-049)? (2) is converting a customer's own gas into its electricity for a fee a 'sale' or 'service' (P-046 vs P-034/P-077)? (3) should stand"
-  },
-  {
-   "seat": "voltagrid",
-   "severity": "medium",
-   "issue": "Evidence label on Card 3: The people who filed are not the 'interested parties' (VoltaGrid): proposes Legal question (no other grade). The page's own rule defines Uncertain as deciding facts that are blacked out, missing or not yet known. This card's claim type is 'legal', and no ruling yet is true of every legal card."
-  },
-  {
-   "seat": "voltagrid",
-   "severity": "medium",
-   "issue": "Evidence label on Card 2: PSC has no authority over a company that serves one on-site customer (VoltaGrid): proposes Legal question; Uncertain (VoltaGrid's sworn statement says it pursues no other customer now; the petitioners' brief says it explored others and made a May plan; we read no document behind that claim). T"
-  },
-  {
-   "seat": "voltagrid",
-   "severity": "medium",
-   "issue": "Evidence label on Card 1: power sale by a company with no right to serve the site (petitioners): proposes Legal question; Uncertain (what the fees are based on is hidden: the staff witness's 'per kWh of [blacked out]' and 'increasing as the installation scales' do not clearly conflict with VoltaGrid's capacity-based ac"
-  },
-  {
-   "seat": "voltagrid",
-   "severity": "medium",
-   "issue": "Evidence label on Card 6: Decide after the hearing; contract describes an ongoing service (staff): proposes Uncertain, with the same fee-basis explanation as card 1. Same truncated-quote issue. Also, the card is a procedural request (reserve ruling, P-052) plus a witness who disclaims a legal view (P-078); the 'Mixed' "
-  },
-  {
-   "seat": "voltagrid",
-   "severity": "medium",
-   "issue": "Missing argument: No captive customers and no competition among utilities: VoltaGrid says it is 'negotiating bespoke rates with a sophisticated counterparty', and that an on-site generator privately serving the site's owner 'does nothing to cause competition among public utilities; it does not, for example, put one uti"
-  },
-  {
-   "seat": "voltagrid",
-   "severity": "medium",
-   "issue": "Missing argument: VoltaGrid's textual argument that every Territorial Act prohibition runs only to 'electric suppliers', defined as a company 'otherwise subject to regulation by the commission'. It appears only as 'What challenges it' in the petitioners' card 1 and as a rebuttal in card 4, not as support in VoltaGrid's"
-  },
-  {
-   "seat": "voltagrid",
-   "severity": "medium",
-   "issue": "Missing argument: VoltaGrid's account of the deal structure as a conversion service for the customer: Serverfarm supplies and owns the gas, VoltaGrid converts it into 'Serverfarm's electricity to be used by Serverfarm', VoltaGrid does not buy the gas, take ownership of the electricity or sell it, and is paid on capacit"
-  },
-  {
-   "seat": "voltagrid",
-   "severity": "medium",
-   "issue": "Missing argument: No service has been furnished yet: the plant has not commenced operation and has 'not furnished any service to Serverfarm or the ATL2 Data Center to date.' This is VoltaGrid's testimony on the 'furnishes service' element, but the page shows it only as a status note in 'Not known yet', not as part of a"
-  },
-  {
-   "seat": "voltagrid",
-   "severity": "medium",
-   "issue": "Missing argument: The petitioners' own description of their interests is environmental and about siting preference ('preventing small and medium sized power plants ... when more efficient power generation is available from utility-scale plants'), plus 'fair and equal enforcement'. That is documentary support for VoltaG"
-  },
-  {
-   "seat": "voltagrid",
-   "severity": "medium",
-   "issue": "Missing argument: Georgia EMC took no position on standing and Georgia Power limited its answer to the PSC's authority, so on the standing question VoltaGrid is answered in the record we read only by the petitioners and (on timing) the staff. The page prints these facts but files them under 'What challenges it' (card 3"
-  },
-  {
-   "seat": "voltagrid",
-   "severity": "medium",
-   "issue": "Missing argument: The Hearing Officer 'does not dispute that these issues are essential to this case' and calls the electric-supplier question 'central to this docket'. The page quotes only 'would be premature' (lines 38 and 170), which reads as a rebuke of VoltaGrid. The full clause supports VoltaGrid's position that "
-  },
-  {
-   "seat": "voltagrid",
-   "severity": "medium",
-   "issue": "Missing argument: VoltaGrid's reasons for its emergency appeal: the trade-secret disclosure order comes before standing and jurisdiction are resolved, and 45 documents (about 486 pages) remain designated trade secret. The timeline (line 77) and 'Decided separately' (line 30) give no reason. It appears only inside card "
-  },
-  {
-   "seat": "petitioners",
-   "severity": "medium",
-   "line": 1,
-   "issue": "Reads as if regulators brought the case. The petitioners (a nonprofit and four residents) filed it, and the title never mentions them or any complaint. 'Built to run one data center' adopts VoltaGrid's one-customer framing. The petition says the plant was built 'to sell power to a neighboring data center' (P-027), and "
-  },
-  {
-   "seat": "petitioners",
-   "severity": "medium",
-   "line": 8,
-   "issue": "This is not what P-021 lists. The hearing decides whether the PSC has jurisdiction over VoltaGrid, whether the petitioners are interested parties, whether the plan violates the Territorial or Cogeneration Act, and whether action is needed. The wording 'a company ... its own plant' sounds like self-supply, which is Volt"
-  },
-  {
-   "seat": "petitioners",
-   "severity": "medium",
-   "line": 14,
-   "issue": "The scope note is accurate (the four hearing questions in P-021 do not cover the permit). But it is the first thing a neighbor reads. It tells them their stated reason for filing (P-032) is outside the case, before the harms are mentioned, and the harms get one clause with 'say'. The bullet cites only the petitioners' "
-  },
-  {
-   "seat": "petitioners",
-   "severity": "medium",
-   "line": 15,
-   "issue": "Leaves out that the PSC staff's own witness says the testimony 'considers potential risks to other Georgia Power customers' (P-074). The page mentions this only deep in 'Not known yet' (line 40). A Georgia Power customer who reads only this bullet gets reassurance the staff testimony does not give. Add one clause: staf"
-  },
-  {
-   "seat": "petitioners",
-   "severity": "medium",
-   "line": 143,
-   "issue": "P-038 is a list item from petition p.9, para. 20, and the passage does not show it is quoted from Serverfarm's air permit papers. If the source was not that, the petitioners' main supporting fact is mis-attributed. Check or reword to 'The petition says...'. Also, this is the petition's own assertion presented as 'What "
-  },
-  {
-   "seat": "petitioners",
-   "severity": "medium",
-   "line": 146,
-   "issue": "The sentence in P-078 continues: '...as to whether, standing alone, they resolve any legal classification under Georgia law.' The witness disclaims only whether the quoted contract terms alone settle the legal classification. The page's cut quote and its paraphrase make it sound as if the staff witness offered no view "
-  },
-  {
-   "seat": "petitioners",
-   "severity": "medium",
-   "line": 98,
-   "issue": "The label 'freedom to make private on-site power deals' is the page's and is not in the quote. P-043 is a rhetorical claim that VoltaGrid is not a monopoly and has no special privileges, in a sentence that also says it is 'negotiating bespoke rates with a sophisticated counterparty.' Other lines name the value with con"
-  },
-  {
-   "seat": "petitioners",
-   "severity": "medium",
-   "line": 211,
-   "issue": "Builds in VoltaGrid's facts ('one customer', 'on that customer's land') and VoltaGrid's legal test ('serve the public', P-041). The petition describes a 'neighboring data center' (P-027), and the petitioners dispute the one-customer premise (P-092). The petitioners and Georgia EMC say the Territorial Act applies withou"
-  },
-  {
-   "seat": "petitioners",
-   "severity": "medium",
-   "issue": "Card count and framing. VoltaGrid has two cards, about 650 words together, and the petitioners one, about 330. Two VoltaGrid cards is defensible on its face, because the motion makes two separate arguments (jurisdiction and standing). The petitioners also make more than one argument (Territorial Act, Cogeneration Act, "
-  },
-  {
-   "seat": "petitioners",
-   "severity": "medium",
-   "issue": "'Where the money comes from' (lines 20-24): three of the four substantive items are VoltaGrid's affidavit account, using VoltaGrid's word ('that service'). The petition's account that VoltaGrid is 'selling its energy to Serverfarm' (P-027, P-034) is not stated in the section. The staff witness's contrary account is one"
-  },
-  {
-   "seat": "petitioners",
-   "severity": "medium",
-   "issue": "Misfiled evidence in card 5 (line 193). The petitioners' statement that VoltaGrid 'has explored serving other Georgia customers' (P-092) is listed under 'What challenges it' next to VoltaGrid's denial, as if both challenged Georgia Power's spread argument. The petitioners' statement supports Georgia Power's concern. It"
-  },
-  {
-   "seat": "petitioners",
-   "severity": "medium",
-   "issue": "The 'Uncertain' labels do not say why. The fee terms are blacked out because VoltaGrid designates documents trade secret and the access order is stayed (P-079, P-024, P-009). The page prints the blackout as a gap in the petitioners' card (card 1) and the staff card (card 6) but not on card 2, even though VoltaGrid's de"
-  },
-  {
-   "seat": "petitioners",
-   "severity": "medium",
-   "issue": "Evidence label on Card 1: the plan is a power sale by a company with no right to serve the site (petitioners): proposes Keep 'Legal question' and 'Mixed.' Keep 'Uncertain' only if card 2 gets the same tag. Replace the reason with 'Uncertain (fee terms are blacked out; the contract is held as trade secret)'.. The label "
-  },
-  {
-   "seat": "petitioners",
-   "severity": "medium",
-   "issue": "Evidence label on Card 2: PSC has no authority over a company that serves one on-site customer (VoltaGrid): proposes Add 'Uncertain (the Serverfarm Agreement is not public; VoltaGrid's account of it is its own affidavit)' and add the same line to 'What's missing.' Also quote the second half of P-092 in the Mixed descri"
-  },
-  {
-   "seat": "petitioners",
-   "severity": "medium",
-   "issue": "Evidence label on Card 3: petitioners are not 'interested parties' (VoltaGrid): proposes 'Legal question (who counts as an interested party)' only, or add 'Contested: staff opposes early dismissal (P-051); Hearing Officer called dismissal on these grounds premature (P-026).'. Under the page's definition 'Uncertain' is "
-  },
-  {
-   "seat": "petitioners",
-   "severity": "medium",
-   "issue": "Evidence label on Card 5: one-customer exception would let unregulated plants spread (Georgia Power): proposes Keep the label. Move the petitioners' P-092 from 'What challenges it' to 'What supports it,' and keep P-093 under 'What challenges it.'. The label is fair and matches the evidence (a prediction with no count)."
-  },
-  {
-   "seat": "petitioners",
-   "severity": "medium",
-   "issue": "Missing argument: The petitioners' direct reply to VoltaGrid's 'only electric suppliers' point: VoltaGrid breaks the Territorial Act by furnishing retail service without being assigned or chosen, 'regardless of whether VoltaGrid qualifies as an electric supplier.' It appears only in card 2's 'Who disagrees' (line 156)."
-  },
-  {
-   "seat": "petitioners",
-   "severity": "medium",
-   "issue": "Missing argument: The petitioners' strongest factual rebuttal to the 'one customer only' claim is cut in half. The page quotes only 'has explored serving other Georgia customers.' The next sentence says 'In May of this year, VoltaGrid even planned that it may sell the power from its power plant built for Serverfarm ..."
-  },
-  {
-   "seat": "petitioners",
-   "severity": "medium",
-   "issue": "Missing argument: The Cogeneration Act as a separate ground. The statute text bars sale of the energy 'to any other person' unless to an electric supplier, and the petition says VoltaGrid sells to Serverfarm, which is not a retail supplier. This ground does not depend on whether VoltaGrid is an 'electric supplier' in t"
-  },
-  {
-   "seat": "petitioners",
-   "severity": "medium",
-   "issue": "Missing argument: The petitioners' 'interested party' case as their own argument. The statute lets the PSC act on the complaint of 'any other interested party' (P-037). Their stated interests include air, light and noise pollution and 'fair and equal enforcement of the Territorial Act' (P-032). They argue that VoltaGri"
-  },
-  {
-   "seat": "petitioners",
-   "severity": "medium",
-   "issue": "Missing argument: Neighbor harm and state-record facts, tied to the near-plant bullet. A resident's own words: noise and light that 'will disturb our family, our property, our horses, our farm, and the rural character of Newton County' (P-072). The state air-permit review describes 33 gas engines, up to 90 MW, running "
-  },
-  {
-   "seat": "petitioners",
-   "severity": "medium",
-   "issue": "Missing argument: The staff witness's description of what the contract requires belongs in card 1's 'What supports it': operate and maintain the equipment, staff the site around the clock, phased Power Delivery to 90 MW, and Monthly Fees per kWh. This is the sharpest contrast with VoltaGrid's capacity-fee account, and "
-  },
-  {
-   "seat": "petitioners",
-   "severity": "medium",
-   "issue": "Missing argument: Why the blacked-out fee terms are blacked out. VoltaGrid designates 45 documents (about 486 pages) as trade secret, the Hearing Officer ordered access for the petitioners' counsel, and the Chairman's Nov 12 order temporarily stays that order. Without this, 'Uncertain (fee terms are blacked out)' on th"
-  },
-  {
-   "seat": "editor",
    "severity": "low",
-   "line": 16,
-   "issue": "The expansion 'electric membership corporation' is not in the cited passages. P-062 calls the members 'electric distribution cooperatives'. Low risk, but it is an uncited definition.",
-   "fix": "Say 'electric membership corporation (EMC), a member-owned electric cooperative' and cite [P-062], or tag the expansion {analysis: plain-language definition, not from the cited sources}."
+   "line": 140,
+   "issue": "Mixed is the right label under the rule, but the reason given is the weakest one. The clear factual conflict is the petition's 'selling its energy to Serverfarm' (P-034) against VoltaGrid's sworn 'will not sell that electricity' (P-046). P-076 does not show a conflict with VoltaGrid's capacity account.",
+   "fix": "Mixed (the petition says VoltaGrid is selling energy to Serverfarm; VoltaGrid's executive says it will not)",
+   "status": "Open."
   },
   {
-   "seat": "editor",
    "severity": "low",
-   "line": 98,
-   "issue": "The quote (P-043) is about VoltaGrid not being a monopoly utility. It does not support the 'freedom to make private on-site power deals' label. A better match for the stated value is in P-064. 'Antithesis of a monopoly' is also the weakest rhetoric of VoltaGrid's case, while the other four lines use plain statements of",
-   "fix": "'If you care most about letting a site owner choose its own on-site power: VoltaGrid says an on-site generator serving the site's owner 'does nothing to cause competition among public utilities.' [P-064]'"
+   "line": 168,
+   "issue": "The passage is about concerns raised in another agency, not about whether the Territorial Act protects the petitioners' interests, which is the card's premise (P-042). The cut quote also drops the context of 'This is demonstrably false'. It reads as support for the standing argument, and it adds the permit point only to VoltaGrid's card.",
+   "fix": "What supports it: VoltaGrid said on Oct 26, 2026, that the petitioners 'raised the same concerns in another public regulatory agency', the state Environmental Protection Division, 'which issued the air quality permit.' [P-006, P-065] {editorial: the passage does not say how VoltaGrid ties this to the interested-party question}",
+   "status": "Open."
   },
   {
-   "seat": "editor",
    "severity": "low",
    "line": 70,
-   "issue": "P-030 and P-031 are two fragments of paragraphs. They do not show four residents or two households. Distances on a small county's few households can help identify them, which is against the privacy rule's intent, even with names left out.",
-   "fix": "'Sustainable Newton, a Newton County nonprofit, and four nearby residents (the petitioners) filed the petition.' {analysis: the petition was filed Jul 13 (P-002) and names the nonprofit (P-029); resident names and locations are left out under our privacy rule}. Cite where the count of four comes from, or drop it. Remov"
+   "issue": "Flip test: the timeline's only EPD entry is the one unfavorable to VoltaGrid. VoltaGrid's statement that EPD issued the air permit is on lines 14, 42 and 168 but not in the timeline. P-065 does not support the notice of violation, so the second citation is inaccurate.",
+   "fix": "Cite [P-028] only for the first sentence. Add after the P-039 sentence: 'VoltaGrid's Oct 26 brief says EPD 'issued the air quality permit' for the project. [P-065] No filing we read gives the date. {editorial: scoped to the filings and excerpts we read}'",
+   "status": "Open."
   },
   {
-   "seat": "editor",
-   "severity": "low",
-   "line": 86,
-   "issue": "'Electric supplier' decides the case: VoltaGrid says it is not one (P-041). A first-time reader cannot follow the first hearing question. 'Petitioners' alternates with 'the people who filed'.",
-   "fix": "After question 1 add: ''Electric supplier' is a term the Territorial Act defines. VoltaGrid quotes it as 'any electric light and power company otherwise subject to regulation by the commission.' [P-066]' On first use of 'petitioners' (line 70) write 'the petitioners, the people who filed the case'. Gloss 'statement of "
-  },
-  {
-   "seat": "editor",
-   "severity": "low",
-   "line": 141,
-   "issue": "The fields are used the same way on all cards, which is good, but a newcomer cannot tell them apart. In card 2, petitioners appear in both. In card 4, a VoltaGrid quote that does not rebut Georgia EMC sits under 'What challenges it'. This blurs which evidence answers which claim.",
-   "fix": "Define the two fields in 'How to read these cards', e.g. 'Who disagrees: a party that says the card's main point is wrong. What challenges it: facts or documents that cut against the premise.' Move any item that fits neither to 'What's missing'."
-  },
-  {
-   "seat": "editor",
-   "severity": "low",
-   "line": 135,
-   "issue": "Staff, petitioners, Georgia EMC and Georgia Power all filed Oct 16. Document numbers on the filing list put staff first (229167), yet the staff card is last. The ordering rule is not followed for ties, and the party with no stake in the outcome gets the least prominent slot.",
-   "fix": "'Cards follow the order of each party's first filing. Filings on the same day follow the filing list's document numbers (staff, then Georgia EMC, then Georgia Power). VoltaGrid's two arguments stay together.' Then reorder cards 4-6 to staff, Georgia EMC, Georgia Power."
-  },
-  {
-   "seat": "editor",
-   "severity": "low",
-   "line": 181,
-   "issue": "This quote is undated, unlike every other quote on the card. It does not rebut Georgia EMC's stranded-cost argument, and on its own it could be read as a concession. The sentence just before it in P-064 is what carries VoltaGrid's reply.",
-   "fix": "'VoltaGrid said on Oct 26, 2026, that an on-site generator serving the site's owner 'does nothing to cause competition among public utilities; it does not, for example, put one utility's lines in another's territory.' [P-006, P-064]'"
-  },
-  {
-   "seat": "editor",
-   "severity": "low",
-   "line": 167,
-   "issue": "The passage opens 'This is demonstrably false, given that...' (P-065). The page does not say what VoltaGrid is answering. The sentence also invites readers to think the residents' pollution concerns were already heard and settled, which the passages do not show. It is unclear how the point supports the standing argumen",
-   "fix": "'VoltaGrid's reply brief says the petitioners raised the same concerns with the state Environmental Protection Division, 'which issued the air quality permit.' [P-006, P-065] The excerpt does not say what claim this answers, or how the petitioners respond.'"
-  },
-  {
-   "seat": "editor",
-   "severity": "low",
-   "line": 157,
-   "issue": "The same passage (P-092) adds that in May 2026 VoltaGrid 'planned that it may sell the power from its power plant built for Serverfarm... to other large load customers.' Leaving out the stronger half lets the card read as softer than the filing. VoltaGrid's executive statement (P-093) is in the present tense, so the tw",
-   "fix": "Add: 'The petitioners also say that in May 2026 VoltaGrid 'planned that it may sell the power from its power plant... to other large load customers.' [P-092] VoltaGrid's executive says it is not now pursuing other customers. [P-093]'"
-  },
-  {
-   "seat": "editor",
-   "severity": "low",
-   "line": 199,
-   "issue": "Staff asked the Hearing Officer to 'reserve making a decision' on the motion until after the hearing (P-052). That is a request to defer, which is narrower than opposing dismissal. The same card joins staff counsel's procedural request with a staff witness's reading of the contract, as if both were one position.",
-   "fix": "'Side: the PSC's staff; asks that the dismissal decision wait until after the hearing. Its witness gives a reading of the contract.'"
-  },
-  {
-   "seat": "editor",
-   "severity": "low",
-   "line": 40,
-   "issue": "The Sources table says the staff rebuttal testimony (S15b) was read in excerpts found by keyword search. 'The public copy we read' implies the whole document was read. 'Does not describe' is then stronger than what the authors can know.",
-   "fix": "'The excerpts of that testimony we read do not describe those risks, as of Nov 14, 2026.' {editorial: scoped to the excerpts of S15b we read}"
-  },
-  {
-   "seat": "editor",
-   "severity": "low",
-   "line": 51,
-   "issue": "Line 37 says the PSC's Nov 17 session could take up VoltaGrid's appeal, and the 24-hour comment rule applies to any Commission vote. 'No vote date is set in this case' can read as 'no vote is coming', which could cost a reader a comment window. Only the final vote date is unknown.",
-   "fix": "'No date is set for a final vote in this case as of Nov 14, 2026. A vote on another matter, such as VoltaGrid's appeal, could come sooner; no document we read says when, so this page cannot give a deadline.'"
-  },
-  {
-   "seat": "voltagrid",
-   "severity": "low",
-   "line": 14,
-   "issue": "Same permission framing as line 8. The neighbor bullet carries only the petitioners' harm claims, with no VoltaGrid answer (EPD issued the permit per VoltaGrid, P-065; plant not operating, P-068). The page itself says the case is not about the air permit. The claim is attributed, so this is low severity."
-  },
-  {
-   "seat": "voltagrid",
-   "severity": "low",
-   "line": 21,
-   "issue": "P-046 says VoltaGrid converts Serverfarm's gas into 'Serverfarm's electricity to be used by Serverfarm'. 'For the data center' drops the ownership point at the center of VoltaGrid's no-sale position."
-  },
-  {
-   "seat": "voltagrid",
-   "severity": "low",
-   "line": 69,
-   "issue": "The notice is the first timeline item, yet the page says air permits are outside this case. The entry cites P-065 (VoltaGrid says EPD later issued the permit) but never states that, so the adverse fact appears without its answer. Add: 'VoltaGrid says the EPD later issued the air permit [P-065]; we found no date.'"
-  },
-  {
-   "seat": "voltagrid",
-   "severity": "low",
-   "line": 87,
-   "issue": "P-022 asks 'whether Respondent is providing service or offering to provide service that is subject to the jurisdiction'. 'VoltaGrid's service' (also line 120 and line 187 'VoltaGrid's service falls under its power') presumes a service exists. VoltaGrid says it furnishes none to the public (P-041, P-068). Use the passag"
-  },
-  {
-   "seat": "voltagrid",
-   "severity": "low",
-   "line": 153,
-   "issue": "The citation does not support 'on that customer's site'. That wording is in P-064, which is in the reply brief, and the petition calls the data center 'neighboring' (P-027). The same premise shows up in card 2's title and in Question 1 ('on that customer's land'). This favors VoltaGrid: it is stated as settled, but the"
-  },
-  {
-   "seat": "voltagrid",
    "severity": "low",
    "line": 205,
-   "issue": "Truncated quote; see line 157. Add the redaction and the 'as the installation scales' clause."
+   "issue": "'The Hearing Officer's order' does not say which order. A reader may think it is about dismissal. P-081 is about the order to share trade-secret papers, which is not the staff's request. 'Wrongly' is the page's word for VoltaGrid's 'improperly'.",
+   "fix": "VoltaGrid said in its emergency appeal, filed Nov 9, 2026, that the Nov 4 order requiring it to share trade-secret papers 'improperly' came 'before resolving the issues of whether Petitioners have standing' and whether the PSC has power over VoltaGrid. [P-008, P-081]",
+   "status": "Open."
   },
   {
-   "seat": "voltagrid",
    "severity": "low",
-   "issue": "Tally line in the values guide: 'Three sides share one view: the people who filed, Georgia EMC and Georgia Power each say the PSC has power over VoltaGrid's plan.' It is written as a count of parties and names each, which is fair, and it does not say the question is settled. But it sits in a list of values, only tallie"
-  },
-  {
-   "seat": "voltagrid",
-   "severity": "low",
-   "issue": "Evidence base is uneven. The petition supplies 14 passages (P-027 to P-040) against 6 for VoltaGrid's brief and reply (P-041 to P-043, P-064 to P-066), and the brief and reply were read in excerpts (sources table). The page's general note (line 134) discloses excerpting, but VoltaGrid's two cards present complete posit"
-  },
-  {
-   "seat": "voltagrid",
-   "severity": "low",
-   "issue": "'What it means for you' has bullets for neighbors, Georgia Power customers and EMC customers, and none for a business or landowner who may want on-site or private power. The passages offer little for it, so this is a limit more than a bias, but all three bullets carry concerns raised by the other sides."
-  },
-  {
-   "seat": "voltagrid",
-   "severity": "low",
-   "issue": "VoltaGrid's trade-secret position (45 of about 4,700 pages still designated, appeal says disclosure should wait for standing and jurisdiction) is shown only as a gap ('Not known yet', line 42) and as a rebuttal in card 6, so the confidentiality is framed as the reason the public cannot know the terms. The timeline give"
-  },
-  {
-   "seat": "petitioners",
-   "severity": "low",
-   "line": 9,
-   "issue": "Lumps Georgia Power (an investor-owned utility), the EMCs (member-owned co-ops) and the data center into one 'affected' list. Their stakes differ: territory and a slated customer for Georgia Power (P-061), member interests for the EMCs (P-063). Utility customers, whom EMC and Georgia Power say they speak for, are left "
-  },
-  {
-   "seat": "petitioners",
-   "severity": "low",
-   "line": 30,
-   "issue": "P-024 is an order that already granted the petitioners' counsel access under a protective agreement. The bullet makes it sound open and omits that the Hearing Officer ruled for the petitioners and that the Chairman's order puts that ruling on hold (P-009). The status is in the timeline (lines 76-78) but not here, where"
-  },
-  {
-   "seat": "petitioners",
-   "severity": "low",
-   "line": 99,
-   "issue": "Slight overstatement of the party that opposes dismissal. The source says an investment 'could become stranded (with the costs thereof to be absorbed ...)' if customers 'can be picked off.' The page drops 'could' and the 'if.' It does keep the conditional elsewhere (line 108). Accuracy matters for credibility of the op"
-  },
-  {
-   "seat": "petitioners",
-   "severity": "low",
-   "line": 102,
-   "issue": "Merges three different bases. The petitioners say the Territorial Act applies 'regardless of whether VoltaGrid qualifies as an electric supplier' (P-049). Georgia EMC separates enforcing the Act from regulating public utilities (P-053). Georgia Power says the service 'is a public service' (P-058). P-037 is the statute'"
-  },
-  {
-   "seat": "petitioners",
-   "severity": "low",
-   "issue": "Label-line parity. Card 1 carries three tags (Legal question, Mixed, Uncertain). VoltaGrid's card 2 carries two (Legal question, Mixed) and card 3 two (Legal question, Uncertain), though card 2 shares the same blackout problem as card 1. Either add 'Uncertain (contract terms not public)' to card 2 or use the same two-t"
-  },
-  {
-   "seat": "petitioners",
-   "severity": "low",
-   "issue": "Line 169 puts 'Georgia EMC took no position on the point, and Georgia Power limited its answer to the PSC's authority' under 'What challenges it' for VoltaGrid's standing argument. Taking no position does not challenge anything. It is useful and fair information about where the opposing parties differ from the petition"
-  },
-  {
-   "seat": "petitioners",
-   "severity": "low",
-   "issue": "VoltaGrid's authority markers repeat: 'sworn statement' appears in cards 1, 2 and 5 (lines 144, 155, 193), the 'antithesis of a monopoly' quote appears twice (lines 98, 155), and a one-word 'No' to a legal-conclusion question is listed as a second source (line 154, P-069). The petitioners' resident and nonprofit testim"
-  },
-  {
-   "seat": "petitioners",
-   "severity": "low",
-   "issue": "Neighbor harm gets no evidence label and no card, while every other claim does. Because the PSC is not deciding the permit, a card may not be needed. A short line saying what the record shows (statements by residents, state description of 33 engines running continuously, a notice of violation, no emissions figures in t"
-  },
-  {
-   "seat": "petitioners",
-   "severity": "low",
-   "issue": "Where the opposing parties differ from the petitioners is only partly shown. The petitioners warn that giving the Act only to assigned utilities lets monopolies 'pick and choose their competitors' (P-048). Georgia Power, an assigned utility with a slated customer (P-061), argues for regulation in its own territory. Out"
+   "line": 14,
+   "issue": "The first half names only the substantive question. Two of the four hearing questions (P-021) are the PSC's power and the petitioners' standing, which are the threshold points VoltaGrid raises.",
+   "fix": "This Public Service Commission (PSC) case is about whether the PSC has power here and whether VoltaGrid's plan to power the data center breaks two laws, not about the plant's air permit.",
+   "status": "Open."
   }
  ]
 }

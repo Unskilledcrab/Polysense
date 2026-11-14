@@ -1,7 +1,7 @@
 {
  "verified": true,
  "statusText": "Passed our checks",
- "intro": "On Nov 8, 2026, this page was rewritten for readers new to the subject, after usability feedback: it now says what the law means for students, families and staff, and what each side says it protects. An AI agent wrote it from saved copies of its sources. Separate AI checkers, which never saw the drafting, then checked it in rounds. In this trial, no person checked the facts. Here is what the checkers did, what they found, and what is still open.",
+ "intro": "On Nov 8, 2026, this page was rewritten for readers new to the subject, after usability feedback: it now says what the law means for students, families and staff, and what each side says it protects. An AI agent wrote it from its sources as fetched at the time. Separate AI checkers, which never saw the drafting, then checked it in rounds. In this trial, no person checked the facts. Here is what the checkers did, what they found, and what is still open.",
  "stats": [
   {
    "value": "292",

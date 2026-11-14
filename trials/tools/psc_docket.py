@@ -26,7 +26,7 @@ from pathlib import Path
 import httpx
 
 sys.path.insert(0, str(Path(__file__).parent))
-from snapshot import UA, extension, served_name, visible_text  # noqa: E402
+from snapshot import POINTER_ONLY_MB, UA, extension, served_name, visible_text  # noqa: E402
 
 LIST = "https://psc.ga.gov/search/service-facts-docket/?docketId={}&sortDirection=DESC&sortColumn=Filed&searchText=&pageSize=200&pageNumber=1"
 PAGE = "https://psc.ga.gov/search/facts-document/?documentId={}"
@@ -60,6 +60,15 @@ def get(trial: Path, sid: str, doc: str, title: str, typ: str, publisher: str, d
         (raw / f"{sid}.txt").write_text(visible_text(page.content), encoding="utf-8")
         links = list(dict.fromkeys(FILE.findall(page.text)))
         for n, link in enumerate(links, 1):
+            # We keep pointers, not copies (ADR 0016): video, audio and very large files are recorded by link only.
+            with c.stream("GET", link) as head:
+                ctype = head.headers.get("content-type", "").split(";")[0].strip().lower()
+                size = int(head.headers.get("content-length") or 0)
+                big = ctype.startswith(("video/", "audio/")) or size > POINTER_ONLY_MB * 2 ** 20
+                if big:
+                    files.append({"pointer": True, "url": link, "content_type": ctype, "bytes": size, "seen_at": now(),
+                                  "note": "recorded by link only: video, audio or a very large file"})
+                    continue
             r = c.get(link)
             ctype = r.headers.get("content-type", "").split(";")[0].strip().lower()
             ext = extension(ctype, served_name(r.headers), link)

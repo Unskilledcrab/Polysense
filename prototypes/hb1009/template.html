@@ -608,11 +608,15 @@ footer { margin-top: 28px; font-size: .78rem; color: var(--muted); text-align: c
         if (p.note) c.appendChild(el("p", { class: "notice", text: "Note: " + p.note }));
       });
       var dl = el("dl");
-      [["Publisher", s.publisher], ["Captured", s.retrieved_at], ["SHA-256", s.sha256 ? s.sha256.slice(0, 16) + "…" : "n/a"], ["How captured", s.method]].forEach(function (r) {
-        if (!r[1]) return; dl.appendChild(el("dt", { text: r[0] })); dl.appendChild(el("dd", { class: r[0] === "SHA-256" ? "hash" : "", text: r[1] }));
+      [["Publisher", s.publisher], ["Read on", s.retrieved_at], ["Fingerprint", s.sha256 ? s.sha256.slice(0, 16) + "…" : "n/a"], ["How read", s.method]].forEach(function (r) {
+        if (!r[1]) return; dl.appendChild(el("dt", { text: r[0] })); dl.appendChild(el("dd", { class: r[0] === "Fingerprint" ? "hash" : "", text: r[1] }));
       });
       c.appendChild(dl);
+      // We link to where a source is hosted and keep a fingerprint of what we read; we don't host copies.
+      if (s.linkState === "gone" || s.linkState === "changed") c.appendChild(el("p", { class: "notice", text: (s.linkState === "gone"
+        ? "This link no longer serves the document." : "The document at this link has changed since we read it.") + " The passage above is as it was on the date shown." }));
       if (s.url) c.appendChild(el("a", { href: s.url, target: "_blank", rel: "noopener", text: "Open the original source ↗" }));
+      if (s.archive) c.appendChild(el("a", { href: s.archive, target: "_blank", rel: "noopener", text: "Archived copy (Internet Archive) ↗" }));
     });
     drawer(order.length > 1 ? order.length + " sources" : "Source", c, opener);
   }
@@ -860,7 +864,7 @@ footer { margin-top: 28px; font-size: .78rem; color: var(--muted); text-align: c
   function viewMethod() {
     var root = el("div", { class: "stack-lg" });
     root.appendChild(el("header", { class: "stack-sm" }, [el("p", { class: "eyebrow", text: "Our checks" }), el("h1", { class: "screen-title", text: "How we check" }),
-      el("p", { class: "lede", text: "An AI agent drafts each page from saved copies of its sources. Then separate checks run: automatic checks in code, an AI checker that tests each sentence against the passages it cites, a fairness review, and a test of the checker itself with hidden errors. A sentence is checked again only when it or its source changes. In this test, no person checks the facts." })]));
+      el("p", { class: "lede", text: "An AI agent drafts each page from its sources as fetched on the date shown. Then separate checks run: automatic checks in code, an AI checker that tests each sentence against the passages it cites, a fairness review, and a test of the checker itself with hidden errors. A sentence is checked again only when it or its source changes. In this test, no person checks the facts." })]));
     D.workspaces.forEach(function (w) {
       var stats = el("div", { class: "stats" });
       (w.verification.stats || []).forEach(function (st) { stats.appendChild(el("div", { class: "stat" }, [el("b", { text: st.value }), el("span", { text: st.label })])); });
@@ -1190,7 +1194,7 @@ footer { margin-top: 28px; font-size: .78rem; color: var(--muted); text-align: c
 
   function layerEvidence() {
     var L = el("section", { class: "layer" });
-    L.appendChild(layerHead("Sources", "Every source we cite, saved on the date shown. Anyone can download the original and compare its SHA-256 fingerprint."));
+    L.appendChild(layerHead("Sources", "Every source we cite, with the link where it is hosted and the date we read it. We keep a fingerprint of what we read, so anyone can check whether the document has changed since."));
     var list = el("div", { class: "sources" });
     W.sourceOrder.forEach(function (sid) {
       var s = W.sources[sid];
@@ -1199,7 +1203,7 @@ footer { margin-top: 28px; font-size: .78rem; color: var(--muted); text-align: c
         el("span", { class: "type" + (s.type === "primary-government" ? " primary" : ""), text: s.typeLabel }),
         el("h3", { text: s.title }),
         el("p", { class: "lede", text: s.why || "" }),
-        el("div", { class: "meta" }, [el("span", { text: "Captured " + (s.retrieved_at || "").slice(0, 10) }), el("span", { class: "hash", text: "fingerprint " + (s.sha256 || "").slice(0, 12) + "…" }), el("span", { text: pids.length + " passages" })])
+        el("div", { class: "meta" }, [el("span", { text: "Read " + (s.retrieved_at || "").slice(0, 10) }), el("span", { class: "hash", text: "fingerprint " + (s.sha256 || "").slice(0, 12) + "…" }), el("span", { text: pids.length + " passages" })])
       ]);
       var row = el("div", { class: "chips" });
       if (pids.length) { var b = el("button", { class: "linkbtn", type: "button", text: "Read the passages" }); b.addEventListener("click", function () { openPassages(pids, b); }); row.appendChild(b); }

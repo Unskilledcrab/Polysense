@@ -16,5 +16,238 @@
    }
   }
  },
- "checked": "2026-11-14T01:22:34Z"
+ "checked": "2026-11-14T01:22:34Z",
+ "links": {
+  "S01": {
+   "files": {
+    "hb1009-247117.pdf": {
+     "text_sha256": "093f7267b48801a7ad826e1beea9ae183b0ed08bc29d7d23046d506d8727d731",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:16Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:16Z",
+   "archive": {
+    "state": "found",
+    "url": "https://web.archive.org/web/20261108152151/https://www.legis.ga.gov/api/legislation/document/20252026/247117",
+    "captured": "20261108152151",
+    "checked": "2026-11-14T03:21:17Z"
+   }
+  },
+  "S03": {
+   "files": {
+    "hb1009-246996.pdf": {
+     "text_sha256": "cd0b0ca2b69bbef636c7e632e0ad081565f6857913dde4152e2937359d4cc548",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:16Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:16Z",
+   "archive": {
+    "state": "blocked",
+    "note": "ConnectError: [Errno 104] Connection reset by peer",
+    "checked": "2026-11-14T03:21:17Z"
+   }
+  },
+  "S09": {
+   "files": {
+    "S09.html": {
+     "text_sha256": "1c93bbf185b9096f31f938764750dfa4bc246bc208d1178abb520f5cdd319b8b",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:16Z",
+     "note": "bytes differ, visible text is the same"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:16Z",
+   "archive": {
+    "state": "found",
+    "url": "https://web.archive.org/web/20261021175454/https://gov.georgia.gov/press-releases/2026-05-05/gov-kemp-signs-bills-strengthening-literacy-and-k-12-schools",
+    "captured": "20261021175454",
+    "checked": "2026-11-14T03:21:17Z"
+   }
+  },
+  "S10c": {
+   "files": {
+    "S10c.html": {
+     "text_sha256": "1638f057913e0c5b3c90c10b42d67ae884cf8d589480f392c56e65fccdb29e1c",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:16Z",
+     "note": "bytes differ, visible text is the same"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:16Z",
+   "archive": {
+    "state": "found",
+    "url": "https://web.archive.org/web/20260716172326/https://opb.georgia.gov/budget-information/fiscal-notes/2025-2026-regular-session",
+    "captured": "20260716172326",
+    "checked": "2026-11-14T03:21:17Z"
+   }
+  },
+  "S12": {
+   "files": {
+    "S12.html": {
+     "text_sha256": "e7b67932c9aae3179b8da6b091971f7ac3102183f5b4d309fabe1678c16b47e5",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:20:41Z",
+     "testable": [
+      "P-031",
+      "P-032",
+      "P-033",
+      "P-034",
+      "P-035",
+      "P-036",
+      "P-070"
+     ],
+     "note": "the page changed around them, but the 7 passages we can test are still there"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:20:41Z",
+   "archive": {
+    "state": "found",
+    "url": "https://web.archive.org/web/20260517173142/https://sph.emory.edu/news/most-georgia-parents-support-banning-cellphones-high-schools-new-poll-finds",
+    "captured": "20260517173142",
+    "checked": "2026-11-14T03:21:17Z"
+   }
+  },
+  "S13a": {
+   "files": {
+    "S13a.html": {
+     "text_sha256": "3bc79f776e34d983988a1b6fe96ea0ac61d71add5d3b6e71e04ec794a3de4c3a",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:16Z",
+     "note": "bytes differ, visible text is the same"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:16Z",
+   "archive": {
+    "state": "blocked",
+    "note": "ConnectError: [Errno 104] Connection reset by peer",
+    "checked": "2026-11-14T03:21:17Z"
+   }
+  },
+  "S13b": {
+   "files": {
+    "S13b.html": {
+     "text_sha256": "82e25bc2ee1e13f926e95d787fcaec4f9852eef0f4a7fe5269f3e503f0aefb7c",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:16Z",
+     "note": "the page changed around them, but every passage we quote is still there"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:16Z",
+   "archive": {
+    "state": "found",
+    "url": "https://web.archive.org/web/20260415220502/https://research.birmingham.ac.uk/en/publications/school-phone-policies-and-their-association-with-mental-wellbeing/",
+    "captured": "20260415220502",
+    "checked": "2026-11-14T03:21:17Z"
+   }
+  },
+  "S16": {
+   "files": {
+    "S16.html": {
+     "text_sha256": "3c33556f319ff8089e99180d2a646e59f43a8e4fb81d2e48170ca1db84c41f1d",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:16Z",
+     "note": "the page changed around them, but every passage we quote is still there"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:16Z",
+   "archive": {
+    "state": "found",
+    "url": "https://web.archive.org/web/20260327151504/https://www.atlantanewsfirst.com/2026/03/12/georgia-bill-would-ban-high-school-cellphone-use-sparking-debate-over-enforcement-safety/",
+    "captured": "20260327151504",
+    "checked": "2026-11-14T03:21:17Z"
+   }
+  },
+  "S16b": {
+   "files": {
+    "S16b.html": {
+     "text_sha256": "bc92b816f5e4b7b9c2cc9841474f5626985d9c0ca07d1afd913f919b1b3dbe09",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:20:42Z",
+     "testable": [
+      "P-050",
+      "P-051",
+      "P-053",
+      "P-071",
+      "P-072"
+     ],
+     "note": "the page changed around them, but the 5 passages we can test are still there"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:20:42Z",
+   "archive": {
+    "state": "found",
+    "url": "https://web.archive.org/web/20260328210132/https://www.atlantanewsfirst.com/2026/03/17/georgia-high-school-cellphone-ban-bill-nears-final-passage/",
+    "captured": "20260328210132",
+    "checked": "2026-11-14T03:21:17Z"
+   }
+  },
+  "S19": {
+   "files": {
+    "S19-rendered.txt": {
+     "text_sha256": "2533f2fe620cfe31a7aad4d2ab97b4ffd19c7235c6f97d8ad50424ded373c1e7",
+     "state": "unsure",
+     "http_status": 200,
+     "checked": "2026-11-14T03:21:16Z",
+     "testable": [
+      "P-054"
+     ],
+     "note": "this page shows its text only in a browser, so a plain fetch can't re-check it"
+    }
+   },
+   "state": "unsure",
+   "checked": "2026-11-14T03:21:16Z",
+   "archive": {
+    "state": "blocked",
+    "note": "ConnectError: [Errno 104] Connection reset by peer",
+    "checked": "2026-11-14T03:21:17Z"
+   }
+  },
+  "S22": {
+   "files": {
+    "S22.html": {
+     "text_sha256": "d33c0e9295685c9fb991f4a2e24f7c798a4d81c008cf71a6075db7ec574d9a80",
+     "state": "same",
+     "http_status": 200,
+     "checked": "2026-11-14T03:19:16Z"
+    }
+   },
+   "state": "same",
+   "checked": "2026-11-14T03:19:16Z",
+   "archive": {
+    "state": "found",
+    "url": "https://web.archive.org/web/20261105010645/https://gov.georgia.gov/contact-us",
+    "captured": "20261105010645",
+    "checked": "2026-11-14T03:21:17Z"
+   }
+  },
+  "S02": {
+   "files": {},
+   "archive": {
+    "state": "found",
+    "url": "https://web.archive.org/web/20261021075557/https://www.legis.ga.gov/legislation/72304",
+    "captured": "20261021075557",
+    "checked": "2026-11-14T03:21:17Z"
+   }
+  }
+ }
 }

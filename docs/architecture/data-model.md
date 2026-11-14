@@ -37,7 +37,7 @@ stored.
 | Entity | Purpose | Key fields |
 |---|---|---|
 | Source | A document or page we rely on | url, publisher, **type** (primary-government, secondary-research, advocacy, news), license |
-| **Snapshot** | An immutable capture | source, `sha256`, storage key, archive URL, `fetched_at`, HTTP status and headers |
+| **Snapshot** | A pointer to what we read, not a stored copy ([ADR 0016](../adr/0016-pointers-not-copies.md)) | source, link, `sha256`, text fingerprint, archive URL, `fetched_at`, HTTP status and headers, link state (same, changed, gone); an optional cache key |
 | **Passage** | The unit we cite | snapshot, `extractor_version`, ordinal, page, character range, `text_sha` |
 | Decision / Option | The IBIS issue and its options | question, deciding organization, linked bill versions; `is_status_quo` |
 | Argument | One case for or against an option | option, stance, **provenance** (documented or anticipated), actor, quote passage |

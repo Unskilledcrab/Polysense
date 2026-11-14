@@ -1,7 +1,7 @@
 {
  "verified": false,
  "statusText": "57 sentences waiting for a check",
- "intro": "On Nov 14, 2026, an AI agent drafted this page from saved copies of its sources. Separate AI checkers, which never saw the drafting, then checked each sentence against the passages it cites, and a three-seat panel reviewed it for fairness. In this trial, no person checked the facts. This page has not finished its checks; here is what was done and what is still open.",
+ "intro": "On Nov 14, 2026, an AI agent drafted this page from its sources as fetched at the time. Separate AI checkers, which never saw the drafting, then checked each sentence against the passages it cites, and a three-seat panel reviewed it for fairness. In this trial, no person checked the facts. This page has not finished its checks; here is what was done and what is still open.",
  "stats": [
   {
    "value": "241",
