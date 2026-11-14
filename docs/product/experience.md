@@ -110,26 +110,37 @@ these patterns. They are experiments: keep the ones readers find easier, and cha
 - **It should feel like an app on the phone** (owner feedback, 2026-11-13). The third version uses the phone's
   own font, flat cards and lists, a pinned app bar with a back button, and a tab bar with icons (Home, Dates,
   How we check). Wide screens keep the menu at the top.
-- Home is a short list of decision cards. Each shows a topic icon and color, a countdown, the title, one
-  sentence and whether the page passed our checks. The whole card opens the decision.
+- **Simple first** (owner feedback, 2026-11-14: the earlier build was "the advanced view", too much for a first
+  visit). There are three levels, and each is one tap from the last:
+  1. **Home** shows one line on what the app is, then **one decision**: the one still being decided with the
+     soonest date, as a card with a topic icon and color, a countdown, the title, one sentence, whether it passed
+     our checks and one button, "Read in 1 minute". The other decisions are short rows under "More decisions".
+  2. **The short version** is what a decision opens to: what's being decided, what it means for you (pick your
+     situation), what's next, and two buttons, "See the full picture" and "What you can do". No pictures, no tabs.
+     Every line is a sentence from the full page with its source dot, so nothing new needs checking. The tests
+     hold it under 220 words, buttons and labels included (176 to 207 on the four pages).
+  3. **The full picture** is a walk-through of five numbered steps, one per screen: the details, what's being
+     decided, options, arguments, sources. A pinned header shows "Step 2 of 5" and a progress bar; tapping it
+     lists every step, so a reader can jump to any one. Back and Next are pinned at the bottom, and the last
+     step returns to the short version.
 - Topic colors and icons mark the subject (schools, power bills, county budget). They never mark a side or
   an option, and red and blue are not used.
-- A decision has one row of plainly named tabs (Summary, What it does, Options, Arguments, Sources), pinned
-  under the app bar.
-- Summary leads with the pictures, then "What it means for you", the 30-second version and "Not known yet".
-  Longer material (who decides, dates, the money trail) opens as a sheet from a list row.
-- "What you can do" is one button, pinned on every tab of a decision. It reads the same on every decision.
+- Step 1 ("The details") leads with the pictures, then "What it means for you", the 30-second version and "Not
+  known yet". Longer material (who decides, dates, the money trail) opens as a sheet from a list row.
+- "What you can do" is one button: on the short version, and in the pinned header of every step. It reads the
+  same on every decision.
 - Each sentence ends with a small numbered dot. Tapping it slides up the exact source passage.
-- "Not known yet" is never folded or put behind a tap.
-- Home has two groups, "Being decided" (soonest date first) and "Decided". Topic filter chips appear once there
-  are more than three decisions. No search box until there are more than ten.
+- "Not known yet" is never folded inside the full picture. The short version doesn't show that card; there, each
+  "If you…" line is shown whole, including its own "not known as of" sentence. **Open question for the owner:**
+  whether the short version should also carry a one-line "Not known yet" pointer.
+- The topic filter chips (shown once there are more than three decisions) and "If you want to weigh in" are on
+  the Dates screen, not Home. No search box until there are more than ten decisions.
 - A card shows "Updated Nov 13" for a week after a revision. A decision with a "What changed" section gets a row
   that opens it.
 - The app holds only what Home needs. A decision's full text is its own file, loaded when it is opened, so the
   app doesn't grow with every page.
 - Options and argument cards start folded, so readers see every option and both sides' claims before
   opening any of them.
-- Each tab ends with links to the next and previous tabs.
 - Tables become stacked cards on narrow screens.
 
 ## To try: questions to weigh

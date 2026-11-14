@@ -12,7 +12,7 @@ const { serve, settle } = require('./serve');
   const D = JSON.parse(src.match(/<script type="application\/json" id="data">([\s\S]*?)<\/script>/)[1]);
   const slugs = D.workspaces.map(w => w.slug);
   const kindOf = Object.fromEntries(D.workspaces.map(w => [w.slug, w.kind]));
-  const tabs = ['', '-decision', '-options', '-arguments', '-evidence', '-checks'];
+  const tabs = ['', '-overview', '-decision', '-options', '-arguments', '-evidence', '-checks'];
   const routes = ['home', 'decisions', 'dates', 'checks'].concat(...slugs.map(s => tabs.map(t => s + t)));
   for (const width of [390, 1280]) {
     const page = await browser.newPage({ viewport: { width, height: 900 }, reducedMotion: 'reduce' });
@@ -52,14 +52,14 @@ const { serve, settle } = require('./serve');
      'the app file carries a decision\'s full text');
   await get(slugs[1]);
   ok(asked.join(',') === slugs[1], `opening ${slugs[1]} asked for: ${asked.join(', ') || 'nothing'}`);
-  ok(await page.$('.tabs') !== null && await page.$('#loadnote') === null, `${slugs[1]} did not finish loading`);
+  ok(await page.$('.simple') !== null && await page.$('#loadnote') === null, `${slugs[1]} did not finish loading`);
   // If the data can't be fetched, the reader is told and can try again.
   await page.route('**/data/*.json', route => route.abort());
   await get(slugs[2]);
   ok(/couldn't be loaded/.test(await page.innerText('#app')) && await page.$('#loadnote button') !== null, 'a failed load shows no message or retry');
   await page.unroute('**/data/*.json');
   await page.click('#loadnote button'); await page.waitForTimeout(200); await settle(page);
-  ok(await page.$('.tabs') !== null, '"Try again" did not load the decision');
+  ok(await page.$('.simple') !== null, '"Try again" did not load the decision');
   // Headings follow the kind of decision.
   for (const s of slugs) {
     await get(s + '-decision'); const h = await page.innerText('.layer-head h2');
@@ -67,18 +67,18 @@ const { serve, settle } = require('./serve');
     ok(h === "What's being decided", `${s} decision heading is "${h}"`);
     await get(s + '-options'); const lede = await page.innerText('.layer-head .lede'); ok(!/lawmakers/i.test(lede), `${s} options lede mentions lawmakers`);
   }
-  // Summary: "What it means for you" card present on every page; no Decide chip on the PSC page.
+  // Step 1: "What it means for you" card present on every page; no Decide chip on the PSC page.
   for (const s of slugs) {
-    await get(s); ok(await page.$('section.you') !== null, `${s}: no "What it means for you" card`);
+    await get(s + '-overview'); ok(await page.$('section.you') !== null, `${s}: no "What it means for you" card`);
     const ifs = await page.$$eval('section.you .ifyou strong.lead', n => n.map(x => x.innerText));
     ok(ifs.length >= 2 && ifs.every(t => /^If (you|your)\b/i.test(t)), `${s}: "If you…" lines missing or mislabeled (${ifs.join(' | ')})`);
   }
   await get('psc-57171');
   // "Decide" is the reader's power; officials go under "Who decides". Check chips and field labels on every page.
   for (const s of slugs) {
-    await get(s);
-    // The actions live in the "What you can do" sheet, opened by the pinned button.
-    ok(await page.isVisible('#actbtn'), `${s}: no pinned "What you can do" button`);
+    await get(s + '-overview');
+    // The actions live in the "What you can do" sheet, opened from the pinned step header.
+    ok(await page.isVisible('#actbtn'), `${s}: no "What you can do" button in the step header`);
     await page.click('#actbtn'); await page.waitForTimeout(120);
     ok((await page.$$('.drawer .acard')).length >= 1, `${s}: "What you can do" opened no actions`);
     const labels = await page.$$eval('.power, .flabel, .label', n => n.map(x => x.innerText.trim()));
@@ -109,7 +109,7 @@ const { serve, settle } = require('./serve');
     ok(titles.length === 0 || titles.every(t => /^(Option|Plan|Outcome) [A-Z]: /.test(t)), `${s}: option titles without letters (${titles.join(' | ')})`);
     const named = await page.$$eval('.vguide .vline', n => n.map(x => x.innerText).join(' ').match(/\b(Option|Plan) [A-Z]\b/g) || []);
     named.forEach(k => ok(titles.some(t => t.startsWith(k + ':')), `${s}: values guide names "${k}", but no option card is titled that way`));
-    await get(s);
+    await get(s + '-overview');
     // Each Summary row opens a sheet with content and no sideways scroll; the money trail is drawn as steps.
     const rows = await page.$$('.layer .list button.row');
     ok(rows.length >= 2, `${s}: only ${rows.length} rows under the Summary`);
@@ -135,12 +135,12 @@ const { serve, settle } = require('./serve');
     ok(await page.$('.drawer') === null, `${s}: tapping outside didn't close the sheet`);
     const dots = await page.$$eval('.layer .src', n => n.map(x => (x.getAttribute('aria-label') || '').length));
     ok(dots.length > 3 && dots.every(l => l > 8), `${s}: a source dot has no spoken label`);
-    const head = await page.innerText('.billhead');
-    ok(!/fingerprint|round \d/i.test(head), `${s}: fingerprint or round number in the page header`);
+    for (const r of [s, s + '-overview']) { await get(r); const head = await page.innerText('.billhead');
+      ok(!/fingerprint|round \d/i.test(head), `${r}: fingerprint or round number in the page header`); }
   }
   // Reader-first visuals: a countdown badge; "pick your situation" swaps the line shown; pictures have text equivalents.
   for (const s of slugs) {
-    await get(s);
+    await get(s + '-overview');
     ok(await page.$('.billhead .datebadge') !== null, `${s}: no date badge`);
     const btns = await page.$$('section.you .pick button');
     ok(btns.length >= 2, `${s}: situation picker has ${btns.length} choices`);
@@ -152,7 +152,7 @@ const { serve, settle } = require('./serve');
     const imgs = await page.$$eval('.viz [role="img"]', n => n.map(x => x.getAttribute('aria-label') || ''));
     ok(imgs.every(t => t.length > 8), `${s}: a picture has no text equivalent`);
   }
-  for (const s of ['psc-57171', 'fulton-budget-2027', 'psc-57243'].filter(x => slugs.includes(x))) { await get(s); ok(await page.$('.viz') !== null, `${s}: no "At a glance" card`); }
+  for (const s of ['psc-57171', 'fulton-budget-2027', 'psc-57243'].filter(x => slugs.includes(x))) { await get(s + '-overview'); ok(await page.$('.viz') !== null, `${s}: no "At a glance" card`); }
   ok(!/localStorage|sessionStorage|indexedDB|document\.cookie/.test(src), 'the page stores something on the device');
   // "How we checked" must agree with the badge: a page that passed can't also say its changes weren't re-checked.
   for (const s of slugs) {
@@ -182,32 +182,89 @@ const { serve, settle } = require('./serve');
     return { mixed: pick('mixed'), uncertain: pick('uncertain') };
   });
   ok(!styles.mixed || !styles.uncertain || styles.mixed !== styles.uncertain, `Mixed and Uncertain look the same: ${JSON.stringify(styles)}`);
-  // Home: decisions first, one card each; then ways to weigh in. No address field.
+  // A first visit. Home: one line on what this is, ONE decision, and the rest as short rows. No filter, no lists.
   await get('home');
   ok((await page.innerText('h1')) === 'Decisions', 'home title');
-  ok((await page.$$('.dcard')).length === slugs.length, 'home: one card per decision');
+  ok((await page.$$('.dcard')).length === 1, 'home: more or fewer than one featured decision');
+  ok((await page.$$('.list a.row')).length === slugs.length - 1, 'home: "More decisions" does not list every other decision');
+  ok(await page.$('.filter') === null && await page.$('.row.item') === null, 'home still shows a filter or a dated list');
+  const homeWords = (await page.innerText('#app')).split(/\s+/).length;
+  ok(homeWords < 130, `home shows ${homeWords} words`);
+  // The featured decision is the open one with the soonest date; a decided one is never featured while one is open.
+  const featured = await page.$eval('.dcard a.cta', a => a.getAttribute('href').slice(1));
+  const today = new Date().toLocaleDateString('en-CA');
+  const nextOf = sl => D.home.sections.flatMap(x => x.items).filter(it => it.slug === sl && it.date && it.date >= today).map(it => it.date).sort()[0];
+  const openOnes = D.workspaces.filter(w => w.stage !== 'decided').map(w => [nextOf(w.slug) || '9999', w.slug]).sort();
+  ok(!openOnes.length || (nextOf(featured) || '9999') === openOnes[0][0], `home features ${featured}, but ${openOnes[0] && openOnes[0][1]} has the soonest date`);
+  // The short version: three blocks, two buttons, no step header, and under 220 words in all, buttons and labels included.
+  for (const s of slugs) {
+    await get(s);
+    ok(await page.$('.stephead') === null && await page.$('.viz') === null, `${s}: the short version shows the walk-through or pictures`);
+    const blocks = await page.$$eval('.simple .sblock', n => n.map(x => ({ h: x.querySelector('h2').innerText, dots: x.querySelectorAll('.src').length })));
+    ok(blocks.length === 3 && blocks.every(b => b.dots >= 1), `${s}: short version blocks ${JSON.stringify(blocks)}`);
+    ok(await page.isVisible('#fullbtn') && await page.isVisible('#actbtn'), `${s}: the short version lacks one of its two buttons`);
+    ok(!(await page.isVisible('#actbar')), `${s}: step buttons show on the short version`);
+    const words = (await page.innerText('.simple')).split(/\s+/).length;
+    console.log('short version words:', s, words);
+    ok(words < 220, `${s}: the short version shows ${words} words`);
+    const pick = await page.$$('.simple .pick button');
+    if (pick.length >= 2) { await pick[1].click();
+      const shown = await page.$$eval('.simple .ifyou', n => n.map(x => !x.hidden));
+      ok(shown.filter(Boolean).length === 1 && shown[1], `${s}: picking a situation on the short version didn't show only its line`); }
+    await page.click('#actbtn'); await page.waitForTimeout(120);
+    ok((await page.$$('.drawer .acard')).length >= 1, `${s}: "What you can do" on the short version opened no actions`);
+    await page.keyboard.press('Escape');
+    // "See the full picture" starts the walk-through at step 1; Next reaches all five steps; the last returns.
+    await page.click('#fullbtn'); await page.waitForTimeout(150); await settle(page);
+    const seen = [];
+    for (let i = 0; i < 5; i++) {
+      seen.push(await page.$eval('.stepbtn .n', x => x.textContent));
+      ok((await page.$$('.progress i.on')).length === i + 1, `${s}: progress bar wrong at step ${i + 1}`);
+      const y = await page.evaluate(() => window.scrollY); ok(y === 0, `${s}: step ${i + 1} opened scrolled to ${y}`);
+      await page.click('#stepnav a.next'); await page.waitForTimeout(150); await settle(page);
+    }
+    ok(seen.join('|') === [1, 2, 3, 4, 5].map(i => `Step ${i} of 5`).join('|'), `${s}: steps seen: ${seen.join(', ')}`);
+    ok((await page.evaluate(() => location.hash)) === '#' + s, `${s}: the last step did not return to the short version`);
+    // Back from step 2 is step 1; back from step 1 is the short version. The step list jumps anywhere.
+    await get(s + '-decision'); await page.click('#stepnav a.prev'); await page.waitForTimeout(150);
+    ok((await page.evaluate(() => location.hash)) === '#' + s + '-overview', `${s}: Back from step 2 went elsewhere`);
+    await page.click('#stepnav a.prev'); await page.waitForTimeout(150);
+    ok((await page.evaluate(() => location.hash)) === '#' + s, `${s}: Back from step 1 did not reach the short version`);
+    await get(s + '-overview'); await page.click('#stepbtn'); await page.waitForTimeout(120);
+    ok((await page.$$('.drawer .steplist a.row')).length === 6, `${s}: the step list doesn't show five steps and a way back`);
+    await page.click('.drawer .steplist a.row:nth-child(4)'); await page.waitForTimeout(150); await settle(page);
+    ok((await page.evaluate(() => location.hash)) === '#' + s + '-arguments' && await page.$('.drawer') === null, `${s}: the step list didn't jump to step 4`);
+    // The pinned Next button never covers the end of a step.
+    const clear = await page.evaluate(() => { window.scrollTo(0, 1e9); const f = document.querySelector('#app footer').getBoundingClientRect(), b = document.querySelector('#stepnav a').getBoundingClientRect(); return f.bottom <= b.top; });
+    ok(clear, `${s}: the pinned buttons cover the end of the step`);
+  }
+  // Dates holds the topic filter and the ways to weigh in.
+  await get('dates');
   const h2 = await page.$$eval('.home-sec > h2', n => n.map(x => x.childNodes[0].textContent.trim()));
-  ok(h2.includes('If you want to weigh in') && !h2.includes('Act now'), `home sections: ${h2.join(', ')}`);
-  ok(h2[0] === 'Being decided' && h2.includes('Decided'), `home groups: ${h2.join(', ')}`);
-  // The topic filter appears only when the list is long enough to need it; then a chip narrows the cards.
+  ok(h2[0] === 'If you want to weigh in' && !h2.includes('Act now'), `dates sections: ${h2.join(', ')}`);
   const chips = await page.$$('.filter button');
   ok((slugs.length > 3) === (chips.length > 0), `topic filter with ${slugs.length} decisions: ${chips.length} chips`);
   if (chips.length > 1) {
     await chips[1].click(); await page.waitForTimeout(120);
-    const left = await page.$$eval('.dcard .tlabel', n => [...new Set(n.map(x => x.innerText))]);
-    ok(left.length === 1, `one topic chosen, but cards show: ${left.join(', ')}`);
+    const name = await page.innerText('.filter [aria-pressed="true"]');
+    const left = await page.$$eval('.row.item .rlink', n => [...new Set(n.map(x => x.innerText.trim()))]);
+    ok(left.length === 1 && left[0] === name, `topic "${name}" chosen, but rows show: ${left.join(', ')}`);
     await page.click('.filter button'); await page.waitForTimeout(120);
   }
+  await get('home');
   ok(await page.$('input') === null, 'home has an input field');
   // The tab bar: three items, each with an icon and a label, each tall enough to tap.
   const tabbar = await page.$$eval('.bottom a', n => n.map(a => ({ t: a.innerText.trim(), svg: !!a.querySelector('svg'), h: a.getBoundingClientRect().height })));
   ok(tabbar.length === 3 && tabbar.every(a => a.t && a.svg && a.h >= 44), `tab bar: ${JSON.stringify(tabbar)}`);
-  // Tapping a card opens its decision; the back button returns Home.
-  await page.click('.dcard'); await page.waitForTimeout(150); await settle(page);
+  // Tapping the card opens that decision's short version; the back button returns Home. A row does the same.
+  await page.click('.dcard'); await page.waitForTimeout(150); await settle(page);   // the middle of the card, not the button
   ok(slugs.includes(await page.evaluate(() => location.hash.slice(1))), 'tapping a home card did not open a decision');
   ok(await page.$('.billhead') !== null, 'no decision header after tapping a card');
   await page.click('.back'); await page.waitForTimeout(150);
   ok((await page.evaluate(() => location.hash)) === '#home', 'the back button did not return Home');
+  await page.click('.list a.row'); await page.waitForTimeout(150); await settle(page);
+  ok(await page.$('.simple') !== null, 'tapping a "More decisions" row did not open a short version');
+  await page.click('.back'); await page.waitForTimeout(150);
   // After going in and back, Home is laid out at the screen's width (a class clash once made it thousands of pixels wide).
   const wide = await page.evaluate(() => Math.round(document.querySelector('.dcard').getBoundingClientRect().width));
   ok(wide <= 390, `Home cards are ${wide}px wide after going back`);

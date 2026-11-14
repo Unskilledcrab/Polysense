@@ -83,10 +83,13 @@ button { font: inherit; color: inherit }
 .actbar { position: fixed; left: 0; right: 0; bottom: calc(var(--bottom-nav) + env(safe-area-inset-bottom, 0px)); z-index: 6; pointer-events: none;
   padding: 18px max(16px, env(safe-area-inset-right, 0px)) 10px max(16px, env(safe-area-inset-left, 0px));
   background: linear-gradient(to top, var(--bg) 55%, transparent) }
-.actbar button { pointer-events: auto; width: 100%; max-width: 42rem; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 8px;
-  min-height: 50px; border: 0; border-radius: 14px; background: var(--ink); color: var(--bg); font-weight: 700; font-size: 1rem; cursor: pointer;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, .18) }
-.actbar button:active { transform: scale(.98) }
+.actbar .inner { pointer-events: auto; width: 100%; max-width: 42rem; margin: 0 auto; display: flex; gap: 8px }
+.actbar a { flex: 1; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 50px; padding: 0 14px; border: 0; border-radius: 14px; background: var(--ink); color: var(--bg); font-weight: 700; font-size: 1rem; cursor: pointer;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, .18); min-width: 0 }
+.actbar a.prev { flex: 0 0 auto; background: var(--surface); color: var(--ink) }
+.actbar a span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
+.actbar a:active { transform: scale(.98) }
 
 main { padding-block: 8px calc(var(--bottom-nav) + 32px + env(safe-area-inset-bottom, 0px)); overflow-x: clip }
 body.has-act main { padding-bottom: calc(var(--bottom-nav) + 104px + env(safe-area-inset-bottom, 0px)) }
@@ -94,7 +97,7 @@ body.has-act main { padding-bottom: calc(var(--bottom-nav) + 104px + env(safe-ar
   .nav { display: flex }
   .bottom { display: none }
   .actbar { bottom: 0; padding-bottom: 18px }
-  .actbar button { max-width: 22rem }
+  .actbar .inner { max-width: 26rem }
   main { padding-block: 16px 72px }
   body.has-act main { padding-bottom: 120px }
 }
@@ -204,14 +207,44 @@ button.row:active, .row.item:active { background: var(--sunk) }
 .disclose { font-size: .84rem; color: var(--muted); display: flex; gap: 8px; align-items: flex-start }
 .disclose::before { content: "i"; font: 700 .75rem/1.35rem var(--font); flex: 0 0 1.35rem; text-align: center; border-radius: 50%; border: 1px solid var(--muted) }
 
-/* Tabs: an underline strip, pinned under the app bar */
-.tabs { display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; position: sticky; top: calc(env(safe-area-inset-top, 0px) + var(--bar)); z-index: 4;
-  margin: 0 -16px; padding: 0 16px; background: var(--glass); border-bottom: 1px solid var(--line);
+/* Walk-through: a step header pinned under the app bar (which step, a progress bar, "What you can do") */
+.stephead { position: sticky; top: calc(env(safe-area-inset-top, 0px) + var(--bar)); z-index: 4; margin: 0 -16px; padding: 6px 16px 10px;
+  background: var(--glass); border-bottom: 1px solid var(--line); display: grid; gap: 8px;
   -webkit-backdrop-filter: saturate(1.6) blur(14px); backdrop-filter: saturate(1.6) blur(14px) }
-.tabs::-webkit-scrollbar { display: none }
-.tabs a { flex: 0 0 auto; text-decoration: none; color: var(--muted); font-size: .95rem; font-weight: 600; padding: 0 10px; min-height: 46px;
-  display: inline-flex; align-items: center; white-space: nowrap; border-bottom: 3px solid transparent; margin-bottom: -1px }
-.tabs a[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--topic) }
+.stephead .top { display: flex; align-items: center; gap: 10px }
+.stepbtn { flex: 1; min-width: 0; min-height: 44px; display: grid; gap: 1px; text-align: left; background: none; border: 0; padding: 0; color: var(--ink); cursor: pointer }
+.stepbtn .n { font: 700 .72rem/1.2 var(--font); letter-spacing: .06em; text-transform: uppercase; color: var(--muted) }
+.stepbtn .t { font: 700 1.05rem/1.25 var(--font); display: flex; align-items: center; gap: 4px }
+.stepbtn .t .ico { transform: rotate(90deg); color: var(--muted); flex: none }
+.actlink { flex: none; font: 700 .85rem/1.2 var(--font); min-height: 40px; padding: 0 14px; border-radius: 999px; border: 0; background: var(--topic-soft); color: var(--topic-ink); cursor: pointer }
+.actlink:active { opacity: .6 }
+.progress { display: flex; gap: 4px } .progress i { flex: 1; height: 4px; border-radius: 2px; background: var(--line) } .progress i.on { background: var(--topic) }
+.steplist a.row { text-decoration: none; color: inherit } .steplist a.row[aria-current="step"] .rtitle { color: var(--topic-ink) }
+.stepno { width: 32px; height: 32px; border-radius: 50%; background: var(--sunk); display: grid; place-items: center; font-weight: 700; flex: none }
+[aria-current="step"] .stepno { background: var(--topic); color: var(--on-topic) }
+
+/* Short version: three blocks and two buttons */
+.simple { display: flex; flex-direction: column; gap: 14px }
+.simple .billhead h1 { font-size: 1.35rem }
+.sblock { background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); padding: 16px; display: flex; flex-direction: column; gap: 10px }
+.sblock > h2 { font: 700 .72rem/1.3 var(--font); letter-spacing: .05em; text-transform: uppercase; color: var(--muted) }
+.sblock > p { font-size: 1.02rem }
+.cta { display: flex; align-items: center; justify-content: center; gap: 6px; min-height: 50px; padding: 0 18px; border-radius: 14px; border: 0; font: 700 1rem/1.2 var(--font);
+  text-decoration: none; cursor: pointer; background: var(--ink); color: var(--bg); width: 100% }
+.cta.alt { background: var(--surface); color: var(--ink); box-shadow: var(--shadow) }
+.cta:active { transform: scale(.98) }
+.ctas { display: grid; gap: 10px } .ctas .hint { text-align: center; font-size: .85rem; color: var(--muted) }
+@media (min-width: 720px) { .ctas { grid-template-columns: 1fr 1fr } .ctas .hint { grid-column: 1 / -1 } }
+
+/* Home: one decision first, the rest as rows */
+.what { font-size: 1.02rem; color: var(--muted); max-width: 40rem }
+.feature h2 { font-size: 1.3rem }
+/* No press-transform on the stretched button: a transform would shrink its tap area to the button itself mid-tap. */
+.feature .cta { position: static } .feature .cta:active { transform: none }
+.home-sec > h2.small { font: 700 .72rem/1.3 var(--font); letter-spacing: .06em; text-transform: uppercase; color: var(--muted) }
+a.row { text-decoration: none; color: inherit } a.row:active { background: var(--sunk) }
+.row .ticon { width: 32px; height: 32px; border-radius: 9px }
+.row .rsub b { color: var(--topic-ink); font-weight: 700 }
 
 /* Workspace content */
 .layer { display: flex; flex-direction: column; gap: 16px }
@@ -329,10 +362,6 @@ details.more > :not(summary) { padding: 0 14px 14px }
 .markup del { color: var(--del); background: var(--del-bg); text-decoration: line-through; text-decoration-thickness: 2px }
 .markup ins { color: var(--ins); background: var(--ins-bg); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px }
 
-/* Next and previous tab */
-.pager { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap }
-.pager a { min-height: 46px; display: inline-flex; align-items: center; padding: 8px 14px; border-radius: 12px; background: var(--surface); box-shadow: var(--shadow);
-  text-decoration: none; font-weight: 600; color: var(--ink) }
 .pager a.next { margin-left: auto }
 
 /* Sources list */
@@ -403,7 +432,7 @@ footer { margin-top: 28px; font-size: .78rem; color: var(--muted); text-align: c
 
 <main class="wrap" id="app" tabindex="-1"></main>
 
-<div class="actbar" id="actbar" hidden><button type="button" id="actbtn">What you can do</button></div>
+<div class="actbar" id="actbar" hidden><nav class="inner" id="stepnav" aria-label="Next and previous step"></nav></div>
 <nav class="bottom" aria-label="Main">
   <a href="#home" data-nav="home" data-icon="home"><span>Home</span></a>
   <a href="#dates" data-nav="dates" data-icon="calendar"><span>Dates</span></a>
@@ -418,13 +447,13 @@ footer { margin-top: 28px; font-size: .78rem; color: var(--muted); text-align: c
   var D = JSON.parse(document.getElementById("data").textContent);
   var app = document.getElementById("app");
   var W = D.workspaces[0];  // the decision being viewed; set by the router
-  // Tab ids stay stable (they are in links); the labels are plain words.
+  // The steps of the walk-through. Ids stay stable (they are in links); the labels are plain words.
   var LAYERS = [
-    { id: "overview", tab: "Summary" },
-    { id: "decision", tab: "What it does" },
-    { id: "options", tab: "Options" },
-    { id: "arguments", tab: "Arguments" },
-    { id: "evidence", tab: "Sources" }
+    { id: "overview", tab: "The details", why: "Pictures, every situation, what isn't known yet." },
+    { id: "decision", tab: "What it does", why: "What is actually on the table." },
+    { id: "options", tab: "Options", why: "The choices, and who gains or gives up what." },
+    { id: "arguments", tab: "Arguments", why: "What each side says, and how well the evidence backs it." },
+    { id: "evidence", tab: "Sources", why: "Everything we read, so you can check us." }
   ];
   var TAG_LABEL = { analysis: "Our analysis", editorial: "Our note", computed: "Our math" };
   // The reader's participation power, in plain words (stored as Decide / Input / Observe in the trial files).
@@ -483,7 +512,7 @@ footer { margin-top: 28px; font-size: .78rem; color: var(--muted); text-align: c
       if (k === "class") n.className = attrs[k];
       else if (k === "text") n.textContent = attrs[k];
       else if (k.slice(0, 2) === "on") n.addEventListener(k.slice(2), attrs[k]);
-      else n.setAttribute(k, attrs[k]);
+      else if (attrs[k] != null) n.setAttribute(k, attrs[k]);
     }
     (kids || []).forEach(function (c) { if (c != null) n.appendChild(typeof c === "string" ? document.createTextNode(c) : c); });
     return n;
@@ -742,8 +771,8 @@ footer { margin-top: 28px; font-size: .78rem; color: var(--muted); text-align: c
     var text = w.verified ? "Passed our checks" : (w.statusText || "Checks not finished");
     return el("a", { class: "okline" + (w.verified ? "" : " warn"), href: "#" + w.slug + "-checks", "aria-label": text + ": see how we checked this page" }, [icon("shield", 16), text]);
   }
-  // A decision card on Home: topic, countdown, title, one sentence, and whether it passed our checks. The whole
-  // card opens the decision. The title is never cut short: a clipped title can change its meaning.
+  // The decision card on Home: topic, countdown, title, one sentence, whether it passed our checks, and one button.
+  // The whole card opens the decision's short version. The title is never cut short: a clipped title can change its meaning.
   function decisionCard(w) {
     W = w;
     var sum = sectionById("summary"), c = countdown(w);
@@ -752,10 +781,11 @@ footer { margin-top: 28px; font-size: .78rem; color: var(--muted); text-align: c
     var fresh = u && (new Date(todayISO() + "T12:00:00") - u) / 864e5 <= 7;
     return el("article", { class: "card dcard " + tclass(w) }, [
       topicHead(w, c ? el("span", { class: "pill", text: c.text }) : null),
-      el("h2", null, [el("a", { class: "stretch", href: "#" + w.slug, text: w.title })]),
+      el("h2", { text: w.title }),
       sum && sum.blocks[0] ? el("p", { class: "dsum" }, [firstUnit(sum.blocks[0])]) : null,
       el("div", { class: "dfoot" }, [el("div", null, [c ? el("span", { text: "Next date: " + c.it.when }) : null,
-        fresh ? el("span", { class: "upd", text: "Updated " + MON[u.getMonth()] + " " + u.getDate() }) : null, statusLine(w)]), icon("chev", 16)])]);
+        fresh ? el("span", { class: "upd", text: "Updated " + MON[u.getMonth()] + " " + u.getDate() }) : null, statusLine(w)])]),
+      el("a", { class: "cta stretch", href: "#" + w.slug, "aria-label": "Read in 1 minute: " + w.linkText }, ["Read in 1 minute", icon("chev", 16)])]);
   }
   var MONTH = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
   var DAY = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
@@ -790,12 +820,48 @@ footer { margin-top: 28px; font-size: .78rem; color: var(--muted); text-align: c
     s.appendChild(list);
     return s;
   }
+  // The app's one-line account of itself, for a first visit.
+  var WHAT = "Public decisions in Georgia, explained. Every line links to its source.";
+  function byNextDate(a, b) { var x = nextDate(a.slug), y = nextDate(b.slug); return x && y ? (x < y ? -1 : x > y ? 1 : 0) : x ? -1 : y ? 1 : 0; }
+  // A compact row for a decision: topic icon, short name, and its next date (or that it is decided).
+  function decisionRow(w) {
+    var c = countdown(w);
+    return el("a", { class: "row " + tclass(w), href: "#" + w.slug }, [el("span", { class: "ticon" }, [icon(w.icon || "info", 18)]),
+      el("span", { class: "rbody" }, [el("span", { class: "rtitle", text: w.linkText }),
+        el("span", { class: "rsub" }, c ? [el("b", { text: c.text }), " · " + c.it.when] : [w.stage === "decided" ? "Decided" : (w.topic || "")])]), icon("chev", 16)]);
+  }
+  // Home shows one decision first: the one that is still open and has the soonest date. The rest are one tap away
+  // as short rows. No setup step, and nothing is stored.
   function viewHome() {
-    var h = D.home, root = el("div", { class: "stack-lg" }), today = todayISO(), now = new Date();
+    var root = el("div", { class: "stack-lg" }), now = new Date();
     root.appendChild(el("header", { class: "stack-sm" }, [
       el("p", { class: "eyebrow", text: "Georgia · " + DAY[now.getDay()] + ", " + MON[now.getMonth()] + " " + now.getDate() }),
       el("h1", { class: "screen-title", text: "Decisions" }),
-      el("p", { class: "lede", text: "What each decision is, where it stands and who it may affect." })]));
+      el("p", { class: "what", text: WHAT })]));
+    var all = D.workspaces.slice().sort(byNextDate);
+    var open = all.filter(function (w) { return w.stage !== "decided"; });
+    var first = open[0] || all[0], rest = open.filter(function (w) { return w !== first; }).concat(all.filter(function (w) { return w.stage === "decided" && w !== first; }));
+    var card = decisionCard(first); card.classList.add("feature");
+    root.appendChild(el("section", { class: "home-sec", "aria-labelledby": "h-first" }, [
+      el("h2", { id: "h-first", class: "small", text: nextDate(first.slug) ? "Happening next" : "Start here" }), card]));
+    if (rest.length) root.appendChild(el("section", { class: "home-sec", "aria-labelledby": "h-more" }, [
+      el("h2", { id: "h-more" }, ["More decisions", el("span", { class: "count", text: String(rest.length) })]),
+      el("div", { class: "list" }, rest.map(decisionRow))]));
+    root.appendChild(el("div", { class: "list" }, [sheetRow("info", "About this prototype", null, function () {
+      return el("div", { class: "stack" }, [
+        el("p", { text: "Each decision opens as a short version: what it is, what it means for you and what's next. “See the full picture” walks through the rest in five steps. Every sentence links to its source: tap the small number after it." }),
+        el("p", { text: "This is a prototype. It shows only the " + D.workspaces.length + " decisions we've explained so far. Nothing you do here is saved." }),
+        el("p", { text: "Order: the decision shown first is the one still being decided with the soonest upcoming date. The others follow by date, then decisions already made." })]);
+    }, "t-none")]));
+    return root;
+  }
+  // Dates: everything coming up and what has happened, across all decisions.
+  function viewDates() {
+    var root = el("div", { class: "stack-lg" }), today = todayISO();
+    root.appendChild(el("header", { class: "stack-sm" }, [
+      el("p", { class: "eyebrow", text: "Georgia · " + D.workspaces.length + " decisions" }),
+      el("h1", { class: "screen-title", text: "Dates" }),
+      el("p", { class: "lede", text: "Ways to weigh in, what's coming up and what has happened, by date." })]));
     // Topic filter: shown once the list is long enough to need it. The choice is held in memory only.
     var topics = [];
     D.workspaces.forEach(function (w) { if (w.topic && topics.indexOf(w.topic) < 0) topics.push(w.topic); });
@@ -810,41 +876,11 @@ footer { margin-top: 28px; font-size: .78rem; color: var(--muted); text-align: c
       });
       root.appendChild(bar);
     }
-    // Two groups: still being decided (soonest date first), and already decided.
-    var shown = D.workspaces.filter(function (w) { return !topicFilter || w.topic === topicFilter; })
-      .sort(function (a, b) { var x = nextDate(a.slug), y = nextDate(b.slug); return x && y ? (x < y ? -1 : x > y ? 1 : 0) : x ? -1 : y ? 1 : 0; });
-    [["Being decided", false], ["Decided", true]].forEach(function (g, i) {
-      var list = shown.filter(function (w) { return (w.stage === "decided") === g[1]; });
-      if (!list.length) return;
-      var sec = el("section", { class: "home-sec", "aria-labelledby": "h-group-" + i }, [
-        el("h2", { id: "h-group-" + i }, [g[0], el("span", { class: "count", text: String(list.length) })])]);
-      list.forEach(function (w) { sec.appendChild(decisionCard(w)); });
-      root.appendChild(sec);
+    var order = D.home.sections.filter(function (s) { return s.id === "act-now"; }).concat(D.home.sections.filter(function (s) { return s.id !== "act-now"; }));
+    order.forEach(function (sec) {
+      var s = itemSection(sec, today, sec.id !== "act-now", topicFilter); if (s) root.appendChild(s);
     });
-    h.sections.forEach(function (sec) {
-      if (sec.id !== "act-now") return;
-      var s = itemSection(sec, today, false, topicFilter); if (s) root.appendChild(s);
-    });
-    root.appendChild(el("div", { class: "list" }, [sheetRow("info", "About this prototype", null, function () {
-      return el("div", { class: "stack" }, [
-        el("p", { text: "Start with what each decision is, where it stands and who it may affect. If you want to weigh in, the dates and ways to do it are listed too. Every sentence links to its source: tap the small number after it." }),
-        el("p", { text: "This is a prototype. It shows only the " + D.workspaces.length + " decisions we've explained so far. Nothing you do here is saved." }),
-        el("p", { text: "Order: decisions with the soonest upcoming date come first; each list is sorted by date, and past dates are marked." })]);
-    }, "t-none")]));
-    return root;
-  }
-  // Dates: everything coming up and what has happened, across all decisions.
-  function viewDates() {
-    var root = el("div", { class: "stack-lg" }), today = todayISO();
-    root.appendChild(el("header", { class: "stack-sm" }, [
-      el("p", { class: "eyebrow", text: "Georgia · " + D.workspaces.length + " decisions" }),
-      el("h1", { class: "screen-title", text: "Dates" }),
-      el("p", { class: "lede", text: "What's coming up and what has happened, by date." })]));
-    D.home.sections.forEach(function (sec) {
-      if (sec.id === "act-now") return;
-      var s = itemSection(sec, today, true); if (s) root.appendChild(s);
-    });
-    root.appendChild(el("p", { class: "notice", text: "A dashed date box means the source says \u201cby\u201d, \u201cbefore\u201d or \u201cexpected\u201d, not a fixed day. Past dates are marked." }));
+    root.appendChild(el("p", { class: "notice", text: "A dashed date box means the source says “by”, “before” or “expected”, not a fixed day. Past dates are marked." }));
     return root;
   }
 
@@ -880,13 +916,6 @@ footer { margin-top: 28px; font-size: .78rem; color: var(--muted); text-align: c
     return el("div", { class: "layer-head" }, [el("h2", { text: title }), sub ? el("p", { class: "lede", text: sub }) : null]);
   }
 
-  function pager(layer) {
-    var i = layerIndex(layer), nav = el("nav", { class: "pager", "aria-label": "Next and previous tab" });
-    if (i > 0) nav.appendChild(el("a", { href: "#" + W.slug + "-" + LAYERS[i - 1].id, text: "← " + tabLabel(LAYERS[i - 1]) }));
-    if (i < LAYERS.length - 1) nav.appendChild(el("a", { class: "next", href: "#" + W.slug + "-" + LAYERS[i + 1].id, text: tabLabel(LAYERS[i + 1]) + " →" }));
-    return nav;
-  }
-
   function billHead(w) {
     return el("div", { class: "billhead" }, [topicHead(w), el("h1", { text: w.title }), el("p", { class: "billcode", text: w.code }), dateBadge(w), headerChips(w)]);
   }
@@ -914,24 +943,62 @@ footer { margin-top: 28px; font-size: .78rem; color: var(--muted); text-align: c
         note.appendChild(el("button", { class: "linkbtn", type: "button", text: "Try again", onclick: function () { route(); } }));
       });
   }
+  function openActions(opener) { drawer("What you can do", actionCards(), opener); }
+  function hasActions() { return !!subs(sectionById("overview"))["What you can do"]; }
+  // The short version: what it is, what it means for you, what's next, and two buttons. About a minute to read.
+  // Every line is a sentence from the full page, shown with its source dot.
+  function viewSimple() {
+    var w = W, root = el("div", { class: "simple" }), sum = sectionById("summary"), you = sectionById("you");
+    root.appendChild(el("div", { class: "billhead" }, [topicHead(w), el("h1", { text: w.title }), dateBadge(w), el("div", null, [statusLine(w)])]));
+    var first = sum.blocks[0], last = sum.blocks[sum.blocks.length - 1];
+    if (first) root.appendChild(el("section", { class: "sblock" }, [el("h2", { text: first.label || "What it is" }), el("p", null, [units(first.units)])]));
+    var lines = you ? you.blocks.filter(function (b) { return b.label; }) : [];
+    if (lines.length) root.appendChild(el("section", { class: "sblock you", "aria-labelledby": "h-you" }, [el("h2", { id: "h-you", text: "What it means for you" }), picker(w, lines, false)]));
+    if (last && last !== first) root.appendChild(el("section", { class: "sblock" }, [el("h2", { text: last.label || "What's next" }), el("p", null, [units(last.units)])]));
+    var ctas = el("div", { class: "ctas" });
+    ctas.appendChild(el("a", { class: "cta", id: "fullbtn", href: "#" + w.slug + "-" + LAYERS[0].id }, ["See the full picture", icon("chev", 16)]));
+    if (hasActions()) ctas.appendChild(el("button", { class: "cta alt", id: "actbtn", type: "button", text: "What you can do", onclick: function () { openActions(this); } }));
+    ctas.appendChild(el("p", { class: "hint", text: LAYERS.length + " short steps: the details, the decision, the options, what each side says and the sources." }));
+    root.appendChild(ctas);
+    return root;
+  }
+  // The full picture is a walk-through: the five parts of the page as numbered steps, one per screen. The step
+  // header stays pinned; tapping it lists every step, so a reader can also jump straight to one.
+  function stepHead(layer) {
+    var i = layerIndex(layer), w = W;
+    var btn = el("button", { class: "stepbtn", type: "button", id: "stepbtn", "aria-label": "Step " + (i + 1) + " of " + LAYERS.length + ": " + tabLabel(LAYERS[i]) + ". Show all steps", onclick: function () {
+      W = w;
+      drawer("All steps", el("div", { class: "list steplist" }, LAYERS.map(function (L, j) {
+        return el("a", { class: "row", href: "#" + w.slug + "-" + L.id, "aria-current": j === i ? "step" : null }, [el("span", { class: "stepno", text: String(j + 1) }),
+          el("span", { class: "rbody" }, [el("span", { class: "rtitle", text: tabLabel(L) }), el("span", { class: "rsub", text: L.why })]), icon("chev", 16)]);
+      }).concat([el("a", { class: "row", href: "#" + w.slug }, [el("span", { class: "stepno" }, [icon("back", 16)]),
+        el("span", { class: "rbody" }, [el("span", { class: "rtitle", text: "Back to the short version" })])])])), this);
+    } }, [el("span", { class: "n", text: "Step " + (i + 1) + " of " + LAYERS.length }), el("span", { class: "t" }, [tabLabel(LAYERS[i]), icon("chev", 14)])]);
+    var bar = el("div", { class: "progress", "aria-hidden": "true" }, LAYERS.map(function (L, j) { return el("i", { class: j <= i ? "on" : "" }); }));
+    return el("div", { class: "stephead" }, [el("div", { class: "top" }, [btn,
+      hasActions() ? el("button", { class: "actlink", id: "actbtn", type: "button", text: "What you can do", onclick: function () { openActions(this); } }) : null]), bar]);
+  }
+  // Next and Back, pinned at the bottom of every step. The first step goes back to the short version; the last one ends there.
+  function stepNav(layer) {
+    var i = layerIndex(layer), nav = document.getElementById("stepnav"); nav.innerHTML = "";
+    var back = i > 0 ? "#" + W.slug + "-" + LAYERS[i - 1].id : "#" + W.slug;
+    nav.appendChild(el("a", { class: "prev", href: back, "aria-label": i > 0 ? "Back: " + tabLabel(LAYERS[i - 1]) : "Back to the short version" }, [icon("back", 18), el("span", { text: "Back" })]));
+    if (i < LAYERS.length - 1) nav.appendChild(el("a", { class: "next", href: "#" + W.slug + "-" + LAYERS[i + 1].id }, [el("span", { text: "Next: " + tabLabel(LAYERS[i + 1]) }), icon("chev", 18)]));
+    else nav.appendChild(el("a", { class: "next", href: "#" + W.slug }, [el("span", { text: "Done: back to the short version" })]));
+  }
   function viewBill(layer) {
     var root = el("div", { class: "stack-lg" });
-    root.appendChild(billHead(W));
-    var tabs = el("nav", { class: "tabs", "aria-label": "Parts of this page" });
-    LAYERS.forEach(function (L) {
-      tabs.appendChild(el("a", { href: "#" + W.slug + "-" + L.id, "aria-selected": String(L.id === layer) }, [tabLabel(L)]));
-    });
-    root.appendChild(tabs);
+    root.appendChild(stepHead(layer));
+    if (layer === "overview") root.appendChild(billHead(W));
     root.appendChild(({ overview: layerOverview, decision: layerDecision, options: layerOptions, arguments: layerArguments, evidence: layerEvidence })[layer]());
     if (layer === "overview") root.appendChild(el("p", { class: "disclose", text: W.disclosure }));
-    root.appendChild(pager(layer));
     return root;
   }
 
   function subs(sec) { var o = {}; sec.subs.forEach(function (s) { o[s.title] = s; }); return o; }
 
   // Summary: pictures, what it means for you, the 30-second version, then rows that open sheets (who decides, dates,
-  // the money trail). "What you can do" is the pinned button, on every tab.
+  // the money trail). "What you can do" is in the step header, on every step.
   function layerOverview() {
     var L = el("section", { class: "layer" }), rows = [];
     var sum = sectionById("summary");
@@ -1260,7 +1327,7 @@ footer { margin-top: 28px; font-size: .78rem; color: var(--muted); text-align: c
   window.addEventListener("scroll", function () {
     if (lateTitle) document.getElementById("bartitle").classList.toggle("late", window.scrollY < 150);
   }, { passive: true });
-  var DEPTH = { home: 0, dates: 0, method: 0, bill: 1, checks: 2 };
+  var DEPTH = { home: 0, dates: 0, method: 0, simple: 1, bill: 2, checks: 3 };
   function backLink(href, text) { return el("a", { class: "back", href: href }, [icon("back", 22), text]); }
   function route() {
     var h = (location.hash || "#home").slice(1), view = "home", layer = "overview", nav = "home";
@@ -1270,57 +1337,47 @@ footer { margin-top: 28px; font-size: .78rem; color: var(--muted); text-align: c
       var match = null;
       D.workspaces.forEach(function (w) { if (h === w.slug || h.indexOf(w.slug + "-") === 0) match = w; });
       if (match) {
-        W = match; view = "bill";
+        W = match; view = "simple";   // a bare decision link opens the short version
         var rest = h.slice(match.slug.length + 1);
         if (rest === "checks") { view = "checks"; nav = "checks"; }
-        else if (rest && LAYERS.some(function (L) { return L.id === rest; })) layer = rest;
+        else if (rest && LAYERS.some(function (L) { return L.id === rest; })) { layer = rest; view = "bill"; }
       }
     }
-    var key = view === "bill" ? "bill:" + W.slug : view;
+    var inDecision = view === "bill" || view === "simple";
+    var key = inDecision ? view + ":" + W.slug : view;
     var stayInBill = prev === key;
     dots = {}; dotN = 0;
     // App bar: the name on root screens; a back button and the topic inside a decision.
     var lead = document.getElementById("barlead"); lead.innerHTML = "";
-    if (view === "bill") lead.appendChild(backLink("#home", "Decisions"));
+    if (view === "simple") lead.appendChild(backLink("#home", "Decisions"));
+    else if (view === "bill") lead.appendChild(backLink("#" + W.slug, "Short version"));
     else if (view === "checks") lead.appendChild(backLink("#" + W.slug, "Back"));
     else lead.appendChild(el("a", { class: "brand", href: "#home" }, ["civic", el("small", { text: "prototype" })]));
     var bt = document.getElementById("bartitle");
-    bt.textContent = view === "bill" ? (W.topic || "") : view === "checks" ? "How we checked" : "";
-    lateTitle = view === "bill"; bt.classList.toggle("late", lateTitle);
+    bt.textContent = view === "simple" ? (W.topic || "") : view === "checks" ? "How we checked" : "";   // a step names itself in its header
+    lateTitle = view === "simple"; bt.classList.toggle("late", lateTitle);
     if (curTopic) document.body.classList.remove(curTopic);
-    curTopic = view === "bill" || view === "checks" ? tclass(W) : "";
+    curTopic = inDecision || view === "checks" ? tclass(W) : "";
     if (curTopic) document.body.classList.add(curTopic);
-    var needs = (view === "bill" || view === "checks") && !!W.lite;   // this decision's data hasn't loaded yet
-    var hasAct = view === "bill" && !needs && !!subs(sectionById("overview"))["What you can do"];
-    document.getElementById("actbar").hidden = !hasAct;
-    document.body.classList.toggle("has-act", hasAct);
+    var needs = (inDecision || view === "checks") && !!W.lite;   // this decision's data hasn't loaded yet
+    var hasNav = view === "bill" && !needs;
+    document.getElementById("actbar").hidden = !hasNav;
+    document.body.classList.toggle("has-act", hasNav);
+    if (hasNav) stepNav(layer);
     // Going into a decision slides in from the right; going back slides the other way; root screens cross-fade.
     var d = DEPTH[view], dir = prevDepth === null || stayInBill ? "" : d > prevDepth ? "go-fwd" : d < prevDepth ? "go-back" : "go-fade";
     var screen = el("div", { class: "screen" + (dir ? " " + dir : "") }, [
-      needs ? viewLoading() : view === "home" ? viewHome() : view === "dates" ? viewDates() : view === "method" ? viewMethod() : view === "checks" ? viewChecks() : viewBill(layer),
+      needs ? viewLoading() : view === "home" ? viewHome() : view === "dates" ? viewDates() : view === "method" ? viewMethod() : view === "checks" ? viewChecks() : view === "simple" ? viewSimple() : viewBill(layer),
       el("footer", { text: D.meta.footer + (needs ? "" : view === "checks" ? " · Test page " + W.trial + " · " + W.revisionLabel
-        : view === "bill" ? " · Test page · " + W.revisionLabel.replace(/ · fingerprint.*$/, "") : "") })]);
+        : inDecision ? " · Test page · " + W.revisionLabel.replace(/ · fingerprint.*$/, "") : "") })]);
     app.innerHTML = "";
     app.appendChild(screen);
     if (needs) loadFull(W);
     document.querySelectorAll("[data-nav]").forEach(function (a) { if (a.getAttribute("data-nav") === nav) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
-    var tabs = document.querySelector(".tabs");
-    if (stayInBill && tabs) {
-      // Switching tabs: keep the tab row where it is and start the new tab at its top.
-      var stick = parseFloat(getComputedStyle(tabs).top) || 0;
-      var tabsTop = tabs.getBoundingClientRect().top + window.scrollY - stick;
-      if (window.scrollY > tabsTop) window.scrollTo(0, tabsTop);
-    } else {
-      window.scrollTo(0, 0);
-    }
-    if (tabs) {
-      var cur = tabs.querySelector('[aria-selected="true"]');
-      if (cur) tabs.scrollLeft = cur.offsetLeft - (tabs.clientWidth - cur.clientWidth) / 2;
-    }
+    window.scrollTo(0, 0);
     prev = key; prevDepth = d;
   }
   document.querySelectorAll("[data-icon]").forEach(function (a) { a.insertBefore(icon(a.getAttribute("data-icon"), 24), a.firstChild); });
-  document.getElementById("actbtn").addEventListener("click", function () { drawer("What you can do", actionCards(), this); });
   window.addEventListener("hashchange", function () { closeDrawer(); route(); });
   route();
 })();
