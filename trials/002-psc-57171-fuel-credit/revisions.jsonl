@@ -1,1 +1,2 @@
 {"revision": "7.7", "date": "2026-11-13", "class": "correction", "reason": "Fixes from sentence-by-sentence checks: plan labels in the values guide, and the notes under the pictures. Earlier revisions are in git and in verification.md.", "commit": "f4c52ef"}
+{"revision": "7.8", "date": "2026-11-14", "class": "update", "reason": "The Nov 12 hearing date passed: moved it to What happened, updated the ways to take part, and added a What changed section.", "commit": null}

@@ -1,13 +1,13 @@
 # Georgia regulators' Dec 15 decision: how real-time payments split between fuel and base costs
 
-Status: Open case at the Georgia Public Service Commission · Final decision scheduled Dec 15, 2026 · Trial 002, revision 7.7: passed checks (round 7); every later change re-checked sentence by sentence; see status.json <!-- nocheck -->
+Status: Open case at the Georgia Public Service Commission · Final decision scheduled Dec 15, 2026 · Trial 002, revision 7.8: passed checks (round 7); every later change re-checked sentence by sentence; see status.json <!-- nocheck -->
 How this page was made: an AI agent drafted it from archived sources; every sentence is cited or labeled. Dates were copied from PSC pages on Nov 8, 2026. <!-- nocheck -->
 
 ## 30-second version
 
 - **What's being decided:** The Georgia Public Service Commission (PSC), five commissioners who set utility rates, will decide how much of larger businesses' real-time payments counts toward fuel costs. [P-031, P-169, P-013, P-016, P-044] Real-time prices change by the hour. [P-042]
 - **Who it affects:** Georgia Power customers on standard rates, including homes. [P-061] More real-time money toward fuel would likely lower their fuel charge, the bill's fuel part. [P-058, P-144, P-061] Base rates, the rest of the bill, could rise later. [P-061, P-105, P-115, P-016]
-- **What's next:** A hearing Nov 12; a decision set for Dec 15, 2026; comments due 24 hours before the vote. [P-010, P-013, P-030]
+- **What's next:** Written arguments due Dec 2; decision set for Dec 15, 2026; comments due 24 hours before the vote. [P-011, P-013, P-030]
 
 ## What it means for you
 
@@ -43,8 +43,7 @@ How this page was made: an AI agent drafted it from archived sources; every sent
 
 ### What you can do
 
-- **Input:** The PSC's public witness page says members of the public can testify at its hearings, and their comments become part of the official transcript. [P-025, P-159] No filing we read says whether public witnesses will be heard on Nov 12. {editorial: process note; P-010 lists only motions and hearings on Georgia Power's rebuttal} To ask, call the PSC at 404-656-4501 (local) or 1-800-282-5813 (outside metro-Atlanta) and press 2, or email gapsc@psc.state.ga.us. [P-163]
-- If you go, the PSC suggests arriving about 30 minutes early to sign in to speak. [P-028] The PSC calendar lists the Nov 12 hearing at 9:35 a.m., so arriving 30 minutes early means about 9:05 a.m. {computed: 9:35 a.m. (P-023) minus about 30 minutes (P-028)} Speaking time may be limited if many people sign up. [P-026] If you can't finish speaking, or would rather not speak, you can ask during the hearing to have your written comments entered into the record. [P-027]
+- The last hearing date on this case's schedule, Nov 12, 2026, has passed. {analysis: the schedule order sets hearings for Sep 1, Oct 15 and Nov 12, then briefs, a committee meeting and the decision (P-008, P-009, P-010, P-011, P-012, P-013)} The PSC's public witness page says members of the public can testify at its hearings, and their comments become part of the official transcript. [P-025, P-159] To ask whether another hearing will be held, call the PSC at 404-656-4501 (local) or 1-800-282-5813 (outside metro-Atlanta) and press 2, or email gapsc@psc.state.ga.us. [P-163]
 - If you have a disability and need help to take part, the legal notice for the Sep 1 hearing said to call the PSC's Executive Secretary's Office at (404) 656-4501 or 1-800-282-5813, which that notice lists as "inside Georgia only," at least one day before the hearing. [P-021, P-022]
 - **Input:** Send the PSC a public comment by 9:30 a.m. on Dec 14, 2026. {computed: comments must be submitted 24 hours before a Commission vote (P-030); the Dec 15 Administrative Session, where the final decision is scheduled (P-013), starts at 9:30 a.m. (P-024); 24 hours earlier is 9:30 a.m. on Dec 14} The PSC's Public Comments page doesn't say how to send a comment. {editorial: process note; P-030 is the page's full text} To ask, call the PSC at 404-656-4501 (local) or 1-800-282-5813 (outside metro-Atlanta) and press 2, or email gapsc@psc.state.ga.us. [P-163] The Public Comments page says: "Comments must be submitted 24 hours before a Commission vote." [P-030] Dec 14 at 9:30 a.m. is 24 hours before the Dec 15 session starts. {computed: the Dec 15 Administrative Session starts at 9:30 a.m. (P-024); 24 hours earlier is 9:30 a.m. on Dec 14} The time this case comes up in that session isn't posted as of Nov 8, 2026. {editorial: process note; P-024 gives only the session's start} The Energy Committee takes up the case on Dec 10. [P-012] No PSC page we found says whether the committee meeting counts as a Commission vote, so ask the PSC whether an earlier deadline applies. {editorial: process note; P-030 says only "a Commission vote"} If the PSC moves the vote, the deadline moves too. {analysis: follows from the 24-hour rule in P-030}
 - **Observe:** The Dec 15 decision comes at a session that is open to the public, in hearing room 110 at 244 Washington St. in Atlanta. [P-013, P-032]
@@ -67,7 +66,6 @@ How this page was made: an AI agent drafted it from archived sources; every sent
 
 ### Coming up
 
-- **Nov 12, 2026:** Hearing on Georgia Power's rebuttal testimony. [P-010] The hearing starts after the PSC's committee meetings, which begin at 9:30 a.m. [P-010, P-023] The PSC calendar lists the hearing at 9:35 a.m. [P-023]
 - **Dec 2, 4 p.m.:** Deadline for parties to file briefs and proposed orders. [P-011] Briefs are the parties' final written arguments, and proposed orders are the decisions they ask the PSC to adopt. {analysis: plain-language definitions, not from the cited sources}
 - **Dec 10:** The PSC's Energy Committee, a committee of its commissioners, takes up the case at its meeting in the PSC hearing room, which begins at 9:30 a.m. [P-012, P-024, P-171]
 - **Dec 15:** The PSC is scheduled to make its final decision at its Administrative Session, a regular meeting where commissioners vote, which starts at 9:30 a.m. [P-013, P-024, P-029, P-032] The time this case comes up in the session isn't posted as of Nov 8, 2026. {editorial: process note; P-024 gives only the session's start} The PSC says commissioners decide at that session based on the evidence presented at the hearings. [P-029]
@@ -88,6 +86,7 @@ How this page was made: an AI agent drafted it from archived sources; every sent
 - **Oct 14:** GIPL asked the PSC to deny that request. [P-136, P-137]
 - **Oct 15:** The PSC held a hearing on the testimony of PIA Staff and the intervenors. [P-009, P-003]
 - **Oct 27:** Georgia Power filed rebuttal testimony, the last written testimony on the schedule. [P-117, P-009, P-010, P-011]
+- **Nov 12:** The schedule set a hearing for this date on Georgia Power's rebuttal testimony. [P-010] As of Nov 14, 2026, the case's filing list showed no transcript or order from that hearing. {editorial: scoped to the docket's filing list (source S01b), re-checked Nov 14, 2026; its newest filing was dated Oct 27}
 
 ## Layer 2: The decision
 
@@ -363,3 +362,7 @@ Documented · Side: favors limiting the shift to fuel (GAM) · Claim type: factu
 | S10 Resource Supply Management filing page | Party filing | 2026-11-08 | 5fbf0dde… | Which party Jim Clarkson's testimony is for (the testimony itself is a scan) | <!-- nocheck -->
 | S11 Georgia Power rebuttal testimony | Party filing | 2026-11-08 | 1f62d47f… | The company's answers to Staff and GIPL, its case for keeping other costs out, and its witnesses' roles | <!-- nocheck -->
 | S12, S13 Motion to strike, and GIPL's response | Party filing | 2026-11-08 | 525611cf…, cea66663… | The dispute over what is in scope | <!-- nocheck -->
+
+## What changed
+
+- **Nov 14, 2026:** The Nov 12 hearing date passed, so we moved it to "What happened" and updated the ways to take part. {editorial: page history}

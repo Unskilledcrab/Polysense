@@ -2,33 +2,6 @@
  "generated": "2026-11-14",
  "items": [
   {
-   "trial": "002-psc-57171-fuel-credit",
-   "slug": "psc-57171",
-   "rule": "date-passed",
-   "due": "2026-11-12",
-   "what": "\"Nov 12, 2026\" has passed: move it to What happened, with the outcome if a source gives one",
-   "where": "home.md:9",
-   "size": "patch, then a pair check (Sonnet)"
-  },
-  {
-   "trial": "002-psc-57171-fuel-credit",
-   "slug": "psc-57171",
-   "rule": "date-passed",
-   "due": "2026-11-12",
-   "what": "\"Nov 12, 2026\" has passed: move it to What happened, with the outcome if a source gives one",
-   "where": "workspace.md:70",
-   "size": "patch, then a pair check (Sonnet)"
-  },
-  {
-   "trial": "002-psc-57171-fuel-credit",
-   "slug": "psc-57171",
-   "rule": "event",
-   "due": "2026-11-12",
-   "what": "Hearing held. Look for the transcript and move the hearing to What happened.",
-   "where": "page.yaml watch.events",
-   "size": "revision (at most 100k)"
-  },
-  {
    "trial": "003-fulton-2027-budget",
    "slug": "fulton-budget-2027",
    "rule": "source-changed",
@@ -36,6 +9,15 @@
    "what": "S05d changed (1 added, 0 removed): snapshot it again and revise what it touches",
    "where": "desk.py impact 003-fulton-2027-budget S05d",
    "size": "0 sentences cite it"
+  },
+  {
+   "trial": "002-psc-57171-fuel-credit",
+   "slug": "psc-57171",
+   "rule": "check",
+   "due": "2026-11-14",
+   "what": "9 sentences waiting for a check, 0 flagged",
+   "where": "ledger.py pending 002-psc-57171-fuel-credit",
+   "size": "pair check (Sonnet)"
   },
   {
    "trial": "003-fulton-2027-budget",

@@ -14,7 +14,8 @@ watch:                        # what would make this page stale; read by trials/
     - {id: S04c, only: "12-10-2026"}    # the Dec 10 committee entry
     - {id: S04d, only: "12-15-2026"}    # the Dec 15 session entry
   events:
-    - {date: 2026-11-12, what: "Hearing held. Look for the transcript and move the hearing to What happened."}
+    - {date: 2026-11-12, what: "Hearing date passed. Moved to What happened in revision 7.8; no transcript was posted as of 2026-11-14.", done: true}
+    - {date: 2026-11-26, what: "Look again for the Nov 12 hearing transcript on the filing list (the Oct 15 transcript was posted 11 days after that hearing)."}
     - {date: 2026-12-02, what: "Briefs and proposed orders due. Snapshot them and add each party's final position."}
     - {date: 2026-12-10, what: "Energy Committee meets. Re-check its agenda (S04c)."}
     - {date: 2026-12-15, what: "Final decision scheduled. Snapshot the order, add the outcome and set stage to decided."}
