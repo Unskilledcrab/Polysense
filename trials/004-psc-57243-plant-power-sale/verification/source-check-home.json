@@ -1,0 +1,78 @@
+{
+ "checker": "independent-source-verifier",
+ "document": "/home/user/Polysense/trials/004-psc-57243-plant-power-sale/home.md",
+ "units": [
+  {
+   "line": 5,
+   "sentence": "The parties in a Georgia Public Service Commission case over a Covington",
+   "marker": "[P-017, P-051]",
+   "verdict": "supports",
+   "evidence_span": "December 4, 2026 Pre-Hearing Conference, 2:00PM.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 6,
+   "sentence": "A Hearing Officer for the Public Service Commission hears the case over",
+   "marker": "[P-018, P-027, P-051, P-089]",
+   "verdict": "supports",
+   "evidence_span": "December 9, 2026 The Hearing Officer, beginning at 10:00AM, will conduct a hearing in this proceeding.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 10,
+   "sentence": "The Public Service Commission's Chairman issued an order that put the Nov",
+   "marker": "[P-007, P-009, P-051]",
+   "verdict": "partial",
+   "evidence_span": "2026-11-12 | document 229426 | Chairman's Order Temporarily Staying Hearing Officer's Order",
+   "correct_passage": "",
+   "problem": "The order's title (P-009) says only 'Hearing Officer's Order'. workspace.md line 79 says the title 'doesn't say which order' and line 37 says the order's text could not be read. This item states as fact that the Nov 4 order was put on hold.",
+   "suggested_fix": "The Public Service Commission's Chairman issued an order that put a Hearing Officer's order in the Covington power plant case on hold for now."
+  },
+  {
+   "line": 11,
+   "sentence": "A Hearing Officer ordered that lawyers for the people who filed the",
+   "marker": "[P-007, P-024]",
+   "verdict": "supports",
+   "evidence_span": "counsel for Petitioners are granted access to materials marked trade secret subject to a protective agreement",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 12,
+   "sentence": "A Newton County nonprofit and nearby residents asked state regulators to rule",
+   "marker": "[P-002, P-027, P-029, P-030, P-031]",
+   "verdict": "supports",
+   "evidence_span": "2026-07-13 | document 227215 | Petition For Expedited Declaratory Judgment and Enforcement Against Voltagrid",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  }
+ ],
+ "framing_issues": [
+  {
+   "line": 10,
+   "text": "put the Nov 4 order in the Covington power plant case on hold",
+   "issue": "Consistency with workspace.md lines 37 and 79, which treat the link to the Nov 4 order as an inference.",
+   "severity": "medium"
+  },
+  {
+   "line": 12,
+   "text": "asked state regulators to rule on a power plant",
+   "issue": "Vague. The request was to declare whether the plan breaks either of two laws and to order a stop to any work that does (P-035). The docket page date in P-001 (07/02/2026) also differs from Jul 13 and is not explained.",
+   "severity": "low"
+  }
+ ],
+ "summary": {
+  "units_checked": 5,
+  "supports": 4,
+  "partial": 1,
+  "does_not_support": 0,
+  "wrong_span": 0,
+  "questionable_or_invalid_tags": 0
+ }
+}

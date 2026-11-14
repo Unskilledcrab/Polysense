@@ -7,6 +7,6 @@
 
 ## What happened
 
-- **Nov 12, 2026:** The Public Service Commission's Chairman issued an order that put the Nov 4 order in the Covington power plant case on hold for now. [P-007, P-009, P-051]
+- **Nov 12, 2026:** The Public Service Commission's Chairman issued an order temporarily staying a Hearing Officer's order in the Covington power plant case. [P-009, P-051] We could not read the order; VoltaGrid had appealed the Nov 4 order three days earlier. {analysis: the filing list gives only the order's title (P-009); VoltaGrid's Nov 9 filing is an appeal from the Nov 4 order with a motion for stay (P-008)}
 - **Nov 4, 2026:** A Hearing Officer ordered that lawyers for the people who filed the case get access, under a protective agreement, to papers VoltaGrid marked as trade secrets. [P-007, P-024]
 - **Jul 13, 2026:** A Newton County nonprofit and nearby residents asked state regulators to rule on a power plant built for a neighboring data center. [P-002, P-027, P-029, P-030, P-031]

@@ -1,0 +1,122 @@
+{
+ "checker": "independent-source-verifier",
+ "document": "/home/user/Polysense/trials/004-psc-57243-plant-power-sale/page.yaml",
+ "units": [
+  {
+   "line": 18,
+   "sentence": "A Covington power plant for one data center: the case before Georgia's Public Service Commission",
+   "marker": "[P-027, P-035, P-051]",
+   "verdict": "supports",
+   "evidence_span": "building a 90-megawatt power plant to sell power to a neighboring data center, Serverfarm.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 19,
+   "sentence": "A Covington power plant for one data center",
+   "marker": "[P-027, P-051]",
+   "verdict": "supports",
+   "evidence_span": "Covington project falls under the Commission’s jurisdiction",
+   "correct_passage": "",
+   "problem": "'Covington' rests on P-051 and 'one data center' on P-027.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 21,
+   "sentence": "Open case at the Georgia Public Service Commission",
+   "marker": "[P-001]",
+   "verdict": "supports",
+   "evidence_span": "Industry: Electric Date: 07/02/2026 Status: Open",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 22,
+   "sentence": "Hearing set for Dec 9, 2026",
+   "marker": "[P-018]",
+   "verdict": "supports",
+   "evidence_span": "December 9, 2026 The Hearing Officer, beginning at 10:00AM, will conduct a hearing in this proceeding.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 24,
+   "sentence": "VoltaGrid's request",
+   "marker": "[P-041, P-042]",
+   "verdict": "supports",
+   "evidence_span": "Petitioners can assert no interest the Territorial Act was enacted to protect",
+   "correct_passage": "",
+   "problem": "The cited passages are VoltaGrid's two arguments; the request to dismiss itself is P-004. Outcome A is wider than the request: it also covers findings after the hearing.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 25,
+   "sentence": "The petition's request",
+   "marker": "[P-035]",
+   "verdict": "supports",
+   "evidence_span": "(a) Determine and declare whether VoltaGrid, LLC is planning to construct and operate a power plant to furnish retail electric service in violation of the Territorial Act or Cogeneration Act",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 26,
+   "sentence": "The PSC's own question",
+   "marker": "[P-022]",
+   "verdict": "supports",
+   "evidence_span": "whether Respondent is providing service or offering to provide service that is subject to the jurisdiction of the Commission and, if so, what if any action the Commission should take.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 64,
+   "sentence": "The plant's maximum power output, from an exhibit to the petition.",
+   "marker": "[P-040]",
+   "verdict": "supports",
+   "evidence_span": "maximum power output of 90 MW",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 65,
+   "sentence": "Natural gas engines in the plant, from the same exhibit.",
+   "marker": "[P-040]",
+   "verdict": "supports",
+   "evidence_span": "consisting of 33 natural gas-fired, four-stroke lean-burn (4SLB) reciprocating internal combustion engines (RICE)",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 68,
+   "sentence": "The PSC's five commissioners make the final decision.",
+   "marker": "[P-020, P-085]",
+   "verdict": "supports",
+   "evidence_span": "At the scheduled Administrative Session, the Commissioners make a decision based upon the evidence that was presented during the hearing.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  }
+ ],
+ "framing_issues": [
+  {
+   "line": 24,
+   "text": "VoltaGrid's request",
+   "issue": "The chip is narrower than the option it labels. Outcome A also covers a finding after the hearing that no law is broken, which is more than VoltaGrid's request to dismiss.",
+   "severity": "low"
+  }
+ ],
+ "summary": {
+  "units_checked": 10,
+  "supports": 10,
+  "partial": 0,
+  "does_not_support": 0,
+  "wrong_span": 0,
+  "questionable_or_invalid_tags": 0
+ }
+}

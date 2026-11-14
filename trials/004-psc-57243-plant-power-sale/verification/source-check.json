@@ -1,0 +1,2591 @@
+{
+ "checker": "independent-source-verifier",
+ "document": "/home/user/Polysense/trials/004-psc-57243-plant-power-sale/workspace.md",
+ "units": [
+  {
+   "line": 8,
+   "sentence": "Nearby residents and a nonprofit filed a case at the Georgia Public",
+   "marker": "[P-029, P-035, P-047]",
+   "verdict": "partial",
+   "evidence_span": "Sustainable Newton is a grassroots, community-based 501(c)(3) nonprofit organization headquartered in Newton County, Georgia.",
+   "correct_passage": "",
+   "problem": "The cited passages show the nonprofit (P-029), the request (P-035) and the regulator's role (P-047, which is the petitioners' own description). None shows that residents filed, that they live nearby, or the filing itself. P-030 and P-031 give the distances and P-002 the filing.",
+   "suggested_fix": "Add P-002, P-030 and P-031 to the marker."
+  },
+  {
+   "line": 8,
+   "sentence": "The filers ask whether VoltaGrid's power plant for one data center breaks",
+   "marker": "[P-035, P-027]",
+   "verdict": "partial",
+   "evidence_span": "(b) Order that VoltaGrid, LLC cease and desist any operations in violation of the Territorial Act or Cogeneration Act.",
+   "correct_passage": "",
+   "problem": "'seek an order to stop it' is broader than the request, which is that VoltaGrid 'cease and desist any operations in violation of' the two Acts (line 84 states this correctly). 'breaks two power laws' can also be read as both; the petition asks about the Territorial Act 'or' the Cogeneration Act.",
+   "suggested_fix": "The filers ask whether VoltaGrid's plan for a power plant for one data center breaks either of two power laws, and seek an order to stop any work that does."
+  },
+  {
+   "line": 8,
+   "sentence": "VoltaGrid says the PSC has no power here and asked for dismissal.",
+   "marker": "[P-041, P-004]",
+   "verdict": "supports",
+   "evidence_span": "thus is not subject to the Commission’s jurisdiction.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 8,
+   "sentence": "A data center houses computers.",
+   "marker": "{analysis: plain-language definition, not from the cited sources}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "Plain-language definition; accurate, neutral and labeled as not from the sources."
+  },
+  {
+   "line": 9,
+   "sentence": "The plant's neighbors, the data center and power companies.",
+   "marker": "[P-032, P-061, P-063]",
+   "verdict": "partial",
+   "evidence_span": "The interests of Georgia EMC and its member EMCs may be substantially affected by any decisions reached by the Commission in this proceeding.",
+   "correct_passage": "",
+   "problem": "Stated as fact. The passages are each party's own claim of a stake: P-032 is the petitioners' allegation of harm, and P-063 says interests 'may be substantially affected'. Georgia EMC is a trade association (P-062), not a power company.",
+   "suggested_fix": "The plant's neighbors, the data center, Georgia Power and a trade group for EMCs each say they have a stake."
+  },
+  {
+   "line": 10,
+   "sentence": "The PSC's Hearing Officer holds a hearing Dec 9, 2026.",
+   "marker": "[P-018, P-020]",
+   "verdict": "supports",
+   "evidence_span": "December 9, 2026 The Hearing Officer, beginning at 10:00AM, will conduct a hearing in this proceeding.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 10,
+   "sentence": "No final vote is set.",
+   "marker": "{editorial: process note; the amended schedule ends with the Dec 9 hearing (P-018), and no order we read sets a vote}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "No passage sets a vote. The sentence itself is unscoped and undated, unlike line 36 ('No order we read sets a date ... as of Nov 14, 2026'), and two orders could not be read; see framing issues."
+  },
+  {
+   "line": 14,
+   "sentence": "This Public Service Commission (PSC) case is about who may power the",
+   "marker": "{analysis: the four questions set for the hearing (P-021) cover the PSC's authority, who may bring the case and two power laws; a separate state agency handles the air permit (P-028, P-065)}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "P-021's four questions cover the PSC's authority, who may file and the two power laws; none names the air permit, and P-028, P-039 and P-065 place the permit with the Environmental Protection Division. Read alone it holds; it does leave out that the order sought (P-035) would stop operations found unlawful."
+  },
+  {
+   "line": 14,
+   "sentence": "Residents who filed the case say the plant will bring noise, light",
+   "marker": "[P-032, P-072]",
+   "verdict": "supports",
+   "evidence_span": "VoltaGrid will also cause noise and light pollution",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 14,
+   "sentence": "VoltaGrid says a state agency issued the plant's air permit.",
+   "marker": "[P-065]",
+   "verdict": "supports",
+   "evidence_span": "the Georgia Environmental Protection Division (“EPD”), which issued the air quality permit for VoltaGrid’s project.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 15,
+   "sentence": "No filing we read puts an amount on any bill effect, as",
+   "marker": "{editorial: scoped to the filings and excerpts we read}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "Scoped to what the authors read and dated; no passage states the missing item. Read alone it is accurate for this audience."
+  },
+  {
+   "line": 15,
+   "sentence": "A PSC staff witness's testimony \"considers potential risks to other Georgia Power",
+   "marker": "[P-073, P-074]",
+   "verdict": "supports",
+   "evidence_span": "the testimony also considers potential risks to other Georgia Power customers.",
+   "correct_passage": "",
+   "problem": "Quote is verbatim, but the source sentence opens 'Briefly,' which signals a short treatment; line 41 keeps 'also' and this line drops both words.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 15,
+   "sentence": "Georgia Power says the data center is in its territory and slated",
+   "marker": "[P-061]",
+   "verdict": "supports",
+   "evidence_span": "an entity slated to become a Georgia Power customer—at premises situated squarely within Georgia Power’s assigned service territory",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 16,
+   "sentence": "Georgia EMC, a trade group for EMCs, says a supplier's other consumers",
+   "marker": "[P-055, P-062]",
+   "verdict": "supports",
+   "evidence_span": "That investment could become stranded (with the costs thereof to be absorbed by the electric supplier’s other consumers) if future customers in the area can be picked off",
+   "correct_passage": "",
+   "problem": "Keeps 'could', the condition and the speaker. Read alone it does not say the statement is about suppliers in general and not tied to this site, which line 109 does say; see framing issues.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 16,
+   "sentence": "No filing we read gives an amount, as of Nov 14, 2026.",
+   "marker": "{editorial: scoped to the filings and excerpts we read}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "Scoped to what the authors read and dated; no passage states the missing item."
+  },
+  {
+   "line": 20,
+   "sentence": "Serverfarm, the data center's owner, supplies natural gas to the plant, VoltaGrid",
+   "marker": "[P-046]",
+   "verdict": "supports",
+   "evidence_span": "Serverfarm supplies natural gas to the Serverfarm gas meter",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 21,
+   "sentence": "VoltaGrid, the plant's builder, says its equipment turns that gas into electricity",
+   "marker": "[P-027, P-046]",
+   "verdict": "supports",
+   "evidence_span": "VoltaGrid will use the Conversion Assets to convert Serverfarm’s natural gas into Serverfarm’s electricity to be used by Serverfarm at its data center.",
+   "correct_passage": "",
+   "problem": "Source is future tense ('will use'); P-068 says operation had not begun on Oct 9.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 22,
+   "sentence": "VoltaGrid says Serverfarm pays for that service based on the plant's capacity,",
+   "marker": "[P-046]",
+   "verdict": "supports",
+   "evidence_span": "Serverfarm will pay VoltaGrid for this service in amounts based on the Conversion Assets’ producing capacity in operation, rather than a fee per kWh of energy that the Conversion Assets actually deliver.",
+   "correct_passage": "",
+   "problem": "Source is future tense ('will pay').",
+   "suggested_fix": ""
+  },
+  {
+   "line": 22,
+   "sentence": "The petitioners call the deal a plan \"to sell power.\"",
+   "marker": "[P-027]",
+   "verdict": "supports",
+   "evidence_span": "building a 90-megawatt power plant to sell power to a neighboring data center, Serverfarm.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 23,
+   "sentence": "A witness for the PSC's staff says the contract \"states Monthly Fees",
+   "marker": "[P-073, P-076]",
+   "verdict": "supports",
+   "evidence_span": "The SOW states Monthly Fees per kWh of xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxx, with cumulative Monthly Fees increasing as the installation scales.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 23,
+   "sentence": "A kilowatt-hour (kWh) is a unit of energy.",
+   "marker": "{analysis: plain-language definition, not from the cited sources}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "Plain-language definition; accurate, neutral and labeled as not from the sources."
+  },
+  {
+   "line": 24,
+   "sentence": "No filing we read says how any of that money would reach",
+   "marker": "{editorial: scoped to the filings and excerpts we read}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "Scoped to what the authors read and dated; no passage states the missing item."
+  },
+  {
+   "line": 28,
+   "sentence": "whether the PSC has power over VoltaGrid, whether the people who filed",
+   "marker": "[P-018, P-021]",
+   "verdict": "supports",
+   "evidence_span": "The following matters are at issue in this proceeding and will be decided on the basis of facts and arguments presented at the hearing",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 29,
+   "sentence": "The Hearing Officer, the person the PSC appointed to hear the case,",
+   "marker": "[P-020]",
+   "verdict": "supports",
+   "evidence_span": "present the same to the Commission in the form of a recommended decision for adoption by the Commission.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 30,
+   "sentence": "whether lawyers for the people who filed may see papers VoltaGrid marks",
+   "marker": "[P-024]",
+   "verdict": "partial",
+   "evidence_span": "counsel for Petitioners are granted access to materials marked trade secret subject to a protective agreement",
+   "correct_passage": "",
+   "problem": "The cited passage shows the Hearing Officer already granted access on Nov 4. The sentence presents the matter as simply undecided and leaves out that it was ruled on, appealed (P-008) and put on hold (P-009).",
+   "suggested_fix": "Decided separately: the Hearing Officer granted lawyers for the people who filed access to papers VoltaGrid marks as a trade secret; VoltaGrid appealed and that question is still open. [P-024, P-008, P-009]"
+  },
+  {
+   "line": 30,
+   "sentence": "A trade secret is business information a company keeps private.",
+   "marker": "{analysis: plain-language definition, not from the cited sources}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "Plain-language definition; accurate, neutral and labeled as not from the sources."
+  },
+  {
+   "line": 31,
+   "sentence": "the plant's air permit, which a separate state agency handles.",
+   "marker": "{analysis: the hearing questions (P-021) do not include the permit; the state Environmental Protection Division issued the notice of violation (P-028) and, VoltaGrid says, the permit (P-065)}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "The hearing questions in P-021 do not include the permit; P-028 and P-039 show the Environmental Protection Division acting on it and P-065 is VoltaGrid's statement that it issued the permit."
+  },
+  {
+   "line": 35,
+   "sentence": "The petition calls the data center \"neighboring.\"",
+   "marker": "[P-027]",
+   "verdict": "supports",
+   "evidence_span": "to sell power to a neighboring data center, Serverfarm.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 35,
+   "sentence": "VoltaGrid calls its plant an \"on-site generator.\"",
+   "marker": "[P-064]",
+   "verdict": "supports",
+   "evidence_span": "An on-site generator privately serving the owner of the site does nothing to cause competition among public utilities",
+   "correct_passage": "",
+   "problem": "The passage is a general statement about 'an on-site generator'; that it describes VoltaGrid's plant is a fair reading.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 35,
+   "sentence": "No filing we read settles the point, as of Nov 14, 2026.",
+   "marker": "{editorial: scoped to the filings and excerpts we read}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "Scoped to what the authors read and dated; no passage states the missing item. P-027 and P-064 conflict and no passage resolves it."
+  },
+  {
+   "line": 36,
+   "sentence": "No order we read sets a date for the PSC's final vote,",
+   "marker": "{editorial: process note; the amended schedule ends with the Dec 9 hearing (P-018)}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "Scoped to what the authors read and dated; no passage states the missing item."
+  },
+  {
+   "line": 37,
+   "sentence": "The filing list gives the order's date and title: \"Chairman's Order Temporarily",
+   "marker": "[P-009]",
+   "verdict": "supports",
+   "evidence_span": "2026-11-12 | document 229426 | Chairman's Order Temporarily Staying Hearing Officer's Order",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 37,
+   "sentence": "Our copy of that order has no readable text, so how long",
+   "marker": "{editorial: process note; the snapshot of the order (S03c) is an image without text}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "Process note about the authors' copy; consistent with line 249 and the source table."
+  },
+  {
+   "line": 38,
+   "sentence": "The filing list shows no ruling on the appeal as of Nov",
+   "marker": "{editorial: process note; the filing list (S01b) shows no order after Nov 12}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "No passage shows a ruling on the appeal. The Chairman's Nov 12 order (P-009) may act on the stay request, which line 79 covers."
+  },
+  {
+   "line": 38,
+   "sentence": "The PSC's website lists an Administrative Session on Nov 17 and committee",
+   "marker": "[P-087]",
+   "verdict": "supports",
+   "evidence_span": "Nov 17 9:30 am Administrative Session 11-17-2026 Nov 24 9:30 am Facilities Protection/Telecommunication/Energy And Administrative Affairs Committees 11-24-2026",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 38,
+   "sentence": "No document we read says whether the appeal is on either agenda.",
+   "marker": "{editorial: scoped to the documents we read}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "Scoped to what the authors read and dated; no passage states the missing item."
+  },
+  {
+   "line": 39,
+   "sentence": "VoltaGrid asked the PSC on Sep 16, 2026, to dismiss the case.",
+   "marker": "[P-004]",
+   "verdict": "supports",
+   "evidence_span": "2026-09-16 | document 228806 | VoltaGrid, LLC's Motion to Dismiss and Brief in Support (w/Exhibit)",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 39,
+   "sentence": "The Hearing Officer's Nov 4 order says the Hearing Officer \"does not",
+   "marker": "[P-007, P-026]",
+   "verdict": "supports",
+   "evidence_span": "The Hearing Officer does not dispute that these issues are essential to this case,8 but has indicated that summarily dismissing the case on such grounds before establishing and certifying a record on the issues would be premature",
+   "correct_passage": "",
+   "problem": "Both quotes verbatim. The second is cut before 'and contrary to the direction of the Commission', and the order says the Hearing Officer 'has indicated' this. 'these issues' has nothing to refer to in this bullet.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 39,
+   "sentence": "The filing list shows no order on that request as of Nov",
+   "marker": "{editorial: process note; the filing list (S01b) shows no order on the motion to dismiss}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "No passage shows an order on the motion to dismiss; only selected rows of the filing list are in the passages, so the claim cannot be fully confirmed from them."
+  },
+  {
+   "line": 40,
+   "sentence": "The filing list shows direct testimony filed on Nov 12, 2026.",
+   "marker": "[P-011]",
+   "verdict": "supports",
+   "evidence_span": "2026-11-12 | document 229424 | Direct Testimony",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 40,
+   "sentence": "We could not download that testimony, so this page does not cover",
+   "marker": "{editorial: process note; the download of S15 failed}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "Process note about a failed download; consistent with the source table."
+  },
+  {
+   "line": 41,
+   "sentence": "The staff witness's rebuttal testimony, filed Nov 13, 2026, says it \"also",
+   "marker": "[P-012, P-073, P-074]",
+   "verdict": "supports",
+   "evidence_span": "the testimony also considers potential risks to other Georgia Power customers.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 41,
+   "sentence": "The public copy we read does not describe those risks, as of",
+   "marker": "{editorial: scoped to the public copy of S15b we read}",
+   "verdict": "questionable",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "The source table says S15b was read in excerpts, and line 135 says excerpts were found by keyword search. A reading of excerpts cannot show that the public copy 'does not describe those risks'; P-074 says the testimony does consider them.",
+   "suggested_fix": "Say 'The excerpts we read do not describe those risks', or read the whole public copy.",
+   "reason": "The source table says S15b was read in excerpts, and line 135 says excerpts were found by keyword search. A reading of excerpts cannot show that the public copy 'does not describe those risks'; P-074 says the testimony does consider them."
+  },
+  {
+   "line": 42,
+   "sentence": "A VoltaGrid executive testified on Oct 9, 2026, that the plant had",
+   "marker": "[P-044, P-067, P-068]",
+   "verdict": "supports",
+   "evidence_span": "VoltaGrid has not commenced operation of its ATL-1 project",
+   "correct_passage": "",
+   "problem": "'testified on Oct 9' vs 'testimony dated Oct 9' at line 155; the passage shows written testimony presented on that date.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 42,
+   "sentence": "VoltaGrid's Oct 26 brief says the state issued the plant's air permit.",
+   "marker": "[P-006, P-065]",
+   "verdict": "supports",
+   "evidence_span": "the Georgia Environmental Protection Division (“EPD”), which issued the air quality permit for VoltaGrid’s project.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 42,
+   "sentence": "No filing we read says whether the plant has started since, as",
+   "marker": "{editorial: scoped to the filings and excerpts we read}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "Scoped to what the authors read and dated; no passage states the missing item. P-077 (Nov 13) says VoltaGrid 'is providing' a service, but 'based on the cited contract language', so it does not state that the plant has started."
+  },
+  {
+   "line": 43,
+   "sentence": "VoltaGrid says 45 documents, about 486 pages, remain marked as trade secret.",
+   "marker": "[P-079]",
+   "verdict": "supports",
+   "evidence_span": "forty-five (45) documents (approximately 486 pages) remain designated as Trade Secret",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 43,
+   "sentence": "The public copy of the staff witness's testimony blacks out the fee",
+   "marker": "[P-076]",
+   "verdict": "supports",
+   "evidence_span": "The SOW states Monthly Fees per kWh of xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxx, with cumulative Monthly Fees increasing as the installation scales.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 43,
+   "sentence": "The fee amounts are not public as of Nov 14, 2026.",
+   "marker": "{editorial: process note; scoped to the public copies we read}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "Scoped to the public copies read; P-076 shows the amount replaced with x's."
+  },
+  {
+   "line": 44,
+   "sentence": "Our copy of that order has no readable text, as of Nov",
+   "marker": "{editorial: process note; the snapshot of the order (S02c) is an image without text}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "Process note about the authors' copy; consistent with line 249 and the source table."
+  },
+  {
+   "line": 44,
+   "sentence": "The filing list gives its date and title, and a later order",
+   "marker": "[P-003, P-022]",
+   "verdict": "supports",
+   "evidence_span": "2026-08-24 | document 227960 | Assignment to Hearing Officer Order",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 50,
+   "sentence": "The hearing in this Public Service Commission (PSC) case starts at 10:00",
+   "marker": "[P-018, P-089]",
+   "verdict": "supports",
+   "evidence_span": "December 9, 2026 The Hearing Officer, beginning at 10:00AM, will conduct a hearing in this proceeding.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 50,
+   "sentence": "The Hearing Officer, the person the PSC appointed to hear the case,",
+   "marker": "[P-020]",
+   "verdict": "supports",
+   "evidence_span": "the Commission has appointed the undersigned Hearing Officer to conduct a hearing in this proceeding",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 50,
+   "sentence": "The orders we read do not name the room for the Dec",
+   "marker": "{editorial: scoped to the two scheduling orders (S02, S02b)}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "Scoped to the two scheduling orders; the passages from them (P-015 to P-021) name no room."
+  },
+  {
+   "line": 50,
+   "sentence": "The schedule order says the PSC gives public notice of the hearing",
+   "marker": "[P-019]",
+   "verdict": "supports",
+   "evidence_span": "Public notice of this hearing shall be given by the Commission on the Commission Calendar posted on the Commission website.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 51,
+   "sentence": "The PSC's public witness page says a public witness makes comments that",
+   "marker": "[P-084]",
+   "verdict": "supports",
+   "evidence_span": "does not make a formal request to intervene in a proceeding before the Georgia Public Service Commission (PSC or Commission), but wishes to make comments that become a part of the official transcript of the case.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 51,
+   "sentence": "No order we read says whether public witnesses will be heard on",
+   "marker": "{editorial: scoped to the two scheduling orders (S02, S02b)}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "Scoped to the two scheduling orders; no passage addresses public witnesses on Dec 9."
+  },
+  {
+   "line": 51,
+   "sentence": "To ask, call the PSC at 404-656-4501 (local) or 1-800-282-5813 (outside metro-Atlanta)",
+   "marker": "[P-086]",
+   "verdict": "supports",
+   "evidence_span": "email: gapsc@psc.state.ga.us fax: 404-463-6683 1-800-282-5813 (outside metro-Atlanta), press 2 404-656-4501 (local), press 2",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 52,
+   "sentence": "The PSC's Public Comments page says: \"Comments must be submitted 24 hours",
+   "marker": "[P-088]",
+   "verdict": "supports",
+   "evidence_span": "Comments must be submitted 24 hours before a Commission vote.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 52,
+   "sentence": "No vote date is set in this case as of Nov 14,",
+   "marker": "{editorial: process note; no order we read sets a vote date}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "No passage sets a vote date. The sentence is dated but not scoped to 'the orders we read'."
+  },
+  {
+   "line": 52,
+   "sentence": "The Public Comments page does not say how to send a comment,",
+   "marker": "{editorial: process note; P-088 is the page's full text on comments}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "P-088 gives no way to send a comment; the source table says the page was read whole."
+  },
+  {
+   "line": 53,
+   "sentence": "Read the filings on the PSC's web page for Docket 57243.",
+   "marker": "[P-001]",
+   "verdict": "supports",
+   "evidence_span": "Docket #57243 Title: Petition For Expedited Declaratory Judgment and Enforcement Against Voltagrid",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 53,
+   "sentence": "A docket is the PSC's case file.",
+   "marker": "{analysis: plain-language definition, not from the cited sources}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "Plain-language definition; accurate, neutral and labeled as not from the sources."
+  },
+  {
+   "line": 57,
+   "sentence": "The Hearing Officer holds the hearing and writes a recommended decision for",
+   "marker": "[P-020]",
+   "verdict": "supports",
+   "evidence_span": "to conduct a hearing in this proceeding and to make findings of fact and conclusions of law and present the same to the Commission in the form of a recommended decision",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 58,
+   "sentence": "The PSC's five commissioners make the final decision.",
+   "marker": "[P-020, P-085]",
+   "verdict": "supports",
+   "evidence_span": "At the scheduled Administrative Session, the Commissioners make a decision based upon the evidence that was presented during the hearing.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 58,
+   "sentence": "This page names officials by role; the PSC's website lists the commissioners.",
+   "marker": "{editorial: privacy and naming rule for this page}",
+   "verdict": "questionable",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "The first half is a page rule. The second half ('the PSC's website lists the commissioners') is a factual claim about a web page with no passage behind it; P-085 says only that there are five commissioners.",
+   "suggested_fix": "Cite a passage for the commissioner list or drop the clause.",
+   "reason": "The first half is a page rule. The second half ('the PSC's website lists the commissioners') is a factual claim about a web page with no passage behind it; P-085 says only that there are five commissioners."
+  },
+  {
+   "line": 59,
+   "sentence": "To reach the PSC, call 404-656-4501 (local) or 1-800-282-5813 (outside metro-Atlanta) and",
+   "marker": "[P-086]",
+   "verdict": "supports",
+   "evidence_span": "email: gapsc@psc.state.ga.us fax: 404-463-6683 1-800-282-5813 (outside metro-Atlanta), press 2 404-656-4501 (local), press 2",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 63,
+   "sentence": "The parties meet and trade the papers they plan to use at",
+   "marker": "[P-015]",
+   "verdict": "supports",
+   "evidence_span": "November 24, 2026 The Parties are to confer in advance of the Pre-Hearing Conference, and exchange documents proposed to be used at hearing as exhibits.",
+   "correct_passage": "",
+   "problem": "'meet' for 'confer'; P-017 has the parties confer by conference call, so 'confer' or 'talk' is closer.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 64,
+   "sentence": "Objections to written testimony and exhibits are due.",
+   "marker": "[P-016]",
+   "verdict": "supports",
+   "evidence_span": "December 2, 2026 Objections to pre-filed testimony and exhibits must be filed.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 65,
+   "sentence": "The pre-hearing conference is at 2:00 p.m.",
+   "marker": "[P-017]",
+   "verdict": "supports",
+   "evidence_span": "December 4, 2026 Pre-Hearing Conference, 2:00PM.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 66,
+   "sentence": "The Hearing Officer holds the hearing, starting at 10:00 a.m.",
+   "marker": "[P-018, P-089]",
+   "verdict": "supports",
+   "evidence_span": "December 9, 2026 The Hearing Officer, beginning at 10:00AM, will conduct a hearing in this proceeding.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 70,
+   "sentence": "The petition says the state Environmental Protection Division (EPD), which issues air",
+   "marker": "[P-028, P-065]",
+   "verdict": "supports",
+   "evidence_span": "On July 2, 2026, the Environmental Protection Division issued a “Notice of Violation” to VoltaGrid for constructing its powerplant before EPD issued an air permit.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 70,
+   "sentence": "The notice told VoltaGrid to stop building pollution sources until a permit",
+   "marker": "[P-039]",
+   "verdict": "supports",
+   "evidence_span": "the Company must stop all remaining construction of air pollution emissions sources and/or control equipment until such time that an air quality permit is issued",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 71,
+   "sentence": "Sustainable Newton, a Newton County nonprofit, and nearby residents filed the petition.",
+   "marker": "{analysis: the petition was filed Jul 13 (P-002); it names the nonprofit (P-029) and residents who live about two miles and less than 5 miles from the plant (P-030, P-031); their names and roads are left out under our privacy rule}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "P-002 gives the Jul 13 filing, P-029 the nonprofit, P-030 and P-031 the distances. P-001 (the docket page) shows 'Date: 07/02/2026', which the page does not explain; see framing issues."
+  },
+  {
+   "line": 72,
+   "sentence": "The PSC sent the case to a Hearing Officer.",
+   "marker": "[P-003]",
+   "verdict": "supports",
+   "evidence_span": "2026-08-24 | document 227960 | Assignment to Hearing Officer Order",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 73,
+   "sentence": "VoltaGrid asked the PSC to dismiss the case.",
+   "marker": "[P-004]",
+   "verdict": "supports",
+   "evidence_span": "2026-09-16 | document 228806 | VoltaGrid, LLC's Motion to Dismiss and Brief in Support (w/Exhibit)",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 74,
+   "sentence": "Georgia Power and Georgia EMC, a trade group for electric membership corporations",
+   "marker": "[P-091, P-062]",
+   "verdict": "supports",
+   "evidence_span": "2026-09-23 | document 228949 | Petition to Intervene of Georgia EMC 2026-09-22 | document 228938 | Georgia Power Company's Application for Leave to Intervene",
+   "correct_passage": "",
+   "problem": "Dates and order match. 'electric membership corporations' is not in any passage; P-062 calls them 'electric distribution cooperatives'.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 75,
+   "sentence": "The Hearing Officer denied VoltaGrid's request to pause the case.",
+   "marker": "[P-090, P-023]",
+   "verdict": "supports",
+   "evidence_span": "For these reasons, VoltaGrid’s request for a stay is DENIED.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 76,
+   "sentence": "The PSC's staff, the petitioners, Georgia EMC and Georgia Power each answered",
+   "marker": "[P-005]",
+   "verdict": "supports",
+   "evidence_span": "2026-10-16 | document 229167 | Staff's Response to Respondent's Motion to Dismiss 2026-10-16 | document 229170 | Petitioners' Response to VoltaGrid's Motion to Dismiss 2026-10-16 | document 229171 | Georgia EMC's Response in Opposition",
+   "correct_passage": "",
+   "problem": "The span covers three of the four rows because of the 40-word limit; the fourth row (Georgia Power, document 229172) is in the same passage.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 77,
+   "sentence": "The Hearing Officer ordered that the petitioners' lawyers get access, under a",
+   "marker": "[P-007, P-024]",
+   "verdict": "supports",
+   "evidence_span": "counsel for Petitioners are granted access to materials marked trade secret subject to a protective agreement",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 77,
+   "sentence": "A trade secret is business information a company keeps private.",
+   "marker": "{analysis: plain-language definition, not from the cited sources}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "Plain-language definition; accurate, neutral and labeled as not from the sources."
+  },
+  {
+   "line": 78,
+   "sentence": "VoltaGrid filed an emergency appeal of the Nov 4 order.",
+   "marker": "[P-008]",
+   "verdict": "supports",
+   "evidence_span": "2026-11-09 | document 229399 | VoltaGrid, LLC's Emergency Appeal from the Hearing Officer's November 4, 2026 Order and Motion for Stay",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 79,
+   "sentence": "The PSC's Chairman issued an order temporarily staying, or pausing, a Hearing",
+   "marker": "[P-009]",
+   "verdict": "supports",
+   "evidence_span": "2026-11-12 | document 229426 | Chairman's Order Temporarily Staying Hearing Officer's Order",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 79,
+   "sentence": "The filing list's title doesn't say which order; VoltaGrid's Nov 9 appeal",
+   "marker": "{analysis: the Nov 9 filing is an appeal from the Hearing Officer's Nov 4 order with a motion for stay (P-008); our copy of the Chairman's order has no readable text}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "P-008 is titled an appeal from the Nov 4 order 'and Motion for Stay'. The title does not say what the stay covers, so the second clause is an inference, as its tag says. home.md line 10 states the same link as fact."
+  },
+  {
+   "line": 80,
+   "sentence": "The petitioners answered the appeal, and a PSC staff witness filed rebuttal",
+   "marker": "[P-010, P-012, P-073]",
+   "verdict": "supports",
+   "evidence_span": "2026-11-13 | document 229432 | Petitioners' Response to VoltaGrid's Emergency Appeal and Motion to Stay",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 84,
+   "sentence": "The petition asks the Public Service Commission (PSC) to say whether the",
+   "marker": "[P-027, P-035]",
+   "verdict": "supports",
+   "evidence_span": "(a) Determine and declare whether VoltaGrid, LLC is planning to construct and operate a power plant to furnish retail electric service in violation of the Territorial Act or Cogeneration Act",
+   "correct_passage": "",
+   "problem": "'breaks two power laws' can be read as both; the request is the Territorial Act 'or' the Cogeneration Act (line 28 says 'either').",
+   "suggested_fix": ""
+  },
+  {
+   "line": 84,
+   "sentence": "The petition also asks the PSC to order VoltaGrid to stop any",
+   "marker": "[P-035]",
+   "verdict": "supports",
+   "evidence_span": "(b) Order that VoltaGrid, LLC cease and desist any operations in violation of the Territorial Act or Cogeneration Act.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 85,
+   "sentence": "The first law is the Territorial Act, the Georgia law that assigns",
+   "marker": "[P-050]",
+   "verdict": "supports",
+   "evidence_span": "the Georgia Territorial Act, O.C.G.A. § 46-3-1 et seq., under which the right to provide electrical service is assigned to utility companies according to territorial boundaries established by the Commission.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 86,
+   "sentence": "The second law is the Cogeneration Act, a 2001 Georgia law on",
+   "marker": "[P-036]",
+   "verdict": "supports",
+   "evidence_span": "The Cogeneration and Distributed Generation Act of 2001 provides that “[a]ny person may operate a cogeneration facility without being subject to the jurisdiction or regulation of the commission if such person uses all of the electric energy",
+   "correct_passage": "",
+   "problem": "'plants that power their owners' is the authors' gloss of one provision as the petition quotes it; the Act's full name also covers distributed generation.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 86,
+   "sentence": "The petition says the Cogeneration Act bars the sale of a plant's",
+   "marker": "[P-036]",
+   "verdict": "supports",
+   "evidence_span": "It further commands that “[t]he electric energy shall not be sold to any other person” unless it is sold “to an electric supplier.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 87,
+   "sentence": "The hearing will take up four questions.",
+   "marker": "[P-021]",
+   "verdict": "supports",
+   "evidence_span": "The following matters are at issue in this proceeding and will be decided on the basis of facts and arguments presented at the hearing",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 87,
+   "sentence": "The first is whether the PSC has power over VoltaGrid as an",
+   "marker": "[P-021]",
+   "verdict": "supports",
+   "evidence_span": "Whether the Commission has jurisdiction over VoltaGrid as an “electric supplier” under O.C.G.A. § 46-3-3(3)",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 87,
+   "sentence": "The second is whether the people who filed are \"interested parties\" who",
+   "marker": "[P-021]",
+   "verdict": "supports",
+   "evidence_span": "Whether Petitioners are “interested parties” entitled to initiate their Petition",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 87,
+   "sentence": "The third is whether the plan to build the plant, run it",
+   "marker": "[P-021]",
+   "verdict": "supports",
+   "evidence_span": "planned construction and operation of the proposed generating facility, and delivery of the resulting energy to the data center Serverfarm",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 87,
+   "sentence": "The fourth is whether any PSC action is needed.",
+   "marker": "[P-021]",
+   "verdict": "supports",
+   "evidence_span": "Whether any action from the Commission on the matters at issue is necessary.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 88,
+   "sentence": "The PSC also gave the Hearing Officer, the person the PSC appointed",
+   "marker": "[P-022, P-020]",
+   "verdict": "supports",
+   "evidence_span": "instructed the Hearing Officer to set a “hearing on the issues set forth in the Petition and on whether Respondent is providing service or offering to provide service that is subject to the jurisdiction of the Commission",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 88,
+   "sentence": "That question is whether VoltaGrid's service falls under the PSC's power.",
+   "marker": "[P-022]",
+   "verdict": "supports",
+   "evidence_span": "whether Respondent is providing service or offering to provide service that is subject to the jurisdiction of the Commission",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 88,
+   "sentence": "If the answer is yes, the Hearing Officer is to ask \"what",
+   "marker": "[P-022]",
+   "verdict": "supports",
+   "evidence_span": "if so, what if any action the Commission should take.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 89,
+   "sentence": "After the hearing, the Hearing Officer sends the PSC a recommended decision.",
+   "marker": "[P-020]",
+   "verdict": "supports",
+   "evidence_span": "present the same to the Commission in the form of a recommended decision",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 89,
+   "sentence": "The PSC can adopt that decision.",
+   "marker": "[P-020]",
+   "verdict": "supports",
+   "evidence_span": "recommended decision for adoption by the Commission.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 90,
+   "sentence": "An exhibit attached to the petition describes the plant.",
+   "marker": "[P-040]",
+   "verdict": "supports",
+   "evidence_span": "VoltaGrid LLC proposes the construction and operation of VoltaGrid ATL-1 EGU, a greenfield power generation facility with a maximum power output of 90 MW",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 90,
+   "sentence": "The plant would make up to 90 MW from 33 natural gas",
+   "marker": "[P-040]",
+   "verdict": "supports",
+   "evidence_span": "maximum power output of 90 MW, consisting of 33 natural gas-fired, four-stroke lean-burn (4SLB) reciprocating internal combustion engines (RICE)",
+   "correct_passage": "",
+   "problem": "'run all year' rests on 'operating continuously for 8,760 hours per year' in the same passage.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 90,
+   "sentence": "One megawatt (MW) is a unit of power equal to a million",
+   "marker": "{analysis: plain-language definition, not from the cited sources}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "Plain-language definition; accurate, neutral and labeled as not from the sources."
+  },
+  {
+   "line": 94,
+   "sentence": "The filings we read point to three ways this Public Service Commission",
+   "marker": "{analysis: built from the petition's request (P-035), VoltaGrid's request (P-041, P-042) and the PSC's own question (P-022)}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "P-035, P-041, P-042 and P-022 give the three starting points; the grouping is the authors' and is labeled as such."
+  },
+  {
+   "line": 94,
+   "sentence": "Two laws are at issue.",
+   "marker": "[P-021]",
+   "verdict": "supports",
+   "evidence_span": "violates O.C.G.A. §§ 46-3-1 through 15 (the “Territorial Act”) and/or §§ 46-3-50 through 56 (the “Cogeneration Act",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 94,
+   "sentence": "One is the Territorial Act, the Georgia law that assigns service areas",
+   "marker": "[P-050]",
+   "verdict": "supports",
+   "evidence_span": "the Georgia Territorial Act, O.C.G.A. § 46-3-1 et seq., under which the right to provide electrical service is assigned to utility companies according to territorial boundaries established by the Commission.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 94,
+   "sentence": "The other is the Cogeneration Act, a 2001 Georgia law on plants",
+   "marker": "[P-036]",
+   "verdict": "supports",
+   "evidence_span": "The Cogeneration and Distributed Generation Act of 2001 provides that “[a]ny person may operate a cogeneration facility without being subject to the jurisdiction or regulation of the commission if such person uses all of the electric energy",
+   "correct_passage": "",
+   "problem": "Same gloss as line 86.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 94,
+   "sentence": "This page does not pick an outcome.",
+   "marker": "{editorial: nonpartisan rule}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "States a page rule or process note; no passage contradicts it."
+  },
+  {
+   "line": 98,
+   "sentence": "The petition says VoltaGrid, the plant's builder, adds \"air, light, and noise",
+   "marker": "[P-032]",
+   "verdict": "supports",
+   "evidence_span": "which contributes air, light, and noise pollution to an area already overburdened by these industrial impacts.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 99,
+   "sentence": "VoltaGrid says it \"is the antithesis of a monopoly, and is negotiating",
+   "marker": "[P-043]",
+   "verdict": "supports",
+   "evidence_span": "is the antithesis of a monopoly, and is negotiating bespoke rates with a sophisticated counterparty.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 100,
+   "sentence": "Georgia EMC, a trade group for electric membership corporations (EMCs), says a",
+   "marker": "[P-055, P-062]",
+   "verdict": "supports",
+   "evidence_span": "That investment could become stranded (with the costs thereof to be absorbed by the electric supplier’s other consumers) if future customers in the area can be picked off",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 101,
+   "sentence": "Georgia Power says a one-customer exception would let any company \"render any",
+   "marker": "[P-057]",
+   "verdict": "supports",
+   "evidence_span": "render any amount of service, and avoid Commission jurisdiction so long as they serve only one customer in the state.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 102,
+   "sentence": "The PSC's staff says an early dismissal \"will not serve the Commission’s",
+   "marker": "[P-051]",
+   "verdict": "partial",
+   "evidence_span": "will not serve the Commission’s objective of timely and efficiently resolving the issue",
+   "correct_passage": "",
+   "problem": "Quote and speaker are right. The stated value is not the one in the quote: the staff's stated objective is 'timely and efficiently resolving the issue'; 'a full record' is the Hearing Officer's language (P-026).",
+   "suggested_fix": "If you care most about settling the question at the scheduled hearing: ... (or quote P-026 and name the Hearing Officer for the full-record value)."
+  },
+  {
+   "line": 103,
+   "sentence": "The people who filed say the Cogeneration Act puts VoltaGrid under the",
+   "marker": "[P-034]",
+   "verdict": "supports",
+   "evidence_span": "The plain language of the Cogeneration Act subjects VoltaGrid to the jurisdiction or regulation of the commission",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 103,
+   "sentence": "Georgia EMC says the PSC can enforce the Territorial Act apart from",
+   "marker": "[P-053]",
+   "verdict": "supports",
+   "evidence_span": "VoltaGrid conflates the Commission’s regulatory jurisdiction over public utilities with the Commission’s jurisdiction to enforce the provisions of the Territorial Act.",
+   "correct_passage": "",
+   "problem": "The passage says VoltaGrid 'conflates' two kinds of authority; 'can enforce ... apart from' is the plain implication.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 103,
+   "sentence": "Georgia Power says VoltaGrid's service \"should be regulated by the Commission.\"",
+   "marker": "[P-058]",
+   "verdict": "supports",
+   "evidence_span": "VoltaGrid’s service of electricity to Serverfarm is a public service that should be regulated by the Commission.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 103,
+   "sentence": "The PSC's staff asked that the dismissal decision wait until after the",
+   "marker": "[P-052]",
+   "verdict": "supports",
+   "evidence_span": "Staff requests that the Hearing Officer reserve making a decision as to Voltagrid’s Motion to Dismiss until after the December 9, 2026 hearing in this matter.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 103,
+   "sentence": "On whether the people who filed may bring the case, Georgia EMC",
+   "marker": "[P-054, P-094]",
+   "verdict": "supports",
+   "evidence_span": "Georgia EMC takes no position herein on VoltaGrid’s standing argument.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 103,
+   "sentence": "The number of filers does not decide the legal question, and the",
+   "marker": "{editorial: count caveat; the filing list (source S01b) shows no ruling on the motion to dismiss}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "No passage shows a ruling on the motion to dismiss. 'filers' here means the parties that responded, a different sense from line 8; see framing issues."
+  },
+  {
+   "line": 107,
+   "sentence": "The PSC would end the case with no ruling against VoltaGrid's plan,",
+   "marker": "{analysis: the results VoltaGrid asks for (P-041, P-042) and the hearing questions (P-021)}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "Matches VoltaGrid's two grounds (P-041, P-042) and the hearing questions (P-021)."
+  },
+  {
+   "line": 107,
+   "sentence": "VoltaGrid gives two grounds for dismissing now.",
+   "marker": "[P-041, P-042]",
+   "verdict": "supports",
+   "evidence_span": "Petitioners can assert no interest the Territorial Act was enacted to protect",
+   "correct_passage": "",
+   "problem": "P-094 states it directly: 'two independent bases'. P-094 lists them in the other order.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 107,
+   "sentence": "First, VoltaGrid says the PSC has no power over a company that",
+   "marker": "[P-041]",
+   "verdict": "supports",
+   "evidence_span": "VoltaGrid also does not “furnish service to the public” — a prerequisite to regulation under the Territorial Act — and thus is not subject to the Commission’s jurisdiction.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 107,
+   "sentence": "Second, VoltaGrid says the people who filed are not \"interested parties.\"",
+   "marker": "[P-042]",
+   "verdict": "supports",
+   "evidence_span": "they are not “interested parties",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 108,
+   "sentence": "VoltaGrid and Serverfarm, the data center's owner, would face no PSC order",
+   "marker": "{analysis: follows from the petition's requests (P-035) not being granted}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "Follows from the requests in P-035 not being granted; Serverfarm is not a party, and the sentence does not say it is."
+  },
+  {
+   "line": 109,
+   "sentence": "The people who filed say neighbors would live with the plant's noise,",
+   "marker": "[P-032, P-072]",
+   "verdict": "supports",
+   "evidence_span": "which contributes air, light, and noise pollution to an area already overburdened by these industrial impacts.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 109,
+   "sentence": "Georgia EMC says a supplier's other consumers could absorb the cost of",
+   "marker": "[P-055]",
+   "verdict": "supports",
+   "evidence_span": "That investment could become stranded (with the costs thereof to be absorbed by the electric supplier’s other consumers) if future customers in the area can be picked off",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 109,
+   "sentence": "Georgia EMC's statement is about suppliers' lines in general; no filing we",
+   "marker": "{editorial: scoped to the filings and excerpts we read}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "P-055 speaks of 'an electric supplier' and 'future customers in the area' in general terms and gives no amount."
+  },
+  {
+   "line": 110,
+   "sentence": "The PSC asked its own question about its power over VoltaGrid.",
+   "marker": "[P-022]",
+   "verdict": "supports",
+   "evidence_span": "whether Respondent is providing service or offering to provide service that is subject to the jurisdiction of the Commission",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 110,
+   "sentence": "No filing we read says whether a dismissal would end that question",
+   "marker": "{editorial: scoped to the filings and excerpts we read}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "No passage says so; P-026 says only that summary dismissal would be 'contrary to the direction of the Commission'."
+  },
+  {
+   "line": 114,
+   "sentence": "The PSC would rule that the plan breaks the Territorial Act or",
+   "marker": "[P-035]",
+   "verdict": "supports",
+   "evidence_span": "(a) Determine and declare whether VoltaGrid, LLC is planning to construct and operate a power plant to furnish retail electric service in violation of the Territorial Act or Cogeneration Act",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 114,
+   "sentence": "The PSC would then order VoltaGrid to stop the work that breaks",
+   "marker": "[P-035]",
+   "verdict": "supports",
+   "evidence_span": "(b) Order that VoltaGrid, LLC cease and desist any operations in violation of the Territorial Act or Cogeneration Act.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 115,
+   "sentence": "The people who filed, who say the plant adds pollution to their",
+   "marker": "[P-032]",
+   "verdict": "supports",
+   "evidence_span": "which contributes air, light, and noise pollution to an area already overburdened by these industrial impacts.",
+   "correct_passage": "",
+   "problem": "The passage supports what the filers say; that they would benefit is the authors' inference, and line 116 then says no filing shows the order would change the pollution.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 115,
+   "sentence": "Georgia Power says the site is in its assigned territory and Serverfarm",
+   "marker": "[P-061]",
+   "verdict": "supports",
+   "evidence_span": "an entity slated to become a Georgia Power customer—at premises situated squarely within Georgia Power’s assigned service territory",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 116,
+   "sentence": "VoltaGrid and Serverfarm, since the order would target their power deal.",
+   "marker": "{analysis: the order the petition asks for is aimed at VoltaGrid's operations (P-035), and VoltaGrid says those operations serve only Serverfarm (P-046)}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "The order sought (P-035) is aimed at VoltaGrid's operations; P-046 is VoltaGrid's account that those serve Serverfarm."
+  },
+  {
+   "line": 116,
+   "sentence": "No filing we read states what such an order would cost VoltaGrid",
+   "marker": "{editorial: scoped to the filings and excerpts we read}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "Scoped to what the authors read and dated; no passage states the missing item."
+  },
+  {
+   "line": 116,
+   "sentence": "No filing we read says whether such an order would change the",
+   "marker": "{editorial: scoped to the filings and excerpts we read; the air permit is not among the hearing questions (P-021)}",
+   "verdict": "questionable",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "P-032 states the petitioners' interest in 'preventing ... power plants, including VoltaGrid, from emitting' pollution, and the order sought in P-035 would stop 'any operations in violation'. The same page's Outcome A line (109) treats the outcome as deciding whether neighbors live with the pollution. The caveat is applied to one outcome only.",
+   "suggested_fix": "Apply the same caveat under Outcome A, or say the petitioners tie the order to preventing emissions (P-032) while no filing says how much would change.",
+   "reason": "P-032 states the petitioners' interest in 'preventing ... power plants, including VoltaGrid, from emitting' pollution, and the order sought in P-035 would stop 'any operations in violation'. The same page's Outcome A line (109) treats the outcome as deciding whether neighbors live with the pollution. The caveat is applied to one outcome only."
+  },
+  {
+   "line": 117,
+   "sentence": "No filing we read says what VoltaGrid could still do under such",
+   "marker": "{editorial: scoped to the filings and excerpts we read}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "Scoped to what the authors read and dated; no passage states the missing item. P-061 calls the service 'bridge power' to a future Georgia Power customer but gives no timing."
+  },
+  {
+   "line": 121,
+   "sentence": "The PSC would find that VoltaGrid's service falls under its power.",
+   "marker": "{analysis: the first half of the PSC's own question (P-022)}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "Restates the first half of P-022."
+  },
+  {
+   "line": 121,
+   "sentence": "The PSC would then decide \"what if any action the Commission should",
+   "marker": "[P-022]",
+   "verdict": "supports",
+   "evidence_span": "if so, what if any action the Commission should take.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 121,
+   "sentence": "The fourth hearing question asks whether any PSC action is needed.",
+   "marker": "[P-021]",
+   "verdict": "supports",
+   "evidence_span": "Whether any action from the Commission on the matters at issue is necessary.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 122,
+   "sentence": "That depends on the action the PSC picks.",
+   "marker": "{analysis: the PSC's question (P-022) names no action}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "P-022 names no action."
+  },
+  {
+   "line": 122,
+   "sentence": "Georgia Power says VoltaGrid's service \"should be regulated by the Commission.\"",
+   "marker": "[P-058]",
+   "verdict": "supports",
+   "evidence_span": "VoltaGrid’s service of electricity to Serverfarm is a public service that should be regulated by the Commission.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 123,
+   "sentence": "That depends on the action the PSC picks.",
+   "marker": "{analysis: the PSC's question (P-022) names no action}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "P-022 names no action."
+  },
+  {
+   "line": 123,
+   "sentence": "VoltaGrid says it is not a company the PSC may regulate.",
+   "marker": "[P-041]",
+   "verdict": "supports",
+   "evidence_span": "thus is not subject to the Commission’s jurisdiction.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 124,
+   "sentence": "No filing we read names the action the PSC would take.",
+   "marker": "{editorial: scoped to the filings and excerpts we read}",
+   "verdict": "questionable",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "For what the PSC 'would' do this holds, but filings do name actions: Georgia Power says the service 'should be regulated by the Commission' (P-058) and the petition asks for a cease-and-desist order (P-035).",
+   "suggested_fix": "No filing we read says which action the PSC would take, beyond the requests already described (an order to stop, P-035; regulation, P-058).",
+   "reason": "For what the PSC 'would' do this holds, but filings do name actions: Georgia Power says the service 'should be regulated by the Commission' (P-058) and the petition asks for a cease-and-desist order (P-035)."
+  },
+  {
+   "line": 130,
+   "sentence": "Every card uses the same fields in the same order, and all",
+   "marker": "{editorial: labeling rule}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "Checked: all six cards carry the same seven fields in the same order."
+  },
+  {
+   "line": 131,
+   "sentence": "\"Supported\" means the record we read backs the card's main factual premise",
+   "marker": "{editorial: labeling rule}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "Labeling rule. Its use on card 6 is questioned at line 202."
+  },
+  {
+   "line": 132,
+   "sentence": "\"Legal question\" marks a card that turns on how a law reads,",
+   "marker": "{editorial: labeling rule}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "States a page rule or process note; no passage contradicts it."
+  },
+  {
+   "line": 133,
+   "sentence": "\"Claim type\" says whether a card rests on facts, law, predictions or",
+   "marker": "{editorial: labeling rule}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "States a page rule or process note; no passage contradicts it."
+  },
+  {
+   "line": 134,
+   "sentence": "\"Documented\" means a party made the argument in a filing, given with",
+   "marker": "{editorial: labeling rule}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "States a page rule or process note; no passage contradicts it."
+  },
+  {
+   "line": 135,
+   "sentence": "We read the long filings in excerpts found by keyword search, so",
+   "marker": "{editorial: process note}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "States a page rule or process note; no passage contradicts it."
+  },
+  {
+   "line": 136,
+   "sentence": "Cards follow the order in which each side first filed its argument,",
+   "marker": "{editorial: ordering rule}",
+   "verdict": "questionable",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "The passages point the other way for cards 4 to 6. On Oct 16 the staff's response is document 229167, ahead of Georgia EMC's (229171) and Georgia Power's (229172) in P-005, yet the staff card is last. Georgia Power's first filing (Sep 22, P-091) precedes Georgia EMC's (Sep 23), yet the EMC card comes first.",
+   "suggested_fix": "Reorder cards 4 to 6, or state the rule actually used.",
+   "reason": "The passages point the other way for cards 4 to 6. On Oct 16 the staff's response is document 229167, ahead of Georgia EMC's (229171) and Georgia Power's (229172) in P-005, yet the staff card is last. Georgia Power's first filing (Sep 22, P-091) precedes Georgia EMC's (Sep 23), yet the EMC card comes first."
+  },
+  {
+   "line": 142,
+   "sentence": "The petitioners say VoltaGrid, the plant's builder, would sell power to Serverfarm,",
+   "marker": "[P-027, P-033, P-050]",
+   "verdict": "supports",
+   "evidence_span": "The Territorial Act prohibits VoltaGrid from furnishing retail electric service to Serverfarm.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 142,
+   "sentence": "Evidence: Mixed.",
+   "marker": "{editorial: restates the label}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "Matches a label on the card's header line."
+  },
+  {
+   "line": 143,
+   "sentence": "The petitioners, a Newton County nonprofit and nearby residents, made the argument",
+   "marker": "{analysis: the petition was filed Jul 13 (P-002); it names the nonprofit (P-029) and residents who live about two miles and less than 5 miles from the plant (P-030, P-031); their names and roads are left out under our privacy rule}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "P-002 gives the Jul 13 filing, P-029 the nonprofit, P-030 and P-031 the distances."
+  },
+  {
+   "line": 143,
+   "sentence": "The petition says: \"The Territorial Act prohibits VoltaGrid from furnishing retail electric",
+   "marker": "[P-033]",
+   "verdict": "supports",
+   "evidence_span": "The Territorial Act prohibits VoltaGrid from furnishing retail electric service to Serverfarm.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 143,
+   "sentence": "The petition also says the plan breaks the Cogeneration Act, a 2001",
+   "marker": "[P-034, P-036]",
+   "verdict": "supports",
+   "evidence_span": "VoltaGrid is selling its energy to Serverfarm, which is not a retail supplier of electricity whose rates are fixed by the Commission.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 144,
+   "sentence": "The petition says: \"Serverfarm and VoltaGrid are separate companies with no cross",
+   "marker": "[P-038]",
+   "verdict": "supports",
+   "evidence_span": "Serverfarm and VoltaGrid are separate companies with no cross ownership or direct control over each other’s operations",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 144,
+   "sentence": "A witness for the PSC's staff said on Nov 13, 2026, that",
+   "marker": "[P-012, P-073, P-076]",
+   "verdict": "supports",
+   "evidence_span": "The SOW states Monthly Fees per kWh of xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxx, with cumulative Monthly Fees increasing as the installation scales.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 145,
+   "sentence": "A VoltaGrid executive said in a sworn statement filed with VoltaGrid's Sep",
+   "marker": "[P-004, P-044, P-046]",
+   "verdict": "supports",
+   "evidence_span": "VoltaGrid will not sell that electricity to Serverfarm or to anyone else.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 145,
+   "sentence": "The executive also said Serverfarm pays based on \"the Conversion Assets’ producing",
+   "marker": "[P-046]",
+   "verdict": "supports",
+   "evidence_span": "Serverfarm will pay VoltaGrid for this service in amounts based on the Conversion Assets’ producing capacity in operation, rather than a fee per kWh of energy that the Conversion Assets actually deliver.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 146,
+   "sentence": "VoltaGrid said on Oct 26, 2026, that every ban in the Territorial",
+   "marker": "[P-006, P-066, P-041]",
+   "verdict": "supports",
+   "evidence_span": "Every prohibition in the Territorial Act runs to “electric suppliers",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 147,
+   "sentence": "The fee amounts in the contract are blacked out in the public",
+   "marker": "[P-076]",
+   "verdict": "supports",
+   "evidence_span": "The SOW states Monthly Fees per kWh of xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxx, with cumulative Monthly Fees increasing as the installation scales.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 147,
+   "sentence": "The PSC staff's witness said, about the contract terms the witness cited:",
+   "marker": "[P-078]",
+   "verdict": "supports",
+   "evidence_span": "I am not a lawyer and do not have an opinion as to whether, standing alone, they resolve any legal classification under Georgia law.",
+   "correct_passage": "",
+   "problem": "'they' has no antecedent inside the passage; reading it as the contract terms fits P-077.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 148,
+   "sentence": "Whether VoltaGrid's deal with Serverfarm, which VoltaGrid describes as a service and",
+   "marker": "{editorial: process note; the Nov 4 order says the electric-supplier question is undecided (P-025)}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "P-025 says the electric-supplier question is undecided; no passage shows a later ruling."
+  },
+  {
+   "line": 154,
+   "sentence": "VoltaGrid describes its plant as an \"on-site generator privately serving the owner",
+   "marker": "[P-041, P-064]",
+   "verdict": "supports",
+   "evidence_span": "An on-site generator privately serving the owner of the site does nothing to cause competition among public utilities",
+   "correct_passage": "",
+   "problem": "The quoted phrase is from the Oct 26 reply brief (S12), while the next line dates 'the argument' to the Sep 16 brief.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 154,
+   "sentence": "Evidence: Mixed.",
+   "marker": "{editorial: restates the label}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "Matches a label on the card's header line."
+  },
+  {
+   "line": 155,
+   "sentence": "VoltaGrid made the argument in the brief it filed with the PSC",
+   "marker": "[P-004, P-041]",
+   "verdict": "supports",
+   "evidence_span": "VoltaGrid also does not “furnish service to the public” — a prerequisite to regulation under the Territorial Act — and thus is not subject to the Commission’s jurisdiction.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 155,
+   "sentence": "The brief says VoltaGrid does not \"furnish service to the public.\"",
+   "marker": "[P-041]",
+   "verdict": "supports",
+   "evidence_span": "VoltaGrid also does not “furnish service to the public” — a prerequisite to regulation under the Territorial Act — and thus is not subject to the Commission’s jurisdiction.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 155,
+   "sentence": "A VoltaGrid executive gave the same answer in testimony dated Oct 9,",
+   "marker": "[P-044, P-067, P-069]",
+   "verdict": "supports",
+   "evidence_span": "Q. Does VoltaGrid furnish service to the public in Georgia? A. No.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 156,
+   "sentence": "The executive's sworn statement says Serverfarm supplies the gas and \"VoltaGrid will",
+   "marker": "[P-046]",
+   "verdict": "supports",
+   "evidence_span": "VoltaGrid will not take ownership of the electricity that will be produced by the Conversion Assets",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 156,
+   "sentence": "The statement says VoltaGrid is not \"pursuing any additional customer or business",
+   "marker": "[P-093]",
+   "verdict": "supports",
+   "evidence_span": "VoltaGrid is not soliciting, marketing to, or otherwise pursuing any additional customer or business in Georgia.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 156,
+   "sentence": "VoltaGrid's brief says VoltaGrid \"has no special privileges, no condemnation power, is",
+   "marker": "[P-043]",
+   "verdict": "supports",
+   "evidence_span": "has no special privileges, no condemnation power, is the antithesis of a monopoly",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 157,
+   "sentence": "Georgia EMC, a trade group for electric membership corporations (EMCs), said on",
+   "marker": "[P-005, P-053]",
+   "verdict": "supports",
+   "evidence_span": "VoltaGrid conflates the Commission’s regulatory jurisdiction over public utilities with the Commission’s jurisdiction to enforce the provisions of the Territorial Act.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 157,
+   "sentence": "Georgia Power said the same day that VoltaGrid's service \"is a public",
+   "marker": "[P-005, P-058]",
+   "verdict": "supports",
+   "evidence_span": "VoltaGrid’s service of electricity to Serverfarm is a public service that should be regulated by the Commission.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 157,
+   "sentence": "The petitioners said that, under one reading of the Territorial Act, VoltaGrid",
+   "marker": "[P-005, P-049]",
+   "verdict": "supports",
+   "evidence_span": "VoltaGrid is in violation of the Territorial Act simply by furnishing retail electric service to Serverfarm without being either assigned or “chosen,” regardless of whether VoltaGrid qualifies as an electric supplier.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 158,
+   "sentence": "The petitioners said on Oct 16, 2026, that VoltaGrid \"has explored serving",
+   "marker": "[P-005, P-092]",
+   "verdict": "supports",
+   "evidence_span": "Serverfarm is VoltaGrid’s first data center customer in Georgia, though it has explored serving other Georgia customers.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 158,
+   "sentence": "The PSC staff's witness said the contract's statement of work calls for",
+   "marker": "[P-075, P-076]",
+   "verdict": "supports",
+   "evidence_span": "provide phased Power Delivery reaching 90 MW.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 158,
+   "sentence": "MW stands for megawatts, a measure of power, and kWh for kilowatt-hours,",
+   "marker": "{analysis: plain-language definitions, not from the cited sources}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "Plain-language definition; accurate, neutral and labeled as not from the sources."
+  },
+  {
+   "line": 158,
+   "sentence": "VoltaGrid's executive had said the pay is based on capacity, \"rather than",
+   "marker": "[P-046]",
+   "verdict": "supports",
+   "evidence_span": "Serverfarm will pay VoltaGrid for this service in amounts based on the Conversion Assets’ producing capacity in operation, rather than a fee per kWh of energy that the Conversion Assets actually deliver.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 159,
+   "sentence": "A ruling: the Hearing Officer, the person the PSC appointed to hear",
+   "marker": "[P-007, P-020, P-025]",
+   "verdict": "supports",
+   "evidence_span": "That question is central to this docket and nothing in this Order decides it.",
+   "correct_passage": "",
+   "problem": "In the order 'that question' is whether VoltaGrid is an 'electric supplier' or 'otherwise engages in conduct governed by the Territorial Act'; the card does not say which question is meant.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 160,
+   "sentence": "Whether serving one customer counts as serving the public is a legal",
+   "marker": "{editorial: process note; the Nov 4 order says the question is undecided (P-025)}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "No passage shows a ruling. P-025 says the electric-supplier question is undecided, which is close to, but not the same as, the one-customer question named here."
+  },
+  {
+   "line": 166,
+   "sentence": "VoltaGrid says the Territorial Act protects only Georgia Power, the supplier assigned",
+   "marker": "[P-042]",
+   "verdict": "supports",
+   "evidence_span": "Because the only rights at stake under the Territorial Act belong to Georgia Power as the assigned electric supplier, Petitioners can assert no interest the Territorial Act was enacted to protect",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 166,
+   "sentence": "Evidence: Legal question.",
+   "marker": "{editorial: restates the label}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "Matches a label on the card's header line."
+  },
+  {
+   "line": 167,
+   "sentence": "VoltaGrid made the argument in the brief it filed with the PSC",
+   "marker": "[P-004, P-042]",
+   "verdict": "supports",
+   "evidence_span": "2026-09-16 | document 228806 | VoltaGrid, LLC's Motion to Dismiss and Brief in Support (w/Exhibit)",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 167,
+   "sentence": "The brief says the petitioners \"can assert no interest the Territorial Act",
+   "marker": "[P-042]",
+   "verdict": "supports",
+   "evidence_span": "Petitioners can assert no interest the Territorial Act was enacted to protect",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 168,
+   "sentence": "VoltaGrid said on Oct 26, 2026, that the petitioners raised the same",
+   "marker": "[P-006, P-065]",
+   "verdict": "supports",
+   "evidence_span": "Petitioners raised the same concerns in another public regulatory agency: the Georgia Environmental Protection Division (“EPD”), which issued the air quality permit for VoltaGrid’s project.",
+   "correct_passage": "",
+   "problem": "The passage opens 'This is demonstrably false' without showing what is false, so a reader cannot tell how this supports the argument.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 169,
+   "sentence": "The petition quotes the Territorial Act as letting the PSC act on",
+   "marker": "[P-037]",
+   "verdict": "supports",
+   "evidence_span": "upon the complaint of “any other interested party, the commission shall have the authority and jurisdiction",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 169,
+   "sentence": "The petitioners said on Oct 16, 2026, that VoltaGrid's reading would let",
+   "marker": "[P-005, P-048]",
+   "verdict": "supports",
+   "evidence_span": "regulated monopolies, like Georgia Power, would get to wield the Territorial Act as a weapon for private gain",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 169,
+   "sentence": "The nonprofit's witness said on Oct 9, 2026, that if Georgia Power",
+   "marker": "[P-014, P-070]",
+   "verdict": "supports",
+   "evidence_span": "if Georgia Power was building the power plant to provide electricity, we would be coming to the PSC to express our concerns",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 170,
+   "sentence": "The PSC's staff said on Oct 16, 2026, that dismissing the petitioners",
+   "marker": "[P-051, P-052]",
+   "verdict": "supports",
+   "evidence_span": "Dismissing the Petition or the Petitioners from this docket before the scheduled hearing will not serve the Commission’s objective",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 170,
+   "sentence": "Georgia EMC took no position on the point, and Georgia Power limited",
+   "marker": "[P-054, P-094]",
+   "verdict": "supports",
+   "evidence_span": "response is limited to the second contention, which provides no basis for dismissal.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 171,
+   "sentence": "A ruling: the Hearing Officer wrote on Nov 4 that dismissing the",
+   "marker": "[P-007, P-026]",
+   "verdict": "supports",
+   "evidence_span": "summarily dismissing the case on such grounds before establishing and certifying a record on the issues would be premature",
+   "correct_passage": "",
+   "problem": "Quote is cut before 'and contrary to the direction of the Commission'; the order says the Hearing Officer 'has indicated' this.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 172,
+   "sentence": "Who counts as an \"interested party\" is a legal question the PSC",
+   "marker": "{editorial: process note; the filing list (S01b) shows no order on the motion to dismiss}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "No passage shows an order on the motion to dismiss."
+  },
+  {
+   "line": 178,
+   "sentence": "Georgia EMC, a trade group for electric membership corporations (EMCs), says the",
+   "marker": "[P-053, P-055, P-062]",
+   "verdict": "supports",
+   "evidence_span": "That investment could become stranded (with the costs thereof to be absorbed by the electric supplier’s other consumers) if future customers in the area can be picked off",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 178,
+   "sentence": "Evidence: Uncertain.",
+   "marker": "{editorial: restates the label}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "Matches a label on the card's header line."
+  },
+  {
+   "line": 179,
+   "sentence": "Georgia EMC made the argument in its response filed with the PSC",
+   "marker": "[P-005]",
+   "verdict": "supports",
+   "evidence_span": "2026-10-16 | document 229171 | Georgia EMC's Response in Opposition to VoltaGrid's Motion to Dismiss",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 179,
+   "sentence": "The response says an investment \"could become stranded (with the costs thereof",
+   "marker": "[P-055]",
+   "verdict": "partial",
+   "evidence_span": "That investment could become stranded (with the costs thereof to be absorbed by the electric supplier’s other consumers) if future customers in the area can be picked off",
+   "correct_passage": "",
+   "problem": "The quote is verbatim but ends, with a period, just before the condition that completes the source sentence: 'if future customers in the area can be picked off by a power supplier serving less than a significant segment of the public'. Read on its own the sentence drops the condition.",
+   "suggested_fix": "The response says an investment \"could become stranded (with the costs thereof to be absorbed by the electric supplier's other consumers) if future customers in the area can be picked off.\""
+  },
+  {
+   "line": 180,
+   "sentence": "Georgia EMC says its member EMCs serve about 5 million Georgians and",
+   "marker": "[P-062, P-063]",
+   "verdict": "supports",
+   "evidence_span": "The EMCs provide retail electric service to approximately 5 million Georgians.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 180,
+   "sentence": "No other filing we read backs the stranded-cost point with figures, as",
+   "marker": "{editorial: scoped to the filings and excerpts we read}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "No passage gives a figure. 'No other filing' can be read as saying Georgia EMC's own filing gives figures, which line 183 says it does not; see framing issues."
+  },
+  {
+   "line": 181,
+   "sentence": "VoltaGrid said on Oct 26, 2026, that the Territorial Act covers only",
+   "marker": "[P-006, P-066]",
+   "verdict": "supports",
+   "evidence_span": "the Act specially defines the term “electric supplier” as “any electric light and power company otherwise subject to regulation by the commission.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 182,
+   "sentence": "VoltaGrid said: \"Georgia Power remains the exclusive public utility authorized to serve",
+   "marker": "[P-064]",
+   "verdict": "supports",
+   "evidence_span": "Georgia Power remains the exclusive public utility authorized to serve Serverfarm.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 183,
+   "sentence": "No filing we read gives a dollar figure for any cost to",
+   "marker": "{editorial: scoped to the filings and excerpts we read}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "Scoped to what the authors read and dated; no passage states the missing item."
+  },
+  {
+   "line": 184,
+   "sentence": "Whether suppliers would lose customers this way is a prediction, as of",
+   "marker": "{editorial: claim type}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "P-055 is worded as a possibility ('could become stranded ... if')."
+  },
+  {
+   "line": 190,
+   "sentence": "Georgia Power says that if serving one customer puts a company beyond",
+   "marker": "[P-057, P-058]",
+   "verdict": "supports",
+   "evidence_span": "Failure to do so could lead to deregulation of the electric industry in Georgia as “pop-up” generation facilities serving single customers could proliferate across the state.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 190,
+   "sentence": "Evidence: Uncertain.",
+   "marker": "{editorial: restates the label}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "Matches a label on the card's header line."
+  },
+  {
+   "line": 191,
+   "sentence": "Georgia Power made the argument in its response filed with the PSC",
+   "marker": "[P-005]",
+   "verdict": "supports",
+   "evidence_span": "2026-10-16 | document 229172 | Georgia Power Company's Response to VoltaGrid's Motion to Dismiss",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 191,
+   "sentence": "The response says single-customer plants \"could proliferate across the state.\"",
+   "marker": "[P-058]",
+   "verdict": "supports",
+   "evidence_span": "generation facilities serving single customers could proliferate across the state.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 192,
+   "sentence": "Georgia Power says the Territorial Act aims at \"efficient, economical, and orderly",
+   "marker": "[P-059]",
+   "verdict": "supports",
+   "evidence_span": "The provision of these territories helps accomplish the Territorial Act’s policy goals of, among other things, assuring “efficient, economical, and orderly rendering of retail electric service",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 192,
+   "sentence": "The petitioners said on Oct 16, 2026, that VoltaGrid \"has explored serving",
+   "marker": "[P-005, P-092]",
+   "verdict": "supports",
+   "evidence_span": "Serverfarm is VoltaGrid’s first data center customer in Georgia, though it has explored serving other Georgia customers.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 193,
+   "sentence": "VoltaGrid said on Oct 26, 2026, that an on-site generator serving the",
+   "marker": "[P-006, P-064]",
+   "verdict": "supports",
+   "evidence_span": "An on-site generator privately serving the owner of the site does nothing to cause competition among public utilities",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 194,
+   "sentence": "A VoltaGrid executive's sworn statement says VoltaGrid is not \"pursuing any additional",
+   "marker": "[P-044, P-093]",
+   "verdict": "supports",
+   "evidence_span": "VoltaGrid is not soliciting, marketing to, or otherwise pursuing any additional customer or business in Georgia.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 195,
+   "sentence": "No filing we read counts other single-customer plants planned in Georgia, as",
+   "marker": "{editorial: scoped to the filings and excerpts we read}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "Scoped to what the authors read and dated; no passage states the missing item."
+  },
+  {
+   "line": 196,
+   "sentence": "Whether such plants would spread is a prediction, as of Nov 14,",
+   "marker": "{editorial: claim type}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "P-058 is worded as a possibility ('could proliferate')."
+  },
+  {
+   "line": 202,
+   "sentence": "The PSC's staff says the dismissal request can wait for the Dec",
+   "marker": "[P-052, P-077]",
+   "verdict": "supports",
+   "evidence_span": "Based on the cited contract language, VoltaGrid is providing an ongoing power-generation and power-delivery service to Serverfarm.",
+   "correct_passage": "",
+   "problem": "'can wait for' is softer than the request, which is that the Hearing Officer 'reserve making a decision ... until after' the hearing (P-052).",
+   "suggested_fix": ""
+  },
+  {
+   "line": 202,
+   "sentence": "Evidence: Supported.",
+   "marker": "{editorial: restates the label}",
+   "verdict": "questionable",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "The header gives three labels (Legal question; Supported; Uncertain) and this line restates only 'Supported'. Cards 1, 4 and 5 also carry 'Uncertain' and restate the weaker label. Under line 131 'Supported' needs a premise no party disputes, but this card's own 'What challenges it' line sets VoltaGrid's executive ('will not sell that electricity', pay 'rather than a fee per kWh', P-046) against the witness ('Monthly Fees per kWh', P-076), and P-077 is a rebuttal witness's reading of contract text the authors saw only in excerpts.",
+   "suggested_fix": "Restate as 'Evidence: Mixed' or 'Uncertain', or narrow the premise to what both sides state and say so.",
+   "reason": "The header gives three labels (Legal question; Supported; Uncertain) and this line restates only 'Supported'. Cards 1, 4 and 5 also carry 'Uncertain' and restate the weaker label. Under line 131 'Supported' needs a premise no party disputes, but this card's own 'What challenges it' line sets VoltaGrid's executive ('will not sell that electricity', pay 'rather than a fee per kWh', P-046) against the witness ('Monthly Fees per kWh', P-076), and P-077 is a rebuttal witness's reading of contract text the authors saw only in excerpts."
+  },
+  {
+   "line": 203,
+   "sentence": "The PSC staff's lawyer made the request in a response filed with",
+   "marker": "[P-052]",
+   "verdict": "partial",
+   "evidence_span": "Staff requests that the Hearing Officer reserve making a decision as to Voltagrid’s Motion to Dismiss until after the December 9, 2026 hearing in this matter.",
+   "correct_passage": "",
+   "problem": "The passage attributes the request to 'Staff'; no passage says a lawyer made it.",
+   "suggested_fix": "The PSC's staff made the request in a response filed with the PSC on Oct 16, 2026."
+  },
+  {
+   "line": 203,
+   "sentence": "The staff's witness filed rebuttal testimony on Nov 13, 2026.",
+   "marker": "[P-012, P-073]",
+   "verdict": "supports",
+   "evidence_span": "2026-11-13 | document 229444 | Rebuttal Testimony and Exhibits",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 204,
+   "sentence": "The staff's response says dismissing early \"will not serve the Commission’s objective\"",
+   "marker": "[P-051]",
+   "verdict": "supports",
+   "evidence_span": "Dismissing the Petition or the Petitioners from this docket before the scheduled hearing will not serve the Commission’s objective of timely and efficiently resolving the issue of whether Voltagrid’s Covington project falls under the Commission’s jurisdiction",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 204,
+   "sentence": "The witness said the statement of work requires VoltaGrid to \"operate and",
+   "marker": "[P-075]",
+   "verdict": "supports",
+   "evidence_span": "operate and maintain the equipment, staff the site around the clock",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 205,
+   "sentence": "VoltaGrid said in its emergency appeal, first filed Nov 9, 2026, that",
+   "marker": "[P-008, P-081]",
+   "verdict": "supports",
+   "evidence_span": "before resolving the issues of whether Petitioners have standing to pursue a claim under the Territorial Act and whether this Commission even has jurisdiction over VoltaGrid.",
+   "correct_passage": "",
+   "problem": "P-081 is from VoltaGrid's Nov 9 letter on the appeal (S16), not the appeal document itself; 'first filed' is not explained.",
+   "suggested_fix": ""
+  },
+  {
+   "line": 206,
+   "sentence": "VoltaGrid's executive said VoltaGrid \"will not sell that electricity to Serverfarm or",
+   "marker": "[P-046]",
+   "verdict": "supports",
+   "evidence_span": "VoltaGrid will not sell that electricity to Serverfarm or to anyone else.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 206,
+   "sentence": "The staff's witness said the statement of work \"states Monthly Fees per",
+   "marker": "[P-076]",
+   "verdict": "supports",
+   "evidence_span": "The SOW states Monthly Fees per kWh of xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxx, with cumulative Monthly Fees increasing as the installation scales.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 207,
+   "sentence": "The filing list shows direct testimony from the same witness, filed Nov",
+   "marker": "[P-011, P-012]",
+   "verdict": "supports",
+   "evidence_span": "2026-11-12 | document 229424 | Direct Testimony",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 207,
+   "sentence": "We could not download that testimony.",
+   "marker": "{editorial: process note; the download of S15 failed}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "Process note about a failed download; consistent with the source table."
+  },
+  {
+   "line": 207,
+   "sentence": "The fee amounts are blacked out in the public copy we read.",
+   "marker": "[P-076]",
+   "verdict": "supports",
+   "evidence_span": "The SOW states Monthly Fees per kWh of xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxx, with cumulative Monthly Fees increasing as the installation scales.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 208,
+   "sentence": "The witness, who said \"I am not a lawyer,\" gave no opinion",
+   "marker": "[P-078]",
+   "verdict": "supports",
+   "evidence_span": "I am not a lawyer and do not have an opinion as to whether, standing alone, they resolve any legal classification under Georgia law.",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": ""
+  },
+  {
+   "line": 208,
+   "sentence": "The PSC has not ruled as of Nov 14, 2026.",
+   "marker": "{editorial: process note; the filing list (S01b) shows no final order}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "No passage shows a final order."
+  },
+  {
+   "line": 212,
+   "sentence": "Is a plant that serves one customer, which VoltaGrid says is on",
+   "marker": "{editorial: open question from cards 2 and 5}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "Open question; attributes the on-site point to VoltaGrid."
+  },
+  {
+   "line": 213,
+   "sentence": "Does building and running the plant, and delivering its energy to the",
+   "marker": "{editorial: the third hearing question (P-021)}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "Restates the third hearing question in P-021."
+  },
+  {
+   "line": 214,
+   "sentence": "Is VoltaGrid's deal with Serverfarm, which VoltaGrid calls a service and the",
+   "marker": "{editorial: open question from cards 1 and 6}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "Open question; gives each side's own word for the deal."
+  },
+  {
+   "line": 215,
+   "sentence": "Who may ask the PSC to enforce the Territorial Act: only the",
+   "marker": "{editorial: open question from card 3}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "Open question; matches P-037 and P-042."
+  },
+  {
+   "line": 216,
+   "sentence": "If the PSC has authority over the plant, what action, if any,",
+   "marker": "{editorial: open question from the fourth hearing question (P-021)}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "Restates the fourth hearing question in P-021."
+  },
+  {
+   "line": 249,
+   "sentence": "Two orders have no readable text in our copies: the order that",
+   "marker": "{editorial: process note; the snapshots (S02c, S03c) are images without text}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "Process note; consistent with lines 37 and 44 and the source table."
+  },
+  {
+   "line": 250,
+   "sentence": "We could not download the PSC staff witness's direct testimony.",
+   "marker": "{editorial: process note; the download of S15 failed}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "Process note; consistent with lines 40 and 207."
+  },
+  {
+   "line": 251,
+   "sentence": "Residents' names, roads and home addresses are left out of this page",
+   "marker": "{editorial: privacy rule}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "No resident's name, road or address appears in the page or the passages (P-030, P-031 and P-094 are trimmed). The staff witness's full name does appear in P-011 and P-012; see framing issues."
+  },
+  {
+   "line": 255,
+   "sentence": "First version of this page.",
+   "marker": "{editorial: page history}",
+   "verdict": "valid",
+   "evidence_span": "",
+   "correct_passage": "",
+   "problem": "",
+   "suggested_fix": "",
+   "reason": "Page history."
+  }
+ ],
+ "framing_issues": [
+  {
+   "line": 251,
+   "text": "Residents' names, roads and home addresses are left out of this page and its passages.",
+   "issue": "Privacy. workspace.md, home.md and the display strings name no private person and no road. But two passages the page cites (P-011 and P-012, cited at lines 40, 41, 80, 144, 203 and 207) carry the full name of the staff's witness, while P-014 was trimmed to drop another witness's name. If this witness is a private person rather than an official, the name should be cut from those passages the same way. I could not tell from the passages which he is.",
+   "severity": "high"
+  },
+  {
+   "line": 202,
+   "text": "Evidence: Supported.",
+   "issue": "The only 'Supported' summary on the page goes to the staff card, though its header also says 'Uncertain' and the card lists VoltaGrid's conflicting account. Cards 1, 4 and 5 restate their weaker label. This reads as a grade in favor of one side.",
+   "severity": "medium"
+  },
+  {
+   "line": 116,
+   "text": "No filing we read says whether such an order would change the pollution neighbors describe.",
+   "issue": "Uneven caveat. Outcome B's benefit to the filers is qualified, while Outcome A's 'Who pays' (line 109) presents the pollution as following from the outcome with no such caveat.",
+   "severity": "medium"
+  },
+  {
+   "line": 16,
+   "text": "says a supplier's other consumers could absorb the cost of lines built for customers who are \"picked off.\"",
+   "issue": "Shown alone to EMC customers. It does not say the statement is about suppliers in general, and that the site is in Georgia Power's territory (P-061), not an EMC's. Line 109 carries that caveat; this line does not.",
+   "severity": "medium"
+  },
+  {
+   "line": 202,
+   "text": "The PSC's staff",
+   "issue": "Missing context. The witness testifies for the 'Public Interest Advocacy Staff' (P-073). The page says 'the PSC's staff' throughout, which a new reader may take to be the decision-makers' own neutral advisers.",
+   "severity": "medium"
+  },
+  {
+   "line": 71,
+   "text": "Jul 13, 2026",
+   "issue": "Consistency. The docket page (P-001) shows 'Date: 07/02/2026'; the page gives Jul 13 for the petition (P-002) and Jul 2 for the notice of violation (P-028) and does not explain the docket date.",
+   "severity": "low"
+  },
+  {
+   "line": 9,
+   "text": "power companies",
+   "issue": "Georgia EMC is a trade association, not a power company; the line also states effects as fact where the sources are each party's claim.",
+   "severity": "low"
+  },
+  {
+   "line": 10,
+   "text": "No final vote is set.",
+   "issue": "Unscoped and undated, unlike line 36. Two orders could not be read (lines 37, 44).",
+   "severity": "low"
+  },
+  {
+   "line": 117,
+   "text": "how soon the data center could get power another way",
+   "issue": "Missing context. Georgia Power calls VoltaGrid's service 'bridge power' to a customer 'slated to become a Georgia Power customer' (P-061) and the petition speaks of 'short-term power plants' (P-032). The page never says the service is described as temporary, while it does say the plant would 'run all year'.",
+   "severity": "low"
+  },
+  {
+   "line": 103,
+   "text": "The number of filers does not decide the legal question",
+   "issue": "Vague reference. 'filers' means the petitioners at line 8 and the responding parties here.",
+   "severity": "low"
+  },
+  {
+   "line": 39,
+   "text": "\"does not dispute that these issues are essential to this case,\"",
+   "issue": "Vague reference. 'these issues' (line 39) and 'the question' (line 159) are not placed for the reader; in P-025 the question is whether VoltaGrid is an 'electric supplier'.",
+   "severity": "low"
+  },
+  {
+   "line": 205,
+   "text": "first filed Nov 9, 2026",
+   "issue": "Vague. 'first filed' implies a later filing the page never mentions.",
+   "severity": "low"
+  },
+  {
+   "line": 15,
+   "text": "\"considers potential risks to other Georgia Power customers.\"",
+   "issue": "The source sentence begins 'Briefly,' (P-074). Dropping it makes the treatment sound fuller than the witness says it is.",
+   "severity": "low"
+  },
+  {
+   "line": 180,
+   "text": "No other filing we read backs the stranded-cost point with figures",
+   "issue": "Ambiguous. Reads as if Georgia EMC's own filing gives figures; line 183 says no filing does.",
+   "severity": "low"
+  },
+  {
+   "line": 99,
+   "text": "\"is the antithesis of a monopoly, and is negotiating bespoke rates with a sophisticated counterparty.\"",
+   "issue": "Terms left unexplained for a grade 6-8 reader, here and elsewhere: 'antithesis', 'bespoke rates', 'counterparty' (99), 'stranded' (100, 174), 'Conversion Assets' (145), 'condemnation power' (156), 'conflates' (157), 'statement of work' (144), 'electric supplier' (87), 'retail' (148), 'record' (39), 'standing' (205), 'rebuttal testimony' (80).",
+   "severity": "low"
+  },
+  {
+   "line": 86,
+   "text": "a 2001 Georgia law on plants that power their owners",
+   "issue": "The gloss comes from one provision as the petition quotes it (P-036); 'cogeneration' itself is never explained. Likewise 'electric membership corporation' (lines 16, 74) is not in any passage; P-062 says 'electric distribution cooperatives'.",
+   "severity": "low"
+  },
+  {
+   "line": 42,
+   "text": "testified on Oct 9, 2026",
+   "issue": "Consistency. Line 155 says 'testimony dated Oct 9, 2026' for the same document; 'testified on' suggests live testimony.",
+   "severity": "low"
+  },
+  {
+   "line": 20,
+   "text": "supplies natural gas to the plant",
+   "issue": "Lines 20-22 use the present tense ('supplies', 'turns', 'pays'); the sworn statement is in the future tense and P-068 says the plant had not started on Oct 9.",
+   "severity": "low"
+  },
+  {
+   "line": 28,
+   "text": "Decided after the Dec 9 hearing:",
+   "issue": "Consistency. Line 39 says the request to dismiss is still pending and could end the case before the hearing.",
+   "severity": "low"
+  },
+  {
+   "line": 115,
+   "text": "Georgia Power says the site is in its assigned territory and Serverfarm is slated to become its customer.",
+   "issue": "Uneven. Outcome A names who benefits directly; here Georgia Power's statement is listed under 'Who benefits' without saying whether or how it benefits.",
+   "severity": "low"
+  },
+  {
+   "line": 18,
+   "text": "Where the money comes from",
+   "issue": "Heading suggests public money; the items describe a private contract, and only item 5 says so indirectly.",
+   "severity": "low"
+  }
+ ],
+ "summary": {
+  "units_checked": 237,
+  "supports": 151,
+  "partial": 7,
+  "does_not_support": 0,
+  "wrong_span": 0,
+  "questionable_or_invalid_tags": 6
+ }
+}

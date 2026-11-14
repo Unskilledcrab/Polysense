@@ -59,7 +59,12 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:19:42Z"
+   "checked": "2026-11-14T03:19:42Z",
+   "archive": {
+    "state": "blocked",
+    "note": "ConnectError: [Errno 104] Connection reset by peer",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S02": {
    "files": {
@@ -71,7 +76,12 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:19:42Z"
+   "checked": "2026-11-14T03:19:42Z",
+   "archive": {
+    "state": "blocked",
+    "note": "ConnectError: [Errno 104] Connection reset by peer",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S02b": {
    "files": {
@@ -83,7 +93,12 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:19:42Z"
+   "checked": "2026-11-14T03:19:42Z",
+   "archive": {
+    "state": "blocked",
+    "note": "ConnectError: [Errno 104] Connection reset by peer",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S02c": {
    "files": {
@@ -95,7 +110,12 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:19:42Z"
+   "checked": "2026-11-14T03:19:42Z",
+   "archive": {
+    "state": "blocked",
+    "note": "ConnectError: [Errno 104] Connection reset by peer",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S02d": {
    "files": {
@@ -107,7 +127,12 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:19:42Z"
+   "checked": "2026-11-14T03:19:42Z",
+   "archive": {
+    "state": "blocked",
+    "note": "ConnectError: [Errno 104] Connection reset by peer",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S03": {
    "files": {
@@ -119,7 +144,12 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:19:42Z"
+   "checked": "2026-11-14T03:19:42Z",
+   "archive": {
+    "state": "blocked",
+    "note": "ConnectError: [Errno 104] Connection reset by peer",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S03b": {
    "files": {
@@ -131,7 +161,12 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:19:42Z"
+   "checked": "2026-11-14T03:19:42Z",
+   "archive": {
+    "state": "blocked",
+    "note": "ConnectError: [Errno 104] Connection reset by peer",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S03c": {
    "files": {
@@ -143,7 +178,12 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:19:42Z"
+   "checked": "2026-11-14T03:19:42Z",
+   "archive": {
+    "state": "blocked",
+    "note": "ConnectError: [Errno 104] Connection reset by peer",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S04": {
    "files": {
@@ -155,7 +195,12 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:19:42Z"
+   "checked": "2026-11-14T03:19:42Z",
+   "archive": {
+    "state": "blocked",
+    "note": "ConnectError: [Errno 104] Connection reset by peer",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S04b": {
    "files": {
@@ -167,7 +212,12 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:19:42Z"
+   "checked": "2026-11-14T03:19:42Z",
+   "archive": {
+    "state": "blocked",
+    "note": "ConnectError: [Errno 104] Connection reset by peer",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S04c": {
    "files": {
@@ -179,7 +229,12 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:19:42Z"
+   "checked": "2026-11-14T03:19:42Z",
+   "archive": {
+    "state": "blocked",
+    "note": "ConnectError: [Errno 104] Connection reset by peer",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S04d": {
    "files": {
@@ -191,7 +246,12 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:19:42Z"
+   "checked": "2026-11-14T03:19:42Z",
+   "archive": {
+    "state": "blocked",
+    "note": "ConnectError: [Errno 104] Connection reset by peer",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S04e": {
    "files": {
@@ -203,7 +263,12 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:19:42Z"
+   "checked": "2026-11-14T03:19:42Z",
+   "archive": {
+    "state": "blocked",
+    "note": "ConnectError: [Errno 104] Connection reset by peer",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S04f": {
    "files": {
@@ -215,7 +280,12 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:19:42Z"
+   "checked": "2026-11-14T03:19:42Z",
+   "archive": {
+    "state": "blocked",
+    "note": "ConnectError: [Errno 104] Connection reset by peer",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S05": {
    "files": {
@@ -227,7 +297,12 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:19:42Z"
+   "checked": "2026-11-14T03:19:42Z",
+   "archive": {
+    "state": "blocked",
+    "note": "ConnectError: [Errno 104] Connection reset by peer",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S05b": {
    "files": {
@@ -239,7 +314,12 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:19:42Z"
+   "checked": "2026-11-14T03:19:42Z",
+   "archive": {
+    "state": "blocked",
+    "note": "ConnectError: [Errno 104] Connection reset by peer",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S05c": {
    "files": {
@@ -251,7 +331,12 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:19:42Z"
+   "checked": "2026-11-14T03:19:42Z",
+   "archive": {
+    "state": "blocked",
+    "note": "ConnectError: [Errno 104] Connection reset by peer",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S06": {
    "files": {
@@ -263,7 +348,13 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:19:42Z"
+   "checked": "2026-11-14T03:19:42Z",
+   "archive": {
+    "state": "found",
+    "url": "https://web.archive.org/web/20260310161434/https://fultoncountyga.gov/-/media/Commissioners/2026/2026-BOC-SCHEDULE_eng-02.pdf",
+    "captured": "20260310161434",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S07": {
    "files": {
@@ -275,7 +366,12 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:19:42Z"
+   "checked": "2026-11-14T03:19:42Z",
+   "archive": {
+    "state": "blocked",
+    "note": "ConnectError: [Errno 104] Connection reset by peer",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S07b": {
    "files": {
@@ -287,7 +383,12 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:19:42Z"
+   "checked": "2026-11-14T03:19:42Z",
+   "archive": {
+    "state": "blocked",
+    "note": "ConnectError: [Errno 104] Connection reset by peer",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S08b": {
    "files": {
@@ -299,7 +400,13 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:19:42Z"
+   "checked": "2026-11-14T03:19:42Z",
+   "archive": {
+    "state": "found",
+    "url": "https://web.archive.org/web/20261010031848/https://fultoncountyga.gov/-/media/Meeting-Agenda---Special-Called-Meetings-of-Budget-Commission.pdf",
+    "captured": "20261010031848",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S09b": {
    "files": {
@@ -311,7 +418,12 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:19:42Z"
+   "checked": "2026-11-14T03:19:42Z",
+   "archive": {
+    "state": "blocked",
+    "note": "ConnectError: [Errno 104] Connection reset by peer",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S10": {
    "files": {
@@ -325,7 +437,12 @@
     }
    },
    "state": "unsure",
-   "checked": "2026-11-14T03:20:44Z"
+   "checked": "2026-11-14T03:20:44Z",
+   "archive": {
+    "state": "blocked",
+    "note": "ConnectError: [Errno 104] Connection reset by peer",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S10b": {
    "files": {
@@ -337,7 +454,12 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:19:42Z"
+   "checked": "2026-11-14T03:19:42Z",
+   "archive": {
+    "state": "blocked",
+    "note": "ConnectError: [Errno 104] Connection reset by peer",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S10c": {
    "files": {
@@ -349,7 +471,12 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:19:42Z"
+   "checked": "2026-11-14T03:19:42Z",
+   "archive": {
+    "state": "blocked",
+    "note": "ConnectError: [Errno 104] Connection reset by peer",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S10d": {
    "files": {
@@ -361,7 +488,12 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:19:42Z"
+   "checked": "2026-11-14T03:19:42Z",
+   "archive": {
+    "state": "blocked",
+    "note": "ConnectError: [Errno 104] Connection reset by peer",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S10e": {
    "files": {
@@ -373,7 +505,12 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:19:42Z"
+   "checked": "2026-11-14T03:19:42Z",
+   "archive": {
+    "state": "blocked",
+    "note": "ConnectError: [Errno 104] Connection reset by peer",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S11": {
    "files": {
@@ -386,7 +523,13 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:19:42Z"
+   "checked": "2026-11-14T03:19:42Z",
+   "archive": {
+    "state": "found",
+    "url": "https://web.archive.org/web/20260814170629/https://fultoncountyga.gov/Commissioners/Clerk-to-the-Commission",
+    "captured": "20260814170629",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S20": {
    "files": {
@@ -406,7 +549,12 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:20:49Z"
+   "checked": "2026-11-14T03:20:49Z",
+   "archive": {
+    "state": "blocked",
+    "note": "ConnectError: [Errno 104] Connection reset by peer",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S21": {
    "files": {
@@ -426,7 +574,13 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:20:50Z"
+   "checked": "2026-11-14T03:20:50Z",
+   "archive": {
+    "state": "found",
+    "url": "https://web.archive.org/web/20261010021949/https://www.fox5atlanta.com/news/fulton-county-budget-boycott-leaders-refuse-attend-hearings",
+    "captured": "20261010021949",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S22": {
    "files": {
@@ -439,7 +593,12 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:19:42Z"
+   "checked": "2026-11-14T03:19:42Z",
+   "archive": {
+    "state": "blocked",
+    "note": "ConnectError: [Errno 104] Connection reset by peer",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S05e": {
    "files": {
@@ -451,7 +610,30 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:19:42Z"
+   "checked": "2026-11-14T03:19:42Z",
+   "archive": {
+    "state": "blocked",
+    "note": "ConnectError: [Errno 104] Connection reset by peer",
+    "checked": "2026-11-14T03:21:17Z"
+   }
+  },
+  "S08": {
+   "files": {},
+   "archive": {
+    "state": "found",
+    "url": "https://web.archive.org/web/20261029005821/https://www.fultoncountyga.gov/Commissioners/Clerk-to-the-Commission/Public-Notices",
+    "captured": "20261029005821",
+    "checked": "2026-11-14T03:21:17Z"
+   }
+  },
+  "S09": {
+   "files": {},
+   "archive": {
+    "state": "found",
+    "url": "https://web.archive.org/web/20261018153508/https://www.fultoncountyga.gov/Inside-Fulton-County/Open-Government/Budget",
+    "captured": "20261018153508",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   }
  }
 }

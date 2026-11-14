@@ -36,8 +36,12 @@ span of a hashed snapshot listed in [sources.yaml](sources.yaml).
 ### P-011 · S01b · filing list, Nov 12, 2026 row (document 229424)
 > 2026-11-12 | document 229424 | Direct Testimony of Robert L. Trokey
 
+*Note: The witness is named here because the filing list is the only source that ties this filing and the Nov 13 rebuttal to one person. The witness testifies for the PSC's staff (P-073), not as a private person.*
+
 ### P-012 · S01b · filing list, Nov 13, 2026 row (document 229444)
 > 2026-11-13 | document 229444 | Rebuttal Testimony and Exhibits of Robert L. Trokey
+
+*Note: The witness is named for the same reason as in P-011.*
 
 ### P-014 · S01b · filing list, Oct 9, 2026 row (document 229089), up to the witness's name
 > 2026-10-09 | document 229089 | Direct Testimony of

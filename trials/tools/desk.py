@@ -571,6 +571,9 @@ def archive(trial: Path, now: str, fetch=http_fetch, only: str | None = None) ->
         if (rec.get("archive") or {}).get("state") in ("found", "saved"):
             continue
         rec["archive"] = dict(archive_lookup(srcs[sid]["url"], fetch), checked=now)
+        if fetch is http_fetch:
+            import time
+            time.sleep(3)   # the archive resets connections when asked too quickly (48 of 93 lookups, first run)
     (trial / "watch.json").write_text(json.dumps(state, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
     return book
 

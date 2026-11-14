@@ -65,12 +65,14 @@ passages:
     source: S01b
     file: "S01b.list.txt"
     locator: "filing list, Nov 12, 2026 row (document 229424)"
+    note: "The witness is named here because the filing list is the only source that ties this filing and the Nov 13 rebuttal to one person. The witness testifies for the PSC's staff (P-073), not as a private person."
     start: "2026-11-12 | document 229424"
     end: "229424 | Direct Testimony of Robert L. Trokey"
   - id: P-012
     source: S01b
     file: "S01b.list.txt"
     locator: "filing list, Nov 13, 2026 row (document 229444)"
+    note: "The witness is named for the same reason as in P-011."
     start: "2026-11-13 | document 229444"
     end: "Rebuttal Testimony and Exhibits of Robert L. Trokey"
   - id: P-014

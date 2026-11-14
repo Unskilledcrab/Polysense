@@ -11,7 +11,13 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:15:25Z"
+   "checked": "2026-11-14T03:15:25Z",
+   "archive": {
+    "state": "found",
+    "url": "https://web.archive.org/web/20261001185935/https://psc.ga.gov/search/facts-docket/?docketId=57243",
+    "captured": "20261001185935",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S02": {
    "files": {
@@ -29,7 +35,12 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:15:25Z"
+   "checked": "2026-11-14T03:15:25Z",
+   "archive": {
+    "state": "blocked",
+    "note": "ConnectError: [Errno 104] Connection reset by peer",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S02b": {
    "files": {
@@ -41,7 +52,13 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:15:25Z"
+   "checked": "2026-11-14T03:15:25Z",
+   "archive": {
+    "state": "found",
+    "url": "https://web.archive.org/web/20261001180132/https://psc.ga.gov/search/facts-document/?documentId=228008",
+    "captured": "20261001180132",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S03": {
    "files": {
@@ -59,7 +76,13 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:15:25Z"
+   "checked": "2026-11-14T03:15:25Z",
+   "archive": {
+    "state": "found",
+    "url": "https://web.archive.org/web/20261001201500/https://psc.ga.gov/search/facts-document/?documentId=228969",
+    "captured": "20261001201500",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S03b": {
    "files": {
@@ -77,7 +100,12 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:15:25Z"
+   "checked": "2026-11-14T03:15:25Z",
+   "archive": {
+    "state": "blocked",
+    "note": "ConnectError: [Errno 104] Connection reset by peer",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S05": {
    "files": {
@@ -89,7 +117,13 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:15:25Z"
+   "checked": "2026-11-14T03:15:25Z",
+   "archive": {
+    "state": "found",
+    "url": "https://web.archive.org/web/20261001185957/https://psc.ga.gov/search/facts-document/?documentId=227215",
+    "captured": "20261001185957",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S07": {
    "files": {
@@ -107,7 +141,12 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:15:25Z"
+   "checked": "2026-11-14T03:15:25Z",
+   "archive": {
+    "state": "blocked",
+    "note": "ConnectError: [Errno 104] Connection reset by peer",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S08": {
    "files": {
@@ -119,7 +158,12 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:15:25Z"
+   "checked": "2026-11-14T03:15:25Z",
+   "archive": {
+    "state": "blocked",
+    "note": "ConnectError: [Errno 104] Connection reset by peer",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S09": {
    "files": {
@@ -137,7 +181,12 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:15:25Z"
+   "checked": "2026-11-14T03:15:25Z",
+   "archive": {
+    "state": "blocked",
+    "note": "ConnectError: [Errno 104] Connection reset by peer",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S10": {
    "files": {
@@ -149,7 +198,12 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:15:25Z"
+   "checked": "2026-11-14T03:15:25Z",
+   "archive": {
+    "state": "blocked",
+    "note": "ConnectError: [Errno 104] Connection reset by peer",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S11": {
    "files": {
@@ -161,7 +215,12 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:15:25Z"
+   "checked": "2026-11-14T03:15:25Z",
+   "archive": {
+    "state": "blocked",
+    "note": "ConnectError: [Errno 104] Connection reset by peer",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S18b": {
    "files": {
@@ -173,7 +232,13 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:15:25Z"
+   "checked": "2026-11-14T03:15:25Z",
+   "archive": {
+    "state": "found",
+    "url": "https://web.archive.org/web/20261001190100/https://psc.ga.gov/search/facts-document/?documentId=228938",
+    "captured": "20261001190100",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S18": {
    "files": {
@@ -185,7 +250,13 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:15:25Z"
+   "checked": "2026-11-14T03:15:25Z",
+   "archive": {
+    "state": "found",
+    "url": "https://web.archive.org/web/20261001190101/https://psc.ga.gov/search/facts-document/?documentId=228949",
+    "captured": "20261001190101",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S12": {
    "files": {
@@ -197,7 +268,12 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:15:25Z"
+   "checked": "2026-11-14T03:15:25Z",
+   "archive": {
+    "state": "blocked",
+    "note": "ConnectError: [Errno 104] Connection reset by peer",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S13": {
    "files": {
@@ -209,7 +285,12 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:15:25Z"
+   "checked": "2026-11-14T03:15:25Z",
+   "archive": {
+    "state": "blocked",
+    "note": "ConnectError: [Errno 104] Connection reset by peer",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S14": {
    "files": {
@@ -269,7 +350,12 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:15:25Z"
+   "checked": "2026-11-14T03:15:25Z",
+   "archive": {
+    "state": "blocked",
+    "note": "ConnectError: [Errno 104] Connection reset by peer",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S14c": {
    "files": {
@@ -281,7 +367,12 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:15:25Z"
+   "checked": "2026-11-14T03:15:25Z",
+   "archive": {
+    "state": "blocked",
+    "note": "ConnectError: [Errno 104] Connection reset by peer",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S15b": {
    "files": {
@@ -293,7 +384,12 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:15:25Z"
+   "checked": "2026-11-14T03:15:25Z",
+   "archive": {
+    "state": "blocked",
+    "note": "ConnectError: [Errno 104] Connection reset by peer",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S16": {
    "files": {
@@ -305,7 +401,12 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:15:25Z"
+   "checked": "2026-11-14T03:15:25Z",
+   "archive": {
+    "state": "blocked",
+    "note": "ConnectError: [Errno 104] Connection reset by peer",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S20": {
    "files": {
@@ -317,7 +418,13 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:15:25Z"
+   "checked": "2026-11-14T03:15:25Z",
+   "archive": {
+    "state": "found",
+    "url": "https://web.archive.org/web/20260616185813/https://psc.ga.gov/about-the-psc/consumer-corner/consumer-advisories/public-witness/",
+    "captured": "20260616185813",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S21": {
    "files": {
@@ -329,7 +436,30 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:15:25Z"
+   "checked": "2026-11-14T03:15:25Z",
+   "archive": {
+    "state": "found",
+    "url": "https://web.archive.org/web/20260811132337/https://psc.ga.gov/public-comments/",
+    "captured": "20260811132337",
+    "checked": "2026-11-14T03:21:17Z"
+   }
+  },
+  "S01b": {
+   "files": {},
+   "archive": {
+    "state": "blocked",
+    "note": "ConnectError: [Errno 104] Connection reset by peer",
+    "checked": "2026-11-14T03:21:17Z"
+   }
+  },
+  "S23": {
+   "files": {},
+   "archive": {
+    "state": "found",
+    "url": "https://web.archive.org/web/20261113074622/https://psc.ga.gov/agendas-calendars/commission-calendar/",
+    "captured": "20261113074622",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   }
  }
 }
