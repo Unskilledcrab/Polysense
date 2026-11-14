@@ -15,8 +15,8 @@ watch:                             # what would make this page stale (work notes
     - {date: 2026-12-04, what: "Pre-hearing conference, 2:00 p.m. Look for any order that changes the hearing date."}
     - {date: 2026-12-09, what: "Hearing before the Hearing Officer, 10:00 a.m. Move the hearing to What happened; look for a transcript and the date of the recommended decision."}
 code: "PSC Docket 57243 · 2026"
-title: "Georgia regulators' case on a Covington power plant built to run one data center"  # [P-021, P-027, P-051]
-link_text: "A Covington power plant built to run one data center"  # [P-027, P-051]
+title: "A Covington power plant for one data center: the case before Georgia's Public Service Commission"  # [P-027, P-035, P-051]
+link_text: "A Covington power plant for one data center"  # [P-027, P-051]
 status:                            # chips under the title
   - {text: "Open case at the Georgia Public Service Commission"}  # [P-001]
   - {text: "Hearing set for Dec 9, 2026"}  # [P-018]

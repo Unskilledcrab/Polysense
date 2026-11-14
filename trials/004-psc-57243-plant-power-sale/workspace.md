@@ -1,26 +1,26 @@
-# Georgia regulators' case on a Covington power plant built to run one data center
+# A Covington power plant for one data center: the case before Georgia's Public Service Commission
 
 Status: Open case at the Georgia Public Service Commission · Hearing set for Dec 9, 2026 · Trial 004, revision 1: not yet checked <!-- nocheck -->
 How this page was made: an AI agent drafted it from archived sources; every sentence is cited or labeled. Dates were copied from PSC filings on Nov 14, 2026. <!-- nocheck -->
 
 ## 30-second version
 
-- **What's being decided:** The Georgia Public Service Commission (PSC) has five commissioners who regulate utilities. [P-085, P-047] The PSC will decide whether a company may power one Covington data center from its own plant. [P-021, P-051] A data center is a building full of computers. {analysis: plain-language definition, not from the cited sources}
-- **Who it affects:** Neighbors of the plant in Newton County, the data center, and Georgia's power companies. [P-032, P-061, P-063]
-- **What's next:** A hearing on Dec 9, 2026. [P-018] A Hearing Officer, the person the PSC appointed to hear the case, runs the hearing. [P-020] The PSC's final vote has no date yet. {editorial: process note; the amended schedule ends with the Dec 9 hearing (P-018), and no order we read sets a vote}
+- **What's being decided:** Nearby residents and a nonprofit filed a case at the Georgia Public Service Commission (PSC), the state's utility regulator. [P-029, P-035, P-047] The filers ask whether VoltaGrid's power plant for one data center breaks two power laws. [P-035, P-027] VoltaGrid says the PSC has no power here and asked for dismissal. [P-041, P-004] A data center is a building full of computers. {analysis: plain-language definition, not from the cited sources}
+- **Who it affects:** Neighbors of the plant, the data center, and Georgia's power companies. [P-032, P-061, P-063]
+- **What's next:** The PSC's Hearing Officer holds a hearing Dec 9, 2026. [P-018, P-020] No final vote is set. {editorial: process note; the amended schedule ends with the Dec 9 hearing (P-018), and no order we read sets a vote}
 
 ## What it means for you
 
-- **If you live near the plant:** This Public Service Commission (PSC) case is about who may power the data center, not the plant's air permit. {analysis: the four questions set for the hearing (P-021) cover the PSC's authority, who may bring the case and two power laws; a separate state agency handles the air permit (P-028, P-065)} Residents who filed the case say the plant will bring noise, light and air pollution. [P-032, P-072] No final vote is set as of Nov 14, 2026. {editorial: process note; no order we read sets a vote date}
-- **If you pay a Georgia Power bill:** No filing we read states an effect on your bill, as of Nov 14, 2026. {editorial: scoped to the filings and excerpts we read} Georgia Power says the data center sits in its assigned territory and is slated to become its customer. [P-061]
-- **If your power comes from an electric membership corporation (EMC):** No filing we read states an effect on your bill, as of Nov 14, 2026. {editorial: scoped to the filings and excerpts we read} Georgia EMC, a trade group for Georgia's EMCs, says the PSC's decision may affect its members' interests. [P-062, P-063]
+- **If you live near the plant:** This Public Service Commission (PSC) case is about who may power the data center, not the plant's air permit. {analysis: the four questions set for the hearing (P-021) cover the PSC's authority, who may bring the case and two power laws; a separate state agency handles the air permit (P-028, P-065)} Residents who filed the case say the plant will bring noise, light and air pollution. [P-032, P-072] VoltaGrid says a state agency issued the plant's air permit. [P-065]
+- **If you pay a Georgia Power bill:** No filing we read puts an amount on any bill effect, as of Nov 14, 2026. {editorial: scoped to the filings and excerpts we read} A PSC staff witness's testimony "considers potential risks to other Georgia Power customers." [P-073, P-074] Georgia Power says the data center is in its territory and slated to become its customer. [P-061]
+- **If your power comes from an electric membership corporation (EMC):** Georgia EMC, a trade group for EMCs, says a supplier's other consumers could absorb the cost of lines built for customers who are "picked off." [P-055, P-062] No filing we read gives an amount, as of Nov 14, 2026. {editorial: scoped to the filings and excerpts we read}
 
 ### Where the money comes from
 
 1. Serverfarm, the data center's owner, supplies natural gas to the plant, VoltaGrid says. [P-046]
 2. VoltaGrid, the plant's builder, says its equipment turns that gas into electricity for the data center. [P-027, P-046]
-3. VoltaGrid says Serverfarm pays for that service based on the plant's capacity, not on the energy delivered. [P-046]
-4. A witness for the PSC's own staff says the contract's statement of work sets monthly fees per unit of energy; the amounts are blacked out. [P-073, P-076]
+3. VoltaGrid says Serverfarm pays for that service based on the plant's capacity, not on the energy delivered. [P-046] The petitioners call the deal a plan "to sell power." [P-027]
+4. A witness for the PSC's staff says the contract "states Monthly Fees per kWh" of a blacked-out amount, "with cumulative Monthly Fees increasing as the installation scales." [P-073, P-076] A kilowatt-hour (kWh) is a unit of energy. {analysis: plain-language definition, not from the cited sources}
 5. No filing we read says how any of that money would reach a home's power bill, as of Nov 14, 2026. {editorial: scoped to the filings and excerpts we read}
 
 ### Decided now, and decided later
@@ -32,10 +32,11 @@ How this page was made: an AI agent drafted it from archived sources; every sent
 
 ### Not known yet
 
+- **Whether the plant sits on the data center's property:** The petition calls the data center "neighboring." [P-027] VoltaGrid calls its plant an "on-site generator." [P-064] No filing we read settles the point, as of Nov 14, 2026. {editorial: scoped to the filings and excerpts we read}
 - **The final vote date:** No order we read sets a date for the PSC's final vote, as of Nov 14, 2026. {editorial: process note; the amended schedule ends with the Dec 9 hearing (P-018)}
 - **What the Chairman's Nov 12 order says:** The filing list gives the order's date and title: "Chairman's Order Temporarily Staying Hearing Officer's Order." [P-009] Our copy of that order has no readable text, so how long the hold lasts is not known as of Nov 14, 2026. {editorial: process note; the snapshot of the order (S03c) is an image without text}
 - **Whether the PSC has ruled on VoltaGrid's appeal:** The filing list shows no ruling on the appeal as of Nov 14, 2026. {editorial: process note; the filing list (S01b) shows no order after Nov 12} The PSC's website lists an Administrative Session on Nov 17 and committee meetings on Nov 24. [P-087] No document we read says whether the appeal is on either agenda. {editorial: scoped to the documents we read}
-- **Whether the case ends before the hearing:** VoltaGrid asked the PSC on Sep 16, 2026, to dismiss the case. [P-004] The Hearing Officer's Nov 4 order says the Hearing Officer "has indicated" that dismissing the case before a record is made "would be premature." [P-007, P-026] The filing list shows no order on that request as of Nov 14, 2026. {editorial: process note; the filing list (S01b) shows no order on the motion to dismiss}
+- **Whether the case ends before the hearing:** VoltaGrid asked the PSC on Sep 16, 2026, to dismiss the case. [P-004] The Hearing Officer's Nov 4 order says the Hearing Officer "does not dispute that these issues are essential to this case," but that dismissing the case before a record is made "would be premature." [P-007, P-026] The filing list shows no order on that request as of Nov 14, 2026. {editorial: process note; the filing list (S01b) shows no order on the motion to dismiss}
 - **What the PSC staff witness first said:** The filing list shows direct testimony filed on Nov 12, 2026. [P-011] We could not download that testimony, so this page does not cover it as of Nov 14, 2026. {editorial: process note; the download of S15 failed}
 - **Risks to other customers:** The staff witness's rebuttal testimony, filed Nov 13, 2026, says it "also considers potential risks to other Georgia Power customers." [P-012, P-073, P-074] The public copy we read does not describe those risks, as of Nov 14, 2026. {editorial: scoped to the public copy of S15b we read}
 - **Whether the plant is running:** A VoltaGrid executive testified on Oct 9, 2026, that the plant had not started operating. [P-044, P-067, P-068] VoltaGrid's Oct 26 brief says the state issued the plant's air permit. [P-006, P-065] No filing we read says whether the plant has started since, as of Nov 14, 2026. {editorial: scoped to the filings and excerpts we read}
@@ -95,24 +96,24 @@ The filings we read point to three ways this Public Service Commission (PSC) cas
 ### If you care most about…
 
 - **If you care most about neighbors' air, noise and light:** The petition says VoltaGrid, the plant's builder, adds "air, light, and noise pollution to an area already overburdened by these industrial impacts." [P-032]
-- **If you care most about freedom to make private on-site power deals:** VoltaGrid says it "has no special privileges, no condemnation power, is the antithesis of a monopoly." [P-043]
+- **If you care most about private deals between businesses:** VoltaGrid says it "is the antithesis of a monopoly, and is negotiating bespoke rates with a sophisticated counterparty." [P-043]
 - **If you care most about who pays for stranded power lines:** Georgia EMC, a trade group for electric membership corporations (EMCs), says a supplier's "other consumers" could absorb the costs if customers are "picked off." [P-055, P-062]
 - **If you care most about one set of rules for every power provider:** Georgia Power says a one-customer exception would let any company "render any amount of service, and avoid Commission jurisdiction." [P-057]
 - **If you care most about deciding on a full record:** The PSC's staff says an early dismissal "will not serve the Commission’s objective of timely and efficiently resolving the issue." [P-051]
-- Three sides share one view: the people who filed, Georgia EMC and Georgia Power each say the PSC has power over VoltaGrid's plan. [P-037, P-053, P-058]
+- On whether the PSC has power over VoltaGrid, the people who filed, Georgia EMC and Georgia Power each say it does. [P-037, P-053, P-058] The PSC's staff asked that the dismissal decision wait until after the hearing. [P-052] On whether the people who filed may bring the case, Georgia EMC took no position and Georgia Power did not answer that point. [P-054, P-094] The number of filers does not decide the legal question, and the PSC has not ruled as of Nov 14, 2026. {editorial: count caveat; the filing list (source S01b) shows no ruling on the motion to dismiss}
 
-### Outcome A: Dismiss the case
+### Outcome A: End the case with no ruling against VoltaGrid
 
-- **What it does:** The PSC would end the case with no ruling against VoltaGrid's plan. {analysis: the result VoltaGrid asks for (P-041, P-042)} VoltaGrid gives two grounds. [P-041, P-042] First, VoltaGrid says the PSC has no power over a company that does not serve the public. [P-041] Second, VoltaGrid says the people who filed are not "interested parties." [P-042]
+- **What it does:** The PSC would end the case with no ruling against VoltaGrid's plan, either by dismissing the case now or by finding after the hearing that the PSC has no power over VoltaGrid, that the people who filed may not bring the case, or that no law is broken. {analysis: the results VoltaGrid asks for (P-041, P-042) and the hearing questions (P-021)} VoltaGrid gives two grounds for dismissing now. [P-041, P-042] First, VoltaGrid says the PSC has no power over a company that does not serve the public. [P-041] Second, VoltaGrid says the people who filed are not "interested parties." [P-042]
 - **Who benefits:** VoltaGrid and Serverfarm, the data center's owner, would face no PSC order in this case. {analysis: follows from the petition's requests (P-035) not being granted}
-- **Who pays:** The people who filed say neighbors would live with the plant's noise, light and air pollution. [P-032, P-072] Georgia EMC says a supplier's other consumers would pay for unused lines if future customers can be "picked off." [P-055]
+- **Who pays:** The people who filed say neighbors would live with the plant's noise, light and air pollution. [P-032, P-072] Georgia EMC says a supplier's other consumers could absorb the cost of lines built for customers who are "picked off." [P-055]
 - **What's uncertain:** The PSC asked its own question about its power over VoltaGrid. [P-022] No filing we read says whether a dismissal would end that question too. {editorial: scoped to the filings and excerpts we read}
 
 ### Outcome B: Find a violation and order VoltaGrid to stop
 
 - **What it does:** The PSC would rule that the plan breaks the Territorial Act or the Cogeneration Act. [P-035] The PSC would then order VoltaGrid to stop the work that breaks the law. [P-035]
 - **Who benefits:** The people who filed, who say the plant adds pollution to their area. [P-032] Georgia Power says the site is in its assigned territory and Serverfarm is slated to become its customer. [P-061]
-- **Who pays:** VoltaGrid and Serverfarm, since the order would target their power deal. {analysis: the order the petition asks for is aimed at VoltaGrid's operations (P-035), and VoltaGrid says those operations serve only Serverfarm (P-046)} Georgia Power calls VoltaGrid's power "bridge power" for Serverfarm. [P-061]
+- **Who pays:** VoltaGrid and Serverfarm, since the order would target their power deal. {analysis: the order the petition asks for is aimed at VoltaGrid's operations (P-035), and VoltaGrid says those operations serve only Serverfarm (P-046)} No filing we read states what such an order would cost VoltaGrid or Serverfarm. {editorial: scoped to the filings and excerpts we read}
 - **What's uncertain:** No filing we read says what VoltaGrid could still do under such an order, or how soon the data center could get power another way. {editorial: scoped to the filings and excerpts we read}
 
 ### Outcome C: Find that the PSC has power here, then choose another action or none
@@ -134,19 +135,19 @@ The filings we read point to three ways this Public Service Commission (PSC) cas
 - We read the long filings in excerpts found by keyword search, so a card may miss points made elsewhere in a filing. {editorial: process note}
 - Cards follow the order in which each side first filed its argument, with VoltaGrid's two arguments together; the order is not a ranking. {editorial: ordering rule}
 
-### 1. The plan is a power sale by a company with no right to serve the site
+### 1. The petitioners say the plan is a power sale VoltaGrid has no right to make
 
 Documented · Side: the petitioners; favors Outcome B · Claim type: legal and factual · Evidence: Legal question (whether the deal is a retail sale); Mixed (VoltaGrid and the PSC staff's witness describe the deal differently); Uncertain (fee terms are blacked out) <!-- nocheck -->
 
 - **In short:** The petitioners say VoltaGrid, the plant's builder, would sell power to Serverfarm, the data center's owner, in Georgia Power's area, breaking the Territorial Act, the Georgia law that assigns service areas to utilities. [P-027, P-033, P-050] Evidence: Mixed. {editorial: restates the label}
 - **Who says it:** The petitioners, a Newton County nonprofit and nearby residents, made the argument in the petition filed with the PSC on Jul 13, 2026. {analysis: the petition was filed Jul 13 (P-002); it names the nonprofit (P-029) and residents who live about two miles and less than 5 miles from the plant (P-030, P-031); their names and roads are left out under our privacy rule} The petition says: "The Territorial Act prohibits VoltaGrid from furnishing retail electric service to Serverfarm." [P-033] The petition also says the plan breaks the Cogeneration Act, a 2001 Georgia law on plants that power their owners, because VoltaGrid "is selling its energy to Serverfarm." [P-034, P-036]
-- **What supports it:** The petition says: "Serverfarm and VoltaGrid are separate companies with no cross ownership or direct control over each other’s operations." [P-038] A witness for the PSC's staff said on Nov 13, 2026, that "VoltaGrid is providing an ongoing power-generation and power-delivery service to Serverfarm." [P-012, P-073, P-077]
+- **What supports it:** The petition says: "Serverfarm and VoltaGrid are separate companies with no cross ownership or direct control over each other’s operations." [P-038] A witness for the PSC's staff said on Nov 13, 2026, that the contract's statement of work "states Monthly Fees per kWh" of a blacked-out amount, "with cumulative Monthly Fees increasing as the installation scales." [P-012, P-073, P-076]
 - **Who disagrees:** A VoltaGrid executive said in a sworn statement filed with VoltaGrid's Sep 16, 2026, request to dismiss: "VoltaGrid will not sell that electricity to Serverfarm or to anyone else." [P-004, P-044, P-046]
 - **What challenges it:** VoltaGrid said on Oct 26, 2026, that every ban in the Territorial Act applies only to electric suppliers, and VoltaGrid says it is not one. [P-006, P-066, P-041]
 - **What's missing:** The fee amounts in the contract are blacked out in the public copy we read. [P-076] The PSC staff's witness said: "I am not a lawyer and do not have an opinion" on the legal classification. [P-078]
 - **What's uncertain:** Whether turning a customer's gas into power for a fee is a retail sale is a legal question the PSC has not decided as of Nov 14, 2026. {editorial: process note; the Nov 4 order says the electric-supplier question is undecided (P-025)}
 
-### 2. The PSC has no authority over a company that serves one on-site customer
+### 2. VoltaGrid says the PSC has no authority over a company that serves one customer on that customer's site
 
 Documented · Side: VoltaGrid; favors Outcome A · Claim type: legal and factual · Evidence: Legal question (whether one customer is "the public"); Mixed (VoltaGrid says it seeks no other Georgia customers; the petitioners say it explored serving others) <!-- nocheck -->
 
@@ -154,11 +155,11 @@ Documented · Side: VoltaGrid; favors Outcome A · Claim type: legal and factual
 - **Who says it:** VoltaGrid made the argument in the brief it filed with the PSC on Sep 16, 2026. [P-004, P-041] The brief says VoltaGrid does not "furnish service to the public." [P-041] A VoltaGrid executive gave the same answer in testimony dated Oct 9, 2026. [P-044, P-067, P-069]
 - **What supports it:** The executive's sworn statement says Serverfarm supplies the gas and "VoltaGrid will not take ownership of the electricity." [P-046] The statement says VoltaGrid is not "pursuing any additional customer or business in Georgia." [P-093] VoltaGrid's brief says VoltaGrid "has no special privileges, no condemnation power, is the antithesis of a monopoly." [P-043]
 - **Who disagrees:** Georgia EMC, a trade group for electric membership corporations (EMCs), said on Oct 16, 2026, that "VoltaGrid conflates" the PSC's power to regulate utilities with its power to enforce the Territorial Act. [P-005, P-053] Georgia Power said the same day that VoltaGrid's service "is a public service that should be regulated by the Commission." [P-005, P-058] The petitioners said that, under one reading of the Territorial Act, VoltaGrid breaks the law "regardless of whether VoltaGrid qualifies as an electric supplier." [P-005, P-049]
-- **What challenges it:** The petitioners said on Oct 16, 2026, that VoltaGrid "has explored serving other Georgia customers." [P-005, P-092] The PSC staff's witness said the contract's statement of work calls for "phased Power Delivery reaching 90 MW" and states monthly fees per kWh. [P-075, P-076] MW stands for megawatts, a measure of power, and kWh for kilowatt-hours, a measure of energy. {analysis: plain-language definitions, not from the cited sources} VoltaGrid's executive had said the pay is based on capacity, "rather than a fee per kWh of energy." [P-046]
+- **What challenges it:** The petitioners said on Oct 16, 2026, that VoltaGrid "has explored serving other Georgia customers." [P-005, P-092] The PSC staff's witness said the contract's statement of work calls for "phased Power Delivery reaching 90 MW" and "states Monthly Fees per kWh" of a blacked-out amount, "with cumulative Monthly Fees increasing as the installation scales." [P-075, P-076] MW stands for megawatts, a measure of power, and kWh for kilowatt-hours, a measure of energy. {analysis: plain-language definitions, not from the cited sources} VoltaGrid's executive had said the pay is based on capacity, "rather than a fee per kWh of energy." [P-046]
 - **What's missing:** A ruling: the Hearing Officer, the person the PSC appointed to hear the case, wrote on Nov 4 that the question "is central to this docket and nothing in this Order decides it." [P-007, P-020, P-025]
 - **What's uncertain:** Whether serving one customer counts as serving the public is a legal question the PSC has not decided as of Nov 14, 2026. {editorial: process note; the Nov 4 order says the question is undecided (P-025)}
 
-### 3. The people who filed are not the "interested parties" the law lets bring the case
+### 3. VoltaGrid says the people who filed are not the "interested parties" the law lets bring the case
 
 Documented · Side: VoltaGrid; favors Outcome A · Claim type: legal · Evidence: Legal question (who counts as an "interested party"); Uncertain (no ruling yet) <!-- nocheck -->
 
@@ -170,19 +171,19 @@ Documented · Side: VoltaGrid; favors Outcome A · Claim type: legal · Evidence
 - **What's missing:** A ruling: the Hearing Officer wrote on Nov 4 that dismissing the case on such grounds before a record is made "would be premature." [P-007, P-026]
 - **What's uncertain:** Who counts as an "interested party" is a legal question the PSC has not decided as of Nov 14, 2026. {editorial: process note; the filing list (S01b) shows no order on the motion to dismiss}
 
-### 4. The PSC can enforce the Territorial Act against any company, or other customers pay
+### 4. Georgia EMC says the PSC can enforce the Territorial Act against any company, and that other customers could pay
 
 Documented · Side: Georgia EMC; opposes Outcome A on authority · Claim type: legal and predictions · Evidence: Legal question (how far the Territorial Act reaches); Uncertain (no dollar figure in the filings we read) <!-- nocheck -->
 
 - **In short:** Georgia EMC, a trade group for electric membership corporations (EMCs), says the PSC can enforce the Territorial Act here, and that a supplier's other consumers could absorb the cost of lines built for customers who are "picked off." [P-053, P-055, P-062] Evidence: Uncertain. {editorial: restates the label}
 - **Who says it:** Georgia EMC made the argument in its response filed with the PSC on Oct 16, 2026. [P-005] The response says an investment "could become stranded (with the costs thereof to be absorbed by the electric supplier’s other consumers)." [P-055]
-- **What supports it:** Georgia EMC says its member EMCs serve about 5 million Georgians and may be affected by the decision. [P-062, P-063] The PSC's staff, summing up the petitioners' claim, describes the Territorial Act as the law "under which the right to provide electrical service is assigned to utility companies according to territorial boundaries established by the Commission." [P-050]
+- **What supports it:** Georgia EMC says its member EMCs serve about 5 million Georgians and may be affected by the decision. [P-062, P-063] No other filing we read backs the stranded-cost point with figures, as of Nov 14, 2026. {editorial: scoped to the filings and excerpts we read}
 - **Who disagrees:** VoltaGrid said on Oct 26, 2026, that the Territorial Act covers only companies "otherwise subject to regulation by the commission." [P-006, P-066]
 - **What challenges it:** VoltaGrid said: "Georgia Power remains the exclusive public utility authorized to serve Serverfarm." [P-064]
 - **What's missing:** No filing we read gives a dollar figure for any cost to other customers, as of Nov 14, 2026. {editorial: scoped to the filings and excerpts we read}
 - **What's uncertain:** Whether suppliers would lose customers this way is a prediction, as of Nov 14, 2026. {editorial: claim type}
 
-### 5. A one-customer exception would let unregulated power plants spread
+### 5. Georgia Power says a one-customer exception could let unregulated power plants spread
 
 Documented · Side: Georgia Power; opposes Outcome A on authority · Claim type: legal and predictions · Evidence: Legal question (whether one customer is "the public"); Uncertain (no count of such plants in the filings we read) <!-- nocheck -->
 
@@ -194,7 +195,7 @@ Documented · Side: Georgia Power; opposes Outcome A on authority · Claim type:
 - **What's missing:** No filing we read counts other single-customer plants planned in Georgia, as of Nov 14, 2026. {editorial: scoped to the filings and excerpts we read}
 - **What's uncertain:** Whether such plants would spread is a prediction, as of Nov 14, 2026. {editorial: claim type}
 
-### 6. Decide after the hearing; the contract describes an ongoing power service
+### 6. The PSC's staff asks to decide after the hearing; its witness says the contract describes an ongoing power service
 
 Documented · Side: the PSC's staff; opposes dismissal before the hearing · Claim type: factual and legal · Evidence: Mixed (the staff's witness and VoltaGrid's executive describe the pay differently); Uncertain (fee terms are blacked out, and we could not read the witness's direct testimony) <!-- nocheck -->
 
@@ -202,13 +203,15 @@ Documented · Side: the PSC's staff; opposes dismissal before the hearing · Cla
 - **Who says it:** The PSC staff's lawyer made the request in a response filed with the PSC on Oct 16, 2026. [P-052] The staff's witness filed rebuttal testimony on Nov 13, 2026. [P-012, P-073]
 - **What supports it:** The staff's response says dismissing early "will not serve the Commission’s objective" of settling whether the Covington project falls under the PSC's power. [P-051] The witness said the statement of work requires VoltaGrid to "operate and maintain the equipment" and to "staff the site around the clock." [P-075]
 - **Who disagrees:** VoltaGrid said in its emergency appeal, first filed Nov 9, 2026, that the Hearing Officer's order wrongly came before "resolving the issues of whether Petitioners have standing" and whether the PSC has power over VoltaGrid. [P-008, P-081]
-- **What challenges it:** VoltaGrid's executive said the pay is based on capacity, "rather than a fee per kWh of energy." [P-046] The staff's witness said the statement of work "states Monthly Fees per kWh." [P-076]
+- **What challenges it:** VoltaGrid's executive said the pay is based on capacity, "rather than a fee per kWh of energy." [P-046] The staff's witness said the statement of work "states Monthly Fees per kWh" of a blacked-out amount, "with cumulative Monthly Fees increasing as the installation scales." [P-076]
 - **What's missing:** The filing list shows direct testimony from the same witness, filed Nov 12, 2026. [P-011, P-012] We could not download that testimony. {editorial: process note; the download of S15 failed} The fee amounts are blacked out in the public copy we read. [P-076]
 - **What's uncertain:** The witness, who said "I am not a lawyer," gave no opinion on whether the contract terms alone settle "any legal classification under Georgia law." [P-078] The PSC has not ruled as of Nov 14, 2026. {editorial: process note; the filing list (S01b) shows no final order}
 
 ### Questions to weigh
 
-- Is a plant that serves one customer, on that customer's land, serving the public? {editorial: open question from cards 2 and 5}
+- Is a plant that serves one customer, which VoltaGrid says is on that customer's site, serving the public? {editorial: open question from cards 2 and 5}
+- Does building and running the plant, and delivering its energy to the data center, break the Territorial Act or the Cogeneration Act? {editorial: the third hearing question (P-021)}
+- Is turning a customer's gas into power for a fee a retail sale of electricity? {editorial: open question from cards 1 and 6}
 - Who may ask the PSC to enforce the Territorial Act: only the assigned utility, or neighbors too? {editorial: open question from card 3}
 - If the PSC has authority over the plant, what action, if any, is needed? {editorial: open question from the fourth hearing question (P-021)}
 

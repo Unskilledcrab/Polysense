@@ -55,8 +55,13 @@ Rules that follow:
   Sonnet, against about 750k on the top tier for the same job last cycle.
 - **Measured limit:** no cheap tier reliably finds subtle overstatement from a sentence and its cited passages alone.
   A new page still gets one whole-page read.
-- **Not yet tried:** stages 0 to 4. Trial 004 will run them by hand for one week of listings and record the cost of
-  each stage, how many items survive it, and whether the three pages we already chose would have made the shortlist.
+- **Tried once by hand (2026-11-14, [Trial 004](../../trials/004-psc-57243-plant-power-sale/README.md)):** stage 4.
+  Code fetched 27 filings, extracted about 8 million characters, and keyword search narrowed them to 200,000 for the
+  drafter, who needed 8 lookups outside that pack. Stage 5 cost 332k tokens against an estimate of 250k. The whole
+  first publication reached its 1.0M cap before its last three checks; through subagents it would cost about 1.5M.
+  Fixed overhead per subagent (110k to 145k) is most of that, which is the case for the API back end.
+- **Not yet tried:** stages 0 to 3. Trial 004's subject came from an earlier scouting list, not from a watched listing
+  and a rubric, so watching, scoring and skimming are still untested.
 
 ## Consequences
 

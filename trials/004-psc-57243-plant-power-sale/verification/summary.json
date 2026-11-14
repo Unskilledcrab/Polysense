@@ -1,0 +1,48 @@
+{
+ "verified": false,
+ "statusText": "57 sentences waiting for a check",
+ "intro": "On Nov 14, 2026, an AI agent drafted this page from saved copies of its sources. Separate AI checkers, which never saw the drafting, then checked each sentence against the passages it cites, and a three-seat panel reviewed it for fairness. In this trial, no person checked the facts. This page has not finished its checks; here is what was done and what is still open.",
+ "stats": [
+  {
+   "value": "241",
+   "label": "sentences, each tied to a source or labeled as our own analysis"
+  },
+  {
+   "value": "0",
+   "label": "claims found unsupported by their sources in the first sentence-by-sentence check (21 were slightly overstated and were reworded)"
+  },
+  {
+   "value": "11 of 11",
+   "label": "hidden test errors the checker caught, with no false alarm on 20 clean sentences"
+  },
+  {
+   "value": "3 of 5",
+   "label": "fairness rating from each of three reviewers, before the fixes"
+  }
+ ],
+ "sections": [
+  {
+   "title": "What we checked",
+   "paras": [
+    "Code confirmed that every sentence cites a source passage or is labeled as our analysis, that quotes match word for word, that saved files match their fingerprints, and that no private person's name or street address appears.",
+    "A separate AI checker judged each sentence against only the passages it cites. A panel of three reviewers read the whole page: one for VoltaGrid's positions, one for the people who filed and the parties opposing dismissal, and a neutral editor."
+   ]
+  },
+  {
+   "title": "What's still open",
+   "items": [
+    "The sentences changed by the fixes have not had their follow-up check.",
+    "The three high-severity fairness issues were fixed the same day, but no reviewer has looked at the fixes.",
+    "65 medium and 31 low fairness notes are listed in the review record; some were fixed, and the rest are open.",
+    "A new page gets one whole-page read against its sources before it can pass. That read has not been done."
+   ]
+  },
+  {
+   "title": "What this can't do",
+   "paras": [
+    "We read the long filings in excerpts found by keyword search, so a point made only outside those excerpts can be missing. Two orders are images with no readable text, and one piece of testimony could not be downloaded."
+   ]
+  }
+ ],
+ "stateLine": "57 sentences have changed and are waiting for a check, so this page is marked as not finished."
+}

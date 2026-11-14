@@ -97,7 +97,7 @@ const { serve, settle } = require('./serve');
   for (const s of slugs) {
     await get(s + '-options');
     const titles = await page.$$eval('.options > details.fold > summary h3', n => n.map(x => x.innerText));
-    ok(titles.length === 0 || titles.every(t => /^(Option|Plan) [A-Z]: /.test(t)), `${s}: option titles without letters (${titles.join(' | ')})`);
+    ok(titles.length === 0 || titles.every(t => /^(Option|Plan|Outcome) [A-Z]: /.test(t)), `${s}: option titles without letters (${titles.join(' | ')})`);
     const named = await page.$$eval('.vguide .vline', n => n.map(x => x.innerText).join(' ').match(/\b(Option|Plan) [A-Z]\b/g) || []);
     named.forEach(k => ok(titles.some(t => t.startsWith(k + ':')), `${s}: values guide names "${k}", but no option card is titled that way`));
     await get(s);

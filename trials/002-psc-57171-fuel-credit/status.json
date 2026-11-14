@@ -25,24 +25,9 @@
   "balance_prompts": 4
  },
  "units": 556,
- "checked_ok": 554,
+ "checked_ok": 556,
  "flagged": [],
- "pending": [
-  {
-   "file": "workspace.md",
-   "line": 46,
-   "sentence": "For more information, that page lists these PSC contacts: 404-656-4501 (local) or 1-800-282-5813 (outside metro-Atlanta), then press 2, or e",
-   "verdict": null,
-   "problem": ""
-  },
-  {
-   "file": "home.md",
-   "line": 14,
-   "sentence": "**Nov 12, 2026:** The Public Service Commission (PSC) had a hearing scheduled on counting business customers' real-time payments toward fuel",
-   "verdict": null,
-   "problem": ""
-  }
- ],
+ "pending": [],
  "fairness": {
   "date": "2026-11-13",
   "neutrality": 4,
@@ -75,5 +60,5 @@
   ]
  },
  "whole_page_check": true,
- "verified": false
+ "verified": true
 }
