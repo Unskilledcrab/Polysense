@@ -235,7 +235,7 @@ def quiz(out: Path, specs: list[str], clean: int) -> None:
         pick = rng.sample(cold, min(clean, len(cold)))
         for u in pick:
             sheet[u["key"]] = {"planted": None, "set": Path(key_path).stem}
-        items += batch_units(hot + pick, passages, raw)
+        items += batch_units(hot + pick, passages, raw, origin=origins(Path(passages_path)))   # as real batches do (pair-3)
     rng.shuffle(items)
     write_batches(out, items, 30)
     (out / "answer-sheet.json").write_text(json.dumps(sheet, indent=1), encoding="utf-8")

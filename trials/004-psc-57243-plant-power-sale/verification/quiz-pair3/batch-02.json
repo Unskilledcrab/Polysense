@@ -1,0 +1,20 @@
+{
+ "units": [
+  {
+   "id": "05642dcfaa9a234d-mutation-",
+   "sentence": "A VoltaGrid executive gave the same answer in testimony dated Oct 9, 2026.",
+   "marker": "[P-044, P-067, P-069]",
+   "kind": "cited",
+   "passages": {
+    "P-044": "I serve as Executive Vice President of VoltaGrid, a position I have held since October 2025.",
+    "P-067": "Presented on behalf of VoltaGrid, LLC October 9, 2026",
+    "P-069": "Q. Does VoltaGrid furnish service to the public in Georgia? A. No."
+   },
+   "from": {
+    "P-044": "VoltaGrid's Motion to Dismiss and Brief in Support, with exhibit, 2026-09-16 (filed or published by VoltaGrid, LLC); affidavit p.2, para. 2",
+    "P-067": "Direct testimony of VoltaGrid's witness, 2026-10-09 (filed or published by VoltaGrid, LLC); cover page",
+    "P-069": "Direct testimony of VoltaGrid's witness, 2026-10-09 (filed or published by VoltaGrid, LLC); near the end"
+   }
+  }
+ ]
+}

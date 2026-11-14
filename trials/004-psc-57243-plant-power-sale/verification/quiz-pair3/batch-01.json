@@ -1,0 +1,390 @@
+{
+ "units": [
+  {
+   "id": "43183784500e5170-mutation-",
+   "sentence": "**Whether the PSC has ruled on VoltaGrid's appeal:** The filing list shows no ruling on the appeal as of Nov 14, 2026.",
+   "marker": "{editorial: process note; the filing list (S01b) shows no order after Nov 12}",
+   "kind": "editorial",
+   "passages": {},
+   "from": {}
+  },
+  {
+   "id": "61c9e62b2cd83d5c-mutation-",
+   "sentence": "**Nov 4, 2026:** The Hearing Officer ordered that the petitioners' lawyers be denied access to papers VoltaGrid marked as a trade secret.",
+   "marker": "[P-007, P-024]",
+   "kind": "cited",
+   "passages": {
+    "P-007": "2026-11-04 | document 229350 | ORDER ON PETITIONERS’ MOTION CHALLENGING TRADE SECRET DESIGNATIONS AND FOR ACCESS TO TRADE SECRET INFORMATION",
+    "P-024": "IT IS HEREBY ORDERED that counsel for Petitioners are granted access to materials marked trade secret subject to a protective agreement; ORDERED FURTHER that counsel for Petitioners and VoltaGrid shall execute a protective agreement that reasonably protects and insures the confidentiality of the protected information. A copy of the protective agreement shall be filed in this docket by 4:00PM on November 12, 2026;"
+   },
+   "from": {
+    "P-007": "Docket 57243 filing list (the JSON the docket page itself requests) (filed or published by Georgia Public Service Commission); filing list, Nov 4, 2026 row",
+    "P-024": "Hearing Officer's order on the petitioners' motion challenging trade secret designations, 2026-11-04 (filed or published by Georgia Public Service Commission Hearing Officer); p.6"
+   }
+  },
+  {
+   "id": "68bfb17cfd88f7ba-mutation-",
+   "sentence": "**Who disagrees:** VoltaGrid said on Oct 26, 2026, that the Territorial Act covers only companies \"otherwise subject to regulation by the commission.\"",
+   "marker": "[P-006, P-066]",
+   "kind": "cited",
+   "passages": {
+    "P-006": "2026-10-26 | document 229266 | Respondent VoltaGrid, LLC's Reply Brief in support of its Motion to Dismiss",
+    "P-066": "Every prohibition in the Territorial Act runs to “electric suppliers.”[fn55] In addition, the Act’s statement of policy itself says it binds “electric suppliers” and mentions no one else.[fn56] Finally, the Act specially defines the term “electric supplier” as “any electric light and power company otherwise subject to regulation by the commission."
+   },
+   "from": {
+    "P-006": "Docket 57243 filing list (the JSON the docket page itself requests) (filed or published by Georgia Public Service Commission); filing list, Oct 26, 2026 row",
+    "P-066": "VoltaGrid's Reply Brief in support of its Motion to Dismiss, 2026-10-26 (filed or published by VoltaGrid, LLC); reply brief, part II.A"
+   }
+  },
+  {
+   "id": "93d4b0a835edd522-mutation-",
+   "sentence": "A witness for the PSC's own staff says the contract's statement of work sets monthly fees per unit of energy; the amounts are blacked out.",
+   "marker": "[P-073, P-076]",
+   "kind": "cited",
+   "passages": {
+    "P-073": "I am testifying on behalf of the GPSC Public Interest Advocacy Staff",
+    "P-076": "The SOW states Monthly Fees per kWh of xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxx, with cumulative Monthly Fees increasing as the installation scales."
+   },
+   "from": {
+    "P-073": "Rebuttal testimony and exhibits of the PSC Staff's witness, 2026-11-13 (filed or published by PSC Staff); p.3, line 11",
+    "P-076": "Rebuttal testimony and exhibits of the PSC Staff's witness, 2026-11-13 (filed or published by PSC Staff); p.10, lines 4-5"
+   }
+  },
+  {
+   "id": "4edb73506b538fdb-mutation-",
+   "sentence": "**In short:** The PSC's staff says the dismissal request should be granted before the Dec 9 hearing, and the staff's witness says the contract has VoltaGrid generate and deliver power to Serverfarm.",
+   "marker": "[P-052, P-077]",
+   "kind": "cited",
+   "passages": {
+    "P-052": "Wherefore, Staff requests that the Hearing Officer reserve making a decision as to Voltagrid’s Motion to Dismiss until after the December 9, 2026 hearing in this matter. This 16th day of October, 2026.",
+    "P-077": "Based on the cited contract language, VoltaGrid is providing an ongoing power-generation and power-delivery service to Serverfarm."
+   },
+   "from": {
+    "P-052": "Staff's Response to Respondent's Motion to Dismiss, 2026-10-16 (filed or published by PSC Staff); p.4",
+    "P-077": "Rebuttal testimony and exhibits of the PSC Staff's witness, 2026-11-13 (filed or published by PSC Staff); p.14, lines 10-11"
+   }
+  },
+  {
+   "id": "7f97d0cf0b484e3b-mutation-",
+   "sentence": "**What supports it:** Georgia EMC says its member EMCs serve about 8 million Georgians and may be affected by the decision.",
+   "marker": "[P-062, P-063]",
+   "kind": "cited",
+   "passages": {
+    "P-062": "Georgia EMC is a statewide trade association serving the needs of Georgia’s forty-one electric distribution cooperatives that provide retail electric service in Georgia (“EMCs”). Georgia EMC is a not-for-profit, member-owned organization controlled by a board of directors elected by its members. The EMCs provide retail electric service to approximately 5 million Georgians.",
+    "P-063": "The interests of Georgia EMC and its member EMCs may be substantially affected by any decisions reached by the Commission in this proceeding."
+   },
+   "from": {
+    "P-062": "Petition to Intervene of Georgia EMC, 2026-09-23 (filed or published by Georgia EMC); p.1, para. 1",
+    "P-063": "Petition to Intervene of Georgia EMC, 2026-09-23 (filed or published by Georgia EMC); pp.1-2, para. 2"
+   }
+  },
+  {
+   "id": "c6e6b66776391c97-mutation-",
+   "sentence": "The plant would make up to 90 MW from 33 natural gas engines and run all year.",
+   "marker": "[P-040]",
+   "kind": "cited",
+   "passages": {
+    "P-040": "VoltaGrid LLC proposes the construction and operation of VoltaGrid ATL-1 EGU, a greenfield power generation facility with a maximum power output of 90 MW, consisting of 33 natural gas-fired, four-stroke lean-burn (4SLB) reciprocating internal combustion engines (RICE), two (2) 4 MMBtu/hr natural gas-fired fuel gas heaters, and a natural gas-fired black start emergency generator. The facility will be a baseload facility, operating continuously for 8,760 hours per year."
+   },
+   "from": {
+    "P-040": "Petition for Expedited Declaratory Judgment and Enforcement Against VoltaGrid, with exhibits, 2026-07-13 (filed or published by Petitioners (a Newton County nonprofit and nearby residents), through the Southern Environmental Law Center); Exhibit 5, p.1"
+   }
+  },
+  {
+   "id": "f5189fd6ad01166b-mutation-",
+   "sentence": "**Not part of this case:** the plant's air permit, which a separate state agency handles.",
+   "marker": "{analysis: the hearing questions (P-021) do not include the permit; the state Environmental Protection Division issued the notice of violation (P-028) and, VoltaGrid says, the permit (P-065)}",
+   "kind": "analysis",
+   "passages": {
+    "P-021": "The following matters are at issue in this proceeding and will be decided on the basis of facts and arguments presented at the hearing: 1)Whether the Commission has jurisdiction over VoltaGrid as an “electric supplier” under O.C.G.A. § 46-3-3(3), 2)Whether Petitioners are “interested parties” entitled to initiate their Petition, and 3) Whether VoltaGrid’s planned construction and operation of the proposed generating facility, and delivery of the resulting energy to the data center Serverfarm, violates O.C.G.A. §§ 46-3-1 through 15 (the “Territorial Act”) and/or §§ 46-3-50 through 56 (the “Cogeneration Act”). 4)Whether any action from the Commission on the matters at issue is necessary.",
+    "P-028": "On July 2, 2026, the Environmental Protection Division issued a “Notice of Violation” to VoltaGrid for constructing its powerplant before EPD issued an air permit.",
+    "P-065": "This is demonstrably false, given that Petitioners raised the same concerns in another public regulatory agency: the Georgia Environmental Protection Division (“EPD”), which issued the air quality permit for VoltaGrid’s project."
+   },
+   "from": {
+    "P-021": "Notice of Hearing and Scheduling Order, Docket 57243, 2026-08-24 (filed or published by Georgia Public Service Commission); p.5, Matter at Issue",
+    "P-028": "Petition for Expedited Declaratory Judgment and Enforcement Against VoltaGrid, with exhibits, 2026-07-13 (filed or published by Petitioners (a Newton County nonprofit and nearby residents), through the Southern Environmental Law Center); petition p.1, Introduction",
+    "P-065": "VoltaGrid's Reply Brief in support of its Motion to Dismiss, 2026-10-26 (filed or published by VoltaGrid, LLC); reply brief, part I"
+   }
+  },
+  {
+   "id": "4785e86b4f510166-mutation-",
+   "sentence": "**Sep 28, 2026:** The Hearing Officer denied VoltaGrid's request to pause the case.",
+   "marker": "[P-090, P-023]",
+   "kind": "cited",
+   "passages": {
+    "P-023": "For these reasons, VoltaGrid’s request for a stay is DENIED.",
+    "P-090": "2026-09-28 | document 228969 | ORDER ON RESPONDENT, VOLTAGRID, LLC’S MOTION TO STAY PROCEEDINGS"
+   },
+   "from": {
+    "P-023": "Order on VoltaGrid's Motion to Stay Proceedings, 2026-09-28 (filed or published by Georgia Public Service Commission); p.3",
+    "P-090": "Docket 57243 filing list (the JSON the docket page itself requests) (filed or published by Georgia Public Service Commission); filing list, Sep 28, 2026 row"
+   }
+  },
+  {
+   "id": "8702bc6a8e49fe6a-mutation-",
+   "sentence": "The PSC's website lists an Administrative Session on Nov 17 and committee meetings on Nov 24.",
+   "marker": "[P-087]",
+   "kind": "cited",
+   "passages": {
+    "P-087": "Nov 17 9:30 am Administrative Session 11-17-2026 Nov 24 9:30 am Facilities Protection/Telecommunication/Energy And Administrative Affairs Committees 11-24-2026"
+   },
+   "from": {
+    "P-087": "Appearing as a Public Witness Before The Georgia Public Service Commission (filed or published by Georgia Public Service Commission); page text, Upcoming Events"
+   }
+  },
+  {
+   "id": "8635e73f036e5db4-mutation-",
+   "sentence": "Georgia EMC says VoltaGrid's service \"should be regulated by the Commission.\"",
+   "marker": "[P-058]",
+   "kind": "cited",
+   "passages": {
+    "P-058": "VoltaGrid’s service of electricity to Serverfarm is a public service that should be regulated by the Commission. Failure to do so could lead to deregulation of the electric industry in Georgia as “pop-up” generation facilities serving single customers could proliferate across the state."
+   },
+   "from": {
+    "P-058": "Georgia Power Company's Response to VoltaGrid's Motion to Dismiss, 2026-10-16 (filed or published by Georgia Power Company); p.12, Conclusion"
+   }
+  },
+  {
+   "id": "c40601dfbeb98945-mutation-",
+   "sentence": "**Dec 2, 2026:** Briefs and proposed orders are due.",
+   "marker": "[P-016]",
+   "kind": "cited",
+   "passages": {
+    "P-016": "December 2, 2026 Objections to pre-filed testimony and exhibits must be filed."
+   },
+   "from": {
+    "P-016": "Amended Scheduling Order and Notice of Hearing, Docket 57243, 2026-10-22 (filed or published by Georgia Public Service Commission); p.2, schedule"
+   }
+  },
+  {
+   "id": "de6e4014a8ac7512-mutation-",
+   "sentence": "**Whether the case ends before the hearing:** VoltaGrid asked the PSC on Oct 16, 2026, to dismiss the case.",
+   "marker": "[P-004]",
+   "kind": "cited",
+   "passages": {
+    "P-004": "2026-09-16 | document 228806 | VoltaGrid, LLC's Motion to Dismiss and Brief in Support (w/Exhibit)"
+   },
+   "from": {
+    "P-004": "Docket 57243 filing list (the JSON the docket page itself requests) (filed or published by Georgia Public Service Commission); filing list, Sep 16, 2026 row"
+   }
+  },
+  {
+   "id": "c2c3fe402aae5422-mutation-",
+   "sentence": "**In short:** VoltaGrid says it will serve several customers on one site, not the public, so the PSC has no authority over VoltaGrid.",
+   "marker": "[P-041]",
+   "kind": "cited",
+   "passages": {
+    "P-041": "As to the merits, VoltaGrid is not an “electric supplier,” as defined in O.C.G.A. § 46-3-3(3), and VoltaGrid is not (and will not be) engaged in the retail sale of electricity. VoltaGrid also does not “furnish service to the public” — a prerequisite to regulation under the Territorial Act — and thus is not subject to the Commission’s jurisdiction."
+   },
+   "from": {
+    "P-041": "VoltaGrid's Motion to Dismiss and Brief in Support, with exhibit, 2026-09-16 (filed or published by VoltaGrid, LLC); brief p.2"
+   },
+   "related": {
+    "P-032": "All Petitioners are interested parties in preventing small and medium sized power plants, including VoltaGrid, from emitting fossil-fueled air pollution in Newton County, when more efficient power generation is available from utility-scale plants. All Petitioners share the interest in minimizing the disruption to Newton County’s natural environment caused by building short- term power plants like VoltaGrid, which contributes air, light, and noise pollution to an area already overburdened by these industrial impacts. Petitioners are also interested parties in the fair and equal enforcement of the Territorial Act.",
+    "P-037": "The Territorial Act provides that upon the complaint of “any other interested party, the commission shall have the authority and jurisdiction, after notice to all affected electric suppliers and other interested parties, and after a hearing, to enforce the provisions of this part by appropriate orders.",
+    "P-058": "VoltaGrid’s service of electricity to Serverfarm is a public service that should be regulated by the Commission. Failure to do so could lead to deregulation of the electric industry in Georgia as “pop-up” generation facilities serving single customers could proliferate across the state.",
+    "P-092": "Serverfarm is VoltaGrid’s first data center customer in Georgia, though it has explored serving other Georgia customers. In May of this year, VoltaGrid even planned that it may sell the power from its power plant built for Serverfarm (its “Covington facility”) to other large load customers."
+   }
+  },
+  {
+   "id": "f1f36d5831a82c24-mutation-",
+   "sentence": "**What's being decided:** The Georgia Public Service Commission (PSC) has seven commissioners who regulate utilities.",
+   "marker": "[P-085, P-047]",
+   "kind": "cited",
+   "passages": {
+    "P-047": "The Georgia Constitution creates the Commission “for the regulation of utilities,",
+    "P-085": "There are five commissioners (who serve in a capacity likened to judges), staff attorneys (who represent staff’s interest) and intervenors (parties of record who have an interest in the case) and the utility company. Testimony is given by witnesses on behalf of staff, intervenors and the company, as well as by public witnesses. At the scheduled Administrative Session, the Commissioners make a decision based upon the evidence that was presented during the hearing."
+   },
+   "from": {
+    "P-047": "Petitioners' Response to VoltaGrid's Motion to Dismiss, 2026-10-16 (filed or published by Petitioners); p.15",
+    "P-085": "Appearing as a Public Witness Before The Georgia Public Service Commission (filed or published by Georgia Public Service Commission); page text"
+   }
+  },
+  {
+   "id": "efee6fd94dce2877-mutation-",
+   "sentence": "Serverfarm, the data center's owner, supplies natural gas to the plant, VoltaGrid says.",
+   "marker": "[P-046]",
+   "kind": "cited",
+   "passages": {
+    "P-046": "Under the Serverfarm Agreement, Serverfarm supplies natural gas to the Serverfarm gas meter, and VoltaGrid will use the Conversion Assets to convert Serverfarm’s natural gas into Serverfarm’s electricity to be used by Serverfarm at its data center. Serverfarm will pay VoltaGrid for this service in amounts based on the Conversion Assets’ producing capacity in operation, rather than a fee per kWh of energy that the Conversion Assets actually deliver. 10. VoltaGrid does not purchase the natural gas that will be used by the Conversion Assets. VoltaGrid will not take ownership of the electricity that will be produced by the Conversion Assets, and VoltaGrid will not sell that electricity to Serverfarm or to anyone else."
+   },
+   "from": {
+    "P-046": "VoltaGrid's Motion to Dismiss and Brief in Support, with exhibit, 2026-09-16 (filed or published by VoltaGrid, LLC); affidavit p.3, paras. 9-10"
+   }
+  },
+  {
+   "id": "a995ce2130f83d26-mutation-",
+   "sentence": "**What supports it:** The petition quotes Serverfarm's air permit papers: \"Serverfarm and VoltaGrid are separate companies with no cross ownership or direct control over each other’s operations.\"",
+   "marker": "[P-038]",
+   "kind": "cited",
+   "passages": {
+    "P-038": "Serverfarm and VoltaGrid are separate companies with no cross ownership or direct control over each other’s operations;"
+   },
+   "from": {
+    "P-038": "Petition for Expedited Declaratory Judgment and Enforcement Against VoltaGrid, with exhibits, 2026-07-13 (filed or published by Petitioners (a Newton County nonprofit and nearby residents), through the Southern Environmental Law Center); petition p.9, para. 20"
+   }
+  },
+  {
+   "id": "c648a91d317caee7-mutation-",
+   "sentence": "The Hearing Officer, the person the PSC appointed to hear the case, runs the hearing.",
+   "marker": "[P-020]",
+   "kind": "cited",
+   "passages": {
+    "P-020": "Pursuant to O.C.G.A. § 46-2-58, the Commission has appointed the undersigned Hearing Officer to conduct a hearing in this proceeding and to make findings of fact and conclusions of law and present the same to the Commission in the form of a recommended decision for adoption by the Commission."
+   },
+   "from": {
+    "P-020": "Notice of Hearing and Scheduling Order, Docket 57243, 2026-08-24 (filed or published by Georgia Public Service Commission); p.3, section 4"
+   }
+  },
+  {
+   "id": "41fa457840685c28-mutation-",
+   "sentence": "**If you care most about deciding on a full record:** The PSC's staff says an early dismissal \"will not serve the Commission’s objective of timely and efficiently resolving the issue.\"",
+   "marker": "[P-051]",
+   "kind": "cited",
+   "passages": {
+    "P-051": "Dismissing the Petition or the Petitioners from this docket before the scheduled hearing will not serve the Commission’s objective of timely and efficiently resolving the issue of whether Voltagrid’s Covington project falls under the Commission’s jurisdiction or is subject to the Territorial Act."
+   },
+   "from": {
+    "P-051": "Staff's Response to Respondent's Motion to Dismiss, 2026-10-16 (filed or published by PSC Staff); p.3"
+   }
+  },
+  {
+   "id": "8e66fed4d01cd963-mutation-",
+   "sentence": "**Decided after the Dec 9 hearing:** whether the PSC has power over VoltaGrid, whether the people who filed may bring the case, whether the plan breaks either of two power laws, and whether PSC action is needed.",
+   "marker": "[P-018, P-021]",
+   "kind": "cited",
+   "passages": {
+    "P-018": "December 9, 2026 The Hearing Officer, beginning at 10:00AM, will conduct a hearing in this proceeding.",
+    "P-021": "The following matters are at issue in this proceeding and will be decided on the basis of facts and arguments presented at the hearing: 1)Whether the Commission has jurisdiction over VoltaGrid as an “electric supplier” under O.C.G.A. § 46-3-3(3), 2)Whether Petitioners are “interested parties” entitled to initiate their Petition, and 3) Whether VoltaGrid’s planned construction and operation of the proposed generating facility, and delivery of the resulting energy to the data center Serverfarm, violates O.C.G.A. §§ 46-3-1 through 15 (the “Territorial Act”) and/or §§ 46-3-50 through 56 (the “Cogeneration Act”). 4)Whether any action from the Commission on the matters at issue is necessary."
+   },
+   "from": {
+    "P-018": "Amended Scheduling Order and Notice of Hearing, Docket 57243, 2026-10-22 (filed or published by Georgia Public Service Commission); p.2, schedule",
+    "P-021": "Notice of Hearing and Scheduling Order, Docket 57243, 2026-08-24 (filed or published by Georgia Public Service Commission); p.5, Matter at Issue"
+   }
+  },
+  {
+   "id": "edb5f71cd342529a-mutation-",
+   "sentence": "A trade secret is business information a company keeps private.",
+   "marker": "{analysis: plain-language definition, not from the cited sources}",
+   "kind": "analysis",
+   "passages": {},
+   "from": {}
+  },
+  {
+   "id": "a1cde33977b5316f-mutation-",
+   "sentence": "Georgia Power says the site is in its assigned territory and Serverfarm is slated to become its customer.",
+   "marker": "[P-061]",
+   "kind": "cited",
+   "passages": {
+    "P-061": "Respondent seeks to provide bridge power to Serverfarm— an entity slated to become a Georgia Power customer—at premises situated squarely within Georgia Power’s assigned service territory as designated under the Territorial Act."
+   },
+   "from": {
+    "P-061": "Georgia Power Company's Application for Leave to Intervene, 2026-09-22 (filed or published by Georgia Power Company); p.2, para. 3"
+   }
+  },
+  {
+   "id": "f4643683a1170372-mutation-",
+   "sentence": "**Dec 9, 2026:** The Hearing Officer holds the hearing, starting at 10:00 a.m.",
+   "marker": "[P-018, P-089]",
+   "kind": "cited",
+   "passages": {
+    "P-018": "December 9, 2026 The Hearing Officer, beginning at 10:00AM, will conduct a hearing in this proceeding.",
+    "P-089": "Dec 9 10:00 am Docket # 57243 Petition For Expedited Declaratory Judgment and Enforcement Against Voltagrid"
+   },
+   "from": {
+    "P-018": "Amended Scheduling Order and Notice of Hearing, Docket 57243, 2026-10-22 (filed or published by Georgia Public Service Commission); p.2, schedule",
+    "P-089": "Commission Calendar (list view) (filed or published by Georgia Public Service Commission); calendar, Dec 2026"
+   }
+  },
+  {
+   "id": "31135084845bd822-mutation-",
+   "sentence": "**What's uncertain:** Whether serving one customer counts as serving the public is a legal question the PSC has not decided as of Nov 14, 2026.",
+   "marker": "{editorial: process note; the Nov 4 order says the question is undecided (P-025)}",
+   "kind": "editorial",
+   "passages": {
+    "P-025": "The first is whether VoltaGrid is an “electric supplier” under O.C.G.A. § 46-3-3(3), or otherwise engages in conduct governed by the Territorial Act. That question is central to this docket and nothing in this Order decides it."
+   },
+   "from": {
+    "P-025": "Hearing Officer's order on the petitioners' motion challenging trade secret designations, 2026-11-04 (filed or published by Georgia Public Service Commission Hearing Officer); p.4"
+   }
+  },
+  {
+   "id": "ef39d64b431757e5-mutation-",
+   "sentence": "**What challenges it:** VoltaGrid said on Oct 26, 2026, that every ban in the Territorial Act applies to every company that sells power, and VoltaGrid says it is not one.",
+   "marker": "[P-006, P-066, P-041]",
+   "kind": "cited",
+   "passages": {
+    "P-006": "2026-10-26 | document 229266 | Respondent VoltaGrid, LLC's Reply Brief in support of its Motion to Dismiss",
+    "P-041": "As to the merits, VoltaGrid is not an “electric supplier,” as defined in O.C.G.A. § 46-3-3(3), and VoltaGrid is not (and will not be) engaged in the retail sale of electricity. VoltaGrid also does not “furnish service to the public” — a prerequisite to regulation under the Territorial Act — and thus is not subject to the Commission’s jurisdiction.",
+    "P-066": "Every prohibition in the Territorial Act runs to “electric suppliers.”[fn55] In addition, the Act’s statement of policy itself says it binds “electric suppliers” and mentions no one else.[fn56] Finally, the Act specially defines the term “electric supplier” as “any electric light and power company otherwise subject to regulation by the commission."
+   },
+   "from": {
+    "P-006": "Docket 57243 filing list (the JSON the docket page itself requests) (filed or published by Georgia Public Service Commission); filing list, Oct 26, 2026 row",
+    "P-041": "VoltaGrid's Motion to Dismiss and Brief in Support, with exhibit, 2026-09-16 (filed or published by VoltaGrid, LLC); brief p.2",
+    "P-066": "VoltaGrid's Reply Brief in support of its Motion to Dismiss, 2026-10-26 (filed or published by VoltaGrid, LLC); reply brief, part II.A"
+   }
+  },
+  {
+   "id": "aaad0834160ef8d2-mutation-",
+   "sentence": "The Hearing Officer holds the hearing and writes the final decision for the PSC.",
+   "marker": "[P-020]",
+   "kind": "cited",
+   "passages": {
+    "P-020": "Pursuant to O.C.G.A. § 46-2-58, the Commission has appointed the undersigned Hearing Officer to conduct a hearing in this proceeding and to make findings of fact and conclusions of law and present the same to the Commission in the form of a recommended decision for adoption by the Commission."
+   },
+   "from": {
+    "P-020": "Notice of Hearing and Scheduling Order, Docket 57243, 2026-08-24 (filed or published by Georgia Public Service Commission); p.3, section 4"
+   }
+  },
+  {
+   "id": "3829ebd31eafdf11-mutation-",
+   "sentence": "No document we read says whether the appeal is on either agenda.",
+   "marker": "{editorial: scoped to the documents we read}",
+   "kind": "editorial",
+   "passages": {},
+   "from": {},
+   "related": {
+    "P-049": "Under this interpretation, VoltaGrid is in violation of the Territorial Act simply by furnishing retail electric service to Serverfarm without being either assigned or “chosen,” regardless of whether VoltaGrid qualifies as an electric supplier.",
+    "P-008": "2026-11-09 | document 229399 | VoltaGrid, LLC's Emergency Appeal from the Hearing Officer's November 4, 2026 Order and Motion for Stay",
+    "P-010": "2026-11-13 | document 229432 | Petitioners' Response to VoltaGrid's Emergency Appeal and Motion to Stay",
+    "P-015": "November 24, 2026 The Parties are to confer in advance of the Pre-Hearing Conference, and exchange documents proposed to be used at hearing as exhibits."
+   }
+  },
+  {
+   "id": "1d1f5f8acecd3b31-mutation-",
+   "sentence": "**What it does:** The PSC would find that VoltaGrid's service falls under its power.",
+   "marker": "{analysis: the first half of the PSC's own question (P-022)}",
+   "kind": "analysis",
+   "passages": {
+    "P-022": "In addition to assigning the matter to a Hearing Officer, the Assignment “authorizes the Staff to issue discovery pursuant to O.C.G.A. § 46-2-57(a)” and instructed the Hearing Officer to set a “hearing on the issues set forth in the Petition and on whether Respondent is providing service or offering to provide service that is subject to the jurisdiction of the Commission and, if so, what if any action the Commission should take."
+   },
+   "from": {
+    "P-022": "Order on VoltaGrid's Motion to Stay Proceedings, 2026-09-28 (filed or published by Georgia Public Service Commission); p.2"
+   }
+  },
+  {
+   "id": "4f8cb8d8d083aecc-mutation-",
+   "sentence": "Georgia Power says the data center sits outside its assigned territory and is slated to become its customer.",
+   "marker": "[P-061]",
+   "kind": "cited",
+   "passages": {
+    "P-061": "Respondent seeks to provide bridge power to Serverfarm— an entity slated to become a Georgia Power customer—at premises situated squarely within Georgia Power’s assigned service territory as designated under the Territorial Act."
+   },
+   "from": {
+    "P-061": "Georgia Power Company's Application for Leave to Intervene, 2026-09-22 (filed or published by Georgia Power Company); p.2, para. 3"
+   }
+  },
+  {
+   "id": "67efb21f618d583b-mutation-",
+   "sentence": "Georgia EMC says a supplier's other consumers would pay for unused lines if future customers can be \"picked off.\"",
+   "marker": "[P-055]",
+   "kind": "cited",
+   "passages": {
+    "P-055": "The same is true if an electric supplier makes investments in lines and electrical facilities in anticipation of serving future load in its assigned territory. That investment could become stranded (with the costs thereof to be absorbed by the electric supplier’s other consumers) if future customers in the area can be picked off by a power supplier serving less than a significant segment of the public."
+   },
+   "from": {
+    "P-055": "Georgia EMC's Response in Opposition to VoltaGrid's Motion to Dismiss, 2026-10-16 (filed or published by Georgia EMC); p.8"
+   }
+  }
+ ]
+}

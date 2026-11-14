@@ -1,0 +1,137 @@
+{
+ "f1f36d5831a82c24-mutation-": {
+  "planted": "M01",
+  "type": "wrong-number",
+  "set": "mutation-key"
+ },
+ "4f8cb8d8d083aecc-mutation-": {
+  "planted": "M02",
+  "type": "wrong-direction",
+  "set": "mutation-key"
+ },
+ "de6e4014a8ac7512-mutation-": {
+  "planted": "M03",
+  "type": "wrong-date",
+  "set": "mutation-key"
+ },
+ "aaad0834160ef8d2-mutation-": {
+  "planted": "M05",
+  "type": "overstated-authority",
+  "set": "mutation-key"
+ },
+ "c40601dfbeb98945-mutation-": {
+  "planted": "M06",
+  "type": "wrong-event",
+  "set": "mutation-key"
+ },
+ "61c9e62b2cd83d5c-mutation-": {
+  "planted": "M07",
+  "type": "wrong-direction",
+  "set": "mutation-key"
+ },
+ "8635e73f036e5db4-mutation-": {
+  "planted": "M09",
+  "type": "wrong-speaker",
+  "set": "mutation-key"
+ },
+ "ef39d64b431757e5-mutation-": {
+  "planted": "M10",
+  "type": "dropped-condition",
+  "set": "mutation-key"
+ },
+ "c2c3fe402aae5422-mutation-": {
+  "planted": "M11",
+  "type": "wrong-number",
+  "set": "mutation-key"
+ },
+ "7f97d0cf0b484e3b-mutation-": {
+  "planted": "M12",
+  "type": "wrong-number",
+  "set": "mutation-key"
+ },
+ "4edb73506b538fdb-mutation-": {
+  "planted": "M13",
+  "type": "wrong-direction",
+  "set": "mutation-key"
+ },
+ "c6e6b66776391c97-mutation-": {
+  "planted": null,
+  "set": "mutation-key"
+ },
+ "c648a91d317caee7-mutation-": {
+  "planted": null,
+  "set": "mutation-key"
+ },
+ "67efb21f618d583b-mutation-": {
+  "planted": null,
+  "set": "mutation-key"
+ },
+ "68bfb17cfd88f7ba-mutation-": {
+  "planted": null,
+  "set": "mutation-key"
+ },
+ "93d4b0a835edd522-mutation-": {
+  "planted": null,
+  "set": "mutation-key"
+ },
+ "f5189fd6ad01166b-mutation-": {
+  "planted": null,
+  "set": "mutation-key"
+ },
+ "05642dcfaa9a234d-mutation-": {
+  "planted": null,
+  "set": "mutation-key"
+ },
+ "3829ebd31eafdf11-mutation-": {
+  "planted": null,
+  "set": "mutation-key"
+ },
+ "41fa457840685c28-mutation-": {
+  "planted": null,
+  "set": "mutation-key"
+ },
+ "31135084845bd822-mutation-": {
+  "planted": null,
+  "set": "mutation-key"
+ },
+ "8e66fed4d01cd963-mutation-": {
+  "planted": null,
+  "set": "mutation-key"
+ },
+ "a995ce2130f83d26-mutation-": {
+  "planted": null,
+  "set": "mutation-key"
+ },
+ "f4643683a1170372-mutation-": {
+  "planted": null,
+  "set": "mutation-key"
+ },
+ "efee6fd94dce2877-mutation-": {
+  "planted": null,
+  "set": "mutation-key"
+ },
+ "43183784500e5170-mutation-": {
+  "planted": null,
+  "set": "mutation-key"
+ },
+ "1d1f5f8acecd3b31-mutation-": {
+  "planted": null,
+  "set": "mutation-key"
+ },
+ "a1cde33977b5316f-mutation-": {
+  "planted": null,
+  "set": "mutation-key"
+ },
+ "edb5f71cd342529a-mutation-": {
+  "planted": null,
+  "set": "mutation-key"
+ },
+ "4785e86b4f510166-mutation-": {
+  "planted": null,
+  "set": "mutation-key"
+ },
+ "8702bc6a8e49fe6a-mutation-": {
+  "planted": null,
+  "set": "mutation-key"
+ }
+}
