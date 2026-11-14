@@ -4,6 +4,16 @@ slug: fulton-budget-2027           # used in page links: #fulton-budget-2027, #f
 kind: budget                    # law | regulatory-case | budget: sets the decision and options headings
 topic: "County budget"        # a neutral subject label for the app bar and cards; a label, not a claim
 icon: building                # one of the built-in icons: school | bolt | building
+stage: open                   # open | decided: which Home group the page sits in
+publish: true                 # false keeps a page out of the app while it is being drafted
+watch:                        # what would make this page stale; read by trials/tools/desk.py (work notes, not page text)
+  sources: [S09, S08, S05d]   # the county's budget page, its public notices, and the Legistar meetings list
+  events:
+    - {date: 2026-11-15, what: "Budget Commission's proposal due. Snapshot it and add the proposed figures."}
+    - {date: 2026-11-18, what: "Board meets, with public comment. Check the agenda and minutes for budget items."}
+    - {date: 2026-12-02, what: "Board meets. Check the agenda and minutes for budget items."}
+    - {date: 2026-12-16, what: "Board meets. Check the agenda and minutes for budget items."}
+    - {date: 2027-01-20, what: "Expected adoption vote. Add the outcome and set stage to decided."}
 code: "Fulton County · 2027 budget"
 title: "Fulton County commissioners must adopt the 2027 budget by their second regular January meeting"  # [P-005, P-014, P-041]
 link_text: "Fulton County's 2027 budget"  # [P-005, P-042]

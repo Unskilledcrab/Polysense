@@ -1,0 +1,69 @@
+{
+ "sources": {
+  "S01b": {
+   "url": "https://psc.ga.gov/search/service-facts-docket/?docketId=57171&sortDirection=DESC&sortColumn=Filed&searchText=&pageSize=50&pageNumber=1",
+   "last_checked": "2026-11-14T01:22:34Z",
+   "checks": 3,
+   "text_sha256": "fd3606e50c0a8ca837c7533eea99eed5c80c40c3a81f65b11ce787c197f97ac5",
+   "baseline_at": "2026-11-08T07:00:39Z",
+   "baseline": "our saved copy",
+   "http_status": 200,
+   "state": "unchanged",
+   "changes": 1,
+   "rule": {
+    "ignore": null,
+    "only": null,
+    "norm": 3
+   }
+  },
+  "S04": {
+   "url": "https://psc.ga.gov/agendas-calendars/commission-calendar/",
+   "last_checked": "2026-11-14T01:22:34Z",
+   "checks": 3,
+   "text_sha256": "52b906f0f021b1b2b26ae849967c4484f989c13321a183c27f0e10b2746586d0",
+   "baseline_at": "2026-11-08T07:07:10Z",
+   "baseline": "our saved copy",
+   "http_status": 200,
+   "state": "unchanged",
+   "changes": 1,
+   "rule": {
+    "ignore": null,
+    "only": "57171",
+    "norm": 3
+   }
+  },
+  "S04c": {
+   "url": "https://psc.ga.gov/agendas-calendars/commission-calendar/facilities-protection-telecommunication-energy-and-administrative-affairs-committees-12-10-2026/",
+   "last_checked": "2026-11-14T01:22:34Z",
+   "checks": 3,
+   "text_sha256": "2f0fa2950f1e44a6792419387b22efe770ed4b2a5e9a385e6d5f984722f30630",
+   "baseline_at": "2026-11-08T07:07:40Z",
+   "baseline": "our saved copy",
+   "http_status": 200,
+   "state": "unchanged",
+   "changes": 1,
+   "rule": {
+    "ignore": null,
+    "only": "12-10-2026",
+    "norm": 3
+   }
+  },
+  "S04d": {
+   "url": "https://psc.ga.gov/agendas-calendars/commission-calendar/administrative-session-12-15-2026/",
+   "last_checked": "2026-11-14T01:22:34Z",
+   "checks": 3,
+   "text_sha256": "ccb248f0a08b0c7ec6670fb2c2dbe23b30fc170ceb060f30bbba0a42980f5c3f",
+   "baseline_at": "2026-11-08T07:07:42Z",
+   "baseline": "our saved copy",
+   "http_status": 200,
+   "state": "unchanged",
+   "changes": 1,
+   "rule": {
+    "ignore": null,
+    "only": "12-15-2026",
+    "norm": 3
+   }
+  }
+ },
+ "checked": "2026-11-14T01:22:34Z"
+}

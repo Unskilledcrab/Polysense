@@ -1,5 +1,9 @@
 # Trial 002: Decision workspace #2, PSC Docket 57171 (how Real-Time Pricing revenue is credited to fuel costs)
 
+> **Current state:** run `trials/tools/desk.py brief psc-57171`. The status and "how to resume" notes below are
+> history as of 2026-11-13 and are no longer kept up to date. What would make this page stale is under `watch:`
+> in `page.yaml`.
+
 | | |
 |---|---|
 | **Process** | A. Decision workspace, adapted from the bill runbook to a regulatory case ([runbook](../../docs/process/runbooks/bill-workspace.md) v0.3 for revision 1, v0.4 for revisions 2 to 6.3, v0.6 for revision 7). Every adaptation is in [log.md](log.md) |

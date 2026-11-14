@@ -18,6 +18,15 @@ Planning plus manual trials. **There is no application code yet.** Do not scaffo
 automate any pipeline step, unless the user asks you to and the step has passed the automation gate in
 [docs/process/prove-then-automate.md](docs/process/prove-then-automate.md).
 
+## Start here
+
+Don't keep track by memory or by prose. State lives in files that code writes.
+
+- `uv run --with pyyaml python3 trials/tools/desk.py queue` lists what needs doing across every page, soonest first.
+- `desk.py brief SLUG` gives one page's state, what is due, and a map of its files to line numbers.
+- Read the brief and the lines you change. Don't read a page's history, its `verification.md` or its `log.md`.
+- What would make a page stale goes under `watch:` in its `page.yaml`, not in a README.
+
 ## Invariants (never break these)
 
 1. **Prove by hand, then automate.** Every future pipeline step is first done manually from a runbook in

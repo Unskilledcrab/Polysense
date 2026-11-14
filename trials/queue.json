@@ -1,0 +1,77 @@
+{
+ "generated": "2026-11-14",
+ "items": [
+  {
+   "trial": "002-psc-57171-fuel-credit",
+   "slug": "psc-57171",
+   "rule": "date-passed",
+   "due": "2026-11-12",
+   "what": "\"Nov 12, 2026\" has passed: move it to What happened, with the outcome if a source gives one",
+   "where": "home.md:9",
+   "size": "patch, then a pair check (Sonnet)"
+  },
+  {
+   "trial": "002-psc-57171-fuel-credit",
+   "slug": "psc-57171",
+   "rule": "date-passed",
+   "due": "2026-11-12",
+   "what": "\"Nov 12, 2026\" has passed: move it to What happened, with the outcome if a source gives one",
+   "where": "workspace.md:70",
+   "size": "patch, then a pair check (Sonnet)"
+  },
+  {
+   "trial": "002-psc-57171-fuel-credit",
+   "slug": "psc-57171",
+   "rule": "event",
+   "due": "2026-11-12",
+   "what": "Hearing held. Look for the transcript and move the hearing to What happened.",
+   "where": "page.yaml watch.events",
+   "size": "revision (at most 100k)"
+  },
+  {
+   "trial": "003-fulton-2027-budget",
+   "slug": "fulton-budget-2027",
+   "rule": "source-changed",
+   "due": "2026-11-14",
+   "what": "S05d changed (1 added, 0 removed): snapshot it again and revise what it touches",
+   "where": "desk.py impact 003-fulton-2027-budget S05d",
+   "size": "0 sentences cite it"
+  },
+  {
+   "trial": "003-fulton-2027-budget",
+   "slug": "fulton-budget-2027",
+   "rule": "event",
+   "due": "2026-11-15",
+   "what": "Budget Commission's proposal due. Snapshot it and add the proposed figures.",
+   "where": "page.yaml watch.events",
+   "size": "revision (at most 100k)"
+  },
+  {
+   "trial": "003-fulton-2027-budget",
+   "slug": "fulton-budget-2027",
+   "rule": "event",
+   "due": "2026-11-18",
+   "what": "Board meets, with public comment. Check the agenda and minutes for budget items.",
+   "where": "page.yaml watch.events",
+   "size": "revision (at most 100k)"
+  },
+  {
+   "trial": "002-psc-57171-fuel-credit",
+   "slug": "psc-57171",
+   "rule": "notes",
+   "due": "9999-12-31",
+   "what": "4 fairness notes left open",
+   "where": "002-psc-57171-fuel-credit/status.json",
+   "size": "optional"
+  },
+  {
+   "trial": "003-fulton-2027-budget",
+   "slug": "fulton-budget-2027",
+   "rule": "notes",
+   "due": "9999-12-31",
+   "what": "2 fairness notes left open",
+   "where": "003-fulton-2027-budget/status.json",
+   "size": "optional"
+  }
+ ]
+}

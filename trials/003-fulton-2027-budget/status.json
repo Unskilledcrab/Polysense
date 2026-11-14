@@ -1,7 +1,7 @@
 {
  "trial": "003-fulton-2027-budget",
  "revision": "5.4",
- "generated": "2026-11-13",
+ "generated": "2026-11-14",
  "gate": {
   "citations:workspace.md": {
    "pass": true,

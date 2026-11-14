@@ -1,7 +1,7 @@
 {
  "trial": "002-psc-57171-fuel-credit",
  "revision": "7.7",
- "generated": "2026-11-13",
+ "generated": "2026-11-14",
  "gate": {
   "citations:workspace.md": {
    "pass": true,

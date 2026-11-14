@@ -5,6 +5,13 @@ slug: hb1009                       # used in page links: #hb1009, #hb1009-option
 kind: law                    # law | regulatory-case | budget: sets the decision and options headings
 topic: "Schools"              # a neutral subject label for the app bar and cards; a label, not a claim
 icon: school                  # one of the built-in icons: school | bolt | building
+stage: decided                # open | decided: which Home group the page sits in
+publish: true                 # false keeps a page out of the app while it is being drafted
+watch:                        # what would make this page stale; read by trials/tools/desk.py (work notes, not page text)
+  sources: [S02]              # the bill's record page
+  events:
+    - {date: 2026-12-31, what: "The page's Dec 31, 2026 date arrives. Update the status chips and the dated items."}
+    - {date: 2027-07-01, what: "The page's July 1, 2027 date arrives. Update the page."}
 code: "House Bill 1009 · 2026 · became law as Act 395"  # [P-054, P-024]: Act 395 is the law's number, House Bill 1009 the bill's
 title: "Georgia lawmakers ban school-day phone use in public high schools by July 1, 2027"  # [P-056, P-024, P-007, P-004, P-005]
 link_text: "Phones in Georgia public high schools (House Bill 1009)"  # [P-054, P-007]

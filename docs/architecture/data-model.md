@@ -55,7 +55,7 @@ must have **no** actor. A database CHECK enforces both.
 | AIRun | AI provenance | requested model, served model, `prompt@sha`, effort, input passage IDs, hashes of the raw request and response, usage, stop_reason, batch_id |
 | GateResult / Review | Automated checks and human verdicts | check, pass/fail, details · verdict per citation (supports, partial, no, wrong span), reviewer, second reviewer |
 | Challenge | Public error reports | revision and anchor, type, optional email (deleted on close), status, `due_by`, resulting revision |
-| SourceWatch | Change detection | last sha256 → marks dependent items "source changed: re-review" |
+| SourceWatch | Change detection | last sha256 → marks dependent items "source changed: re-review". Trial form since 2026-11-14: `trials/tools/desk.py watch` compares a source's visible text with our copy, and `desk.py impact` lists the sentences that cite it |
 | CoverageDecision | Topic-selection log | candidate, rubric scores, decision, reason |
 | AuditLog | Every editorial action | who, what, when, from where |
 

@@ -1,5 +1,9 @@
 # Trial 001: Bill workspace #1, HB 1009 (2026), high school personal-device ban
 
+> **Current state:** run `trials/tools/desk.py brief hb1009`. The status and next steps written below are history
+> as of 2026-11-13 and are no longer kept up to date. What would make this page stale is under `watch:` in
+> `page.yaml`.
+
 | | |
 |---|---|
 | **Process** | A. Bill workspace ([runbook v0.3](../../docs/process/runbooks/bill-workspace.md)) |

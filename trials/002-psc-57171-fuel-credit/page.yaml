@@ -4,6 +4,19 @@ slug: psc-57171                    # used in page links: #psc-57171, #psc-57171-
 kind: regulatory-case                    # law | regulatory-case | budget: sets the decision and options headings
 topic: "Power bills"          # a neutral subject label for the app bar and cards; a label, not a claim
 icon: bolt                    # one of the built-in icons: school | bolt | building
+stage: open                   # open | decided: which Home group the page sits in
+publish: true                 # false keeps a page out of the app while it is being drafted
+watch:                        # what would make this page stale; read by trials/tools/desk.py (work notes, not page text)
+  sources:                    # `only` keeps just our rows: the calendar's sidebar of upcoming events rolls every week
+    - S01b                    # the docket's filing list
+    - {id: S04, only: "57171"}          # the PSC calendar: rows naming this docket
+    - {id: S04c, only: "12-10-2026"}    # the Dec 10 committee entry
+    - {id: S04d, only: "12-15-2026"}    # the Dec 15 session entry
+  events:
+    - {date: 2026-11-12, what: "Hearing held. Look for the transcript and move the hearing to What happened."}
+    - {date: 2026-12-02, what: "Briefs and proposed orders due. Snapshot them and add each party's final position."}
+    - {date: 2026-12-10, what: "Energy Committee meets. Re-check its agenda (S04c)."}
+    - {date: 2026-12-15, what: "Final decision scheduled. Snapshot the order, add the outcome and set stage to decided."}
 code: "PSC Docket 57171 · 2026"
 title: "Georgia regulators' Dec 15 decision: how real-time payments split between fuel and base costs"  # [P-013, P-016, P-061, P-169]
 link_text: "Larger businesses' real-time power payments and your Georgia Power bill"  # [P-016, P-044, P-061, P-144]

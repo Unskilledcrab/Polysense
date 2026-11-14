@@ -1,5 +1,9 @@
 # Trial 003: Decision workspace, Fulton County's 2027 budget
 
+> **Current state:** run `trials/tools/desk.py brief fulton-budget-2027`. The status and next steps written below
+> are history as of 2026-11-13 and are no longer kept up to date. What would make this page stale is under
+> `watch:` in `page.yaml`.
+
 | | |
 |---|---|
 | **Process** | A. Bill workspace ([runbook v0.3](../../docs/process/runbooks/bill-workspace.md)), adapted for a county budget. Every adaptation is in [log.md](log.md) |
