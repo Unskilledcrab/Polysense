@@ -1,0 +1,90 @@
+[
+ {
+  "id": "M01",
+  "type": "wrong-number",
+  "line": 8,
+  "original": "has five commissioners who regulate utilities.",
+  "mutated": "has seven commissioners who regulate utilities.",
+  "keywords": []
+ },
+ {
+  "id": "M02",
+  "type": "wrong-direction",
+  "line": 15,
+  "original": "says the data center sits in its assigned territory",
+  "mutated": "says the data center sits outside its assigned territory",
+  "keywords": []
+ },
+ {
+  "id": "M03",
+  "type": "wrong-date",
+  "line": 38,
+  "original": "VoltaGrid asked the PSC on Sep 16, 2026, to dismiss the case.",
+  "mutated": "VoltaGrid asked the PSC on Oct 16, 2026, to dismiss the case.",
+  "keywords": []
+ },
+ {
+  "id": "M05",
+  "type": "overstated-authority",
+  "line": 56,
+  "original": "writes a recommended decision for the PSC.",
+  "mutated": "writes the final decision for the PSC.",
+  "keywords": []
+ },
+ {
+  "id": "M06",
+  "type": "wrong-event",
+  "line": 63,
+  "original": "Objections to written testimony and exhibits are due.",
+  "mutated": "Briefs and proposed orders are due.",
+  "keywords": []
+ },
+ {
+  "id": "M07",
+  "type": "wrong-direction",
+  "line": 76,
+  "original": "ordered that the petitioners' lawyers get access to papers",
+  "mutated": "ordered that the petitioners' lawyers be denied access to papers",
+  "keywords": []
+ },
+ {
+  "id": "M09",
+  "type": "wrong-speaker",
+  "line": 121,
+  "original": "Georgia Power says VoltaGrid's service \"should be regulated by the Commission.\"",
+  "mutated": "Georgia EMC says VoltaGrid's service \"should be regulated by the Commission.\"",
+  "keywords": []
+ },
+ {
+  "id": "M10",
+  "type": "dropped-condition",
+  "line": 145,
+  "original": "applies only to electric suppliers",
+  "mutated": "applies to every company that sells power",
+  "keywords": []
+ },
+ {
+  "id": "M11",
+  "type": "wrong-number",
+  "line": 153,
+  "original": "VoltaGrid says it will serve one customer on that customer's site",
+  "mutated": "VoltaGrid says it will serve several customers on one site",
+  "keywords": []
+ },
+ {
+  "id": "M12",
+  "type": "wrong-number",
+  "line": 179,
+  "original": "serve about 5 million Georgians",
+  "mutated": "serve about 8 million Georgians",
+  "keywords": []
+ },
+ {
+  "id": "M13",
+  "type": "wrong-direction",
+  "line": 201,
+  "original": "says the dismissal request can wait for the Dec 9 hearing",
+  "mutated": "says the dismissal request should be granted before the Dec 9 hearing",
+  "keywords": []
+ }
+]
