@@ -273,6 +273,13 @@ class DeskTest(unittest.TestCase):
         def boom(url):
             raise OSError("no route")
         self.assertEqual(desk.archive_lookup("https://example.org/budget", boom)["state"], "blocked")
+        def lookup_only(url):   # the lookup answers "no copy", but the request to make one can't be sent
+            if "available" in url:
+                return 200, "application/json", b'{"archived_snapshots": {}}'
+            raise OSError("connection reset")
+        res = desk.archive_lookup("https://example.org/budget", lookup_only)
+        self.assertEqual(res["state"], "none")
+        self.assertIn("could not be sent", res["note"])
 
     def test_a_failed_fetch_is_recorded_as_blocked(self):
         def boom(url):

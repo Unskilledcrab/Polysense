@@ -549,7 +549,10 @@ def archive_lookup(url: str, fetch=http_fetch) -> dict:
         snap = (json.loads(body.decode("utf-8", "replace")).get("archived_snapshots") or {}).get("closest") if code == 200 else None
         if snap and snap.get("available"):
             return {"state": "found", "url": snap["url"].replace("http://", "https://", 1), "captured": snap.get("timestamp")}
-        code, _, body = fetch("https://web.archive.org/save/" + url)
+        try:
+            code, _, body = fetch("https://web.archive.org/save/" + url)
+        except Exception as e:   # noqa: BLE001  the lookup worked, so we know there is no copy; only the request failed
+            return {"state": "none", "note": f"no copy at the Internet Archive, and the request to make one could not be sent from here ({type(e).__name__})"}
         if code == 200:
             code2, _, body2 = fetch("https://archive.org/wayback/available?url=" + quote(url, safe=""))
             snap = (json.loads(body2.decode("utf-8", "replace")).get("archived_snapshots") or {}).get("closest") if code2 == 200 else None

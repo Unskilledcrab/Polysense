@@ -37,6 +37,10 @@ Rules that follow:
 - **Large media is never downloaded.** Video, audio and files over 50 MB are recorded by link, type and size.
 - **We ask the Internet Archive to keep a copy** (`desk.py archive`), and record its link, or record that the request
   was blocked or that no copy exists. We never claim a copy we can't link to.
+  - First run, 2026-11-14: 48 of 93 cited sources already had a copy there. The other 45 had none, and the request to
+    make one could not be sent from the session's network (the lookup address answers; the save address does not).
+    They are recorded as having no archived copy. Anyone with a browser can make those copies; a later session with
+    that address reachable can too.
 - **A stale pointer is shown, not hidden.** `desk.py links --fetch` compares each cited link with its fingerprint.
   A link that is gone or now serves a different document goes on the queue, and the page says so beside the source.
 - **Listing pages are different.** Calendars and docket lists change by nature; `desk.py watch` follows them for new

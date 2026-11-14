@@ -424,9 +424,9 @@
    "state": "same",
    "checked": "2026-11-14T03:19:25Z",
    "archive": {
-    "state": "blocked",
-    "note": "ConnectError: [Errno 104] Connection reset by peer",
-    "checked": "2026-11-14T03:33:46Z"
+    "state": "none",
+    "note": "no copy at the Internet Archive, and the request to make one could not be sent from here (ConnectError)",
+    "checked": "2026-11-14T03:45:34Z"
    }
   },
   "S12": {
@@ -504,9 +504,9 @@
   "S01b": {
    "files": {},
    "archive": {
-    "state": "blocked",
-    "note": "ConnectError: [Errno 104] Connection reset by peer",
-    "checked": "2026-11-14T03:33:46Z"
+    "state": "none",
+    "note": "no copy at the Internet Archive, and the request to make one could not be sent from here (ConnectError)",
+    "checked": "2026-11-14T03:45:34Z"
    }
   },
   "S04": {
