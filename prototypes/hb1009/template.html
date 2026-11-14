@@ -172,6 +172,8 @@ p { margin: 0 }
 .dfoot > div { flex: 1; min-width: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 2px 12px }
 .okline { display: inline-flex; align-items: center; gap: 4px; font-weight: 600; text-decoration: none; color: var(--ok); min-height: 28px }
 .okline.warn { color: var(--warn) }
+.upd { font-weight: 600; color: var(--ink) }
+.pick.filter { margin-top: -8px }
 .list { background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden }
 .row { position: relative; display: flex; gap: 12px; align-items: center; padding: 12px 14px; min-height: 56px; width: 100%; text-align: left; background: none; border: 0; cursor: pointer }
 .row + .row, .month + .row { border-top: 1px solid var(--line) }
@@ -740,11 +742,15 @@ footer { margin-top: 28px; font-size: .78rem; color: var(--muted); text-align: c
   function decisionCard(w) {
     W = w;
     var sum = sectionById("summary"), c = countdown(w);
+    // "Updated Nov 13" for a week after a revision, from the page's revision record.
+    var u = w.updated ? new Date(w.updated + "T12:00:00") : null;
+    var fresh = u && (new Date(todayISO() + "T12:00:00") - u) / 864e5 <= 7;
     return el("article", { class: "card dcard " + tclass(w) }, [
       topicHead(w, c ? el("span", { class: "pill", text: c.text }) : null),
       el("h2", null, [el("a", { class: "stretch", href: "#" + w.slug, text: w.title })]),
       sum && sum.blocks[0] ? el("p", { class: "dsum" }, [firstUnit(sum.blocks[0])]) : null,
-      el("div", { class: "dfoot" }, [el("div", null, [c ? el("span", { text: "Next date: " + c.it.when }) : null, statusLine(w)]), icon("chev", 16)])]);
+      el("div", { class: "dfoot" }, [el("div", null, [c ? el("span", { text: "Next date: " + c.it.when }) : null,
+        fresh ? el("span", { class: "upd", text: "Updated " + MON[u.getMonth()] + " " + u.getDate() }) : null, statusLine(w)]), icon("chev", 16)])]);
   }
   var MONTH = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
   var DAY = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
@@ -761,12 +767,13 @@ footer { margin-top: 28px; font-size: .78rem; color: var(--muted); text-align: c
     return el("article", { class: "row item " + tclass(w) }, [tile, el("div", { class: "rbody" }, [meta, el("p", null, [units(it.units)]),
       el("a", { class: "stretch rlink", href: "#" + it.slug, "aria-label": it.linkText }, [w.topic || it.linkText, icon("chev", 14)])])]);
   }
-  function itemSection(sec, today, months) {
+  function itemSection(sec, today, months, topic) {
     var past = sec.id === "what-happened";
-    var items = sec.items.slice().sort(function (a, b) {
+    var items = sec.items.filter(function (it) { return !topic || (wsBySlug(it.slug) || {}).topic === topic; }).sort(function (a, b) {
       var x = a.date || "9999", y = b.date || "9999";
       return past ? (x < y ? 1 : x > y ? -1 : 0) : (x < y ? -1 : x > y ? 1 : 0);
     });
+    if (!items.length) return null;
     var s = el("section", { class: "home-sec", "aria-labelledby": "h-" + sec.id }, [
       el("h2", { id: "h-" + sec.id }, [HOME_TITLE[sec.id] || sec.title, el("span", { class: "count", text: String(items.length) })])]);
     var list = el("div", { class: "list" }), last = null;
@@ -784,11 +791,35 @@ footer { margin-top: 28px; font-size: .78rem; color: var(--muted); text-align: c
       el("p", { class: "eyebrow", text: "Georgia · " + DAY[now.getDay()] + ", " + MON[now.getMonth()] + " " + now.getDate() }),
       el("h1", { class: "screen-title", text: "Decisions" }),
       el("p", { class: "lede", text: "What each decision is, where it stands and who it may affect." })]));
-    var dec = el("section", { class: "home-sec", "aria-label": "Decisions, soonest date first" });
-    D.workspaces.slice().sort(function (a, b) { var x = nextDate(a.slug), y = nextDate(b.slug); return x && y ? (x < y ? -1 : x > y ? 1 : 0) : x ? -1 : y ? 1 : 0; })
-      .forEach(function (w) { dec.appendChild(decisionCard(w)); });
-    root.appendChild(dec);
-    h.sections.forEach(function (sec) { if (sec.id === "act-now") root.appendChild(itemSection(sec, today, false)); });
+    // Topic filter: shown once the list is long enough to need it. The choice is held in memory only.
+    var topics = [];
+    D.workspaces.forEach(function (w) { if (w.topic && topics.indexOf(w.topic) < 0) topics.push(w.topic); });
+    if (topicFilter && topics.indexOf(topicFilter) < 0) topicFilter = null;
+    if (D.workspaces.length > 3 && topics.length > 1) {
+      var bar = el("div", { class: "pick filter", role: "group", "aria-label": "Show one topic" });
+      [null].concat(topics).forEach(function (t) {
+        bar.appendChild(el("button", { type: "button", "aria-pressed": String(topicFilter === t), text: t || "All", onclick: function () {
+          topicFilter = t; route();
+          var on = document.querySelector('.filter [aria-pressed="true"]'); if (on) on.focus();
+        } }));
+      });
+      root.appendChild(bar);
+    }
+    // Two groups: still being decided (soonest date first), and already decided.
+    var shown = D.workspaces.filter(function (w) { return !topicFilter || w.topic === topicFilter; })
+      .sort(function (a, b) { var x = nextDate(a.slug), y = nextDate(b.slug); return x && y ? (x < y ? -1 : x > y ? 1 : 0) : x ? -1 : y ? 1 : 0; });
+    [["Being decided", false], ["Decided", true]].forEach(function (g, i) {
+      var list = shown.filter(function (w) { return (w.stage === "decided") === g[1]; });
+      if (!list.length) return;
+      var sec = el("section", { class: "home-sec", "aria-labelledby": "h-group-" + i }, [
+        el("h2", { id: "h-group-" + i }, [g[0], el("span", { class: "count", text: String(list.length) })])]);
+      list.forEach(function (w) { sec.appendChild(decisionCard(w)); });
+      root.appendChild(sec);
+    });
+    h.sections.forEach(function (sec) {
+      if (sec.id !== "act-now") return;
+      var s = itemSection(sec, today, false, topicFilter); if (s) root.appendChild(s);
+    });
     root.appendChild(el("div", { class: "list" }, [sheetRow("info", "About this prototype", null, function () {
       return el("div", { class: "stack" }, [
         el("p", { text: "Start with what each decision is, where it stands and who it may affect. If you want to weigh in, the dates and ways to do it are listed too. Every sentence links to its source: tap the small number after it." }),
@@ -804,7 +835,10 @@ footer { margin-top: 28px; font-size: .78rem; color: var(--muted); text-align: c
       el("p", { class: "eyebrow", text: "Georgia · " + D.workspaces.length + " decisions" }),
       el("h1", { class: "screen-title", text: "Dates" }),
       el("p", { class: "lede", text: "What's coming up and what has happened, by date." })]));
-    D.home.sections.forEach(function (sec) { if (sec.id !== "act-now") root.appendChild(itemSection(sec, today, true)); });
+    D.home.sections.forEach(function (sec) {
+      if (sec.id === "act-now") return;
+      var s = itemSection(sec, today, true); if (s) root.appendChild(s);
+    });
     root.appendChild(el("p", { class: "notice", text: "A dashed date box means the source says \u201cby\u201d, \u201cbefore\u201d or \u201cexpected\u201d, not a fixed day. Past dates are marked." }));
     return root;
   }
@@ -826,7 +860,7 @@ footer { margin-top: 28px; font-size: .78rem; color: var(--muted); text-align: c
   function viewMethod() {
     var root = el("div", { class: "stack-lg" });
     root.appendChild(el("header", { class: "stack-sm" }, [el("p", { class: "eyebrow", text: "Our checks" }), el("h1", { class: "screen-title", text: "How we check" }),
-      el("p", { class: "lede", text: "An AI agent drafts each page from saved copies of its sources. Separate AI checkers then test it: automatic checks, a blind fact-check, a fairness panel with a reviewer for each side, and a test of the fact-checker itself with hidden errors. In this test, no person checks the facts." })]));
+      el("p", { class: "lede", text: "An AI agent drafts each page from saved copies of its sources. Then separate checks run: automatic checks in code, an AI checker that tests each sentence against the passages it cites, a fairness review, and a test of the checker itself with hidden errors. A sentence is checked again only when it or its source changes. In this test, no person checks the facts." })]));
     D.workspaces.forEach(function (w) {
       var stats = el("div", { class: "stats" });
       (w.verification.stats || []).forEach(function (st) { stats.appendChild(el("div", { class: "stat" }, [el("b", { text: st.value }), el("span", { text: st.label })])); });
@@ -848,10 +882,36 @@ footer { margin-top: 28px; font-size: .78rem; color: var(--muted); text-align: c
     return nav;
   }
 
+  function billHead(w) {
+    return el("div", { class: "billhead" }, [topicHead(w), el("h1", { text: w.title }), el("p", { class: "billcode", text: w.code }), dateBadge(w), headerChips(w)]);
+  }
+  // A decision's full text lives in data/<slug>.json and loads when the decision is opened. Until then the app
+  // holds only what Home needs. The header shows at once; the rest follows.
+  function viewLoading() {
+    return el("div", { class: "stack-lg" }, [billHead(W), el("p", { class: "notice", id: "loadnote", role: "status", text: "Loading…" })]);
+  }
+  var loading = {};
+  function loadFull(w) {
+    var hash = location.hash;
+    if (loading[w.slug]) return;
+    loading[w.slug] = true;
+    fetch("data/" + w.slug + ".json").then(function (r) { if (!r.ok) throw new Error(String(r.status)); return r.json(); })
+      .then(function (full) {
+        loading[w.slug] = false;
+        D.workspaces[D.workspaces.indexOf(w)] = full;
+        if (location.hash === hash) route();
+      })
+      .catch(function () {
+        loading[w.slug] = false;
+        var note = document.getElementById("loadnote");
+        if (!note || location.hash !== hash) return;
+        note.textContent = "This decision couldn't be loaded. ";
+        note.appendChild(el("button", { class: "linkbtn", type: "button", text: "Try again", onclick: function () { route(); } }));
+      });
+  }
   function viewBill(layer) {
     var root = el("div", { class: "stack-lg" });
-    var head = el("div", { class: "billhead" }, [topicHead(W), el("h1", { text: W.title }), el("p", { class: "billcode", text: W.code }), dateBadge(W), headerChips(W)]);
-    root.appendChild(head);
+    root.appendChild(billHead(W));
     var tabs = el("nav", { class: "tabs", "aria-label": "Parts of this page" });
     LAYERS.forEach(function (L) {
       tabs.appendChild(el("a", { href: "#" + W.slug + "-" + L.id, "aria-selected": String(L.id === layer) }, [tabLabel(L)]));
@@ -901,6 +961,13 @@ footer { margin-top: 28px; font-size: .78rem; color: var(--muted); text-align: c
       head.push(sheetRow("info", x.title, null, function () { return renderBlocks(x.blocks); }));
     });
     rows = head.concat(rows);
+    // "What changed": the page's own list of changes, checked like any other sentence.
+    var wc = w.workspace.sections.filter(function (x) { return /^what changed/i.test(x.title); })[0];
+    if (wc && wc.blocks.length) {
+      var ud = w.updated ? new Date(w.updated + "T12:00:00") : null;
+      rows.push(sheetRow("clock", "What changed", ud ? "Last updated " + MON[ud.getMonth()] + " " + ud.getDate() + ", " + ud.getFullYear() : null,
+        function () { return renderBlocks(wc.blocks); }));
+    }
     if (rows.length) L.appendChild(el("section", { class: "stack-sm", "aria-labelledby": "h-more" }, [
       el("h2", { id: "h-more", class: "sr-only", text: "More about this decision" }), el("div", { class: "list" }, rows)]));
     return L;
@@ -1155,7 +1222,7 @@ footer { margin-top: 28px; font-size: .78rem; color: var(--muted); text-align: c
   function viewChecks() {
     var V = W.verification, root = el("div", { class: "stack-lg" });
     root.appendChild(el("div", { class: "stack" }, [el("p", { class: "eyebrow", text: "Test page " + W.trial + " · how this page was checked" }), el("h1", { text: "How we checked " + W.code.split(" · ")[0] }),
-      el("div", { class: "chips" }, [statusChip(W)]), el("p", { class: "lede", text: V.intro })]));
+      el("div", { class: "chips" }, [statusChip(W)]), V.stateLine ? el("p", { text: V.stateLine }) : null, el("p", { class: "lede", text: V.intro })]));
     var stats = el("div", { class: "stats onbg" });
     V.stats.forEach(function (st) { stats.appendChild(el("div", { class: "stat" }, [el("b", { text: st.value }), el("span", { text: st.label })])); });
     root.appendChild(stats);
@@ -1184,7 +1251,7 @@ footer { margin-top: 28px; font-size: .78rem; color: var(--muted); text-align: c
 
   // ---------- Router ----------
   // #home · #decisions · #checks · #<slug> · #<slug>-<tab> · #<slug>-checks
-  var prev = null, prevDepth = null, curTopic = "", lateTitle = false;
+  var prev = null, prevDepth = null, curTopic = "", lateTitle = false, topicFilter = null;
   window.addEventListener("scroll", function () {
     if (lateTitle) document.getElementById("bartitle").classList.toggle("late", window.scrollY < 150);
   }, { passive: true });
@@ -1218,17 +1285,19 @@ footer { margin-top: 28px; font-size: .78rem; color: var(--muted); text-align: c
     if (curTopic) document.body.classList.remove(curTopic);
     curTopic = view === "bill" || view === "checks" ? tclass(W) : "";
     if (curTopic) document.body.classList.add(curTopic);
-    var hasAct = view === "bill" && !!subs(sectionById("overview"))["What you can do"];
+    var needs = (view === "bill" || view === "checks") && !!W.lite;   // this decision's data hasn't loaded yet
+    var hasAct = view === "bill" && !needs && !!subs(sectionById("overview"))["What you can do"];
     document.getElementById("actbar").hidden = !hasAct;
     document.body.classList.toggle("has-act", hasAct);
     // Going into a decision slides in from the right; going back slides the other way; root screens cross-fade.
     var d = DEPTH[view], dir = prevDepth === null || stayInBill ? "" : d > prevDepth ? "go-fwd" : d < prevDepth ? "go-back" : "go-fade";
     var screen = el("div", { class: "screen" + (dir ? " " + dir : "") }, [
-      view === "home" ? viewHome() : view === "dates" ? viewDates() : view === "method" ? viewMethod() : view === "checks" ? viewChecks() : viewBill(layer),
-      el("footer", { text: D.meta.footer + (view === "checks" ? " · Test page " + W.trial + " · " + W.revisionLabel
+      needs ? viewLoading() : view === "home" ? viewHome() : view === "dates" ? viewDates() : view === "method" ? viewMethod() : view === "checks" ? viewChecks() : viewBill(layer),
+      el("footer", { text: D.meta.footer + (needs ? "" : view === "checks" ? " · Test page " + W.trial + " · " + W.revisionLabel
         : view === "bill" ? " · Test page · " + W.revisionLabel.replace(/ · fingerprint.*$/, "") : "") })]);
     app.innerHTML = "";
     app.appendChild(screen);
+    if (needs) loadFull(W);
     document.querySelectorAll("[data-nav]").forEach(function (a) { if (a.getAttribute("data-nav") === nav) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
     var tabs = document.querySelector(".tabs");
     if (stayInBill && tabs) {

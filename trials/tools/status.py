@@ -79,6 +79,13 @@ def status(trial: Path) -> dict:
         waiting = len(pending) + len(flagged)
         d["statusText"] = "Passed our checks" if st["verified"] else (
             f"{waiting} sentence{'s' if waiting != 1 else ''} waiting for a check" if gate_ok else "Automatic checks failing")
+        # Whether later changes were re-checked is a fact about today, so code writes it. A hand-written sentence
+        # here went stale ("not re-checked yet" beside a "Passed our checks" badge).
+        d["stateLine"] = ("Every sentence on this page has a current check. A sentence is checked again whenever it or its source changes."
+                          if st["verified"] else
+                          f"{waiting} sentence{'s have' if waiting != 1 else ' has'} changed and {'are' if waiting != 1 else 'is'} waiting for a check, "
+                          "so this page is marked as not finished." if gate_ok else
+                          "An automatic check is failing, so this page is marked as not finished.")
         if d.get("stats"):
             d["stats"][0]["value"] = str(len(rows))
         sp.write_text(json.dumps(d, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")

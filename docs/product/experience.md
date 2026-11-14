@@ -121,6 +121,12 @@ these patterns. They are experiments: keep the ones readers find easier, and cha
 - "What you can do" is one button, pinned on every tab of a decision. It reads the same on every decision.
 - Each sentence ends with a small numbered dot. Tapping it slides up the exact source passage.
 - "Not known yet" is never folded or put behind a tap.
+- Home has two groups, "Being decided" (soonest date first) and "Decided". Topic filter chips appear once there
+  are more than three decisions. No search box until there are more than ten.
+- A card shows "Updated Nov 13" for a week after a revision. A decision with a "What changed" section gets a row
+  that opens it.
+- The app holds only what Home needs. A decision's full text is its own file, loaded when it is opened, so the
+  app doesn't grow with every page.
 - Options and argument cards start folded, so readers see every option and both sides' claims before
   opening any of them.
 - Each tab ends with links to the next and previous tabs.

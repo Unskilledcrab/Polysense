@@ -1,7 +1,7 @@
 {
  "verified": true,
  "statusText": "Passed our checks",
- "intro": "On Nov 8, 2026, this page was rewritten for readers new to the subject. That version passed a full round of checks (round 7). A few sentences changed afterward, and the newest of those changes have not been re-checked yet, so this page is marked as not finished. An AI agent wrote this page from saved copies of its sources. Separate AI checkers, which never saw the drafting, then checked it in rounds. In this trial, no person checked the facts. Here is what the checkers did, what they found, and what is still open.",
+ "intro": "On Nov 8, 2026, this page was rewritten for readers new to the subject. That version passed a full round of checks (round 7). An AI agent wrote this page from saved copies of its sources. Separate AI checkers, which never saw the drafting, then checked it in rounds. In this trial, no person checked the facts. Here is what the checkers did, what they found, and what is still open.",
  "stats": [
   {
    "value": "560",
@@ -152,5 +152,6 @@
     "Every check, report and fix is public in the project's repository, in trials/002-psc-57171-fuel-credit/verification.md."
    ]
   }
- ]
+ ],
+ "stateLine": "Every sentence on this page has a current check. A sentence is checked again whenever it or its source changes."
 }

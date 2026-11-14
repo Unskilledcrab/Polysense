@@ -1,7 +1,9 @@
 // Prototype checks: every screen at phone and desktop width, then content and app-behavior checks. Usage: node prototypes/tests/smoke.js /abs/path/index.html
 const { chromium } = require('playwright');
+const { serve, settle } = require('./serve');
 (async () => {
-  const file = 'file://' + process.argv[2];
+  const site = await serve(process.argv[2]);   // the app fetches each decision's data, so it is served over http
+  const file = site.url;
   const browser = await chromium.launch();
   const fails = [];
   const ok = (cond, msg) => { if (!cond) fails.push(msg); };
@@ -11,13 +13,14 @@ const { chromium } = require('playwright');
   for (const width of [390, 1280]) {
     const page = await browser.newPage({ viewport: { width, height: 900 }, reducedMotion: 'reduce' });
     const errors = [], outside = [];
-    page.on('request', q => { if (!/^(file|data|blob):/.test(q.url())) outside.push(q.url()); });
+    page.on('request', q => { if (!q.url().startsWith(site.origin) && !/^(data|blob):/.test(q.url())) outside.push(q.url()); });
     page.on('pageerror', e => errors.push(e.message));
     page.on('console', m => { if (m.type() === 'error') errors.push(m.text()); });
     for (const r of routes) {
       await page.goto(file + '#' + r, { waitUntil: 'load' });
       await page.evaluate(h => { location.hash = h; }, r);
       await page.waitForTimeout(120);
+      await settle(page);
       await page.evaluate(() => document.querySelectorAll('details').forEach(d => d.open = true));
       await page.waitForTimeout(60);
       const res = await page.evaluate(() => ({
@@ -35,7 +38,24 @@ const { chromium } = require('playwright');
     await page.close();
   }
   const page = await browser.newPage({ viewport: { width: 390, height: 844 }, reducedMotion: 'reduce', hasTouch: true });
-  const get = async (r) => { await page.goto(file + '#' + r, { waitUntil: 'load' }); await page.waitForTimeout(150); };
+  const asked = [];   // which data files the app asked for
+  page.on('request', q => { const m = q.url().match(/\/data\/([^/]+)\.json$/); if (m) asked.push(m[1]); });
+  const get = async (r) => { await page.goto(file + '#' + r, { waitUntil: 'load' }); await page.waitForTimeout(150); await settle(page); };
+  // The app holds only what Home needs; a decision's full text loads when it is opened, and only that one.
+  await get('home');
+  ok(asked.length === 0, `Home asked for decision data: ${asked.join(', ')}`);
+  ok(await page.evaluate(() => JSON.parse(document.getElementById('data').textContent).workspaces.every(w => w.lite && w.workspace.sections.length <= 1)),
+     'the app file carries a decision\'s full text');
+  await get(slugs[1]);
+  ok(asked.join(',') === slugs[1], `opening ${slugs[1]} asked for: ${asked.join(', ') || 'nothing'}`);
+  ok(await page.$('.tabs') !== null && await page.$('#loadnote') === null, `${slugs[1]} did not finish loading`);
+  // If the data can't be fetched, the reader is told and can try again.
+  await page.route('**/data/*.json', route => route.abort());
+  await get(slugs[2]);
+  ok(/couldn't be loaded/.test(await page.innerText('#app')) && await page.$('#loadnote button') !== null, 'a failed load shows no message or retry');
+  await page.unroute('**/data/*.json');
+  await page.click('#loadnote button'); await page.waitForTimeout(200); await settle(page);
+  ok(await page.$('.tabs') !== null, '"Try again" did not load the decision');
   // Headings follow the kind of decision.
   await get('hb1009-decision'); ok((await page.innerText('h2')).includes('What the law does'), 'hb1009 decision heading');
   for (const s of ['psc-57171', 'fulton-budget-2027']) {
@@ -126,6 +146,14 @@ const { chromium } = require('playwright');
   for (const s of ['psc-57171', 'fulton-budget-2027']) { await get(s); ok(await page.$('.viz') !== null, `${s}: no "At a glance" card`); }
   const src = require('fs').readFileSync(process.argv[2], 'utf8');
   ok(!/localStorage|sessionStorage|indexedDB|document\.cookie/.test(src), 'the page stores something on the device');
+  // "How we checked" must agree with the badge: a page that passed can't also say its changes weren't re-checked.
+  for (const s of slugs) {
+    await get(s + '-checks');
+    const t = await page.innerText('#app');
+    const passed = /Passed our checks/.test(await page.innerText('.chips'));
+    ok(!(passed && /not been re-checked|not finished|waiting for a check/i.test(t)), `${s}: "How we checked" says the page isn't finished, beside a "Passed" badge`);
+    ok(/current check|waiting for a check|check is failing/.test(t), `${s}: no generated line on whether the page's checks are current`);
+  }
   // Arguments: legend present; Mixed and Uncertain differ; the legend button leaves its card folded.
   for (const s of slugs) {
     await get(s + '-arguments');
@@ -152,12 +180,22 @@ const { chromium } = require('playwright');
   ok((await page.$$('.dcard')).length === slugs.length, 'home: one card per decision');
   const h2 = await page.$$eval('.home-sec > h2', n => n.map(x => x.childNodes[0].textContent.trim()));
   ok(h2.includes('If you want to weigh in') && !h2.includes('Act now'), `home sections: ${h2.join(', ')}`);
+  ok(h2[0] === 'Being decided' && h2.includes('Decided'), `home groups: ${h2.join(', ')}`);
+  // The topic filter appears only when the list is long enough to need it; then a chip narrows the cards.
+  const chips = await page.$$('.filter button');
+  ok((slugs.length > 3) === (chips.length > 0), `topic filter with ${slugs.length} decisions: ${chips.length} chips`);
+  if (chips.length > 1) {
+    await chips[1].click(); await page.waitForTimeout(120);
+    const left = await page.$$eval('.dcard .tlabel', n => [...new Set(n.map(x => x.innerText))]);
+    ok(left.length === 1, `one topic chosen, but cards show: ${left.join(', ')}`);
+    await page.click('.filter button'); await page.waitForTimeout(120);
+  }
   ok(await page.$('input') === null, 'home has an input field');
   // The tab bar: three items, each with an icon and a label, each tall enough to tap.
   const tabbar = await page.$$eval('.bottom a', n => n.map(a => ({ t: a.innerText.trim(), svg: !!a.querySelector('svg'), h: a.getBoundingClientRect().height })));
   ok(tabbar.length === 3 && tabbar.every(a => a.t && a.svg && a.h >= 44), `tab bar: ${JSON.stringify(tabbar)}`);
   // Tapping a card opens its decision; the back button returns Home.
-  await page.click('.dcard'); await page.waitForTimeout(150);
+  await page.click('.dcard'); await page.waitForTimeout(150); await settle(page);
   ok(slugs.includes(await page.evaluate(() => location.hash.slice(1))), 'tapping a home card did not open a decision');
   ok(await page.$('.billhead') !== null, 'no decision header after tapping a card');
   await page.click('.back'); await page.waitForTimeout(150);
@@ -179,6 +217,7 @@ const { chromium } = require('playwright');
   ok(order2.length >= 2 && order2.every(x => x.d.length >= 1), `dates lists: ${JSON.stringify(order2)}`);
   console.log('dated lists:', JSON.stringify(order.concat(order2)));
   await browser.close();
+  site.close();
   if (fails.length) { console.log('FAIL (' + fails.length + ')'); fails.forEach(f => console.log(' - ' + f)); process.exit(1); }
   console.log('PASS: ' + routes.length + ' routes x 2 widths, plus content checks');
 })();

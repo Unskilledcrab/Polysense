@@ -2,8 +2,10 @@
 // Usage: node prototypes/tests/shots.js /abs/index.html OUT_DIR SPEC ...
 // SPEC is route[:height][@dark][!selector]: "!selector" clicks that element after the screen loads (to open a sheet).
 const { chromium } = require('playwright');
+const { serve, settle } = require('./serve');
 (async () => {
   const [file, out, ...specs] = process.argv.slice(2);
+  const site = await serve(file);
   const browser = await chromium.launch();
   for (let spec of specs) {
     let click = null, dark = false;
@@ -12,11 +14,13 @@ const { chromium } = require('playwright');
     const [route, h] = spec.split(':');
     const page = await browser.newPage({ viewport: { width: 390, height: Number(h || 1700) }, deviceScaleFactor: 1,
       colorScheme: dark ? 'dark' : 'light', reducedMotion: 'reduce', hasTouch: true });
-    await page.goto('file://' + file + '#' + route, { waitUntil: 'load' });
+    await page.goto(site.url + '#' + route, { waitUntil: 'load' });
     await page.waitForTimeout(300);
+    await settle(page);
     if (click) { await page.click(click); await page.waitForTimeout(300); }
     await page.screenshot({ path: `${out}/${route}${dark ? '-dark' : ''}${click ? '-sheet' : ''}.png` });
     await page.close();
   }
   await browser.close();
+  site.close();
 })();

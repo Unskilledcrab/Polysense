@@ -1,0 +1,1 @@
+{"revision": "5.4", "date": "2026-11-13", "class": "correction", "reason": "Fixes from sentence-by-sentence checks: the property-tax share is now measured against revenue, not spending. Earlier revisions are in git and in verification.md.", "commit": "f4c52ef"}

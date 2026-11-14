@@ -1,13 +1,19 @@
 #!/usr/bin/env python3
-"""Render the UX prototype page from one or more trials' checked files.
+"""Render the UX prototype from the trials' checked files.
 
 Usage:
-    uv run --with pyyaml python3 trials/tools/render_prototype.py TEMPLATE.html OUT.html TRIAL_DIR [TRIAL_DIR ...]
+    uv run --with pyyaml python3 trials/tools/render_prototype.py TEMPLATE.html OUT.html [TRIAL_DIR ...]
 
-For each TRIAL_DIR, reads page.yaml (display settings: slug, title, header chips, short source labels,
-optional bill-markup view), workspace.md, home.md, passages.md, sources.yaml and, if present,
-verification/summary.json. Embeds them as JSON in the template and writes one self-contained HTML page.
-Nothing is typed by hand into the page: every sentence, chip and source comes from the trial files.
+With no TRIAL_DIR, builds every folder under trials/ that has a page.yaml (unless it says `publish: false`).
+
+For each page, reads page.yaml (display settings: slug, title, header chips, short source labels, optional
+bill-markup view), workspace.md, home.md, passages.md, sources.yaml and, if present, verification/summary.json
+and revisions.jsonl. Writes:
+    OUT.html               the app, with what Home, Dates and How we check need (a few sentences per page)
+    data/<slug>.json       one file per decision, next to OUT.html, loaded when the decision is opened
+so the app stays small as pages are added. It has to be served over http (the tests start a small server; the
+published artifact serves the files itself). Nothing is typed by hand into the page: every sentence, chip and
+source comes from the trial files.
 """
 from __future__ import annotations
 
@@ -277,8 +283,11 @@ def build_workspace(trial: Path) -> dict:
     rev_no = re.search(r"revision (\d+(?:\.\d+)?)", text)   # "3.1" for an accuracy-fix revision
     markup = cfg.get("markup") or {}
     changes = bill_changes(trial / markup["file"], [tuple(x) for x in markup["lines"]]) if markup else []
+    rev_file = trial / "revisions.jsonl"   # the append-only record of revisions: date, change class, reason, commit
+    revisions = [json.loads(x) for x in rev_file.read_text(encoding="utf-8").splitlines() if x.strip()] if rev_file.exists() else []
     return {
         "slug": cfg["slug"], "code": cfg["code"], "title": cfg["title"], "linkText": cfg["link_text"], "kind": kind, "topic": cfg.get("topic") or "", "icon": cfg.get("icon") or "",
+        "stage": cfg.get("stage") or "open", "updated": max((r.get("date") or "" for r in revisions), default="") or None,
         "trial": trial.name.split("-")[0],
         "status": cfg.get("status") or [], "optionChips": cfg.get("option_chips") or {},
         "verified": bool(verification.get("verified")),
@@ -306,27 +315,66 @@ def merge_home(trials: list[Path], workspaces: list[dict]) -> dict:
     return {"sections": list(merged.values())}
 
 
+LITE_KEYS = ("slug", "code", "title", "linkText", "kind", "topic", "icon", "stage", "updated", "trial", "status", "verified", "statusText")
+
+
+def lite(ws: dict, home_items: list[dict]) -> dict:
+    """What Home, Dates and How we check show before a decision is opened: its header fields, the first summary
+    sentence, and only the passages and sources those few sentences cite. The rest loads from data/<slug>.json."""
+    summary = next((s for s in ws["workspace"]["sections"] if s["id"] == "summary"), None)
+    first = None
+    if summary and summary["blocks"]:
+        b = summary["blocks"][0]
+        first = {"id": "summary", "title": summary["title"], "blocks": [dict(b, units=b["units"][:1])], "subs": []}
+    units = (first["blocks"][0]["units"] if first else []) + [u for it in home_items for u in it["units"]]
+    pids = sorted({p for u in units for p in (u.get("cite") or []) if p in ws["passages"]})
+    sids = {ws["passages"][p]["source"] for p in pids}
+    out = {k: ws[k] for k in LITE_KEYS}
+    out.update(lite=True, workspace={"sections": [first] if first else []}, passages={p: ws["passages"][p] for p in pids},
+               sources={s: ws["sources"][s] for s in sids if s in ws["sources"]},
+               verification={"stats": ws["verification"].get("stats") or []})
+    return out
+
+
+def discover(root: Path) -> list[Path]:
+    """Every trial folder with a page.yaml, unless it says `publish: false`."""
+    return sorted(p.parent for p in root.glob("*/page.yaml")
+                  if (yaml.safe_load(p.read_text(encoding="utf-8")) or {}).get("publish", True))
+
+
 def main(template: Path, out_path: Path, trials: list[Path]) -> int:
     workspaces = [build_workspace(t) for t in trials]
     slugs = [w["slug"] for w in workspaces]
     if len(set(slugs)) != len(slugs):
         sys.exit(f"duplicate slugs: {slugs}")
+    home = merge_home(trials, workspaces)
+    # One file per decision, loaded when it is opened, so the app itself stays small as pages are added.
+    data_dir = out_path.parent / "data"
+    data_dir.mkdir(parents=True, exist_ok=True)
+    for w in workspaces:
+        (data_dir / f"{w['slug']}.json").write_text(json.dumps(w, ensure_ascii=False), encoding="utf-8")
+    for f in sorted(data_dir.glob("*.json")):
+        if f.stem not in slugs:
+            print(f"WARN {f} is not a published page any more; remove it by hand", file=sys.stderr)
     data = {
         "meta": {"footer": f"Prototype · built {dt.date.today().isoformat()} · Independent project, not a government website."},
-        "workspaces": workspaces,
-        "home": merge_home(trials, workspaces),
+        "workspaces": [lite(w, [it for sec in home["sections"] for it in sec["items"] if it["slug"] == w["slug"]]) for w in workspaces],
+        "home": home,
     }
     blob = json.dumps(data, ensure_ascii=False).replace("</", "<\\/")
     html = template.read_text(encoding="utf-8").replace("/*__DATA__*/", blob)
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(html, encoding="utf-8")
     for w in workspaces:
-        print(f"  {w['slug']}: {w['revisionLabel']}, {len(w['passages'])} passages, {len(w['sources'])} sources")
+        size = (data_dir / f"{w['slug']}.json").stat().st_size // 1024
+        print(f"  {w['slug']}: {w['revisionLabel']}, {len(w['passages'])} passages, {len(w['sources'])} sources, data/{w['slug']}.json {size} KB")
     print(f"wrote {out_path} ({len(html) // 1024} KB): {len(workspaces)} workspace(s)")
     return 0
 
 
 if __name__ == "__main__":
-    if len(sys.argv) < 4:
+    if len(sys.argv) < 3:
         sys.exit(__doc__)
-    sys.exit(main(Path(sys.argv[1]), Path(sys.argv[2]), [Path(a) for a in sys.argv[3:]]))
+    # With no trial folders named, every published page under trials/ is built.
+    chosen = [Path(a) for a in sys.argv[3:]] or discover(Path(__file__).resolve().parent.parent)
+    sys.exit(main(Path(sys.argv[1]), Path(sys.argv[2]), chosen))

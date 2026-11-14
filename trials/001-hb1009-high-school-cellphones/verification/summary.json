@@ -153,5 +153,6 @@
     "Every check, report and fix is public in the project's repository, in trials/001-hb1009-high-school-cellphones/verification.md."
    ]
   }
- ]
+ ],
+ "stateLine": "Every sentence on this page has a current check. A sentence is checked again whenever it or its source changes."
 }
