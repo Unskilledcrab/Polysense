@@ -11,5 +11,5 @@
 
 ## What happened
 
-- **Nov 12, 2026:** The Public Service Commission (PSC) had a hearing scheduled on counting business customers' real-time payments toward fuel costs. [P-010, P-016, P-023] As of Nov 14, 2026, the case's filing list showed no transcript or order from it. {editorial: scoped to the docket's filing list (source S01b), re-checked Nov 14, 2026; its newest filing was dated Oct 27}
+- **Nov 12, 2026:** The Public Service Commission (PSC) had a hearing scheduled on counting business customers' real-time payments toward fuel costs. [P-010, P-016, P-023, P-044, P-061] As of Nov 14, 2026, the case's filing list showed no transcript or order from it. {editorial: scoped to the docket's filing list (source S01b), re-checked Nov 14, 2026; its newest filing was dated Oct 27}
 - **Oct 27, 2026:** Georgia Power filed the last scheduled testimony. [P-117, P-009, P-010, P-011] Each proposed change we could read would likely lower fuel charges for homes; base rates could rise later, in a future rate case. [P-058, P-115, P-144, P-061, P-105, P-016]
