@@ -94,7 +94,11 @@ const { serve, settle } = require('./serve');
     // Count only the "If you care most about…" lines; notes (shared values, sides without a line) are allowed too.
     const v = await page.$$eval('.vguide .vline', n => n.filter(x => /^If you care most about/i.test(x.innerText.trim())).length), cards = await page.$$eval('.options > details.fold', n => n.length);
     ok(v >= 1, `${s}: no values guide`);
-    ok(v <= cards + 1, `${s}: ${v} values lines for ${cards} options`);
+    // One line per side with a documented argument: no more lines than options (plus one), or than sides on the cards.
+    const full = JSON.parse(require('fs').readFileSync(require('path').join(require('path').dirname(process.argv[2]), 'data', s + '.json'), 'utf8'));
+    const args = full.workspace.sections.find(x => x.id === 'arguments');
+    const sides = new Set((args ? args.subs : []).filter(a => a.cardMeta && a.cardMeta.side).map(a => a.cardMeta.side.split(';')[0].trim())).size;
+    ok(v <= Math.max(cards + 1, sides), `${s}: ${v} values lines for ${cards} options and ${sides} sides`);
     const vt = await page.$$eval('.vguide .vline', n => n.map(x => x.innerText).join(' '));
     ok(!/\b(fits?|best|should choose|choose this)\b/i.test(vt.replace(/"[^"]*"|“[^”]*”/g, '')), `${s}: recommendation word in the values guide (outside quotes)`);
   }

@@ -1,48 +1,87 @@
 {
- "verified": false,
- "statusText": "57 sentences waiting for a check",
- "intro": "On Nov 14, 2026, an AI agent drafted this page from its sources as fetched at the time. Separate AI checkers, which never saw the drafting, then checked each sentence against the passages it cites, and a three-seat panel reviewed it for fairness. In this trial, no person checked the facts. This page has not finished its checks; here is what was done and what is still open.",
+ "verified": true,
+ "statusText": "Passed our checks",
+ "intro": "On Nov 14, 2026, an AI agent drafted this page from its sources as fetched at the time. Separate AI checkers, which never saw the drafting, then checked it: each sentence against the passages it cites, one whole-page read against all the passages, and fairness reviews from each side's seat. In this trial, no person checked the facts. Here is what the checkers did, what they found, and what is still open.",
  "stats": [
   {
-   "value": "241",
+   "value": "249",
    "label": "sentences, each tied to a source or labeled as our own analysis"
   },
   {
    "value": "0",
-   "label": "claims found unsupported by their sources in the first sentence-by-sentence check (21 were slightly overstated and were reworded)"
+   "label": "claims found unsupported by their sources, in sentence-by-sentence checks and one whole-page read (37 were slightly overstated and were reworded)"
   },
   {
    "value": "11 of 11",
    "label": "hidden test errors the checker caught, with no false alarm on 20 clean sentences"
   },
   {
-   "value": "3 of 5",
-   "label": "fairness rating from each of three reviewers, before the fixes"
+   "value": "4 of 5",
+   "label": "fairness rating after the fixes (3 of 5 from each of three reviewers on the first draft)"
   }
  ],
  "sections": [
   {
    "title": "What we checked",
    "paras": [
-    "Code confirmed that every sentence cites a source passage or is labeled as our analysis, that quotes match word for word, that saved files match their fingerprints, and that no private person's name or street address appears.",
-    "A separate AI checker judged each sentence against only the passages it cites. A panel of three reviewers read the whole page: one for VoltaGrid's positions, one for the people who filed and the parties opposing dismissal, and a neutral editor."
+    "Code confirmed that every sentence cites a source passage or is labeled as our analysis, that quotes match word for word, that numbers appear in the cited passages, that reading level and length limits are met, and that no private person's name or street address appears.",
+    "A separate AI checker judged each sentence against only the passages it cites. To test that checker, 11 sentences with planted errors were mixed in without telling it; it caught all 11 and wrongly flagged none of 20 clean ones.",
+    "One checker then read the whole page against every passage, giving the exact words that support each sentence; code confirmed those words are in the passages.",
+    "A panel of three reviewers read the first draft: one for VoltaGrid's positions, one for the people who filed and the parties opposing dismissal, and a neutral editor. After the fixes, a fourth reviewer read the page from each side's seat."
+   ]
+  },
+  {
+   "title": "What each check found",
+   "head": [
+    "Check",
+    "Found",
+    "What we did"
+   ],
+   "rows": [
+    [
+     "First sentence-by-sentence check",
+     "208 of 229 sentences supported; 21 said slightly more than their passages; none unsupported",
+     "Reworded the 21. Ten were cases where the checker couldn't see who was speaking, so it is now shown which filing each passage comes from"
+    ],
+    [
+     "Fairness panel, first draft",
+     "3 of 5 from each of three reviewers, and one serious issue from each: card titles stated one side's conclusion in our voice; a quote was cut where the rest of it helped the other side; two bill lines left out filed statements about other customers",
+     "Fixed all three, and rewrote the title, the 30-second version, the outcomes and the questions"
+    ],
+    [
+     "Fairness review, after the fixes",
+     "4 of 5; all three serious issues resolved; no new serious issue; 10 medium notes; two evidence labels that didn't follow the page's own rule",
+     "Fixed the medium notes and both labels"
+    ],
+    [
+     "Whole-page read",
+     "No unsupported sentence; 8 partly supported; 6 of our own notes questionable",
+     "Fixed all 14: citations that show who filed, the petition's request in its own terms, a ruling the page had left out, a quote cut before its condition"
+    ],
+    [
+     "Final sentence-by-sentence checks",
+     "23 changed sentences: 21 supported, 2 said slightly more than their passages",
+     "Cut the unsupported words and checked again; one sentence needed a second rewording, and both now pass"
+    ]
    ]
   },
   {
    "title": "What's still open",
    "items": [
-    "The sentences changed by the fixes have not had their follow-up check.",
-    "The three high-severity fairness issues were fixed the same day, but no reviewer has looked at the fixes.",
-    "65 medium and 31 low fairness notes are listed in the review record; some were fixed, and the rest are open.",
-    "A new page gets one whole-page read against its sources before it can pass. That read has not been done."
+    "5 low-severity fairness notes and 16 low-severity wording notes from the whole-page read were not acted on.",
+    "The 30-second version names the Hearing Officer before the page explains the term.",
+    "The docket page shows a date of July 2, 2026 beside a petition filed July 13, 2026. We did not use the earlier date and have not explained the difference.",
+    "The first fairness panel's medium and low notes that were not fixed are in the review record."
    ]
   },
   {
    "title": "What this can't do",
    "paras": [
-    "We read the long filings in excerpts found by keyword search, so a point made only outside those excerpts can be missing. Two orders are images with no readable text, and one piece of testimony could not be downloaded."
+    "We read the long filings in excerpts found by keyword search, so a point made only outside those excerpts can be missing.",
+    "Two orders are images with no readable text, including the Chairman's Nov 12 order, and one piece of testimony could not be downloaded. The page says so where it matters.",
+    "The checkers are AI models. They catch planted errors reliably, but a subtle overstatement can pass, and fairness is a judgment."
    ]
   }
  ],
- "stateLine": "57 sentences have changed and are waiting for a check, so this page is marked as not finished."
+ "stateLine": "Every sentence on this page has a current check. A sentence is checked again whenever it or its source changes."
 }

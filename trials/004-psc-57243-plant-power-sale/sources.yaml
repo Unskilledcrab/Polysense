@@ -128,7 +128,7 @@ sources:
       - {"local_file": "S03c-1.pdf", "sha256": "30c93bd61754151346b09ec1336922b52c4d7c3803b1b2a929bbd2d509ce84be", "captured_at": "2026-11-14T01:33:50Z", "url": "https://services.psc.ga.gov/api/v1/External/Public/Get/Document/DownloadFile/229426/110347", "http_status": 200, "bytes": 511213, "derived": "S03c-1.txt"}
   - id: S05
     title: "Petition for Expedited Declaratory Judgment and Enforcement Against VoltaGrid, with exhibits"
-    publisher: "Petitioners (a Newton County nonprofit and four residents), through the Southern Environmental Law Center"
+    publisher: "Petitioners (a Newton County nonprofit and nearby residents), through the Southern Environmental Law Center"
     type: party-filing
     filed: "2026-07-13"
     url: "https://psc.ga.gov/search/facts-document/?documentId=227215"

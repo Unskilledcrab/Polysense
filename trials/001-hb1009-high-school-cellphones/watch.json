@@ -50,7 +50,7 @@
    "archive": {
     "state": "blocked",
     "note": "ConnectError: [Errno 104] Connection reset by peer",
-    "checked": "2026-11-14T03:21:17Z"
+    "checked": "2026-11-14T03:33:46Z"
    }
   },
   "S09": {
@@ -132,9 +132,10 @@
    "state": "same",
    "checked": "2026-11-14T03:19:16Z",
    "archive": {
-    "state": "blocked",
-    "note": "ConnectError: [Errno 104] Connection reset by peer",
-    "checked": "2026-11-14T03:21:17Z"
+    "state": "found",
+    "url": "https://web.archive.org/web/20261026084046/https://www.nber.org/papers/w34388",
+    "captured": "20261026084046",
+    "checked": "2026-11-14T03:33:46Z"
    }
   },
   "S13b": {
@@ -219,7 +220,7 @@
    "archive": {
     "state": "blocked",
     "note": "ConnectError: [Errno 104] Connection reset by peer",
-    "checked": "2026-11-14T03:21:17Z"
+    "checked": "2026-11-14T03:33:46Z"
    }
   },
   "S22": {

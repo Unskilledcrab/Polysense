@@ -2,15 +2,6 @@
  "generated": "2026-11-14",
  "items": [
   {
-   "trial": "004-psc-57243-plant-power-sale",
-   "slug": "psc-57243",
-   "rule": "check",
-   "due": "2026-11-14",
-   "what": "57 sentences waiting for a check, 0 flagged",
-   "where": "ledger.py pending 004-psc-57243-plant-power-sale",
-   "size": "pair check (Sonnet)"
-  },
-  {
    "trial": "003-fulton-2027-budget",
    "slug": "fulton-budget-2027",
    "rule": "event",
@@ -44,15 +35,6 @@
    "due": "9999-12-31",
    "what": "2 fairness notes left open",
    "where": "003-fulton-2027-budget/status.json",
-   "size": "optional"
-  },
-  {
-   "trial": "004-psc-57243-plant-power-sale",
-   "slug": "psc-57243",
-   "rule": "notes",
-   "due": "9999-12-31",
-   "what": "65 fairness notes left open",
-   "where": "004-psc-57243-plant-power-sale/status.json",
    "size": "optional"
   }
  ]

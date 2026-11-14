@@ -66,7 +66,9 @@ def status(trial: Path) -> dict:
         f = json.loads(fr.read_text(encoding="utf-8"))
         fair = {"date": f.get("date"), "neutrality": f.get("neutrality"),
                 "high": [i for i in f.get("issues", []) if i.get("severity") == "high"],
-                "open_items": [i for i in f.get("issues", []) if i.get("severity") == "medium"]}
+                # A medium note that was fixed (its status says so) is no longer open.
+                "open_items": [i for i in f.get("issues", []) if i.get("severity") == "medium"
+                               and not re.match(r"(patched|fixed|resolved)", str(i.get("status", "")), re.I)]}
     # A new page needs one whole-page source check before it can pass (verification protocol, lean flow). Its
     # record is verification/source-check.json, or a round's source-check.json for pages checked in rounds.
     whole_page = bool(list((trial / "verification").glob("**/source-check*.json"))) if (trial / "verification").exists() else False

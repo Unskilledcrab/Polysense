@@ -20,7 +20,7 @@
   },
   "hashes": {
    "pass": true,
-   "result": "Result: PASS (0 problems; 0 files match their fingerprint, 16 not cached)"
+   "result": "Result: PASS (0 problems; 16 files match their fingerprint, 0 not cached)"
   },
   "balance_prompts": 1
  },

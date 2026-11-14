@@ -5,7 +5,7 @@ kind: regulatory-case              # law | regulatory-case | budget
 topic: "Power supply"              # a neutral subject label; a label, not a claim
 icon: bolt
 stage: open                        # open | decided
-publish: false                     # a draft: not yet checked
+publish: true                     # a draft: not yet checked
 public_addresses: []               # no street address is used on this page or in its passages
 watch:                             # what would make this page stale (work notes, not page text)
   sources: [S01b, {id: S23, only: "57243"}]

@@ -6,7 +6,7 @@ How this page was made: an AI agent drafted it from archived sources; every sent
 ## 30-second version
 
 - **What's being decided:** Nearby residents and a nonprofit filed a case at the Georgia Public Service Commission (PSC), which regulates utilities. [P-002, P-029, P-030, P-031, P-047] The filers ask whether VoltaGrid's plant for one data center breaks either of two laws, and seek an order to stop any violation. [P-035, P-027] VoltaGrid says the PSC has no power here and seeks dismissal. [P-041, P-004]
-- **Who it affects:** The plant's neighbors, Georgia Power and Georgia EMC's members each say the case affects them. [P-032, P-061, P-063]
+- **Who it affects:** Petitioners say the plant pollutes Newton County; Georgia EMC says its members may be affected. [P-032, P-063]
 - **What's next:** The PSC's Hearing Officer holds a hearing Dec 9, 2026. [P-018, P-020] No final vote is set. {editorial: process note; the amended schedule ends with the Dec 9 hearing (P-018), and no order we read sets a vote}
 
 ## What it means for you
@@ -200,7 +200,7 @@ Documented · Side: Georgia Power; opposes Outcome A on authority · Claim type:
 Documented · Side: the PSC's staff; opposes dismissal before the hearing · Claim type: factual and legal · Evidence: Legal question (whether the contract makes VoltaGrid a retail seller); Supported (the contract has VoltaGrid generate and deliver power to Serverfarm, which VoltaGrid's executive also describes as a service); Uncertain (fee terms are blacked out, and we could not read the witness's direct testimony) <!-- nocheck -->
 
 - **In short:** The PSC's staff says the dismissal request can wait for the Dec 9 hearing, and the staff's witness says the contract has VoltaGrid generate and deliver power to Serverfarm. [P-052, P-077] Evidence: Legal question; Supported; Uncertain. {editorial: restates the label}
-- **Who says it:** The PSC's staff made the request in a response filed with the PSC on Oct 16, 2026. [P-052] The staff's witness testified "on behalf of the GPSC Public Interest Advocacy Staff," the part of the PSC's staff that takes part in cases. [P-073, P-085] The staff's witness filed rebuttal testimony on Nov 13, 2026. [P-012, P-073]
+- **Who says it:** The PSC's staff made the request in a response filed with the PSC on Oct 16, 2026. [P-052] The staff's witness testified "on behalf of the GPSC Public Interest Advocacy Staff." [P-073] The staff's witness filed rebuttal testimony on Nov 13, 2026. [P-012, P-073]
 - **What supports it:** The staff's response says dismissing early "will not serve the Commission’s objective" of settling whether the Covington project falls under the PSC's power. [P-051] The witness said the statement of work requires VoltaGrid to "operate and maintain the equipment" and to "staff the site around the clock." [P-075]
 - **Who disagrees:** VoltaGrid said in its emergency appeal, first filed Nov 9, 2026, that the Hearing Officer's order wrongly came before "resolving the issues of whether Petitioners have standing" and whether the PSC has power over VoltaGrid. [P-008, P-081]
 - **What challenges it:** VoltaGrid's executive said VoltaGrid "will not sell that electricity to Serverfarm or to anyone else" and that the pay is based on capacity, "rather than a fee per kWh of energy." [P-046] The staff's witness said the statement of work "states Monthly Fees per kWh" of a blacked-out amount, "with cumulative Monthly Fees increasing as the installation scales." [P-076]

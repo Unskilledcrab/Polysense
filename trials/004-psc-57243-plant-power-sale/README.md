@@ -12,9 +12,11 @@ checking flow, against a cap of 1.0M delegated tokens (300k on the top tier).
 whether VoltaGrid's plant, which would supply one data center, breaks two state power laws. VoltaGrid says the PSC has
 no authority over it. Georgia EMC, Georgia Power and the PSC's staff also filed. A hearing is set for 2026-12-09.
 
-## Result: not published, at the spending cap
+## Result: published 2026-11-14, passing; about 1.53M delegated tokens
 
-The page is drafted, gate-clean and mostly checked, but it has **not** passed and is not in the app (`publish: false`).
+The page passes: 249 of 249 sentences checked, every gate clean, the whole-page read on record, and no open
+high-severity fairness issue. It reached its first cap (1.0M) before its last checks; the owner approved finishing
+it with a second cap of 600k.
 
 | Step | Who | Tokens | Result |
 |---|---|---|---|
@@ -23,17 +25,18 @@ The page is drafted, gate-clean and mostly checked, but it has **not** passed an
 | Draft | One fresh drafter, top tier | 332,523 | 87 passages, 229 sentences, 3 outcomes, 6 argument cards; every gate clean |
 | Pair check, with a blind planted-error quiz | Two Sonnet agents | 255,515 | Quiz: 11 of 11 planted errors caught, 0 of 20 false alarms. Page: 208 pass, 21 slightly overstated, 0 unsupported |
 | Fairness panel (first publication) | Three Sonnet agents | 406,200 | 3 of 5 from each seat; one high-severity issue from each |
-| Patches for the 21 sentences and the fairness findings | Coordinator, by hand | not counted | 57 sentences changed and are waiting for a check |
-| **Total delegated** | | **994,238** | Cap: 1,000,000. Top tier: 332,523 against a cap of 300,000 |
+| *First cap reached* | | *994,238* | *Top tier: 332,523 against a cap of 300,000* |
+| Fairness re-review of the patched page | One Sonnet agent | 129,300 | 4 of 5; the three high issues resolved; no new high issue; 10 medium notes and 2 label rulings, all patched |
+| Whole-page source read | One top-tier agent | 190,319 | 237 units, every evidence span verified by code; 0 unsupported, 8 partial, 6 questionable notes; all patched |
+| Pair check of 23 changed sentences | One Sonnet agent | 81,314 | 21 pass, 2 slightly overstated |
+| Two confirming checks (2 sentences, then 1) | Two Sonnet agents | 137,274 | All pass |
+| Patches throughout | Coordinator, by hand | not counted | |
+| **Total delegated** | | **1,532,445** | Second cap: 538,207 of 600,000; top tier 190,319 of 300,000 |
 
-(The pair-check figure includes two sentences from Trial 002.)
+(The first pair-check figure includes two sentences from Trial 002.)
 
-**Not done, and what each would cost at today's rates:**
-- Follow-up pair check of the 57 changed sentences: about 130k on Sonnet.
-- A second look at the fairness fixes by one reviewer: about 135k on Sonnet.
-- The one whole-page source read a new page needs: about 250k on the top tier.
-
-So a first publication through subagents costs about 1.5M, not 1.0M. The owner decides whether to finish it.
+**What a first publication costs through subagents: about 1.5M tokens**, of which about 520k is on the top tier.
+The last 137k went on re-checking three sentences, because each checker costs about 68k however little it reads.
 
 ## What the trial showed
 

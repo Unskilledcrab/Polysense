@@ -16,7 +16,7 @@ Nobody keeps this by hand. `trials/tools/desk.py index` writes the table below f
 | [001](001-hb1009-high-school-cellphones/) hb1009 | Schools | decided | 6.4 (2026-11-08) | Passed | 292 | 15 | 2026-12-31 | 0 |
 | [002](002-psc-57171-fuel-credit/) psc-57171 | Power bills | open | 7.8 (2026-11-14) | Passed | 556 | 35 | 2026-12-10 | 4 |
 | [003](003-fulton-2027-budget/) fulton-budget-2027 | County budget | open | 5.5 (2026-11-14) | Passed | 463 | 37 | 2026-11-15 | 2 |
-| [004](004-psc-57243-plant-power-sale/) psc-57243 | Power supply | open | 1 (2026-11-14) | 57 sentences waiting | 241 | 32 | 2026-11-24 | 65 |
+| [004](004-psc-57243-plant-power-sale/) psc-57243 | Power supply | open | 1 (2026-11-14) | Passed | 249 | 32 | 2026-11-24 | 0 |
 <!-- desk:index:end -->
 
 | To know | Run |

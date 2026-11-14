@@ -406,9 +406,10 @@
    "state": "same",
    "checked": "2026-11-14T03:19:25Z",
    "archive": {
-    "state": "blocked",
-    "note": "ConnectError: [Errno 104] Connection reset by peer",
-    "checked": "2026-11-14T03:21:17Z"
+    "state": "found",
+    "url": "https://web.archive.org/web/20260928191915/https://psc.ga.gov/search/facts-document/?documentId=228951",
+    "captured": "20260928191915",
+    "checked": "2026-11-14T03:33:46Z"
    }
   },
   "S11": {
@@ -425,7 +426,7 @@
    "archive": {
     "state": "blocked",
     "note": "ConnectError: [Errno 104] Connection reset by peer",
-    "checked": "2026-11-14T03:21:17Z"
+    "checked": "2026-11-14T03:33:46Z"
    }
   },
   "S12": {
@@ -505,7 +506,7 @@
    "archive": {
     "state": "blocked",
     "note": "ConnectError: [Errno 104] Connection reset by peer",
-    "checked": "2026-11-14T03:21:17Z"
+    "checked": "2026-11-14T03:33:46Z"
    }
   },
   "S04": {
