@@ -24,11 +24,11 @@ import sys
 from pathlib import Path, PurePosixPath
 from urllib.parse import urlparse
 
+NEEDS = "needs httpx + beautifulsoup4: uv run --with httpx --with beautifulsoup4 python3 trials/tools/snapshot.py ..."
 try:
-    import httpx
     from bs4 import BeautifulSoup
 except ImportError:  # pragma: no cover
-    sys.exit("needs httpx + beautifulsoup4: uv run --with httpx --with beautifulsoup4 python3 trials/tools/snapshot.py ...")
+    sys.exit(NEEDS)
 
 UA = "Mozilla/5.0 (compatible; civic-research-trial/0.1; +https://github.com/Unskilledcrab/Polysense)"
 EXT = {"text/html": "html", "application/pdf": "pdf", "application/json": "json", "text/plain": "txt",
@@ -67,6 +67,10 @@ def visible_text(html: bytes) -> str:
 
 
 def main(trial: Path, sid: str, url: str) -> int:
+    try:   # imported here so desk.py can use visible_text() without a network library
+        import httpx
+    except ImportError:  # pragma: no cover
+        sys.exit(NEEDS)
     raw = trial / "_raw"
     raw.mkdir(parents=True, exist_ok=True)
     with httpx.Client(follow_redirects=True, timeout=60, headers={"User-Agent": UA}) as client:
