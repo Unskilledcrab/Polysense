@@ -78,7 +78,13 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:19:25Z"
+   "checked": "2026-11-14T03:19:25Z",
+   "archive": {
+    "state": "found",
+    "url": "https://web.archive.org/web/20261108064902/https://psc.ga.gov/search/facts-docket/?docketId=57171",
+    "captured": "20261108064902",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S02": {
    "files": {
@@ -96,7 +102,13 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:19:25Z"
+   "checked": "2026-11-14T03:19:25Z",
+   "archive": {
+    "state": "found",
+    "url": "https://web.archive.org/web/20261001194617/https://psc.ga.gov/search/facts-document/?documentId=227135",
+    "captured": "20261001194617",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S21": {
    "files": {
@@ -108,7 +120,13 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:19:25Z"
+   "checked": "2026-11-14T03:19:25Z",
+   "archive": {
+    "state": "found",
+    "url": "https://web.archive.org/web/20261020191700/https://psc.ga.gov/search/facts-document/?documentId=226750",
+    "captured": "20261020191700",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S05": {
    "files": {
@@ -132,7 +150,13 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:19:25Z"
+   "checked": "2026-11-14T03:19:25Z",
+   "archive": {
+    "state": "found",
+    "url": "https://web.archive.org/web/20261020191538/https://psc.ga.gov/search/facts-document/?documentId=228222",
+    "captured": "20261020191538",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S14": {
    "files": {
@@ -145,7 +169,13 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:19:25Z"
+   "checked": "2026-11-14T03:19:25Z",
+   "archive": {
+    "state": "found",
+    "url": "https://web.archive.org/web/20260616185813/https://psc.ga.gov/about-the-psc/consumer-corner/consumer-advisories/public-witness/",
+    "captured": "20260616185813",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S15": {
    "files": {
@@ -158,7 +188,13 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:19:25Z"
+   "checked": "2026-11-14T03:19:25Z",
+   "archive": {
+    "state": "found",
+    "url": "https://web.archive.org/web/20260811132337/https://psc.ga.gov/public-comments/",
+    "captured": "20260811132337",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S19": {
    "files": {
@@ -171,7 +207,13 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:19:25Z"
+   "checked": "2026-11-14T03:19:25Z",
+   "archive": {
+    "state": "found",
+    "url": "https://web.archive.org/web/20261027040108/https://psc.ga.gov/faqs/",
+    "captured": "20261027040108",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S17": {
    "files": {
@@ -184,7 +226,13 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:19:25Z"
+   "checked": "2026-11-14T03:19:25Z",
+   "archive": {
+    "state": "found",
+    "url": "https://web.archive.org/web/20261007125202/https://psc.ga.gov/about-the-psc/commissioners/stan-wise/",
+    "captured": "20261007125202",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S17b": {
    "files": {
@@ -197,7 +245,13 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:19:25Z"
+   "checked": "2026-11-14T03:19:25Z",
+   "archive": {
+    "state": "found",
+    "url": "https://web.archive.org/web/20261021084252/https://psc.ga.gov/about-the-psc/commissioners/jason-shaw/",
+    "captured": "20261021084252",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S17c": {
    "files": {
@@ -210,7 +264,13 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:19:25Z"
+   "checked": "2026-11-14T03:19:25Z",
+   "archive": {
+    "state": "found",
+    "url": "https://web.archive.org/web/20261021084230/https://psc.ga.gov/about-the-psc/commissioners/lauren-mcdonald/",
+    "captured": "20261021084230",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S17d": {
    "files": {
@@ -223,7 +283,13 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:19:25Z"
+   "checked": "2026-11-14T03:19:25Z",
+   "archive": {
+    "state": "found",
+    "url": "https://web.archive.org/web/20261008174347/https://psc.ga.gov/about-the-psc/commissioners/peter-hubbard/",
+    "captured": "20261008174347",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S17e": {
    "files": {
@@ -236,7 +302,13 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:19:25Z"
+   "checked": "2026-11-14T03:19:25Z",
+   "archive": {
+    "state": "found",
+    "url": "https://web.archive.org/web/20261021084232/https://psc.ga.gov/about-the-psc/commissioners/alicia-johnson/",
+    "captured": "20261021084232",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S07b": {
    "files": {
@@ -254,7 +326,13 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:19:25Z"
+   "checked": "2026-11-14T03:19:25Z",
+   "archive": {
+    "state": "found",
+    "url": "https://web.archive.org/web/20261012172102/https://psc.ga.gov/search/facts-document/?documentId=229059",
+    "captured": "20261012172102",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S06": {
    "files": {
@@ -272,7 +350,13 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:19:25Z"
+   "checked": "2026-11-14T03:19:25Z",
+   "archive": {
+    "state": "found",
+    "url": "https://web.archive.org/web/20260928191903/https://psc.ga.gov/search/facts-document/?documentId=227629",
+    "captured": "20260928191903",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S07": {
    "files": {
@@ -284,7 +368,13 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:19:25Z"
+   "checked": "2026-11-14T03:19:25Z",
+   "archive": {
+    "state": "found",
+    "url": "https://web.archive.org/web/20261012170408/https://psc.ga.gov/search/facts-document/?documentId=228948",
+    "captured": "20261012170408",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S08": {
    "files": {
@@ -296,7 +386,13 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:19:25Z"
+   "checked": "2026-11-14T03:19:25Z",
+   "archive": {
+    "state": "found",
+    "url": "https://web.archive.org/web/20260924184302/https://psc.ga.gov/search/facts-document/?documentId=228952",
+    "captured": "20260924184302",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S09": {
    "files": {
@@ -308,7 +404,12 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:19:25Z"
+   "checked": "2026-11-14T03:19:25Z",
+   "archive": {
+    "state": "blocked",
+    "note": "ConnectError: [Errno 104] Connection reset by peer",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S11": {
    "files": {
@@ -320,7 +421,12 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:19:25Z"
+   "checked": "2026-11-14T03:19:25Z",
+   "archive": {
+    "state": "blocked",
+    "note": "ConnectError: [Errno 104] Connection reset by peer",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S12": {
    "files": {
@@ -332,7 +438,13 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:19:25Z"
+   "checked": "2026-11-14T03:19:25Z",
+   "archive": {
+    "state": "found",
+    "url": "https://web.archive.org/web/20261012214547/https://psc.ga.gov/search/facts-document/?documentId=229066",
+    "captured": "20261012214547",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S13": {
    "files": {
@@ -344,7 +456,13 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:19:25Z"
+   "checked": "2026-11-14T03:19:25Z",
+   "archive": {
+    "state": "found",
+    "url": "https://web.archive.org/web/20261020191538/https://psc.ga.gov/search/facts-document/?documentId=229135",
+    "captured": "20261020191538",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S06b": {
    "files": {
@@ -356,7 +474,13 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:19:25Z"
+   "checked": "2026-11-14T03:19:25Z",
+   "archive": {
+    "state": "found",
+    "url": "https://web.archive.org/web/20260924184302/https://psc.ga.gov/search/facts-document/?documentId=228416",
+    "captured": "20260924184302",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   },
   "S10": {
    "files": {
@@ -368,7 +492,30 @@
     }
    },
    "state": "same",
-   "checked": "2026-11-14T03:19:25Z"
+   "checked": "2026-11-14T03:19:25Z",
+   "archive": {
+    "state": "found",
+    "url": "https://web.archive.org/web/20260924184302/https://psc.ga.gov/search/facts-document/?documentId=228918",
+    "captured": "20260924184302",
+    "checked": "2026-11-14T03:21:17Z"
+   }
+  },
+  "S01b": {
+   "files": {},
+   "archive": {
+    "state": "blocked",
+    "note": "ConnectError: [Errno 104] Connection reset by peer",
+    "checked": "2026-11-14T03:21:17Z"
+   }
+  },
+  "S04": {
+   "files": {},
+   "archive": {
+    "state": "found",
+    "url": "https://web.archive.org/web/20261113074622/https://psc.ga.gov/agendas-calendars/commission-calendar/",
+    "captured": "20261113074622",
+    "checked": "2026-11-14T03:21:17Z"
+   }
   }
  }
 }

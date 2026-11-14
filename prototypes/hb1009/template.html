@@ -446,6 +446,7 @@ footer { margin-top: 28px; font-size: .78rem; color: var(--muted); text-align: c
     ["Mixed", "mixed", "The sources give conflicting accounts."],
     ["Contested", "mixed", "The sources dispute it."],
     ["Uncertain", "uncertain", "Nothing we found settles it yet."],
+    ["Legal question", "values", "About what the law means; the decider settles it, not the evidence."],
     ["Values question", "values", "About what's fair or right; facts alone can't settle it."],
     ["Not mainly factual", "values", "Mostly about what's fair or right, not about facts."]
   ];
@@ -1103,7 +1104,7 @@ footer { margin-top: 28px; font-size: .78rem; color: var(--muted); text-align: c
       var head = seg, note = "", open = seg.indexOf("(");
       if (open >= 0 && /\)\s*$/.test(seg)) { head = seg.slice(0, open).trim(); note = seg.slice(open + 1, seg.lastIndexOf(")")).trim(); }
       var g = evGrades(head)[0], scope = "", m;
-      if ((m = head.match(/^(.+?):\s*(?:a\s+)?(supported|mixed|uncertain|contested|values question|not mainly)/i))) scope = m[1].trim();
+      if ((m = head.match(/^(.+?):\s*(?:a\s+)?(supported|mixed|uncertain|contested|values question|legal question|not mainly)/i))) scope = m[1].trim();
       else if ((m = head.match(/^(?:supported|mixed|uncertain|contested)(?:, with limits)?\s+on\s+(.+)$/i))) scope = m[1].trim();
       out.push({ grade: g || "", scope: scope, note: note, text: seg });
     });
@@ -1123,7 +1124,7 @@ footer { margin-top: 28px; font-size: .78rem; color: var(--muted); text-align: c
   function evGrades(label) {
     var t = label || "", prev;
     do { prev = t; t = t.replace(/\([^()]*\)/g, ""); } while (t !== prev);   // drop explanations in parentheses
-    var out = [], m, re = /\b(supported, with limits|supported|mixed|uncertain|contested|not mainly a factual question|values question)\b/gi;
+    var out = [], m, re = /\b(supported, with limits|supported|mixed|uncertain|contested|not mainly a factual question|values question|legal question)\b/gi;
     while ((m = re.exec(t))) {
       var g = m[1].toLowerCase().replace("not mainly a factual question", "not mainly factual");
       g = g.charAt(0).toUpperCase() + g.slice(1);

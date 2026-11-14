@@ -7,7 +7,11 @@ const { serve, settle } = require('./serve');
   const browser = await chromium.launch();
   const fails = [];
   const ok = (cond, msg) => { if (!cond) fails.push(msg); };
-  const slugs = ['hb1009', 'psc-57171', 'fulton-budget-2027'];
+  // The decisions come from the app's own data, so the tests keep working as pages are added.
+  const src = require('fs').readFileSync(process.argv[2], 'utf8');
+  const D = JSON.parse(src.match(/<script type="application\/json" id="data">([\s\S]*?)<\/script>/)[1]);
+  const slugs = D.workspaces.map(w => w.slug);
+  const kindOf = Object.fromEntries(D.workspaces.map(w => [w.slug, w.kind]));
   const tabs = ['', '-decision', '-options', '-arguments', '-evidence', '-checks'];
   const routes = ['home', 'decisions', 'dates', 'checks'].concat(...slugs.map(s => tabs.map(t => s + t)));
   for (const width of [390, 1280]) {
@@ -57,9 +61,10 @@ const { serve, settle } = require('./serve');
   await page.click('#loadnote button'); await page.waitForTimeout(200); await settle(page);
   ok(await page.$('.tabs') !== null, '"Try again" did not load the decision');
   // Headings follow the kind of decision.
-  await get('hb1009-decision'); ok((await page.innerText('h2')).includes('What the law does'), 'hb1009 decision heading');
-  for (const s of ['psc-57171', 'fulton-budget-2027']) {
-    await get(s + '-decision'); const h = await page.innerText('.layer-head h2'); ok(h === "What's being decided", `${s} decision heading is "${h}"`);
+  for (const s of slugs) {
+    await get(s + '-decision'); const h = await page.innerText('.layer-head h2');
+    if (kindOf[s] === 'law') { ok(h === 'What the law does', `${s} decision heading is "${h}"`); continue; }
+    ok(h === "What's being decided", `${s} decision heading is "${h}"`);
     await get(s + '-options'); const lede = await page.innerText('.layer-head .lede'); ok(!/lawmakers/i.test(lede), `${s} options lede mentions lawmakers`);
   }
   // Summary: "What it means for you" card present on every page; no Decide chip on the PSC page.
@@ -143,8 +148,7 @@ const { serve, settle } = require('./serve');
     const imgs = await page.$$eval('.viz [role="img"]', n => n.map(x => x.getAttribute('aria-label') || ''));
     ok(imgs.every(t => t.length > 8), `${s}: a picture has no text equivalent`);
   }
-  for (const s of ['psc-57171', 'fulton-budget-2027']) { await get(s); ok(await page.$('.viz') !== null, `${s}: no "At a glance" card`); }
-  const src = require('fs').readFileSync(process.argv[2], 'utf8');
+  for (const s of ['psc-57171', 'fulton-budget-2027', 'psc-57243'].filter(x => slugs.includes(x))) { await get(s); ok(await page.$('.viz') !== null, `${s}: no "At a glance" card`); }
   ok(!/localStorage|sessionStorage|indexedDB|document\.cookie/.test(src), 'the page stores something on the device');
   // "How we checked" must agree with the badge: a page that passed can't also say its changes weren't re-checked.
   for (const s of slugs) {
